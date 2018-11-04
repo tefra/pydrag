@@ -1,0 +1,17 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[dev-packages]
+black = "==18.9b0"
+pre-commit = "==1.12"
+"flake8" = "==3.6.0"
+coverage = "==4.5.1"
+codecov = "==2.0.15"
+
+[packages]
+requests = "*"
+
+[requires]
+python_version = "3.6.5"
