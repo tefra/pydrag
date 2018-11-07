@@ -4,7 +4,7 @@
         {
             "request": {
                 "method": "GET",
-                "uri": "http://ws.audioscrobbler.com/2.0/?format=json&method=user.gettoptags&user=Zaratoustre",
+                "uri": "http://ws.audioscrobbler.com/2.0/?format=json&method=user.gettoptags&user=rj",
                 "body": null,
                 "headers": {
                     "User-Agent": [
@@ -27,36 +27,36 @@
                     "message": "OK"
                 },
                 "headers": {
-                    "Date": [
-                        "Tue, 06 Nov 2018 22:07:26 GMT"
-                    ],
-                    "Access-Control-Allow-Origin": [
-                        "*"
-                    ],
-                    "Access-Control-Max-Age": [
-                        "86400"
-                    ],
                     "Server": [
                         "openresty/1.9.7.5"
-                    ],
-                    "Access-Control-Request-Headers": [
-                        "Origin, X-Atmosphere-tracking-id, X-Atmosphere-Framework, X-Cache-Date, Content-Type, X-Atmosphere-Transport, *"
-                    ],
-                    "Connection": [
-                        "keep-alive"
-                    ],
-                    "Content-Type": [
-                        "application/json; charset=UTF-8"
                     ],
                     "Access-Control-Allow-Methods": [
                         "POST, GET, OPTIONS"
                     ],
+                    "Access-Control-Request-Headers": [
+                        "Origin, X-Atmosphere-tracking-id, X-Atmosphere-Framework, X-Cache-Date, Content-Type, X-Atmosphere-Transport, *"
+                    ],
+                    "Content-Type": [
+                        "application/json; charset=UTF-8"
+                    ],
+                    "Access-Control-Allow-Origin": [
+                        "*"
+                    ],
+                    "Connection": [
+                        "keep-alive"
+                    ],
+                    "Date": [
+                        "Wed, 07 Nov 2018 21:42:33 GMT"
+                    ],
                     "Content-Length": [
-                        "53"
+                        "3694"
+                    ],
+                    "Access-Control-Max-Age": [
+                        "86400"
                     ]
                 },
                 "body": {
-                    "string": "{\"toptags\":{\"tag\":[],\"@attr\":{\"user\":\"Zaratoustre\"}}}"
+                    "string": "{\"toptags\":{\"tag\":[{\"name\":\"rock\",\"count\":\"20\",\"url\":\"https://www.last.fm/tag/rock\"},{\"name\":\"jazz\",\"count\":\"17\",\"url\":\"https://www.last.fm/tag/jazz\"},{\"name\":\"metal\",\"count\":\"10\",\"url\":\"https://www.last.fm/tag/metal\"},{\"name\":\"soul\",\"count\":\"8\",\"url\":\"https://www.last.fm/tag/soul\"},{\"name\":\"female vocalists\",\"count\":\"8\",\"url\":\"https://www.last.fm/tag/female+vocalists\"},{\"name\":\"80s\",\"count\":\"7\",\"url\":\"https://www.last.fm/tag/80s\"},{\"name\":\"funk\",\"count\":\"7\",\"url\":\"https://www.last.fm/tag/funk\"},{\"name\":\"guitar\",\"count\":\"7\",\"url\":\"https://www.last.fm/tag/guitar\"},{\"name\":\"Mellow\",\"count\":\"7\",\"url\":\"https://www.last.fm/tag/Mellow\"},{\"name\":\"singer-songwriter\",\"count\":\"5\",\"url\":\"https://www.last.fm/tag/singer-songwriter\"},{\"name\":\"acoustic\",\"count\":\"5\",\"url\":\"https://www.last.fm/tag/acoustic\"},{\"name\":\"blues\",\"count\":\"5\",\"url\":\"https://www.last.fm/tag/blues\"},{\"name\":\"funky\",\"count\":\"5\",\"url\":\"https://www.last.fm/tag/funky\"},{\"name\":\"checkitout\",\"count\":\"5\",\"url\":\"https://www.last.fm/tag/checkitout\"},{\"name\":\"Stoner Rock\",\"count\":\"4\",\"url\":\"https://www.last.fm/tag/Stoner+Rock\"},{\"name\":\"Hip-Hop\",\"count\":\"3\",\"url\":\"https://www.last.fm/tag/Hip-Hop\"},{\"name\":\"chillout\",\"count\":\"3\",\"url\":\"https://www.last.fm/tag/chillout\"},{\"name\":\"electronic\",\"count\":\"3\",\"url\":\"https://www.last.fm/tag/electronic\"},{\"name\":\"drone rock\",\"count\":\"3\",\"url\":\"https://www.last.fm/tag/drone+rock\"},{\"name\":\"classic rock\",\"count\":\"2\",\"url\":\"https://www.last.fm/tag/classic+rock\"},{\"name\":\"country\",\"count\":\"2\",\"url\":\"https://www.last.fm/tag/country\"},{\"name\":\"instrumental\",\"count\":\"2\",\"url\":\"https://www.last.fm/tag/instrumental\"},{\"name\":\"folk\",\"count\":\"2\",\"url\":\"https://www.last.fm/tag/folk\"},{\"name\":\"experimental\",\"count\":\"2\",\"url\":\"https://www.last.fm/tag/experimental\"},{\"name\":\"dance\",\"count\":\"2\",\"url\":\"https://www.last.fm/tag/dance\"},{\"name\":\"easy listening\",\"count\":\"2\",\"url\":\"https://www.last.fm/tag/easy+listening\"},{\"name\":\"psychedelic\",\"count\":\"2\",\"url\":\"https://www.last.fm/tag/psychedelic\"},{\"name\":\"bass\",\"count\":\"2\",\"url\":\"https://www.last.fm/tag/bass\"},{\"name\":\"covers\",\"count\":\"2\",\"url\":\"https://www.last.fm/tag/covers\"},{\"name\":\"Smooth Jazz\",\"count\":\"2\",\"url\":\"https://www.last.fm/tag/Smooth+Jazz\"},{\"name\":\"vacuum tube\",\"count\":\"2\",\"url\":\"https://www.last.fm/tag/vacuum+tube\"},{\"name\":\"melodic rock\",\"count\":\"2\",\"url\":\"https://www.last.fm/tag/melodic+rock\"},{\"name\":\"futurejam\",\"count\":\"2\",\"url\":\"https://www.last.fm/tag/futurejam\"},{\"name\":\"Disco\",\"count\":\"1\",\"url\":\"https://www.last.fm/tag/Disco\"},{\"name\":\"indie\",\"count\":\"1\",\"url\":\"https://www.last.fm/tag/indie\"},{\"name\":\"pop\",\"count\":\"1\",\"url\":\"https://www.last.fm/tag/pop\"},{\"name\":\"japanese\",\"count\":\"1\",\"url\":\"https://www.last.fm/tag/japanese\"},{\"name\":\"reggae\",\"count\":\"1\",\"url\":\"https://www.last.fm/tag/reggae\"},{\"name\":\"heavy\",\"count\":\"1\",\"url\":\"https://www.last.fm/tag/heavy\"},{\"name\":\"ambient\",\"count\":\"1\",\"url\":\"https://www.last.fm/tag/ambient\"},{\"name\":\"hard rock\",\"count\":\"1\",\"url\":\"https://www.last.fm/tag/hard+rock\"},{\"name\":\"downtempo\",\"count\":\"1\",\"url\":\"https://www.last.fm/tag/downtempo\"},{\"name\":\"Progressive rock\",\"count\":\"1\",\"url\":\"https://www.last.fm/tag/Progressive+rock\"},{\"name\":\"electro\",\"count\":\"1\",\"url\":\"https://www.last.fm/tag/electro\"},{\"name\":\"slow\",\"count\":\"1\",\"url\":\"https://www.last.fm/tag/slow\"},{\"name\":\"new wave\",\"count\":\"1\",\"url\":\"https://www.last.fm/tag/new+wave\"},{\"name\":\"britpop\",\"count\":\"1\",\"url\":\"https://www.last.fm/tag/britpop\"},{\"name\":\"hair metal\",\"count\":\"1\",\"url\":\"https://www.last.fm/tag/hair+metal\"},{\"name\":\"soft rock\",\"count\":\"1\",\"url\":\"https://www.last.fm/tag/soft+rock\"},{\"name\":\"romantic\",\"count\":\"1\",\"url\":\"https://www.last.fm/tag/romantic\"}],\"@attr\":{\"user\":\"RJ\"}}}"
                 }
             }
         }

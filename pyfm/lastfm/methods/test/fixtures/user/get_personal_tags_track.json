@@ -1,0 +1,64 @@
+{
+    "version": 1,
+    "interactions": [
+        {
+            "request": {
+                "method": "GET",
+                "uri": "http://ws.audioscrobbler.com/2.0/?format=json&method=user.getpersonaltags&tag=rock&taggingtype=track&user=rj",
+                "body": null,
+                "headers": {
+                    "User-Agent": [
+                        "python-requests/2.20.0"
+                    ],
+                    "Accept-Encoding": [
+                        "gzip, deflate"
+                    ],
+                    "Accept": [
+                        "*/*"
+                    ],
+                    "Connection": [
+                        "keep-alive"
+                    ]
+                }
+            },
+            "response": {
+                "status": {
+                    "code": 200,
+                    "message": "OK"
+                },
+                "headers": {
+                    "Server": [
+                        "openresty/1.9.7.5"
+                    ],
+                    "Access-Control-Allow-Methods": [
+                        "POST, GET, OPTIONS"
+                    ],
+                    "Access-Control-Request-Headers": [
+                        "Origin, X-Atmosphere-tracking-id, X-Atmosphere-Framework, X-Cache-Date, Content-Type, X-Atmosphere-Transport, *"
+                    ],
+                    "Content-Type": [
+                        "application/json; charset=UTF-8"
+                    ],
+                    "Access-Control-Allow-Origin": [
+                        "*"
+                    ],
+                    "Connection": [
+                        "keep-alive"
+                    ],
+                    "Date": [
+                        "Wed, 07 Nov 2018 21:42:30 GMT"
+                    ],
+                    "Content-Length": [
+                        "3965"
+                    ],
+                    "Access-Control-Max-Age": [
+                        "86400"
+                    ]
+                },
+                "body": {
+                    "string": "{\"taggings\":{\"tracks\":{\"track\":[{\"name\":\"Arc Of A Diver\",\"duration\":\"FIXME\",\"mbid\":\"36130875-ed02-4be6-81fd-328001c6ccc4\",\"url\":\"https://www.last.fm/music/Steve+Winwood/_/Arc+Of+A+Diver\",\"streamable\":{\"#text\":\"0\",\"fulltrack\":\"0\"},\"artist\":{\"name\":\"Steve Winwood\",\"mbid\":\"885f90ef-6bd9-409a-b2df-e165e553c68e\",\"url\":\"https://www.last.fm/music/Steve+Winwood\"},\"image\":[{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/34s/b4d2fe221bb14f39b6fb875af2bfe6f0.png\",\"size\":\"small\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/64s/b4d2fe221bb14f39b6fb875af2bfe6f0.png\",\"size\":\"medium\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/174s/b4d2fe221bb14f39b6fb875af2bfe6f0.png\",\"size\":\"large\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/300x300/b4d2fe221bb14f39b6fb875af2bfe6f0.png\",\"size\":\"extralarge\"}]},{\"name\":\"Finish What Ya Started\",\"duration\":\"FIXME\",\"mbid\":\"40d413eb-ea38-46ec-a966-d537fec511c8\",\"url\":\"https://www.last.fm/music/Van+Halen/_/Finish+What+Ya+Started\",\"streamable\":{\"#text\":\"0\",\"fulltrack\":\"0\"},\"artist\":{\"name\":\"Van Halen\",\"mbid\":\"b665b768-0d83-4363-950c-31ed39317c15\",\"url\":\"https://www.last.fm/music/Van+Halen\"},\"image\":[{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/34s/608b5a416deb4bd08b296743229b913d.png\",\"size\":\"small\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/64s/608b5a416deb4bd08b296743229b913d.png\",\"size\":\"medium\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/174s/608b5a416deb4bd08b296743229b913d.png\",\"size\":\"large\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/300x300/608b5a416deb4bd08b296743229b913d.png\",\"size\":\"extralarge\"}]},{\"name\":\"Cry For Freedom\",\"duration\":\"FIXME\",\"mbid\":\"8754ac61-d8a3-4230-85fb-27b6358ccc78\",\"url\":\"https://www.last.fm/music/White+Lion/_/Cry+For+Freedom\",\"streamable\":{\"#text\":\"0\",\"fulltrack\":\"0\"},\"artist\":{\"name\":\"White Lion\",\"mbid\":\"4fe426de-9c86-46d5-bbab-239f5e7344bf\",\"url\":\"https://www.last.fm/music/White+Lion\"},\"image\":[{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/34s/40e581988db04b2d815d2aa6cb91f6a7.png\",\"size\":\"small\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/64s/40e581988db04b2d815d2aa6cb91f6a7.png\",\"size\":\"medium\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/174s/40e581988db04b2d815d2aa6cb91f6a7.png\",\"size\":\"large\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/300x300/40e581988db04b2d815d2aa6cb91f6a7.png\",\"size\":\"extralarge\"}]},{\"name\":\"Good Times Bad Times\",\"duration\":\"FIXME\",\"mbid\":\"6978bfee-114a-48ab-8e0f-ceefeafe189f\",\"url\":\"https://www.last.fm/music/Led+Zeppelin/_/Good+Times+Bad+Times\",\"streamable\":{\"#text\":\"0\",\"fulltrack\":\"0\"},\"artist\":{\"name\":\"Led Zeppelin\",\"mbid\":\"d6e0e274-8e19-44ce-b5b2-52c12f8a674a\",\"url\":\"https://www.last.fm/music/Led+Zeppelin\"},\"image\":[{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/34s/780550fffb11643b48e63909aabcc602.png\",\"size\":\"small\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/64s/780550fffb11643b48e63909aabcc602.png\",\"size\":\"medium\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/174s/780550fffb11643b48e63909aabcc602.png\",\"size\":\"large\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/300x300/780550fffb11643b48e63909aabcc602.png\",\"size\":\"extralarge\"}]},{\"name\":\"Hells Bells\",\"duration\":\"FIXME\",\"mbid\":\"b6411d6b-2dca-4004-8919-e8c27ff6b286\",\"url\":\"https://www.last.fm/music/AC%2FDC/_/Hells+Bells\",\"streamable\":{\"#text\":\"0\",\"fulltrack\":\"0\"},\"artist\":{\"name\":\"AC/DC\",\"mbid\":\"66c662b6-6e2f-4930-8610-912e24c63ed1\",\"url\":\"https://www.last.fm/music/AC%2FDC\"},\"image\":[{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/34s/d3f4e279a056464eb794710d8b4b69b7.png\",\"size\":\"small\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/64s/d3f4e279a056464eb794710d8b4b69b7.png\",\"size\":\"medium\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/174s/d3f4e279a056464eb794710d8b4b69b7.png\",\"size\":\"large\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/300x300/d3f4e279a056464eb794710d8b4b69b7.png\",\"size\":\"extralarge\"}]}]},\"@attr\":{\"user\":\"RJ\",\"tag\":\"rock\",\"page\":\"1\",\"perPage\":\"50\",\"totalPages\":\"1\",\"total\":\"5\"}}}"
+                }
+            }
+        }
+    ]
+}
