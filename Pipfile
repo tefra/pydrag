@@ -9,9 +9,15 @@ pre-commit = "==1.12"
 "flake8" = "==3.6.0"
 coverage = "==4.5.1"
 codecov = "==2.0.15"
+pytest = "*"
+pytest-cov = "*"
 
 [packages]
 requests = "*"
+python-dotenv = "*"
+vcrpy = "*"
+attrs = "*"
+cattrs = "*"
 
 [requires]
 python_version = "3.6.5"

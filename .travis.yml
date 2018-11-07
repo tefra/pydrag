@@ -9,7 +9,7 @@ install:
 
 
 script:
-  - pipenv run coverage run manage.py test
+  - pipenv run pytest --cov=./
 
 after_success:
   - pipenv run codecov

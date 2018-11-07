@@ -1,0 +1,61 @@
+{
+    "version": 1,
+    "interactions": [
+        {
+            "request": {
+                "method": "GET",
+                "uri": "http://ws.audioscrobbler.com/2.0/?format=json&method=user.getinfo&user=Zaratoustre",
+                "body": null,
+                "headers": {
+                    "User-Agent": [
+                        "python-requests/2.20.0"
+                    ],
+                    "Accept-Encoding": [
+                        "gzip, deflate"
+                    ],
+                    "Accept": [
+                        "*/*"
+                    ],
+                    "Connection": [
+                        "keep-alive"
+                    ]
+                }
+            },
+            "response": {
+                "status": {
+                    "code": 200,
+                    "message": "OK"
+                },
+                "headers": {
+                    "Date": [
+                        "Tue, 06 Nov 2018 22:07:24 GMT"
+                    ],
+                    "Access-Control-Max-Age": [
+                        "86400"
+                    ],
+                    "Server": [
+                        "openresty/1.9.7.5"
+                    ],
+                    "Connection": [
+                        "keep-alive"
+                    ],
+                    "Content-Type": [
+                        "application/json"
+                    ],
+                    "Access-Control-Allow-Methods": [
+                        "POST, GET, OPTIONS"
+                    ],
+                    "content-length": [
+                        "749"
+                    ],
+                    "Access-Control-Allow-Origin": [
+                        "*"
+                    ]
+                },
+                "body": {
+                    "string": "{\"user\":{\"playlists\":\"0\",\"playcount\":34226,\"gender\":\"n\",\"name\":\"Zaratoustre\",\"subscriber\":\"0\",\"url\":\"https:\\/\\/www.last.fm\\/user\\/Zaratoustre\",\"country\":\"Greece\",\"image\":[{\"size\":\"small\",\"#text\":\"https:\\/\\/lastfm-img2.akamaized.net\\/i\\/u\\/34s\\/a4503fbd410046dcc63317f0fa19613a.png\"},{\"size\":\"medium\",\"#text\":\"https:\\/\\/lastfm-img2.akamaized.net\\/i\\/u\\/64s\\/a4503fbd410046dcc63317f0fa19613a.png\"},{\"size\":\"large\",\"#text\":\"https:\\/\\/lastfm-img2.akamaized.net\\/i\\/u\\/174s\\/a4503fbd410046dcc63317f0fa19613a.png\"},{\"size\":\"extralarge\",\"#text\":\"https:\\/\\/lastfm-img2.akamaized.net\\/i\\/u\\/300x300\\/a4503fbd410046dcc63317f0fa19613a.png\"}],\"registered\":{\"unixtime\":1263647609,\"#text\":1263647609},\"type\":\"user\",\"age\":\"0\",\"bootstrap\":\"0\",\"realname\":\"Chris T\"}}"
+                }
+            }
+        }
+    ]
+}
