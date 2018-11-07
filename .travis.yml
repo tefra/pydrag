@@ -9,7 +9,7 @@ install:
 
 
 script:
-  - pipenv run pytest --cov=./
+  - PYTHONPATH=pyfm pipenv run pytest --cov=./
 
 after_success:
   - pipenv run codecov

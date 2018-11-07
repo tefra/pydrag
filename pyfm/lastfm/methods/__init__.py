@@ -3,8 +3,8 @@ from urllib.parse import urlencode
 
 import requests
 
-from lastfm import api_key, api_root_url
-from lastfm.models import user as user_models
+from pyfm.lastfm import api_key, api_root_url
+from pyfm.lastfm.models import user as user_models
 
 Page = Optional[int]
 Limit = Optional[int]
