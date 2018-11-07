@@ -8,14 +8,16 @@ from pyfm import BaseModel
 
 @attrs(auto_attribs=True)
 class Wiki(BaseModel):
-    content: str
-    summary: str
+    content: str = None
+    summary: str = None
 
 
 @attrs(auto_attribs=True)
 class TagInfo(BaseModel):
     name: str
     reach: int
+    url: str = None
+    taggings: int = None
     count: int = None
     total: int = None
     wiki: Wiki = None

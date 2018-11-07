@@ -224,7 +224,3 @@ class User:
         :returns: UserWeeklyTrackChart
         """
         return {"user": self.user, "from": from_date, "to": to_date}
-
-
-if __name__ == "__main__":
-    response = User(user="Zaratoustre").get_info()
