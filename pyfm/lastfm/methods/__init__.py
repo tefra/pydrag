@@ -12,7 +12,8 @@ Date = Optional[str]
 
 
 def get(namespace: str, method: str, params: dict, data=None):
-    params.update(
+    prep_params = params.copy()
+    prep_params.update(
         dict(
             method="{}.{}".format(namespace.lower(), method.replace("_", "")),
             format="json",
@@ -24,7 +25,8 @@ def get(namespace: str, method: str, params: dict, data=None):
         if type(params.get(key)) == bool:
             params[key] = int(params[key] is True)
 
-    response = requests.get("{}?{}".format(api_root_url, urlencode(params)))
+    url = "{}?{}".format(api_root_url, urlencode(prep_params))
+    response = requests.get(url)
     response.raise_for_status()
     body = response.json()
     if isinstance(body, dict):
@@ -36,8 +38,12 @@ def get(namespace: str, method: str, params: dict, data=None):
 
         root = body.get(next(iter(body.keys())))
         klass = getattr(user_models, model_class)
-        obj = klass.from_dict(root, response=response)
+        obj = klass.from_dict(root)
         obj.response = response
+        obj.namespace = namespace
+        obj.method = method
+        obj.params = params
+        obj.data = data
         return obj
 
 

@@ -1,7 +1,6 @@
 from typing import List, Optional
 
 from attr import attrs
-
 from pyfm import BaseModel
 
 
@@ -25,17 +24,18 @@ class DateUTS(BaseModel):
 
 @attrs(auto_attribs=True)
 class Attributes(BaseModel):
+    to: str = None
+    tag: str = None
+    uts: str = None
     rank: str = None
     date: str = None
-    uts: str = None
     page: int = None
-    perPage: int = None
-    totalPages: int = None
-    total: int = None
     user: str = None
     from_date: str = None
-    to: str = None
+    total: int = None
     artist: str = None
+    perPage: int = None
+    totalPages: int = None
 
 
 @attrs(auto_attribs=True)
@@ -44,7 +44,7 @@ class Artist(BaseModel):
     name: str = None
     text: str = None
     url: str = None
-    playcount: str = None
+    playcount: int = None
     streamable: str = None
     image: List[Image] = None
     attr: Attributes = None
@@ -55,7 +55,7 @@ class Album(BaseModel):
     mbid: str
     text: str = None
     name: str = None
-    playcount: str = None
+    playcount: int = None
     url: str = None
     artist: Artist = None
     attr: Attributes = None
@@ -79,10 +79,11 @@ class ArtistTrack(BaseModel):
 class Track(BaseModel):
     name: str
     mbid: str
-    playcount: str
+
     url: str
     artist: Artist
     image: List[Image]
+    playcount: int = None
     streamable: str = None  # super buggy
     duration: str = None
     attr: Attributes = None
@@ -91,7 +92,7 @@ class Track(BaseModel):
 @attrs(auto_attribs=True)
 class UserInfo(BaseModel):
     playlists: str
-    playcount: str
+    playcount: int
     gender: str
     name: str
     subscriber: str
@@ -144,13 +145,39 @@ class UserTopArtists(BaseModel):
 
 
 @attrs(auto_attribs=True)
+class Tag(BaseModel):
+    count: int
+    name: str
+    url: str
+
+
+@attrs(auto_attribs=True)
 class UserTopTags(BaseModel):
-    pass
+    tag: List[Tag]
+    attr: Attributes
+
+
+@attrs(auto_attribs=True)
+class UserPersonalTagsTracks(BaseModel):
+    track: List[Track]
+
+
+@attrs(auto_attribs=True)
+class UserPersonalTagsAlbums(BaseModel):
+    album: List[Album]
+
+
+@attrs(auto_attribs=True)
+class UserPersonalTagsArtists(BaseModel):
+    artist: List[Artist]
 
 
 @attrs(auto_attribs=True)
 class UserPersonalTags(BaseModel):
-    pass
+    attr: Attributes
+    tracks: UserPersonalTagsTracks = None
+    albums: UserPersonalTagsAlbums = None
+    artists: UserPersonalTagsArtists = None
 
 
 @attrs(auto_attribs=True)

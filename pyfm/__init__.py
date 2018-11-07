@@ -5,13 +5,14 @@ from typing import Dict, TypeVar
 import cattr
 from attr import evolve
 from cattr import unstructure, structure
+from requests import Response
 
 T = TypeVar("T", bound="BaseModel")
 
 
 class BaseModel(metaclass=ABCMeta):
     @property
-    def response(self):
+    def response(self) -> Response:
         return self._response
 
     @response.setter
@@ -38,7 +39,7 @@ class BaseModel(metaclass=ABCMeta):
         return cls.from_dict(data)
 
     @classmethod
-    def from_dict(cls: T, data: dict, response=None) -> T:
+    def from_dict(cls: T, data: dict) -> T:
         return structure(data, cls)
 
 

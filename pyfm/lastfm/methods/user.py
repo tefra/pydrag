@@ -1,4 +1,4 @@
-from lastfm.methods import Limit, Page, Date, apimethod
+from lastfm.methods import Date, Limit, Page, apimethod
 from lastfm.models.user import (
     UserArtistTracks,
     UserFriends,
@@ -12,8 +12,8 @@ from lastfm.models.user import (
     UserTopTracks,
     UserWeeklyAlbumChart,
     UserWeeklyArtistChart,
-    UserWeeklyTrackChart,
     UserWeeklyChartList,
+    UserWeeklyTrackChart,
 )
 
 
@@ -216,7 +216,7 @@ class User:
         """
         :return: UserWeeklyChartList
         """
-        return dict(user=self.user, limit=10)
+        return dict(user=self.user)
 
     @apimethod
     def get_weekly_track_chart(

@@ -25,7 +25,7 @@ def s(value):
 class UserTests(TestCase):
     def setUp(self):
         self.maxDiff = None
-        self.user = User("Zaratoustre")
+        self.user = User("rj")
         super(UserTests, self).setUp()
 
     def assertDictEqual(self, d1, d2, msg=None):
@@ -37,6 +37,10 @@ class UserTests(TestCase):
         actual = result.to_dict()
         response = result.response.json()
 
+        self.assertEqual("User", result.namespace)
+        self.assertEqual("get_artist_tracks", result.method)
+        self.assertEqual({"artist": "Trivium", "user": "rj"}, result.params)
+        self.assertIsNone(None, result.data)
         self.assertIsInstance(result, user.UserArtistTracks)
         self.assertDictEqual(response["artisttracks"], actual)
 
@@ -49,6 +53,10 @@ class UserTests(TestCase):
         actual["@attr"]["for"] = actual["@attr"]["user"]
         del actual["@attr"]["user"]
 
+        self.assertEqual("User", result.namespace)
+        self.assertEqual("get_friends", result.method)
+        self.assertEqual({"recenttracks": "1", "user": "rj"}, result.params)
+        self.assertIsNone(None, result.data)
         self.assertIsInstance(result, user.UserFriends)
         self.assertDictEqual(response["friends"], actual)
 
@@ -58,6 +66,10 @@ class UserTests(TestCase):
         actual = result.to_dict()
         response = result.response.json()
 
+        self.assertEqual("User", result.namespace)
+        self.assertEqual("get_info", result.method)
+        self.assertEqual({"user": "rj"}, result.params)
+        self.assertIsNone(None, result.data)
         self.assertIsInstance(result, user.UserInfo)
         self.assertDictEqual(response["user"], actual)
 
@@ -67,17 +79,69 @@ class UserTests(TestCase):
         actual = result.to_dict()
         response = result.response.json()
 
+        self.assertEqual("User", result.namespace)
+        self.assertEqual("get_loved_tracks", result.method)
+        self.assertEqual({"user": "rj"}, result.params)
+        self.assertIsNone(None, result.data)
+        self.assertGreater(len(result.track), 0)
         self.assertIsInstance(result, user.UserLovedTracks)
         self.assertDictEqual(response["lovedtracks"], actual)
 
-    @skip("generate data")
-    @fixture.use_cassette(path="user/get_personal_tags")
-    def test_get_personal_tags(self):
+    @fixture.use_cassette(path="user/get_personal_tags_track")
+    def test_get_personal_tags_track(self):
         result = self.user.get_personal_tags(tag="rock", tagging_type="track")
         actual = result.to_dict()
         response = result.response.json()
-        self.assertIsInstance(result, user.UserLovedTracks)
-        self.assertDictEqual(response["lovedtracks"], actual)
+
+        self.assertEqual("User", result.namespace)
+        self.assertEqual("get_personal_tags", result.method)
+        self.assertEqual(
+            {"tag": "rock", "taggingtype": "track", "user": "rj"},
+            result.params,
+        )
+        self.assertIsNone(None, result.data)
+        self.assertGreater(len(result.tracks.track), 0)
+        self.assertIsInstance(result, user.UserPersonalTags)
+        self.assertDictEqual(response["taggings"], actual)
+
+    @skip("No data")
+    @fixture.use_cassette(path="user/get_personal_tags_album")
+    def test_get_personal_tags_album(self):
+        result = self.user.get_personal_tags(tag="hell", tagging_type="album")
+        actual = result.to_dict()
+        response = result.response.json()
+
+        self.assertEqual("User", result.namespace)
+        self.assertEqual("get_personal_tags", result.method)
+        self.assertEqual(
+            {"tag": "rock", "taggingtype": "artist", "user": "rj"},
+            result.params,
+        )
+        self.assertIsNone(None, result.data)
+        self.assertGreater(len(result.albums.album), 0)
+        self.assertIsInstance(result, user.UserPersonalTags)
+        self.assertDictEqual(response["taggings"], actual)
+
+    @fixture.use_cassette(path="user/get_personal_tags_artist")
+    def test_get_personal_tags_artist(self):
+        result = self.user.get_personal_tags(tag="rock", tagging_type="artist")
+        actual = result.to_dict()
+        response = result.response.json()
+
+        self.assertEqual("User", result.namespace)
+        self.assertEqual("get_personal_tags", result.method)
+        self.assertEqual(
+            {"tag": "rock", "taggingtype": "artist", "user": "rj"},
+            result.params,
+        )
+        self.assertIsNone(None, result.data)
+        self.assertGreater(len(result.artists.artist), 0)
+        self.assertIsInstance(result, user.UserPersonalTags)
+        self.assertDictEqual(response["taggings"], actual)
+
+    def test_get_personal_tags_invalid(self):
+        with self.assertRaises(AssertionError):
+            self.user.get_personal_tags(tag="rock", tagging_type="foo")
 
     @fixture.use_cassette(path="user/get_recent_tracks")
     def test_get_recent_tracks(self):
@@ -85,6 +149,11 @@ class UserTests(TestCase):
         actual = result.to_dict()
         response = result.response.json()
 
+        self.assertEqual("User", result.namespace)
+        self.assertEqual("get_recent_tracks", result.method)
+        self.assertEqual({"extended": "0", "user": "rj"}, result.params)
+        self.assertIsNone(None, result.data)
+        self.assertGreater(len(result.track), 0)
         self.assertIsInstance(result, user.UserRecentTracks)
         self.assertDictEqual(response["recenttracks"], actual)
 
@@ -94,6 +163,11 @@ class UserTests(TestCase):
         actual = result.to_dict()
         response = result.response.json()
 
+        self.assertEqual("User", result.namespace)
+        self.assertEqual("get_top_albums", result.method)
+        self.assertEqual({"period": "7day", "user": "rj"}, result.params)
+        self.assertIsNone(None, result.data)
+        self.assertGreater(len(result.album), 0)
         self.assertIsInstance(result, user.UserTopAlbums)
         self.assertDictEqual(response["topalbums"], actual)
 
@@ -103,16 +177,25 @@ class UserTests(TestCase):
         actual = result.to_dict()
         response = result.response.json()
 
+        self.assertEqual("User", result.namespace)
+        self.assertEqual("get_top_artists", result.method)
+        self.assertEqual({"period": "7day", "user": "rj"}, result.params)
+        self.assertIsNone(None, result.data)
+        self.assertGreater(len(result.artist), 0)
         self.assertIsInstance(result, user.UserTopArtists)
         self.assertDictEqual(response["topartists"], actual)
 
-    @skip("not enough data")
     @fixture.use_cassette(path="user/get_top_tags")
     def test_get_top_tags(self):
         result = self.user.get_top_tags()
         actual = result.to_dict()
         response = result.response.json()
 
+        self.assertEqual("User", result.namespace)
+        self.assertEqual("get_top_tags", result.method)
+        self.assertEqual({"user": "rj"}, result.params)
+        self.assertIsNone(None, result.data)
+        self.assertGreater(len(result.tag), 0)
         self.assertIsInstance(result, user.UserTopTags)
         self.assertDictEqual(response["toptags"], actual)
 
@@ -122,6 +205,13 @@ class UserTests(TestCase):
         actual = result.to_dict()
         response = result.response.json()
 
+        self.assertEqual("User", result.namespace)
+        self.assertEqual("get_top_tracks", result.method)
+        self.assertEqual(
+            {"limit": "1", "period": "7day", "user": "rj"}, result.params
+        )
+        self.assertIsNone(None, result.data)
+        self.assertGreater(len(result.track), 0)
         self.assertIsInstance(result, user.UserTopTracks)
         self.assertDictEqual(response["toptracks"], actual)
 
@@ -134,6 +224,11 @@ class UserTests(TestCase):
         actual["@attr"]["from"] = actual["@attr"]["from_date"]
         del actual["@attr"]["from_date"]
 
+        self.assertEqual("User", result.namespace)
+        self.assertEqual("get_weekly_album_chart", result.method)
+        self.assertEqual({"user": "rj"}, result.params)
+        self.assertIsNone(None, result.data)
+        self.assertGreater(len(result.album), 0)
         self.assertIsInstance(result, user.UserWeeklyAlbumChart)
         self.assertDictEqual(response["weeklyalbumchart"], actual)
 
@@ -146,6 +241,11 @@ class UserTests(TestCase):
         actual["@attr"]["from"] = actual["@attr"]["from_date"]
         del actual["@attr"]["from_date"]
 
+        self.assertEqual("User", result.namespace)
+        self.assertEqual("get_weekly_artist_chart", result.method)
+        self.assertEqual({"user": "rj"}, result.params)
+        self.assertIsNone(None, result.data)
+        self.assertGreater(len(result.artist), 0)
         self.assertIsInstance(result, user.UserWeeklyArtistChart)
         self.assertDictEqual(response["weeklyartistchart"], actual)
 
@@ -158,6 +258,11 @@ class UserTests(TestCase):
         actual["from"] = actual["from_date"]
         del actual["from_date"]
 
+        self.assertEqual("User", result.namespace)
+        self.assertEqual("get_weekly_chart_list", result.method)
+        self.assertEqual({"user": "rj"}, result.params)
+        self.assertIsNone(None, result.data)
+        self.assertGreater(len(result.chart), 0)
         self.assertIsInstance(result, user.UserWeeklyChartList)
         self.assertDictEqual(response, actual)
 
@@ -170,5 +275,10 @@ class UserTests(TestCase):
         actual["@attr"]["from"] = actual["@attr"]["from_date"]
         del actual["@attr"]["from_date"]
 
+        self.assertEqual("User", result.namespace)
+        self.assertEqual("get_weekly_track_chart", result.method)
+        self.assertEqual({"user": "rj"}, result.params)
+        self.assertIsNone(None, result.data)
+        self.assertGreater(len(result.track), 0)
         self.assertIsInstance(result, user.UserWeeklyTrackChart)
         self.assertDictEqual(response["weeklytrackchart"], actual)
