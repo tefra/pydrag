@@ -1,0 +1,64 @@
+{
+    "version": 1,
+    "interactions": [
+        {
+            "request": {
+                "method": "GET",
+                "uri": "http://ws.audioscrobbler.com/2.0/?country=greece&format=json&limit=10&method=geo.gettoptracks&page=1",
+                "body": null,
+                "headers": {
+                    "User-Agent": [
+                        "python-requests/2.20.0"
+                    ],
+                    "Accept-Encoding": [
+                        "gzip, deflate"
+                    ],
+                    "Accept": [
+                        "*/*"
+                    ],
+                    "Connection": [
+                        "keep-alive"
+                    ]
+                }
+            },
+            "response": {
+                "status": {
+                    "code": 200,
+                    "message": "OK"
+                },
+                "headers": {
+                    "Content-Type": [
+                        "application/json; charset=UTF-8"
+                    ],
+                    "Access-Control-Allow-Methods": [
+                        "POST, GET, OPTIONS"
+                    ],
+                    "Access-Control-Request-Headers": [
+                        "Origin, X-Atmosphere-tracking-id, X-Atmosphere-Framework, X-Cache-Date, Content-Type, X-Atmosphere-Transport, *"
+                    ],
+                    "Date": [
+                        "Wed, 07 Nov 2018 22:09:26 GMT"
+                    ],
+                    "Server": [
+                        "openresty/1.9.7.5"
+                    ],
+                    "Access-Control-Allow-Origin": [
+                        "*"
+                    ],
+                    "Access-Control-Max-Age": [
+                        "86400"
+                    ],
+                    "Connection": [
+                        "keep-alive"
+                    ],
+                    "Content-Length": [
+                        "8071"
+                    ]
+                },
+                "body": {
+                    "string": "{\"tracks\":{\"track\":[{\"name\":\"Do I Wanna Know?\",\"duration\":\"272\",\"listeners\":\"867050\",\"mbid\":\"f1e57531-e0df-4b3e-938f-1ae30c5b1a11\",\"url\":\"https://www.last.fm/music/Arctic+Monkeys/_/Do+I+Wanna+Know%3F\",\"streamable\":{\"#text\":\"0\",\"fulltrack\":\"0\"},\"artist\":{\"name\":\"Arctic Monkeys\",\"mbid\":\"ada7a83c-e3e1-40f1-93f9-3e73dbc9298a\",\"url\":\"https://www.last.fm/music/Arctic+Monkeys\"},\"image\":[{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/34s/81d5e41b894042efb6798ea312878612.png\",\"size\":\"small\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/64s/81d5e41b894042efb6798ea312878612.png\",\"size\":\"medium\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/174s/81d5e41b894042efb6798ea312878612.png\",\"size\":\"large\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/300x300/81d5e41b894042efb6798ea312878612.png\",\"size\":\"extralarge\"}],\"@attr\":{\"rank\":\"0\"}},{\"name\":\"Burn the Witch\",\"duration\":\"0\",\"listeners\":\"261566\",\"mbid\":\"\",\"url\":\"https://www.last.fm/music/Radiohead/_/Burn+the+Witch\",\"streamable\":{\"#text\":\"0\",\"fulltrack\":\"0\"},\"artist\":{\"name\":\"Radiohead\",\"mbid\":\"a74b1b7f-71a5-4011-9441-d0b5e4122711\",\"url\":\"https://www.last.fm/music/Radiohead\"},\"image\":[{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/34s/f250241563be5b11ee77ebe5587c2262.png\",\"size\":\"small\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/64s/f250241563be5b11ee77ebe5587c2262.png\",\"size\":\"medium\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/174s/f250241563be5b11ee77ebe5587c2262.png\",\"size\":\"large\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/300x300/f250241563be5b11ee77ebe5587c2262.png\",\"size\":\"extralarge\"}],\"@attr\":{\"rank\":\"1\"}},{\"name\":\"Teardrop\",\"duration\":\"279\",\"listeners\":\"1287985\",\"mbid\":\"04a4ac3e-5439-4214-8094-b63f756613ea\",\"url\":\"https://www.last.fm/music/Massive+Attack/_/Teardrop\",\"streamable\":{\"#text\":\"0\",\"fulltrack\":\"0\"},\"artist\":{\"name\":\"Massive Attack\",\"mbid\":\"10adbe5e-a2c0-4bf3-8249-2b4cbf6e6ca8\",\"url\":\"https://www.last.fm/music/Massive+Attack\"},\"image\":[{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/34s/99fd77dfe23cf89f696f45b6f30333e6.png\",\"size\":\"small\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/64s/99fd77dfe23cf89f696f45b6f30333e6.png\",\"size\":\"medium\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/174s/99fd77dfe23cf89f696f45b6f30333e6.png\",\"size\":\"large\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/300x300/99fd77dfe23cf89f696f45b6f30333e6.png\",\"size\":\"extralarge\"}],\"@attr\":{\"rank\":\"2\"}},{\"name\":\"Karma Police\",\"duration\":\"0\",\"listeners\":\"1604944\",\"mbid\":\"0790ba6c-e0b1-4891-b82f-b4db9a5a927f\",\"url\":\"https://www.last.fm/music/Radiohead/_/Karma+Police\",\"streamable\":{\"#text\":\"0\",\"fulltrack\":\"0\"},\"artist\":{\"name\":\"Radiohead\",\"mbid\":\"a74b1b7f-71a5-4011-9441-d0b5e4122711\",\"url\":\"https://www.last.fm/music/Radiohead\"},\"image\":[{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/34s/f250241563be5b11ee77ebe5587c2262.png\",\"size\":\"small\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/64s/f250241563be5b11ee77ebe5587c2262.png\",\"size\":\"medium\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/174s/f250241563be5b11ee77ebe5587c2262.png\",\"size\":\"large\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/300x300/f250241563be5b11ee77ebe5587c2262.png\",\"size\":\"extralarge\"}],\"@attr\":{\"rank\":\"3\"}},{\"name\":\"Creep\",\"duration\":\"239\",\"listeners\":\"1607190\",\"mbid\":\"d11fcceb-dfc5-4d19-b45d-f4e8f6d3eaa6\",\"url\":\"https://www.last.fm/music/Radiohead/_/Creep\",\"streamable\":{\"#text\":\"0\",\"fulltrack\":\"0\"},\"artist\":{\"name\":\"Radiohead\",\"mbid\":\"a74b1b7f-71a5-4011-9441-d0b5e4122711\",\"url\":\"https://www.last.fm/music/Radiohead\"},\"image\":[{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/34s/f250241563be5b11ee77ebe5587c2262.png\",\"size\":\"small\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/64s/f250241563be5b11ee77ebe5587c2262.png\",\"size\":\"medium\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/174s/f250241563be5b11ee77ebe5587c2262.png\",\"size\":\"large\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/300x300/f250241563be5b11ee77ebe5587c2262.png\",\"size\":\"extralarge\"}],\"@attr\":{\"rank\":\"4\"}},{\"name\":\"Daydreaming\",\"duration\":\"0\",\"listeners\":\"215784\",\"mbid\":\"\",\"url\":\"https://www.last.fm/music/Radiohead/_/Daydreaming\",\"streamable\":{\"#text\":\"0\",\"fulltrack\":\"0\"},\"artist\":{\"name\":\"Radiohead\",\"mbid\":\"a74b1b7f-71a5-4011-9441-d0b5e4122711\",\"url\":\"https://www.last.fm/music/Radiohead\"},\"image\":[{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/34s/f250241563be5b11ee77ebe5587c2262.png\",\"size\":\"small\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/64s/f250241563be5b11ee77ebe5587c2262.png\",\"size\":\"medium\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/174s/f250241563be5b11ee77ebe5587c2262.png\",\"size\":\"large\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/300x300/f250241563be5b11ee77ebe5587c2262.png\",\"size\":\"extralarge\"}],\"@attr\":{\"rank\":\"5\"}},{\"name\":\"The Less I Know the Better\",\"duration\":\"0\",\"listeners\":\"382122\",\"mbid\":\"\",\"url\":\"https://www.last.fm/music/Tame+Impala/_/The+Less+I+Know+the+Better\",\"streamable\":{\"#text\":\"0\",\"fulltrack\":\"0\"},\"artist\":{\"name\":\"Tame Impala\",\"mbid\":\"63aa26c3-d59b-4da4-84ac-716b54f1ef4d\",\"url\":\"https://www.last.fm/music/Tame+Impala\"},\"image\":[{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/34s/a87a6e1f791a40549eddae42df72e70a.png\",\"size\":\"small\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/64s/a87a6e1f791a40549eddae42df72e70a.png\",\"size\":\"medium\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/174s/a87a6e1f791a40549eddae42df72e70a.png\",\"size\":\"large\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/300x300/a87a6e1f791a40549eddae42df72e70a.png\",\"size\":\"extralarge\"}],\"@attr\":{\"rank\":\"6\"}},{\"name\":\"Seven Nation Army\",\"duration\":\"449\",\"listeners\":\"1480492\",\"mbid\":\"24cc8311-98fd-423a-bed1-97728f5eabc5\",\"url\":\"https://www.last.fm/music/The+White+Stripes/_/Seven+Nation+Army\",\"streamable\":{\"#text\":\"0\",\"fulltrack\":\"0\"},\"artist\":{\"name\":\"The White Stripes\",\"mbid\":\"11ae9fbb-f3d7-4a47-936f-4c0a04d3b3b5\",\"url\":\"https://www.last.fm/music/The+White+Stripes\"},\"image\":[{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/34s/67532b3c9cf04fe4885c955048bb94ed.png\",\"size\":\"small\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/64s/67532b3c9cf04fe4885c955048bb94ed.png\",\"size\":\"medium\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/174s/67532b3c9cf04fe4885c955048bb94ed.png\",\"size\":\"large\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/300x300/67532b3c9cf04fe4885c955048bb94ed.png\",\"size\":\"extralarge\"}],\"@attr\":{\"rank\":\"7\"}},{\"name\":\"Come as You Are\",\"duration\":\"208\",\"listeners\":\"1789269\",\"mbid\":\"e05035a3-14ac-4f88-a160-0a144530004e\",\"url\":\"https://www.last.fm/music/Nirvana/_/Come+as+You+Are\",\"streamable\":{\"#text\":\"0\",\"fulltrack\":\"0\"},\"artist\":{\"name\":\"Nirvana\",\"mbid\":\"9282c8b4-ca0b-4c6b-b7e3-4f7762dfc4d6\",\"url\":\"https://www.last.fm/music/Nirvana\"},\"image\":[{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/34s/35c606c555e84e54ae29ae63278dab9d.png\",\"size\":\"small\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/64s/35c606c555e84e54ae29ae63278dab9d.png\",\"size\":\"medium\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/174s/35c606c555e84e54ae29ae63278dab9d.png\",\"size\":\"large\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/300x300/35c606c555e84e54ae29ae63278dab9d.png\",\"size\":\"extralarge\"}],\"@attr\":{\"rank\":\"8\"}},{\"name\":\"Smells Like Teen Spirit\",\"duration\":\"301\",\"listeners\":\"2031224\",\"mbid\":\"0ebe2d92-a11d-4b2b-9922-806383074ed7\",\"url\":\"https://www.last.fm/music/Nirvana/_/Smells+Like+Teen+Spirit\",\"streamable\":{\"#text\":\"0\",\"fulltrack\":\"0\"},\"artist\":{\"name\":\"Nirvana\",\"mbid\":\"9282c8b4-ca0b-4c6b-b7e3-4f7762dfc4d6\",\"url\":\"https://www.last.fm/music/Nirvana\"},\"image\":[{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/34s/35c606c555e84e54ae29ae63278dab9d.png\",\"size\":\"small\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/64s/35c606c555e84e54ae29ae63278dab9d.png\",\"size\":\"medium\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/174s/35c606c555e84e54ae29ae63278dab9d.png\",\"size\":\"large\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/300x300/35c606c555e84e54ae29ae63278dab9d.png\",\"size\":\"extralarge\"}],\"@attr\":{\"rank\":\"9\"}}],\"@attr\":{\"country\":\"Greece\",\"page\":\"1\",\"perPage\":\"10\",\"totalPages\":\"252335\",\"total\":\"2523350\"}}}"
+                }
+            }
+        }
+    ]
+}

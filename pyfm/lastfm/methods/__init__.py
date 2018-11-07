@@ -4,7 +4,7 @@ from urllib.parse import urlencode
 import requests
 
 from pyfm.lastfm import api_key, api_root_url
-from pyfm.lastfm.models import user as user_models
+from pyfm.lastfm import models
 
 Page = Optional[int]
 Limit = Optional[int]
@@ -37,7 +37,7 @@ def get(namespace: str, method: str, params: dict, data=None):
             model_class = "{}{}".format(namespace.title(), model_class)
 
         root = body.get(next(iter(body.keys())))
-        klass = getattr(user_models, model_class)
+        klass = getattr(models, model_class)
         obj = klass.from_dict(root)
         obj.response = response
         obj.namespace = namespace
