@@ -89,7 +89,7 @@ class Track(BaseModel):
 
 
 @attrs(auto_attribs=True)
-class User(BaseModel):
+class UserInfo(BaseModel):
     playlists: str
     playcount: str
     gender: str
@@ -108,66 +108,71 @@ class User(BaseModel):
 
 
 @attrs(auto_attribs=True)
-class UserArtisttracks(BaseModel):
+class UserArtistTracks(BaseModel):
     track: List[ArtistTrack]
     attr: Attributes
 
 
 @attrs(auto_attribs=True)
 class UserFriends(BaseModel):
-    user: List[User]
+    user: List[UserInfo]
     attr: Attributes
 
 
 @attrs(auto_attribs=True)
-class UserLovedtracks(BaseModel):
+class UserLovedTracks(BaseModel):
     track: List[ArtistTrack]
     attr: Attributes
 
 
 @attrs(auto_attribs=True)
-class UserRecenttracks(BaseModel):
+class UserRecentTracks(BaseModel):
     track: List[ArtistTrack]
     attr: Attributes
 
 
 @attrs(auto_attribs=True)
-class UserTopalbums(BaseModel):
+class UserTopAlbums(BaseModel):
     album: List[Album]
     attr: Attributes
 
 
 @attrs(auto_attribs=True)
-class UserTopartists(BaseModel):
+class UserTopArtists(BaseModel):
     artist: List[Artist]
     attr: Attributes
 
 
 @attrs(auto_attribs=True)
-class UserToptags(BaseModel):
+class UserTopTags(BaseModel):
     pass
 
 
 @attrs(auto_attribs=True)
-class UserToptracks(BaseModel):
+class UserPersonalTags(BaseModel):
+    pass
+
+
+@attrs(auto_attribs=True)
+class UserTopTracks(BaseModel):
     track: List[Track]
     attr: Attributes
 
 
 @attrs(auto_attribs=True)
-class UserWeeklyalbumchart(BaseModel):
+class UserWeeklyAlbumChart(BaseModel):
     album: List[Album]
     attr: Attributes
 
 
 @attrs(auto_attribs=True)
-class UserWeeklyartistchart(BaseModel):
+class UserWeeklyArtistChart(BaseModel):
     artist: List[Artist]
     attr: Attributes
 
 
 @attrs(auto_attribs=True)
-class UserWeeklytrackchart(BaseModel):
+class UserWeeklyTrackChart(BaseModel):
     track: List[Track]
     attr: Attributes
 
@@ -180,6 +185,6 @@ class Chart(BaseModel):
 
 
 @attrs(auto_attribs=True)
-class UserWeeklychartlist(BaseModel):
+class UserWeeklyChartList(BaseModel):
     chart: List[Chart]
     attr: Attributes

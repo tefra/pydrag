@@ -37,7 +37,7 @@ class UserTests(TestCase):
         actual = result.to_dict()
         response = result.response.json()
 
-        self.assertIsInstance(result, user.UserArtisttracks)
+        self.assertIsInstance(result, user.UserArtistTracks)
         self.assertDictEqual(response["artisttracks"], actual)
 
     @fixture.use_cassette(path="user/get_friends_with_recent_tracks")
@@ -58,7 +58,7 @@ class UserTests(TestCase):
         actual = result.to_dict()
         response = result.response.json()
 
-        self.assertIsInstance(result, user.User)
+        self.assertIsInstance(result, user.UserInfo)
         self.assertDictEqual(response["user"], actual)
 
     @fixture.use_cassette(path="user/get_loved_tracks")
@@ -67,7 +67,7 @@ class UserTests(TestCase):
         actual = result.to_dict()
         response = result.response.json()
 
-        self.assertIsInstance(result, user.UserLovedtracks)
+        self.assertIsInstance(result, user.UserLovedTracks)
         self.assertDictEqual(response["lovedtracks"], actual)
 
     @skip("generate data")
@@ -76,7 +76,7 @@ class UserTests(TestCase):
         result = self.user.get_personal_tags(tag="rock", tagging_type="track")
         actual = result.to_dict()
         response = result.response.json()
-        self.assertIsInstance(result, user.UserLovedtracks)
+        self.assertIsInstance(result, user.UserLovedTracks)
         self.assertDictEqual(response["lovedtracks"], actual)
 
     @fixture.use_cassette(path="user/get_recent_tracks")
@@ -85,7 +85,7 @@ class UserTests(TestCase):
         actual = result.to_dict()
         response = result.response.json()
 
-        self.assertIsInstance(result, user.UserRecenttracks)
+        self.assertIsInstance(result, user.UserRecentTracks)
         self.assertDictEqual(response["recenttracks"], actual)
 
     @fixture.use_cassette(path="user/get_top_albums")
@@ -94,7 +94,7 @@ class UserTests(TestCase):
         actual = result.to_dict()
         response = result.response.json()
 
-        self.assertIsInstance(result, user.UserTopalbums)
+        self.assertIsInstance(result, user.UserTopAlbums)
         self.assertDictEqual(response["topalbums"], actual)
 
     @fixture.use_cassette(path="user/get_top_artists")
@@ -103,7 +103,7 @@ class UserTests(TestCase):
         actual = result.to_dict()
         response = result.response.json()
 
-        self.assertIsInstance(result, user.UserTopartists)
+        self.assertIsInstance(result, user.UserTopArtists)
         self.assertDictEqual(response["topartists"], actual)
 
     @skip("not enough data")
@@ -113,7 +113,7 @@ class UserTests(TestCase):
         actual = result.to_dict()
         response = result.response.json()
 
-        self.assertIsInstance(result, user.UserToptags)
+        self.assertIsInstance(result, user.UserTopTags)
         self.assertDictEqual(response["toptags"], actual)
 
     @fixture.use_cassette(path="user/get_top_tracks")
@@ -122,7 +122,7 @@ class UserTests(TestCase):
         actual = result.to_dict()
         response = result.response.json()
 
-        self.assertIsInstance(result, user.UserToptracks)
+        self.assertIsInstance(result, user.UserTopTracks)
         self.assertDictEqual(response["toptracks"], actual)
 
     @fixture.use_cassette(path="user/get_weekly_album_chart")
@@ -134,7 +134,7 @@ class UserTests(TestCase):
         actual["@attr"]["from"] = actual["@attr"]["from_date"]
         del actual["@attr"]["from_date"]
 
-        self.assertIsInstance(result, user.UserWeeklyalbumchart)
+        self.assertIsInstance(result, user.UserWeeklyAlbumChart)
         self.assertDictEqual(response["weeklyalbumchart"], actual)
 
     @fixture.use_cassette(path="user/get_weekly_artist_chart")
@@ -146,7 +146,7 @@ class UserTests(TestCase):
         actual["@attr"]["from"] = actual["@attr"]["from_date"]
         del actual["@attr"]["from_date"]
 
-        self.assertIsInstance(result, user.UserWeeklyartistchart)
+        self.assertIsInstance(result, user.UserWeeklyArtistChart)
         self.assertDictEqual(response["weeklyartistchart"], actual)
 
     @fixture.use_cassette(path="user/get_weekly_chart_list")
@@ -158,7 +158,7 @@ class UserTests(TestCase):
         actual["from"] = actual["from_date"]
         del actual["from_date"]
 
-        self.assertIsInstance(result, user.UserWeeklychartlist)
+        self.assertIsInstance(result, user.UserWeeklyChartList)
         self.assertDictEqual(response, actual)
 
     @fixture.use_cassette(path="user/get_weekly_track_chart")
@@ -170,5 +170,5 @@ class UserTests(TestCase):
         actual["@attr"]["from"] = actual["@attr"]["from_date"]
         del actual["@attr"]["from_date"]
 
-        self.assertIsInstance(result, user.UserWeeklytrackchart)
+        self.assertIsInstance(result, user.UserWeeklyTrackChart)
         self.assertDictEqual(response["weeklytrackchart"], actual)

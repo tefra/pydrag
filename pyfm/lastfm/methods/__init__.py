@@ -28,13 +28,14 @@ def get(namespace: str, method: str, params: dict, data=None):
     response.raise_for_status()
     body = response.json()
     if isinstance(body, dict):
-        model_class = next(iter(body.keys()))
-        root = body.get(model_class)
+        model_class = method.replace("_", " ").replace("get", "").title()
+        model_class = "".join(x for x in model_class if not x.isspace())
 
-        if not model_class.startswith(namespace.lower()):
-            model_class = "{} {}".format(namespace, model_class)
+        if not model_class.startswith(namespace.title()):
+            model_class = "{}{}".format(namespace.title(), model_class)
 
-        klass = getattr(user_models, model_class.title().replace(" ", ""))
+        root = body.get(next(iter(body.keys())))
+        klass = getattr(user_models, model_class)
         obj = klass.from_dict(root, response=response)
         obj.response = response
         return obj
