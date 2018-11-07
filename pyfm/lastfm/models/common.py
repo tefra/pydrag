@@ -48,6 +48,7 @@ class Artist(BaseModel):
     name: str = None
     text: str = None
     url: str = None
+    tagcount: int = None
     listeners: int = None
     playcount: int = None
     streamable: str = None
