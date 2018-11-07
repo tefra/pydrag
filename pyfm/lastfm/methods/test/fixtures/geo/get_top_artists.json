@@ -27,8 +27,8 @@
                     "message": "OK"
                 },
                 "headers": {
-                    "Access-Control-Allow-Methods": [
-                        "POST, GET, OPTIONS"
+                    "Access-Control-Request-Headers": [
+                        "Origin, X-Atmosphere-tracking-id, X-Atmosphere-Framework, X-Cache-Date, Content-Type, X-Atmosphere-Transport, *"
                     ],
                     "Content-Type": [
                         "application/json; charset=UTF-8"
@@ -36,23 +36,23 @@
                     "Content-Length": [
                         "7192"
                     ],
+                    "Date": [
+                        "Wed, 07 Nov 2018 23:07:13 GMT"
+                    ],
                     "Access-Control-Max-Age": [
                         "86400"
                     ],
-                    "Date": [
-                        "Wed, 07 Nov 2018 21:56:03 GMT"
+                    "Access-Control-Allow-Origin": [
+                        "*"
+                    ],
+                    "Access-Control-Allow-Methods": [
+                        "POST, GET, OPTIONS"
                     ],
                     "Server": [
                         "openresty/1.9.7.5"
                     ],
-                    "Access-Control-Request-Headers": [
-                        "Origin, X-Atmosphere-tracking-id, X-Atmosphere-Framework, X-Cache-Date, Content-Type, X-Atmosphere-Transport, *"
-                    ],
                     "Connection": [
                         "keep-alive"
-                    ],
-                    "Access-Control-Allow-Origin": [
-                        "*"
                     ]
                 },
                 "body": {

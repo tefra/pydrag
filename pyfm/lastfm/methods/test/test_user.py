@@ -33,7 +33,9 @@ class UserTests(MethodTestCase):
 
         self.assertEqual("User", result.namespace)
         self.assertEqual("get_artist_tracks", result.method)
-        self.assertEqual({"artist": "Trivium", "user": "rj"}, result.params)
+        self.assertEqual(
+            {"artist": "Trivium", "user": "rj", "page": "1"}, result.params
+        )
         self.assertIsNone(None, result.data)
         self.assertIsInstance(result, UserArtistTracks)
         self.assertDictEqual(response["artisttracks"], actual)
@@ -49,7 +51,10 @@ class UserTests(MethodTestCase):
 
         self.assertEqual("User", result.namespace)
         self.assertEqual("get_friends", result.method)
-        self.assertEqual({"recenttracks": "1", "user": "rj"}, result.params)
+        self.assertEqual(
+            {"recenttracks": "1", "user": "rj", "page": "1", "limit": "50"},
+            result.params,
+        )
         self.assertIsNone(None, result.data)
         self.assertIsInstance(result, UserFriends)
         self.assertDictEqual(response["friends"], actual)
@@ -75,7 +80,9 @@ class UserTests(MethodTestCase):
 
         self.assertEqual("User", result.namespace)
         self.assertEqual("get_loved_tracks", result.method)
-        self.assertEqual({"user": "rj"}, result.params)
+        self.assertEqual(
+            {"user": "rj", "page": "1", "limit": "50"}, result.params
+        )
         self.assertIsNone(None, result.data)
         self.assertGreater(len(result.track), 0)
         self.assertIsInstance(result, UserLovedTracks)
@@ -90,7 +97,13 @@ class UserTests(MethodTestCase):
         self.assertEqual("User", result.namespace)
         self.assertEqual("get_personal_tags", result.method)
         self.assertEqual(
-            {"tag": "rock", "taggingtype": "track", "user": "rj"},
+            {
+                "tag": "rock",
+                "taggingtype": "track",
+                "user": "rj",
+                "page": "1",
+                "limit": "50",
+            },
             result.params,
         )
         self.assertIsNone(None, result.data)
@@ -108,7 +121,12 @@ class UserTests(MethodTestCase):
         self.assertEqual("User", result.namespace)
         self.assertEqual("get_personal_tags", result.method)
         self.assertEqual(
-            {"tag": "rock", "taggingtype": "artist", "user": "rj"},
+            {
+                "tag": "rock",
+                "taggingtype": "artist",
+                "user": "rj",
+                "page": "1",
+            },
             result.params,
         )
         self.assertIsNone(None, result.data)
@@ -125,7 +143,13 @@ class UserTests(MethodTestCase):
         self.assertEqual("User", result.namespace)
         self.assertEqual("get_personal_tags", result.method)
         self.assertEqual(
-            {"tag": "rock", "taggingtype": "artist", "user": "rj"},
+            {
+                "tag": "rock",
+                "taggingtype": "artist",
+                "user": "rj",
+                "page": "1",
+                "limit": "50",
+            },
             result.params,
         )
         self.assertIsNone(None, result.data)
@@ -145,7 +169,10 @@ class UserTests(MethodTestCase):
 
         self.assertEqual("User", result.namespace)
         self.assertEqual("get_recent_tracks", result.method)
-        self.assertEqual({"extended": "0", "user": "rj"}, result.params)
+        self.assertEqual(
+            {"extended": "0", "user": "rj", "page": "1", "limit": "50"},
+            result.params,
+        )
         self.assertIsNone(None, result.data)
         self.assertGreater(len(result.track), 0)
         self.assertIsInstance(result, UserRecentTracks)
@@ -159,7 +186,10 @@ class UserTests(MethodTestCase):
 
         self.assertEqual("User", result.namespace)
         self.assertEqual("get_top_albums", result.method)
-        self.assertEqual({"period": "7day", "user": "rj"}, result.params)
+        self.assertEqual(
+            {"period": "7day", "user": "rj", "page": "1", "limit": "50"},
+            result.params,
+        )
         self.assertIsNone(None, result.data)
         self.assertGreater(len(result.album), 0)
         self.assertIsInstance(result, UserTopAlbums)
@@ -173,7 +203,10 @@ class UserTests(MethodTestCase):
 
         self.assertEqual("User", result.namespace)
         self.assertEqual("get_top_artists", result.method)
-        self.assertEqual({"period": "7day", "user": "rj"}, result.params)
+        self.assertEqual(
+            {"period": "7day", "user": "rj", "page": "1", "limit": "50"},
+            result.params,
+        )
         self.assertIsNone(None, result.data)
         self.assertGreater(len(result.artist), 0)
         self.assertIsInstance(result, UserTopArtists)
@@ -187,7 +220,7 @@ class UserTests(MethodTestCase):
 
         self.assertEqual("User", result.namespace)
         self.assertEqual("get_top_tags", result.method)
-        self.assertEqual({"user": "rj"}, result.params)
+        self.assertEqual({"user": "rj", "limit": "50"}, result.params)
         self.assertIsNone(None, result.data)
         self.assertGreater(len(result.tag), 0)
         self.assertIsInstance(result, UserTopTags)
@@ -202,7 +235,14 @@ class UserTests(MethodTestCase):
         self.assertEqual("User", result.namespace)
         self.assertEqual("get_top_tracks", result.method)
         self.assertEqual(
-            {"limit": "1", "period": "7day", "user": "rj"}, result.params
+            {
+                "limit": "1",
+                "period": "7day",
+                "user": "rj",
+                "page": "1",
+                "limit": "1",
+            },
+            result.params,
         )
         self.assertIsNone(None, result.data)
         self.assertGreater(len(result.track), 0)

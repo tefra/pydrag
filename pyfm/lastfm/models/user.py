@@ -2,20 +2,17 @@ from typing import List
 
 from attr import attrs
 
-from lastfm.models import Attributes, Artist, Image, DateUTS, Date, Track
+from lastfm.models import (
+    Attributes,
+    Artist,
+    Image,
+    DateUTS,
+    Date,
+    Track,
+    Album,
+    Chart,
+)
 from pyfm import BaseModel
-
-
-@attrs(auto_attribs=True)
-class Album(BaseModel):
-    mbid: str
-    text: str = None
-    name: str = None
-    playcount: int = None
-    url: str = None
-    artist: Artist = None
-    attr: Attributes = None
-    image: List[Image] = None
 
 
 @attrs(auto_attribs=True)
@@ -144,13 +141,6 @@ class UserWeeklyArtistChart(BaseModel):
 class UserWeeklyTrackChart(BaseModel):
     track: List[Track]
     attr: Attributes
-
-
-@attrs(auto_attribs=True)
-class Chart(BaseModel):
-    text: str
-    from_date: str
-    to: str
 
 
 @attrs(auto_attribs=True)

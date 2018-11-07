@@ -6,8 +6,6 @@ import requests
 from pyfm.lastfm import api_key, api_root_url
 from pyfm.lastfm import models
 
-Page = Optional[int]
-Limit = Optional[int]
 Date = Optional[str]
 
 

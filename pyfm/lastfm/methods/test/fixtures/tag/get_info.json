@@ -4,7 +4,7 @@
         {
             "request": {
                 "method": "GET",
-                "uri": "http://ws.audioscrobbler.com/2.0/?format=json&limit=1&method=user.gettoptracks&page=1&period=7day&user=rj",
+                "uri": "http://ws.audioscrobbler.com/2.0/?format=json&lang=en&method=tag.getinfo&tag=rap",
                 "body": null,
                 "headers": {
                     "User-Agent": [
@@ -34,10 +34,10 @@
                         "application/json; charset=UTF-8"
                     ],
                     "Content-Length": [
-                        "594"
+                        "1524"
                     ],
                     "Date": [
-                        "Wed, 07 Nov 2018 23:07:25 GMT"
+                        "Wed, 07 Nov 2018 23:07:14 GMT"
                     ],
                     "Access-Control-Max-Age": [
                         "86400"
@@ -56,7 +56,7 @@
                     ]
                 },
                 "body": {
-                    "string": "{\"toptracks\":{\"track\":[{\"name\":\"Einschlafhilfe Baby Sleepy - 60 Minuten\",\"duration\":\"0\",\"playcount\":\"28\",\"mbid\":\"\",\"url\":\"https://www.last.fm/music/Womb+Sounds+Heartbeat/_/Einschlafhilfe+Baby+Sleepy+-+60+Minuten\",\"streamable\":{\"#text\":\"0\",\"fulltrack\":\"0\"},\"artist\":{\"name\":\"Womb Sounds Heartbeat\",\"mbid\":\"\",\"url\":\"https://www.last.fm/music/Womb+Sounds+Heartbeat\"},\"image\":[{\"#text\":\"\",\"size\":\"small\"},{\"#text\":\"\",\"size\":\"medium\"},{\"#text\":\"\",\"size\":\"large\"},{\"#text\":\"\",\"size\":\"extralarge\"}],\"@attr\":{\"rank\":\"1\"}}],\"@attr\":{\"user\":\"RJ\",\"page\":\"1\",\"perPage\":\"1\",\"totalPages\":\"54\",\"total\":\"54\"}}}"
+                    "string": "{\"tag\":{\"name\":\"rap\",\"total\":541269,\"reach\":100727,\"wiki\":{\"summary\":\"Rap is a vocal style, usually coming together with hip-hop, the musical genre off-shoot of the hip hop culture. Rapping itself, also known as emceeing, MCing, spitting, or just rhyming, is the rhythmic spoken delivery of rhymes and wordplay. Rapping is one of the four pillars of the hip hop culture, along with DJing, graffiti, and breaking.\\n\\nRap is also considered a separate genre from hip hop in some cases where the artists do not make music compatible with the hip hop culture. <a href=\\\"http://www.last.fm/tag/rap\\\">Read more on Last.fm</a>.\",\"content\":\"Rap is a vocal style, usually coming together with hip-hop, the musical genre off-shoot of the hip hop culture. Rapping itself, also known as emceeing, MCing, spitting, or just rhyming, is the rhythmic spoken delivery of rhymes and wordplay. Rapping is one of the four pillars of the hip hop culture, along with DJing, graffiti, and breaking.\\n\\nRap is also considered a separate genre from hip hop in some cases where the artists do not make music compatible with the hip hop culture. Some of these cases include Lil Wayne, Juelz Santana, Lil Jon, 50 Cent, T.I., The Game, and Nelly. Rap music has a general focus on pop, hyphy, and snap beats, while hip hop has a general focus on the other four pillars of hip hop. <a href=\\\"http://www.last.fm/tag/rap\\\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.\"}}}"
                 }
             }
         }

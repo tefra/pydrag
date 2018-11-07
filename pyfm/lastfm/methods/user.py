@@ -1,5 +1,5 @@
-from lastfm.methods import Date, Limit, Page, apimethod
-from lastfm.models.user import (
+from lastfm.methods import Date, apimethod
+from lastfm.models import (
     UserArtistTracks,
     UserFriends,
     UserInfo,
@@ -35,7 +35,7 @@ class User:
         artist: str,
         from_date: Date = None,
         to_date: Date = None,
-        page: Page = None,
+        page: int = 1,
     ) -> UserArtistTracks:
         """
         :param artist: The artist name you are interested in
@@ -54,7 +54,7 @@ class User:
 
     @apimethod
     def get_friends(
-        self, recent_tracks: bool, limit: Limit = None, page: Page = None
+        self, recent_tracks: bool, limit: int = 50, page: int = 1
     ) -> UserFriends:
         """
         :param recent_tracks: Whether or not to include information about
@@ -76,7 +76,7 @@ class User:
 
     @apimethod
     def get_loved_tracks(
-        self, limit: Limit = None, page: Page = None
+        self, limit: int = 50, page: int = 1
     ) -> UserLovedTracks:
         """
         :param page: The page number to fetch. Defaults to first page.
@@ -87,11 +87,7 @@ class User:
 
     @apimethod
     def get_personal_tags(
-        self,
-        tag: str,
-        tagging_type: str,
-        limit: Limit = None,
-        page: Page = None,
+        self, tag: str, tagging_type: str, limit: int = 50, page: int = 1
     ) -> UserPersonalTags:
         """
         :param tag: The tag you're interested in.
@@ -117,8 +113,8 @@ class User:
         extended: bool = True,
         from_date: Date = None,
         to_date: Date = None,
-        limit: Limit = None,
-        page: Page = None,
+        limit: int = 50,
+        page: int = 1,
     ) -> UserRecentTracks:
         """
         :param extended: Includes extended data in each artist, and whether or
@@ -147,7 +143,7 @@ class User:
 
     @apimethod
     def get_top_albums(
-        self, period: str, limit: Limit = None, page: Page = None
+        self, period: str, limit: int = 50, page: int = 1
     ) -> UserTopAlbums:
         """
         :param period: overall | 7day | 1month | 3month | 6month | 12month - The time period over which to retrieve top albums for.
@@ -159,7 +155,7 @@ class User:
 
     @apimethod
     def get_top_artists(
-        self, period: str, limit: Limit = None, page: Page = None
+        self, period: str, limit: int = 50, page: int = 1
     ) -> UserTopArtists:
         """
         :param period: overall | 7day | 1month | 3month | 6month | 12month - The time period over which to retrieve top artists for.
@@ -170,7 +166,7 @@ class User:
         return dict(user=self.user, limit=limit, page=page, period=period)
 
     @apimethod
-    def get_top_tags(self, limit: Limit = None) -> UserTopTags:
+    def get_top_tags(self, limit: int = 50) -> UserTopTags:
         """
          :param limit: Limit the number of tags returned
         :returns: UserTopTags
@@ -179,7 +175,7 @@ class User:
 
     @apimethod
     def get_top_tracks(
-        self, period: str, limit: Limit = None, page: Page = None
+        self, period: str, limit: int = 50, page: int = 1
     ) -> UserTopTracks:
         """
         :param period: overall | 7day | 1month | 3month | 6month | 12month - The time period over which to retrieve top tracks for.

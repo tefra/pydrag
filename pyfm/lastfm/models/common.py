@@ -17,6 +17,8 @@ class Attributes(BaseModel):
     country: str = None
     from_date: str = None
     total: int = None
+    offset: int = None
+    num_res: int = None
     artist: str = None
     perPage: int = None
     totalPages: int = None
@@ -42,7 +44,7 @@ class DateUTS(BaseModel):
 
 @attrs(auto_attribs=True)
 class Artist(BaseModel):
-    mbid: str
+    mbid: str = None
     name: str = None
     text: str = None
     url: str = None
@@ -65,3 +67,22 @@ class Track(BaseModel):
     streamable: str = None  # super buggy
     duration: str = None
     attr: Attributes = None
+
+
+@attrs(auto_attribs=True)
+class Album(BaseModel):
+    mbid: str
+    text: str = None
+    name: str = None
+    playcount: int = None
+    url: str = None
+    artist: Artist = None
+    attr: Attributes = None
+    image: List[Image] = None
+
+
+@attrs(auto_attribs=True)
+class Chart(BaseModel):
+    text: str
+    from_date: str
+    to: str

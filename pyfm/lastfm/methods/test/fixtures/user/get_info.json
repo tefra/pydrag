@@ -27,29 +27,29 @@
                     "message": "OK"
                 },
                 "headers": {
-                    "Server": [
-                        "openresty/1.9.7.5"
-                    ],
                     "content-length": [
                         "747"
-                    ],
-                    "Access-Control-Allow-Methods": [
-                        "POST, GET, OPTIONS"
                     ],
                     "Content-Type": [
                         "application/json"
                     ],
-                    "Access-Control-Allow-Origin": [
-                        "*"
-                    ],
-                    "Connection": [
-                        "keep-alive"
-                    ],
                     "Date": [
-                        "Wed, 07 Nov 2018 21:42:28 GMT"
+                        "Wed, 07 Nov 2018 23:07:20 GMT"
                     ],
                     "Access-Control-Max-Age": [
                         "86400"
+                    ],
+                    "Access-Control-Allow-Origin": [
+                        "*"
+                    ],
+                    "Access-Control-Allow-Methods": [
+                        "POST, GET, OPTIONS"
+                    ],
+                    "Server": [
+                        "openresty/1.9.7.5"
+                    ],
+                    "Connection": [
+                        "keep-alive"
                     ]
                 },
                 "body": {
