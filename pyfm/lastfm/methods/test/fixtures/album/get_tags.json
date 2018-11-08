@@ -1,0 +1,64 @@
+{
+    "version": 1,
+    "interactions": [
+        {
+            "request": {
+                "method": "GET",
+                "uri": "http://ws.audioscrobbler.com/2.0/?album=A+Night+at+the+Opera&artist=Queen&autocorrect=True&format=json&mbid=6defd963-fe91-4550-b18e-82c685603c2b&method=album.gettags&user=RJ",
+                "body": null,
+                "headers": {
+                    "User-Agent": [
+                        "python-requests/2.20.0"
+                    ],
+                    "Accept-Encoding": [
+                        "gzip, deflate"
+                    ],
+                    "Accept": [
+                        "*/*"
+                    ],
+                    "Connection": [
+                        "keep-alive"
+                    ]
+                }
+            },
+            "response": {
+                "status": {
+                    "code": 200,
+                    "message": "OK"
+                },
+                "headers": {
+                    "Connection": [
+                        "keep-alive"
+                    ],
+                    "Access-Control-Allow-Methods": [
+                        "POST, GET, OPTIONS"
+                    ],
+                    "Access-Control-Max-Age": [
+                        "86400"
+                    ],
+                    "Access-Control-Allow-Origin": [
+                        "*"
+                    ],
+                    "Server": [
+                        "openresty/1.9.7.5"
+                    ],
+                    "Content-Type": [
+                        "application/json; charset=UTF-8"
+                    ],
+                    "Date": [
+                        "Thu, 08 Nov 2018 18:58:22 GMT"
+                    ],
+                    "Access-Control-Request-Headers": [
+                        "Origin, X-Atmosphere-tracking-id, X-Atmosphere-Framework, X-Cache-Date, Content-Type, X-Atmosphere-Transport, *"
+                    ],
+                    "Content-Length": [
+                        "80"
+                    ]
+                },
+                "body": {
+                    "string": "{\"tags\":{\"#text\":\" \",\"@attr\":{\"artist\":\"Queen\",\"album\":\"A Night at the Opera\"}}}"
+                }
+            }
+        }
+    ]
+}

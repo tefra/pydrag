@@ -2,23 +2,23 @@ from typing import List
 
 from attr import attrs
 
-from lastfm.models import Attributes, Artist, Track, TagInfo
+from lastfm.models import Attributes, Artist, Track, TagInfo, mattrib
 from pyfm import BaseModel
 
 
 @attrs(auto_attribs=True)
 class ChartTopArtists(BaseModel):
-    attr: Attributes
     artist: List[Artist]
+    attr: Attributes = mattrib("@attr")
 
 
 @attrs(auto_attribs=True)
 class ChartTopTracks(BaseModel):
-    attr: Attributes
     track: List[Track]
+    attr: Attributes = mattrib("@attr")
 
 
 @attrs(auto_attribs=True)
 class ChartTopTags(BaseModel):
     tag: List[TagInfo]
-    attr: Attributes
+    attr: Attributes = mattrib("@attr")

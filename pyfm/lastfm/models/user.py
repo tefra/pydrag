@@ -11,6 +11,8 @@ from lastfm.models import (
     Track,
     Album,
     Chart,
+    Tag,
+    mattrib,
 )
 from pyfm import BaseModel
 
@@ -25,7 +27,7 @@ class ArtistTrack(BaseModel):
     streamable: str = None  # super buggy
     image: List[Image] = None
     date: DateUTS = None
-    attr: Attributes = None
+    attr: Attributes = mattrib("@attr", default=None)
 
 
 @attrs(auto_attribs=True)
@@ -50,50 +52,43 @@ class UserInfo(BaseModel):
 @attrs(auto_attribs=True)
 class UserArtistTracks(BaseModel):
     track: List[ArtistTrack]
-    attr: Attributes
+    attr: Attributes = mattrib("@attr")
 
 
 @attrs(auto_attribs=True)
 class UserFriends(BaseModel):
     user: List[UserInfo]
-    attr: Attributes
+    attr: Attributes = mattrib("@attr")
 
 
 @attrs(auto_attribs=True)
 class UserLovedTracks(BaseModel):
     track: List[ArtistTrack]
-    attr: Attributes
+    attr: Attributes = mattrib("@attr")
 
 
 @attrs(auto_attribs=True)
 class UserRecentTracks(BaseModel):
     track: List[ArtistTrack]
-    attr: Attributes
+    attr: Attributes = mattrib("@attr")
 
 
 @attrs(auto_attribs=True)
 class UserTopAlbums(BaseModel):
     album: List[Album]
-    attr: Attributes
+    attr: Attributes = mattrib("@attr")
 
 
 @attrs(auto_attribs=True)
 class UserTopArtists(BaseModel):
     artist: List[Artist]
-    attr: Attributes
-
-
-@attrs(auto_attribs=True)
-class Tag(BaseModel):
-    count: int
-    name: str
-    url: str
+    attr: Attributes = mattrib("@attr")
 
 
 @attrs(auto_attribs=True)
 class UserTopTags(BaseModel):
     tag: List[Tag]
-    attr: Attributes
+    attr: Attributes = mattrib("@attr")
 
 
 @attrs(auto_attribs=True)
@@ -113,7 +108,7 @@ class UserPersonalTagsArtists(BaseModel):
 
 @attrs(auto_attribs=True)
 class UserPersonalTags(BaseModel):
-    attr: Attributes
+    attr: Attributes = mattrib("@attr")
     tracks: UserPersonalTagsTracks = None
     albums: UserPersonalTagsAlbums = None
     artists: UserPersonalTagsArtists = None
@@ -122,28 +117,28 @@ class UserPersonalTags(BaseModel):
 @attrs(auto_attribs=True)
 class UserTopTracks(BaseModel):
     track: List[Track]
-    attr: Attributes
+    attr: Attributes = mattrib("@attr")
 
 
 @attrs(auto_attribs=True)
 class UserWeeklyAlbumChart(BaseModel):
     album: List[Album]
-    attr: Attributes
+    attr: Attributes = mattrib("@attr")
 
 
 @attrs(auto_attribs=True)
 class UserWeeklyArtistChart(BaseModel):
     artist: List[Artist]
-    attr: Attributes
+    attr: Attributes = mattrib("@attr")
 
 
 @attrs(auto_attribs=True)
 class UserWeeklyTrackChart(BaseModel):
     track: List[Track]
-    attr: Attributes
+    attr: Attributes = mattrib("@attr")
 
 
 @attrs(auto_attribs=True)
 class UserWeeklyChartList(BaseModel):
     chart: List[Chart]
-    attr: Attributes
+    attr: Attributes = mattrib("@attr")

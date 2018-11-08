@@ -2,14 +2,16 @@ from typing import List
 
 from attr import attrs
 
-from lastfm.models import Attributes, Album, Artist, Track, Chart
+from lastfm.models import (
+    Attributes,
+    Album,
+    Artist,
+    Track,
+    Chart,
+    Wiki,
+    mattrib,
+)
 from pyfm import BaseModel
-
-
-@attrs(auto_attribs=True)
-class Wiki(BaseModel):
-    content: str = None
-    summary: str = None
 
 
 @attrs(auto_attribs=True)
@@ -26,34 +28,34 @@ class TagInfo(BaseModel):
 @attrs(auto_attribs=True)
 class TagSimilar(BaseModel):
     tag: List[TagInfo]
-    attr: Attributes
+    attr: Attributes = mattrib("@attr")
 
 
 @attrs(auto_attribs=True)
 class TagTopAlbums(BaseModel):
     album: List[Album]
-    attr: Attributes
+    attr: Attributes = mattrib("@attr")
 
 
 @attrs(auto_attribs=True)
 class TagTopArtists(BaseModel):
     artist: List[Artist]
-    attr: Attributes
+    attr: Attributes = mattrib("@attr")
 
 
 @attrs(auto_attribs=True)
 class TagTopTracks(BaseModel):
     track: List[Track]
-    attr: Attributes
+    attr: Attributes = mattrib("@attr")
 
 
 @attrs(auto_attribs=True)
 class TagTopTags(BaseModel):
     tag: List[TagInfo]
-    attr: Attributes
+    attr: Attributes = mattrib("@attr")
 
 
 @attrs(auto_attribs=True)
 class TagWeeklyChartList(BaseModel):
     chart: List[Chart]
-    attr: Attributes
+    attr: Attributes = mattrib("@attr")

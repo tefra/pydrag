@@ -131,11 +131,8 @@ class TagTests(MethodTestCase):
     @fixture.use_cassette(path="tag/get_weekly_chart_list")
     def test_get_weekly_chart_list(self):
         result = self.tag.get_weekly_chart_list()
-        actual = result.to_dict()["chart"][0]
-        response = result.response.json()["weeklychartlist"]["chart"][0]
-
-        actual["from"] = actual["from_date"]
-        del actual["from_date"]
+        actual = result.to_dict()
+        response = result.response.json()["weeklychartlist"]
 
         self.assertEqual("Tag", result.namespace)
         self.assertEqual("get_weekly_chart_list", result.method)
@@ -144,6 +141,11 @@ class TagTests(MethodTestCase):
         self.assertGreater(len(result.chart), 0)
         self.assertIsInstance(result, TagWeeklyChartList)
         self.assertDictEqual(response, actual)
+
+        self.assertEqual(
+            result.chart[0].from_date, response["chart"][0]["from"]
+        )
+        self.assertEqual(result.chart[0].to_date, response["chart"][0]["to"])
 
     def test_get_weekly_chart_list_no_tag(self):
         with self.assertRaises(AssertionError):

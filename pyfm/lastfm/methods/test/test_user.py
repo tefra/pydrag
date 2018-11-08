@@ -46,9 +46,6 @@ class UserTests(MethodTestCase):
         actual = result.to_dict()
         response = result.response.json()
 
-        actual["@attr"]["for"] = actual["@attr"]["user"]
-        del actual["@attr"]["user"]
-
         self.assertEqual("User", result.namespace)
         self.assertEqual("get_friends", result.method)
         self.assertEqual(
@@ -255,9 +252,6 @@ class UserTests(MethodTestCase):
         actual = result.to_dict()
         response = result.response.json()
 
-        actual["@attr"]["from"] = actual["@attr"]["from_date"]
-        del actual["@attr"]["from_date"]
-
         self.assertEqual("User", result.namespace)
         self.assertEqual("get_weekly_album_chart", result.method)
         self.assertEqual({"user": "rj"}, result.params)
@@ -270,10 +264,7 @@ class UserTests(MethodTestCase):
     def test_get_weekly_artist_chart(self):
         result = self.user.get_weekly_artist_chart()
         actual = result.to_dict()
-        response = result.response.json()
-
-        actual["@attr"]["from"] = actual["@attr"]["from_date"]
-        del actual["@attr"]["from_date"]
+        response = result.response.json()["weeklyartistchart"]
 
         self.assertEqual("User", result.namespace)
         self.assertEqual("get_weekly_artist_chart", result.method)
@@ -281,16 +272,15 @@ class UserTests(MethodTestCase):
         self.assertIsNone(None, result.data)
         self.assertGreater(len(result.artist), 0)
         self.assertIsInstance(result, UserWeeklyArtistChart)
-        self.assertDictEqual(response["weeklyartistchart"], actual)
+        self.assertDictEqual(response, actual)
+        self.assertEqual(result.attr.from_date, response["@attr"]["from"])
+        self.assertEqual(result.attr.to_date, response["@attr"]["to"])
 
     @fixture.use_cassette(path="user/get_weekly_chart_list")
     def test_get_weekly_chart_list(self):
         result = self.user.get_weekly_chart_list()
-        actual = result.to_dict()["chart"][0]
-        response = result.response.json()["weeklychartlist"]["chart"][0]
-
-        actual["from"] = actual["from_date"]
-        del actual["from_date"]
+        actual = result.to_dict()
+        response = result.response.json()["weeklychartlist"]
 
         self.assertEqual("User", result.namespace)
         self.assertEqual("get_weekly_chart_list", result.method)
@@ -299,15 +289,16 @@ class UserTests(MethodTestCase):
         self.assertGreater(len(result.chart), 0)
         self.assertIsInstance(result, UserWeeklyChartList)
         self.assertDictEqual(response, actual)
+        self.assertEqual(
+            result.chart[0].from_date, response["chart"][0]["from"]
+        )
+        self.assertEqual(result.chart[0].to_date, response["chart"][0]["to"])
 
     @fixture.use_cassette(path="user/get_weekly_track_chart")
     def test_get_weekly_track_chart(self):
         result = self.user.get_weekly_track_chart()
         actual = result.to_dict()
-        response = result.response.json()
-
-        actual["@attr"]["from"] = actual["@attr"]["from_date"]
-        del actual["@attr"]["from_date"]
+        response = result.response.json()["weeklytrackchart"]
 
         self.assertEqual("User", result.namespace)
         self.assertEqual("get_weekly_track_chart", result.method)
@@ -315,4 +306,6 @@ class UserTests(MethodTestCase):
         self.assertIsNone(None, result.data)
         self.assertGreater(len(result.track), 0)
         self.assertIsInstance(result, UserWeeklyTrackChart)
-        self.assertDictEqual(response["weeklytrackchart"], actual)
+        self.assertDictEqual(response, actual)
+        self.assertEqual(result.attr.from_date, response["@attr"]["from"])
+        self.assertEqual(result.attr.to_date, response["@attr"]["to"])

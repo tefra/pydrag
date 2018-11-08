@@ -3,11 +3,18 @@ from json import dumps, loads
 from typing import Dict, TypeVar
 
 import cattr
-from attr import evolve
+from attr import evolve, attrib
 from cattr import unstructure, structure
 from requests import Response
 
 T = TypeVar("T", bound="BaseModel")
+
+
+def mattrib(name, **kwargs):
+    metadata = kwargs.get("metadata", {})
+    metadata.update(dict(name=name))
+    kwargs.update(dict(metadata=metadata))
+    return attrib(**kwargs)
 
 
 class BaseModel(metaclass=ABCMeta):
@@ -61,17 +68,12 @@ def structure_attrs_fromdict(obj, cl):
             # No type.
             continue
         name = a.name
+        meta_name = a.metadata.get("name")
 
         if name in obj:
             value = obj[name]
-        elif "#" + name in obj:
-            value = obj["#" + name]
-        elif "@" + name in obj:
-            value = obj["@" + name]
-        elif name == "user" and "for" in obj:
-            value = obj["for"]
-        elif name == "from_date" and "from" in obj:
-            value = obj["from"]
+        elif meta_name and meta_name in obj:
+            value = obj[meta_name]
         else:
             continue
 
@@ -88,11 +90,7 @@ def unstructure_attrs_asdict(obj):
     for a in attrs:
         name = a.name
         v = getattr(obj, name)
-
-        if name == "attr":
-            name = "@attr"
-        elif name == "text":
-            name = "#text"
+        name = a.metadata.get("name", name)
 
         if v is None:
             continue
