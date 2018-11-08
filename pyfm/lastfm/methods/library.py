@@ -1,4 +1,4 @@
-from lastfm.methods import apimethod
+from lastfm import ApiMethod
 from lastfm.methods.user import User
 from lastfm.models import UserFriends
 
@@ -15,7 +15,7 @@ class Library(User):
         """
         self.user = user
 
-    @apimethod
+    @ApiMethod.fetch
     def get_artists(self, limit: int = 50, page: int = 1) -> UserFriends:
         """
         :param page: The page number to fetch. Defaults to first page.

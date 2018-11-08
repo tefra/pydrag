@@ -1,4 +1,4 @@
-from lastfm.methods import Date, apimethod
+from lastfm import ApiMethod
 from lastfm.models import (
     UserArtistTracks,
     UserFriends,
@@ -29,12 +29,12 @@ class User:
         """
         self.user = user
 
-    @apimethod
+    @ApiMethod.fetch
     def get_artist_tracks(
         self,
         artist: str,
-        from_date: Date = None,
-        to_date: Date = None,
+        from_date: str = None,
+        to_date: str = None,
         page: int = 1,
     ) -> UserArtistTracks:
         """
@@ -52,7 +52,7 @@ class User:
             page=page,
         )
 
-    @apimethod
+    @ApiMethod.fetch
     def get_friends(
         self, recent_tracks: bool, limit: int = 50, page: int = 1
     ) -> UserFriends:
@@ -67,14 +67,14 @@ class User:
             user=self.user, recenttracks=recent_tracks, page=page, limit=limit
         )
 
-    @apimethod
+    @ApiMethod.fetch
     def get_info(self) -> UserInfo:
         """
         :returns: UserInfo
         """
         return dict(user=self.user)
 
-    @apimethod
+    @ApiMethod.fetch
     def get_loved_tracks(
         self, limit: int = 50, page: int = 1
     ) -> UserLovedTracks:
@@ -85,7 +85,7 @@ class User:
         """
         return dict(user=self.user, limit=limit, page=page)
 
-    @apimethod
+    @ApiMethod.fetch
     def get_personal_tags(
         self, tag: str, tagging_type: str, limit: int = 50, page: int = 1
     ) -> UserPersonalTags:
@@ -107,12 +107,12 @@ class User:
             page=page,
         )
 
-    @apimethod
+    @ApiMethod.fetch
     def get_recent_tracks(
         self,
         extended: bool = True,
-        from_date: Date = None,
-        to_date: Date = None,
+        from_date: str = None,
+        to_date: str = None,
         limit: int = 50,
         page: int = 1,
     ) -> UserRecentTracks:
@@ -141,7 +141,7 @@ class User:
             "to": to_date,
         }
 
-    @apimethod
+    @ApiMethod.fetch
     def get_top_albums(
         self, period: str, limit: int = 50, page: int = 1
     ) -> UserTopAlbums:
@@ -153,7 +153,7 @@ class User:
         """
         return dict(user=self.user, limit=limit, page=page, period=period)
 
-    @apimethod
+    @ApiMethod.fetch
     def get_top_artists(
         self, period: str, limit: int = 50, page: int = 1
     ) -> UserTopArtists:
@@ -165,7 +165,7 @@ class User:
         """
         return dict(user=self.user, limit=limit, page=page, period=period)
 
-    @apimethod
+    @ApiMethod.fetch
     def get_top_tags(self, limit: int = 50) -> UserTopTags:
         """
          :param limit: Limit the number of tags returned
@@ -173,7 +173,7 @@ class User:
         """
         return dict(user=self.user, limit=limit)
 
-    @apimethod
+    @ApiMethod.fetch
     def get_top_tracks(
         self, period: str, limit: int = 50, page: int = 1
     ) -> UserTopTracks:
@@ -185,9 +185,9 @@ class User:
         """
         return dict(user=self.user, limit=limit, page=page, period=period)
 
-    @apimethod
+    @ApiMethod.fetch
     def get_weekly_album_chart(
-        self, from_date: Date = None, to_date: Date = None
+        self, from_date: str = None, to_date: str = None
     ) -> UserWeeklyAlbumChart:
         """
         :param from_date:  The date at which the chart should start from. See User.getWeeklyChartList for more.
@@ -196,9 +196,9 @@ class User:
         """
         return {"user": self.user, "from": from_date, "to": to_date}
 
-    @apimethod
+    @ApiMethod.fetch
     def get_weekly_artist_chart(
-        self, from_date: Date = None, to_date: Date = None
+        self, from_date: str = None, to_date: str = None
     ) -> UserWeeklyArtistChart:
         """
         :param from_date:  The date at which the chart should start from. See User.getWeeklyChartList for more.
@@ -207,16 +207,16 @@ class User:
         """
         return {"user": self.user, "from": from_date, "to": to_date}
 
-    @apimethod
+    @ApiMethod.fetch
     def get_weekly_chart_list(self) -> UserWeeklyChartList:
         """
         :return: UserWeeklyChartList
         """
         return dict(user=self.user)
 
-    @apimethod
+    @ApiMethod.fetch
     def get_weekly_track_chart(
-        self, from_date: Date = None, to_date: Date = None
+        self, from_date: str = None, to_date: str = None
     ) -> UserWeeklyTrackChart:
         """
         :param from_date:  The date at which the chart should start from. See User.getWeeklyChartList for more.

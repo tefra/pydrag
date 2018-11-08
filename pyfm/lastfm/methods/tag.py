@@ -1,4 +1,4 @@
-from lastfm.methods import apimethod
+from lastfm import ApiMethod
 from lastfm.models import (
     TagInfo,
     TagTopAlbums,
@@ -20,7 +20,7 @@ class Tag:
         """
         self.tag = tag
 
-    @apimethod
+    @ApiMethod.fetch
     def get_info(self, lang: str = None) -> TagInfo:
         """
         Get the metadata for a tag
@@ -30,7 +30,7 @@ class Tag:
         assert self.tag is not None
         return dict(tag=self.tag, lang=lang)
 
-    @apimethod
+    @ApiMethod.fetch
     def get_similar(self) -> TagInfo:
         """
         Search for tags similar to this one. Returns tags ranked by similarity, based on listening data.
@@ -40,7 +40,7 @@ class Tag:
         assert self.tag is not None
         return dict(tag=self.tag)
 
-    @apimethod
+    @ApiMethod.fetch
     def get_top_albums(self, limit: int = 50, page: int = 1) -> TagTopAlbums:
         """
         Get the top albums tagged by this tag, ordered by tag count.
@@ -51,7 +51,7 @@ class Tag:
         assert self.tag is not None
         return dict(tag=self.tag, limit=limit, page=page)
 
-    @apimethod
+    @ApiMethod.fetch
     def get_top_artists(self, limit: int = 50, page: int = 1) -> TagTopArtists:
         """
         Get the top artists tagged by this tag, ordered by tag count.
@@ -62,7 +62,7 @@ class Tag:
         assert self.tag is not None
         return dict(tag=self.tag, limit=limit, page=page)
 
-    @apimethod
+    @ApiMethod.fetch
     def get_top_tracks(self, limit: int = 50, page: int = 1) -> TagTopTracks:
         """
         Get the top tracks tagged by this tag, ordered by tag count.
@@ -73,7 +73,7 @@ class Tag:
         assert self.tag is not None
         return dict(tag=self.tag, limit=limit, page=page)
 
-    @apimethod
+    @ApiMethod.fetch
     def get_top_tags(self, limit: int = 50, page: int = 1) -> TagTopTags:
         """
         Fetches the top global tags on Last.fm, sorted by popularity (number of times used)
@@ -84,7 +84,7 @@ class Tag:
         """
         return dict(num_res=limit, offset=(page - 1) * page)
 
-    @apimethod
+    @ApiMethod.fetch
     def get_weekly_chart_list(self) -> TagWeeklyChartList:
         """
         Get a list of available charts for this tag, expressed as date ranges which can be sent to the chart services.

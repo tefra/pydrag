@@ -1,8 +1,6 @@
-import os
-
 from dotenv import load_dotenv
 
-load_dotenv()
+from lastfm.api_method import ApiMethod  # noqa
 
-api_root_url = "http://ws.audioscrobbler.com/2.0/"
-api_key = os.getenv("LASTFM_API_KEY")
+
+load_dotenv()

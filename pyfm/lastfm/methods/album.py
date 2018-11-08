@@ -1,4 +1,4 @@
-from lastfm.methods import apimethod
+from lastfm import ApiMethod
 from lastfm.models import AlbumInfo, AlbumTopTags, AlbumTags, AlbumSearch
 
 
@@ -19,7 +19,7 @@ class Album:
         self.album = album
         self.artist = artist
 
-    @apimethod
+    @ApiMethod.fetch
     def get_info(
         self, autocorrect: bool = True, user: str = None, lang: str = "en"
     ) -> AlbumInfo:
@@ -42,7 +42,7 @@ class Album:
             lang=lang,
         )
 
-    @apimethod
+    @ApiMethod.fetch
     def get_tags(self, user: str, autocorrect: bool = True) -> AlbumTags:
         """
         Get the tags applied by an individual user to an album on Last.fm. To retrieve the list of top tags applied to an album by all users use album.getTopTags.
@@ -58,7 +58,7 @@ class Album:
             user=user,
         )
 
-    @apimethod
+    @ApiMethod.fetch
     def get_top_tags(self, autocorrect: bool = True) -> AlbumTopTags:
         """
         Get the top tags for an album on Last.fm, ordered by popularity.
@@ -73,7 +73,7 @@ class Album:
             autocorrect=autocorrect,
         )
 
-    @apimethod
+    @ApiMethod.fetch
     def search(self, limit: int = 50, page: int = 1) -> AlbumSearch:
         """
         Search for an album by name.Returns album matches sorted by relevance.
