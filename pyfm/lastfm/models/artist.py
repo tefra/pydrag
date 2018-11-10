@@ -3,7 +3,7 @@ from typing import List
 from attr import attrs
 
 from pyfm import BaseModel, mattrib
-from pyfm.lastfm.models import Attributes, Artist, Wiki, Tag, Track
+from pyfm.lastfm.models import Attributes, Artist, Wiki, Tag, Track, Query
 
 
 @attrs(auto_attribs=True)
@@ -57,14 +57,6 @@ class CorrectionArtist(BaseModel):
 @attrs(auto_attribs=True)
 class ArtistCorrection(BaseModel):
     correction: CorrectionArtist
-
-
-@attrs(auto_attribs=True)
-class Query(BaseModel):
-    role: str
-    searchTerms: str
-    startPage: int
-    text: str = mattrib("#text")
 
 
 @attrs(auto_attribs=True)

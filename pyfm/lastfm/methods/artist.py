@@ -1,7 +1,5 @@
 from typing import List
 
-from requests import Response
-
 from pyfm.lastfm import api, POST
 from pyfm.lastfm.models import (
     ArtistInfo,
@@ -11,6 +9,7 @@ from pyfm.lastfm.models import (
     ArtistCorrection,
     ArtistSimilar,
     ArtistTopTracks,
+    BaseModel,
 )
 
 
@@ -28,21 +27,21 @@ class Artist:
         self.artist = artist
 
     @api.operation(method=POST, stateful=True)
-    def add_tags(self, tags: List[str]) -> Response:
+    def add_tags(self, tags: List[str]) -> BaseModel:
         """
         Tag an artist with one or more user supplied tags.
         :param tags: A list of user supplied tags to apply to this artist. Accepts a maximum of 10 tags.
-        :returns: Response
+        :returns: BaseModel
         """
         assert self.artist is not None
         return dict(artist=self.artist, tags=",".join(tags))
 
     @api.operation(method=POST, stateful=True)
-    def remove_tag(self, tag: str) -> Response:
+    def remove_tag(self, tag: str) -> BaseModel:
         """
         Remove a user's tag from an artist.
         :param tag: A single user tag to remove from this artist.
-        :returns: Response
+        :returns: BaseModel
         """
         assert self.artist is not None
         return dict(artist=self.artist, tag=tag)

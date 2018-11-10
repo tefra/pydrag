@@ -29,6 +29,9 @@ class BaseModel(metaclass=ABCMeta):
     def copy(self: T, **kwargs) -> T:
         return evolve(self, **kwargs)
 
+    def get_fields(self):
+        return self.__class__.__attrs_attrs__
+
     @classmethod
     def from_json(cls: T, stream) -> T:
         stream = stream.read() if hasattr(stream, "read") else stream

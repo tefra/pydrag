@@ -3,7 +3,7 @@ from typing import List
 from attr import attrs
 
 from pyfm import BaseModel, mattrib
-from pyfm.lastfm.models import Attributes, Album, Wiki, Tag, Track
+from pyfm.lastfm.models import Attributes, Album, Wiki, Tag, Track, Query
 
 
 @attrs(auto_attribs=True)
@@ -35,14 +35,6 @@ class AlbumInfo(Album):
     tags: Tags = None
     tracks: Tracks = None
     wiki: Wiki = None
-
-
-@attrs(auto_attribs=True)
-class Query(BaseModel):
-    role: str
-    searchTerms: str
-    startPage: int
-    text: str = mattrib("#text")
 
 
 @attrs(auto_attribs=True)

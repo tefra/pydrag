@@ -19,9 +19,15 @@ class Attributes(BaseModel):
     album: str = None
     offset: int = None
     artist: str = None
+    position: int = None
     num_res: int = None
     perPage: int = None
+    track: str = None
     totalPages: int = None
+    accepted: int = None
+    ignored: int = None
+    trackcorrected: int = None
+    artistcorrected: int = None
     to_date: str = mattrib("to", default=None)
     for_user: str = mattrib("for", default=None)
     from_date: str = mattrib("from", default=None)
@@ -71,7 +77,13 @@ class Track(BaseModel):
     listeners: int = None
     streamable: str = None  # super buggy
     duration: str = None
+    match: float = None
     attr: Attributes = mattrib("@attr", default=None)
+
+
+@attrs(auto_attribs=True)
+class TrackSimpleArtist(Track):
+    artist: str = None
 
 
 @attrs(auto_attribs=True)
@@ -79,6 +91,7 @@ class Album(BaseModel):
     mbid: str = None
     text: str = mattrib("#text", default=None)
     name: str = None
+    title: str = None
     playcount: int = None
     url: str = None
     artist: Artist = None
@@ -118,3 +131,11 @@ class Tag(BaseModel):
     name: str
     url: str
     count: int = None
+
+
+@attrs(auto_attribs=True)
+class Query(BaseModel):
+    role: str
+    startPage: int
+    text: str = mattrib("#text")
+    searchTerms: str = None

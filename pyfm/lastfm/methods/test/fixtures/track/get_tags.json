@@ -1,0 +1,64 @@
+{
+    "version": 1,
+    "interactions": [
+        {
+            "request": {
+                "method": "GET",
+                "uri": "https://ws.audioscrobbler.com/2.0/?api_key=LAST_FM_API_KEY&artist=AC+%2F+DC&autocorrect=1&format=json&method=track.getTags&track=Hells+Bell&user=Zaratoustre",
+                "body": null,
+                "headers": {
+                    "User-Agent": [
+                        "python-requests/2.20.0"
+                    ],
+                    "Accept-Encoding": [
+                        "gzip, deflate"
+                    ],
+                    "Accept": [
+                        "*/*"
+                    ],
+                    "Connection": [
+                        "keep-alive"
+                    ]
+                }
+            },
+            "response": {
+                "status": {
+                    "code": 200,
+                    "message": "OK"
+                },
+                "headers": {
+                    "Access-Control-Request-Headers": [
+                        "Origin, X-Atmosphere-tracking-id, X-Atmosphere-Framework, X-Cache-Date, Content-Type, X-Atmosphere-Transport, *"
+                    ],
+                    "Server": [
+                        "openresty/1.9.7.5"
+                    ],
+                    "Access-Control-Max-Age": [
+                        "86400"
+                    ],
+                    "Content-Type": [
+                        "application/json; charset=UTF-8"
+                    ],
+                    "nnCoection": [
+                        "close"
+                    ],
+                    "Content-Length": [
+                        "71"
+                    ],
+                    "Access-Control-Allow-Methods": [
+                        "POST, GET, OPTIONS"
+                    ],
+                    "Date": [
+                        "Sat, 10 Nov 2018 16:09:41 GMT"
+                    ],
+                    "Access-Control-Allow-Origin": [
+                        "*"
+                    ]
+                },
+                "body": {
+                    "string": "{\"tags\":{\"#text\":\" \",\"@attr\":{\"artist\":\"AC/DC\",\"track\":\"Hells Bells\"}}}"
+                }
+            }
+        }
+    ]
+}

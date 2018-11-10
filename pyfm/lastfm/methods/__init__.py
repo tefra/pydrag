@@ -6,3 +6,4 @@ from lastfm.methods.library import Library  # noqa
 from lastfm.methods.tag import Tag  # noqa
 from lastfm.methods.user import User  # noqa
 from lastfm.methods.artist import Artist  # noqa
+from lastfm.methods.track import Track  # noqa

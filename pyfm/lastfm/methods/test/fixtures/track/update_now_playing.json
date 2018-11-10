@@ -1,0 +1,129 @@
+{
+    "version": 1,
+    "interactions": [
+        {
+            "request": {
+                "method": "POST",
+                "uri": "https://ws.audioscrobbler.com/2.0/",
+                "body": "method=auth.getMobileSession&format=json&api_key=LAST_FM_API_KEY&username=Zaratoustre&authToken=USER_AUTH_TOKEN&api_sig=API_SIG",
+                "headers": {
+                    "User-Agent": [
+                        "python-requests/2.20.0"
+                    ],
+                    "Accept-Encoding": [
+                        "gzip, deflate"
+                    ],
+                    "Accept": [
+                        "*/*"
+                    ],
+                    "Connection": [
+                        "keep-alive"
+                    ],
+                    "Content-Length": [
+                        "186"
+                    ],
+                    "Content-Type": [
+                        "application/x-www-form-urlencoded"
+                    ]
+                }
+            },
+            "response": {
+                "status": {
+                    "code": 200,
+                    "message": "OK"
+                },
+                "headers": {
+                    "Content-Type": [
+                        "application/json"
+                    ],
+                    "content-length": [
+                        "90"
+                    ],
+                    "Date": [
+                        "Sat, 10 Nov 2018 18:45:58 GMT"
+                    ],
+                    "Access-Control-Allow-Methods": [
+                        "POST, GET, OPTIONS"
+                    ],
+                    "Access-Control-Max-Age": [
+                        "86400"
+                    ],
+                    "Access-Control-Allow-Origin": [
+                        "*"
+                    ],
+                    "Connection": [
+                        "keep-alive"
+                    ],
+                    "Server": [
+                        "openresty/1.9.7.5"
+                    ]
+                },
+                "body": {
+                    "string": "{\"session\":{\"subscriber\":0,\"name\":\"Zaratoustre\",\"key\":\"CENSORED\"}}"
+                }
+            }
+        },
+        {
+            "request": {
+                "method": "POST",
+                "uri": "https://ws.audioscrobbler.com/2.0/",
+                "body": "artist=AC%2FDC&track=Hells+Bells&trackNumber=2&sk=USER_SESSION&method=track.updateNowPlaying&format=json&api_key=LAST_FM_API_KEY&api_sig=API_SIG",
+                "headers": {
+                    "User-Agent": [
+                        "python-requests/2.20.0"
+                    ],
+                    "Accept-Encoding": [
+                        "gzip, deflate"
+                    ],
+                    "Accept": [
+                        "*/*"
+                    ],
+                    "Connection": [
+                        "keep-alive"
+                    ],
+                    "Content-Length": [
+                        "206"
+                    ],
+                    "Content-Type": [
+                        "application/x-www-form-urlencoded"
+                    ]
+                }
+            },
+            "response": {
+                "status": {
+                    "code": 200,
+                    "message": "OK"
+                },
+                "headers": {
+                    "Content-Type": [
+                        "application/json"
+                    ],
+                    "content-length": [
+                        "229"
+                    ],
+                    "Date": [
+                        "Sat, 10 Nov 2018 18:45:59 GMT"
+                    ],
+                    "Access-Control-Allow-Methods": [
+                        "POST, GET, OPTIONS"
+                    ],
+                    "Access-Control-Max-Age": [
+                        "86400"
+                    ],
+                    "Access-Control-Allow-Origin": [
+                        "*"
+                    ],
+                    "Connection": [
+                        "keep-alive"
+                    ],
+                    "Server": [
+                        "openresty/1.9.7.5"
+                    ]
+                },
+                "body": {
+                    "string": "{\"nowplaying\":{\"artist\":{\"corrected\":\"0\",\"#text\":\"AC\\/DC\"},\"ignoredMessage\":{\"code\":\"0\",\"#text\":\"\"},\"album\":{\"corrected\":\"0\",\"#text\":\"\"},\"albumArtist\":{\"corrected\":\"0\",\"#text\":\"\"},\"track\":{\"corrected\":\"0\",\"#text\":\"Hells Bells\"}}}"
+                }
+            }
+        }
+    ]
+}

@@ -74,8 +74,11 @@ class Request:
         )
 
         for key in res.keys():
-            if type(res.get(key)) == bool:
+            _type = type(res[key])
+            if _type == bool:
                 res[key] = int(res[key] is True)
+            else:
+                res[key] = str(res[key])
         return res
 
     def perform(self):
@@ -90,7 +93,8 @@ class Request:
                 )
             )
 
-        if self.signed:
+        # TODO somehow signed disappears on stateful signed requests
+        if self.signed or "sk" in self.params:
             params["api_sig"] = self.sign(params)
 
         if self.http_method == GET:
@@ -139,7 +143,7 @@ class Request:
         keys = sorted(params.keys())
         keys.remove("format")
 
-        signature = [k + params[k] for k in keys if params.get(k)]
+        signature = [str(k) + str(params[k]) for k in keys if params.get(k)]
         signature.append(str(config.api_secret))
         bytes = "".join(signature).encode("utf-8")
         return hashlib.md5(bytes).hexdigest()
