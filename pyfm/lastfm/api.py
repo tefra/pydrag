@@ -4,7 +4,7 @@ from urllib.parse import urlencode
 
 import requests
 
-from lastfm import md5
+from pyfm.lastfm import md5
 from pyfm import BaseModel
 from pyfm.lastfm import config, models, GET, POST
 
@@ -24,7 +24,7 @@ def operation(
     @wraps(func)
     def wrapper(obj, *args, **kwargs):
         return Request(
-            namespace=obj.__class__.__name__,
+            namespace=obj.__class__.__name__.replace("Service", ""),
             method=func.__name__,
             http_method=method,
             signed=signed,
@@ -56,9 +56,9 @@ class Request:
         self.params = dict((k, v) for k, v in params.items() if v is not None)
 
         if stateful and "sk" not in params:
-            from lastfm.methods import Auth
+            from pyfm.lastfm.services import AuthService
 
-            self.params["sk"] = Auth().get_mobile_session().key
+            self.params["sk"] = AuthService().get_mobile_session().key
 
     def get_request_params(self):
         res = self.params.copy()

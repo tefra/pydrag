@@ -2,7 +2,7 @@ from pyfm.lastfm import api
 from pyfm.lastfm.models import UserFriends
 
 
-class Library:
+class LibraryService:
     """
     Last.fm Library API interface for easy access/navigation
     """

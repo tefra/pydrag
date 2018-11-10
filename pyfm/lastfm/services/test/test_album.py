@@ -1,5 +1,5 @@
-from pyfm.lastfm.methods import Album
-from pyfm.lastfm.methods.test import fixture, MethodTestCase
+from pyfm.lastfm.services import AlbumService
+from pyfm.lastfm.services.test import fixture, MethodTestCase
 from pyfm.lastfm.models import (
     AlbumTopTags,
     AlbumInfo,
@@ -9,14 +9,14 @@ from pyfm.lastfm.models import (
 )
 
 
-class AlbumTests(MethodTestCase):
+class AlbumServiceTests(MethodTestCase):
     def setUp(self):
-        self.album = Album(
+        self.album = AlbumService(
             album="A Night at the Opera",
             artist="Queen",
             mbid="6defd963-fe91-4550-b18e-82c685603c2b",
         )
-        super(AlbumTests, self).setUp()
+        super(AlbumServiceTests, self).setUp()
 
     @fixture.use_cassette(path="album/add_tags")
     def test_add_tags(self):

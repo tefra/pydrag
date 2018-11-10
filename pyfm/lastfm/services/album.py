@@ -10,7 +10,7 @@ from pyfm.lastfm.models import (
 )
 
 
-class Album:
+class AlbumService:
     """
     Last.fm Album API interface for easy access/navigation
     """
@@ -120,7 +120,7 @@ class Album:
 
 
 if __name__ == "__main__":
-    Album(
+    AlbumService(
         album="A Night at the Opera",
         artist="Queen",
         mbid="6defd963-fe91-4550-b18e-82c685603c2b",

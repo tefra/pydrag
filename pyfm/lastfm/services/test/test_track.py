@@ -2,8 +2,8 @@ import time
 from datetime import datetime, timedelta
 from unittest import skip
 
-from pyfm.lastfm.methods import Track
-from pyfm.lastfm.methods.test import fixture, MethodTestCase
+from pyfm.lastfm.services import TrackService
+from pyfm.lastfm.services.test import fixture, MethodTestCase
 from pyfm.lastfm.models import (
     BaseModel,
     TrackTags,
@@ -18,10 +18,10 @@ from pyfm.lastfm.models import (
 )
 
 
-class TrackTests(MethodTestCase):
+class TrackServiceTests(MethodTestCase):
     def setUp(self):
-        self.track = Track(track="Hells Bell", artist="AC / DC")
-        super(TrackTests, self).setUp()
+        self.track = TrackService(track="Hells Bell", artist="AC / DC")
+        super(TrackServiceTests, self).setUp()
 
     @fixture.use_cassette(path="track/add_tags")
     def test_add_tags(self):
@@ -154,7 +154,7 @@ class TrackTests(MethodTestCase):
 
     @fixture.use_cassette(path="track/love")
     def test_love(self):
-        result = Track(track="Hells Bells", artist="AC / DC").love()
+        result = TrackService(track="Hells Bells", artist="AC / DC").love()
         self.assertDictEqual(
             {"artist": "AC / DC", "sk": "CENSORED", "track": "Hells Bells"},
             result.params,
@@ -163,7 +163,7 @@ class TrackTests(MethodTestCase):
 
     @fixture.use_cassette(path="track/unlove")
     def test_unlove(self):
-        result = Track(track="Hells Bells", artist="AC / DC").unlove()
+        result = TrackService(track="Hells Bells", artist="AC / DC").unlove()
         self.assertDictEqual(
             {"artist": "AC / DC", "sk": "CENSORED", "track": "Hells Bells"},
             result.params,
@@ -172,9 +172,9 @@ class TrackTests(MethodTestCase):
 
     @fixture.use_cassette(path="track/update_now_playing")
     def test_update_now_playing(self):
-        result = Track(track="Hells Bells", artist="AC/DC").update_now_playing(
-            track_number=2
-        )
+        result = TrackService(
+            track="Hells Bells", artist="AC/DC"
+        ).update_now_playing(track_number=2)
         response = result.response.json()
         actual = result.to_dict()
         self.assertDictEqual(
@@ -208,7 +208,7 @@ class TrackTests(MethodTestCase):
                 ScrobbleTrack(artist=artist, track=track, timestamp=timestamp)
             )
 
-        result = Track.scrobble_tracks(tracks, batch_size=2)
+        result = TrackService.scrobble_tracks(tracks, batch_size=2)
         actual = result.to_dict()
         expected = {
             "@attr": {"accepted": "5", "ignored": "0"},

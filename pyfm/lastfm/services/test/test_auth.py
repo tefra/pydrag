@@ -1,11 +1,12 @@
-from pyfm.lastfm.methods import Auth
-from pyfm.lastfm.methods.test import MethodTestCase, fixture
+from pyfm.lastfm.services import AuthService
+from pyfm.lastfm.services.test import MethodTestCase, fixture
 from pyfm.lastfm.models import AuthToken, AuthMobileSession, AuthSession
 
 
-class AuthTests(MethodTestCase):
+class AuthServiceTests(MethodTestCase):
     def setUp(self):
-        self.auth = Auth()
+        self.auth = AuthService()
+        super(AuthServiceTests, self).setUp()
 
     @fixture.use_cassette(path="auth/get_token")
     def test_get_token(self):
@@ -23,7 +24,7 @@ class AuthTests(MethodTestCase):
 
     @fixture.use_cassette(path="auth/get_session")
     def test_get_session(self):
-        auth = Auth().get_token()
+        auth = AuthService().get_token()
 
         # Manually grand access to the request token open the auth url
         # print (auth.auth_url)

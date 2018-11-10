@@ -2,7 +2,7 @@ from pyfm.lastfm import api
 from pyfm.lastfm.models import ChartTopArtists, ChartTopTracks, ChartTopTags
 
 
-class Chart:
+class ChartService:
     """
     Last.fm Chart API interface for easy access/navigation
     """

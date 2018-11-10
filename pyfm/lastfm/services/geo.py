@@ -2,7 +2,7 @@ from pyfm.lastfm import api
 from pyfm.lastfm.models import GeoTopArtists, GeoTopTracks
 
 
-class Geo:
+class GeoService:
     """
     Last.fm Geo API interface for easy access/navigation
     """

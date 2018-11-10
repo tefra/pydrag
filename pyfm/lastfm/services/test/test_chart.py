@@ -1,12 +1,12 @@
-from pyfm.lastfm.methods import Chart
-from pyfm.lastfm.methods.test import MethodTestCase, fixture
+from pyfm.lastfm.services import ChartService
+from pyfm.lastfm.services.test import MethodTestCase, fixture
 from pyfm.lastfm.models import ChartTopArtists, ChartTopTracks, ChartTopTags
 
 
-class ChartTests(MethodTestCase):
+class ChartServiceTests(MethodTestCase):
     def setUp(self):
-        self.chart = Chart(page=2, limit=10)
-        super(ChartTests, self).setUp()
+        self.chart = ChartService(page=2, limit=10)
+        super(ChartServiceTests, self).setUp()
 
     @fixture.use_cassette(path="chart/get_top_artists")
     def test_get_top_artists(self):

@@ -17,7 +17,7 @@ from pyfm.lastfm.models import (
 )
 
 
-class User:
+class UserService:
     """
     Last.fm User API interface for easy access/navigation
     """

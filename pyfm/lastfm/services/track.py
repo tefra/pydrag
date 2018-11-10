@@ -15,7 +15,7 @@ from pyfm.lastfm.models import (
 )
 
 
-class Track:
+class TrackService:
     """
     Last.fm Track API interface for easy access/navigation
     """
@@ -195,7 +195,7 @@ class Track:
         status = None
         batches = list(divide_chunks(tracks, batch_size))
         for batch in batches:
-            result = Track().scrobble(batch)
+            result = TrackService().scrobble(batch)
             if status is None:
                 status = result
                 status.response = None

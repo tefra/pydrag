@@ -1,12 +1,12 @@
-from lastfm.methods.test import MethodTestCase, fixture
-from pyfm.lastfm.methods import Geo
+from pyfm.lastfm.services.test import MethodTestCase, fixture
+from pyfm.lastfm.services import GeoService
 from pyfm.lastfm.models import GeoTopArtists, GeoTopTracks
 
 
-class GeoTests(MethodTestCase):
+class GeoServiceTests(MethodTestCase):
     def setUp(self):
-        self.geo = Geo("greece")
-        super(GeoTests, self).setUp()
+        self.geo = GeoService("greece")
+        super(GeoServiceTests, self).setUp()
 
     @fixture.use_cassette(path="geo/get_top_artists")
     def test_get_top_artists(self):

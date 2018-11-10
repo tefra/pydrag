@@ -13,7 +13,7 @@ from pyfm.lastfm.models import (
 )
 
 
-class Artist:
+class ArtistService:
     """
     Last.fm Artist API interface for easy access/navigation
     """

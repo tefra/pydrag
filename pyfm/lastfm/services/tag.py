@@ -9,7 +9,7 @@ from pyfm.lastfm.models import (
 )
 
 
-class Tag:
+class TagService:
     """
     Last.fm Tag API interface for easy access/navigation
     """

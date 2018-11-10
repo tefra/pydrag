@@ -1,5 +1,5 @@
-from pyfm.lastfm.methods import Artist
-from pyfm.lastfm.methods.test import fixture, MethodTestCase
+from pyfm.lastfm.services import ArtistService
+from pyfm.lastfm.services.test import fixture, MethodTestCase
 from pyfm.lastfm.models import (
     BaseModel,
     ArtistTags,
@@ -12,12 +12,12 @@ from pyfm.lastfm.models import (
 )
 
 
-class ArtistTests(MethodTestCase):
+class ArtistServiceTests(MethodTestCase):
     def setUp(self):
-        self.artist = Artist(
+        self.artist = ArtistService(
             artist="Guns N' Roses", mbid="eeb1195b-f213-4ce1-b28c-8565211f8e43"
         )
-        super(ArtistTests, self).setUp()
+        super(ArtistServiceTests, self).setUp()
 
     @fixture.use_cassette(path="artist/add_tags")
     def test_add_tags(self):

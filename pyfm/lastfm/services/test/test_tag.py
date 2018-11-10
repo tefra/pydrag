@@ -1,7 +1,7 @@
 from unittest import skip
 
-from pyfm.lastfm.methods import Tag
-from pyfm.lastfm.methods.test import MethodTestCase, fixture
+from pyfm.lastfm.services import TagService
+from pyfm.lastfm.services.test import MethodTestCase, fixture
 from pyfm.lastfm.models import (
     TagInfo,
     TagSimilar,
@@ -13,10 +13,10 @@ from pyfm.lastfm.models import (
 )
 
 
-class TagTests(MethodTestCase):
+class TagServiceTests(MethodTestCase):
     def setUp(self):
-        self.tag = Tag("rap")
-        super(TagTests, self).setUp()
+        self.tag = TagService("rap")
+        super(TagServiceTests, self).setUp()
 
     @fixture.use_cassette(path="tag/get_info")
     def test_get_info(self):
@@ -32,7 +32,7 @@ class TagTests(MethodTestCase):
 
     def test_get_info_no_tag(self):
         with self.assertRaises(AssertionError):
-            Tag().get_info()
+            TagService().get_info()
 
     @skip("No data :(")
     @fixture.use_cassette(path="tag/get_similar")
@@ -49,7 +49,7 @@ class TagTests(MethodTestCase):
 
     def test_get_similar_no_tag(self):
         with self.assertRaises(AssertionError):
-            Tag().get_similar()
+            TagService().get_similar()
 
     @fixture.use_cassette(path="tag/get_top_albums")
     def test_get_top_albums(self):
@@ -68,7 +68,7 @@ class TagTests(MethodTestCase):
 
     def test_get_top_albums_no_tag(self):
         with self.assertRaises(AssertionError):
-            Tag().get_top_albums()
+            TagService().get_top_albums()
 
     @fixture.use_cassette(path="tag/get_top_artists")
     def test_get_top_artists(self):
@@ -87,7 +87,7 @@ class TagTests(MethodTestCase):
 
     def test_get_top_artists_no_tag(self):
         with self.assertRaises(AssertionError):
-            Tag().get_top_artists()
+            TagService().get_top_artists()
 
     @fixture.use_cassette(path="tag/get_top_tracks")
     def test_get_top_tracks(self):
@@ -106,7 +106,7 @@ class TagTests(MethodTestCase):
 
     def test_get_top_tracks_no_tag(self):
         with self.assertRaises(AssertionError):
-            Tag().get_top_tracks()
+            TagService().get_top_tracks()
 
     @fixture.use_cassette(path="tag/get_top_tags")
     def test_get_top_tags(self):
@@ -141,4 +141,4 @@ class TagTests(MethodTestCase):
 
     def test_get_weekly_chart_list_no_tag(self):
         with self.assertRaises(AssertionError):
-            Tag().get_weekly_chart_list()
+            TagService().get_weekly_chart_list()

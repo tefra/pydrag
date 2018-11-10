@@ -1,12 +1,12 @@
-from pyfm.lastfm.methods import Library
+from pyfm.lastfm.services import LibraryService
 from pyfm.lastfm.models import LibraryArtists
-from pyfm.lastfm.methods.test import fixture, MethodTestCase
+from pyfm.lastfm.services.test import fixture, MethodTestCase
 
 
-class LibraryTests(MethodTestCase):
+class LibraryServiceTests(MethodTestCase):
     def setUp(self):
-        self.library = Library("rj")
-        super(LibraryTests, self).setUp()
+        self.library = LibraryService("rj")
+        super(LibraryServiceTests, self).setUp()
 
     @fixture.use_cassette(path="library/get_artists")
     def test_get_artists(self):

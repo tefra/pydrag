@@ -1,9 +1,9 @@
-from lastfm.api import POST
+from pyfm.lastfm.api import POST
 from pyfm.lastfm import api
 from pyfm.lastfm.models.auth import AuthToken, AuthMobileSession, AuthSession
 
 
-class Auth:
+class AuthService:
     @api.operation(signed=False)
     def get_token(self) -> AuthToken:
         """

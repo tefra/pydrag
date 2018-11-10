@@ -2,7 +2,7 @@ import os
 
 from attr import attrs, attrib
 
-from lastfm.utils import md5
+from pyfm.lastfm.utils import md5
 
 
 @attrs(auto_attribs=True, frozen=True)
@@ -20,5 +20,6 @@ config = Config(
     username=os.getenv("LASTFM_USERNAME"),
     password=os.getenv("LASTFM_PASSWORD"),
 )
+
 GET = "get"
 POST = "post"

@@ -16,14 +16,14 @@ from pyfm.lastfm.models import (
     UserLovedTracks,
     UserArtistTracks,
 )
-from pyfm.lastfm.methods.test import MethodTestCase, fixture
-from pyfm.lastfm.methods import User
+from pyfm.lastfm.services.test import MethodTestCase, fixture
+from pyfm.lastfm.services import UserService
 
 
-class UserTests(MethodTestCase):
+class UserServiceTests(MethodTestCase):
     def setUp(self):
-        self.user = User("rj")
-        super(UserTests, self).setUp()
+        self.user = UserService("rj")
+        super(UserServiceTests, self).setUp()
 
     @fixture.use_cassette(path="user/get_artist_tracks")
     def test_get_artist_tracks(self):
