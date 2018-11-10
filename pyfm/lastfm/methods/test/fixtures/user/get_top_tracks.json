@@ -4,7 +4,7 @@
         {
             "request": {
                 "method": "GET",
-                "uri": "https://ws.audioscrobbler.com/2.0/?format=json&limit=1&method=user.getTopTracks&page=1&period=7day&user=rj",
+                "uri": "https://ws.audioscrobbler.com/2.0/?api_key=LAST_FM_API_KEY&format=json&limit=1&method=user.getTopTracks&page=1&period=7day&user=rj",
                 "body": null,
                 "headers": {
                     "User-Agent": [
@@ -27,20 +27,17 @@
                     "message": "OK"
                 },
                 "headers": {
-                    "Content-Length": [
-                        "594"
-                    ],
-                    "Access-Control-Allow-Methods": [
-                        "POST, GET, OPTIONS"
-                    ],
-                    "Date": [
-                        "Sat, 10 Nov 2018 09:57:38 GMT"
-                    ],
-                    "Content-Type": [
-                        "application/json; charset=UTF-8"
+                    "Server": [
+                        "openresty/1.9.7.5"
                     ],
                     "Access-Control-Max-Age": [
                         "86400"
+                    ],
+                    "Connection": [
+                        "keep-alive"
+                    ],
+                    "Date": [
+                        "Sat, 10 Nov 2018 11:28:16 GMT"
                     ],
                     "Access-Control-Allow-Origin": [
                         "*"
@@ -48,11 +45,14 @@
                     "Access-Control-Request-Headers": [
                         "Origin, X-Atmosphere-tracking-id, X-Atmosphere-Framework, X-Cache-Date, Content-Type, X-Atmosphere-Transport, *"
                     ],
-                    "Connection": [
-                        "keep-alive"
+                    "Content-Type": [
+                        "application/json; charset=UTF-8"
                     ],
-                    "Server": [
-                        "openresty/1.9.7.5"
+                    "Access-Control-Allow-Methods": [
+                        "POST, GET, OPTIONS"
+                    ],
+                    "Content-Length": [
+                        "594"
                     ]
                 },
                 "body": {

@@ -4,7 +4,7 @@
         {
             "request": {
                 "method": "GET",
-                "uri": "https://ws.audioscrobbler.com/2.0/?album=A+Night+at+the+Opera&artist=Queen&autocorrect=0&format=json&mbid=6defd963-fe91-4550-b18e-82c685603c2b&method=album.getTopTags",
+                "uri": "https://ws.audioscrobbler.com/2.0/?album=A+Night+at+the+Opera&api_key=LAST_FM_API_KEY&artist=Queen&autocorrect=0&format=json&mbid=6defd963-fe91-4550-b18e-82c685603c2b&method=album.getTopTags",
                 "body": null,
                 "headers": {
                     "User-Agent": [
@@ -27,32 +27,32 @@
                     "message": "OK"
                 },
                 "headers": {
-                    "Content-Length": [
-                        "7682"
-                    ],
-                    "Access-Control-Allow-Origin": [
-                        "*"
-                    ],
                     "Server": [
                         "openresty/1.9.7.5"
-                    ],
-                    "Date": [
-                        "Sat, 10 Nov 2018 09:53:23 GMT"
-                    ],
-                    "Connection": [
-                        "keep-alive"
-                    ],
-                    "Access-Control-Request-Headers": [
-                        "Origin, X-Atmosphere-tracking-id, X-Atmosphere-Framework, X-Cache-Date, Content-Type, X-Atmosphere-Transport, *"
                     ],
                     "Access-Control-Max-Age": [
                         "86400"
                     ],
-                    "Access-Control-Allow-Methods": [
-                        "POST, GET, OPTIONS"
+                    "Connection": [
+                        "keep-alive"
+                    ],
+                    "Date": [
+                        "Sat, 10 Nov 2018 11:27:40 GMT"
+                    ],
+                    "Access-Control-Allow-Origin": [
+                        "*"
+                    ],
+                    "Access-Control-Request-Headers": [
+                        "Origin, X-Atmosphere-tracking-id, X-Atmosphere-Framework, X-Cache-Date, Content-Type, X-Atmosphere-Transport, *"
                     ],
                     "Content-Type": [
                         "application/json; charset=UTF-8"
+                    ],
+                    "Access-Control-Allow-Methods": [
+                        "POST, GET, OPTIONS"
+                    ],
+                    "Content-Length": [
+                        "7682"
                     ]
                 },
                 "body": {

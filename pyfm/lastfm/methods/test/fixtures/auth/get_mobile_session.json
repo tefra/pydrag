@@ -5,7 +5,7 @@
             "request": {
                 "method": "POST",
                 "uri": "https://ws.audioscrobbler.com/2.0/",
-                "body": "method=auth.getMobileSession&format=json&api_key=5e3c2d94b6abd4805fa5c647eda0d1dc&username=Zaratoustre&authToken=b4d5e0e3201175389bb320dbcc0207db&api_sig=f8a1491b5d61ec131952c1cdab60f1f2",
+                "body": "method=auth.getMobileSession&format=json&api_key=LAST_FM_API_KEY&username=Zaratoustre&authToken=USER_AUTH_TOKEN&api_sig=API_SIG",
                 "headers": {
                     "User-Agent": [
                         "python-requests/2.20.0"
@@ -33,9 +33,6 @@
                     "message": "OK"
                 },
                 "headers": {
-                    "Server": [
-                        "openresty/1.9.7.5"
-                    ],
                     "Access-Control-Allow-Methods": [
                         "POST, GET, OPTIONS"
                     ],
@@ -48,18 +45,21 @@
                     "Access-Control-Allow-Origin": [
                         "*"
                     ],
+                    "Connection": [
+                        "keep-alive"
+                    ],
                     "Date": [
-                        "Sat, 10 Nov 2018 09:09:07 GMT"
+                        "Sat, 10 Nov 2018 11:29:18 GMT"
+                    ],
+                    "Server": [
+                        "openresty/1.9.7.5"
                     ],
                     "content-length": [
                         "90"
-                    ],
-                    "Connection": [
-                        "keep-alive"
                     ]
                 },
                 "body": {
-                    "string": "{\"session\":{\"subscriber\":0,\"name\":\"Zaratoustre\",\"key\":\"W75Vr-bEL-kU5CxnY719F0eDGDuJIFbn\"}}"
+                    "string": "{\"session\":{\"subscriber\":0,\"name\":\"Zaratoustre\",\"key\":\"CENSORED\"}}"
                 }
             }
         }

@@ -1,8 +1,12 @@
-from unittest import skip
-
-from lastfm.models import AlbumTopTags, AlbumInfo, AlbumTags, AlbumSearch
-from pyfm.lastfm.methods.album import Album
+from pyfm.lastfm.methods import Album
 from pyfm.lastfm.methods.test import fixture, MethodTestCase
+from pyfm.lastfm.models import (
+    AlbumTopTags,
+    AlbumInfo,
+    AlbumTags,
+    AlbumSearch,
+    BaseModel,
+)
 
 
 class AlbumTests(MethodTestCase):
@@ -13,6 +17,56 @@ class AlbumTests(MethodTestCase):
             mbid="6defd963-fe91-4550-b18e-82c685603c2b",
         )
         super(AlbumTests, self).setUp()
+
+    @fixture.use_cassette(path="album/add_tags")
+    def test_add_tags(self):
+        result = self.album.add_tags(["foo", "bar"])
+        self.assertDictEqual(
+            {
+                "album": "A Night at the Opera",
+                "artist": "Queen",
+                "sk": "CENSORED",
+                "tags": "foo,bar",
+            },
+            result.params,
+        )
+        self.assertIsInstance(result, BaseModel)
+
+    @fixture.use_cassette(path="album/get_tags")
+    def test_get_tags(self):
+        result = self.album.get_tags(user="Zaratoustre")
+        actual = result.to_dict()
+        response = result.response.json()
+
+        self.assertEqual("Album", result.namespace)
+        self.assertEqual("get_tags", result.method)
+        self.assertEqual(
+            {
+                "album": "A Night at the Opera",
+                "artist": "Queen",
+                "autocorrect": True,
+                "mbid": "6defd963-fe91-4550-b18e-82c685603c2b",
+                "user": "Zaratoustre",
+            },
+            result.params,
+        )
+        self.assertIsInstance(result, AlbumTags)
+        self.assertEqual(2, len(result.tag))
+        self.assertDictEqual(response["tags"], actual)
+
+    @fixture.use_cassette(path="album/remove_tag")
+    def test_remove_tag(self):
+        result = self.album.remove_tag("bar")
+        self.assertDictEqual(
+            {
+                "album": "A Night at the Opera",
+                "artist": "Queen",
+                "sk": "CENSORED",
+                "tag": "bar",
+            },
+            result.params,
+        )
+        self.assertIsInstance(result, BaseModel)
 
     @fixture.use_cassette(path="album/get_info")
     def test_get_info(self):
@@ -55,28 +109,6 @@ class AlbumTests(MethodTestCase):
         self.assertGreater(len(result.tag), 0)
         self.assertIsInstance(result, AlbumTopTags)
         self.assertDictEqual(response["toptags"], actual)
-
-    @skip("Need data")
-    @fixture.use_cassette(path="album/get_tags")
-    def test_get_tags(self):
-        result = self.album.get_tags(user="RJ")
-        actual = result.to_dict()
-        response = result.response.json()
-
-        self.assertEqual("Album", result.namespace)
-        self.assertEqual("get_tags", result.method)
-        self.assertEqual(
-            {
-                "album": "A Night at the Opera",
-                "artist": "Queen",
-                "autocorrect": "1",
-                "mbid": "6defd963-fe91-4550-b18e-82c685603c2b",
-                "user": "RJ",
-            },
-            result.params,
-        )
-        self.assertIsInstance(result, AlbumTags)
-        self.assertDictEqual(response["tags"], actual)
 
     @fixture.use_cassette(path="album/search")
     def test_search(self):

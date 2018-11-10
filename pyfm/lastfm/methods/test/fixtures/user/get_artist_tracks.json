@@ -4,7 +4,7 @@
         {
             "request": {
                 "method": "GET",
-                "uri": "https://ws.audioscrobbler.com/2.0/?artist=Trivium&format=json&method=user.getArtistTracks&page=1&user=rj",
+                "uri": "https://ws.audioscrobbler.com/2.0/?api_key=LAST_FM_API_KEY&artist=Trivium&format=json&method=user.getArtistTracks&page=1&user=rj",
                 "body": null,
                 "headers": {
                     "User-Agent": [
@@ -27,23 +27,17 @@
                     "message": "OK"
                 },
                 "headers": {
-                    "Content-Length": [
-                        "125"
-                    ],
-                    "Access-Control-Allow-Methods": [
-                        "POST, GET, OPTIONS"
-                    ],
-                    "Date": [
-                        "Sat, 10 Nov 2018 09:57:19 GMT"
-                    ],
-                    "Content-Type": [
-                        "application/json; charset=UTF-8"
-                    ],
-                    "Cneonction": [
-                        "close"
+                    "Server": [
+                        "openresty/1.9.7.5"
                     ],
                     "Access-Control-Max-Age": [
                         "86400"
+                    ],
+                    "Connection": [
+                        "keep-alive"
+                    ],
+                    "Date": [
+                        "Sat, 10 Nov 2018 11:27:59 GMT"
                     ],
                     "Access-Control-Allow-Origin": [
                         "*"
@@ -51,8 +45,14 @@
                     "Access-Control-Request-Headers": [
                         "Origin, X-Atmosphere-tracking-id, X-Atmosphere-Framework, X-Cache-Date, Content-Type, X-Atmosphere-Transport, *"
                     ],
-                    "Server": [
-                        "openresty/1.9.7.5"
+                    "Content-Type": [
+                        "application/json; charset=UTF-8"
+                    ],
+                    "Access-Control-Allow-Methods": [
+                        "POST, GET, OPTIONS"
+                    ],
+                    "Content-Length": [
+                        "125"
                     ]
                 },
                 "body": {

@@ -3,65 +3,9 @@
     "interactions": [
         {
             "request": {
-                "method": "GET",
-                "uri": "https://ws.audioscrobbler.com/2.0/?api_key=LAST_FM_API_KEY&format=json&method=auth.getToken",
-                "body": null,
-                "headers": {
-                    "User-Agent": [
-                        "python-requests/2.20.0"
-                    ],
-                    "Accept-Encoding": [
-                        "gzip, deflate"
-                    ],
-                    "Accept": [
-                        "*/*"
-                    ],
-                    "Connection": [
-                        "keep-alive"
-                    ]
-                }
-            },
-            "response": {
-                "status": {
-                    "code": 200,
-                    "message": "OK"
-                },
-                "headers": {
-                    "Date": [
-                        "Sat, 10 Nov 2018 11:36:18 GMT"
-                    ],
-                    "Connection": [
-                        "keep-alive"
-                    ],
-                    "Content-Type": [
-                        "application/json"
-                    ],
-                    "Access-Control-Allow-Methods": [
-                        "POST, GET, OPTIONS"
-                    ],
-                    "Access-Control-Allow-Origin": [
-                        "*"
-                    ],
-                    "Access-Control-Max-Age": [
-                        "86400"
-                    ],
-                    "content-length": [
-                        "44"
-                    ],
-                    "Server": [
-                        "openresty/1.9.7.5"
-                    ]
-                },
-                "body": {
-                    "string": "{\"token\":\"CENSORED\"}"
-                }
-            }
-        },
-        {
-            "request": {
                 "method": "POST",
                 "uri": "https://ws.audioscrobbler.com/2.0/",
-                "body": "token=USER_TOKEN&method=auth.getSession&format=json&api_key=LAST_FM_API_KEY&api_sig=API_SIG",
+                "body": "method=auth.getMobileSession&format=json&api_key=LAST_FM_API_KEY&username=Zaratoustre&authToken=USER_AUTH_TOKEN&api_sig=API_SIG",
                 "headers": {
                     "User-Agent": [
                         "python-requests/2.20.0"
@@ -76,7 +20,7 @@
                         "keep-alive"
                     ],
                     "Content-Length": [
-                        "155"
+                        "186"
                     ],
                     "Content-Type": [
                         "application/x-www-form-urlencoded"
@@ -89,33 +33,98 @@
                     "message": "OK"
                 },
                 "headers": {
-                    "Date": [
-                        "Sat, 10 Nov 2018 11:36:36 GMT"
+                    "Server": [
+                        "openresty/1.9.7.5"
+                    ],
+                    "Access-Control-Max-Age": [
+                        "86400"
                     ],
                     "Connection": [
                         "keep-alive"
+                    ],
+                    "content-length": [
+                        "90"
+                    ],
+                    "Date": [
+                        "Sat, 10 Nov 2018 11:27:42 GMT"
+                    ],
+                    "Access-Control-Allow-Origin": [
+                        "*"
                     ],
                     "Content-Type": [
                         "application/json"
                     ],
                     "Access-Control-Allow-Methods": [
                         "POST, GET, OPTIONS"
-                    ],
-                    "Access-Control-Allow-Origin": [
-                        "*"
-                    ],
-                    "Access-Control-Max-Age": [
-                        "86400"
-                    ],
-                    "content-length": [
-                        "90"
-                    ],
-                    "Server": [
-                        "openresty/1.9.7.5"
                     ]
                 },
                 "body": {
                     "string": "{\"session\":{\"subscriber\":0,\"name\":\"Zaratoustre\",\"key\":\"CENSORED\"}}"
+                }
+            }
+        },
+        {
+            "request": {
+                "method": "POST",
+                "uri": "https://ws.audioscrobbler.com/2.0/",
+                "body": "album=A+Night+at+the+Opera&artist=Queen&tag=bar&sk=USER_SESSION&method=album.removeTag&format=json&api_key=LAST_FM_API_KEY",
+                "headers": {
+                    "User-Agent": [
+                        "python-requests/2.20.0"
+                    ],
+                    "Accept-Encoding": [
+                        "gzip, deflate"
+                    ],
+                    "Accept": [
+                        "*/*"
+                    ],
+                    "Connection": [
+                        "keep-alive"
+                    ],
+                    "Content-Length": [
+                        "159"
+                    ],
+                    "Content-Type": [
+                        "application/x-www-form-urlencoded"
+                    ]
+                }
+            },
+            "response": {
+                "status": {
+                    "code": 200,
+                    "message": "OK"
+                },
+                "headers": {
+                    "Server": [
+                        "openresty/1.9.7.5"
+                    ],
+                    "Access-Control-Max-Age": [
+                        "86400"
+                    ],
+                    "Connection": [
+                        "keep-alive"
+                    ],
+                    "Date": [
+                        "Sat, 10 Nov 2018 11:27:43 GMT"
+                    ],
+                    "Access-Control-Allow-Origin": [
+                        "*"
+                    ],
+                    "Access-Control-Request-Headers": [
+                        "Origin, X-Atmosphere-tracking-id, X-Atmosphere-Framework, X-Cache-Date, Content-Type, X-Atmosphere-Transport, *"
+                    ],
+                    "Content-Type": [
+                        "application/json; charset=UTF-8"
+                    ],
+                    "Access-Control-Allow-Methods": [
+                        "POST, GET, OPTIONS"
+                    ],
+                    "Content-Length": [
+                        "2"
+                    ]
+                },
+                "body": {
+                    "string": "{}"
                 }
             }
         }

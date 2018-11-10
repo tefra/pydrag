@@ -4,7 +4,7 @@
         {
             "request": {
                 "method": "GET",
-                "uri": "https://ws.audioscrobbler.com/2.0/?format=json&lang=en&method=tag.getInfo&tag=rap",
+                "uri": "https://ws.audioscrobbler.com/2.0/?api_key=LAST_FM_API_KEY&format=json&lang=en&method=tag.getInfo&tag=rap",
                 "body": null,
                 "headers": {
                     "User-Agent": [
@@ -27,36 +27,36 @@
                     "message": "OK"
                 },
                 "headers": {
-                    "Content-Length": [
-                        "1524"
-                    ],
-                    "Access-Control-Allow-Origin": [
-                        "*"
-                    ],
                     "Server": [
                         "openresty/1.9.7.5"
-                    ],
-                    "Date": [
-                        "Sat, 10 Nov 2018 09:53:38 GMT"
-                    ],
-                    "Connection": [
-                        "keep-alive"
-                    ],
-                    "Access-Control-Request-Headers": [
-                        "Origin, X-Atmosphere-tracking-id, X-Atmosphere-Framework, X-Cache-Date, Content-Type, X-Atmosphere-Transport, *"
                     ],
                     "Access-Control-Max-Age": [
                         "86400"
                     ],
-                    "Access-Control-Allow-Methods": [
-                        "POST, GET, OPTIONS"
+                    "Connection": [
+                        "keep-alive"
+                    ],
+                    "Date": [
+                        "Sat, 10 Nov 2018 11:27:53 GMT"
+                    ],
+                    "Access-Control-Allow-Origin": [
+                        "*"
+                    ],
+                    "Access-Control-Request-Headers": [
+                        "Origin, X-Atmosphere-tracking-id, X-Atmosphere-Framework, X-Cache-Date, Content-Type, X-Atmosphere-Transport, *"
                     ],
                     "Content-Type": [
                         "application/json; charset=UTF-8"
+                    ],
+                    "Access-Control-Allow-Methods": [
+                        "POST, GET, OPTIONS"
+                    ],
+                    "Content-Length": [
+                        "1524"
                     ]
                 },
                 "body": {
-                    "string": "{\"tag\":{\"name\":\"rap\",\"total\":541334,\"reach\":100740,\"wiki\":{\"summary\":\"Rap is a vocal style, usually coming together with hip-hop, the musical genre off-shoot of the hip hop culture. Rapping itself, also known as emceeing, MCing, spitting, or just rhyming, is the rhythmic spoken delivery of rhymes and wordplay. Rapping is one of the four pillars of the hip hop culture, along with DJing, graffiti, and breaking.\\n\\nRap is also considered a separate genre from hip hop in some cases where the artists do not make music compatible with the hip hop culture. <a href=\\\"http://www.last.fm/tag/rap\\\">Read more on Last.fm</a>.\",\"content\":\"Rap is a vocal style, usually coming together with hip-hop, the musical genre off-shoot of the hip hop culture. Rapping itself, also known as emceeing, MCing, spitting, or just rhyming, is the rhythmic spoken delivery of rhymes and wordplay. Rapping is one of the four pillars of the hip hop culture, along with DJing, graffiti, and breaking.\\n\\nRap is also considered a separate genre from hip hop in some cases where the artists do not make music compatible with the hip hop culture. Some of these cases include Lil Wayne, Juelz Santana, Lil Jon, 50 Cent, T.I., The Game, and Nelly. Rap music has a general focus on pop, hyphy, and snap beats, while hip hop has a general focus on the other four pillars of hip hop. <a href=\\\"http://www.last.fm/tag/rap\\\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.\"}}}"
+                    "string": "{\"tag\":{\"name\":\"rap\",\"total\":541335,\"reach\":100740,\"wiki\":{\"summary\":\"Rap is a vocal style, usually coming together with hip-hop, the musical genre off-shoot of the hip hop culture. Rapping itself, also known as emceeing, MCing, spitting, or just rhyming, is the rhythmic spoken delivery of rhymes and wordplay. Rapping is one of the four pillars of the hip hop culture, along with DJing, graffiti, and breaking.\\n\\nRap is also considered a separate genre from hip hop in some cases where the artists do not make music compatible with the hip hop culture. <a href=\\\"http://www.last.fm/tag/rap\\\">Read more on Last.fm</a>.\",\"content\":\"Rap is a vocal style, usually coming together with hip-hop, the musical genre off-shoot of the hip hop culture. Rapping itself, also known as emceeing, MCing, spitting, or just rhyming, is the rhythmic spoken delivery of rhymes and wordplay. Rapping is one of the four pillars of the hip hop culture, along with DJing, graffiti, and breaking.\\n\\nRap is also considered a separate genre from hip hop in some cases where the artists do not make music compatible with the hip hop culture. Some of these cases include Lil Wayne, Juelz Santana, Lil Jon, 50 Cent, T.I., The Game, and Nelly. Rap music has a general focus on pop, hyphy, and snap beats, while hip hop has a general focus on the other four pillars of hip hop. <a href=\\\"http://www.last.fm/tag/rap\\\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.\"}}}"
                 }
             }
         }

@@ -4,7 +4,7 @@
         {
             "request": {
                 "method": "GET",
-                "uri": "https://ws.audioscrobbler.com/2.0/?format=json&method=tag.getTopTags&num_res=2&offset=2",
+                "uri": "https://ws.audioscrobbler.com/2.0/?api_key=LAST_FM_API_KEY&format=json&method=tag.getTopTags&num_res=2&offset=2",
                 "body": null,
                 "headers": {
                     "User-Agent": [
@@ -27,39 +27,39 @@
                     "message": "OK"
                 },
                 "headers": {
-                    "Content-Length": [
-                        "175"
-                    ],
-                    "Access-Control-Allow-Headers": [
-                        "Origin, X-Atmosphere-tracking-id, X-Atmosphere-Framework, X-Cache-Date, Content-Type, X-Atmosphere-Transport, *"
-                    ],
-                    "Access-Control-Allow-Origin": [
-                        "*"
-                    ],
                     "Server": [
                         "openresty/1.9.7.5"
-                    ],
-                    "Date": [
-                        "Sat, 10 Nov 2018 09:53:41 GMT"
                     ],
                     "Connection": [
                         "keep-alive"
                     ],
-                    "Access-Control-Request-Headers": [
-                        "Origin, X-Atmosphere-tracking-id, X-Atmosphere-Framework, X-Cache-Date, Content-Type, X-Atmosphere-Transport, *"
+                    "Date": [
+                        "Sat, 10 Nov 2018 11:27:55 GMT"
                     ],
-                    "Access-Control-Allow-Methods": [
-                        "POST, GET, OPTIONS, PUT"
+                    "Access-Control-Allow-Headers": [
+                        "Origin, X-Atmosphere-tracking-id, X-Atmosphere-Framework, X-Cache-Date, Content-Type, X-Atmosphere-Transport, *"
                     ],
                     "TSVC-Time-Spent": [
                         "0.000"
                     ],
+                    "Access-Control-Allow-Origin": [
+                        "*"
+                    ],
+                    "Access-Control-Request-Headers": [
+                        "Origin, X-Atmosphere-tracking-id, X-Atmosphere-Framework, X-Cache-Date, Content-Type, X-Atmosphere-Transport, *"
+                    ],
                     "Content-Type": [
                         "application/json; charset=UTF-8"
+                    ],
+                    "Access-Control-Allow-Methods": [
+                        "POST, GET, OPTIONS, PUT"
+                    ],
+                    "Content-Length": [
+                        "175"
                     ]
                 },
                 "body": {
-                    "string": "{\"toptags\":{\"@attr\":{\"offset\":2,\"num_res\":2,\"total\":2693671},\"tag\":[{\"name\":\"seen live\",\"count\":2128122,\"reach\":81624},{\"name\":\"alternative\",\"count\":2068696,\"reach\":260201}]}}"
+                    "string": "{\"toptags\":{\"@attr\":{\"offset\":2,\"num_res\":2,\"total\":2693674},\"tag\":[{\"name\":\"seen live\",\"count\":2128124,\"reach\":81624},{\"name\":\"alternative\",\"count\":2068697,\"reach\":260201}]}}"
                 }
             }
         }

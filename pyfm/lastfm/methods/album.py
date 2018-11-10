@@ -1,5 +1,9 @@
-from lastfm import api
-from lastfm.models import AlbumInfo, AlbumTopTags, AlbumTags, AlbumSearch
+from typing import List
+
+from requests import Response
+
+from pyfm.lastfm import api, POST
+from pyfm.lastfm.models import AlbumInfo, AlbumTopTags, AlbumTags, AlbumSearch
 
 
 class Album:
@@ -18,6 +22,26 @@ class Album:
         self.mbid = mbid
         self.album = album
         self.artist = artist
+
+    @api.operation(method=POST, stateful=True)
+    def add_tags(self, tags: List[str]) -> Response:
+        """
+        Tag an album using a list of user supplied tags.
+        :param tags: A list of user supplied tags to apply to this album. Accepts a maximum of 10 tags.
+        :returns: Response
+        """
+        assert self.artist is not None and self.album is not None
+        return dict(album=self.album, artist=self.artist, tags=",".join(tags))
+
+    @api.operation(method=POST, stateful=True)
+    def remove_tag(self, tag: str) -> Response:
+        """
+        Remove a user's tag from an album.
+        :param tag  : A single user tag to remove from this album.
+        :returns: Response
+        """
+        assert self.artist is not None and self.album is not None
+        return dict(album=self.album, artist=self.artist, tag=tag)
 
     @api.operation
     def get_info(
@@ -89,3 +113,11 @@ class Album:
         assert self.mbid is not None or (
             self.artist is not None and self.album is not None
         )
+
+
+if __name__ == "__main__":
+    Album(
+        album="A Night at the Opera",
+        artist="Queen",
+        mbid="6defd963-fe91-4550-b18e-82c685603c2b",
+    )

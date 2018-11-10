@@ -4,7 +4,7 @@
         {
             "request": {
                 "method": "GET",
-                "uri": "https://ws.audioscrobbler.com/2.0/?format=json&limit=10&method=chart.getTopTags&page=2",
+                "uri": "https://ws.audioscrobbler.com/2.0/?api_key=LAST_FM_API_KEY&format=json&limit=10&method=chart.getTopTags&page=2",
                 "body": null,
                 "headers": {
                     "User-Agent": [
@@ -27,36 +27,36 @@
                     "message": "OK"
                 },
                 "headers": {
-                    "Content-Length": [
-                        "1375"
-                    ],
-                    "Access-Control-Allow-Origin": [
-                        "*"
-                    ],
                     "Server": [
                         "openresty/1.9.7.5"
-                    ],
-                    "Date": [
-                        "Sat, 10 Nov 2018 09:53:32 GMT"
-                    ],
-                    "Connection": [
-                        "keep-alive"
-                    ],
-                    "Access-Control-Request-Headers": [
-                        "Origin, X-Atmosphere-tracking-id, X-Atmosphere-Framework, X-Cache-Date, Content-Type, X-Atmosphere-Transport, *"
                     ],
                     "Access-Control-Max-Age": [
                         "86400"
                     ],
-                    "Access-Control-Allow-Methods": [
-                        "POST, GET, OPTIONS"
+                    "Connection": [
+                        "keep-alive"
+                    ],
+                    "Date": [
+                        "Sat, 10 Nov 2018 11:27:46 GMT"
+                    ],
+                    "Access-Control-Allow-Origin": [
+                        "*"
+                    ],
+                    "Access-Control-Request-Headers": [
+                        "Origin, X-Atmosphere-tracking-id, X-Atmosphere-Framework, X-Cache-Date, Content-Type, X-Atmosphere-Transport, *"
                     ],
                     "Content-Type": [
                         "application/json; charset=UTF-8"
+                    ],
+                    "Access-Control-Allow-Methods": [
+                        "POST, GET, OPTIONS"
+                    ],
+                    "Content-Length": [
+                        "1375"
                     ]
                 },
                 "body": {
-                    "string": "{\"tags\":{\"tag\":[{\"name\":\"rock\",\"url\":\"https://www.last.fm/tag/rock\",\"reach\":\"393374\",\"taggings\":\"3934958\",\"streamable\":\"1\",\"wiki\":{}},{\"name\":\"electronic\",\"url\":\"https://www.last.fm/tag/electronic\",\"reach\":\"251646\",\"taggings\":\"2335573\",\"streamable\":\"1\",\"wiki\":{}},{\"name\":\"seen live\",\"url\":\"https://www.last.fm/tag/seen+live\",\"reach\":\"81624\",\"taggings\":\"2128122\",\"streamable\":\"1\",\"wiki\":{}},{\"name\":\"alternative\",\"url\":\"https://www.last.fm/tag/alternative\",\"reach\":\"260201\",\"taggings\":\"2068696\",\"streamable\":\"1\",\"wiki\":{}},{\"name\":\"indie\",\"url\":\"https://www.last.fm/tag/indie\",\"reach\":\"251353\",\"taggings\":\"1995086\",\"streamable\":\"1\",\"wiki\":{}},{\"name\":\"pop\",\"url\":\"https://www.last.fm/tag/pop\",\"reach\":\"222857\",\"taggings\":\"1931351\",\"streamable\":\"1\",\"wiki\":{}},{\"name\":\"female vocalists\",\"url\":\"https://www.last.fm/tag/female+vocalists\",\"reach\":\"167306\",\"taggings\":\"1586280\",\"streamable\":\"1\",\"wiki\":{}},{\"name\":\"metal\",\"url\":\"https://www.last.fm/tag/metal\",\"reach\":\"154709\",\"taggings\":\"1247949\",\"streamable\":\"1\",\"wiki\":{}},{\"name\":\"alternative rock\",\"url\":\"https://www.last.fm/tag/alternative+rock\",\"reach\":\"165948\",\"taggings\":\"1142530\",\"streamable\":\"1\",\"wiki\":{}},{\"name\":\"classic rock\",\"url\":\"https://www.last.fm/tag/classic+rock\",\"reach\":\"136456\",\"taggings\":\"1137203\",\"streamable\":\"1\",\"wiki\":{}}],\"@attr\":{\"page\":\"2\",\"perPage\":\"10\",\"totalPages\":\"269368\",\"total\":\"2693671\"}}}"
+                    "string": "{\"tags\":{\"tag\":[{\"name\":\"rock\",\"url\":\"https://www.last.fm/tag/rock\",\"reach\":\"393374\",\"taggings\":\"3934957\",\"streamable\":\"1\",\"wiki\":{}},{\"name\":\"electronic\",\"url\":\"https://www.last.fm/tag/electronic\",\"reach\":\"251646\",\"taggings\":\"2335574\",\"streamable\":\"1\",\"wiki\":{}},{\"name\":\"seen live\",\"url\":\"https://www.last.fm/tag/seen+live\",\"reach\":\"81624\",\"taggings\":\"2128124\",\"streamable\":\"1\",\"wiki\":{}},{\"name\":\"alternative\",\"url\":\"https://www.last.fm/tag/alternative\",\"reach\":\"260201\",\"taggings\":\"2068697\",\"streamable\":\"1\",\"wiki\":{}},{\"name\":\"indie\",\"url\":\"https://www.last.fm/tag/indie\",\"reach\":\"251353\",\"taggings\":\"1995086\",\"streamable\":\"1\",\"wiki\":{}},{\"name\":\"pop\",\"url\":\"https://www.last.fm/tag/pop\",\"reach\":\"222857\",\"taggings\":\"1931373\",\"streamable\":\"1\",\"wiki\":{}},{\"name\":\"female vocalists\",\"url\":\"https://www.last.fm/tag/female+vocalists\",\"reach\":\"167306\",\"taggings\":\"1586278\",\"streamable\":\"1\",\"wiki\":{}},{\"name\":\"metal\",\"url\":\"https://www.last.fm/tag/metal\",\"reach\":\"154710\",\"taggings\":\"1247954\",\"streamable\":\"1\",\"wiki\":{}},{\"name\":\"alternative rock\",\"url\":\"https://www.last.fm/tag/alternative+rock\",\"reach\":\"165949\",\"taggings\":\"1142533\",\"streamable\":\"1\",\"wiki\":{}},{\"name\":\"classic rock\",\"url\":\"https://www.last.fm/tag/classic+rock\",\"reach\":\"136456\",\"taggings\":\"1137203\",\"streamable\":\"1\",\"wiki\":{}}],\"@attr\":{\"page\":\"2\",\"perPage\":\"10\",\"totalPages\":\"269368\",\"total\":\"2693674\"}}}"
                 }
             }
         }

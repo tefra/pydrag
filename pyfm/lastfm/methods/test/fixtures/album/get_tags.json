@@ -4,7 +4,7 @@
         {
             "request": {
                 "method": "GET",
-                "uri": "https://ws.audioscrobbler.com/2.0/?api_key=LAST_FM_API_KEY&format=json&limit=2&method=tag.getTopArtists&page=1&tag=rap",
+                "uri": "https://ws.audioscrobbler.com/2.0/?album=A+Night+at+the+Opera&api_key=LAST_FM_API_KEY&artist=Queen&autocorrect=1&format=json&mbid=6defd963-fe91-4550-b18e-82c685603c2b&method=album.getTags&user=Zaratoustre",
                 "body": null,
                 "headers": {
                     "User-Agent": [
@@ -37,7 +37,7 @@
                         "keep-alive"
                     ],
                     "Date": [
-                        "Sat, 10 Nov 2018 11:27:55 GMT"
+                        "Sat, 10 Nov 2018 11:27:39 GMT"
                     ],
                     "Access-Control-Allow-Origin": [
                         "*"
@@ -52,11 +52,11 @@
                         "POST, GET, OPTIONS"
                     ],
                     "Content-Length": [
-                        "1469"
+                        "178"
                     ]
                 },
                 "body": {
-                    "string": "{\"topartists\":{\"artist\":[{\"name\":\"Eminem\",\"mbid\":\"CENSORED13d4\",\"url\":\"https://www.last.fm/music/Eminem\",\"streamable\":\"0\",\"image\":[{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png\",\"size\":\"small\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png\",\"size\":\"medium\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png\",\"size\":\"large\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png\",\"size\":\"extralarge\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png\",\"size\":\"mega\"}],\"@attr\":{\"rank\":\"1\"}},{\"name\":\"Lil' Wayne\",\"url\":\"https://www.last.fm/music/Lil%27+Wayne\",\"streamable\":\"0\",\"image\":[{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png\",\"size\":\"small\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png\",\"size\":\"medium\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png\",\"size\":\"large\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png\",\"size\":\"extralarge\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png\",\"size\":\"mega\"}],\"@attr\":{\"rank\":\"2\"}}],\"@attr\":{\"tag\":\"rap\",\"page\":\"1\",\"perPage\":\"2\",\"totalPages\":\"30763\",\"total\":\"61526\"}}}"
+                    "string": "{\"tags\":{\"tag\":[{\"name\":\"bar\",\"url\":\"https://www.last.fm/tag/bar\"},{\"name\":\"foo\",\"url\":\"https://www.last.fm/tag/foo\"}],\"@attr\":{\"artist\":\"Queen\",\"album\":\"A Night at the Opera\"}}}"
                 }
             }
         }

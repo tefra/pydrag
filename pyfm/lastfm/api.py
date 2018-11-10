@@ -5,12 +5,21 @@ from urllib.parse import urlencode
 import requests
 
 from lastfm import md5
+from pyfm import BaseModel
 from pyfm.lastfm import config, models, GET, POST
 
 
-def operation(func=None, *, method=GET, signed=False, auth=False):
+def operation(
+    func=None, *, method=GET, signed=False, auth=False, stateful=False
+):
     if func is None:
-        return partial(operation, method=method, signed=signed, auth=auth)
+        return partial(
+            operation,
+            method=method,
+            signed=signed,
+            auth=auth,
+            stateful=stateful,
+        )
 
     @wraps(func)
     def wrapper(obj, *args, **kwargs):
@@ -20,6 +29,7 @@ def operation(func=None, *, method=GET, signed=False, auth=False):
             http_method=method,
             signed=signed,
             auth=auth,
+            stateful=stateful,
             params=func(obj, *args, **kwargs) or dict(),
         ).perform()
 
@@ -27,13 +37,28 @@ def operation(func=None, *, method=GET, signed=False, auth=False):
 
 
 class Request:
-    def __init__(self, namespace, method, http_method, signed, auth, params):
+    def __init__(
+        self,
+        namespace: str,
+        method: str,
+        http_method: str,
+        signed: bool,
+        auth: bool,
+        stateful: bool,
+        params: dict,
+    ):
         self.namespace = namespace
         self.method = method
         self.http_method = http_method
         self.signed = signed
         self.auth = auth
+        self.stateful = stateful
         self.params = dict((k, v) for k, v in params.items() if v is not None)
+
+        if stateful and "sk" not in params:
+            from lastfm.methods import Auth
+
+            self.params["sk"] = Auth().get_mobile_session().key
 
     def get_request_params(self):
         res = self.params.copy()
@@ -61,7 +86,7 @@ class Request:
             params.update(
                 dict(
                     username=config.username,
-                    authToken=md5(config.username + config.password),
+                    authToken=md5(str(config.username) + str(config.password)),
                 )
             )
 
@@ -73,6 +98,7 @@ class Request:
             response = requests.get(url)
         elif self.http_method == POST:
             response = requests.post(url, data=params)
+
         response.raise_for_status()
         body = response.json()
         return self.bind(response, body)
@@ -80,9 +106,16 @@ class Request:
     def bind(self, response, body):
         assert isinstance(body, dict)
 
-        klass = self.get_klass()
-        data = body.get(next(iter(body.keys())))
-        obj = klass.from_dict(data) if isinstance(data, dict) else klass(data)
+        try:
+            klass = self.get_klass()
+            data = body.get(next(iter(body.keys())))
+            if isinstance(data, dict):
+                obj = klass.from_dict(data)
+            else:
+                obj = klass(data)
+        except Exception:
+            obj = BaseModel()
+
         obj.response = response
         obj.namespace = self.namespace
         obj.method = self.method
@@ -90,8 +123,14 @@ class Request:
         return obj
 
     def get_klass(self):
-        model_class = self.method.replace("_", " ").replace("get", "").title()
-        model_class = "".join(x for x in model_class if not x.isspace())
+        replace = (("_", " "), ("add", ""), ("get", ""))
+        model_class = self.method
+        for s, r in replace:
+            model_class = model_class.replace(s, r)
+
+        model_class = "".join(
+            x for x in model_class.title() if not x.isspace()
+        )
         if not model_class.startswith(self.namespace.title()):
             model_class = "{}{}".format(self.namespace.title(), model_class)
         return getattr(models, model_class)
@@ -101,7 +140,6 @@ class Request:
         keys.remove("format")
 
         signature = [k + params[k] for k in keys if params.get(k)]
-        signature.append(config.api_secret)
-        # return "".join(signature)
+        signature.append(str(config.api_secret))
         bytes = "".join(signature).encode("utf-8")
         return hashlib.md5(bytes).hexdigest()

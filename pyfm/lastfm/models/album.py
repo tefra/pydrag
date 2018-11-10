@@ -13,14 +13,14 @@ class AlbumTopTags(BaseModel):
 
 
 @attrs(auto_attribs=True)
-class AlbumTags(BaseModel):
-    text: str = mattrib("#text")
-    attr: Attributes = mattrib("@attr")
+class Tags(BaseModel):
+    tag: List[Tag] = None
 
 
 @attrs(auto_attribs=True)
-class Tags(BaseModel):
-    tag: List[Tag] = None
+class AlbumTags(Tags):
+    tag: List[Tag]
+    attr: Attributes = mattrib("@attr")
 
 
 @attrs(auto_attribs=True)
