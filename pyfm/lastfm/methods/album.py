@@ -50,7 +50,7 @@ class Album:
         """
         Get the metadata and tracklist for an album on Last.fm using the album name or a musicbrainz id.
         :param self:
-        :param autocorrect: Transform misspelled artist names into correct artist names, returning the correct version instead.
+        :param autocorrect: If enabled auto correct misspelled names
         :param user: The username for the context of the request. If supplied, the user's playcount for this album is included in the response.
         :param lang: The language to return the biography in, expressed as an ISO 639 alpha-2 code.
         :returns: AlbumInfo
@@ -70,7 +70,7 @@ class Album:
     def get_tags(self, user: str, autocorrect: bool = True) -> AlbumTags:
         """
         Get the tags applied by an individual user to an album on Last.fm. To retrieve the list of top tags applied to an album by all users use album.getTopTags.
-        :param autocorrect: Transform misspelled artist names into correct artist names, returning the correct version instead.
+        :param autocorrect: If enabled auto correct misspelled names
         :returns: AlbumTopTags
         """
         self.assert_mbid_or_artist_and_album()
@@ -86,7 +86,7 @@ class Album:
     def get_top_tags(self, autocorrect: bool = True) -> AlbumTopTags:
         """
         Get the top tags for an album on Last.fm, ordered by popularity.
-        :param autocorrect: Transform misspelled artist names into correct artist names, returning the correct version instead.
+        :param autocorrect: If enabled auto correct misspelled names
         :returns: AlbumTopTags
         """
         self.assert_mbid_or_artist_and_album()

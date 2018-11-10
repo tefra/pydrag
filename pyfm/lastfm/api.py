@@ -106,15 +106,15 @@ class Request:
     def bind(self, response, body):
         assert isinstance(body, dict)
 
-        try:
+        if not body:
+            obj = BaseModel()
+        else:
             klass = self.get_klass()
             data = body.get(next(iter(body.keys())))
             if isinstance(data, dict):
                 obj = klass.from_dict(data)
             else:
                 obj = klass(data)
-        except Exception:
-            obj = BaseModel()
 
         obj.response = response
         obj.namespace = self.namespace

@@ -13,6 +13,7 @@ class Attributes(BaseModel):
     date: str = None
     page: int = None
     user: str = None
+    index: int = None
     country: str = None
     total: int = None
     album: str = None
@@ -55,6 +56,7 @@ class Artist(BaseModel):
     playcount: int = None
     streamable: str = None
     image: List[Image] = None
+    match: str = None
     attr: Attributes = mattrib("@attr", default=None)
 
 
@@ -92,10 +94,23 @@ class Chart(BaseModel):
 
 
 @attrs(auto_attribs=True)
+class Link(BaseModel):
+    href: str
+    rel: str
+    text: str = mattrib("#text")
+
+
+@attrs(auto_attribs=True)
+class Links(BaseModel):
+    link: Link
+
+
+@attrs(auto_attribs=True)
 class Wiki(BaseModel):
     content: str = None
     summary: str = None
     published: str = None
+    links: Links = None
 
 
 @attrs(auto_attribs=True)

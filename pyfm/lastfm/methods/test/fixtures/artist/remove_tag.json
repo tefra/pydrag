@@ -1,0 +1,132 @@
+{
+    "version": 1,
+    "interactions": [
+        {
+            "request": {
+                "method": "POST",
+                "uri": "https://ws.audioscrobbler.com/2.0/",
+                "body": "method=auth.getMobileSession&format=json&api_key=LAST_FM_API_KEY&username=Zaratoustre&authToken=USER_AUTH_TOKEN&api_sig=API_SIG",
+                "headers": {
+                    "User-Agent": [
+                        "python-requests/2.20.0"
+                    ],
+                    "Accept-Encoding": [
+                        "gzip, deflate"
+                    ],
+                    "Accept": [
+                        "*/*"
+                    ],
+                    "Connection": [
+                        "keep-alive"
+                    ],
+                    "Content-Length": [
+                        "186"
+                    ],
+                    "Content-Type": [
+                        "application/x-www-form-urlencoded"
+                    ]
+                }
+            },
+            "response": {
+                "status": {
+                    "code": 200,
+                    "message": "OK"
+                },
+                "headers": {
+                    "Access-Control-Allow-Methods": [
+                        "POST, GET, OPTIONS"
+                    ],
+                    "Access-Control-Max-Age": [
+                        "86400"
+                    ],
+                    "Content-Type": [
+                        "application/json"
+                    ],
+                    "content-length": [
+                        "90"
+                    ],
+                    "Access-Control-Allow-Origin": [
+                        "*"
+                    ],
+                    "Date": [
+                        "Sat, 10 Nov 2018 14:49:24 GMT"
+                    ],
+                    "Connection": [
+                        "keep-alive"
+                    ],
+                    "Server": [
+                        "openresty/1.9.7.5"
+                    ]
+                },
+                "body": {
+                    "string": "{\"session\":{\"subscriber\":0,\"name\":\"Zaratoustre\",\"key\":\"CENSORED\"}}"
+                }
+            }
+        },
+        {
+            "request": {
+                "method": "POST",
+                "uri": "https://ws.audioscrobbler.com/2.0/",
+                "body": "artist=Guns+N%27+Roses&tag=bar&sk=USER_SESSION&method=artist.removeTag&format=json&api_key=LAST_FM_API_KEY",
+                "headers": {
+                    "User-Agent": [
+                        "python-requests/2.20.0"
+                    ],
+                    "Accept-Encoding": [
+                        "gzip, deflate"
+                    ],
+                    "Accept": [
+                        "*/*"
+                    ],
+                    "Connection": [
+                        "keep-alive"
+                    ],
+                    "Content-Length": [
+                        "143"
+                    ],
+                    "Content-Type": [
+                        "application/x-www-form-urlencoded"
+                    ]
+                }
+            },
+            "response": {
+                "status": {
+                    "code": 200,
+                    "message": "OK"
+                },
+                "headers": {
+                    "Access-Control-Allow-Methods": [
+                        "POST, GET, OPTIONS"
+                    ],
+                    "Access-Control-Max-Age": [
+                        "86400"
+                    ],
+                    "Content-Type": [
+                        "application/json; charset=UTF-8"
+                    ],
+                    "Access-Control-Request-Headers": [
+                        "Origin, X-Atmosphere-tracking-id, X-Atmosphere-Framework, X-Cache-Date, Content-Type, X-Atmosphere-Transport, *"
+                    ],
+                    "Access-Control-Allow-Origin": [
+                        "*"
+                    ],
+                    "Date": [
+                        "Sat, 10 Nov 2018 14:49:25 GMT"
+                    ],
+                    "Connection": [
+                        "keep-alive"
+                    ],
+                    "Content-Length": [
+                        "2"
+                    ],
+                    "Server": [
+                        "openresty/1.9.7.5"
+                    ]
+                },
+                "body": {
+                    "string": "{}"
+                }
+            }
+        }
+    ]
+}

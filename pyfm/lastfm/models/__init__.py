@@ -6,3 +6,4 @@ from pyfm.lastfm.models.chart import *  # noqa
 from pyfm.lastfm.models.library import *  # noqa
 from pyfm.lastfm.models.album import *  # noqa
 from pyfm.lastfm.models.auth import *  # noqa
+from pyfm.lastfm.models.artist import *  # noqa

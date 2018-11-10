@@ -32,7 +32,8 @@ fixture = config.VCR(
 
 
 def s(value):
-    if type(value) == int:
+    _type = type(value)
+    if _type in [int]:
         return str(value)
 
     if isinstance(value, list):
