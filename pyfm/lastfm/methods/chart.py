@@ -1,5 +1,5 @@
-from lastfm import ApiMethod
-from lastfm.models import ChartTopArtists, ChartTopTracks, ChartTopTags
+from pyfm.lastfm import api
+from pyfm.lastfm.models import ChartTopArtists, ChartTopTracks, ChartTopTags
 
 
 class Chart:
@@ -15,7 +15,7 @@ class Chart:
         self.page = page
         self.limit = limit
 
-    @ApiMethod.fetch
+    @api.operation
     def get_top_artists(self) -> ChartTopArtists:
         """
         Get the top artists chart
@@ -23,7 +23,7 @@ class Chart:
         """
         return dict(limit=self.limit, page=self.page)
 
-    @ApiMethod.fetch
+    @api.operation
     def get_top_tracks(self) -> ChartTopTracks:
         """
         Get the top tracks chart
@@ -31,7 +31,7 @@ class Chart:
         """
         return dict(limit=self.limit, page=self.page)
 
-    @ApiMethod.fetch
+    @api.operation
     def get_top_tags(self) -> ChartTopTags:
         """
         Get the top tags chart

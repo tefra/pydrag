@@ -5,7 +5,9 @@ from typing import Dict, TypeVar
 import cattr
 from attr import evolve, attrib
 from cattr import unstructure, structure
-from requests import Response
+from dotenv import load_dotenv
+
+load_dotenv()
 
 T = TypeVar("T", bound="BaseModel")
 
@@ -18,14 +20,6 @@ def mattrib(name, **kwargs):
 
 
 class BaseModel(metaclass=ABCMeta):
-    @property
-    def response(self) -> Response:
-        return self._response
-
-    @response.setter
-    def response(self, value):
-        self._response = value
-
     def to_dict(self: T) -> Dict:
         return unstructure(self)
 

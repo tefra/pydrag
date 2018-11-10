@@ -1,5 +1,5 @@
-from lastfm import ApiMethod
-from lastfm.models import GeoTopArtists, GeoTopTracks
+from pyfm.lastfm import api
+from pyfm.lastfm.models import GeoTopArtists, GeoTopTracks
 
 
 class Geo:
@@ -13,7 +13,7 @@ class Geo:
         """
         self.country = country
 
-    @ApiMethod.fetch
+    @api.operation
     def get_top_artists(self, limit: int = 50, page: int = 1) -> GeoTopArtists:
         """
         :param limit: The number of results to fetch per page. Defaults to 50.
@@ -22,7 +22,7 @@ class Geo:
         """
         return dict(country=self.country, limit=limit, page=page)
 
-    @ApiMethod.fetch
+    @api.operation
     def get_top_tracks(self, limit: int = 50, page: int = 1) -> GeoTopTracks:
         """
         :param limit: The number of results to fetch per page. Defaults to 50.

@@ -4,7 +4,7 @@
         {
             "request": {
                 "method": "GET",
-                "uri": "http://ws.audioscrobbler.com/2.0/?format=json&limit=2&method=tag.gettopalbums&page=1&tag=rap",
+                "uri": "https://ws.audioscrobbler.com/2.0/?format=json&limit=2&method=tag.getTopAlbums&page=1&tag=rap",
                 "body": null,
                 "headers": {
                     "User-Agent": [
@@ -27,36 +27,36 @@
                     "message": "OK"
                 },
                 "headers": {
-                    "Access-Control-Request-Headers": [
-                        "Origin, X-Atmosphere-tracking-id, X-Atmosphere-Framework, X-Cache-Date, Content-Type, X-Atmosphere-Transport, *"
-                    ],
-                    "Content-Type": [
-                        "application/json; charset=UTF-8"
-                    ],
                     "Content-Length": [
                         "1444"
-                    ],
-                    "Date": [
-                        "Wed, 07 Nov 2018 23:07:15 GMT"
-                    ],
-                    "Access-Control-Max-Age": [
-                        "86400"
                     ],
                     "Access-Control-Allow-Origin": [
                         "*"
                     ],
-                    "Access-Control-Allow-Methods": [
-                        "POST, GET, OPTIONS"
-                    ],
                     "Server": [
                         "openresty/1.9.7.5"
                     ],
+                    "Date": [
+                        "Sat, 10 Nov 2018 09:53:39 GMT"
+                    ],
                     "Connection": [
                         "keep-alive"
+                    ],
+                    "Access-Control-Request-Headers": [
+                        "Origin, X-Atmosphere-tracking-id, X-Atmosphere-Framework, X-Cache-Date, Content-Type, X-Atmosphere-Transport, *"
+                    ],
+                    "Access-Control-Max-Age": [
+                        "86400"
+                    ],
+                    "Access-Control-Allow-Methods": [
+                        "POST, GET, OPTIONS"
+                    ],
+                    "Content-Type": [
+                        "application/json; charset=UTF-8"
                     ]
                 },
                 "body": {
-                    "string": "{\"albums\":{\"album\":[{\"name\":\"The Eminem Show\",\"mbid\":\"af71f60c-a8e8-4774-a2b3-30dbfaa13bd6\",\"url\":\"https://www.last.fm/music/Eminem\",\"artist\":{\"name\":\"Eminem\",\"mbid\":\"b95ce3ff-3d05-4e87-9e01-c97b66af13d4\",\"url\":\"https://www.last.fm/music/Eminem\"},\"image\":[{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/34s/16255aa135b04922a5a4ed8535e206d4.png\",\"size\":\"small\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/64s/16255aa135b04922a5a4ed8535e206d4.png\",\"size\":\"medium\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/174s/16255aa135b04922a5a4ed8535e206d4.png\",\"size\":\"large\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/300x300/16255aa135b04922a5a4ed8535e206d4.png\",\"size\":\"extralarge\"}],\"@attr\":{\"rank\":\"1\"}},{\"name\":\"Views\",\"mbid\":\"\",\"url\":\"https://www.last.fm/music/Drake\",\"artist\":{\"name\":\"Drake\",\"mbid\":\"b49b81cc-d5b7-4bdd-aadb-385df8de69a6\",\"url\":\"https://www.last.fm/music/Drake\"},\"image\":[{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/34s/b04745bef612d93a78a6c336eef830c8.png\",\"size\":\"small\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/64s/b04745bef612d93a78a6c336eef830c8.png\",\"size\":\"medium\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/174s/b04745bef612d93a78a6c336eef830c8.png\",\"size\":\"large\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/300x300/b04745bef612d93a78a6c336eef830c8.png\",\"size\":\"extralarge\"}],\"@attr\":{\"rank\":\"2\"}}],\"@attr\":{\"tag\":\"rap\",\"page\":\"1\",\"perPage\":\"2\",\"totalPages\":\"6768\",\"total\":\"13535\"}}}"
+                    "string": "{\"albums\":{\"album\":[{\"name\":\"The Eminem Show\",\"mbid\":\"af71f60c-a8e8-4774-a2b3-30dbfaa13bd6\",\"url\":\"https://www.last.fm/music/Eminem\",\"artist\":{\"name\":\"Eminem\",\"mbid\":\"b95ce3ff-3d05-4e87-9e01-c97b66af13d4\",\"url\":\"https://www.last.fm/music/Eminem\"},\"image\":[{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/34s/16255aa135b04922a5a4ed8535e206d4.png\",\"size\":\"small\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/64s/16255aa135b04922a5a4ed8535e206d4.png\",\"size\":\"medium\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/174s/16255aa135b04922a5a4ed8535e206d4.png\",\"size\":\"large\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/300x300/16255aa135b04922a5a4ed8535e206d4.png\",\"size\":\"extralarge\"}],\"@attr\":{\"rank\":\"1\"}},{\"name\":\"Views\",\"mbid\":\"\",\"url\":\"https://www.last.fm/music/Drake\",\"artist\":{\"name\":\"Drake\",\"mbid\":\"b49b81cc-d5b7-4bdd-aadb-385df8de69a6\",\"url\":\"https://www.last.fm/music/Drake\"},\"image\":[{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/34s/b04745bef612d93a78a6c336eef830c8.png\",\"size\":\"small\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/64s/b04745bef612d93a78a6c336eef830c8.png\",\"size\":\"medium\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/174s/b04745bef612d93a78a6c336eef830c8.png\",\"size\":\"large\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/300x300/b04745bef612d93a78a6c336eef830c8.png\",\"size\":\"extralarge\"}],\"@attr\":{\"rank\":\"2\"}}],\"@attr\":{\"tag\":\"rap\",\"page\":\"1\",\"perPage\":\"2\",\"totalPages\":\"6769\",\"total\":\"13538\"}}}"
                 }
             }
         }

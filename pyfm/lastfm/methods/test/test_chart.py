@@ -1,7 +1,6 @@
-from lastfm.methods.chart import Chart
-from lastfm.methods.test import MethodTestCase
-from lastfm.models import ChartTopArtists, ChartTopTracks, ChartTopTags
-from pyfm.lastfm.methods.test import fixture
+from pyfm.lastfm.methods import Chart
+from pyfm.lastfm.methods.test import MethodTestCase, fixture
+from pyfm.lastfm.models import ChartTopArtists, ChartTopTracks, ChartTopTags
 
 
 class ChartTests(MethodTestCase):
@@ -18,7 +17,6 @@ class ChartTests(MethodTestCase):
         self.assertEqual("Chart", result.namespace)
         self.assertEqual("get_top_artists", result.method)
         self.assertEqual({"limit": "10", "page": "2"}, result.params)
-        self.assertIsNone(None, result.data)
         self.assertIsInstance(result, ChartTopArtists)
         self.assertGreater(len(result.artist), 0)
         self.assertDictEqual(response["artists"], actual)
@@ -32,7 +30,6 @@ class ChartTests(MethodTestCase):
         self.assertEqual("Chart", result.namespace)
         self.assertEqual("get_top_tracks", result.method)
         self.assertEqual({"limit": "10", "page": "2"}, result.params)
-        self.assertIsNone(None, result.data)
         self.assertIsInstance(result, ChartTopTracks)
         self.assertGreater(len(result.track), 0)
         self.assertDictEqual(response["tracks"], actual)
@@ -46,7 +43,6 @@ class ChartTests(MethodTestCase):
         self.assertEqual("Chart", result.namespace)
         self.assertEqual("get_top_tags", result.method)
         self.assertEqual({"limit": "10", "page": "2"}, result.params)
-        self.assertIsNone(None, result.data)
         self.assertIsInstance(result, ChartTopTags)
         self.assertGreater(len(result.tag), 0)
         self.assertDictEqual(response["tags"], actual)

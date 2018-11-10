@@ -2,7 +2,7 @@ from typing import List
 
 from attr import attrs
 
-from lastfm.models import Attributes, Artist, mattrib
+from pyfm.lastfm.models import Attributes, Artist, mattrib
 from pyfm import BaseModel
 
 

@@ -1,6 +1,6 @@
 from unittest import skip
 
-from lastfm.models import (
+from pyfm.lastfm.models import (
     UserTopAlbums,
     UserTopArtists,
     UserTopTags,
@@ -16,8 +16,8 @@ from lastfm.models import (
     UserLovedTracks,
     UserArtistTracks,
 )
-from pyfm.lastfm.methods.test import fixture, MethodTestCase
-from pyfm.lastfm.methods.user import User
+from pyfm.lastfm.methods.test import MethodTestCase, fixture
+from pyfm.lastfm.methods import User
 
 
 class UserTests(MethodTestCase):
@@ -36,7 +36,6 @@ class UserTests(MethodTestCase):
         self.assertEqual(
             {"artist": "Trivium", "user": "rj", "page": "1"}, result.params
         )
-        self.assertIsNone(None, result.data)
         self.assertIsInstance(result, UserArtistTracks)
         self.assertDictEqual(response["artisttracks"], actual)
 
@@ -49,10 +48,9 @@ class UserTests(MethodTestCase):
         self.assertEqual("User", result.namespace)
         self.assertEqual("get_friends", result.method)
         self.assertEqual(
-            {"recenttracks": "1", "user": "rj", "page": "1", "limit": "50"},
+            {"recenttracks": True, "user": "rj", "page": "1", "limit": "50"},
             result.params,
         )
-        self.assertIsNone(None, result.data)
         self.assertIsInstance(result, UserFriends)
         self.assertDictEqual(response["friends"], actual)
 
@@ -65,7 +63,6 @@ class UserTests(MethodTestCase):
         self.assertEqual("User", result.namespace)
         self.assertEqual("get_info", result.method)
         self.assertEqual({"user": "rj"}, result.params)
-        self.assertIsNone(None, result.data)
         self.assertIsInstance(result, UserInfo)
         self.assertDictEqual(response["user"], actual)
 
@@ -80,7 +77,6 @@ class UserTests(MethodTestCase):
         self.assertEqual(
             {"user": "rj", "page": "1", "limit": "50"}, result.params
         )
-        self.assertIsNone(None, result.data)
         self.assertGreater(len(result.track), 0)
         self.assertIsInstance(result, UserLovedTracks)
         self.assertDictEqual(response["lovedtracks"], actual)
@@ -103,7 +99,6 @@ class UserTests(MethodTestCase):
             },
             result.params,
         )
-        self.assertIsNone(None, result.data)
         self.assertGreater(len(result.tracks.track), 0)
         self.assertIsInstance(result, UserPersonalTags)
         self.assertDictEqual(response["taggings"], actual)
@@ -126,7 +121,6 @@ class UserTests(MethodTestCase):
             },
             result.params,
         )
-        self.assertIsNone(None, result.data)
         self.assertGreater(len(result.albums.album), 0)
         self.assertIsInstance(result, UserPersonalTags)
         self.assertDictEqual(response["taggings"], actual)
@@ -149,7 +143,6 @@ class UserTests(MethodTestCase):
             },
             result.params,
         )
-        self.assertIsNone(None, result.data)
         self.assertGreater(len(result.artists.artist), 0)
         self.assertIsInstance(result, UserPersonalTags)
         self.assertDictEqual(response["taggings"], actual)
@@ -167,10 +160,9 @@ class UserTests(MethodTestCase):
         self.assertEqual("User", result.namespace)
         self.assertEqual("get_recent_tracks", result.method)
         self.assertEqual(
-            {"extended": "0", "user": "rj", "page": "1", "limit": "50"},
+            {"extended": False, "user": "rj", "page": "1", "limit": "50"},
             result.params,
         )
-        self.assertIsNone(None, result.data)
         self.assertGreater(len(result.track), 0)
         self.assertIsInstance(result, UserRecentTracks)
         self.assertDictEqual(response["recenttracks"], actual)
@@ -187,7 +179,6 @@ class UserTests(MethodTestCase):
             {"period": "7day", "user": "rj", "page": "1", "limit": "50"},
             result.params,
         )
-        self.assertIsNone(None, result.data)
         self.assertGreater(len(result.album), 0)
         self.assertIsInstance(result, UserTopAlbums)
         self.assertDictEqual(response["topalbums"], actual)
@@ -204,7 +195,6 @@ class UserTests(MethodTestCase):
             {"period": "7day", "user": "rj", "page": "1", "limit": "50"},
             result.params,
         )
-        self.assertIsNone(None, result.data)
         self.assertGreater(len(result.artist), 0)
         self.assertIsInstance(result, UserTopArtists)
         self.assertDictEqual(response["topartists"], actual)
@@ -218,7 +208,6 @@ class UserTests(MethodTestCase):
         self.assertEqual("User", result.namespace)
         self.assertEqual("get_top_tags", result.method)
         self.assertEqual({"user": "rj", "limit": "50"}, result.params)
-        self.assertIsNone(None, result.data)
         self.assertGreater(len(result.tag), 0)
         self.assertIsInstance(result, UserTopTags)
         self.assertDictEqual(response["toptags"], actual)
@@ -241,7 +230,6 @@ class UserTests(MethodTestCase):
             },
             result.params,
         )
-        self.assertIsNone(None, result.data)
         self.assertGreater(len(result.track), 0)
         self.assertIsInstance(result, UserTopTracks)
         self.assertDictEqual(response["toptracks"], actual)
@@ -255,7 +243,6 @@ class UserTests(MethodTestCase):
         self.assertEqual("User", result.namespace)
         self.assertEqual("get_weekly_album_chart", result.method)
         self.assertEqual({"user": "rj"}, result.params)
-        self.assertIsNone(None, result.data)
         self.assertGreater(len(result.album), 0)
         self.assertIsInstance(result, UserWeeklyAlbumChart)
         self.assertDictEqual(response["weeklyalbumchart"], actual)
@@ -269,7 +256,6 @@ class UserTests(MethodTestCase):
         self.assertEqual("User", result.namespace)
         self.assertEqual("get_weekly_artist_chart", result.method)
         self.assertEqual({"user": "rj"}, result.params)
-        self.assertIsNone(None, result.data)
         self.assertGreater(len(result.artist), 0)
         self.assertIsInstance(result, UserWeeklyArtistChart)
         self.assertDictEqual(response, actual)
@@ -285,7 +271,6 @@ class UserTests(MethodTestCase):
         self.assertEqual("User", result.namespace)
         self.assertEqual("get_weekly_chart_list", result.method)
         self.assertEqual({"user": "rj"}, result.params)
-        self.assertIsNone(None, result.data)
         self.assertGreater(len(result.chart), 0)
         self.assertIsInstance(result, UserWeeklyChartList)
         self.assertDictEqual(response, actual)
@@ -303,7 +288,6 @@ class UserTests(MethodTestCase):
         self.assertEqual("User", result.namespace)
         self.assertEqual("get_weekly_track_chart", result.method)
         self.assertEqual({"user": "rj"}, result.params)
-        self.assertIsNone(None, result.data)
         self.assertGreater(len(result.track), 0)
         self.assertIsInstance(result, UserWeeklyTrackChart)
         self.assertDictEqual(response, actual)

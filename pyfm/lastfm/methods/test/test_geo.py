@@ -1,7 +1,6 @@
-from lastfm.methods.geo import Geo
-from lastfm.methods.test import MethodTestCase
-from lastfm.models import GeoTopArtists, GeoTopTracks
-from pyfm.lastfm.methods.test import fixture
+from lastfm.methods.test import MethodTestCase, fixture
+from pyfm.lastfm.methods import Geo
+from pyfm.lastfm.models import GeoTopArtists, GeoTopTracks
 
 
 class GeoTests(MethodTestCase):
@@ -20,7 +19,6 @@ class GeoTests(MethodTestCase):
         self.assertEqual(
             {"country": "greece", "limit": "10", "page": "1"}, result.params
         )
-        self.assertIsNone(None, result.data)
         self.assertIsInstance(result, GeoTopArtists)
         self.assertGreater(len(result.artist), 0)
         self.assertDictEqual(response["topartists"], actual)
@@ -36,7 +34,6 @@ class GeoTests(MethodTestCase):
         self.assertEqual(
             {"country": "greece", "limit": "10", "page": "1"}, result.params
         )
-        self.assertIsNone(None, result.data)
         self.assertIsInstance(result, GeoTopTracks)
         self.assertGreater(len(result.track), 0)
         self.assertDictEqual(response["tracks"], actual)

@@ -1,8 +1,8 @@
 from unittest import skip
 
-from lastfm.methods.tag import Tag
-from lastfm.methods.test import MethodTestCase
-from lastfm.models import (
+from pyfm.lastfm.methods import Tag
+from pyfm.lastfm.methods.test import MethodTestCase, fixture
+from pyfm.lastfm.models import (
     TagInfo,
     TagSimilar,
     TagTopAlbums,
@@ -11,7 +11,6 @@ from lastfm.models import (
     TagTopTracks,
     TagWeeklyChartList,
 )
-from pyfm.lastfm.methods.test import fixture
 
 
 class TagTests(MethodTestCase):
@@ -28,7 +27,6 @@ class TagTests(MethodTestCase):
         self.assertEqual("Tag", result.namespace)
         self.assertEqual("get_info", result.method)
         self.assertEqual({"lang": "en", "tag": "rap"}, result.params)
-        self.assertIsNone(None, result.data)
         self.assertIsInstance(result, TagInfo)
         self.assertDictEqual(response["tag"], actual)
 
@@ -46,7 +44,6 @@ class TagTests(MethodTestCase):
         self.assertEqual("Tag", result.namespace)
         self.assertEqual("get_similar", result.method)
         self.assertEqual({"tag": "rap"}, result.params)
-        self.assertIsNone(None, result.data)
         self.assertIsInstance(result, TagSimilar)
         self.assertDictEqual(response["similartags"], actual)
 
@@ -65,7 +62,6 @@ class TagTests(MethodTestCase):
         self.assertEqual(
             {"limit": "2", "page": "1", "tag": "rap"}, result.params
         )
-        self.assertIsNone(None, result.data)
         self.assertGreater(len(result.album), 0)
         self.assertIsInstance(result, TagTopAlbums)
         self.assertDictEqual(response["albums"], actual)
@@ -85,7 +81,6 @@ class TagTests(MethodTestCase):
         self.assertEqual(
             {"limit": "2", "page": "1", "tag": "rap"}, result.params
         )
-        self.assertIsNone(None, result.data)
         self.assertGreater(len(result.artist), 0)
         self.assertIsInstance(result, TagTopArtists)
         self.assertDictEqual(response["topartists"], actual)
@@ -105,7 +100,6 @@ class TagTests(MethodTestCase):
         self.assertEqual(
             {"limit": "2", "page": "1", "tag": "rap"}, result.params
         )
-        self.assertIsNone(None, result.data)
         self.assertGreater(len(result.track), 0)
         self.assertIsInstance(result, TagTopTracks)
         self.assertDictEqual(response["tracks"], actual)
@@ -123,7 +117,6 @@ class TagTests(MethodTestCase):
         self.assertEqual("Tag", result.namespace)
         self.assertEqual("get_top_tags", result.method)
         self.assertEqual({"num_res": "2", "offset": "2"}, result.params)
-        self.assertIsNone(None, result.data)
         self.assertEqual(2, len(result.tag))
         self.assertIsInstance(result, TagTopTags)
         self.assertDictEqual(response["toptags"], actual)
@@ -137,7 +130,6 @@ class TagTests(MethodTestCase):
         self.assertEqual("Tag", result.namespace)
         self.assertEqual("get_weekly_chart_list", result.method)
         self.assertEqual({"tag": "rap"}, result.params)
-        self.assertIsNone(None, result.data)
         self.assertGreater(len(result.chart), 0)
         self.assertIsInstance(result, TagWeeklyChartList)
         self.assertDictEqual(response, actual)

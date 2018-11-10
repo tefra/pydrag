@@ -4,7 +4,7 @@
         {
             "request": {
                 "method": "GET",
-                "uri": "http://ws.audioscrobbler.com/2.0/?format=json&method=user.getinfo&user=rj",
+                "uri": "https://ws.audioscrobbler.com/2.0/?format=json&method=user.getInfo&user=rj",
                 "body": null,
                 "headers": {
                     "User-Agent": [
@@ -27,33 +27,33 @@
                     "message": "OK"
                 },
                 "headers": {
-                    "content-length": [
-                        "747"
+                    "Access-Control-Allow-Methods": [
+                        "POST, GET, OPTIONS"
+                    ],
+                    "Date": [
+                        "Sat, 10 Nov 2018 09:57:25 GMT"
                     ],
                     "Content-Type": [
                         "application/json"
                     ],
-                    "Date": [
-                        "Wed, 07 Nov 2018 23:07:20 GMT"
-                    ],
                     "Access-Control-Max-Age": [
                         "86400"
+                    ],
+                    "content-length": [
+                        "747"
                     ],
                     "Access-Control-Allow-Origin": [
                         "*"
                     ],
-                    "Access-Control-Allow-Methods": [
-                        "POST, GET, OPTIONS"
+                    "Connection": [
+                        "keep-alive"
                     ],
                     "Server": [
                         "openresty/1.9.7.5"
-                    ],
-                    "Connection": [
-                        "keep-alive"
                     ]
                 },
                 "body": {
-                    "string": "{\"user\":{\"playlists\":\"0\",\"playcount\":128532,\"gender\":\"n\",\"name\":\"RJ\",\"subscriber\":\"1\",\"url\":\"https:\\/\\/www.last.fm\\/user\\/RJ\",\"country\":\"United Kingdom\",\"image\":[{\"size\":\"small\",\"#text\":\"https:\\/\\/lastfm-img2.akamaized.net\\/i\\/u\\/34s\\/b26d6fd11de240a1c045dfb5c5d9fe65.png\"},{\"size\":\"medium\",\"#text\":\"https:\\/\\/lastfm-img2.akamaized.net\\/i\\/u\\/64s\\/b26d6fd11de240a1c045dfb5c5d9fe65.png\"},{\"size\":\"large\",\"#text\":\"https:\\/\\/lastfm-img2.akamaized.net\\/i\\/u\\/174s\\/b26d6fd11de240a1c045dfb5c5d9fe65.png\"},{\"size\":\"extralarge\",\"#text\":\"https:\\/\\/lastfm-img2.akamaized.net\\/i\\/u\\/300x300\\/b26d6fd11de240a1c045dfb5c5d9fe65.png\"}],\"registered\":{\"unixtime\":1037793040,\"#text\":1037793040},\"type\":\"alum\",\"age\":\"0\",\"bootstrap\":\"0\",\"realname\":\"Richard Jones \"}}"
+                    "string": "{\"user\":{\"playlists\":\"0\",\"playcount\":128549,\"gender\":\"n\",\"name\":\"RJ\",\"subscriber\":\"1\",\"url\":\"https:\\/\\/www.last.fm\\/user\\/RJ\",\"country\":\"United Kingdom\",\"image\":[{\"size\":\"small\",\"#text\":\"https:\\/\\/lastfm-img2.akamaized.net\\/i\\/u\\/34s\\/b26d6fd11de240a1c045dfb5c5d9fe65.png\"},{\"size\":\"medium\",\"#text\":\"https:\\/\\/lastfm-img2.akamaized.net\\/i\\/u\\/64s\\/b26d6fd11de240a1c045dfb5c5d9fe65.png\"},{\"size\":\"large\",\"#text\":\"https:\\/\\/lastfm-img2.akamaized.net\\/i\\/u\\/174s\\/b26d6fd11de240a1c045dfb5c5d9fe65.png\"},{\"size\":\"extralarge\",\"#text\":\"https:\\/\\/lastfm-img2.akamaized.net\\/i\\/u\\/300x300\\/b26d6fd11de240a1c045dfb5c5d9fe65.png\"}],\"registered\":{\"unixtime\":1037793040,\"#text\":1037793040},\"type\":\"alum\",\"age\":\"0\",\"bootstrap\":\"0\",\"realname\":\"Richard Jones \"}}"
                 }
             }
         }

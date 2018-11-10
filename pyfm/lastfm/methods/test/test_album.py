@@ -26,13 +26,12 @@ class AlbumTests(MethodTestCase):
         self.assertEqual("get_info", result.method)
         self.assertEqual(
             {
-                "autocorrect": "1",
+                "autocorrect": True,
                 "lang": "en",
                 "mbid": "6defd963-fe91-4550-b18e-82c685603c2b",
             },
             result.params,
         )
-        self.assertIsNone(None, result.data)
         self.assertIsInstance(result, AlbumInfo)
         self.assertDictEqual(response["album"], actual)
 
@@ -48,12 +47,11 @@ class AlbumTests(MethodTestCase):
             {
                 "album": "A Night at the Opera",
                 "artist": "Queen",
-                "autocorrect": "0",
+                "autocorrect": False,
                 "mbid": "6defd963-fe91-4550-b18e-82c685603c2b",
             },
             result.params,
         )
-        self.assertIsNone(None, result.data)
         self.assertGreater(len(result.tag), 0)
         self.assertIsInstance(result, AlbumTopTags)
         self.assertDictEqual(response["toptags"], actual)
@@ -77,7 +75,6 @@ class AlbumTests(MethodTestCase):
             },
             result.params,
         )
-        self.assertIsNone(None, result.data)
         self.assertIsInstance(result, AlbumTags)
         self.assertDictEqual(response["tags"], actual)
 
@@ -93,6 +90,5 @@ class AlbumTests(MethodTestCase):
         self.assertEqual(
             {"album": "fire", "page": "1", "limit": "50"}, result.params
         )
-        self.assertIsNone(None, result.data)
         self.assertIsInstance(result, AlbumSearch)
         self.assertDictEqual(response["results"], actual)

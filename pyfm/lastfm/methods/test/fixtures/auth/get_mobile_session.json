@@ -3,9 +3,9 @@
     "interactions": [
         {
             "request": {
-                "method": "GET",
-                "uri": "https://ws.audioscrobbler.com/2.0/?artist=Trivium&format=json&method=user.getArtistTracks&page=1&user=rj",
-                "body": null,
+                "method": "POST",
+                "uri": "https://ws.audioscrobbler.com/2.0/",
+                "body": "method=auth.getMobileSession&format=json&api_key=5e3c2d94b6abd4805fa5c647eda0d1dc&username=Zaratoustre&authToken=b4d5e0e3201175389bb320dbcc0207db&api_sig=f8a1491b5d61ec131952c1cdab60f1f2",
                 "headers": {
                     "User-Agent": [
                         "python-requests/2.20.0"
@@ -18,6 +18,12 @@
                     ],
                     "Connection": [
                         "keep-alive"
+                    ],
+                    "Content-Length": [
+                        "186"
+                    ],
+                    "Content-Type": [
+                        "application/x-www-form-urlencoded"
                     ]
                 }
             },
@@ -27,36 +33,33 @@
                     "message": "OK"
                 },
                 "headers": {
-                    "Content-Length": [
-                        "125"
+                    "Server": [
+                        "openresty/1.9.7.5"
                     ],
                     "Access-Control-Allow-Methods": [
                         "POST, GET, OPTIONS"
                     ],
-                    "Date": [
-                        "Sat, 10 Nov 2018 09:57:19 GMT"
-                    ],
-                    "Content-Type": [
-                        "application/json; charset=UTF-8"
-                    ],
-                    "Cneonction": [
-                        "close"
-                    ],
                     "Access-Control-Max-Age": [
                         "86400"
+                    ],
+                    "Content-Type": [
+                        "application/json"
                     ],
                     "Access-Control-Allow-Origin": [
                         "*"
                     ],
-                    "Access-Control-Request-Headers": [
-                        "Origin, X-Atmosphere-tracking-id, X-Atmosphere-Framework, X-Cache-Date, Content-Type, X-Atmosphere-Transport, *"
+                    "Date": [
+                        "Sat, 10 Nov 2018 09:09:07 GMT"
                     ],
-                    "Server": [
-                        "openresty/1.9.7.5"
+                    "content-length": [
+                        "90"
+                    ],
+                    "Connection": [
+                        "keep-alive"
                     ]
                 },
                 "body": {
-                    "string": "{\"artisttracks\":{\"track\":[],\"@attr\":{\"user\":\"RJ\",\"artist\":\"Trivium\",\"page\":\"1\",\"perPage\":\"50\",\"totalPages\":\"0\",\"total\":\"0\"}}}"
+                    "string": "{\"session\":{\"subscriber\":0,\"name\":\"Zaratoustre\",\"key\":\"W75Vr-bEL-kU5CxnY719F0eDGDuJIFbn\"}}"
                 }
             }
         }

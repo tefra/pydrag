@@ -1,9 +1,8 @@
-from lastfm import ApiMethod
-from lastfm.methods.user import User
-from lastfm.models import UserFriends
+from pyfm.lastfm import api
+from pyfm.lastfm.models import UserFriends
 
 
-class Library(User):
+class Library:
     """
     Last.fm Library API interface for easy access/navigation
     """
@@ -15,7 +14,7 @@ class Library(User):
         """
         self.user = user
 
-    @ApiMethod.fetch
+    @api.operation
     def get_artists(self, limit: int = 50, page: int = 1) -> UserFriends:
         """
         :param page: The page number to fetch. Defaults to first page.

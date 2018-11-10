@@ -1,5 +1,5 @@
-from lastfm import ApiMethod
-from lastfm.models import (
+from pyfm.lastfm import api
+from pyfm.lastfm.models import (
     UserArtistTracks,
     UserFriends,
     UserInfo,
@@ -29,7 +29,7 @@ class User:
         """
         self.user = user
 
-    @ApiMethod.fetch
+    @api.operation
     def get_artist_tracks(
         self,
         artist: str,
@@ -52,7 +52,7 @@ class User:
             page=page,
         )
 
-    @ApiMethod.fetch
+    @api.operation
     def get_friends(
         self, recent_tracks: bool, limit: int = 50, page: int = 1
     ) -> UserFriends:
@@ -67,14 +67,14 @@ class User:
             user=self.user, recenttracks=recent_tracks, page=page, limit=limit
         )
 
-    @ApiMethod.fetch
+    @api.operation
     def get_info(self) -> UserInfo:
         """
         :returns: UserInfo
         """
         return dict(user=self.user)
 
-    @ApiMethod.fetch
+    @api.operation
     def get_loved_tracks(
         self, limit: int = 50, page: int = 1
     ) -> UserLovedTracks:
@@ -85,7 +85,7 @@ class User:
         """
         return dict(user=self.user, limit=limit, page=page)
 
-    @ApiMethod.fetch
+    @api.operation
     def get_personal_tags(
         self, tag: str, tagging_type: str, limit: int = 50, page: int = 1
     ) -> UserPersonalTags:
@@ -107,7 +107,7 @@ class User:
             page=page,
         )
 
-    @ApiMethod.fetch
+    @api.operation
     def get_recent_tracks(
         self,
         extended: bool = True,
@@ -141,7 +141,7 @@ class User:
             "to": to_date,
         }
 
-    @ApiMethod.fetch
+    @api.operation
     def get_top_albums(
         self, period: str, limit: int = 50, page: int = 1
     ) -> UserTopAlbums:
@@ -153,7 +153,7 @@ class User:
         """
         return dict(user=self.user, limit=limit, page=page, period=period)
 
-    @ApiMethod.fetch
+    @api.operation
     def get_top_artists(
         self, period: str, limit: int = 50, page: int = 1
     ) -> UserTopArtists:
@@ -165,7 +165,7 @@ class User:
         """
         return dict(user=self.user, limit=limit, page=page, period=period)
 
-    @ApiMethod.fetch
+    @api.operation
     def get_top_tags(self, limit: int = 50) -> UserTopTags:
         """
          :param limit: Limit the number of tags returned
@@ -173,7 +173,7 @@ class User:
         """
         return dict(user=self.user, limit=limit)
 
-    @ApiMethod.fetch
+    @api.operation
     def get_top_tracks(
         self, period: str, limit: int = 50, page: int = 1
     ) -> UserTopTracks:
@@ -185,7 +185,7 @@ class User:
         """
         return dict(user=self.user, limit=limit, page=page, period=period)
 
-    @ApiMethod.fetch
+    @api.operation
     def get_weekly_album_chart(
         self, from_date: str = None, to_date: str = None
     ) -> UserWeeklyAlbumChart:
@@ -196,7 +196,7 @@ class User:
         """
         return {"user": self.user, "from": from_date, "to": to_date}
 
-    @ApiMethod.fetch
+    @api.operation
     def get_weekly_artist_chart(
         self, from_date: str = None, to_date: str = None
     ) -> UserWeeklyArtistChart:
@@ -207,14 +207,14 @@ class User:
         """
         return {"user": self.user, "from": from_date, "to": to_date}
 
-    @ApiMethod.fetch
+    @api.operation
     def get_weekly_chart_list(self) -> UserWeeklyChartList:
         """
         :return: UserWeeklyChartList
         """
         return dict(user=self.user)
 
-    @ApiMethod.fetch
+    @api.operation
     def get_weekly_track_chart(
         self, from_date: str = None, to_date: str = None
     ) -> UserWeeklyTrackChart:

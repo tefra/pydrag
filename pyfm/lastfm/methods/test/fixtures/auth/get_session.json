@@ -3,9 +3,9 @@
     "interactions": [
         {
             "request": {
-                "method": "GET",
-                "uri": "https://ws.audioscrobbler.com/2.0/?format=json&method=tag.getTopTags&num_res=2&offset=2",
-                "body": null,
+                "method": "POST",
+                "uri": "https://ws.audioscrobbler.com/2.0/",
+                "body": "token=aGmfQEQ8QhsQ_rsOUQ5BTvgK-8IZnuUl&method=auth.getSession&format=json&api_key=5e3c2d94b6abd4805fa5c647eda0d1dc&api_sig=c6bad9fa573a09280f89c20a4a32dec5",
                 "headers": {
                     "User-Agent": [
                         "python-requests/2.20.0"
@@ -18,6 +18,12 @@
                     ],
                     "Connection": [
                         "keep-alive"
+                    ],
+                    "Content-Length": [
+                        "155"
+                    ],
+                    "Content-Type": [
+                        "application/x-www-form-urlencoded"
                     ]
                 }
             },
@@ -27,11 +33,8 @@
                     "message": "OK"
                 },
                 "headers": {
-                    "Content-Length": [
-                        "175"
-                    ],
-                    "Access-Control-Allow-Headers": [
-                        "Origin, X-Atmosphere-tracking-id, X-Atmosphere-Framework, X-Cache-Date, Content-Type, X-Atmosphere-Transport, *"
+                    "Access-Control-Max-Age": [
+                        "86400"
                     ],
                     "Access-Control-Allow-Origin": [
                         "*"
@@ -39,27 +42,24 @@
                     "Server": [
                         "openresty/1.9.7.5"
                     ],
-                    "Date": [
-                        "Sat, 10 Nov 2018 09:53:41 GMT"
-                    ],
                     "Connection": [
                         "keep-alive"
                     ],
-                    "Access-Control-Request-Headers": [
-                        "Origin, X-Atmosphere-tracking-id, X-Atmosphere-Framework, X-Cache-Date, Content-Type, X-Atmosphere-Transport, *"
+                    "Date": [
+                        "Sat, 10 Nov 2018 09:25:22 GMT"
+                    ],
+                    "content-length": [
+                        "90"
                     ],
                     "Access-Control-Allow-Methods": [
-                        "POST, GET, OPTIONS, PUT"
-                    ],
-                    "TSVC-Time-Spent": [
-                        "0.000"
+                        "POST, GET, OPTIONS"
                     ],
                     "Content-Type": [
-                        "application/json; charset=UTF-8"
+                        "application/json"
                     ]
                 },
                 "body": {
-                    "string": "{\"toptags\":{\"@attr\":{\"offset\":2,\"num_res\":2,\"total\":2693671},\"tag\":[{\"name\":\"seen live\",\"count\":2128122,\"reach\":81624},{\"name\":\"alternative\",\"count\":2068696,\"reach\":260201}]}}"
+                    "string": "{\"session\":{\"subscriber\":0,\"name\":\"Zaratoustre\",\"key\":\"8ij1zDct1pasPJRFoOPMwmHuzfs9PST1\"}}"
                 }
             }
         }

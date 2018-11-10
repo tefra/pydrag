@@ -1,6 +1,24 @@
-from dotenv import load_dotenv
+import os
 
-from lastfm.api_method import ApiMethod  # noqa
+from attr import attrs, attrib
+
+from lastfm.utils import md5
 
 
-load_dotenv()
+@attrs(auto_attribs=True, frozen=True)
+class Config:
+    api_key: str
+    api_secret: str
+    username: str
+    password: str = attrib(converter=lambda x: not x or md5(x))
+    api_root_url: str = "https://ws.audioscrobbler.com/2.0/"
+
+
+config = Config(
+    api_key=os.getenv("LASTFM_API_KEY"),
+    api_secret=os.getenv("LASTFM_API_SECRET"),
+    username=os.getenv("LASTFM_USERNAME"),
+    password=os.getenv("LASTFM_PASSWORD"),
+)
+GET = "get"
+POST = "post"

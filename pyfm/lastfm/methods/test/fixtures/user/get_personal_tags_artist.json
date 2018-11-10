@@ -4,7 +4,7 @@
         {
             "request": {
                 "method": "GET",
-                "uri": "http://ws.audioscrobbler.com/2.0/?format=json&limit=50&method=user.getpersonaltags&page=1&tag=rock&taggingtype=artist&user=rj",
+                "uri": "https://ws.audioscrobbler.com/2.0/?format=json&limit=50&method=user.getPersonalTags&page=1&tag=rock&taggingtype=artist&user=rj",
                 "body": null,
                 "headers": {
                     "User-Agent": [
@@ -27,17 +27,17 @@
                     "message": "OK"
                 },
                 "headers": {
-                    "Access-Control-Request-Headers": [
-                        "Origin, X-Atmosphere-tracking-id, X-Atmosphere-Framework, X-Cache-Date, Content-Type, X-Atmosphere-Transport, *"
-                    ],
-                    "Content-Type": [
-                        "application/json; charset=UTF-8"
-                    ],
                     "Content-Length": [
                         "13852"
                     ],
+                    "Access-Control-Allow-Methods": [
+                        "POST, GET, OPTIONS"
+                    ],
                     "Date": [
-                        "Wed, 07 Nov 2018 23:07:21 GMT"
+                        "Sat, 10 Nov 2018 09:57:27 GMT"
+                    ],
+                    "Content-Type": [
+                        "application/json; charset=UTF-8"
                     ],
                     "Access-Control-Max-Age": [
                         "86400"
@@ -45,14 +45,14 @@
                     "Access-Control-Allow-Origin": [
                         "*"
                     ],
-                    "Access-Control-Allow-Methods": [
-                        "POST, GET, OPTIONS"
-                    ],
-                    "Server": [
-                        "openresty/1.9.7.5"
+                    "Access-Control-Request-Headers": [
+                        "Origin, X-Atmosphere-tracking-id, X-Atmosphere-Framework, X-Cache-Date, Content-Type, X-Atmosphere-Transport, *"
                     ],
                     "Connection": [
                         "keep-alive"
+                    ],
+                    "Server": [
+                        "openresty/1.9.7.5"
                     ]
                 },
                 "body": {
