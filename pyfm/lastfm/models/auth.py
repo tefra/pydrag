@@ -3,7 +3,7 @@ from urllib.parse import urlencode
 from attr import attrs
 
 from pyfm.lastfm import config
-from pyfm import BaseModel
+from pyfm.lastfm.models import BaseModel
 
 
 @attrs(auto_attribs=True)

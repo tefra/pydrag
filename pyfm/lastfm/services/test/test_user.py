@@ -1,5 +1,3 @@
-from unittest import skip
-
 from pyfm.lastfm.models import (
     UserTopAlbums,
     UserTopArtists,
@@ -16,8 +14,8 @@ from pyfm.lastfm.models import (
     UserLovedTracks,
     UserArtistTracks,
 )
-from pyfm.lastfm.services.test import MethodTestCase, fixture
 from pyfm.lastfm.services import UserService
+from pyfm.lastfm.services.test import MethodTestCase, fixture
 
 
 class UserServiceTests(MethodTestCase):
@@ -103,9 +101,9 @@ class UserServiceTests(MethodTestCase):
         self.assertIsInstance(result, UserPersonalTags)
         self.assertDictEqual(response["taggings"], actual)
 
-    @skip("No data")
     @fixture.use_cassette(path="user/get_personal_tags_album")
     def test_get_personal_tags_album(self):
+        self.user.user = "Zaratoustre"
         result = self.user.get_personal_tags(tag="hell", tagging_type="album")
         actual = result.to_dict()
         response = result.response.json()
@@ -114,14 +112,15 @@ class UserServiceTests(MethodTestCase):
         self.assertEqual("get_personal_tags", result.method)
         self.assertEqual(
             {
-                "tag": "rock",
-                "taggingtype": "artist",
-                "user": "rj",
-                "page": "1",
+                "tag": "hell",
+                "taggingtype": "album",
+                "user": "Zaratoustre",
+                "page": 1,
+                "limit": 50,
             },
             result.params,
         )
-        self.assertGreater(len(result.albums.album), 0)
+        # self.assertGreater(len(result.albums.album), 0)
         self.assertIsInstance(result, UserPersonalTags)
         self.assertDictEqual(response["taggings"], actual)
 

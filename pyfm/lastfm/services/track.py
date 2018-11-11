@@ -16,9 +16,7 @@ from pyfm.lastfm.models import (
 
 
 class TrackService:
-    """
-    Last.fm Track API interface for easy access/navigation
-    """
+    """Last.fm Track API interface for easy access/navigation."""
 
     def __init__(
         self, track: str = None, artist: str = None, mbid: str = None
@@ -35,6 +33,7 @@ class TrackService:
     def add_tags(self, tags: List[str]) -> BaseModel:
         """
         Tag an track with one or more user supplied tags.
+
         :param tags: A list of user supplied tags to apply to this track.
         Accepts a maximum of 10 tags.
         :returns: BaseModel
@@ -46,6 +45,7 @@ class TrackService:
     def remove_tag(self, tag: str) -> BaseModel:
         """
         Remove a user's tag from an track.
+
         :param tag: A single user tag to remove from this track.
         :returns: BaseModel
         """
@@ -57,7 +57,8 @@ class TrackService:
         self, autocorrect: bool = True, user: str = None, lang: str = "en"
     ) -> TrackInfo:
         """
-        Get the metadata for a track on Last.fm
+        Get the metadata for a track on Last.fm.
+
         :param autocorrect: If enabled auto correct misspelled names
         :param user: The username for the context of the request.
          If supplied, response will include the user's playcount for this track
@@ -79,7 +80,8 @@ class TrackService:
     def get_correction(self) -> TrackCorrection:
         """
         Use the last.fm corrections data to check whether the supplied track
-        has a correction to a canonical track
+        has a correction to a canonical track.
+
         :returns: TrackCorrection
         """
         self.assert_mbid_or_track_and_artist()
@@ -90,7 +92,8 @@ class TrackService:
         self, autocorrect: bool = True, limit: int = 50
     ) -> TrackSimilar:
         """
-        Get all the tracks similar to this track
+        Get all the tracks similar to this track.
+
         :param autocorrect: If enabled auto correct misspelled names
         :param limit: Limit the number of similar tracks returned
         :returns: TrackSimilar
@@ -107,7 +110,8 @@ class TrackService:
     @api.operation
     def get_tags(self, user: str, autocorrect: bool = True) -> TrackTags:
         """
-        Get the tags applied by an individual user to an track on Last.fm
+        Get the tags applied by an individual user to an track on Last.fm.
+
         :param user: The username for the context of the request.
         :param autocorrect: If enabled auto correct misspelled names
         :returns: TrackTags
@@ -125,6 +129,7 @@ class TrackService:
     def get_top_tags(self, autocorrect: bool = True) -> TrackTopTags:
         """
         Get the top tags for an track on Last.fm, ordered by popularity.
+
         :param autocorrect: If enabled auto correct misspelled names
         :returns: TrackTopTags
         """
@@ -140,6 +145,7 @@ class TrackService:
     def search(self, limit: int = 50, page: int = 1) -> TrackSearch:
         """
         Search for an track by name. Returns track matches sorted by relevance.
+
         :param page: The page number to fetch. Defaults to first page.
         :param limit: The number of results to fetch per page. Defaults to 50.
         :returns: TrackSearch
@@ -151,6 +157,7 @@ class TrackService:
     def love(self) -> BaseModel:
         """
         Love a track for a user profile.
+
         :returns: BaseModel
         """
         assert self.track and self.artist
@@ -160,6 +167,7 @@ class TrackService:
     def unlove(self) -> BaseModel:
         """
         Unlove a track for a user profile.
+
         :returns: BaseModel
         """
         assert self.track and self.artist
@@ -183,8 +191,8 @@ class TrackService:
     ) -> TrackScrobble:
         """
         Split tracks into the desired batch size, with maximum size set to 50
-        and send the tracks for processing, I am debating if this even
-        belongs here.
+        and send the tracks for processing, I am debating if this even belongs
+        here.
 
         :param tracks: The tracks to scrobble
         :param batch_size: The number of tracks to submit per cycle

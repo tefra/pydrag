@@ -2,7 +2,7 @@ from typing import List
 
 from attr import attrs
 
-from pyfm import BaseModel, mattrib
+from pyfm.lastfm.models import BaseModel, mattrib
 
 
 @attrs(auto_attribs=True)
@@ -82,6 +82,17 @@ class Track(BaseModel):
 
 
 @attrs(auto_attribs=True)
+class Tracks(BaseModel):
+    track: List[Track]
+
+
+@attrs(auto_attribs=True)
+class TracksAttr(Tracks):
+    track: List[Track]
+    attr: Attributes = mattrib("@attr")
+
+
+@attrs(auto_attribs=True)
 class TrackSimpleArtist(Track):
     artist: str = None
 
@@ -134,8 +145,27 @@ class Tag(BaseModel):
 
 
 @attrs(auto_attribs=True)
+class Tags(BaseModel):
+    tag: List[Tag]
+
+
+@attrs(auto_attribs=True)
+class TagsAttr(Tags):
+    attr: Attributes = mattrib("@attr")
+
+
+@attrs(auto_attribs=True)
 class Query(BaseModel):
     role: str
     startPage: int
     text: str = mattrib("#text")
     searchTerms: str = None
+
+
+@attrs(auto_attribs=True)
+class OpenSearch(BaseModel):
+    query: Query = mattrib("opensearch:Query")
+    itemsPerPage: int = mattrib("opensearch:itemsPerPage")
+    startIndex: int = mattrib("opensearch:startIndex")
+    totalResults: int = mattrib("opensearch:totalResults")
+    attr: Attributes = mattrib("@attr")

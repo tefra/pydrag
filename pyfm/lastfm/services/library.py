@@ -3,9 +3,7 @@ from pyfm.lastfm.models import UserFriends
 
 
 class LibraryService:
-    """
-    Last.fm Library API interface for easy access/navigation
-    """
+    """Last.fm Library API interface for easy access/navigation."""
 
     def __init__(self, user: str):
         """

@@ -18,9 +18,7 @@ from pyfm.lastfm.models import (
 
 
 class UserService:
-    """
-    Last.fm User API interface for easy access/navigation
-    """
+    """Last.fm User API interface for easy access/navigation."""
 
     def __init__(self, user: str):
         """

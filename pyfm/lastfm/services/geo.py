@@ -3,9 +3,7 @@ from pyfm.lastfm.models import GeoTopArtists, GeoTopTracks
 
 
 class GeoService:
-    """
-    Last.fm Geo API interface for easy access/navigation
-    """
+    """Last.fm Geo API interface for easy access/navigation."""
 
     def __init__(self, country: str):
         """

@@ -2,41 +2,32 @@ from typing import List
 
 from attr import attrs
 
-from pyfm import BaseModel, mattrib
-from pyfm.lastfm.models import Attributes, Artist, Wiki, Tag, Track, Query
+from pyfm.lastfm.models import (
+    Attributes,
+    Artist,
+    Wiki,
+    Track,
+    Query,
+    Tags,
+    TagsAttr,
+    BaseModel,
+    mattrib,
+)
 
 
 @attrs(auto_attribs=True)
-class ArtistTopTags(BaseModel):
-    tag: List[Tag]
-    attr: Attributes = mattrib("@attr")
+class ArtistTags(TagsAttr):
+    pass
 
 
 @attrs(auto_attribs=True)
-class Tags(BaseModel):
-    tag: List[Tag] = None
-
-
-@attrs(auto_attribs=True)
-class ArtistTags(Tags):
-    tag: List[Tag]
-    attr: Attributes = mattrib("@attr")
-
-
-@attrs(auto_attribs=True)
-class Tracks(BaseModel):
-    track: List[Track] = None
+class ArtistTopTags(TagsAttr):
+    pass
 
 
 @attrs(auto_attribs=True)
 class SimilarArtist(BaseModel):
     artist: List[Artist]
-
-
-@attrs(auto_attribs=True)
-class ArtistStat(BaseModel):
-    listeners: int
-    playcount: int
 
 
 @attrs(auto_attribs=True)

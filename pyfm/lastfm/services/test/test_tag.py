@@ -1,7 +1,3 @@
-from unittest import skip
-
-from pyfm.lastfm.services import TagService
-from pyfm.lastfm.services.test import MethodTestCase, fixture
 from pyfm.lastfm.models import (
     TagInfo,
     TagSimilar,
@@ -11,6 +7,8 @@ from pyfm.lastfm.models import (
     TagTopTracks,
     TagWeeklyChartList,
 )
+from pyfm.lastfm.services import TagService
+from pyfm.lastfm.services.test import MethodTestCase, fixture
 
 
 class TagServiceTests(MethodTestCase):
@@ -34,16 +32,19 @@ class TagServiceTests(MethodTestCase):
         with self.assertRaises(AssertionError):
             TagService().get_info()
 
-    @skip("No data :(")
     @fixture.use_cassette(path="tag/get_similar")
     def test_get_similar(self):
+        """
+        @todo investigate why I cant get any results for this
+        """
+        self.tag.tag = "Disco"
         result = self.tag.get_similar()
         actual = result.to_dict()
         response = result.response.json()
 
         self.assertEqual("Tag", result.namespace)
         self.assertEqual("get_similar", result.method)
-        self.assertEqual({"tag": "rap"}, result.params)
+        self.assertEqual({"tag": "Disco"}, result.params)
         self.assertIsInstance(result, TagSimilar)
         self.assertDictEqual(response["similartags"], actual)
 

@@ -9,9 +9,9 @@ from pyfm.lastfm.models import (
     Track,
     Chart,
     Wiki,
+    BaseModel,
     mattrib,
 )
-from pyfm import BaseModel
 
 
 @attrs(auto_attribs=True)

@@ -7,10 +7,9 @@ class AuthService:
     @api.operation(signed=False)
     def get_token(self) -> AuthToken:
         """
-        Fetch an unathorized request token for an API account.
-        Open the AuthToken.auth_url where the user must authorize the token
-        use the get_session with the same authorized token to retrieve the
-        use session
+        Fetch an unathorized request token for an API account. Open the
+        AuthToken.auth_url where the user must authorize the token use the
+        get_session with the same authorized token to retrieve the use session.
 
         :returns: AuthToken
         """
@@ -24,8 +23,9 @@ class AuthService:
     def get_mobile_session(self) -> AuthMobileSession:
         """
         Create a web service session for a user. Used for authenticating a user
-        when the password can be inputted by the user. Accepts email address
-        as well, so please use the username supplied in the output.
+        when the password can be inputted by the user. Accepts email address as
+        well, so please use the username supplied in the output.
+
         :returns: AuthMobileSession
         """
         return None

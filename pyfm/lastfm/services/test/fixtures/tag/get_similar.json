@@ -4,7 +4,7 @@
         {
             "request": {
                 "method": "GET",
-                "uri": "https://ws.audioscrobbler.com/2.0/?api_key=LAST_FM_API_KEY&artist=Guns+an+roses&format=json&method=artist.getCorrection",
+                "uri": "https://ws.audioscrobbler.com/2.0/?api_key=LAST_FM_API_KEY&format=json&method=tag.getSimilar&tag=Disco",
                 "body": null,
                 "headers": {
                     "User-Agent": [
@@ -27,11 +27,23 @@
                     "message": "OK"
                 },
                 "headers": {
+                    "Connection": [
+                        "keep-alive"
+                    ],
+                    "Date": [
+                        "Sun, 11 Nov 2018 00:06:40 GMT"
+                    ],
+                    "Access-Control-Request-Headers": [
+                        "Origin, X-Atmosphere-tracking-id, X-Atmosphere-Framework, X-Cache-Date, Content-Type, X-Atmosphere-Transport, *"
+                    ],
+                    "Access-Control-Allow-Origin": [
+                        "*"
+                    ],
                     "Server": [
                         "openresty/1.9.7.5"
                     ],
-                    "Connection": [
-                        "keep-alive"
+                    "Content-Length": [
+                        "48"
                     ],
                     "Content-Type": [
                         "application/json; charset=UTF-8"
@@ -41,22 +53,10 @@
                     ],
                     "Access-Control-Allow-Methods": [
                         "POST, GET, OPTIONS"
-                    ],
-                    "Date": [
-                        "Sat, 10 Nov 2018 15:09:34 GMT"
-                    ],
-                    "Access-Control-Request-Headers": [
-                        "Origin, X-Atmosphere-tracking-id, X-Atmosphere-Framework, X-Cache-Date, Content-Type, X-Atmosphere-Transport, *"
-                    ],
-                    "Content-Length": [
-                        "184"
-                    ],
-                    "Access-Control-Allow-Origin": [
-                        "*"
                     ]
                 },
                 "body": {
-                    "string": "{\"corrections\":{\"correction\":{\"artist\":{\"name\":\"Guns N' Roses\",\"mbid\":\"CENSORED8e43\",\"url\":\"https://www.last.fm/music/Guns+N%27+Roses\"},\"@attr\":{\"index\":\"0\"}}}}"
+                    "string": "{\"similartags\":{\"tag\":[],\"@attr\":{\"tag\":\"n/a\"}}}"
                 }
             }
         }

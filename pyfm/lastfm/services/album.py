@@ -11,9 +11,7 @@ from pyfm.lastfm.models import (
 
 
 class AlbumService:
-    """
-    Last.fm Album API interface for easy access/navigation
-    """
+    """Last.fm Album API interface for easy access/navigation."""
 
     def __init__(
         self, artist: str = None, album: str = None, mbid: str = None
@@ -31,6 +29,7 @@ class AlbumService:
     def add_tags(self, tags: List[str]) -> BaseModel:
         """
         Tag an album using a list of user supplied tags.
+
         :param tags: A list of user supplied tags to apply to this album.
          Accepts a maximum of 10 tags.
         :returns: BaseModel
@@ -42,6 +41,7 @@ class AlbumService:
     def remove_tag(self, tag: str) -> BaseModel:
         """
         Remove a user's tag from an album.
+
         :param tag  : A single user tag to remove from this album.
         :returns: BaseModel
         """
@@ -53,7 +53,8 @@ class AlbumService:
         self, autocorrect: bool = True, user: str = None, lang: str = "en"
     ) -> AlbumInfo:
         """
-        Get the metadata and tracklist for an album on Last.fm
+        Get the metadata and tracklist for an album on Last.fm.
+
         :param self:
         :param autocorrect: If enabled auto correct misspelled names
         :param user: The username for the context of the request.
@@ -76,6 +77,7 @@ class AlbumService:
     def get_tags(self, user: str, autocorrect: bool = True) -> AlbumTags:
         """
         Get the tags applied by an individual user to an album on Last.fm.
+
         :param user: The username for the context of the request.
         :param autocorrect: If enabled auto correct misspelled names
         :returns: AlbumTopTags
@@ -93,6 +95,7 @@ class AlbumService:
     def get_top_tags(self, autocorrect: bool = True) -> AlbumTopTags:
         """
         Get the top tags for an album on Last.fm, ordered by popularity.
+
         :param autocorrect: If enabled auto correct misspelled names
         :returns: AlbumTopTags
         """
@@ -108,6 +111,7 @@ class AlbumService:
     def search(self, limit: int = 50, page: int = 1) -> AlbumSearch:
         """
         Search for an album by name.Returns album matches sorted by relevance.
+
         :param page: The page number to fetch. Defaults to first page.
         :param limit: The number of results to fetch per page. Defaults to 50.
         :returns: AlbumSearch

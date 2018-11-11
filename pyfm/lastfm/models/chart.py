@@ -2,8 +2,14 @@ from typing import List
 
 from attr import attrs
 
-from pyfm.lastfm.models import Attributes, Artist, Track, TagInfo, mattrib
-from pyfm import BaseModel
+from pyfm.lastfm.models import (
+    Attributes,
+    Artist,
+    Track,
+    TagInfo,
+    mattrib,
+    BaseModel,
+)
 
 
 @attrs(auto_attribs=True)

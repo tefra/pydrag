@@ -1,3 +1,4 @@
+from pyfm import BaseModel, mattrib  # noqa
 from pyfm.lastfm.models.common import *  # noqa
 from pyfm.lastfm.models.geo import *  # noqa
 from pyfm.lastfm.models.user import *  # noqa

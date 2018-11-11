@@ -14,9 +14,7 @@ from pyfm.lastfm.models import (
 
 
 class ArtistService:
-    """
-    Last.fm Artist API interface for easy access/navigation
-    """
+    """Last.fm Artist API interface for easy access/navigation."""
 
     def __init__(self, artist: str = None, mbid: str = None):
         """
@@ -30,6 +28,7 @@ class ArtistService:
     def add_tags(self, tags: List[str]) -> BaseModel:
         """
         Tag an artist with one or more user supplied tags.
+
         :param tags: A list of user supplied tags to apply to this artist.
         Accepts a maximum of 10 tags.
         :returns: BaseModel
@@ -41,6 +40,7 @@ class ArtistService:
     def remove_tag(self, tag: str) -> BaseModel:
         """
         Remove a user's tag from an artist.
+
         :param tag: A single user tag to remove from this artist.
         :returns: BaseModel
         """
@@ -52,8 +52,9 @@ class ArtistService:
         self, autocorrect: bool = True, user: str = None, lang: str = "en"
     ) -> ArtistInfo:
         """
-        Get the metadata for an artist. Includes biography, truncated at
-        300 characters.
+        Get the metadata for an artist. Includes biography, truncated at 300
+        characters.
+
         :param autocorrect: If enabled auto correct misspelled names
         :param user: The username for the context of the request.
         If supplied, response will include the user's playcount
@@ -73,8 +74,9 @@ class ArtistService:
     @api.operation
     def get_correction(self) -> ArtistCorrection:
         """
-        Use the last.fm corrections data to check whether the supplied
-        artist has a correction to a canonical artist
+        Use the last.fm corrections data to check whether the supplied artist
+        has a correction to a canonical artist.
+
         :returns: ArtistCorrection
         """
         assert self.artist is not None
@@ -85,7 +87,8 @@ class ArtistService:
         self, autocorrect: bool = True, limit: int = 50
     ) -> ArtistSimilar:
         """
-        Get all the artists similar to this artist
+        Get all the artists similar to this artist.
+
         :param autocorrect: If enabled auto correct misspelled names
         :param limit: Limit the number of similar artists returned
         :returns: ArtistSimilar
@@ -101,7 +104,8 @@ class ArtistService:
     @api.operation
     def get_tags(self, user: str, autocorrect: bool = True) -> ArtistTags:
         """
-        Get the tags applied by an individual user to an artist on Last.fm
+        Get the tags applied by an individual user to an artist on Last.fm.
+
         :param user: The username for the context of the request.
         :param autocorrect: If enabled auto correct misspelled names
         :returns: ArtistTags
@@ -118,6 +122,7 @@ class ArtistService:
     def get_top_tags(self, autocorrect: bool = True) -> ArtistTopTags:
         """
         Get the top tags for an artist on Last.fm, ordered by popularity.
+
         :param autocorrect: If enabled auto correct misspelled names
         :returns: ArtistTopTags
         """
@@ -132,6 +137,7 @@ class ArtistService:
     ) -> ArtistTopTracks:
         """
         Get the top tags for an artist on Last.fm, ordered by popularity.
+
         :param autocorrect: If enabled auto correct misspelled names
         :param page: The page number to fetch. Defaults to first page.
         :param limit: The number of results to fetch per page. Defaults to 50.
@@ -149,7 +155,9 @@ class ArtistService:
     @api.operation
     def search(self, limit: int = 50, page: int = 1) -> ArtistSearch:
         """
-        Search for an artist by name. Returns artist matches sorted by relevance.
+        Search for an artist by name. Returns artist matches sorted by
+        relevance.
+
         :param page: The page number to fetch. Defaults to first page.
         :param limit: The number of results to fetch per page. Defaults to 50.
         :returns: ArtistSearch

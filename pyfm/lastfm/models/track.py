@@ -2,50 +2,39 @@ from typing import List
 
 from attr import attrs
 
-from pyfm import BaseModel, mattrib, T
+from lastfm.models import OpenSearch
 from pyfm.lastfm.models import (
     Attributes,
     Wiki,
-    Tag,
-    Track,
-    Query,
+    Tags,
+    TagsAttr,
     AlbumInfo,
     Artist,
     TrackSimpleArtist,
+    TracksAttr,
+    BaseModel,
+    mattrib,
 )
 
 
 @attrs(auto_attribs=True)
-class TrackTopTags(BaseModel):
-    tag: List[Tag]
-    attr: Attributes = mattrib("@attr")
+class TrackTopTags(TagsAttr):
+    pass
 
 
 @attrs(auto_attribs=True)
-class Tags(BaseModel):
-    tag: List[Tag] = None
+class TrackTags(TagsAttr):
+    pass
 
 
 @attrs(auto_attribs=True)
-class TrackTags(Tags):
-    tag: List[Tag]
-    attr: Attributes = mattrib("@attr")
+class TrackTopTracks(TracksAttr):
+    pass
 
 
 @attrs(auto_attribs=True)
-class Tracks(BaseModel):
-    track: List[Track] = None
-
-
-@attrs(auto_attribs=True)
-class SimilarTrack(BaseModel):
-    artist: List[Track]
-
-
-@attrs(auto_attribs=True)
-class TrackStat(BaseModel):
-    listeners: int
-    playcount: int
+class TrackSimilar(TracksAttr):
+    pass
 
 
 @attrs(auto_attribs=True)
@@ -81,25 +70,8 @@ class TrackMatches(BaseModel):
 
 
 @attrs(auto_attribs=True)
-class TrackSearch(BaseModel):
+class TrackSearch(OpenSearch):
     trackmatches: TrackMatches
-    query: Query = mattrib("opensearch:Query")
-    itemsPerPage: int = mattrib("opensearch:itemsPerPage")
-    startIndex: int = mattrib("opensearch:startIndex")
-    totalResults: int = mattrib("opensearch:totalResults")
-    attr: Attributes = mattrib("@attr")
-
-
-@attrs(auto_attribs=True)
-class TrackTopTracks(BaseModel):
-    track: List[Track]
-    attr: Attributes = mattrib("@attr")
-
-
-@attrs(auto_attribs=True)
-class TrackSimilar(BaseModel):
-    track: List[Track]
-    attr: Attributes = mattrib("@attr")
 
 
 @attrs(auto_attribs=True)
@@ -126,7 +98,7 @@ class TrackScrobble(BaseModel):
     attr: Attributes = mattrib("@attr")
 
     @classmethod
-    def from_dict(cls: T, data: dict) -> T:
+    def from_dict(cls, data: dict):
         if isinstance(data, dict) and data.get("scrobble"):
             if isinstance(data["scrobble"], dict):
                 data["scrobble"] = [data["scrobble"]]

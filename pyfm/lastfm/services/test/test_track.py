@@ -1,9 +1,6 @@
 import time
 from datetime import datetime, timedelta
-from unittest import skip
 
-from pyfm.lastfm.services import TrackService
-from pyfm.lastfm.services.test import fixture, MethodTestCase
 from pyfm.lastfm.models import (
     BaseModel,
     TrackTags,
@@ -16,6 +13,8 @@ from pyfm.lastfm.models import (
     ScrobbleTrack,
     TrackScrobble,
 )
+from pyfm.lastfm.services import TrackService
+from pyfm.lastfm.services.test import fixture, MethodTestCase
 
 
 class TrackServiceTests(MethodTestCase):
@@ -32,10 +31,9 @@ class TrackServiceTests(MethodTestCase):
         )
         self.assertIsInstance(result, BaseModel)
 
-    @skip("wth where is my tag list")
     @fixture.use_cassette(path="track/get_tags")
     def test_get_tags(self):
-        result = self.track.get_tags(user="Zaratoustre")
+        result = self.track.get_tags(user="RJ")
         actual = result.to_dict()
         response = result.response.json()
 
@@ -44,12 +42,13 @@ class TrackServiceTests(MethodTestCase):
         self.assertDictEqual(
             {
                 "artist": "AC / DC",
-                "track": "Hells Bell",
                 "autocorrect": True,
-                "user": "Zaratoustre",
+                "track": "Hells Bell",
+                "user": "RJ",
             },
             result.params,
         )
+        self.assertGreater(len(result.tag), 0)
         self.assertIsInstance(result, TrackTags)
         self.assertDictEqual(response["tags"], actual)
 

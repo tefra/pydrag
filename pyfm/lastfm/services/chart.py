@@ -3,9 +3,7 @@ from pyfm.lastfm.models import ChartTopArtists, ChartTopTracks, ChartTopTags
 
 
 class ChartService:
-    """
-    Last.fm Chart API interface for easy access/navigation
-    """
+    """Last.fm Chart API interface for easy access/navigation."""
 
     def __init__(self, limit: int = 50, page: int = 1):
         """
@@ -18,7 +16,8 @@ class ChartService:
     @api.operation
     def get_top_artists(self) -> ChartTopArtists:
         """
-        Get the top artists chart
+        Get the top artists chart.
+
         :returns: ChartTopArtists
         """
         return dict(limit=self.limit, page=self.page)
@@ -26,7 +25,8 @@ class ChartService:
     @api.operation
     def get_top_tracks(self) -> ChartTopTracks:
         """
-        Get the top tracks chart
+        Get the top tracks chart.
+
         :returns: ChartTopTracks
         """
         return dict(limit=self.limit, page=self.page)
@@ -34,7 +34,8 @@ class ChartService:
     @api.operation
     def get_top_tags(self) -> ChartTopTags:
         """
-        Get the top tags chart
+        Get the top tags chart.
+
         :returns: ChartTopTags
         """
         return dict(limit=self.limit, page=self.page)
