@@ -1,4 +1,5 @@
-from pydrag.lastfm.models import (
+from pydrag.core import BaseModel
+from pydrag.lastfm.models.artist import (
     ArtistCorrection,
     ArtistInfo,
     ArtistSearch,
@@ -6,9 +7,8 @@ from pydrag.lastfm.models import (
     ArtistTags,
     ArtistTopTags,
     ArtistTopTracks,
-    BaseModel,
 )
-from pydrag.lastfm.services import ArtistService
+from pydrag.lastfm.services.artist import ArtistService
 from pydrag.lastfm.services.test import MethodTestCase, fixture
 
 

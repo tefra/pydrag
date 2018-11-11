@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "84758672d0d66a3b88fd454c91638585c8d7b474bb81de22192593b11938fc3f"
+            "sha256": "3346d39fb1673ed870c09b4fb12a5964db88cd1e817107206473b6e6f4f2bee4"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -195,6 +195,10 @@
             ],
             "index": "pypi",
             "version": "==4.5.1"
+        },
+        "e1839a8": {
+            "editable": true,
+            "path": "."
         },
         "flake8": {
             "hashes": [

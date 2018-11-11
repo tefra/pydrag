@@ -1,14 +1,10 @@
 from typing import List
 
 from attr import attrs
-from pydrag.lastfm.models import (
-    Artist,
-    Attributes,
-    BaseModel,
-    TagInfo,
-    Track,
-    mattrib,
-)
+
+from pydrag.core import BaseModel, mattrib
+from pydrag.lastfm.models.common import Artist, Attributes, Track
+from pydrag.lastfm.models.tag import TagInfo
 
 
 @attrs(auto_attribs=True)

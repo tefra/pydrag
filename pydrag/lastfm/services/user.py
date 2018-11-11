@@ -1,5 +1,5 @@
 from pydrag.lastfm import api
-from pydrag.lastfm.models import (
+from pydrag.lastfm.models.user import (
     UserArtistTracks,
     UserFriends,
     UserInfo,

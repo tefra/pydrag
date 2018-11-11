@@ -1,8 +1,8 @@
 from typing import List
 
+from pydrag.core import BaseModel
 from pydrag.lastfm import POST, api
-from pydrag.lastfm.models import (
-    BaseModel,
+from pydrag.lastfm.models.track import (
     ScrobbleTrack,
     TrackCorrection,
     TrackInfo,

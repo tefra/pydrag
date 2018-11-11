@@ -1,4 +1,4 @@
-from pydrag.lastfm.models import (
+from pydrag.lastfm.models.tag import (
     TagInfo,
     TagSimilar,
     TagTopAlbums,
@@ -7,7 +7,7 @@ from pydrag.lastfm.models import (
     TagTopTracks,
     TagWeeklyChartList,
 )
-from pydrag.lastfm.services import TagService
+from pydrag.lastfm.services.tag import TagService
 from pydrag.lastfm.services.test import MethodTestCase, fixture
 
 
@@ -111,14 +111,14 @@ class TagServiceTests(MethodTestCase):
 
     @fixture.use_cassette(path="tag/get_top_tags")
     def test_get_top_tags(self):
-        result = self.tag.get_top_tags(page=2, limit=2)
+        result = self.tag.get_top_tags(page=3, limit=10)
         actual = result.to_dict()
         response = result.response.json()
 
         self.assertEqual("Tag", result.namespace)
         self.assertEqual("get_top_tags", result.method)
-        self.assertEqual({"num_res": "2", "offset": "2"}, result.params)
-        self.assertEqual(2, len(result.tag))
+        self.assertEqual({"num_res": "10", "offset": "20"}, result.params)
+        self.assertEqual(10, len(result.tag))
         self.assertIsInstance(result, TagTopTags)
         self.assertDictEqual(response["toptags"], actual)
 

@@ -1,18 +1,18 @@
 from typing import List
 
 from attr import attrs
-from lastfm.models import OpenSearch
-from pydrag.lastfm.models import (
-    AlbumInfo,
+
+from pydrag.core import BaseModel, mattrib
+from pydrag.lastfm.models.album import AlbumInfo
+from pydrag.lastfm.models.common import (
     Artist,
     Attributes,
-    BaseModel,
+    OpenSearch,
     Tags,
     TagsAttr,
     TracksAttr,
     TrackSimpleArtist,
     Wiki,
-    mattrib,
 )
 
 

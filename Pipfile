@@ -12,6 +12,7 @@ codecov = "*"
 pytest = "*"
 pytest-cov = "*"
 vcrpy = "*"
+"e1839a8" = {path = "."}
 
 [packages]
 "e1839a8" = {path = ".", editable = true}

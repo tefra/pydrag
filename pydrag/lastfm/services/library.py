@@ -1,5 +1,5 @@
 from pydrag.lastfm import api
-from pydrag.lastfm.models import UserFriends
+from pydrag.lastfm.models.library import LibraryArtists
 
 
 class LibraryService:
@@ -13,7 +13,7 @@ class LibraryService:
         self.user = user
 
     @api.operation
-    def get_artists(self, limit: int = 50, page: int = 1) -> UserFriends:
+    def get_artists(self, limit: int = 50, page: int = 1) -> LibraryArtists:
         """
         :param page: The page number to fetch. Defaults to first page.
         :param limit: The number of results to fetch per page. Defaults to 50.

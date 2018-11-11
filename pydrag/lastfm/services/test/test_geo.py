@@ -1,5 +1,5 @@
-from pydrag.lastfm.models import GeoTopArtists, GeoTopTracks
-from pydrag.lastfm.services import GeoService
+from pydrag.lastfm.models.geo import GeoTopArtists, GeoTopTracks
+from pydrag.lastfm.services.geo import GeoService
 from pydrag.lastfm.services.test import MethodTestCase, fixture
 
 

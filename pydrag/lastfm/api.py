@@ -1,12 +1,13 @@
 import hashlib
+import inspect
 from functools import partial, wraps
 from typing import Union
 from urllib.parse import urlencode
 
 import requests
-from pydrag import BaseModel
-from pydrag.lastfm import GET, POST, config, md5, models
 from requests import Response
+
+from pydrag.lastfm import GET, POST, config, md5
 
 
 def operation(
@@ -23,10 +24,12 @@ def operation(
 
     @wraps(func)
     def wrapper(obj, *args, **kwargs):
+        func(obj, *args, **kwargs) or dict()
         return Request(
             namespace=obj.__class__.__name__.replace("Service", ""),
             method=func.__name__,
             http_method=method,
+            clazzz=inspect.signature(func).return_annotation,
             signed=signed,
             auth=auth,
             stateful=stateful,
@@ -41,6 +44,7 @@ class Request:
         self,
         namespace: str,
         method: str,
+        clazzz: object,
         http_method: str,
         signed: bool,
         auth: bool,
@@ -49,6 +53,7 @@ class Request:
     ):
         self.namespace = namespace
         self.method = method
+        self.clazzz = clazzz
         self.http_method = http_method
         self.signed = signed
         self.auth = auth
@@ -56,7 +61,7 @@ class Request:
         self.params = dict((k, v) for k, v in params.items() if v is not None)
 
         if stateful and "sk" not in params:
-            from pydrag.lastfm.services import AuthService
+            from pydrag.lastfm.services.auth import AuthService
 
             self.params["sk"] = AuthService().get_mobile_session().key
 
@@ -82,7 +87,6 @@ class Request:
         return res
 
     def perform(self):
-        global response
         url = config.api_root_url
         params = self.get_request_params()
 
@@ -111,34 +115,24 @@ class Request:
     def bind(self, resp: Response, body: Union[dict, list, None]):
         assert isinstance(body, dict)
 
-        if not body:
-            obj = BaseModel()
-        else:
-            klass = self.get_klass()
+        if body:
             data = body.get(next(iter(body.keys())))
             if isinstance(data, dict):
-                obj = klass.from_dict(data)
+                obj = self.clazzz.from_dict(data)
             else:
-                obj = klass(data)
+                obj = self.clazzz(data)
+        else:
+            obj = self.clazzz()
 
         obj.response = resp
         obj.namespace = self.namespace
         obj.method = self.method
         obj.params = self.params
+        obj.signed = self.signed
+        obj.auth = self.auth
+        obj.stateful = self.stateful
+        obj.http_method = self.http_method
         return obj
-
-    def get_klass(self):
-        replace = (("_", " "), ("add", ""), ("get", ""))
-        model_class = self.method
-        for s, r in replace:
-            model_class = model_class.replace(s, r)
-
-        model_class = "".join(
-            x for x in model_class.title() if not x.isspace()
-        )
-        if not model_class.startswith(self.namespace.title()):
-            model_class = "{}{}".format(self.namespace.title(), model_class)
-        return getattr(models, model_class)
 
     @staticmethod
     def sign(params):

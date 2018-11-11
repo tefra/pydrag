@@ -1,9 +1,10 @@
 from typing import List
 
 from attr import attrs
-from pydrag.lastfm.models import (
+
+from pydrag.core import BaseModel
+from pydrag.lastfm.models.common import (
     Album,
-    BaseModel,
     OpenSearch,
     Tags,
     TagsAttr,

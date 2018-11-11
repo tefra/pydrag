@@ -1,7 +1,9 @@
 from typing import List
 
 from attr import attrs
-from pydrag.lastfm.models import Artist, Attributes, BaseModel, mattrib
+
+from pydrag.core import BaseModel, mattrib
+from pydrag.lastfm.models.common import Artist, Attributes
 
 
 @attrs(auto_attribs=True)

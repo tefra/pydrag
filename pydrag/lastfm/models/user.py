@@ -1,18 +1,19 @@
 from typing import List
 
 from attr import attrs
-from pydrag.lastfm.models import (
+
+from pydrag.core import BaseModel, mattrib
+from pydrag.lastfm.core import PaginatedModel
+from pydrag.lastfm.models.common import (
     Album,
     Artist,
     Attributes,
-    BaseModel,
     Chart,
     Date,
     DateUTS,
     Image,
     Tag,
     Track,
-    mattrib,
 )
 
 
@@ -86,7 +87,7 @@ class UserWeeklyAlbumChart(UserTopAlbums):
 
 
 @attrs(auto_attribs=True)
-class UserPersonalTagsArtists(BaseModel):
+class UserPersonalTagsArtists(PaginatedModel):
     artist: List[Artist]
 
 
@@ -107,7 +108,7 @@ class UserTopTags(BaseModel):
 
 
 @attrs(auto_attribs=True)
-class UserPersonalTagsTracks(BaseModel):
+class UserPersonalTagsTracks(PaginatedModel):
     track: List[Track]
 
 

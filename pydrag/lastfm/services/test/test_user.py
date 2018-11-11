@@ -1,4 +1,4 @@
-from pydrag.lastfm.models import (
+from pydrag.lastfm.models.user import (
     UserArtistTracks,
     UserFriends,
     UserInfo,
@@ -14,8 +14,8 @@ from pydrag.lastfm.models import (
     UserWeeklyChartList,
     UserWeeklyTrackChart,
 )
-from pydrag.lastfm.services import UserService
 from pydrag.lastfm.services.test import MethodTestCase, fixture
+from pydrag.lastfm.services.user import UserService
 
 
 class UserServiceTests(MethodTestCase):

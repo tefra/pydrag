@@ -1,4 +1,4 @@
-from setuptools import find_packages, setup
+from setuptools import setup
 
 classifiers = [
     "Intended Audience :: Developers",
@@ -27,8 +27,8 @@ if __name__ == "__main__":
 
     setup(
         name="pydrag",
-        packages=find_packages("pydrag"),
-        package_dir={"": "pydrag"},
+        packages=["pydrag"],
+        package_dir={"pydrag": "pydrag"},
         install_requires=install_requires,
         author="Christodoulos Tsoulloftas",
         author_email="chris@komposta.net",

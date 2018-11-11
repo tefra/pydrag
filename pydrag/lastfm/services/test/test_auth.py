@@ -1,5 +1,5 @@
-from pydrag.lastfm.models import AuthMobileSession, AuthSession, AuthToken
-from pydrag.lastfm.services import AuthService
+from pydrag.lastfm.models.auth import AuthMobileSession, AuthSession, AuthToken
+from pydrag.lastfm.services.auth import AuthService
 from pydrag.lastfm.services.test import MethodTestCase, fixture
 
 

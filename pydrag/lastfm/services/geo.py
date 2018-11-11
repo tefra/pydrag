@@ -1,5 +1,5 @@
 from pydrag.lastfm import api
-from pydrag.lastfm.models import GeoTopArtists, GeoTopTracks
+from pydrag.lastfm.models.geo import GeoTopArtists, GeoTopTracks
 
 
 class GeoService:

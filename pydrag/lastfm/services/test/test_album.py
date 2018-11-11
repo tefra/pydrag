@@ -1,11 +1,11 @@
-from pydrag.lastfm.models import (
+from pydrag.core import BaseModel
+from pydrag.lastfm.models.album import (
     AlbumInfo,
     AlbumSearch,
     AlbumTags,
     AlbumTopTags,
-    BaseModel,
 )
-from pydrag.lastfm.services import AlbumService
+from pydrag.lastfm.services.album import AlbumService
 from pydrag.lastfm.services.test import MethodTestCase, fixture
 
 

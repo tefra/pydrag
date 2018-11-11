@@ -1,6 +1,7 @@
 from pydrag.lastfm import api
-from pydrag.lastfm.models import (
+from pydrag.lastfm.models.tag import (
     TagInfo,
+    TagSimilar,
     TagTopAlbums,
     TagTopArtists,
     TagTopTags,
@@ -30,7 +31,7 @@ class TagService:
         return dict(tag=self.tag, lang=lang)
 
     @api.operation
-    def get_similar(self) -> TagInfo:
+    def get_similar(self) -> TagSimilar:
         """
         Search for tags similar to this one. Returns tags ranked by similarity,
         based on listening data.
@@ -86,7 +87,7 @@ class TagService:
         :param page: The page number to fetch. Defaults to first page.
         :returns: TagTopTags
         """
-        return dict(num_res=limit, offset=(page - 1) * page)
+        return dict(num_res=limit, offset=((page - 1) * limit))
 
     @api.operation
     def get_weekly_chart_list(self) -> TagWeeklyChartList:

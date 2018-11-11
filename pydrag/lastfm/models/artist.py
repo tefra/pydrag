@@ -1,16 +1,16 @@
 from typing import List
 
 from attr import attrs
-from pydrag.lastfm.models import (
+
+from pydrag.core import BaseModel, mattrib
+from pydrag.lastfm.models.common import (
     Artist,
     Attributes,
-    BaseModel,
     Query,
     Tags,
     TagsAttr,
     Track,
     Wiki,
-    mattrib,
 )
 
 

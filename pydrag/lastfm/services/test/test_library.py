@@ -1,5 +1,5 @@
-from pydrag.lastfm.models import LibraryArtists
-from pydrag.lastfm.services import LibraryService
+from pydrag.lastfm.models.library import LibraryArtists
+from pydrag.lastfm.services.library import LibraryService
 from pydrag.lastfm.services.test import MethodTestCase, fixture
 
 

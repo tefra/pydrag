@@ -1,5 +1,9 @@
 from pydrag.lastfm import api
-from pydrag.lastfm.models import ChartTopArtists, ChartTopTags, ChartTopTracks
+from pydrag.lastfm.models.chart import (
+    ChartTopArtists,
+    ChartTopTags,
+    ChartTopTracks,
+)
 
 
 class ChartService:

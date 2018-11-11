@@ -1,8 +1,8 @@
 import time
 from datetime import datetime, timedelta
 
-from pydrag.lastfm.models import (
-    BaseModel,
+from pydrag.core import BaseModel
+from pydrag.lastfm.models.track import (
     ScrobbleTrack,
     TrackCorrection,
     TrackInfo,
@@ -13,8 +13,8 @@ from pydrag.lastfm.models import (
     TrackTopTags,
     TrackUpdateNowPlaying,
 )
-from pydrag.lastfm.services import TrackService
 from pydrag.lastfm.services.test import MethodTestCase, fixture
+from pydrag.lastfm.services.track import TrackService
 
 
 class TrackServiceTests(MethodTestCase):
