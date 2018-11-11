@@ -1,7 +1,6 @@
 from urllib.parse import urlencode
 
 from attr import attrs
-
 from pydrag.lastfm import config
 from pydrag.lastfm.models import BaseModel
 

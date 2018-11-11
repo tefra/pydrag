@@ -1,12 +1,12 @@
-from pydrag.lastfm.services import AlbumService
-from pydrag.lastfm.services.test import fixture, MethodTestCase
 from pydrag.lastfm.models import (
-    AlbumTopTags,
     AlbumInfo,
-    AlbumTags,
     AlbumSearch,
+    AlbumTags,
+    AlbumTopTags,
     BaseModel,
 )
+from pydrag.lastfm.services import AlbumService
+from pydrag.lastfm.services.test import MethodTestCase, fixture
 
 
 class AlbumServiceTests(MethodTestCase):

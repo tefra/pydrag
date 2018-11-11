@@ -1,4 +1,10 @@
 from pydrag.lastfm.models import (
+    UserArtistTracks,
+    UserFriends,
+    UserInfo,
+    UserLovedTracks,
+    UserPersonalTags,
+    UserRecentTracks,
     UserTopAlbums,
     UserTopArtists,
     UserTopTags,
@@ -7,12 +13,6 @@ from pydrag.lastfm.models import (
     UserWeeklyArtistChart,
     UserWeeklyChartList,
     UserWeeklyTrackChart,
-    UserPersonalTags,
-    UserRecentTracks,
-    UserFriends,
-    UserInfo,
-    UserLovedTracks,
-    UserArtistTracks,
 )
 from pydrag.lastfm.services import UserService
 from pydrag.lastfm.services.test import MethodTestCase, fixture

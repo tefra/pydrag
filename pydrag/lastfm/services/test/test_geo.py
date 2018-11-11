@@ -1,6 +1,6 @@
-from pydrag.lastfm.services.test import MethodTestCase, fixture
-from pydrag.lastfm.services import GeoService
 from pydrag.lastfm.models import GeoTopArtists, GeoTopTracks
+from pydrag.lastfm.services import GeoService
+from pydrag.lastfm.services.test import MethodTestCase, fixture
 
 
 class GeoServiceTests(MethodTestCase):

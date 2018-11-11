@@ -1,15 +1,14 @@
 from typing import List
 
 from attr import attrs
-
 from pydrag.lastfm.models import (
-    BaseModel,
     Album,
-    Wiki,
-    Tags,
-    Tracks,
-    TagsAttr,
+    BaseModel,
     OpenSearch,
+    Tags,
+    TagsAttr,
+    Tracks,
+    Wiki,
 )
 
 

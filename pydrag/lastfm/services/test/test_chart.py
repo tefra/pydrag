@@ -1,6 +1,6 @@
+from pydrag.lastfm.models import ChartTopArtists, ChartTopTags, ChartTopTracks
 from pydrag.lastfm.services import ChartService
 from pydrag.lastfm.services.test import MethodTestCase, fixture
-from pydrag.lastfm.models import ChartTopArtists, ChartTopTracks, ChartTopTags
 
 
 class ChartServiceTests(MethodTestCase):

@@ -1,6 +1,6 @@
-from pydrag.lastfm.api import POST
 from pydrag.lastfm import api
-from pydrag.lastfm.models.auth import AuthToken, AuthMobileSession, AuthSession
+from pydrag.lastfm.api import POST
+from pydrag.lastfm.models.auth import AuthMobileSession, AuthSession, AuthToken
 
 
 class AuthService:

@@ -1,16 +1,16 @@
 from typing import List
 
-from pydrag.lastfm import api, POST
+from pydrag.lastfm import POST, api
 from pydrag.lastfm.models import (
-    TrackInfo,
-    TrackTopTags,
-    TrackTags,
-    TrackSearch,
-    TrackCorrection,
-    TrackSimilar,
     BaseModel,
     ScrobbleTrack,
+    TrackCorrection,
+    TrackInfo,
     TrackScrobble,
+    TrackSearch,
+    TrackSimilar,
+    TrackTags,
+    TrackTopTags,
     TrackUpdateNowPlaying,
 )
 

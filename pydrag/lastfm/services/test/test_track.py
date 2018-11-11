@@ -3,18 +3,18 @@ from datetime import datetime, timedelta
 
 from pydrag.lastfm.models import (
     BaseModel,
-    TrackTags,
-    TrackInfo,
-    TrackTopTags,
-    TrackSearch,
-    TrackCorrection,
-    TrackSimilar,
-    TrackUpdateNowPlaying,
     ScrobbleTrack,
+    TrackCorrection,
+    TrackInfo,
     TrackScrobble,
+    TrackSearch,
+    TrackSimilar,
+    TrackTags,
+    TrackTopTags,
+    TrackUpdateNowPlaying,
 )
 from pydrag.lastfm.services import TrackService
-from pydrag.lastfm.services.test import fixture, MethodTestCase
+from pydrag.lastfm.services.test import MethodTestCase, fixture
 
 
 class TrackServiceTests(MethodTestCase):

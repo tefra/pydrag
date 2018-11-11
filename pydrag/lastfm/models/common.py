@@ -1,7 +1,6 @@
 from typing import List
 
 from attr import attrs
-
 from pydrag.lastfm.models import BaseModel, mattrib
 
 

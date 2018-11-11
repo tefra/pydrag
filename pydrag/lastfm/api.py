@@ -4,11 +4,9 @@ from typing import Union
 from urllib.parse import urlencode
 
 import requests
-from requests import Response
-
-from pydrag.lastfm import md5
 from pydrag import BaseModel
-from pydrag.lastfm import config, models, GET, POST
+from pydrag.lastfm import GET, POST, config, md5, models
+from requests import Response
 
 
 def operation(

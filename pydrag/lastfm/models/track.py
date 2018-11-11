@@ -1,18 +1,17 @@
 from typing import List
 
 from attr import attrs
-
 from lastfm.models import OpenSearch
 from pydrag.lastfm.models import (
-    Attributes,
-    Wiki,
-    Tags,
-    TagsAttr,
     AlbumInfo,
     Artist,
-    TrackSimpleArtist,
-    TracksAttr,
+    Attributes,
     BaseModel,
+    Tags,
+    TagsAttr,
+    TracksAttr,
+    TrackSimpleArtist,
+    Wiki,
     mattrib,
 )
 

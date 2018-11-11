@@ -1,11 +1,11 @@
 from typing import List
 
-from pydrag.lastfm import api, POST
+from pydrag.lastfm import POST, api
 from pydrag.lastfm.models import (
     AlbumInfo,
-    AlbumTopTags,
-    AlbumTags,
     AlbumSearch,
+    AlbumTags,
+    AlbumTopTags,
     BaseModel,
 )
 
