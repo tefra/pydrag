@@ -1,4 +1,4 @@
-from pyfm.lastfm.models import (
+from pydrag.lastfm.models import (
     UserTopAlbums,
     UserTopArtists,
     UserTopTags,
@@ -14,8 +14,8 @@ from pyfm.lastfm.models import (
     UserLovedTracks,
     UserArtistTracks,
 )
-from pyfm.lastfm.services import UserService
-from pyfm.lastfm.services.test import MethodTestCase, fixture
+from pydrag.lastfm.services import UserService
+from pydrag.lastfm.services.test import MethodTestCase, fixture
 
 
 class UserServiceTests(MethodTestCase):

@@ -2,7 +2,7 @@ from typing import List
 
 from attr import attrs
 
-from pyfm.lastfm.models import (
+from pydrag.lastfm.models import (
     Attributes,
     Artist,
     Track,

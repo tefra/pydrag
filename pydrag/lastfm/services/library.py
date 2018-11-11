@@ -1,5 +1,5 @@
-from pyfm.lastfm import api
-from pyfm.lastfm.models import UserFriends
+from pydrag.lastfm import api
+from pydrag.lastfm.models import UserFriends
 
 
 class LibraryService:

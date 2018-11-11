@@ -1,4 +1,4 @@
-from pyfm.lastfm.models import (
+from pydrag.lastfm.models import (
     TagInfo,
     TagSimilar,
     TagTopAlbums,
@@ -7,8 +7,8 @@ from pyfm.lastfm.models import (
     TagTopTracks,
     TagWeeklyChartList,
 )
-from pyfm.lastfm.services import TagService
-from pyfm.lastfm.services.test import MethodTestCase, fixture
+from pydrag.lastfm.services import TagService
+from pydrag.lastfm.services.test import MethodTestCase, fixture
 
 
 class TagServiceTests(MethodTestCase):

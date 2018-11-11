@@ -6,9 +6,9 @@ from urllib.parse import urlencode
 import requests
 from requests import Response
 
-from pyfm.lastfm import md5
-from pyfm import BaseModel
-from pyfm.lastfm import config, models, GET, POST
+from pydrag.lastfm import md5
+from pydrag import BaseModel
+from pydrag.lastfm import config, models, GET, POST
 
 
 def operation(
@@ -58,7 +58,7 @@ class Request:
         self.params = dict((k, v) for k, v in params.items() if v is not None)
 
         if stateful and "sk" not in params:
-            from pyfm.lastfm.services import AuthService
+            from pydrag.lastfm.services import AuthService
 
             self.params["sk"] = AuthService().get_mobile_session().key
 

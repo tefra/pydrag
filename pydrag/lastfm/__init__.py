@@ -2,7 +2,7 @@ import os
 
 from attr import attrs, attrib
 
-from pyfm.lastfm.utils import md5
+from pydrag.lastfm.utils import md5
 
 
 @attrs(auto_attribs=True, frozen=True)

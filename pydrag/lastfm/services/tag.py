@@ -1,5 +1,5 @@
-from pyfm.lastfm import api
-from pyfm.lastfm.models import (
+from pydrag.lastfm import api
+from pydrag.lastfm.models import (
     TagInfo,
     TagTopAlbums,
     TagTopArtists,

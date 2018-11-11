@@ -2,8 +2,8 @@ from urllib.parse import urlencode
 
 from attr import attrs
 
-from pyfm.lastfm import config
-from pyfm.lastfm.models import BaseModel
+from pydrag.lastfm import config
+from pydrag.lastfm.models import BaseModel
 
 
 @attrs(auto_attribs=True)

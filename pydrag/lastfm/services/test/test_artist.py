@@ -1,6 +1,6 @@
-from pyfm.lastfm.services import ArtistService
-from pyfm.lastfm.services.test import fixture, MethodTestCase
-from pyfm.lastfm.models import (
+from pydrag.lastfm.services import ArtistService
+from pydrag.lastfm.services.test import fixture, MethodTestCase
+from pydrag.lastfm.models import (
     BaseModel,
     ArtistTags,
     ArtistInfo,

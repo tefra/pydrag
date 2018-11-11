@@ -1,6 +1,6 @@
-from pyfm.lastfm.services import LibraryService
-from pyfm.lastfm.models import LibraryArtists
-from pyfm.lastfm.services.test import fixture, MethodTestCase
+from pydrag.lastfm.services import LibraryService
+from pydrag.lastfm.models import LibraryArtists
+from pydrag.lastfm.services.test import fixture, MethodTestCase
 
 
 class LibraryServiceTests(MethodTestCase):

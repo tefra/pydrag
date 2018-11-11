@@ -2,7 +2,7 @@ from typing import List
 
 from attr import attrs
 
-from pyfm.lastfm.models import BaseModel, mattrib
+from pydrag.lastfm.models import BaseModel, mattrib
 
 
 @attrs(auto_attribs=True)
