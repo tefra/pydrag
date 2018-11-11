@@ -26,7 +26,6 @@ class AuthService:
         Create a web service session for a user. Used for authenticating a user
         when the password can be inputted by the user. Accepts email address
         as well, so please use the username supplied in the output.
-        :param str token:
         :returns: AuthMobileSession
         """
         return None

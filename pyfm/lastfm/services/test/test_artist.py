@@ -143,6 +143,8 @@ class ArtistServiceTests(MethodTestCase):
                 "artist": "Guns N' Roses",
                 "autocorrect": True,
                 "mbid": "eeb1195b-f213-4ce1-b28c-8565211f8e43",
+                "page": 1,
+                "limit": 50,
             },
             result.params,
         )

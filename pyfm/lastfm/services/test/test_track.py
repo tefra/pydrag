@@ -202,8 +202,8 @@ class TrackServiceTests(MethodTestCase):
         tracks = []
         date = datetime(year=2018, month=11, day=10, hour=21, minute=30)
         for artist, track in entries:
-            next = date + timedelta(minutes=5)
-            timestamp = int(time.mktime(next.timetuple()))
+            _next = date + timedelta(minutes=5)
+            timestamp = int(time.mktime(_next.timetuple()))
             tracks.append(
                 ScrobbleTrack(artist=artist, track=track, timestamp=timestamp)
             )

@@ -1,8 +1,10 @@
 import hashlib
 from functools import partial, wraps
+from typing import Union
 from urllib.parse import urlencode
 
 import requests
+from requests import Response
 
 from pyfm.lastfm import md5
 from pyfm import BaseModel
@@ -82,6 +84,7 @@ class Request:
         return res
 
     def perform(self):
+        global response
         url = config.api_root_url
         params = self.get_request_params()
 
@@ -107,7 +110,7 @@ class Request:
         body = response.json()
         return self.bind(response, body)
 
-    def bind(self, response, body):
+    def bind(self, resp: Response, body: Union[dict, list, None]):
         assert isinstance(body, dict)
 
         if not body:
@@ -120,7 +123,7 @@ class Request:
             else:
                 obj = klass(data)
 
-        obj.response = response
+        obj.response = resp
         obj.namespace = self.namespace
         obj.method = self.method
         obj.params = self.params
@@ -139,11 +142,11 @@ class Request:
             model_class = "{}{}".format(self.namespace.title(), model_class)
         return getattr(models, model_class)
 
-    def sign(self, params):
+    @staticmethod
+    def sign(params):
         keys = sorted(params.keys())
         keys.remove("format")
 
         signature = [str(k) + str(params[k]) for k in keys if params.get(k)]
         signature.append(str(config.api_secret))
-        bytes = "".join(signature).encode("utf-8")
-        return hashlib.md5(bytes).hexdigest()
+        return hashlib.md5("".join(signature).encode("utf-8")).hexdigest()

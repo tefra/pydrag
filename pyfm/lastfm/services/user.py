@@ -146,7 +146,7 @@ class UserService:
         self, period: str, limit: int = 50, page: int = 1
     ) -> UserTopAlbums:
         """
-        :param period: overall | 7day | 1month | 3month | 6month | 12month - The time period over which to retrieve top albums for.
+        :param period: overall | 7day | 1month | 3month | 6month | 12month
         :param limit: The number of results to fetch per page. Defaults to 50.
         :param page: The page number to fetch. Defaults to first page.
         :returns: UserTopAlbums
@@ -158,7 +158,7 @@ class UserService:
         self, period: str, limit: int = 50, page: int = 1
     ) -> UserTopArtists:
         """
-        :param period: overall | 7day | 1month | 3month | 6month | 12month - The time period over which to retrieve top artists for.
+        :param period: overall | 7day | 1month | 3month | 6month | 12month
         :param limit: The number of results to fetch per page. Defaults to 50.
         :param page: The page number to fetch. Defaults to first page.
         :returns: UserTopArtists
@@ -178,7 +178,7 @@ class UserService:
         self, period: str, limit: int = 50, page: int = 1
     ) -> UserTopTracks:
         """
-        :param period: overall | 7day | 1month | 3month | 6month | 12month - The time period over which to retrieve top tracks for.
+        :param period: overall | 7day | 1month | 3month | 6month | 12month
         :param limit: The number of results to fetch per page. Defaults to 50.
         :param page: The page number to fetch. Defaults to first page.
         :returns: UserTopTracks
@@ -190,8 +190,8 @@ class UserService:
         self, from_date: str = None, to_date: str = None
     ) -> UserWeeklyAlbumChart:
         """
-        :param from_date:  The date at which the chart should start from. See User.getWeeklyChartList for more.
-        :param to_date: The date at which the chart should end on. See User.getWeeklyChartList for more.
+        :param from_date:  The date at which the chart should start from.
+        :param to_date: The date at which the chart should end on.
         :returns: UserWeeklyAlbumChart
         """
         return {"user": self.user, "from": from_date, "to": to_date}
@@ -201,8 +201,8 @@ class UserService:
         self, from_date: str = None, to_date: str = None
     ) -> UserWeeklyArtistChart:
         """
-        :param from_date:  The date at which the chart should start from. See User.getWeeklyChartList for more.
-        :param to_date: The date at which the chart should end on. See User.getWeeklyChartList for more.
+        :param from_date:  The date at which the chart should start from.
+        :param to_date: The date at which the chart should end on.
         :returns: UserWeeklyArtistChart
         """
         return {"user": self.user, "from": from_date, "to": to_date}
@@ -219,8 +219,8 @@ class UserService:
         self, from_date: str = None, to_date: str = None
     ) -> UserWeeklyTrackChart:
         """
-        :param from_date:  The date at which the chart should start from. See User.getWeeklyChartList for more.
-        :param to_date: The date at which the chart should end on. See User.getWeeklyChartList for more.
+        :param from_date:  The date at which the chart should start from.
+        :param to_date: The date at which the chart should end on.
         :returns: UserWeeklyTrackChart
         """
         return {"user": self.user, "from": from_date, "to": to_date}

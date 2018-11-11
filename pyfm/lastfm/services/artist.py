@@ -30,7 +30,8 @@ class ArtistService:
     def add_tags(self, tags: List[str]) -> BaseModel:
         """
         Tag an artist with one or more user supplied tags.
-        :param tags: A list of user supplied tags to apply to this artist. Accepts a maximum of 10 tags.
+        :param tags: A list of user supplied tags to apply to this artist.
+        Accepts a maximum of 10 tags.
         :returns: BaseModel
         """
         assert self.artist is not None
@@ -51,10 +52,12 @@ class ArtistService:
         self, autocorrect: bool = True, user: str = None, lang: str = "en"
     ) -> ArtistInfo:
         """
-        Get the metadata for an artist. Includes biography, truncated at 300 characters.
+        Get the metadata for an artist. Includes biography, truncated at
+        300 characters.
         :param autocorrect: If enabled auto correct misspelled names
-        :param user: The username for the context of the request. If supplied, the user's playcount for this artist is included in the response.
-        :param lang: The language to return the biography in, expressed as an ISO 639 alpha-2 code.
+        :param user: The username for the context of the request.
+        If supplied, response will include the user's playcount
+        :param lang: The language to return the biography in, ISO-639
         :returns: ArtistInfo
         """
 
@@ -70,7 +73,8 @@ class ArtistService:
     @api.operation
     def get_correction(self) -> ArtistCorrection:
         """
-        Use the last.fm corrections data to check whether the supplied artist has a correction to a canonical artist
+        Use the last.fm corrections data to check whether the supplied
+        artist has a correction to a canonical artist
         :returns: ArtistCorrection
         """
         assert self.artist is not None
@@ -97,7 +101,8 @@ class ArtistService:
     @api.operation
     def get_tags(self, user: str, autocorrect: bool = True) -> ArtistTags:
         """
-        GGet the tags applied by an individual user to an artist on Last.fm
+        Get the tags applied by an individual user to an artist on Last.fm
+        :param user: The username for the context of the request.
         :param autocorrect: If enabled auto correct misspelled names
         :returns: ArtistTags
         """
@@ -134,7 +139,11 @@ class ArtistService:
         """
         self.assert_mbid_or_artist()
         return dict(
-            mbid=self.mbid, artist=self.artist, autocorrect=autocorrect
+            mbid=self.mbid,
+            artist=self.artist,
+            autocorrect=autocorrect,
+            limit=limit,
+            page=page,
         )
 
     @api.operation

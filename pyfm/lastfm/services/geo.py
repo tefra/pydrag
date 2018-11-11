@@ -9,7 +9,7 @@ class GeoService:
 
     def __init__(self, country: str):
         """
-        :param str country:  A country name, as defined by the ISO 3166-1 country names standard
+        :param str country:  A country name, as defined by the ISO 3166-1
         """
         self.country = country
 

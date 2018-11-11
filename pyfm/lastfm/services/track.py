@@ -35,7 +35,8 @@ class TrackService:
     def add_tags(self, tags: List[str]) -> BaseModel:
         """
         Tag an track with one or more user supplied tags.
-        :param tags: A list of user supplied tags to apply to this track. Accepts a maximum of 10 tags.
+        :param tags: A list of user supplied tags to apply to this track.
+        Accepts a maximum of 10 tags.
         :returns: BaseModel
         """
         assert self.track is not None
@@ -56,10 +57,11 @@ class TrackService:
         self, autocorrect: bool = True, user: str = None, lang: str = "en"
     ) -> TrackInfo:
         """
-        Get the metadata for a track on Last.fm using the artist/track name or a musicbrainz id.
+        Get the metadata for a track on Last.fm
         :param autocorrect: If enabled auto correct misspelled names
-        :param user: The username for the context of the request. If supplied, the user's playcount for this track is included in the response.
-        :param lang: The language to return the biography in, expressed as an ISO 639 alpha-2 code.
+        :param user: The username for the context of the request.
+         If supplied, response will include the user's playcount for this track
+        :param lang: The language to return the biography in, ISO 639
         :returns: TrackInfo
         """
 
@@ -76,7 +78,8 @@ class TrackService:
     @api.operation
     def get_correction(self) -> TrackCorrection:
         """
-        Use the last.fm corrections data to check whether the supplied track has a correction to a canonical track
+        Use the last.fm corrections data to check whether the supplied track
+        has a correction to a canonical track
         :returns: TrackCorrection
         """
         self.assert_mbid_or_track_and_artist()
@@ -104,7 +107,8 @@ class TrackService:
     @api.operation
     def get_tags(self, user: str, autocorrect: bool = True) -> TrackTags:
         """
-        GGet the tags applied by an individual user to an track on Last.fm
+        Get the tags applied by an individual user to an track on Last.fm
+        :param user: The username for the context of the request.
         :param autocorrect: If enabled auto correct misspelled names
         :returns: TrackTags
         """
@@ -217,9 +221,9 @@ class TrackService:
         """
         :param album: The album name
         :param track_number: The track number of the track on the album
-        :param context: Sub-client version (not public, only enabled for certain API keys)
+        :param context: Sub-client version (not public)
         :param duration: The length of the track in seconds
-        :param album_artist: The album artist - if this differs from the track artist.
+        :param album_artist: The album artist
         :return: BaseModel
         """
         assert self.track and self.artist

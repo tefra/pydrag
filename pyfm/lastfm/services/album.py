@@ -31,7 +31,8 @@ class AlbumService:
     def add_tags(self, tags: List[str]) -> BaseModel:
         """
         Tag an album using a list of user supplied tags.
-        :param tags: A list of user supplied tags to apply to this album. Accepts a maximum of 10 tags.
+        :param tags: A list of user supplied tags to apply to this album.
+         Accepts a maximum of 10 tags.
         :returns: BaseModel
         """
         assert self.artist is not None and self.album is not None
@@ -52,11 +53,12 @@ class AlbumService:
         self, autocorrect: bool = True, user: str = None, lang: str = "en"
     ) -> AlbumInfo:
         """
-        Get the metadata and tracklist for an album on Last.fm using the album name or a musicbrainz id.
+        Get the metadata and tracklist for an album on Last.fm
         :param self:
         :param autocorrect: If enabled auto correct misspelled names
-        :param user: The username for the context of the request. If supplied, the user's playcount for this album is included in the response.
-        :param lang: The language to return the biography in, expressed as an ISO 639 alpha-2 code.
+        :param user: The username for the context of the request.
+        If supplied, response will include the user's playcount for this album
+        :param lang: The language to return the biography in, ISO-639
         :returns: AlbumInfo
         """
 
@@ -73,7 +75,8 @@ class AlbumService:
     @api.operation
     def get_tags(self, user: str, autocorrect: bool = True) -> AlbumTags:
         """
-        Get the tags applied by an individual user to an album on Last.fm. To retrieve the list of top tags applied to an album by all users use album.getTopTags.
+        Get the tags applied by an individual user to an album on Last.fm.
+        :param user: The username for the context of the request.
         :param autocorrect: If enabled auto correct misspelled names
         :returns: AlbumTopTags
         """
@@ -117,11 +120,3 @@ class AlbumService:
         assert self.mbid is not None or (
             self.artist is not None and self.album is not None
         )
-
-
-if __name__ == "__main__":
-    AlbumService(
-        album="A Night at the Opera",
-        artist="Queen",
-        mbid="6defd963-fe91-4550-b18e-82c685603c2b",
-    )

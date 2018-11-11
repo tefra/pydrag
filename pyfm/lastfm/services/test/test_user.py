@@ -221,13 +221,7 @@ class UserServiceTests(MethodTestCase):
         self.assertEqual("User", result.namespace)
         self.assertEqual("get_top_tracks", result.method)
         self.assertEqual(
-            {
-                "limit": "1",
-                "period": "7day",
-                "user": "rj",
-                "page": "1",
-                "limit": "1",
-            },
+            {"period": "7day", "user": "rj", "page": "1", "limit": "1"},
             result.params,
         )
         self.assertGreater(len(result.track), 0)

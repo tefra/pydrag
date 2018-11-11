@@ -6,6 +6,7 @@ import cattr
 from attr import evolve, attrib
 from cattr import unstructure, structure
 from dotenv import load_dotenv
+from requests import Response
 
 load_dotenv()
 
@@ -20,6 +21,12 @@ def mattrib(name, **kwargs):
 
 
 class BaseModel(metaclass=ABCMeta):
+
+    namespace: str = attrib(init=False)
+    method: str = attrib(init=False)
+    params: dict = attrib(init=False)
+    response: Response = attrib(init=False)
+
     def to_dict(self: T) -> Dict:
         return unstructure(self)
 

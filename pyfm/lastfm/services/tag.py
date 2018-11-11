@@ -24,7 +24,7 @@ class TagService:
     def get_info(self, lang: str = None) -> TagInfo:
         """
         Get the metadata for a tag
-        :param lang: The language to return the wiki in, expressed as an ISO 639 alpha-2 code.
+        :param lang: The language to return the wiki in, ISO-639
         :return: TagInfo
         """
         assert self.tag is not None
@@ -33,8 +33,8 @@ class TagService:
     @api.operation
     def get_similar(self) -> TagInfo:
         """
-        Search for tags similar to this one. Returns tags ranked by similarity, based on listening data.
-        :param lang: The language to return the wiki in, expressed as an ISO 639 alpha-2 code.
+        Search for tags similar to this one.
+        Returns tags ranked by similarity, based on listening data.
         :return: TagInfo
         """
         assert self.tag is not None
@@ -76,7 +76,7 @@ class TagService:
     @api.operation
     def get_top_tags(self, limit: int = 50, page: int = 1) -> TagTopTags:
         """
-        Fetches the top global tags on Last.fm, sorted by popularity (number of times used)
+        Fetches the top global tags on Last.fm, sorted by popularity
         Old school pagination on this endpoint, keep uniformity
         :param limit: The number of results to fetch per page. Defaults to 50.
         :param page: The page number to fetch. Defaults to first page.
@@ -87,7 +87,8 @@ class TagService:
     @api.operation
     def get_weekly_chart_list(self) -> TagWeeklyChartList:
         """
-        Get a list of available charts for this tag, expressed as date ranges which can be sent to the chart services.
+        Get a list of available charts for this tag, expressed as
+        date ranges which can be sent to the chart services.
         :return: TagWeeklyChartList
         """
         assert self.tag is not None
