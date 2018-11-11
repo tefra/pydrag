@@ -9,7 +9,7 @@ install:
 
 
 script:
-  - PYTHONPATH=pydrag pipenv run pytest --cov=./
+  - pipenv run pytest --cov=./
 
 after_success:
   - pipenv run codecov
