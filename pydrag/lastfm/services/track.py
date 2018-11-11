@@ -236,9 +236,6 @@ class TrackService:
         """
         assert self.track and self.artist
 
-        if album_artist == self.artist:
-            album_artist = None
-
         return dict(
             artist=self.artist,
             track=self.track,
