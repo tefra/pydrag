@@ -1,23 +1,27 @@
-from pydrag.core import BaseModel
 from pydrag.lastfm.api import Request
 
 
-class PaginatedModel(BaseModel):
-    @property
-    def page(self):
+class PagerMixin:
+    """
+    Pagination mixin to navigate through lists.
+
+    If has next or has prev return true inc/dec the page parameter and
+    make the exact same request that produced the current object. It's
+    important that we copy all the original request parameters from one
+    instance to the next.
+    """
+
+    def get_page(self):
         return getattr(self.attr, "page")
 
-    @property
-    def limit(self):
-        return getattr(self.attr, "perPage")
+    def get_limit(self):
+        return getattr(self.attr, "limit")
 
-    @property
-    def total(self):
+    def get_total(self):
         return getattr(self.attr, "total")
 
-    @property
-    def total_pages(self):
-        return getattr(self.attr, "totalPages")
+    def get_total_pages(self):
+        return getattr(self.attr, "total_pages")
 
     def get_next(self):
         if not self.has_next():
@@ -36,10 +40,12 @@ class PaginatedModel(BaseModel):
         return self._request(params)
 
     def has_next(self):
-        return self.page and self.page < self.total_pages
+        page = self.get_page()
+        return bool(page and page < self.get_total_pages())
 
     def has_prev(self):
-        return self.page and self.page > 1
+        page = self.get_page()
+        return bool(page and page > 1)
 
     def _request(self, params):
         return Request(

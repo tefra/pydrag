@@ -124,3 +124,10 @@ class AlbumServiceTests(MethodTestCase):
         )
         self.assertIsInstance(result, AlbumSearch)
         self.assertDictEqual(response["results"], actual)
+
+        self.assertEqual(1, result.get_page())
+        self.assertEqual(50, result.get_limit())
+        self.assertEqual(661041, result.get_total())
+        self.assertEqual(13221, result.get_total_pages())
+        self.assertFalse(result.has_prev())
+        self.assertTrue(result.has_next())

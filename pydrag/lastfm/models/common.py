@@ -1,8 +1,10 @@
+from math import ceil
 from typing import List
 
 from attr import attrs
 
 from pydrag.core import BaseModel, mattrib
+from pydrag.lastfm.mixins import PagerMixin
 
 
 @attrs(auto_attribs=True)
@@ -34,7 +36,7 @@ class Attributes(BaseModel):
 
 
 @attrs(auto_attribs=True)
-class AttrModel(BaseModel):
+class AttrModel(BaseModel, PagerMixin):
     attr: Attributes = mattrib("@attr")
 
 
@@ -183,7 +185,7 @@ class Tags(BaseModel):
 @attrs(auto_attribs=True)
 class Query(BaseModel):
     role: str
-    start_page: int = mattrib("startPage")
+    page: int = mattrib("startPage")
     text: str = mattrib("#text")
     search_terms: str = mattrib("searchTerms", default=None)
 
@@ -194,3 +196,15 @@ class OpenSearch(AttrModel):
     limit: int = mattrib("opensearch:itemsPerPage")
     offset: int = mattrib("opensearch:startIndex")
     total: int = mattrib("opensearch:totalResults")
+
+    def get_page(self):
+        return self.query.page
+
+    def get_limit(self):
+        return self.limit
+
+    def get_total(self):
+        return self.total
+
+    def get_total_pages(self):
+        return ceil(self.total / self.limit)

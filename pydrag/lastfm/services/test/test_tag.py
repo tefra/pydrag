@@ -86,6 +86,13 @@ class TagServiceTests(MethodTestCase):
         self.assertIsInstance(result, TagTopArtists)
         self.assertDictEqual(response["topartists"], actual)
 
+        self.assertEqual(1, result.get_page())
+        self.assertEqual(2, result.get_limit())
+        self.assertEqual(61526, result.get_total())
+        self.assertEqual(30763, result.get_total_pages())
+        self.assertFalse(result.has_prev())
+        self.assertTrue(result.has_next())
+
     def test_get_top_artists_no_tag(self):
         with self.assertRaises(AssertionError):
             TagService().get_top_artists()

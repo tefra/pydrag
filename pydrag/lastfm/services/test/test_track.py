@@ -130,6 +130,13 @@ class TrackServiceTests(MethodTestCase):
         self.assertIsInstance(result, TrackSearch)
         self.assertDictEqual(response["results"], actual)
 
+        self.assertEqual(4, result.get_page())
+        self.assertEqual(5, result.get_limit())
+        self.assertEqual(1443087, result.get_total())
+        self.assertEqual(288618, result.get_total_pages())
+        self.assertTrue(result.has_prev())
+        self.assertTrue(result.has_next())
+
     @fixture.use_cassette(path="track/get_similar")
     def test_get_similar(self):
         result = self.track.get_similar(True)
