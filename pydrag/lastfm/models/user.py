@@ -3,17 +3,19 @@ from typing import List
 from attr import attrs
 
 from pydrag.core import BaseModel, mattrib
-from pydrag.lastfm.core import PaginatedModel
 from pydrag.lastfm.models.common import (
     Album,
+    Albums,
     Artist,
+    Artists,
     Attributes,
-    Chart,
+    AttrModel,
+    Charts,
     Date,
     DateUTS,
     Image,
-    Tag,
-    Track,
+    Tags,
+    Tracks,
 )
 
 
@@ -44,9 +46,9 @@ class UserInfo(BaseModel):
     age: str
     bootstrap: str
     registered: Date
-    scrobblesource: str = None
-    realname: str = None
-    recenttrack: ArtistTrack = None
+    source: str = mattrib("scrobblesource", default=None)
+    real_name: str = mattrib("realname", default=None)
+    recent_track: ArtistTrack = mattrib("recenttrack", default=None)
 
 
 @attrs(auto_attribs=True)
@@ -56,69 +58,63 @@ class UserFriends(BaseModel):
 
 
 @attrs(auto_attribs=True)
-class UserLovedTracks(BaseModel):
+class UserLovedTracks(AttrModel):
     track: List[ArtistTrack]
-    attr: Attributes = mattrib("@attr")
 
 
-@attrs(auto_attribs=True)
 class UserArtistTracks(UserLovedTracks):
     pass
 
 
-@attrs(auto_attribs=True)
 class UserRecentTracks(UserLovedTracks):
     pass
 
 
-@attrs(auto_attribs=True)
-class UserPersonalTagsAlbums(BaseModel):
-    album: List[Album]
-
-
-@attrs(auto_attribs=True)
-class UserTopAlbums(UserPersonalTagsAlbums):
-    attr: Attributes = mattrib("@attr")
-
-
-@attrs(auto_attribs=True)
-class UserWeeklyAlbumChart(UserTopAlbums):
+class UserPersonalTagsAlbums(Albums):
     pass
 
 
 @attrs(auto_attribs=True)
-class UserPersonalTagsArtists(PaginatedModel):
-    artist: List[Artist]
-
-
-@attrs(auto_attribs=True)
-class UserTopArtists(UserPersonalTagsArtists):
-    attr: Attributes = mattrib("@attr")
-
-
-@attrs(auto_attribs=True)
-class UserWeeklyArtistChart(UserTopArtists):
+class UserTopAlbums(Albums, AttrModel):
     pass
 
 
 @attrs(auto_attribs=True)
-class UserTopTags(BaseModel):
-    tag: List[Tag]
-    attr: Attributes = mattrib("@attr")
+class UserWeeklyAlbumChart(Albums, AttrModel):
+    pass
+
+
+class UserPersonalTagsArtists(Artists):
+    pass
 
 
 @attrs(auto_attribs=True)
-class UserPersonalTagsTracks(PaginatedModel):
-    track: List[Track]
+class UserTopArtists(Artists, AttrModel):
+    pass
 
 
 @attrs(auto_attribs=True)
-class UserTopTracks(UserPersonalTagsTracks):
-    attr: Attributes = mattrib("@attr")
+class UserWeeklyArtistChart(Artists, AttrModel):
+    pass
 
 
 @attrs(auto_attribs=True)
-class UserWeeklyTrackChart(UserTopTracks):
+class UserTopTags(Tags, AttrModel):
+    pass
+
+
+@attrs(auto_attribs=True)
+class UserPersonalTagsTracks(Tracks):
+    pass
+
+
+@attrs(auto_attribs=True)
+class UserTopTracks(Tracks, AttrModel):
+    pass
+
+
+@attrs(auto_attribs=True)
+class UserWeeklyTrackChart(Tracks, AttrModel):
     pass
 
 
@@ -131,6 +127,5 @@ class UserPersonalTags(BaseModel):
 
 
 @attrs(auto_attribs=True)
-class UserWeeklyChartList(BaseModel):
-    chart: List[Chart]
-    attr: Attributes = mattrib("@attr")
+class UserWeeklyChartList(Charts, AttrModel):
+    pass

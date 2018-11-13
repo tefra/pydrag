@@ -126,7 +126,7 @@ class ArtistServiceTests(MethodTestCase):
             {"artist": "gun", "page": "1", "limit": "50"}, result.params
         )
 
-        self.assertGreater(len(result.artistmatches.artist), 0)
+        self.assertGreater(len(result.matches.artist), 0)
         self.assertIsInstance(result, ArtistSearch)
         self.assertDictEqual(response["results"], actual)
 

@@ -1,5 +1,5 @@
+from pydrag.lastfm.models.common import TagInfo
 from pydrag.lastfm.models.tag import (
-    TagInfo,
     TagSimilar,
     TagTopAlbums,
     TagTopArtists,

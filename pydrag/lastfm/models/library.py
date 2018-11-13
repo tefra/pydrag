@@ -1,12 +1,8 @@
-from typing import List
-
 from attr import attrs
 
-from pydrag.core import BaseModel, mattrib
-from pydrag.lastfm.models.common import Artist, Attributes
+from pydrag.lastfm.models.common import Artists, AttrModel
 
 
 @attrs(auto_attribs=True)
-class LibraryArtists(BaseModel):
-    artist: List[Artist]
-    attr: Attributes = mattrib("@attr")
+class LibraryArtists(Artists, AttrModel):
+    pass

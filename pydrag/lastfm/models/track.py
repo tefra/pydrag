@@ -7,32 +7,32 @@ from pydrag.lastfm.models.album import AlbumInfo
 from pydrag.lastfm.models.common import (
     Artist,
     Attributes,
+    AttrModel,
     OpenSearch,
     Tags,
-    TagsAttr,
-    TracksAttr,
+    Tracks,
     TrackSimpleArtist,
     Wiki,
 )
 
 
 @attrs(auto_attribs=True)
-class TrackTopTags(TagsAttr):
+class TrackTopTags(Tags, AttrModel):
     pass
 
 
 @attrs(auto_attribs=True)
-class TrackTags(TagsAttr):
+class TrackTags(Tags, AttrModel):
     pass
 
 
 @attrs(auto_attribs=True)
-class TrackTopTracks(TracksAttr):
+class TrackTopTracks(Tracks, AttrModel):
     pass
 
 
 @attrs(auto_attribs=True)
-class TrackSimilar(TracksAttr):
+class TrackSimilar(Tracks, AttrModel):
     pass
 
 
@@ -47,7 +47,7 @@ class TrackInfo(BaseModel):
     mbid: str = None
     name: str = None
     playcount: int = None
-    toptags: Tags = None
+    top_tags: Tags = mattrib("toptags", default=None)
     url: str = None
     wiki: Wiki = None
 
@@ -70,7 +70,7 @@ class TrackMatches(BaseModel):
 
 @attrs(auto_attribs=True)
 class TrackSearch(OpenSearch):
-    trackmatches: TrackMatches
+    matches: TrackMatches = mattrib("trackmatches")
 
 
 @attrs(auto_attribs=True)
@@ -86,8 +86,8 @@ class TrackUpdateNowPlaying(BaseModel):
     artist: Corrected = None
     track: Corrected = None
     timestamp: int = None
-    ignoredMessage: Corrected = None
-    albumArtist: Corrected = None
+    ignored_message: Corrected = mattrib("ignoredMessage", default=None)
+    album_artist: Corrected = mattrib("albumArtist", default=None)
     attr: Attributes = mattrib("@attr", default=None)
 
 
@@ -111,9 +111,9 @@ class ScrobbleTrack(BaseModel):
     timestamp: int
     album: str = None
     context: str = None
-    streamId: str = None
-    chosenByUser: bool = True
-    trackNumber: str = None
+    stream_id: str = mattrib("albumArtist", default=None)
+    chosen_by_user: bool = mattrib("ignoredMessage", default=True)
+    track_number: str = mattrib("ignoredMessage", default=None)
     mbid: str = None
-    albumArtist: str = None
+    album_artist: str = mattrib("albumArtist", default=None)
     duration: int = None

@@ -2,24 +2,24 @@ from typing import List
 
 from attr import attrs
 
-from pydrag.core import BaseModel
+from pydrag.core import BaseModel, mattrib
 from pydrag.lastfm.models.common import (
     Album,
+    AttrModel,
     OpenSearch,
     Tags,
-    TagsAttr,
     Tracks,
     Wiki,
 )
 
 
 @attrs(auto_attribs=True)
-class AlbumTopTags(TagsAttr):
+class AlbumTopTags(Tags, AttrModel):
     pass
 
 
 @attrs(auto_attribs=True)
-class AlbumTags(TagsAttr):
+class AlbumTags(Tags, AttrModel):
     pass
 
 
@@ -39,4 +39,4 @@ class AlbumMatches(BaseModel):
 
 @attrs(auto_attribs=True)
 class AlbumSearch(OpenSearch):
-    albummatches: AlbumMatches
+    matches: AlbumMatches = mattrib("albummatches")

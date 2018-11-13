@@ -21,16 +21,21 @@ class Attributes(BaseModel):
     artist: str = None
     position: int = None
     num_res: int = None
-    perPage: int = None
+    limit: int = mattrib("perPage", default=None)
     track: str = None
-    totalPages: int = None
+    total_pages: int = mattrib("totalPages", default=None)
     accepted: int = None
     ignored: int = None
-    trackcorrected: int = None
-    artistcorrected: int = None
+    track_corrected: int = mattrib("trackcorrected", default=None)
+    artist_corrected: int = mattrib("artistcorrected", default=None)
     to_date: str = mattrib("to", default=None)
     for_user: str = mattrib("for", default=None)
     from_date: str = mattrib("from", default=None)
+
+
+@attrs(auto_attribs=True)
+class AttrModel(BaseModel):
+    attr: Attributes = mattrib("@attr")
 
 
 @attrs(auto_attribs=True)
@@ -41,7 +46,7 @@ class Image(BaseModel):
 
 @attrs(auto_attribs=True)
 class Date(BaseModel):
-    unixtime: int
+    timestamp: int = mattrib("unixtime")
     text: str = mattrib("#text")
 
 
@@ -57,13 +62,18 @@ class Artist(BaseModel):
     name: str = None
     text: str = mattrib("#text", default=None)
     url: str = None
-    tagcount: int = None
+    tag_count: int = mattrib("tagcount", default=None)
     listeners: int = None
     playcount: int = None
     streamable: str = None
     image: List[Image] = None
     match: str = None
     attr: Attributes = mattrib("@attr", default=None)
+
+
+@attrs(auto_attribs=True)
+class Artists(BaseModel):
+    artist: List[Artist]
 
 
 @attrs(auto_attribs=True)
@@ -87,12 +97,6 @@ class Tracks(BaseModel):
 
 
 @attrs(auto_attribs=True)
-class TracksAttr(Tracks):
-    track: List[Track]
-    attr: Attributes = mattrib("@attr")
-
-
-@attrs(auto_attribs=True)
 class TrackSimpleArtist(Track):
     artist: str = None
 
@@ -106,8 +110,13 @@ class Album(BaseModel):
     playcount: int = None
     url: str = None
     artist: Artist = None
-    attr: Attributes = mattrib("@attr", default=None)
     image: List[Image] = None
+    attr: Attributes = mattrib("@attr", default=None)
+
+
+@attrs(auto_attribs=True)
+class Albums(BaseModel):
+    album: List[Album]
 
 
 @attrs(auto_attribs=True)
@@ -115,6 +124,11 @@ class Chart(BaseModel):
     text: str = mattrib("#text")
     from_date: str = mattrib("from")
     to_date: str = mattrib("to")
+
+
+@attrs(auto_attribs=True)
+class Charts(BaseModel):
+    chart: List[Chart]
 
 
 @attrs(auto_attribs=True)
@@ -138,6 +152,23 @@ class Wiki(BaseModel):
 
 
 @attrs(auto_attribs=True)
+class TagInfo(BaseModel):
+    name: str
+    reach: int
+    url: str = None
+    taggings: int = None
+    count: int = None
+    total: int = None
+    wiki: Wiki = None
+
+
+@attrs(auto_attribs=True)
+class TagInfos(BaseModel):
+    tag: List[TagInfo]
+    attr: Attributes = mattrib("@attr")
+
+
+@attrs(auto_attribs=True)
 class Tag(BaseModel):
     name: str
     url: str
@@ -150,22 +181,16 @@ class Tags(BaseModel):
 
 
 @attrs(auto_attribs=True)
-class TagsAttr(Tags):
-    attr: Attributes = mattrib("@attr")
-
-
-@attrs(auto_attribs=True)
 class Query(BaseModel):
     role: str
-    startPage: int
+    start_page: int = mattrib("startPage")
     text: str = mattrib("#text")
-    searchTerms: str = None
+    search_terms: str = mattrib("searchTerms", default=None)
 
 
 @attrs(auto_attribs=True)
-class OpenSearch(BaseModel):
+class OpenSearch(AttrModel):
     query: Query = mattrib("opensearch:Query")
-    itemsPerPage: int = mattrib("opensearch:itemsPerPage")
-    startIndex: int = mattrib("opensearch:startIndex")
-    totalResults: int = mattrib("opensearch:totalResults")
-    attr: Attributes = mattrib("@attr")
+    limit: int = mattrib("opensearch:itemsPerPage")
+    offset: int = mattrib("opensearch:startIndex")
+    total: int = mattrib("opensearch:totalResults")

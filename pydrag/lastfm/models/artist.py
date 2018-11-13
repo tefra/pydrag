@@ -5,43 +5,38 @@ from attr import attrs
 from pydrag.core import BaseModel, mattrib
 from pydrag.lastfm.models.common import (
     Artist,
-    Attributes,
+    Artists,
+    AttrModel,
+    OpenSearch,
     Query,
     Tags,
-    TagsAttr,
-    Track,
+    Tracks,
     Wiki,
 )
 
 
 @attrs(auto_attribs=True)
-class ArtistTags(TagsAttr):
+class ArtistTags(Tags, AttrModel):
     pass
 
 
 @attrs(auto_attribs=True)
-class ArtistTopTags(TagsAttr):
+class ArtistTopTags(Tags, AttrModel):
     pass
-
-
-@attrs(auto_attribs=True)
-class SimilarArtist(BaseModel):
-    artist: List[Artist]
 
 
 @attrs(auto_attribs=True)
 class ArtistInfo(Artist):
     tags: Tags = None
     bio: Wiki = None
-    ontour: int = None
+    on_tour: int = mattrib("ontour", default=None)
     stats: Artist = None
-    similar: SimilarArtist = None
+    similar: Artists = None
 
 
 @attrs(auto_attribs=True)
-class CorrectionArtist(BaseModel):
+class CorrectionArtist(AttrModel):
     artist: Artist
-    attr: Attributes = mattrib("@attr")
 
 
 @attrs(auto_attribs=True)
@@ -55,22 +50,16 @@ class ArtistMatches(BaseModel):
 
 
 @attrs(auto_attribs=True)
-class ArtistSearch(BaseModel):
-    artistmatches: ArtistMatches
+class ArtistSearch(OpenSearch):
+    matches: ArtistMatches = mattrib("artistmatches")
     query: Query = mattrib("opensearch:Query")
-    itemsPerPage: int = mattrib("opensearch:itemsPerPage")
-    startIndex: int = mattrib("opensearch:startIndex")
-    totalResults: int = mattrib("opensearch:totalResults")
-    attr: Attributes = mattrib("@attr")
 
 
 @attrs(auto_attribs=True)
-class ArtistTopTracks(BaseModel):
-    track: List[Track]
-    attr: Attributes = mattrib("@attr")
+class ArtistTopTracks(Tracks, AttrModel):
+    pass
 
 
 @attrs(auto_attribs=True)
-class ArtistSimilar(BaseModel):
-    artist: List[Artist]
-    attr: Attributes = mattrib("@attr")
+class ArtistSimilar(Artists, AttrModel):
+    pass

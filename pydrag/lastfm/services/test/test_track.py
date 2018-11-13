@@ -116,17 +116,17 @@ class TrackServiceTests(MethodTestCase):
     @fixture.use_cassette(path="track/search")
     def test_search(self):
         self.track.track = "gun"
-        result = self.track.search()
+        result = self.track.search(page=4, limit=5)
         actual = result.to_dict()
         response = result.response.json()
 
         self.assertEqual("Track", result.namespace)
         self.assertEqual("search", result.method)
         self.assertEqual(
-            {"track": "gun", "page": "1", "limit": "50"}, result.params
+            {"track": "gun", "page": "4", "limit": "5"}, result.params
         )
 
-        self.assertGreater(len(result.trackmatches.track), 0)
+        self.assertGreater(len(result.matches.track), 0)
         self.assertIsInstance(result, TrackSearch)
         self.assertDictEqual(response["results"], actual)
 

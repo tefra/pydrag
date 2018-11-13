@@ -24,6 +24,5 @@ class AuthSession(BaseModel):
     token: str = None
 
 
-@attrs(auto_attribs=True)
 class AuthMobileSession(AuthSession):
     pass
