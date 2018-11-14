@@ -95,7 +95,7 @@ class TrackService:
         Get all the tracks similar to this track.
 
         :param autocorrect: If enabled auto correct misspelled names
-        :param limit: Limit the number of similar tracks returned
+        :param int limit: Limit the number of similar tracks returned
         :returns: TrackSimilar
         """
         self.assert_mbid_or_track_and_artist()
@@ -146,8 +146,8 @@ class TrackService:
         """
         Search for an track by name. Returns track matches sorted by relevance.
 
-        :param page: The page number to fetch. Defaults to first page.
-        :param limit: The number of results to fetch per page. Defaults to 50.
+        :param int page: The page number to fetch. Defaults to first page.
+        :param int limit: The number of results to fetch per page.
         :returns: TrackSearch
         """
         assert self.track is not None

@@ -112,8 +112,8 @@ class AlbumService:
         """
         Search for an album by name.Returns album matches sorted by relevance.
 
-        :param page: The page number to fetch. Defaults to first page.
-        :param limit: The number of results to fetch per page. Defaults to 50.
+        :param int page: The page number to fetch. Defaults to first page.
+        :param int limit: The number of results to fetch per page.
         :returns: AlbumSearch
         """
         assert self.album is not None

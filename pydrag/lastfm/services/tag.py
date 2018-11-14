@@ -46,8 +46,8 @@ class TagService:
         """
         Get the top albums tagged by this tag, ordered by tag count.
 
-        :param limit: The number of results to fetch per page. Defaults to 50.
-        :param page: The page number to fetch. Defaults to first page.
+        :param int limit: The number of results to fetch per page.
+        :param int page: The page number to fetch. Defaults to first page.
         :returns: TagTopAlbums
         """
         assert self.tag is not None
@@ -58,8 +58,8 @@ class TagService:
         """
         Get the top artists tagged by this tag, ordered by tag count.
 
-        :param limit: The number of results to fetch per page. Defaults to 50.
-        :param page: The page number to fetch. Defaults to first page.
+        :param int limit: The number of results to fetch per page.
+        :param int page: The page number to fetch. Defaults to first page.
         :returns: TagTopArtists
         """
         assert self.tag is not None
@@ -70,8 +70,8 @@ class TagService:
         """
         Get the top tracks tagged by this tag, ordered by tag count.
 
-        :param limit: The number of results to fetch per page. Defaults to 50.
-        :param page: The page number to fetch. Defaults to first page.
+        :param int limit: The number of results to fetch per page.
+        :param int page: The page number to fetch. Defaults to first page.
         :returns: TagTopArtists
         """
         assert self.tag is not None
@@ -83,8 +83,8 @@ class TagService:
         Fetches the top global tags on Last.fm, sorted by popularity Old school
         pagination on this endpoint, keep uniformity.
 
-        :param limit: The number of results to fetch per page. Defaults to 50.
-        :param page: The page number to fetch. Defaults to first page.
+        :param int limit: The number of results to fetch per page.
+        :param int page: The page number to fetch. Defaults to first page.
         :returns: TagTopTags
         """
         return dict(num_res=limit, offset=((page - 1) * limit))

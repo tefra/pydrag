@@ -11,8 +11,8 @@ class ChartService:
 
     def __init__(self, limit: int = 50, page: int = 1):
         """
-        :param limit: The number of results to fetch per page. Defaults to 50.
-        :param page: The page number to fetch. Defaults to first page.
+        :param int limit: The number of results to fetch per page.
+        :param int page: The page number to fetch. Defaults to first page.
         """
         self.page = page
         self.limit = limit

@@ -90,7 +90,7 @@ class ArtistService:
         Get all the artists similar to this artist.
 
         :param autocorrect: If enabled auto correct misspelled names
-        :param limit: Limit the number of similar artists returned
+        :param int limit: Limit the number of similar artists returned
         :returns: ArtistSimilar
         """
         self.assert_mbid_or_artist()
@@ -139,8 +139,8 @@ class ArtistService:
         Get the top tags for an artist on Last.fm, ordered by popularity.
 
         :param autocorrect: If enabled auto correct misspelled names
-        :param page: The page number to fetch. Defaults to first page.
-        :param limit: The number of results to fetch per page. Defaults to 50.
+        :param int page: The page number to fetch. Defaults to first page.
+        :param int limit: The number of results to fetch per page.
         :returns: ArtistTopTracks
         """
         self.assert_mbid_or_artist()
@@ -158,8 +158,8 @@ class ArtistService:
         Search for an artist by name. Returns artist matches sorted by
         relevance.
 
-        :param page: The page number to fetch. Defaults to first page.
-        :param limit: The number of results to fetch per page. Defaults to 50.
+        :param int page: The page number to fetch. Defaults to first page.
+        :param int limit: The number of results to fetch per page.
         :returns: ArtistSearch
         """
         assert self.artist is not None

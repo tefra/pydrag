@@ -1,3 +1,4 @@
+from pydrag.lastfm import Period
 from pydrag.lastfm.models.user import (
     UserArtistTracks,
     UserFriends,
@@ -168,7 +169,7 @@ class UserServiceTests(MethodTestCase):
 
     @fixture.use_cassette(path="user/get_top_albums")
     def test_get_top_albums(self):
-        result = self.user.get_top_albums(period="7day")
+        result = self.user.get_top_albums(period=Period.week)
         actual = result.to_dict()
         response = result.response.json()
 
@@ -184,7 +185,7 @@ class UserServiceTests(MethodTestCase):
 
     @fixture.use_cassette(path="user/get_top_artists")
     def test_get_top_artists(self):
-        result = self.user.get_top_artists("7day")
+        result = self.user.get_top_artists(period=Period.week)
         actual = result.to_dict()
         response = result.response.json()
 
@@ -213,7 +214,7 @@ class UserServiceTests(MethodTestCase):
 
     @fixture.use_cassette(path="user/get_top_tracks")
     def test_get_top_tracks(self):
-        result = self.user.get_top_tracks(period="7day", limit=1)
+        result = self.user.get_top_tracks(period=Period.week, limit=1)
         actual = result.to_dict()
         response = result.response.json()
 

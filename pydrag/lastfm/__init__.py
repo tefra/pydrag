@@ -1,4 +1,5 @@
 import os
+from enum import Enum
 
 from attr import attrs, attrib
 
@@ -23,3 +24,12 @@ config = Config(
 
 GET = "get"
 POST = "post"
+
+
+class Period(Enum):
+    overall = "overall"
+    week = "7day"
+    month = "1month"
+    quarter = "3month"
+    semester = "6month"
+    year = "12month"
