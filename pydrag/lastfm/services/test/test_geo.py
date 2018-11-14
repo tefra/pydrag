@@ -1,4 +1,4 @@
-from pydrag.lastfm.models.geo import GeoTopArtists, GeoTopTracks
+from pydrag.lastfm.models.common import ArtistList, TrackList
 from pydrag.lastfm.services.geo import GeoService
 from pydrag.lastfm.services.test import MethodTestCase, fixture
 
@@ -19,7 +19,7 @@ class GeoServiceTests(MethodTestCase):
         self.assertEqual(
             {"country": "greece", "limit": "10", "page": "1"}, result.params
         )
-        self.assertIsInstance(result, GeoTopArtists)
+        self.assertIsInstance(result, ArtistList)
         self.assertGreater(len(result.artist), 0)
         self.assertDictEqual(response["topartists"], actual)
 
@@ -34,6 +34,6 @@ class GeoServiceTests(MethodTestCase):
         self.assertEqual(
             {"country": "greece", "limit": "10", "page": "1"}, result.params
         )
-        self.assertIsInstance(result, GeoTopTracks)
+        self.assertIsInstance(result, TrackList)
         self.assertGreater(len(result.track), 0)
         self.assertDictEqual(response["tracks"], actual)

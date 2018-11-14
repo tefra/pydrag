@@ -1,11 +1,10 @@
-from pydrag.lastfm.models.common import TagInfo
-from pydrag.lastfm.models.tag import (
-    TagSimilar,
-    TagTopAlbums,
-    TagTopArtists,
-    TagTopTags,
-    TagTopTracks,
-    TagWeeklyChartList,
+from pydrag.lastfm.models.common import (
+    AlbumList,
+    ArtistList,
+    ChartList,
+    TagInfo,
+    TagInfoList,
+    TrackList,
 )
 from pydrag.lastfm.services.tag import TagService
 from pydrag.lastfm.services.test import MethodTestCase, fixture
@@ -45,7 +44,7 @@ class TagServiceTests(MethodTestCase):
         self.assertEqual("Tag", result.namespace)
         self.assertEqual("get_similar", result.method)
         self.assertEqual({"tag": "Disco"}, result.params)
-        self.assertIsInstance(result, TagSimilar)
+        self.assertIsInstance(result, TagInfoList)
         self.assertDictEqual(response["similartags"], actual)
 
     def test_get_similar_no_tag(self):
@@ -64,7 +63,7 @@ class TagServiceTests(MethodTestCase):
             {"limit": "2", "page": "1", "tag": "rap"}, result.params
         )
         self.assertGreater(len(result.album), 0)
-        self.assertIsInstance(result, TagTopAlbums)
+        self.assertIsInstance(result, AlbumList)
         self.assertDictEqual(response["albums"], actual)
 
     def test_get_top_albums_no_tag(self):
@@ -83,7 +82,7 @@ class TagServiceTests(MethodTestCase):
             {"limit": "2", "page": "1", "tag": "rap"}, result.params
         )
         self.assertGreater(len(result.artist), 0)
-        self.assertIsInstance(result, TagTopArtists)
+        self.assertIsInstance(result, ArtistList)
         self.assertDictEqual(response["topartists"], actual)
 
         self.assertEqual(1, result.get_page())
@@ -109,7 +108,7 @@ class TagServiceTests(MethodTestCase):
             {"limit": "2", "page": "1", "tag": "rap"}, result.params
         )
         self.assertGreater(len(result.track), 0)
-        self.assertIsInstance(result, TagTopTracks)
+        self.assertIsInstance(result, TrackList)
         self.assertDictEqual(response["tracks"], actual)
 
     def test_get_top_tracks_no_tag(self):
@@ -126,7 +125,7 @@ class TagServiceTests(MethodTestCase):
         self.assertEqual("get_top_tags", result.method)
         self.assertEqual({"num_res": "10", "offset": "20"}, result.params)
         self.assertEqual(10, len(result.tag))
-        self.assertIsInstance(result, TagTopTags)
+        self.assertIsInstance(result, TagInfoList)
         self.assertDictEqual(response["toptags"], actual)
 
     @fixture.use_cassette(path="tag/get_weekly_chart_list")
@@ -139,7 +138,7 @@ class TagServiceTests(MethodTestCase):
         self.assertEqual("get_weekly_chart_list", result.method)
         self.assertEqual({"tag": "rap"}, result.params)
         self.assertGreater(len(result.chart), 0)
-        self.assertIsInstance(result, TagWeeklyChartList)
+        self.assertIsInstance(result, ChartList)
         self.assertDictEqual(response, actual)
 
         self.assertEqual(

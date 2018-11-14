@@ -3,11 +3,8 @@ from pydrag.lastfm.models.artist import (
     ArtistCorrection,
     ArtistInfo,
     ArtistSearch,
-    ArtistSimilar,
-    ArtistTags,
-    ArtistTopTags,
-    ArtistTopTracks,
 )
+from pydrag.lastfm.models.common import ArtistList, TagList, TrackList
 from pydrag.lastfm.services.artist import ArtistService
 from pydrag.lastfm.services.test import MethodTestCase, fixture
 
@@ -46,7 +43,7 @@ class ArtistServiceTests(MethodTestCase):
             },
             result.params,
         )
-        self.assertIsInstance(result, ArtistTags)
+        self.assertIsInstance(result, TagList)
         self.assertEqual(2, len(result.tag))
         self.assertDictEqual(response["tags"], actual)
 
@@ -110,7 +107,7 @@ class ArtistServiceTests(MethodTestCase):
             result.params,
         )
         self.assertGreater(len(result.tag), 0)
-        self.assertIsInstance(result, ArtistTopTags)
+        self.assertIsInstance(result, TagList)
         self.assertDictEqual(response["toptags"], actual)
 
     @fixture.use_cassette(path="artist/search")
@@ -156,7 +153,7 @@ class ArtistServiceTests(MethodTestCase):
             result.params,
         )
         self.assertGreater(len(result.track), 0)
-        self.assertIsInstance(result, ArtistTopTracks)
+        self.assertIsInstance(result, TrackList)
         self.assertDictEqual(response["toptracks"], actual)
 
     @fixture.use_cassette(path="artist/get_similar")
@@ -177,5 +174,5 @@ class ArtistServiceTests(MethodTestCase):
             result.params,
         )
         self.assertGreater(len(result.artist), 0)
-        self.assertIsInstance(result, ArtistSimilar)
+        self.assertIsInstance(result, ArtistList)
         self.assertDictEqual(response["similarartists"], actual)

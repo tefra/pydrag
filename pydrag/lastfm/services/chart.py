@@ -1,9 +1,5 @@
 from pydrag.lastfm import api
-from pydrag.lastfm.models.chart import (
-    ChartTopArtists,
-    ChartTopTags,
-    ChartTopTracks,
-)
+from pydrag.lastfm.models.common import ArtistList, TagInfoList, TrackList
 
 
 class ChartService:
@@ -18,7 +14,7 @@ class ChartService:
         self.limit = limit
 
     @api.operation
-    def get_top_artists(self) -> ChartTopArtists:
+    def get_top_artists(self) -> ArtistList:
         """
         Get the top artists chart.
 
@@ -27,7 +23,7 @@ class ChartService:
         return dict(limit=self.limit, page=self.page)
 
     @api.operation
-    def get_top_tracks(self) -> ChartTopTracks:
+    def get_top_tracks(self) -> TrackList:
         """
         Get the top tracks chart.
 
@@ -36,7 +32,7 @@ class ChartService:
         return dict(limit=self.limit, page=self.page)
 
     @api.operation
-    def get_top_tags(self) -> ChartTopTags:
+    def get_top_tags(self) -> TagInfoList:
         """
         Get the top tags chart.
 

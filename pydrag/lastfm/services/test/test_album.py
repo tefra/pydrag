@@ -1,10 +1,6 @@
 from pydrag.core import BaseModel
-from pydrag.lastfm.models.album import (
-    AlbumInfo,
-    AlbumSearch,
-    AlbumTags,
-    AlbumTopTags,
-)
+from pydrag.lastfm.models.album import AlbumInfo, AlbumSearch
+from pydrag.lastfm.models.common import TagList
 from pydrag.lastfm.services.album import AlbumService
 from pydrag.lastfm.services.test import MethodTestCase, fixture
 
@@ -50,7 +46,7 @@ class AlbumServiceTests(MethodTestCase):
             },
             result.params,
         )
-        self.assertIsInstance(result, AlbumTags)
+        self.assertIsInstance(result, TagList)
         self.assertEqual(2, len(result.tag))
         self.assertDictEqual(response["tags"], actual)
 
@@ -107,7 +103,7 @@ class AlbumServiceTests(MethodTestCase):
             result.params,
         )
         self.assertGreater(len(result.tag), 0)
-        self.assertIsInstance(result, AlbumTopTags)
+        self.assertIsInstance(result, TagList)
         self.assertDictEqual(response["toptags"], actual)
 
     @fixture.use_cassette(path="album/search")

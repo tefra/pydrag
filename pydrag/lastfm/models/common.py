@@ -59,10 +59,17 @@ class DateUTS(BaseModel):
 
 
 @attrs(auto_attribs=True)
+class SimpleArtist(BaseModel):
+    mbid: str = None
+    name: str = None
+    url: str = None
+    text: str = mattrib("#text", default=None)
+
+
+@attrs(auto_attribs=True)
 class Artist(BaseModel):
     mbid: str = None
     name: str = None
-    text: str = mattrib("#text", default=None)
     url: str = None
     tag_count: int = mattrib("tagcount", default=None)
     listeners: int = None
@@ -79,15 +86,20 @@ class Artists(BaseModel):
 
 
 @attrs(auto_attribs=True)
+class ArtistList(Artists, AttrModel):
+    pass
+
+
+@attrs(auto_attribs=True)
 class Track(BaseModel):
     name: str
     url: str
-    artist: Artist
+    artist: SimpleArtist
     mbid: str = None
     image: List[Image] = None
     playcount: int = None
     listeners: int = None
-    streamable: str = None  # super buggy
+    streamable: str = None
     duration: str = None
     match: float = None
     attr: Attributes = mattrib("@attr", default=None)
@@ -96,6 +108,11 @@ class Track(BaseModel):
 @attrs(auto_attribs=True)
 class Tracks(BaseModel):
     track: List[Track]
+
+
+@attrs(auto_attribs=True)
+class TrackList(Tracks, AttrModel):
+    pass
 
 
 @attrs(auto_attribs=True)
@@ -111,7 +128,7 @@ class Album(BaseModel):
     title: str = None
     playcount: int = None
     url: str = None
-    artist: Artist = None
+    artist: SimpleArtist = None
     image: List[Image] = None
     attr: Attributes = mattrib("@attr", default=None)
 
@@ -119,6 +136,11 @@ class Album(BaseModel):
 @attrs(auto_attribs=True)
 class Albums(BaseModel):
     album: List[Album]
+
+
+@attrs(auto_attribs=True)
+class AlbumList(Albums, AttrModel):
+    pass
 
 
 @attrs(auto_attribs=True)
@@ -154,6 +176,13 @@ class Wiki(BaseModel):
 
 
 @attrs(auto_attribs=True)
+class Tag(BaseModel):
+    name: str
+    url: str
+    count: int = None
+
+
+@attrs(auto_attribs=True)
 class TagInfo(BaseModel):
     name: str
     reach: int
@@ -165,21 +194,19 @@ class TagInfo(BaseModel):
 
 
 @attrs(auto_attribs=True)
-class TagInfos(BaseModel):
+class TagInfoList(BaseModel):
     tag: List[TagInfo]
     attr: Attributes = mattrib("@attr")
 
 
 @attrs(auto_attribs=True)
-class Tag(BaseModel):
-    name: str
-    url: str
-    count: int = None
+class Tags(BaseModel):
+    tag: List[Tag]
 
 
 @attrs(auto_attribs=True)
-class Tags(BaseModel):
-    tag: List[Tag]
+class TagList(Tags, AttrModel):
+    pass
 
 
 @attrs(auto_attribs=True)
@@ -208,3 +235,8 @@ class OpenSearch(AttrModel):
 
     def get_total_pages(self):
         return ceil(self.total / self.limit)
+
+
+@attrs(auto_attribs=True)
+class ChartList(Charts, AttrModel):
+    pass

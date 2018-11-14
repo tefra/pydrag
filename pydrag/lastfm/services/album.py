@@ -2,12 +2,8 @@ from typing import List
 
 from pydrag.core import BaseModel
 from pydrag.lastfm import POST, api
-from pydrag.lastfm.models.album import (
-    AlbumInfo,
-    AlbumSearch,
-    AlbumTags,
-    AlbumTopTags,
-)
+from pydrag.lastfm.models.album import AlbumInfo, AlbumSearch
+from pydrag.lastfm.models.common import TagList
 
 
 class AlbumService:
@@ -74,13 +70,13 @@ class AlbumService:
         )
 
     @api.operation
-    def get_tags(self, user: str, autocorrect: bool = True) -> AlbumTags:
+    def get_tags(self, user: str, autocorrect: bool = True) -> TagList:
         """
         Get the tags applied by an individual user to an album on Last.fm.
 
         :param user: The username for the context of the request.
         :param autocorrect: If enabled auto correct misspelled names
-        :returns: AlbumTopTags
+        :returns: TagList
         """
         self.assert_mbid_or_artist_and_album()
         return dict(
@@ -92,12 +88,12 @@ class AlbumService:
         )
 
     @api.operation
-    def get_top_tags(self, autocorrect: bool = True) -> AlbumTopTags:
+    def get_top_tags(self, autocorrect: bool = True) -> TagList:
         """
         Get the top tags for an album on Last.fm, ordered by popularity.
 
         :param autocorrect: If enabled auto correct misspelled names
-        :returns: AlbumTopTags
+        :returns: TagList
         """
         self.assert_mbid_or_artist_and_album()
         return dict(

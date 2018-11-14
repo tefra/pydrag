@@ -1,8 +1,4 @@
-from pydrag.lastfm.models.chart import (
-    ChartTopArtists,
-    ChartTopTags,
-    ChartTopTracks,
-)
+from pydrag.lastfm.models.common import ArtistList, TagInfoList, TrackList
 from pydrag.lastfm.services.chart import ChartService
 from pydrag.lastfm.services.test import MethodTestCase, fixture
 
@@ -21,7 +17,7 @@ class ChartServiceTests(MethodTestCase):
         self.assertEqual("Chart", result.namespace)
         self.assertEqual("get_top_artists", result.method)
         self.assertEqual({"limit": "10", "page": "2"}, result.params)
-        self.assertIsInstance(result, ChartTopArtists)
+        self.assertIsInstance(result, ArtistList)
         self.assertGreater(len(result.artist), 0)
         self.assertDictEqual(response["artists"], actual)
 
@@ -34,7 +30,7 @@ class ChartServiceTests(MethodTestCase):
         self.assertEqual("Chart", result.namespace)
         self.assertEqual("get_top_tracks", result.method)
         self.assertEqual({"limit": "10", "page": "2"}, result.params)
-        self.assertIsInstance(result, ChartTopTracks)
+        self.assertIsInstance(result, TrackList)
         self.assertGreater(len(result.track), 0)
         self.assertDictEqual(response["tracks"], actual)
 
@@ -47,6 +43,6 @@ class ChartServiceTests(MethodTestCase):
         self.assertEqual("Chart", result.namespace)
         self.assertEqual("get_top_tags", result.method)
         self.assertEqual({"limit": "10", "page": "2"}, result.params)
-        self.assertIsInstance(result, ChartTopTags)
+        self.assertIsInstance(result, TagInfoList)
         self.assertGreater(len(result.tag), 0)
         self.assertDictEqual(response["tags"], actual)

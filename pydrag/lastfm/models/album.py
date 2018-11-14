@@ -3,24 +3,7 @@ from typing import List
 from attr import attrs
 
 from pydrag.core import BaseModel, mattrib
-from pydrag.lastfm.models.common import (
-    Album,
-    AttrModel,
-    OpenSearch,
-    Tags,
-    Tracks,
-    Wiki,
-)
-
-
-@attrs(auto_attribs=True)
-class AlbumTopTags(Tags, AttrModel):
-    pass
-
-
-@attrs(auto_attribs=True)
-class AlbumTags(Tags, AttrModel):
-    pass
+from pydrag.lastfm.models.common import Album, OpenSearch, Tags, Tracks, Wiki
 
 
 @attrs(auto_attribs=True)

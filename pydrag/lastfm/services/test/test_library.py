@@ -1,4 +1,4 @@
-from pydrag.lastfm.models.library import LibraryArtists
+from pydrag.lastfm.models.common import ArtistList
 from pydrag.lastfm.services.library import LibraryService
 from pydrag.lastfm.services.test import MethodTestCase, fixture
 
@@ -14,5 +14,5 @@ class LibraryServiceTests(MethodTestCase):
         actual = result.to_dict()
         response = result.response.json()
 
-        self.assertIsInstance(result, LibraryArtists)
+        self.assertIsInstance(result, ArtistList)
         self.assertDictEqual(response["artists"], actual)

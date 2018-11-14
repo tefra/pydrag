@@ -1,19 +1,16 @@
 from pydrag.lastfm import Period, api
+from pydrag.lastfm.models.common import (
+    AlbumList,
+    ArtistList,
+    ChartList,
+    TagList,
+    TrackList,
+)
 from pydrag.lastfm.models.user import (
-    UserArtistTracks,
+    ArtistTrackList,
     UserFriends,
     UserInfo,
-    UserLovedTracks,
     UserPersonalTags,
-    UserRecentTracks,
-    UserTopAlbums,
-    UserTopArtists,
-    UserTopTags,
-    UserTopTracks,
-    UserWeeklyAlbumChart,
-    UserWeeklyArtistChart,
-    UserWeeklyChartList,
-    UserWeeklyTrackChart,
 )
 
 
@@ -36,7 +33,7 @@ class UserService:
         from_date: str = None,
         to_date: str = None,
         page: int = 1,
-    ) -> UserArtistTracks:
+    ) -> ArtistTrackList:
         """
         Get a list of tracks by a given artist scrobbled by this user,
         including scrobble time. Can be limited to specific timeranges,
@@ -85,13 +82,13 @@ class UserService:
     @api.operation
     def get_loved_tracks(
         self, limit: int = 50, page: int = 1
-    ) -> UserLovedTracks:
+    ) -> ArtistTrackList:
         """
         Get loved tracks list.
 
         :param int page: The page number to fetch. Defaults to first page.
         :param int limit: The number of results to fetch per page.
-        :returns: UserLovedTracks
+        :returns: TrackList
         """
         return dict(user=self.user, limit=limit, page=page)
 
@@ -127,7 +124,7 @@ class UserService:
         to_date: str = None,
         limit: int = 50,
         page: int = 1,
-    ) -> UserRecentTracks:
+    ) -> ArtistTrackList:
         """
         Get a list of the recent tracks listened to by this user. Also includes
         the currently playing track with the nowplaying="true" attribute if the
@@ -138,7 +135,7 @@ class UserService:
         :param to_date: End timestamp of a range - only display scrobbles before this time, in UNIX timestamp format (integer number of seconds since 00:00:00, January 1st 1970 UTC). This must be in the UTC time zone.
         :param int limit: The number of results to fetch per page.
         :param int page: The page number to fetch. Defaults to first page.
-        :returns: UserRecentTracks
+        :returns: TrackList
         """
         return {
             "user": self.user,
@@ -152,7 +149,7 @@ class UserService:
     @api.operation
     def get_top_albums(
         self, period: Period, limit: int = 50, page: int = 1
-    ) -> UserTopAlbums:
+    ) -> AlbumList:
         """
         Get the top albums listened to by a user. You can stipulate a time
         period.
@@ -170,7 +167,7 @@ class UserService:
     @api.operation
     def get_top_artists(
         self, period: Period, limit: int = 50, page: int = 1
-    ) -> UserTopArtists:
+    ) -> ArtistList:
         """
         Get the top artists listened to by a user. You can stipulate a time
         period.
@@ -178,7 +175,7 @@ class UserService:
         :param Period period:
         :param int limit: The number of results to fetch per page.
         :param int page: The page number to fetch. Defaults to first page.
-        :returns: UserTopArtists
+        :returns: ArtistList
         """
         assert isinstance(period, Period)
         return dict(
@@ -186,19 +183,19 @@ class UserService:
         )
 
     @api.operation
-    def get_top_tags(self, limit: int = 50) -> UserTopTags:
+    def get_top_tags(self, limit: int = 50) -> TagList:
         """
         Get the top tags used by this user.
 
          :param int limit: Limit the number of tags returned
-        :returns: UserTopTags
+        :returns: TagList
         """
         return dict(user=self.user, limit=limit)
 
     @api.operation
     def get_top_tracks(
         self, period: Period, limit: int = 50, page: int = 1
-    ) -> UserTopTracks:
+    ) -> TrackList:
         """
         Get the top tracks listened to by a user. You can stipulate a time
         period.
@@ -217,7 +214,7 @@ class UserService:
     @api.operation
     def get_weekly_album_chart(
         self, from_date: str = None, to_date: str = None
-    ) -> UserWeeklyAlbumChart:
+    ) -> AlbumList:
         """
         :param from_date:  The date at which the chart should start from.
         :param to_date: The date at which the chart should end on.
@@ -228,7 +225,7 @@ class UserService:
     @api.operation
     def get_weekly_artist_chart(
         self, from_date: str = None, to_date: str = None
-    ) -> UserWeeklyArtistChart:
+    ) -> ArtistList:
         """
         Get an album chart for a user profile, for a given date range. If no
         date range is supplied, it will return the most recent album chart for
@@ -236,12 +233,12 @@ class UserService:
 
         :param from_date:  The date at which the chart should start from.
         :param to_date: The date at which the chart should end on.
-        :returns: UserWeeklyArtistChart
+        :returns: ArtistList
         """
         return {"user": self.user, "from": from_date, "to": to_date}
 
     @api.operation
-    def get_weekly_chart_list(self) -> UserWeeklyChartList:
+    def get_weekly_chart_list(self) -> ChartList:
         """
         Get an artist chart for a user profile, for a given date range. If no
         date range is supplied, it will return the most recent artist chart for
@@ -254,7 +251,7 @@ class UserService:
     @api.operation
     def get_weekly_track_chart(
         self, from_date: str = None, to_date: str = None
-    ) -> UserWeeklyTrackChart:
+    ) -> TrackList:
         """
         Get a list of available charts for this user, expressed as date ranges
         which can be sent to the chart services.

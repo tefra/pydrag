@@ -1,12 +1,11 @@
 from pydrag.lastfm import api
-from pydrag.lastfm.models.common import TagInfo
-from pydrag.lastfm.models.tag import (
-    TagSimilar,
-    TagTopAlbums,
-    TagTopArtists,
-    TagTopTags,
-    TagTopTracks,
-    TagWeeklyChartList,
+from pydrag.lastfm.models.common import (
+    AlbumList,
+    ArtistList,
+    ChartList,
+    TagInfo,
+    TagInfoList,
+    TrackList,
 )
 
 
@@ -31,7 +30,7 @@ class TagService:
         return dict(tag=self.tag, lang=lang)
 
     @api.operation
-    def get_similar(self) -> TagSimilar:
+    def get_similar(self) -> TagInfoList:
         """
         Search for tags similar to this one. Returns tags ranked by similarity,
         based on listening data.
@@ -42,7 +41,7 @@ class TagService:
         return dict(tag=self.tag)
 
     @api.operation
-    def get_top_albums(self, limit: int = 50, page: int = 1) -> TagTopAlbums:
+    def get_top_albums(self, limit: int = 50, page: int = 1) -> AlbumList:
         """
         Get the top albums tagged by this tag, ordered by tag count.
 
@@ -54,19 +53,19 @@ class TagService:
         return dict(tag=self.tag, limit=limit, page=page)
 
     @api.operation
-    def get_top_artists(self, limit: int = 50, page: int = 1) -> TagTopArtists:
+    def get_top_artists(self, limit: int = 50, page: int = 1) -> ArtistList:
         """
         Get the top artists tagged by this tag, ordered by tag count.
 
         :param int limit: The number of results to fetch per page.
         :param int page: The page number to fetch. Defaults to first page.
-        :returns: TagTopArtists
+        :returns: ArtistList
         """
         assert self.tag is not None
         return dict(tag=self.tag, limit=limit, page=page)
 
     @api.operation
-    def get_top_tracks(self, limit: int = 50, page: int = 1) -> TagTopTracks:
+    def get_top_tracks(self, limit: int = 50, page: int = 1) -> TrackList:
         """
         Get the top tracks tagged by this tag, ordered by tag count.
 
@@ -78,7 +77,7 @@ class TagService:
         return dict(tag=self.tag, limit=limit, page=page)
 
     @api.operation
-    def get_top_tags(self, limit: int = 50, page: int = 1) -> TagTopTags:
+    def get_top_tags(self, limit: int = 50, page: int = 1) -> TagInfoList:
         """
         Fetches the top global tags on Last.fm, sorted by popularity Old school
         pagination on this endpoint, keep uniformity.
@@ -90,7 +89,7 @@ class TagService:
         return dict(num_res=limit, offset=((page - 1) * limit))
 
     @api.operation
-    def get_weekly_chart_list(self) -> TagWeeklyChartList:
+    def get_weekly_chart_list(self) -> ChartList:
         """
         Get a list of available charts for this tag, expressed as date ranges
         which can be sent to the chart services.

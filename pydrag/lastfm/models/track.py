@@ -5,51 +5,20 @@ from attr import attrs
 from pydrag.core import BaseModel, mattrib
 from pydrag.lastfm.models.album import AlbumInfo
 from pydrag.lastfm.models.common import (
-    Artist,
     Attributes,
-    AttrModel,
     OpenSearch,
     Tags,
-    Tracks,
+    Track,
     TrackSimpleArtist,
     Wiki,
 )
 
 
 @attrs(auto_attribs=True)
-class TrackTopTags(Tags, AttrModel):
-    pass
-
-
-@attrs(auto_attribs=True)
-class TrackTags(Tags, AttrModel):
-    pass
-
-
-@attrs(auto_attribs=True)
-class TrackTopTracks(Tracks, AttrModel):
-    pass
-
-
-@attrs(auto_attribs=True)
-class TrackSimilar(Tracks, AttrModel):
-    pass
-
-
-@attrs(auto_attribs=True)
-class TrackInfo(BaseModel):
-    album: AlbumInfo = None
-    artist: Artist = None
-    bio: Wiki = None
-    attr: Attributes = mattrib("@attr", default=None)
-    duration: int = None
-    listeners: int = None
-    mbid: str = None
-    name: str = None
-    playcount: int = None
-    top_tags: Tags = mattrib("toptags", default=None)
-    url: str = None
+class TrackInfo(Track):
     wiki: Wiki = None
+    album: AlbumInfo = None
+    top_tags: Tags = mattrib("toptags", default=None)
 
 
 @attrs(auto_attribs=True)
@@ -111,7 +80,7 @@ class ScrobbleTrack(BaseModel):
     timestamp: int
     album: str = None
     context: str = None
-    stream_id: str = mattrib("albumArtist", default=None)
+    stream_id: str = mattrib("streamId", default=None)
     chosen_by_user: bool = mattrib("ignoredMessage", default=True)
     track_number: str = mattrib("ignoredMessage", default=None)
     mbid: str = None

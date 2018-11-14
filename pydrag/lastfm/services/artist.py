@@ -6,11 +6,8 @@ from pydrag.lastfm.models.artist import (
     ArtistCorrection,
     ArtistInfo,
     ArtistSearch,
-    ArtistSimilar,
-    ArtistTags,
-    ArtistTopTags,
-    ArtistTopTracks,
 )
+from pydrag.lastfm.models.common import ArtistList, TagList, TrackList
 
 
 class ArtistService:
@@ -85,13 +82,13 @@ class ArtistService:
     @api.operation
     def get_similar(
         self, autocorrect: bool = True, limit: int = 50
-    ) -> ArtistSimilar:
+    ) -> ArtistList:
         """
         Get all the artists similar to this artist.
 
         :param autocorrect: If enabled auto correct misspelled names
         :param int limit: Limit the number of similar artists returned
-        :returns: ArtistSimilar
+        :returns: ArtistList
         """
         self.assert_mbid_or_artist()
         return dict(
@@ -102,13 +99,13 @@ class ArtistService:
         )
 
     @api.operation
-    def get_tags(self, user: str, autocorrect: bool = True) -> ArtistTags:
+    def get_tags(self, user: str, autocorrect: bool = True) -> TagList:
         """
         Get the tags applied by an individual user to an artist on Last.fm.
 
         :param user: The username for the context of the request.
         :param autocorrect: If enabled auto correct misspelled names
-        :returns: ArtistTags
+        :returns: TagList
         """
         self.assert_mbid_or_artist()
         return dict(
@@ -119,12 +116,12 @@ class ArtistService:
         )
 
     @api.operation
-    def get_top_tags(self, autocorrect: bool = True) -> ArtistTopTags:
+    def get_top_tags(self, autocorrect: bool = True) -> TagList:
         """
         Get the top tags for an artist on Last.fm, ordered by popularity.
 
         :param autocorrect: If enabled auto correct misspelled names
-        :returns: ArtistTopTags
+        :returns: TagList
         """
         self.assert_mbid_or_artist()
         return dict(
@@ -134,7 +131,7 @@ class ArtistService:
     @api.operation
     def get_top_tracks(
         self, autocorrect: bool = True, limit: int = 50, page: int = 1
-    ) -> ArtistTopTracks:
+    ) -> TrackList:
         """
         Get the top tags for an artist on Last.fm, ordered by popularity.
 

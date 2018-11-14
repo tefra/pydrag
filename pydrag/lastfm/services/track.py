@@ -2,15 +2,13 @@ from typing import List
 
 from pydrag.core import BaseModel
 from pydrag.lastfm import POST, api
+from pydrag.lastfm.models.common import TagList, TrackList
 from pydrag.lastfm.models.track import (
     ScrobbleTrack,
     TrackCorrection,
     TrackInfo,
     TrackScrobble,
     TrackSearch,
-    TrackSimilar,
-    TrackTags,
-    TrackTopTags,
     TrackUpdateNowPlaying,
 )
 
@@ -90,7 +88,7 @@ class TrackService:
     @api.operation
     def get_similar(
         self, autocorrect: bool = True, limit: int = 50
-    ) -> TrackSimilar:
+    ) -> TrackList:
         """
         Get all the tracks similar to this track.
 
@@ -108,13 +106,13 @@ class TrackService:
         )
 
     @api.operation
-    def get_tags(self, user: str, autocorrect: bool = True) -> TrackTags:
+    def get_tags(self, user: str, autocorrect: bool = True) -> TagList:
         """
         Get the tags applied by an individual user to an track on Last.fm.
 
         :param user: The username for the context of the request.
         :param autocorrect: If enabled auto correct misspelled names
-        :returns: TrackTags
+        :returns: TagList
         """
         self.assert_mbid_or_track_and_artist()
         return dict(
@@ -126,12 +124,12 @@ class TrackService:
         )
 
     @api.operation
-    def get_top_tags(self, autocorrect: bool = True) -> TrackTopTags:
+    def get_top_tags(self, autocorrect: bool = True) -> TagList:
         """
         Get the top tags for an track on Last.fm, ordered by popularity.
 
         :param autocorrect: If enabled auto correct misspelled names
-        :returns: TrackTopTags
+        :returns: TagList
         """
         self.assert_mbid_or_track_and_artist()
         return dict(
@@ -177,12 +175,10 @@ class TrackService:
     def scrobble(self, tracks: List[ScrobbleTrack]) -> TrackScrobble:
         params = dict()
         for idx, track in enumerate(tracks):
-            for field in track.get_fields():
-                value = getattr(track, field.name)
+            for field, value in track.to_dict().items():
                 if value is None:
                     continue
-                k = "{}[{}]".format(field.name, idx)
-                params.update({k: value})
+                params.update({"{}[{}]".format(field, idx): value})
         return params
 
     @classmethod

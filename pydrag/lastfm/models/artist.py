@@ -10,28 +10,8 @@ from pydrag.lastfm.models.common import (
     OpenSearch,
     Query,
     Tags,
-    Tracks,
     Wiki,
 )
-
-
-@attrs(auto_attribs=True)
-class ArtistTags(Tags, AttrModel):
-    pass
-
-
-@attrs(auto_attribs=True)
-class ArtistTopTags(Tags, AttrModel):
-    pass
-
-
-@attrs(auto_attribs=True)
-class ArtistInfo(Artist):
-    tags: Tags = None
-    bio: Wiki = None
-    on_tour: int = mattrib("ontour", default=None)
-    stats: Artist = None
-    similar: Artists = None
 
 
 @attrs(auto_attribs=True)
@@ -45,6 +25,15 @@ class ArtistCorrection(BaseModel):
 
 
 @attrs(auto_attribs=True)
+class ArtistInfo(Artist):
+    tags: Tags = None
+    bio: Wiki = None
+    on_tour: int = mattrib("ontour", default=None)
+    stats: Artist = None
+    similar: Artists = None
+
+
+@attrs(auto_attribs=True)
 class ArtistMatches(BaseModel):
     artist: List[ArtistInfo]
 
@@ -53,13 +42,3 @@ class ArtistMatches(BaseModel):
 class ArtistSearch(OpenSearch):
     matches: ArtistMatches = mattrib("artistmatches")
     query: Query = mattrib("opensearch:Query")
-
-
-@attrs(auto_attribs=True)
-class ArtistTopTracks(Tracks, AttrModel):
-    pass
-
-
-@attrs(auto_attribs=True)
-class ArtistSimilar(Artists, AttrModel):
-    pass

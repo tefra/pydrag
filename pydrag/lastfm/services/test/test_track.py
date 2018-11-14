@@ -2,15 +2,13 @@ import time
 from datetime import datetime, timedelta
 
 from pydrag.core import BaseModel
+from pydrag.lastfm.models.common import TagList, TrackList
 from pydrag.lastfm.models.track import (
     ScrobbleTrack,
     TrackCorrection,
     TrackInfo,
     TrackScrobble,
     TrackSearch,
-    TrackSimilar,
-    TrackTags,
-    TrackTopTags,
     TrackUpdateNowPlaying,
 )
 from pydrag.lastfm.services.test import MethodTestCase, fixture
@@ -49,7 +47,7 @@ class TrackServiceTests(MethodTestCase):
             result.params,
         )
         self.assertGreater(len(result.tag), 0)
-        self.assertIsInstance(result, TrackTags)
+        self.assertIsInstance(result, TagList)
         self.assertDictEqual(response["tags"], actual)
 
     @fixture.use_cassette(path="track/remove_tag")
@@ -110,7 +108,7 @@ class TrackServiceTests(MethodTestCase):
             result.params,
         )
         self.assertGreater(len(result.tag), 0)
-        self.assertIsInstance(result, TrackTopTags)
+        self.assertIsInstance(result, TagList)
         self.assertDictEqual(response["toptags"], actual)
 
     @fixture.use_cassette(path="track/search")
@@ -155,7 +153,7 @@ class TrackServiceTests(MethodTestCase):
             result.params,
         )
         self.assertGreater(len(result.track), 0)
-        self.assertIsInstance(result, TrackSimilar)
+        self.assertIsInstance(result, TrackList)
         self.assertDictEqual(response["similartracks"], actual)
 
     @fixture.use_cassette(path="track/love")

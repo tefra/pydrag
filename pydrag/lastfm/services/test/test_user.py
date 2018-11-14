@@ -1,19 +1,16 @@
 from pydrag.lastfm import Period
+from pydrag.lastfm.models.common import (
+    AlbumList,
+    ArtistList,
+    ChartList,
+    TagList,
+    TrackList,
+)
 from pydrag.lastfm.models.user import (
-    UserArtistTracks,
+    ArtistTrackList,
     UserFriends,
     UserInfo,
-    UserLovedTracks,
     UserPersonalTags,
-    UserRecentTracks,
-    UserTopAlbums,
-    UserTopArtists,
-    UserTopTags,
-    UserTopTracks,
-    UserWeeklyAlbumChart,
-    UserWeeklyArtistChart,
-    UserWeeklyChartList,
-    UserWeeklyTrackChart,
 )
 from pydrag.lastfm.services.test import MethodTestCase, fixture
 from pydrag.lastfm.services.user import UserService
@@ -35,7 +32,7 @@ class UserServiceTests(MethodTestCase):
         self.assertEqual(
             {"artist": "Trivium", "user": "rj", "page": "1"}, result.params
         )
-        self.assertIsInstance(result, UserArtistTracks)
+        self.assertIsInstance(result, ArtistTrackList)
         self.assertDictEqual(response["artisttracks"], actual)
 
     @fixture.use_cassette(path="user/get_friends_with_recent_tracks")
@@ -77,7 +74,7 @@ class UserServiceTests(MethodTestCase):
             {"user": "rj", "page": "1", "limit": "50"}, result.params
         )
         self.assertGreater(len(result.track), 0)
-        self.assertIsInstance(result, UserLovedTracks)
+        self.assertIsInstance(result, ArtistTrackList)
         self.assertDictEqual(response["lovedtracks"], actual)
 
     @fixture.use_cassette(path="user/get_personal_tags_track")
@@ -164,7 +161,7 @@ class UserServiceTests(MethodTestCase):
             result.params,
         )
         self.assertGreater(len(result.track), 0)
-        self.assertIsInstance(result, UserRecentTracks)
+        self.assertIsInstance(result, ArtistTrackList)
         self.assertDictEqual(response["recenttracks"], actual)
 
     @fixture.use_cassette(path="user/get_top_albums")
@@ -180,7 +177,7 @@ class UserServiceTests(MethodTestCase):
             result.params,
         )
         self.assertGreater(len(result.album), 0)
-        self.assertIsInstance(result, UserTopAlbums)
+        self.assertIsInstance(result, AlbumList)
         self.assertDictEqual(response["topalbums"], actual)
 
     @fixture.use_cassette(path="user/get_top_artists")
@@ -196,7 +193,7 @@ class UserServiceTests(MethodTestCase):
             result.params,
         )
         self.assertGreater(len(result.artist), 0)
-        self.assertIsInstance(result, UserTopArtists)
+        self.assertIsInstance(result, ArtistList)
         self.assertDictEqual(response["topartists"], actual)
 
     @fixture.use_cassette(path="user/get_top_tags")
@@ -209,7 +206,7 @@ class UserServiceTests(MethodTestCase):
         self.assertEqual("get_top_tags", result.method)
         self.assertEqual({"user": "rj", "limit": "50"}, result.params)
         self.assertGreater(len(result.tag), 0)
-        self.assertIsInstance(result, UserTopTags)
+        self.assertIsInstance(result, TagList)
         self.assertDictEqual(response["toptags"], actual)
 
     @fixture.use_cassette(path="user/get_top_tracks")
@@ -225,7 +222,7 @@ class UserServiceTests(MethodTestCase):
             result.params,
         )
         self.assertGreater(len(result.track), 0)
-        self.assertIsInstance(result, UserTopTracks)
+        self.assertIsInstance(result, TrackList)
         self.assertDictEqual(response["toptracks"], actual)
 
     @fixture.use_cassette(path="user/get_weekly_album_chart")
@@ -238,7 +235,7 @@ class UserServiceTests(MethodTestCase):
         self.assertEqual("get_weekly_album_chart", result.method)
         self.assertEqual({"user": "rj"}, result.params)
         self.assertGreater(len(result.album), 0)
-        self.assertIsInstance(result, UserWeeklyAlbumChart)
+        self.assertIsInstance(result, AlbumList)
         self.assertDictEqual(response["weeklyalbumchart"], actual)
 
     @fixture.use_cassette(path="user/get_weekly_artist_chart")
@@ -251,7 +248,7 @@ class UserServiceTests(MethodTestCase):
         self.assertEqual("get_weekly_artist_chart", result.method)
         self.assertEqual({"user": "rj"}, result.params)
         self.assertGreater(len(result.artist), 0)
-        self.assertIsInstance(result, UserWeeklyArtistChart)
+        self.assertIsInstance(result, ArtistList)
         self.assertDictEqual(response, actual)
         self.assertEqual(result.attr.from_date, response["@attr"]["from"])
         self.assertEqual(result.attr.to_date, response["@attr"]["to"])
@@ -266,7 +263,7 @@ class UserServiceTests(MethodTestCase):
         self.assertEqual("get_weekly_chart_list", result.method)
         self.assertEqual({"user": "rj"}, result.params)
         self.assertGreater(len(result.chart), 0)
-        self.assertIsInstance(result, UserWeeklyChartList)
+        self.assertIsInstance(result, ChartList)
         self.assertDictEqual(response, actual)
         self.assertEqual(
             result.chart[0].from_date, response["chart"][0]["from"]
@@ -283,7 +280,7 @@ class UserServiceTests(MethodTestCase):
         self.assertEqual("get_weekly_track_chart", result.method)
         self.assertEqual({"user": "rj"}, result.params)
         self.assertGreater(len(result.track), 0)
-        self.assertIsInstance(result, UserWeeklyTrackChart)
+        self.assertIsInstance(result, TrackList)
         self.assertDictEqual(response, actual)
         self.assertEqual(result.attr.from_date, response["@attr"]["from"])
         self.assertEqual(result.attr.to_date, response["@attr"]["to"])
