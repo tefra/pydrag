@@ -1,0 +1,73 @@
+{
+    "album": [
+        {
+            "mbid": "CENSORED3bd6",
+            "name": "The Eminem Show",
+            "url": "https://www.last.fm/music/Eminem",
+            "artist": {
+                "mbid": "CENSORED13d4",
+                "name": "Eminem",
+                "url": "https://www.last.fm/music/Eminem"
+            },
+            "image": [
+                {
+                    "size": "small",
+                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                },
+                {
+                    "size": "medium",
+                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                },
+                {
+                    "size": "large",
+                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                },
+                {
+                    "size": "extralarge",
+                    "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                }
+            ],
+            "@attr": {
+                "rank": "1"
+            }
+        },
+        {
+            "mbid": "",
+            "name": "Views",
+            "url": "https://www.last.fm/music/Drake",
+            "artist": {
+                "mbid": "CENSORED69a6",
+                "name": "Drake",
+                "url": "https://www.last.fm/music/Drake"
+            },
+            "image": [
+                {
+                    "size": "small",
+                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                },
+                {
+                    "size": "medium",
+                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                },
+                {
+                    "size": "large",
+                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                },
+                {
+                    "size": "extralarge",
+                    "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                }
+            ],
+            "@attr": {
+                "rank": "2"
+            }
+        }
+    ],
+    "@attr": {
+        "tag": "rap",
+        "page": 1,
+        "total": 13538,
+        "perPage": 2,
+        "totalPages": 6769
+    }
+}

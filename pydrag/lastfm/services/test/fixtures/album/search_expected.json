@@ -1,0 +1,1218 @@
+{
+    "@attr": {
+        "for": "fire"
+    },
+    "opensearch:Query": {
+        "role": "request",
+        "startPage": 1,
+        "#text": "",
+        "searchTerms": "fire"
+    },
+    "opensearch:itemsPerPage": 50,
+    "opensearch:startIndex": 0,
+    "opensearch:totalResults": 661041,
+    "albummatches": {
+        "album": [
+            {
+                "mbid": "CENSOREDb9e4",
+                "name": "Room on Fire",
+                "url": "https://www.last.fm/music/The+Strokes/Room+on+Fire",
+                "image": [
+                    {
+                        "size": "small",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    },
+                    {
+                        "size": "medium",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    },
+                    {
+                        "size": "large",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    },
+                    {
+                        "size": "extralarge",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    }
+                ],
+                "artist": "The Strokes"
+            },
+            {
+                "mbid": "CENSORED7ca5",
+                "name": "Holy Fire",
+                "url": "https://www.last.fm/music/Foals/Holy+Fire",
+                "image": [
+                    {
+                        "size": "small",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    },
+                    {
+                        "size": "medium",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    },
+                    {
+                        "size": "large",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    },
+                    {
+                        "size": "extralarge",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    }
+                ],
+                "artist": "Foals"
+            },
+            {
+                "mbid": "CENSOREDb0f2",
+                "name": "Friendly Fires",
+                "url": "https://www.last.fm/music/Friendly+Fires/Friendly+Fires",
+                "image": [
+                    {
+                        "size": "small",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    },
+                    {
+                        "size": "medium",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    },
+                    {
+                        "size": "large",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    },
+                    {
+                        "size": "extralarge",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    }
+                ],
+                "artist": "Friendly Fires"
+            },
+            {
+                "mbid": "CENSOREDd7f5",
+                "name": "I Am... Sasha Fierce",
+                "url": "https://www.last.fm/music/Beyonc%C3%A9/I+Am...+Sasha+Fierce",
+                "image": [
+                    {
+                        "size": "small",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    },
+                    {
+                        "size": "medium",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    },
+                    {
+                        "size": "large",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    },
+                    {
+                        "size": "extralarge",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    }
+                ],
+                "artist": "Beyonc\u00e9"
+            },
+            {
+                "mbid": "CENSOREDcf7b",
+                "name": "The Suburbs",
+                "url": "https://www.last.fm/music/Arcade+Fire/The+Suburbs",
+                "image": [
+                    {
+                        "size": "small",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    },
+                    {
+                        "size": "medium",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    },
+                    {
+                        "size": "large",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    },
+                    {
+                        "size": "extralarge",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    }
+                ],
+                "artist": "Arcade Fire"
+            },
+            {
+                "mbid": "CENSORED62ba",
+                "name": "Evil Friends",
+                "url": "https://www.last.fm/music/Portugal.+The+Man/Evil+Friends",
+                "image": [
+                    {
+                        "size": "small",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    },
+                    {
+                        "size": "medium",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    },
+                    {
+                        "size": "large",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    },
+                    {
+                        "size": "extralarge",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    }
+                ],
+                "artist": "Portugal. The Man"
+            },
+            {
+                "mbid": "CENSORED004b",
+                "name": "Scream Aim Fire",
+                "url": "https://www.last.fm/music/Bullet+for+My+Valentine/Scream+Aim+Fire",
+                "image": [
+                    {
+                        "size": "small",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    },
+                    {
+                        "size": "medium",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    },
+                    {
+                        "size": "large",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    },
+                    {
+                        "size": "extralarge",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    }
+                ],
+                "artist": "Bullet for My Valentine"
+            },
+            {
+                "mbid": "CENSOREDc082",
+                "name": "Fire",
+                "url": "https://www.last.fm/music/Electric+Six/Fire",
+                "image": [
+                    {
+                        "size": "small",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    },
+                    {
+                        "size": "medium",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    },
+                    {
+                        "size": "large",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    },
+                    {
+                        "size": "extralarge",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    }
+                ],
+                "artist": "Electric Six"
+            },
+            {
+                "mbid": "CENSOREDfcfe",
+                "name": "Funeral",
+                "url": "https://www.last.fm/music/Arcade+Fire/Funeral",
+                "image": [
+                    {
+                        "size": "small",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    },
+                    {
+                        "size": "medium",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    },
+                    {
+                        "size": "large",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    },
+                    {
+                        "size": "extralarge",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    }
+                ],
+                "artist": "Arcade Fire"
+            },
+            {
+                "mbid": "CENSORED605d",
+                "name": "Never Take Friendship Personal",
+                "url": "https://www.last.fm/music/Anberlin/Never+Take+Friendship+Personal",
+                "image": [
+                    {
+                        "size": "small",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    },
+                    {
+                        "size": "medium",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    },
+                    {
+                        "size": "large",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    },
+                    {
+                        "size": "extralarge",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    }
+                ],
+                "artist": "Anberlin"
+            },
+            {
+                "mbid": "CENSOREDd687",
+                "name": "Neon Bible",
+                "url": "https://www.last.fm/music/Arcade+Fire/Neon+Bible",
+                "image": [
+                    {
+                        "size": "small",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    },
+                    {
+                        "size": "medium",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    },
+                    {
+                        "size": "large",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    },
+                    {
+                        "size": "extralarge",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    }
+                ],
+                "artist": "Arcade Fire"
+            },
+            {
+                "mbid": "CENSORED2ec4",
+                "name": "Tell All Your Friends",
+                "url": "https://www.last.fm/music/Taking+Back+Sunday/Tell+All+Your+Friends",
+                "image": [
+                    {
+                        "size": "small",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    },
+                    {
+                        "size": "medium",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    },
+                    {
+                        "size": "large",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    },
+                    {
+                        "size": "extralarge",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    }
+                ],
+                "artist": "Taking Back Sunday"
+            },
+            {
+                "mbid": "CENSOREDd393",
+                "name": "Set Yourself on Fire",
+                "url": "https://www.last.fm/music/Stars/Set+Yourself+on+Fire",
+                "image": [
+                    {
+                        "size": "small",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    },
+                    {
+                        "size": "medium",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    },
+                    {
+                        "size": "large",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    },
+                    {
+                        "size": "extralarge",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    }
+                ],
+                "artist": "Stars"
+            },
+            {
+                "mbid": "CENSORED6597",
+                "name": "On Fire",
+                "url": "https://www.last.fm/music/Galaxie+500/On+Fire",
+                "image": [
+                    {
+                        "size": "small",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    },
+                    {
+                        "size": "medium",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    },
+                    {
+                        "size": "large",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    },
+                    {
+                        "size": "extralarge",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    }
+                ],
+                "artist": "Galaxie 500"
+            },
+            {
+                "mbid": "CENSORED960d",
+                "name": "Mutual Friends",
+                "url": "https://www.last.fm/music/Boy/Mutual+Friends",
+                "image": [
+                    {
+                        "size": "small",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    },
+                    {
+                        "size": "medium",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    },
+                    {
+                        "size": "large",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    },
+                    {
+                        "size": "extralarge",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    }
+                ],
+                "artist": "Boy"
+            },
+            {
+                "mbid": "CENSORED61ca",
+                "name": "Fire Like This",
+                "url": "https://www.last.fm/music/Blood+Red+Shoes/Fire+Like+This",
+                "image": [
+                    {
+                        "size": "small",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    },
+                    {
+                        "size": "medium",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    },
+                    {
+                        "size": "large",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    },
+                    {
+                        "size": "extralarge",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    }
+                ],
+                "artist": "Blood Red Shoes"
+            },
+            {
+                "mbid": "CENSOREDebee",
+                "name": "Friend and Foe",
+                "url": "https://www.last.fm/music/Menomena/Friend+and+Foe",
+                "image": [
+                    {
+                        "size": "small",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    },
+                    {
+                        "size": "medium",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    },
+                    {
+                        "size": "large",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    },
+                    {
+                        "size": "extralarge",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    }
+                ],
+                "artist": "Menomena"
+            },
+            {
+                "mbid": "CENSOREDd662",
+                "name": "Sonic Firestorm",
+                "url": "https://www.last.fm/music/DragonForce/Sonic+Firestorm",
+                "image": [
+                    {
+                        "size": "small",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    },
+                    {
+                        "size": "medium",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    },
+                    {
+                        "size": "large",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    },
+                    {
+                        "size": "extralarge",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    }
+                ],
+                "artist": "DragonForce"
+            },
+            {
+                "mbid": "CENSORED924c",
+                "name": "My Best Friend Is You",
+                "url": "https://www.last.fm/music/Kate+Nash/My+Best+Friend+Is+You",
+                "image": [
+                    {
+                        "size": "small",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    },
+                    {
+                        "size": "medium",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    },
+                    {
+                        "size": "large",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    },
+                    {
+                        "size": "extralarge",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    }
+                ],
+                "artist": "Kate Nash"
+            },
+            {
+                "mbid": "CENSORED9818",
+                "name": "Viva la Vida or Death and All His Friends",
+                "url": "https://www.last.fm/music/Coldplay/Viva+la+Vida+or+Death+and+All+His+Friends",
+                "image": [
+                    {
+                        "size": "small",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    },
+                    {
+                        "size": "medium",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    },
+                    {
+                        "size": "large",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    },
+                    {
+                        "size": "extralarge",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    }
+                ],
+                "artist": "Coldplay"
+            },
+            {
+                "mbid": "CENSORED787c",
+                "name": "Friends of Mine",
+                "url": "https://www.last.fm/music/Adam+Green/Friends+of+Mine",
+                "image": [
+                    {
+                        "size": "small",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    },
+                    {
+                        "size": "medium",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    },
+                    {
+                        "size": "large",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    },
+                    {
+                        "size": "extralarge",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    }
+                ],
+                "artist": "Adam Green"
+            },
+            {
+                "mbid": "CENSORED0913",
+                "name": "Give Me Fire",
+                "url": "https://www.last.fm/music/Mando+Diao/Give+Me+Fire",
+                "image": [
+                    {
+                        "size": "small",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    },
+                    {
+                        "size": "medium",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    },
+                    {
+                        "size": "large",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    },
+                    {
+                        "size": "extralarge",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    }
+                ],
+                "artist": "Mando Diao"
+            },
+            {
+                "mbid": "CENSORED95ea",
+                "name": "Girl on Fire",
+                "url": "https://www.last.fm/music/Alicia+Keys/Girl+on+Fire",
+                "image": [
+                    {
+                        "size": "small",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    },
+                    {
+                        "size": "medium",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    },
+                    {
+                        "size": "large",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    },
+                    {
+                        "size": "extralarge",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    }
+                ],
+                "artist": "Alicia Keys"
+            },
+            {
+                "mbid": "CENSORED7ddf",
+                "name": "Reflektor",
+                "url": "https://www.last.fm/music/Arcade+Fire/Reflektor",
+                "image": [
+                    {
+                        "size": "small",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    },
+                    {
+                        "size": "medium",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    },
+                    {
+                        "size": "large",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    },
+                    {
+                        "size": "extralarge",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    }
+                ],
+                "artist": "Arcade Fire"
+            },
+            {
+                "mbid": "CENSORED8cf3",
+                "name": "Fire Within",
+                "url": "https://www.last.fm/music/Birdy/Fire+Within",
+                "image": [
+                    {
+                        "size": "small",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    },
+                    {
+                        "size": "medium",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    },
+                    {
+                        "size": "large",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    },
+                    {
+                        "size": "extralarge",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    }
+                ],
+                "artist": "Birdy"
+            },
+            {
+                "mbid": "CENSOREDfc3a",
+                "name": "One Fierce Beer Coaster",
+                "url": "https://www.last.fm/music/Bloodhound+Gang/One+Fierce+Beer+Coaster",
+                "image": [
+                    {
+                        "size": "small",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    },
+                    {
+                        "size": "medium",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    },
+                    {
+                        "size": "large",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    },
+                    {
+                        "size": "extralarge",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    }
+                ],
+                "artist": "Bloodhound Gang"
+            },
+            {
+                "mbid": "",
+                "name": "Firestone",
+                "url": "https://www.last.fm/music/Kygo/Firestone",
+                "image": [
+                    {
+                        "size": "small",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    },
+                    {
+                        "size": "medium",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    },
+                    {
+                        "size": "large",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    },
+                    {
+                        "size": "extralarge",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    }
+                ],
+                "artist": "Kygo"
+            },
+            {
+                "mbid": "CENSOREDf015",
+                "name": "Fire",
+                "url": "https://www.last.fm/music/Hey/Fire",
+                "image": [
+                    {
+                        "size": "small",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    },
+                    {
+                        "size": "medium",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    },
+                    {
+                        "size": "large",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    },
+                    {
+                        "size": "extralarge",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    }
+                ],
+                "artist": "Hey"
+            },
+            {
+                "mbid": "CENSOREDd96c",
+                "name": "Slipway Fires",
+                "url": "https://www.last.fm/music/Razorlight/Slipway+Fires",
+                "image": [
+                    {
+                        "size": "small",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    },
+                    {
+                        "size": "medium",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    },
+                    {
+                        "size": "large",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    },
+                    {
+                        "size": "extralarge",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    }
+                ],
+                "artist": "Razorlight"
+            },
+            {
+                "mbid": "CENSOREDa90d",
+                "name": "Eden Fire",
+                "url": "https://www.last.fm/music/Sonic+Syndicate/Eden+Fire",
+                "image": [
+                    {
+                        "size": "small",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    },
+                    {
+                        "size": "medium",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    },
+                    {
+                        "size": "large",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    },
+                    {
+                        "size": "extralarge",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    }
+                ],
+                "artist": "Sonic Syndicate"
+            },
+            {
+                "mbid": "CENSOREDe1d1",
+                "name": "Go Tell Fire to the Mountain",
+                "url": "https://www.last.fm/music/WU+LYF/Go+Tell+Fire+to+the+Mountain",
+                "image": [
+                    {
+                        "size": "small",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    },
+                    {
+                        "size": "medium",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    },
+                    {
+                        "size": "large",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    },
+                    {
+                        "size": "extralarge",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    }
+                ],
+                "artist": "WU LYF"
+            },
+            {
+                "mbid": "CENSOREDd1d3",
+                "name": "Burn Your Fire for No Witness",
+                "url": "https://www.last.fm/music/Angel+Olsen/Burn+Your+Fire+for+No+Witness",
+                "image": [
+                    {
+                        "size": "small",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    },
+                    {
+                        "size": "medium",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    },
+                    {
+                        "size": "large",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    },
+                    {
+                        "size": "extralarge",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    }
+                ],
+                "artist": "Angel Olsen"
+            },
+            {
+                "mbid": "CENSORED6879",
+                "name": "Arcade Fire",
+                "url": "https://www.last.fm/music/Arcade+Fire/Arcade+Fire",
+                "image": [
+                    {
+                        "size": "small",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    },
+                    {
+                        "size": "medium",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    },
+                    {
+                        "size": "large",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    },
+                    {
+                        "size": "extralarge",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    }
+                ],
+                "artist": "Arcade Fire"
+            },
+            {
+                "mbid": "CENSOREDe4c6",
+                "name": "Blood Fire Death",
+                "url": "https://www.last.fm/music/Bathory/Blood+Fire+Death",
+                "image": [
+                    {
+                        "size": "small",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    },
+                    {
+                        "size": "medium",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    },
+                    {
+                        "size": "large",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    },
+                    {
+                        "size": "extralarge",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    }
+                ],
+                "artist": "Bathory"
+            },
+            {
+                "mbid": "",
+                "name": "Firepower",
+                "url": "https://www.last.fm/music/Judas+Priest/Firepower",
+                "image": [
+                    {
+                        "size": "small",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    },
+                    {
+                        "size": "medium",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    },
+                    {
+                        "size": "large",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    },
+                    {
+                        "size": "extralarge",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    }
+                ],
+                "artist": "Judas Priest"
+            },
+            {
+                "mbid": "",
+                "name": "FRIENDS",
+                "url": "https://www.last.fm/music/Marshmello/FRIENDS",
+                "image": [
+                    {
+                        "size": "small",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    },
+                    {
+                        "size": "medium",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    },
+                    {
+                        "size": "large",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    },
+                    {
+                        "size": "extralarge",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    }
+                ],
+                "artist": "Marshmello"
+            },
+            {
+                "mbid": "",
+                "name": "Friends",
+                "url": "https://www.last.fm/music/White+Lies/Friends",
+                "image": [
+                    {
+                        "size": "small",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    },
+                    {
+                        "size": "medium",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    },
+                    {
+                        "size": "large",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    },
+                    {
+                        "size": "extralarge",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    }
+                ],
+                "artist": "White Lies"
+            },
+            {
+                "mbid": "CENSOREDc738",
+                "name": "Friend Opportunity",
+                "url": "https://www.last.fm/music/Deerhoof/Friend+Opportunity",
+                "image": [
+                    {
+                        "size": "small",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    },
+                    {
+                        "size": "medium",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    },
+                    {
+                        "size": "large",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    },
+                    {
+                        "size": "extralarge",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    }
+                ],
+                "artist": "Deerhoof"
+            },
+            {
+                "mbid": "CENSOREDe522",
+                "name": "Fire of Love",
+                "url": "https://www.last.fm/music/The+Gun+Club/Fire+of+Love",
+                "image": [
+                    {
+                        "size": "small",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    },
+                    {
+                        "size": "medium",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    },
+                    {
+                        "size": "large",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    },
+                    {
+                        "size": "extralarge",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    }
+                ],
+                "artist": "The Gun Club"
+            },
+            {
+                "mbid": "CENSOREDb9ca",
+                "name": "Fire of Unknown Origin",
+                "url": "https://www.last.fm/music/Blue+%C3%96yster+Cult/Fire+of+Unknown+Origin",
+                "image": [
+                    {
+                        "size": "small",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    },
+                    {
+                        "size": "medium",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    },
+                    {
+                        "size": "large",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    },
+                    {
+                        "size": "extralarge",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    }
+                ],
+                "artist": "Blue \u00d6yster Cult"
+            },
+            {
+                "mbid": "CENSORED41c0",
+                "name": "Ashes & Fire",
+                "url": "https://www.last.fm/music/Ryan+Adams/Ashes+&+Fire",
+                "image": [
+                    {
+                        "size": "small",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    },
+                    {
+                        "size": "medium",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    },
+                    {
+                        "size": "large",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    },
+                    {
+                        "size": "extralarge",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    }
+                ],
+                "artist": "Ryan Adams"
+            },
+            {
+                "mbid": "CENSOREDf673",
+                "name": "The Unforgettable Fire",
+                "url": "https://www.last.fm/music/U2/The+Unforgettable+Fire",
+                "image": [
+                    {
+                        "size": "small",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    },
+                    {
+                        "size": "medium",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    },
+                    {
+                        "size": "large",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    },
+                    {
+                        "size": "extralarge",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    }
+                ],
+                "artist": "U2"
+            },
+            {
+                "mbid": "CENSORED5358",
+                "name": "Fire & Ice",
+                "url": "https://www.last.fm/music/Kaskade/Fire+&+Ice",
+                "image": [
+                    {
+                        "size": "small",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    },
+                    {
+                        "size": "medium",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    },
+                    {
+                        "size": "large",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    },
+                    {
+                        "size": "extralarge",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    }
+                ],
+                "artist": "Kaskade"
+            },
+            {
+                "mbid": "CENSORED6fec",
+                "name": "Fires at Midnight",
+                "url": "https://www.last.fm/music/Blackmore%27s+Night/Fires+at+Midnight",
+                "image": [
+                    {
+                        "size": "small",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    },
+                    {
+                        "size": "medium",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    },
+                    {
+                        "size": "large",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    },
+                    {
+                        "size": "extralarge",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    }
+                ],
+                "artist": "Blackmore's Night"
+            },
+            {
+                "mbid": "",
+                "name": "Scream Aim Fire (Japanese Edition)",
+                "url": "https://www.last.fm/music/Bullet+for+My+Valentine/Scream+Aim+Fire+(Japanese+Edition)",
+                "image": [
+                    {
+                        "size": "small",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    },
+                    {
+                        "size": "medium",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    },
+                    {
+                        "size": "large",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    },
+                    {
+                        "size": "extralarge",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    }
+                ],
+                "artist": "Bullet for My Valentine"
+            },
+            {
+                "mbid": "CENSORED3f4a",
+                "name": "Friendly Fire",
+                "url": "https://www.last.fm/music/Sean+Lennon/Friendly+Fire",
+                "image": [
+                    {
+                        "size": "small",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    },
+                    {
+                        "size": "medium",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    },
+                    {
+                        "size": "large",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    },
+                    {
+                        "size": "extralarge",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    }
+                ],
+                "artist": "Sean Lennon"
+            },
+            {
+                "mbid": "",
+                "name": "Fire Within (Deluxe)",
+                "url": "https://www.last.fm/music/Birdy/Fire+Within+(Deluxe)",
+                "image": [
+                    {
+                        "size": "small",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    },
+                    {
+                        "size": "medium",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    },
+                    {
+                        "size": "large",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    },
+                    {
+                        "size": "extralarge",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    }
+                ],
+                "artist": "Birdy"
+            },
+            {
+                "mbid": "CENSOREDccf5",
+                "name": "Fire And Water",
+                "url": "https://www.last.fm/music/Free/Fire+And+Water",
+                "image": [
+                    {
+                        "size": "small",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    },
+                    {
+                        "size": "medium",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    },
+                    {
+                        "size": "large",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    },
+                    {
+                        "size": "extralarge",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    }
+                ],
+                "artist": "Free"
+            },
+            {
+                "mbid": "CENSORED3a96",
+                "name": "Fireball",
+                "url": "https://www.last.fm/music/Deep+Purple/Fireball",
+                "image": [
+                    {
+                        "size": "small",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    },
+                    {
+                        "size": "medium",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    },
+                    {
+                        "size": "large",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    },
+                    {
+                        "size": "extralarge",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    }
+                ],
+                "artist": "Deep Purple"
+            },
+            {
+                "mbid": "CENSORED799a",
+                "name": "Fucked Up Friends",
+                "url": "https://www.last.fm/music/Tobacco/Fucked+Up+Friends",
+                "image": [
+                    {
+                        "size": "small",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    },
+                    {
+                        "size": "medium",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    },
+                    {
+                        "size": "large",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    },
+                    {
+                        "size": "extralarge",
+                        "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    }
+                ],
+                "artist": "Tobacco"
+            }
+        ]
+    }
+}

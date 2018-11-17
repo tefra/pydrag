@@ -31,8 +31,6 @@ class AlbumServiceTests(MethodTestCase):
     @fixture.use_cassette(path="album/get_tags")
     def test_get_tags(self):
         result = self.album.get_tags(user="Zaratoustre")
-        actual = result.to_dict()
-        response = result.response.json()
 
         self.assertEqual("Album", result.namespace)
         self.assertEqual("get_tags", result.method)
@@ -47,8 +45,7 @@ class AlbumServiceTests(MethodTestCase):
             result.params,
         )
         self.assertIsInstance(result, TagList)
-        self.assertEqual(2, len(result.tag))
-        self.assertDictEqual(response["tags"], actual)
+        self.assertFixtureEqual("album/get_tags", result.to_dict())
 
     @fixture.use_cassette(path="album/remove_tag")
     def test_remove_tag(self):
@@ -69,8 +66,6 @@ class AlbumServiceTests(MethodTestCase):
         self.album.artist = None
         self.album.album = None
         result = self.album.get_info()
-        actual = result.to_dict()
-        response = result.response.json()
 
         self.assertEqual("Album", result.namespace)
         self.assertEqual("get_info", result.method)
@@ -83,13 +78,11 @@ class AlbumServiceTests(MethodTestCase):
             result.params,
         )
         self.assertIsInstance(result, AlbumInfo)
-        self.assertDictEqual(response["album"], actual)
+        self.assertFixtureEqual("album/get_info", result.to_dict())
 
     @fixture.use_cassette(path="album/get_top_tags")
     def test_get_top_tags(self):
         result = self.album.get_top_tags(False)
-        actual = result.to_dict()
-        response = result.response.json()
 
         self.assertEqual("Album", result.namespace)
         self.assertEqual("get_top_tags", result.method)
@@ -102,16 +95,14 @@ class AlbumServiceTests(MethodTestCase):
             },
             result.params,
         )
-        self.assertGreater(len(result.tag), 0)
+
         self.assertIsInstance(result, TagList)
-        self.assertDictEqual(response["toptags"], actual)
+        self.assertFixtureEqual("album/get_top_tags", result.to_dict())
 
     @fixture.use_cassette(path="album/search")
     def test_search(self):
         self.album.album = "fire"
         result = self.album.search()
-        actual = result.to_dict()
-        response = result.response.json()
 
         self.assertEqual("Album", result.namespace)
         self.assertEqual("search", result.method)
@@ -119,7 +110,7 @@ class AlbumServiceTests(MethodTestCase):
             {"album": "fire", "page": "1", "limit": "50"}, result.params
         )
         self.assertIsInstance(result, AlbumSearch)
-        self.assertDictEqual(response["results"], actual)
+        self.assertFixtureEqual("album/search", result.to_dict())
 
         self.assertEqual(1, result.get_page())
         self.assertEqual(50, result.get_limit())

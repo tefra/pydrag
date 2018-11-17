@@ -32,8 +32,6 @@ class TrackServiceTests(MethodTestCase):
     @fixture.use_cassette(path="track/get_tags")
     def test_get_tags(self):
         result = self.track.get_tags(user="RJ")
-        actual = result.to_dict()
-        response = result.response.json()
 
         self.assertEqual("Track", result.namespace)
         self.assertEqual("get_tags", result.method)
@@ -46,9 +44,9 @@ class TrackServiceTests(MethodTestCase):
             },
             result.params,
         )
-        self.assertGreater(len(result.tag), 0)
+
         self.assertIsInstance(result, TagList)
-        self.assertDictEqual(response["tags"], actual)
+        self.assertFixtureEqual("track/get_tags", result.to_dict())
 
     @fixture.use_cassette(path="track/remove_tag")
     def test_remove_tag(self):
@@ -63,8 +61,6 @@ class TrackServiceTests(MethodTestCase):
     def test_get_info(self):
         self.track.mbid = None
         result = self.track.get_info()
-        actual = result.to_dict()
-        response = result.response.json()
 
         self.assertEqual("Track", result.namespace)
         self.assertEqual("get_info", result.method)
@@ -78,14 +74,12 @@ class TrackServiceTests(MethodTestCase):
             result.params,
         )
         self.assertIsInstance(result, TrackInfo)
-        self.assertDictEqual(response["track"], actual)
+        self.assertFixtureEqual("track/get_info", result.to_dict())
 
     @fixture.use_cassette(path="track/get_correction")
     def test_get_correction(self):
         self.track.track = "Hells Bell"
         result = self.track.get_correction()
-        actual = result.to_dict()
-        response = result.response.json()
 
         self.assertEqual("Track", result.namespace)
         self.assertEqual("get_correction", result.method)
@@ -93,13 +87,11 @@ class TrackServiceTests(MethodTestCase):
             {"artist": "AC / DC", "track": "Hells Bell"}, result.params
         )
         self.assertIsInstance(result, TrackCorrection)
-        self.assertDictEqual(response["corrections"], actual)
+        self.assertFixtureEqual("track/get_correction", result.to_dict())
 
     @fixture.use_cassette(path="track/get_top_tags")
     def test_get_top_tags(self):
         result = self.track.get_top_tags(True)
-        actual = result.to_dict()
-        response = result.response.json()
 
         self.assertEqual("Track", result.namespace)
         self.assertEqual("get_top_tags", result.method)
@@ -107,16 +99,14 @@ class TrackServiceTests(MethodTestCase):
             {"artist": "AC / DC", "autocorrect": True, "track": "Hells Bell"},
             result.params,
         )
-        self.assertGreater(len(result.tag), 0)
+
         self.assertIsInstance(result, TagList)
-        self.assertDictEqual(response["toptags"], actual)
+        self.assertFixtureEqual("track/get_top_tags", result.to_dict())
 
     @fixture.use_cassette(path="track/search")
     def test_search(self):
         self.track.track = "gun"
         result = self.track.search(page=4, limit=5)
-        actual = result.to_dict()
-        response = result.response.json()
 
         self.assertEqual("Track", result.namespace)
         self.assertEqual("search", result.method)
@@ -124,9 +114,8 @@ class TrackServiceTests(MethodTestCase):
             {"track": "gun", "page": "4", "limit": "5"}, result.params
         )
 
-        self.assertGreater(len(result.matches.track), 0)
         self.assertIsInstance(result, TrackSearch)
-        self.assertDictEqual(response["results"], actual)
+        self.assertFixtureEqual("track/search", result.to_dict())
 
         self.assertEqual(4, result.get_page())
         self.assertEqual(5, result.get_limit())
@@ -138,8 +127,6 @@ class TrackServiceTests(MethodTestCase):
     @fixture.use_cassette(path="track/get_similar")
     def test_get_similar(self):
         result = self.track.get_similar(True)
-        actual = result.to_dict()
-        response = result.response.json()
 
         self.assertEqual("Track", result.namespace)
         self.assertEqual("get_similar", result.method)
@@ -152,9 +139,9 @@ class TrackServiceTests(MethodTestCase):
             },
             result.params,
         )
-        self.assertGreater(len(result.track), 0)
+
         self.assertIsInstance(result, TrackList)
-        self.assertDictEqual(response["similartracks"], actual)
+        self.assertFixtureEqual("track/get_similar", result.to_dict())
 
     @fixture.use_cassette(path="track/love")
     def test_love(self):
@@ -179,8 +166,8 @@ class TrackServiceTests(MethodTestCase):
         result = TrackService(
             track="Hells Bells", artist="AC/DC"
         ).update_now_playing(track_number=2)
-        response = result.response.json()
-        actual = result.to_dict()
+        result.response.json()
+        result.to_dict()
         self.assertDictEqual(
             {
                 "artist": "AC/DC",
@@ -191,7 +178,7 @@ class TrackServiceTests(MethodTestCase):
             result.params,
         )
         self.assertIsInstance(result, TrackUpdateNowPlaying)
-        self.assertDictEqual(response["nowplaying"], actual)
+        self.assertFixtureEqual("track/update_now_playing", result.to_dict())
 
     @fixture.use_cassette(path="track/scrobble_tracks")
     def test_scrobble_tracks(self):

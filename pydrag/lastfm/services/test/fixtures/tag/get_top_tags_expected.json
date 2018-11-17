@@ -1,0 +1,59 @@
+{
+    "tag": [
+        {
+            "name": "black metal",
+            "reach": 60919,
+            "count": 808560
+        },
+        {
+            "name": "dance",
+            "reach": 131041,
+            "count": 789981
+        },
+        {
+            "name": "80s",
+            "reach": 99629,
+            "count": 768919
+        },
+        {
+            "name": "Progressive rock",
+            "reach": 94830,
+            "count": 705995
+        },
+        {
+            "name": "death metal",
+            "reach": 70446,
+            "count": 696989
+        },
+        {
+            "name": "hardcore",
+            "reach": 96344,
+            "count": 679448
+        },
+        {
+            "name": "british",
+            "reach": 92377,
+            "count": 679004
+        },
+        {
+            "name": "heavy metal",
+            "reach": 89132,
+            "count": 676538
+        },
+        {
+            "name": "soul",
+            "reach": 99192,
+            "count": 659170
+        },
+        {
+            "name": "chillout",
+            "reach": 102845,
+            "count": 642670
+        }
+    ],
+    "@attr": {
+        "total": 2693772,
+        "offset": 20,
+        "num_res": 10
+    }
+}

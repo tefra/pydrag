@@ -11,8 +11,6 @@ class LibraryServiceTests(MethodTestCase):
     @fixture.use_cassette(path="library/get_artists")
     def test_get_artists(self):
         result = self.library.get_artists()
-        actual = result.to_dict()
-        response = result.response.json()
 
         self.assertIsInstance(result, ArtistList)
-        self.assertDictEqual(response["artists"], actual)
+        self.assertFixtureEqual("library/get_artists", result.to_dict())

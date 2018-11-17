@@ -11,8 +11,6 @@ class GeoServiceTests(MethodTestCase):
     @fixture.use_cassette(path="geo/get_top_artists")
     def test_get_top_artists(self):
         result = self.geo.get_top_artists(page=1, limit=10)
-        actual = result.to_dict()
-        response = result.response.json()
 
         self.assertEqual("Geo", result.namespace)
         self.assertEqual("get_top_artists", result.method)
@@ -20,14 +18,12 @@ class GeoServiceTests(MethodTestCase):
             {"country": "greece", "limit": "10", "page": "1"}, result.params
         )
         self.assertIsInstance(result, ArtistList)
-        self.assertGreater(len(result.artist), 0)
-        self.assertDictEqual(response["topartists"], actual)
+
+        self.assertFixtureEqual("geo/get_top_artists", result.to_dict())
 
     @fixture.use_cassette(path="geo/get_top_tracks")
     def test_get_top_tracks(self):
         result = self.geo.get_top_tracks(page=1, limit=10)
-        actual = result.to_dict()
-        response = result.response.json()
 
         self.assertEqual("Geo", result.namespace)
         self.assertEqual("get_top_tracks", result.method)
@@ -35,5 +31,5 @@ class GeoServiceTests(MethodTestCase):
             {"country": "greece", "limit": "10", "page": "1"}, result.params
         )
         self.assertIsInstance(result, TrackList)
-        self.assertGreater(len(result.track), 0)
-        self.assertDictEqual(response["tracks"], actual)
+
+        self.assertFixtureEqual("geo/get_top_tracks", result.to_dict())

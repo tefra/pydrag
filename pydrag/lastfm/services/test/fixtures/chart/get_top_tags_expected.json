@@ -1,0 +1,80 @@
+{
+    "tag": [
+        {
+            "name": "rock",
+            "reach": 393374,
+            "url": "https://www.last.fm/tag/rock",
+            "taggings": 3934957,
+            "wiki": {}
+        },
+        {
+            "name": "electronic",
+            "reach": 251646,
+            "url": "https://www.last.fm/tag/electronic",
+            "taggings": 2335574,
+            "wiki": {}
+        },
+        {
+            "name": "seen live",
+            "reach": 81624,
+            "url": "https://www.last.fm/tag/seen+live",
+            "taggings": 2128124,
+            "wiki": {}
+        },
+        {
+            "name": "alternative",
+            "reach": 260201,
+            "url": "https://www.last.fm/tag/alternative",
+            "taggings": 2068697,
+            "wiki": {}
+        },
+        {
+            "name": "indie",
+            "reach": 251353,
+            "url": "https://www.last.fm/tag/indie",
+            "taggings": 1995086,
+            "wiki": {}
+        },
+        {
+            "name": "pop",
+            "reach": 222857,
+            "url": "https://www.last.fm/tag/pop",
+            "taggings": 1931373,
+            "wiki": {}
+        },
+        {
+            "name": "female vocalists",
+            "reach": 167306,
+            "url": "https://www.last.fm/tag/female+vocalists",
+            "taggings": 1586278,
+            "wiki": {}
+        },
+        {
+            "name": "metal",
+            "reach": 154710,
+            "url": "https://www.last.fm/tag/metal",
+            "taggings": 1247954,
+            "wiki": {}
+        },
+        {
+            "name": "alternative rock",
+            "reach": 165949,
+            "url": "https://www.last.fm/tag/alternative+rock",
+            "taggings": 1142533,
+            "wiki": {}
+        },
+        {
+            "name": "classic rock",
+            "reach": 136456,
+            "url": "https://www.last.fm/tag/classic+rock",
+            "taggings": 1137203,
+            "wiki": {}
+        }
+    ],
+    "@attr": {
+        "page": 2,
+        "total": 2693674,
+        "perPage": 10,
+        "totalPages": 269368
+    }
+}

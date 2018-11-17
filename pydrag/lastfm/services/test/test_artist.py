@@ -29,8 +29,6 @@ class ArtistServiceTests(MethodTestCase):
     def test_get_tags(self):
         # todo check all these list retrievals that work without data
         result = self.artist.get_tags(user="Zaratoustre")
-        actual = result.to_dict()
-        response = result.response.json()
 
         self.assertEqual("Artist", result.namespace)
         self.assertEqual("get_tags", result.method)
@@ -44,8 +42,7 @@ class ArtistServiceTests(MethodTestCase):
             result.params,
         )
         self.assertIsInstance(result, TagList)
-        self.assertEqual(2, len(result.tag))
-        self.assertDictEqual(response["tags"], actual)
+        self.assertFixtureEqual("artist/get_tags", result.to_dict())
 
     @fixture.use_cassette(path="artist/remove_tag")
     def test_remove_tag(self):
@@ -60,8 +57,6 @@ class ArtistServiceTests(MethodTestCase):
     def test_get_info(self):
         self.artist.artist = None
         result = self.artist.get_info()
-        actual = result.to_dict()
-        response = result.response.json()
 
         self.assertEqual("Artist", result.namespace)
         self.assertEqual("get_info", result.method)
@@ -74,27 +69,23 @@ class ArtistServiceTests(MethodTestCase):
             result.params,
         )
         self.assertIsInstance(result, ArtistInfo)
-        self.assertDictEqual(response["artist"], actual)
+        self.assertFixtureEqual("artist/get_info", result.to_dict())
 
     @fixture.use_cassette(path="artist/get_correction")
     def test_get_correction(self):
         self.artist.mbid = None
         self.artist.artist = "Guns an roses"
         result = self.artist.get_correction()
-        actual = result.to_dict()
-        response = result.response.json()
 
         self.assertEqual("Artist", result.namespace)
         self.assertEqual("get_correction", result.method)
         self.assertEqual({"artist": "Guns an roses"}, result.params)
         self.assertIsInstance(result, ArtistCorrection)
-        self.assertDictEqual(response["corrections"], actual)
+        self.assertFixtureEqual("artist/get_correction", result.to_dict())
 
     @fixture.use_cassette(path="artist/get_top_tags")
     def test_get_top_tags(self):
         result = self.artist.get_top_tags(True)
-        actual = result.to_dict()
-        response = result.response.json()
 
         self.assertEqual("Artist", result.namespace)
         self.assertEqual("get_top_tags", result.method)
@@ -106,16 +97,14 @@ class ArtistServiceTests(MethodTestCase):
             },
             result.params,
         )
-        self.assertGreater(len(result.tag), 0)
+
         self.assertIsInstance(result, TagList)
-        self.assertDictEqual(response["toptags"], actual)
+        self.assertFixtureEqual("artist/get_top_tags", result.to_dict())
 
     @fixture.use_cassette(path="artist/search")
     def test_search(self):
         self.artist.artist = "gun"
         result = self.artist.search()
-        actual = result.to_dict()
-        response = result.response.json()
 
         self.assertEqual("Artist", result.namespace)
         self.assertEqual("search", result.method)
@@ -123,9 +112,8 @@ class ArtistServiceTests(MethodTestCase):
             {"artist": "gun", "page": "1", "limit": "50"}, result.params
         )
 
-        self.assertGreater(len(result.matches.artist), 0)
         self.assertIsInstance(result, ArtistSearch)
-        self.assertDictEqual(response["results"], actual)
+        self.assertFixtureEqual("artist/search", result.to_dict())
 
         self.assertEqual(1, result.get_page())
         self.assertEqual(50, result.get_limit())
@@ -137,8 +125,6 @@ class ArtistServiceTests(MethodTestCase):
     @fixture.use_cassette(path="artist/get_top_tracks")
     def test_get_top_tracks(self):
         result = self.artist.get_top_tracks(True)
-        actual = result.to_dict()
-        response = result.response.json()
 
         self.assertEqual("Artist", result.namespace)
         self.assertEqual("get_top_tracks", result.method)
@@ -152,15 +138,13 @@ class ArtistServiceTests(MethodTestCase):
             },
             result.params,
         )
-        self.assertGreater(len(result.track), 0)
+
         self.assertIsInstance(result, TrackList)
-        self.assertDictEqual(response["toptracks"], actual)
+        self.assertFixtureEqual("artist/get_top_tracks", result.to_dict())
 
     @fixture.use_cassette(path="artist/get_similar")
     def test_get_similar(self):
         result = self.artist.get_similar(True)
-        actual = result.to_dict()
-        response = result.response.json()
 
         self.assertEqual("Artist", result.namespace)
         self.assertEqual("get_similar", result.method)
@@ -173,6 +157,6 @@ class ArtistServiceTests(MethodTestCase):
             },
             result.params,
         )
-        self.assertGreater(len(result.artist), 0)
+
         self.assertIsInstance(result, ArtistList)
-        self.assertDictEqual(response["similarartists"], actual)
+        self.assertFixtureEqual("artist/get_similar", result.to_dict())

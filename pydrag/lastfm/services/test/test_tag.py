@@ -18,14 +18,12 @@ class TagServiceTests(MethodTestCase):
     @fixture.use_cassette(path="tag/get_info")
     def test_get_info(self):
         result = self.tag.get_info(lang="en")
-        actual = result.to_dict()
-        response = result.response.json()
 
         self.assertEqual("Tag", result.namespace)
         self.assertEqual("get_info", result.method)
         self.assertEqual({"lang": "en", "tag": "rap"}, result.params)
         self.assertIsInstance(result, TagInfo)
-        self.assertDictEqual(response["tag"], actual)
+        self.assertFixtureEqual("tag/get_info", result.to_dict())
 
     def test_get_info_no_tag(self):
         with self.assertRaises(AssertionError):
@@ -38,14 +36,12 @@ class TagServiceTests(MethodTestCase):
         """
         self.tag.tag = "Disco"
         result = self.tag.get_similar()
-        actual = result.to_dict()
-        response = result.response.json()
 
         self.assertEqual("Tag", result.namespace)
         self.assertEqual("get_similar", result.method)
         self.assertEqual({"tag": "Disco"}, result.params)
         self.assertIsInstance(result, TagInfoList)
-        self.assertDictEqual(response["similartags"], actual)
+        self.assertFixtureEqual("tag/get_similar", result.to_dict())
 
     def test_get_similar_no_tag(self):
         with self.assertRaises(AssertionError):
@@ -54,17 +50,15 @@ class TagServiceTests(MethodTestCase):
     @fixture.use_cassette(path="tag/get_top_albums")
     def test_get_top_albums(self):
         result = self.tag.get_top_albums(page=1, limit=2)
-        actual = result.to_dict()
-        response = result.response.json()
 
         self.assertEqual("Tag", result.namespace)
         self.assertEqual("get_top_albums", result.method)
         self.assertEqual(
             {"limit": "2", "page": "1", "tag": "rap"}, result.params
         )
-        self.assertGreater(len(result.album), 0)
+
         self.assertIsInstance(result, AlbumList)
-        self.assertDictEqual(response["albums"], actual)
+        self.assertFixtureEqual("tag/get_top_albums", result.to_dict())
 
     def test_get_top_albums_no_tag(self):
         with self.assertRaises(AssertionError):
@@ -73,17 +67,15 @@ class TagServiceTests(MethodTestCase):
     @fixture.use_cassette(path="tag/get_top_artists")
     def test_get_top_artists(self):
         result = self.tag.get_top_artists(page=1, limit=2)
-        actual = result.to_dict()
-        response = result.response.json()
 
         self.assertEqual("Tag", result.namespace)
         self.assertEqual("get_top_artists", result.method)
         self.assertEqual(
             {"limit": "2", "page": "1", "tag": "rap"}, result.params
         )
-        self.assertGreater(len(result.artist), 0)
+
         self.assertIsInstance(result, ArtistList)
-        self.assertDictEqual(response["topartists"], actual)
+        self.assertFixtureEqual("tag/get_top_artists", result.to_dict())
 
         self.assertEqual(1, result.get_page())
         self.assertEqual(2, result.get_limit())
@@ -99,17 +91,15 @@ class TagServiceTests(MethodTestCase):
     @fixture.use_cassette(path="tag/get_top_tracks")
     def test_get_top_tracks(self):
         result = self.tag.get_top_tracks(page=1, limit=2)
-        actual = result.to_dict()
-        response = result.response.json()
 
         self.assertEqual("Tag", result.namespace)
         self.assertEqual("get_top_tracks", result.method)
         self.assertEqual(
             {"limit": "2", "page": "1", "tag": "rap"}, result.params
         )
-        self.assertGreater(len(result.track), 0)
+
         self.assertIsInstance(result, TrackList)
-        self.assertDictEqual(response["tracks"], actual)
+        self.assertFixtureEqual("tag/get_top_tracks", result.to_dict())
 
     def test_get_top_tracks_no_tag(self):
         with self.assertRaises(AssertionError):
@@ -118,33 +108,24 @@ class TagServiceTests(MethodTestCase):
     @fixture.use_cassette(path="tag/get_top_tags")
     def test_get_top_tags(self):
         result = self.tag.get_top_tags(page=3, limit=10)
-        actual = result.to_dict()
-        response = result.response.json()
 
         self.assertEqual("Tag", result.namespace)
         self.assertEqual("get_top_tags", result.method)
         self.assertEqual({"num_res": "10", "offset": "20"}, result.params)
         self.assertEqual(10, len(result.tag))
         self.assertIsInstance(result, TagInfoList)
-        self.assertDictEqual(response["toptags"], actual)
+        self.assertFixtureEqual("tag/get_top_tags", result.to_dict())
 
     @fixture.use_cassette(path="tag/get_weekly_chart_list")
     def test_get_weekly_chart_list(self):
         result = self.tag.get_weekly_chart_list()
-        actual = result.to_dict()
-        response = result.response.json()["weeklychartlist"]
 
         self.assertEqual("Tag", result.namespace)
         self.assertEqual("get_weekly_chart_list", result.method)
         self.assertEqual({"tag": "rap"}, result.params)
-        self.assertGreater(len(result.chart), 0)
-        self.assertIsInstance(result, ChartList)
-        self.assertDictEqual(response, actual)
 
-        self.assertEqual(
-            result.chart[0].from_date, response["chart"][0]["from"]
-        )
-        self.assertEqual(result.chart[0].to_date, response["chart"][0]["to"])
+        self.assertIsInstance(result, ChartList)
+        self.assertFixtureEqual("tag/get_weekly_chart_list", result.to_dict())
 
     def test_get_weekly_chart_list_no_tag(self):
         with self.assertRaises(AssertionError):

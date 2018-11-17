@@ -1,9 +1,11 @@
+import json
 import os
 from unittest import TestCase
 import re
 from vcr import config, VCR
 
 where_am_i = os.path.dirname(os.path.realpath(__file__))
+fixtures_dir = os.path.join(where_am_i, "fixtures")
 
 censored_parameters = [
     ("token", "USER_TOKEN"),
@@ -25,7 +27,7 @@ fixture = config.VCR(
     filter_query_parameters=censored_parameters,
     filter_post_data_parameters=censored_parameters,
     before_record_response=censore_response,
-    cassette_library_dir=os.path.join(where_am_i, "fixtures"),
+    cassette_library_dir=fixtures_dir,
     path_transformer=VCR.ensure_suffix(".json"),
     serializer="json",
 )
@@ -53,6 +55,15 @@ class MethodTestCase(TestCase):
     def setUp(self):
         self.maxDiff = None
         super(MethodTestCase, self).setUp()
+
+    def load_fixture(self, file_name):
+        with open(
+            "{}/{}_expected.json".format(fixtures_dir, file_name), "r"
+        ) as f:
+            return json.load(f)
+
+    def assertFixtureEqual(self, fixture, actual):
+        self.assertDictEqual(self.load_fixture(fixture), actual)
 
     def assertDictEqual(self, d1, d2, msg=None):
         super(MethodTestCase, self).assertDictEqual(s(d1), s(d2))
