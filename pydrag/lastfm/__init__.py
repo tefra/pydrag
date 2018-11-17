@@ -1,17 +1,17 @@
 import os
 from enum import Enum
 
-from attr import attrs, attrib
+from attr import dataclass, ib
 
 from pydrag.lastfm.utils import md5
 
 
-@attrs(auto_attribs=True, frozen=True)
+@dataclass(frozen=True)
 class Config:
     api_key: str
     api_secret: str
     username: str
-    password: str = attrib(converter=lambda x: not x or md5(x))
+    password: str = ib(converter=lambda x: not x or md5(x))
     api_root_url: str = "https://ws.audioscrobbler.com/2.0/"
 
 

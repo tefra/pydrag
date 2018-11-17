@@ -1,11 +1,11 @@
 {
-    "@attr": {
+    "attr": {
         "page": 1,
         "user": "RJ",
         "total": 0,
         "artist": "Trivium",
-        "perPage": 50,
-        "totalPages": 0
+        "limit": 50,
+        "total_pages": 0
     },
     "track": []
 }

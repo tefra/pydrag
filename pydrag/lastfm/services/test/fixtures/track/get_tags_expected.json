@@ -13,7 +13,7 @@
             "url": "https://www.last.fm/tag/rock"
         }
     ],
-    "@attr": {
+    "attr": {
         "artist": "AC/DC",
         "track": "Hells Bells"
     }

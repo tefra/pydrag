@@ -1,11 +1,11 @@
 {
-    "@attr": {
+    "attr": {
         "tag": "rock",
         "page": 1,
         "user": "RJ",
         "total": 20,
-        "perPage": 50,
-        "totalPages": 1
+        "limit": 50,
+        "total_pages": 1
     },
     "artists": {
         "artist": [
@@ -17,23 +17,23 @@
                 "image": [
                     {
                         "size": "small",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                     },
                     {
                         "size": "medium",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                     },
                     {
                         "size": "large",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                     },
                     {
                         "size": "extralarge",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                     },
                     {
                         "size": "mega",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                     }
                 ]
             },
@@ -45,23 +45,23 @@
                 "image": [
                     {
                         "size": "small",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                     },
                     {
                         "size": "medium",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                     },
                     {
                         "size": "large",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                     },
                     {
                         "size": "extralarge",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                     },
                     {
                         "size": "mega",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                     }
                 ]
             },
@@ -73,23 +73,23 @@
                 "image": [
                     {
                         "size": "small",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                     },
                     {
                         "size": "medium",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                     },
                     {
                         "size": "large",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                     },
                     {
                         "size": "extralarge",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                     },
                     {
                         "size": "mega",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                     }
                 ]
             },
@@ -101,23 +101,23 @@
                 "image": [
                     {
                         "size": "small",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                     },
                     {
                         "size": "medium",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                     },
                     {
                         "size": "large",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                     },
                     {
                         "size": "extralarge",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                     },
                     {
                         "size": "mega",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                     }
                 ]
             },
@@ -129,23 +129,23 @@
                 "image": [
                     {
                         "size": "small",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                     },
                     {
                         "size": "medium",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                     },
                     {
                         "size": "large",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                     },
                     {
                         "size": "extralarge",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                     },
                     {
                         "size": "mega",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                     }
                 ]
             },
@@ -157,23 +157,23 @@
                 "image": [
                     {
                         "size": "small",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                     },
                     {
                         "size": "medium",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                     },
                     {
                         "size": "large",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                     },
                     {
                         "size": "extralarge",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                     },
                     {
                         "size": "mega",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                     }
                 ]
             },
@@ -185,23 +185,23 @@
                 "image": [
                     {
                         "size": "small",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                     },
                     {
                         "size": "medium",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                     },
                     {
                         "size": "large",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                     },
                     {
                         "size": "extralarge",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                     },
                     {
                         "size": "mega",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                     }
                 ]
             },
@@ -213,23 +213,23 @@
                 "image": [
                     {
                         "size": "small",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                     },
                     {
                         "size": "medium",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                     },
                     {
                         "size": "large",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                     },
                     {
                         "size": "extralarge",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                     },
                     {
                         "size": "mega",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                     }
                 ]
             },
@@ -241,23 +241,23 @@
                 "image": [
                     {
                         "size": "small",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                     },
                     {
                         "size": "medium",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                     },
                     {
                         "size": "large",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                     },
                     {
                         "size": "extralarge",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                     },
                     {
                         "size": "mega",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                     }
                 ]
             },
@@ -269,23 +269,23 @@
                 "image": [
                     {
                         "size": "small",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                     },
                     {
                         "size": "medium",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                     },
                     {
                         "size": "large",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                     },
                     {
                         "size": "extralarge",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                     },
                     {
                         "size": "mega",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                     }
                 ]
             },
@@ -297,23 +297,23 @@
                 "image": [
                     {
                         "size": "small",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                     },
                     {
                         "size": "medium",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                     },
                     {
                         "size": "large",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                     },
                     {
                         "size": "extralarge",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                     },
                     {
                         "size": "mega",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                     }
                 ]
             },
@@ -325,23 +325,23 @@
                 "image": [
                     {
                         "size": "small",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                     },
                     {
                         "size": "medium",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                     },
                     {
                         "size": "large",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                     },
                     {
                         "size": "extralarge",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                     },
                     {
                         "size": "mega",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                     }
                 ]
             },
@@ -353,23 +353,23 @@
                 "image": [
                     {
                         "size": "small",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                     },
                     {
                         "size": "medium",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                     },
                     {
                         "size": "large",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                     },
                     {
                         "size": "extralarge",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                     },
                     {
                         "size": "mega",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                     }
                 ]
             },
@@ -381,23 +381,23 @@
                 "image": [
                     {
                         "size": "small",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                     },
                     {
                         "size": "medium",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                     },
                     {
                         "size": "large",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                     },
                     {
                         "size": "extralarge",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                     },
                     {
                         "size": "mega",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                     }
                 ]
             },
@@ -409,23 +409,23 @@
                 "image": [
                     {
                         "size": "small",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                     },
                     {
                         "size": "medium",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                     },
                     {
                         "size": "large",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                     },
                     {
                         "size": "extralarge",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                     },
                     {
                         "size": "mega",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                     }
                 ]
             },
@@ -437,23 +437,23 @@
                 "image": [
                     {
                         "size": "small",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                     },
                     {
                         "size": "medium",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                     },
                     {
                         "size": "large",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                     },
                     {
                         "size": "extralarge",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                     },
                     {
                         "size": "mega",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                     }
                 ]
             },
@@ -465,23 +465,23 @@
                 "image": [
                     {
                         "size": "small",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                     },
                     {
                         "size": "medium",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                     },
                     {
                         "size": "large",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                     },
                     {
                         "size": "extralarge",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                     },
                     {
                         "size": "mega",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                     }
                 ]
             },
@@ -493,23 +493,23 @@
                 "image": [
                     {
                         "size": "small",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                     },
                     {
                         "size": "medium",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                     },
                     {
                         "size": "large",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                     },
                     {
                         "size": "extralarge",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                     },
                     {
                         "size": "mega",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                     }
                 ]
             },
@@ -521,23 +521,23 @@
                 "image": [
                     {
                         "size": "small",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                     },
                     {
                         "size": "medium",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                     },
                     {
                         "size": "large",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                     },
                     {
                         "size": "extralarge",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                     },
                     {
                         "size": "mega",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                     }
                 ]
             },
@@ -549,23 +549,23 @@
                 "image": [
                     {
                         "size": "small",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                     },
                     {
                         "size": "medium",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                     },
                     {
                         "size": "large",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                     },
                     {
                         "size": "extralarge",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                     },
                     {
                         "size": "mega",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                     }
                 ]
             }

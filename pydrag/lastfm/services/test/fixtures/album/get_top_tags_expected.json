@@ -501,7 +501,7 @@
             "count": 2
         }
     ],
-    "@attr": {
+    "attr": {
         "album": "A Night at the Opera",
         "artist": "Queen"
     }

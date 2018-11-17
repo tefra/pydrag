@@ -1,12 +1,12 @@
 from urllib.parse import urlencode
 
-from attr import attrs
+from attr import dataclass
 
 from pydrag.core import BaseModel
 from pydrag.lastfm import config
 
 
-@attrs(auto_attribs=True)
+@dataclass
 class AuthToken(BaseModel):
     token: str
 
@@ -16,7 +16,7 @@ class AuthToken(BaseModel):
         return "https://www.last.fm/api/auth?{}".format(urlencode(params))
 
 
-@attrs(auto_attribs=True)
+@dataclass
 class AuthSession(BaseModel):
     key: str
     name: str

@@ -7,6 +7,7 @@ from urllib.parse import urlencode
 import requests
 from requests import Response
 
+from pydrag.core import pythonic_variables
 from pydrag.lastfm import GET, POST, config, md5
 
 
@@ -109,7 +110,7 @@ class Request:
             response = requests.post(url, data=params)
 
         response.raise_for_status()
-        body = response.json()
+        body = response.json(object_pairs_hook=pythonic_variables)
         return self.bind(response, body)
 
     def bind(self, resp: Response, body: Union[dict, list, None]):

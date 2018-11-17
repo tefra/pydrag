@@ -5,25 +5,25 @@
             "url": "https://www.last.fm/music/Womb+Sounds+Heartbeat/_/Einschlafhilfe+Baby+Sleepy+-+60+Minuten",
             "artist": {
                 "mbid": "",
-                "#text": "Womb Sounds Heartbeat"
+                "text": "Womb Sounds Heartbeat"
             },
             "mbid": "",
             "image": [
                 {
                     "size": "small",
-                    "#text": ""
+                    "text": ""
                 },
                 {
                     "size": "medium",
-                    "#text": ""
+                    "text": ""
                 },
                 {
                     "size": "large",
-                    "#text": ""
+                    "text": ""
                 }
             ],
             "playcount": 35,
-            "@attr": {
+            "attr": {
                 "rank": "1"
             }
         },
@@ -32,25 +32,25 @@
             "url": "https://www.last.fm/music/Jackie+Wilson/_/(Your+Love+Keeps+Lifting+Me)+Higher+&+Higher",
             "artist": {
                 "mbid": "CENSORED05dd",
-                "#text": "Jackie Wilson"
+                "text": "Jackie Wilson"
             },
             "mbid": "CENSORED2922",
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 }
             ],
             "playcount": 1,
-            "@attr": {
+            "attr": {
                 "rank": "2"
             }
         },
@@ -59,25 +59,25 @@
             "url": "https://www.last.fm/music/Nao/_/Another+Lifetime",
             "artist": {
                 "mbid": "CENSORED1fed",
-                "#text": "Nao"
+                "text": "Nao"
             },
             "mbid": "",
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 }
             ],
             "playcount": 1,
-            "@attr": {
+            "attr": {
                 "rank": "3"
             }
         },
@@ -86,25 +86,25 @@
             "url": "https://www.last.fm/music/Dram/_/Best+Hugs",
             "artist": {
                 "mbid": "",
-                "#text": "Dram"
+                "text": "Dram"
             },
             "mbid": "",
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 }
             ],
             "playcount": 1,
-            "@attr": {
+            "attr": {
                 "rank": "4"
             }
         },
@@ -113,25 +113,25 @@
             "url": "https://www.last.fm/music/Major./_/Better+With+You+in+It",
             "artist": {
                 "mbid": "",
-                "#text": "Major."
+                "text": "Major."
             },
             "mbid": "",
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 }
             ],
             "playcount": 1,
-            "@attr": {
+            "attr": {
                 "rank": "5"
             }
         },
@@ -140,25 +140,25 @@
             "url": "https://www.last.fm/music/Van+Morrison/_/Brown+Eyed+Girl",
             "artist": {
                 "mbid": "CENSORED3559",
-                "#text": "Van Morrison"
+                "text": "Van Morrison"
             },
             "mbid": "CENSORED3542",
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 }
             ],
             "playcount": 1,
-            "@attr": {
+            "attr": {
                 "rank": "6"
             }
         },
@@ -167,25 +167,25 @@
             "url": "https://www.last.fm/music/The+Wandering+Hearts/_/Burning+Bridges",
             "artist": {
                 "mbid": "",
-                "#text": "The Wandering Hearts"
+                "text": "The Wandering Hearts"
             },
             "mbid": "",
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 }
             ],
             "playcount": 1,
-            "@attr": {
+            "attr": {
                 "rank": "7"
             }
         },
@@ -194,25 +194,25 @@
             "url": "https://www.last.fm/music/Into+The+Ark/_/Burning+Love+-+Acoustic",
             "artist": {
                 "mbid": "",
-                "#text": "Into The Ark"
+                "text": "Into The Ark"
             },
             "mbid": "",
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 }
             ],
             "playcount": 1,
-            "@attr": {
+            "attr": {
                 "rank": "8"
             }
         },
@@ -221,25 +221,25 @@
             "url": "https://www.last.fm/music/The+Gaslight+Anthem/_/Casanova,+Baby%21",
             "artist": {
                 "mbid": "CENSORED17e3",
-                "#text": "The Gaslight Anthem"
+                "text": "The Gaslight Anthem"
             },
             "mbid": "CENSORED7a95",
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 }
             ],
             "playcount": 1,
-            "@attr": {
+            "attr": {
                 "rank": "9"
             }
         },
@@ -248,25 +248,25 @@
             "url": "https://www.last.fm/music/Filmore/_/Country+Song",
             "artist": {
                 "mbid": "CENSORED0c76",
-                "#text": "Filmore"
+                "text": "Filmore"
             },
             "mbid": "",
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 }
             ],
             "playcount": 1,
-            "@attr": {
+            "attr": {
                 "rank": "10"
             }
         },
@@ -275,25 +275,25 @@
             "url": "https://www.last.fm/music/Summer+Walker/_/CPR",
             "artist": {
                 "mbid": "",
-                "#text": "Summer Walker"
+                "text": "Summer Walker"
             },
             "mbid": "",
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 }
             ],
             "playcount": 1,
-            "@attr": {
+            "attr": {
                 "rank": "11"
             }
         },
@@ -302,25 +302,25 @@
             "url": "https://www.last.fm/music/Ilham/_/cycle+of+games",
             "artist": {
                 "mbid": "",
-                "#text": "Ilham"
+                "text": "Ilham"
             },
             "mbid": "",
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 }
             ],
             "playcount": 1,
-            "@attr": {
+            "attr": {
                 "rank": "12"
             }
         },
@@ -329,25 +329,25 @@
             "url": "https://www.last.fm/music/Mario/_/Drowning",
             "artist": {
                 "mbid": "CENSORED2cc7",
-                "#text": "Mario"
+                "text": "Mario"
             },
             "mbid": "",
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 }
             ],
             "playcount": 1,
-            "@attr": {
+            "attr": {
                 "rank": "13"
             }
         },
@@ -356,25 +356,25 @@
             "url": "https://www.last.fm/music/Enno+Aare/_/Ella%27s+Lullaby",
             "artist": {
                 "mbid": "",
-                "#text": "Enno Aare"
+                "text": "Enno Aare"
             },
             "mbid": "",
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 }
             ],
             "playcount": 1,
-            "@attr": {
+            "attr": {
                 "rank": "14"
             }
         },
@@ -383,25 +383,25 @@
             "url": "https://www.last.fm/music/Brian+Deady/_/Eloise+(Lean+Into+the+Wave)",
             "artist": {
                 "mbid": "CENSORED1726",
-                "#text": "Brian Deady"
+                "text": "Brian Deady"
             },
             "mbid": "",
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 }
             ],
             "playcount": 1,
-            "@attr": {
+            "attr": {
                 "rank": "15"
             }
         },
@@ -410,25 +410,25 @@
             "url": "https://www.last.fm/music/The+Gaslight+Anthem/_/Even+Cowgirls+Get+The+Blues",
             "artist": {
                 "mbid": "CENSORED17e3",
-                "#text": "The Gaslight Anthem"
+                "text": "The Gaslight Anthem"
             },
             "mbid": "CENSORED52c0",
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 }
             ],
             "playcount": 1,
-            "@attr": {
+            "attr": {
                 "rank": "16"
             }
         },
@@ -437,25 +437,25 @@
             "url": "https://www.last.fm/music/Fleetwood+Mac/_/Everywhere+-+2017+Remastered",
             "artist": {
                 "mbid": "CENSORED5b1a",
-                "#text": "Fleetwood Mac"
+                "text": "Fleetwood Mac"
             },
             "mbid": "",
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 }
             ],
             "playcount": 1,
-            "@attr": {
+            "attr": {
                 "rank": "17"
             }
         },
@@ -464,25 +464,25 @@
             "url": "https://www.last.fm/music/Kiana+Led%C3%A9/_/EX",
             "artist": {
                 "mbid": "",
-                "#text": "Kiana Led\u00e9"
+                "text": "Kiana Led\u00e9"
             },
             "mbid": "",
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 }
             ],
             "playcount": 1,
-            "@attr": {
+            "attr": {
                 "rank": "18"
             }
         },
@@ -491,25 +491,25 @@
             "url": "https://www.last.fm/music/Ro+James/_/Excuse+Me",
             "artist": {
                 "mbid": "",
-                "#text": "Ro James"
+                "text": "Ro James"
             },
             "mbid": "",
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 }
             ],
             "playcount": 1,
-            "@attr": {
+            "attr": {
                 "rank": "19"
             }
         },
@@ -518,25 +518,25 @@
             "url": "https://www.last.fm/music/Childish+Gambino/_/Feels+Like+Summer",
             "artist": {
                 "mbid": "CENSORED607e",
-                "#text": "Childish Gambino"
+                "text": "Childish Gambino"
             },
             "mbid": "",
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 }
             ],
             "playcount": 1,
-            "@attr": {
+            "attr": {
                 "rank": "20"
             }
         },
@@ -545,25 +545,25 @@
             "url": "https://www.last.fm/music/The+Gaslight+Anthem/_/Film+Noir",
             "artist": {
                 "mbid": "CENSORED17e3",
-                "#text": "The Gaslight Anthem"
+                "text": "The Gaslight Anthem"
             },
             "mbid": "CENSOREDaa05",
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 }
             ],
             "playcount": 1,
-            "@attr": {
+            "attr": {
                 "rank": "21"
             }
         },
@@ -572,25 +572,25 @@
             "url": "https://www.last.fm/music/Ar%27mon+&+Trey/_/Forever",
             "artist": {
                 "mbid": "",
-                "#text": "Ar'mon & Trey"
+                "text": "Ar'mon & Trey"
             },
             "mbid": "",
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 }
             ],
             "playcount": 1,
-            "@attr": {
+            "attr": {
                 "rank": "22"
             }
         },
@@ -599,25 +599,25 @@
             "url": "https://www.last.fm/music/The+Gaslight+Anthem/_/Great+Expectations",
             "artist": {
                 "mbid": "CENSORED17e3",
-                "#text": "The Gaslight Anthem"
+                "text": "The Gaslight Anthem"
             },
             "mbid": "CENSOREDbeda",
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 }
             ],
             "playcount": 1,
-            "@attr": {
+            "attr": {
                 "rank": "23"
             }
         },
@@ -626,25 +626,25 @@
             "url": "https://www.last.fm/music/The+Gaslight+Anthem/_/High+Lonesome",
             "artist": {
                 "mbid": "CENSORED17e3",
-                "#text": "The Gaslight Anthem"
+                "text": "The Gaslight Anthem"
             },
             "mbid": "CENSORED3950",
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 }
             ],
             "playcount": 1,
-            "@attr": {
+            "attr": {
                 "rank": "24"
             }
         },
@@ -653,25 +653,25 @@
             "url": "https://www.last.fm/music/R.Lum.R/_/I+Need+To+Know",
             "artist": {
                 "mbid": "",
-                "#text": "R.Lum.R"
+                "text": "R.Lum.R"
             },
             "mbid": "",
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 }
             ],
             "playcount": 1,
-            "@attr": {
+            "attr": {
                 "rank": "25"
             }
         },
@@ -680,25 +680,25 @@
             "url": "https://www.last.fm/music/Aretha+Franklin/_/I+Say+a+Little+Prayer",
             "artist": {
                 "mbid": "CENSORED299e",
-                "#text": "Aretha Franklin"
+                "text": "Aretha Franklin"
             },
             "mbid": "CENSORED48c2",
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 }
             ],
             "playcount": 1,
-            "@attr": {
+            "attr": {
                 "rank": "26"
             }
         },
@@ -707,25 +707,25 @@
             "url": "https://www.last.fm/music/Queen+Naija/_/Karma",
             "artist": {
                 "mbid": "",
-                "#text": "Queen Naija"
+                "text": "Queen Naija"
             },
             "mbid": "",
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 }
             ],
             "playcount": 1,
-            "@attr": {
+            "attr": {
                 "rank": "27"
             }
         },
@@ -734,25 +734,25 @@
             "url": "https://www.last.fm/music/masego/_/Lady+Lady",
             "artist": {
                 "mbid": "",
-                "#text": "masego"
+                "text": "masego"
             },
             "mbid": "",
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 }
             ],
             "playcount": 1,
-            "@attr": {
+            "attr": {
                 "rank": "28"
             }
         },
@@ -761,25 +761,25 @@
             "url": "https://www.last.fm/music/Tamia/_/Leave+It+Smokin%E2%80%99",
             "artist": {
                 "mbid": "CENSORED7396",
-                "#text": "Tamia"
+                "text": "Tamia"
             },
             "mbid": "",
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 }
             ],
             "playcount": 1,
-            "@attr": {
+            "attr": {
                 "rank": "29"
             }
         },
@@ -788,25 +788,25 @@
             "url": "https://www.last.fm/music/Njomza/_/Lonely+Nights",
             "artist": {
                 "mbid": "",
-                "#text": "Njomza"
+                "text": "Njomza"
             },
             "mbid": "",
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 }
             ],
             "playcount": 1,
-            "@attr": {
+            "attr": {
                 "rank": "30"
             }
         },
@@ -815,25 +815,25 @@
             "url": "https://www.last.fm/music/Kacey+Musgraves/_/Love+Is+A+Wild+Thing",
             "artist": {
                 "mbid": "CENSORED40cb",
-                "#text": "Kacey Musgraves"
+                "text": "Kacey Musgraves"
             },
             "mbid": "",
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 }
             ],
             "playcount": 1,
-            "@attr": {
+            "attr": {
                 "rank": "31"
             }
         },
@@ -842,25 +842,25 @@
             "url": "https://www.last.fm/music/Amber+Mark/_/Love+Is+Stronger+Than+Pride",
             "artist": {
                 "mbid": "",
-                "#text": "Amber Mark"
+                "text": "Amber Mark"
             },
             "mbid": "",
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 }
             ],
             "playcount": 1,
-            "@attr": {
+            "attr": {
                 "rank": "32"
             }
         },
@@ -869,25 +869,25 @@
             "url": "https://www.last.fm/music/Nao/_/Make+It+Out+Alive+(feat.+SiR)",
             "artist": {
                 "mbid": "CENSORED1fed",
-                "#text": "Nao"
+                "text": "Nao"
             },
             "mbid": "",
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 }
             ],
             "playcount": 1,
-            "@attr": {
+            "attr": {
                 "rank": "33"
             }
         },
@@ -896,25 +896,25 @@
             "url": "https://www.last.fm/music/The+Gaslight+Anthem/_/Meet+Me+By+The+River%27s+Edge",
             "artist": {
                 "mbid": "CENSORED17e3",
-                "#text": "The Gaslight Anthem"
+                "text": "The Gaslight Anthem"
             },
             "mbid": "",
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 }
             ],
             "playcount": 1,
-            "@attr": {
+            "attr": {
                 "rank": "34"
             }
         },
@@ -923,25 +923,25 @@
             "url": "https://www.last.fm/music/Kacey+Musgraves/_/Merry+Go+%27Round",
             "artist": {
                 "mbid": "CENSORED40cb",
-                "#text": "Kacey Musgraves"
+                "text": "Kacey Musgraves"
             },
             "mbid": "CENSOREDa926",
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 }
             ],
             "playcount": 1,
-            "@attr": {
+            "attr": {
                 "rank": "35"
             }
         },
@@ -950,25 +950,25 @@
             "url": "https://www.last.fm/music/The+Gaslight+Anthem/_/Miles+Davis+&+The+Cool",
             "artist": {
                 "mbid": "CENSORED17e3",
-                "#text": "The Gaslight Anthem"
+                "text": "The Gaslight Anthem"
             },
             "mbid": "CENSORED15c7",
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 }
             ],
             "playcount": 1,
-            "@attr": {
+            "attr": {
                 "rank": "36"
             }
         },
@@ -977,25 +977,25 @@
             "url": "https://www.last.fm/music/Marsha+Ambrosius/_/Old+Times",
             "artist": {
                 "mbid": "CENSOREDd8aa",
-                "#text": "Marsha Ambrosius"
+                "text": "Marsha Ambrosius"
             },
             "mbid": "",
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 }
             ],
             "playcount": 1,
-            "@attr": {
+            "attr": {
                 "rank": "37"
             }
         },
@@ -1004,25 +1004,25 @@
             "url": "https://www.last.fm/music/The+Gaslight+Anthem/_/Old+White+Lincoln",
             "artist": {
                 "mbid": "CENSORED17e3",
-                "#text": "The Gaslight Anthem"
+                "text": "The Gaslight Anthem"
             },
             "mbid": "CENSOREDad59",
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 }
             ],
             "playcount": 1,
-            "@attr": {
+            "attr": {
                 "rank": "38"
             }
         },
@@ -1031,25 +1031,25 @@
             "url": "https://www.last.fm/music/Liza/_/Passes+Me",
             "artist": {
                 "mbid": "CENSORED8446",
-                "#text": "Liza"
+                "text": "Liza"
             },
             "mbid": "",
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 }
             ],
             "playcount": 1,
-            "@attr": {
+            "attr": {
                 "rank": "39"
             }
         },
@@ -1058,25 +1058,25 @@
             "url": "https://www.last.fm/music/Melat/_/Push",
             "artist": {
                 "mbid": "",
-                "#text": "Melat"
+                "text": "Melat"
             },
             "mbid": "",
             "image": [
                 {
                     "size": "small",
-                    "#text": ""
+                    "text": ""
                 },
                 {
                     "size": "medium",
-                    "#text": ""
+                    "text": ""
                 },
                 {
                     "size": "large",
-                    "#text": ""
+                    "text": ""
                 }
             ],
             "playcount": 1,
-            "@attr": {
+            "attr": {
                 "rank": "40"
             }
         },
@@ -1085,25 +1085,25 @@
             "url": "https://www.last.fm/music/Kylie+Minogue/_/Radio+On",
             "artist": {
                 "mbid": "CENSORED684c",
-                "#text": "Kylie Minogue"
+                "text": "Kylie Minogue"
             },
             "mbid": "",
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 }
             ],
             "playcount": 1,
-            "@attr": {
+            "attr": {
                 "rank": "41"
             }
         },
@@ -1112,25 +1112,25 @@
             "url": "https://www.last.fm/music/Stevie+Wonder/_/Signed,+Sealed,+Delivered+(I%27m+Yours)",
             "artist": {
                 "mbid": "CENSOREDe986",
-                "#text": "Stevie Wonder"
+                "text": "Stevie Wonder"
             },
             "mbid": "CENSORED482c",
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 }
             ],
             "playcount": 1,
-            "@attr": {
+            "attr": {
                 "rank": "42"
             }
         },
@@ -1139,25 +1139,25 @@
             "url": "https://www.last.fm/music/Ferris+&+Sylvester/_/Sometimes",
             "artist": {
                 "mbid": "",
-                "#text": "Ferris & Sylvester"
+                "text": "Ferris & Sylvester"
             },
             "mbid": "",
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 }
             ],
             "playcount": 1,
-            "@attr": {
+            "attr": {
                 "rank": "43"
             }
         },
@@ -1166,25 +1166,25 @@
             "url": "https://www.last.fm/music/Kacey+Musgraves/_/Space+Cowboy",
             "artist": {
                 "mbid": "CENSORED40cb",
-                "#text": "Kacey Musgraves"
+                "text": "Kacey Musgraves"
             },
             "mbid": "",
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 }
             ],
             "playcount": 1,
-            "@attr": {
+            "attr": {
                 "rank": "44"
             }
         },
@@ -1193,25 +1193,25 @@
             "url": "https://www.last.fm/music/The+Gaslight+Anthem/_/The+%2759+Sound",
             "artist": {
                 "mbid": "CENSORED17e3",
-                "#text": "The Gaslight Anthem"
+                "text": "The Gaslight Anthem"
             },
             "mbid": "CENSORED6886",
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 }
             ],
             "playcount": 1,
-            "@attr": {
+            "attr": {
                 "rank": "45"
             }
         },
@@ -1220,25 +1220,25 @@
             "url": "https://www.last.fm/music/The+Gaslight+Anthem/_/The+Patient+Ferris+Wheel",
             "artist": {
                 "mbid": "CENSORED17e3",
-                "#text": "The Gaslight Anthem"
+                "text": "The Gaslight Anthem"
             },
             "mbid": "CENSOREDc99f",
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 }
             ],
             "playcount": 1,
-            "@attr": {
+            "attr": {
                 "rank": "46"
             }
         },
@@ -1247,25 +1247,25 @@
             "url": "https://www.last.fm/music/Sauti+Sol/_/Tujiangalie",
             "artist": {
                 "mbid": "CENSORED80b9",
-                "#text": "Sauti Sol"
+                "text": "Sauti Sol"
             },
             "mbid": "",
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 }
             ],
             "playcount": 1,
-            "@attr": {
+            "attr": {
                 "rank": "47"
             }
         },
@@ -1274,25 +1274,25 @@
             "url": "https://www.last.fm/music/Franz+Schubert/_/Vier+Impromptus,+op.90+D.899:+Vier+Impromptus,+op.90+D.899:+III.+Andante+mosso,+G+flat+major",
             "artist": {
                 "mbid": "CENSORED65ed",
-                "#text": "Franz Schubert"
+                "text": "Franz Schubert"
             },
             "mbid": "",
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 }
             ],
             "playcount": 1,
-            "@attr": {
+            "attr": {
                 "rank": "48"
             }
         },
@@ -1301,25 +1301,25 @@
             "url": "https://www.last.fm/music/Paul+Simon/_/You+Can+Call+Me+Al",
             "artist": {
                 "mbid": "CENSOREDebb9",
-                "#text": "Paul Simon"
+                "text": "Paul Simon"
             },
             "mbid": "CENSORED7429",
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 }
             ],
             "playcount": 1,
-            "@attr": {
+            "attr": {
                 "rank": "49"
             }
         },
@@ -1328,25 +1328,25 @@
             "url": "https://www.last.fm/music/Nikki+Blonsky/_/You+Can%27t+Stop+The+Beat+(%22Hairspray%22)",
             "artist": {
                 "mbid": "CENSOREDfd5d",
-                "#text": "Nikki Blonsky"
+                "text": "Nikki Blonsky"
             },
             "mbid": "",
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 }
             ],
             "playcount": 1,
-            "@attr": {
+            "attr": {
                 "rank": "50"
             }
         },
@@ -1355,25 +1355,25 @@
             "url": "https://www.last.fm/music/Shawn+Stockman/_/Feelin%E2%80%99+lil+Som%E2%80%99n",
             "artist": {
                 "mbid": "CENSORED87d4",
-                "#text": "Shawn Stockman"
+                "text": "Shawn Stockman"
             },
             "mbid": "",
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 }
             ],
             "playcount": 1,
-            "@attr": {
+            "attr": {
                 "rank": "51"
             }
         },
@@ -1382,25 +1382,25 @@
             "url": "https://www.last.fm/music/Ryan+Trey/_/Temptations",
             "artist": {
                 "mbid": "",
-                "#text": "Ryan Trey"
+                "text": "Ryan Trey"
             },
             "mbid": "",
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 }
             ],
             "playcount": 1,
-            "@attr": {
+            "attr": {
                 "rank": "52"
             }
         },
@@ -1409,25 +1409,25 @@
             "url": "https://www.last.fm/music/India.Arie/_/That+Magic",
             "artist": {
                 "mbid": "CENSOREDefdd",
-                "#text": "India.Arie"
+                "text": "India.Arie"
             },
             "mbid": "",
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 }
             ],
             "playcount": 1,
-            "@attr": {
+            "attr": {
                 "rank": "53"
             }
         },
@@ -1436,25 +1436,25 @@
             "url": "https://www.last.fm/music/JamesDavis/_/Speedboat",
             "artist": {
                 "mbid": "",
-                "#text": "JamesDavis"
+                "text": "JamesDavis"
             },
             "mbid": "",
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 }
             ],
             "playcount": 1,
-            "@attr": {
+            "attr": {
                 "rank": "54"
             }
         },
@@ -1463,25 +1463,25 @@
             "url": "https://www.last.fm/music/Mario/_/Goes+Like+That",
             "artist": {
                 "mbid": "CENSORED2cc7",
-                "#text": "Mario"
+                "text": "Mario"
             },
             "mbid": "",
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 }
             ],
             "playcount": 1,
-            "@attr": {
+            "attr": {
                 "rank": "55"
             }
         },
@@ -1490,25 +1490,25 @@
             "url": "https://www.last.fm/music/Sat-B/_/Feel+Love",
             "artist": {
                 "mbid": "",
-                "#text": "Sat-B"
+                "text": "Sat-B"
             },
             "mbid": "",
             "image": [
                 {
                     "size": "small",
-                    "#text": ""
+                    "text": ""
                 },
                 {
                     "size": "medium",
-                    "#text": ""
+                    "text": ""
                 },
                 {
                     "size": "large",
-                    "#text": ""
+                    "text": ""
                 }
             ],
             "playcount": 1,
-            "@attr": {
+            "attr": {
                 "rank": "56"
             }
         },
@@ -1517,25 +1517,25 @@
             "url": "https://www.last.fm/music/Free+Nationals/_/Beauty+&+Essex+(feat.+Daniel+Caesar+&+Unknown+Mortal+Orchestra)",
             "artist": {
                 "mbid": "",
-                "#text": "Free Nationals"
+                "text": "Free Nationals"
             },
             "mbid": "",
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 }
             ],
             "playcount": 1,
-            "@attr": {
+            "attr": {
                 "rank": "57"
             }
         },
@@ -1544,25 +1544,25 @@
             "url": "https://www.last.fm/music/Catherine+McGrath/_/She%27ll+Never+Love+You+-+Acoustic",
             "artist": {
                 "mbid": "",
-                "#text": "Catherine McGrath"
+                "text": "Catherine McGrath"
             },
             "mbid": "",
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 }
             ],
             "playcount": 1,
-            "@attr": {
+            "attr": {
                 "rank": "58"
             }
         },
@@ -1571,25 +1571,25 @@
             "url": "https://www.last.fm/music/Ferris+&+Sylvester/_/Burning+River",
             "artist": {
                 "mbid": "",
-                "#text": "Ferris & Sylvester"
+                "text": "Ferris & Sylvester"
             },
             "mbid": "",
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 }
             ],
             "playcount": 1,
-            "@attr": {
+            "attr": {
                 "rank": "59"
             }
         },
@@ -1598,25 +1598,25 @@
             "url": "https://www.last.fm/music/Maddie+&+Tae/_/Die+From+A+Broken+Heart",
             "artist": {
                 "mbid": "CENSOREDb79f",
-                "#text": "Maddie & Tae"
+                "text": "Maddie & Tae"
             },
             "mbid": "",
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 }
             ],
             "playcount": 1,
-            "@attr": {
+            "attr": {
                 "rank": "60"
             }
         },
@@ -1625,32 +1625,32 @@
             "url": "https://www.last.fm/music/The+Wild+Things/_/Better+off+Alone",
             "artist": {
                 "mbid": "CENSOREDae52",
-                "#text": "The Wild Things"
+                "text": "The Wild Things"
             },
             "mbid": "",
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 }
             ],
             "playcount": 1,
-            "@attr": {
+            "attr": {
                 "rank": "61"
             }
         }
     ],
-    "@attr": {
+    "attr": {
         "user": "RJ",
-        "to": "1541764800",
-        "from": "1541160000"
+        "to_date": "1541764800",
+        "from_date": "1541160000"
     }
 }

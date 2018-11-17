@@ -1,8 +1,8 @@
 from typing import List
 
-from attr import attrs
+from attr import dataclass
 
-from pydrag.core import BaseModel, mattrib
+from pydrag.core import BaseModel
 from pydrag.lastfm.models.common import (
     Album,
     Albums,
@@ -10,14 +10,13 @@ from pydrag.lastfm.models.common import (
     Attributes,
     AttrModel,
     Date,
-    DateUTS,
     Image,
     SimpleArtist,
     Tracks,
 )
 
 
-@attrs(auto_attribs=True)
+@dataclass
 class ArtistTrack(BaseModel):
     artist: SimpleArtist
     name: str
@@ -26,16 +25,16 @@ class ArtistTrack(BaseModel):
     album: Album = None
     streamable: str = None  # super buggy
     image: List[Image] = None
-    date: DateUTS = None
-    attr: Attributes = mattrib("@attr", default=None)
+    date: Date = None
+    attr: Attributes = None
 
 
-@attrs(auto_attribs=True)
+@dataclass
 class ArtistTrackList(AttrModel):
     track: List[ArtistTrack]
 
 
-@attrs(auto_attribs=True)
+@dataclass
 class UserInfo(BaseModel):
     playlists: str
     playcount: int
@@ -49,20 +48,20 @@ class UserInfo(BaseModel):
     age: str
     bootstrap: str
     registered: Date
-    source: str = mattrib("scrobblesource", default=None)
-    real_name: str = mattrib("realname", default=None)
-    recent_track: ArtistTrack = mattrib("recenttrack", default=None)
+    source: str = None
+    real_name: str = None
+    recent_track: ArtistTrack = None
 
 
-@attrs(auto_attribs=True)
+@dataclass
 class UserFriends(BaseModel):
     user: List[UserInfo]
-    attr: Attributes = mattrib("@attr")
+    attr: Attributes = None
 
 
-@attrs(auto_attribs=True)
+@dataclass
 class UserPersonalTags(BaseModel):
-    attr: Attributes = mattrib("@attr")
+    attr: Attributes
     tracks: Tracks = None
     albums: Albums = None
     artists: Artists = None

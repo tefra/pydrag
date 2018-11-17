@@ -53,9 +53,7 @@ class TagServiceTests(MethodTestCase):
 
         self.assertEqual("Tag", result.namespace)
         self.assertEqual("get_top_albums", result.method)
-        self.assertEqual(
-            {"limit": "2", "page": "1", "tag": "rap"}, result.params
-        )
+        self.assertEqual({"limit": 2, "page": 1, "tag": "rap"}, result.params)
 
         self.assertIsInstance(result, AlbumList)
         self.assertFixtureEqual("tag/get_top_albums", result.to_dict())
@@ -70,9 +68,7 @@ class TagServiceTests(MethodTestCase):
 
         self.assertEqual("Tag", result.namespace)
         self.assertEqual("get_top_artists", result.method)
-        self.assertEqual(
-            {"limit": "2", "page": "1", "tag": "rap"}, result.params
-        )
+        self.assertEqual({"limit": 2, "page": 1, "tag": "rap"}, result.params)
 
         self.assertIsInstance(result, ArtistList)
         self.assertFixtureEqual("tag/get_top_artists", result.to_dict())
@@ -94,9 +90,7 @@ class TagServiceTests(MethodTestCase):
 
         self.assertEqual("Tag", result.namespace)
         self.assertEqual("get_top_tracks", result.method)
-        self.assertEqual(
-            {"limit": "2", "page": "1", "tag": "rap"}, result.params
-        )
+        self.assertEqual({"limit": 2, "page": 1, "tag": "rap"}, result.params)
 
         self.assertIsInstance(result, TrackList)
         self.assertFixtureEqual("tag/get_top_tracks", result.to_dict())
@@ -111,7 +105,7 @@ class TagServiceTests(MethodTestCase):
 
         self.assertEqual("Tag", result.namespace)
         self.assertEqual("get_top_tags", result.method)
-        self.assertEqual({"num_res": "10", "offset": "20"}, result.params)
+        self.assertEqual({"num_res": 10, "offset": 20}, result.params)
         self.assertEqual(10, len(result.tag))
         self.assertIsInstance(result, TagInfoList)
         self.assertFixtureEqual("tag/get_top_tags", result.to_dict())

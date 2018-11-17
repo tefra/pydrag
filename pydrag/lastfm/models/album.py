@@ -1,25 +1,26 @@
 from typing import List
 
-from attr import attrs
+from attr import dataclass
 
-from pydrag.core import BaseModel, mattrib
+from pydrag.core import BaseModel
 from pydrag.lastfm.models.common import Album, OpenSearch, Tags, Tracks, Wiki
 
 
-@attrs(auto_attribs=True)
+@dataclass
 class AlbumInfo(Album):
     artist: str = None
     listeners: int = None
     tags: Tags = None
+    streamable: int = None
     tracks: Tracks = None
     wiki: Wiki = None
 
 
-@attrs(auto_attribs=True)
+@dataclass
 class AlbumMatches(BaseModel):
     album: List[AlbumInfo]
 
 
-@attrs(auto_attribs=True)
+@dataclass
 class AlbumSearch(OpenSearch):
-    matches: AlbumMatches = mattrib("albummatches")
+    matches: AlbumMatches

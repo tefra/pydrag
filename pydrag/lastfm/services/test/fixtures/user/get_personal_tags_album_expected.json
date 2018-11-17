@@ -1,11 +1,11 @@
 {
-    "@attr": {
+    "attr": {
         "tag": "hell",
         "page": 1,
         "user": "Zaratoustre",
         "total": 0,
-        "perPage": 50,
-        "totalPages": 0
+        "limit": 50,
+        "total_pages": 0
     },
     "albums": {
         "album": []

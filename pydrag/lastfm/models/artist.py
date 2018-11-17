@@ -1,8 +1,8 @@
 from typing import List
 
-from attr import attrs
+from attr import dataclass
 
-from pydrag.core import BaseModel, mattrib
+from pydrag.core import BaseModel
 from pydrag.lastfm.models.common import (
     Artist,
     Artists,
@@ -14,31 +14,31 @@ from pydrag.lastfm.models.common import (
 )
 
 
-@attrs(auto_attribs=True)
+@dataclass
 class CorrectionArtist(AttrModel):
     artist: Artist
 
 
-@attrs(auto_attribs=True)
+@dataclass
 class ArtistCorrection(BaseModel):
     correction: CorrectionArtist
 
 
-@attrs(auto_attribs=True)
+@dataclass
 class ArtistInfo(Artist):
     tags: Tags = None
     bio: Wiki = None
-    on_tour: int = mattrib("ontour", default=None)
+    on_tour: int = None
     stats: Artist = None
     similar: Artists = None
 
 
-@attrs(auto_attribs=True)
+@dataclass
 class ArtistMatches(BaseModel):
     artist: List[ArtistInfo]
 
 
-@attrs(auto_attribs=True)
+@dataclass
 class ArtistSearch(OpenSearch):
-    matches: ArtistMatches = mattrib("artistmatches")
-    query: Query = mattrib("opensearch:Query")
+    matches: ArtistMatches
+    query: Query

@@ -9,7 +9,7 @@
             "url": "https://www.last.fm/tag/foo"
         }
     ],
-    "@attr": {
+    "attr": {
         "artist": "Guns N' Roses"
     }
 }

@@ -14,7 +14,7 @@ class ChartServiceTests(MethodTestCase):
 
         self.assertEqual("Chart", result.namespace)
         self.assertEqual("get_top_artists", result.method)
-        self.assertEqual({"limit": "10", "page": "2"}, result.params)
+        self.assertEqual({"limit": 10, "page": 2}, result.params)
         self.assertIsInstance(result, ArtistList)
 
         self.assertFixtureEqual("chart/get_top_artists", result.to_dict())
@@ -25,7 +25,7 @@ class ChartServiceTests(MethodTestCase):
 
         self.assertEqual("Chart", result.namespace)
         self.assertEqual("get_top_tracks", result.method)
-        self.assertEqual({"limit": "10", "page": "2"}, result.params)
+        self.assertEqual({"limit": 10, "page": 2}, result.params)
         self.assertIsInstance(result, TrackList)
 
         self.assertFixtureEqual("chart/get_top_tracks", result.to_dict())
@@ -36,7 +36,7 @@ class ChartServiceTests(MethodTestCase):
 
         self.assertEqual("Chart", result.namespace)
         self.assertEqual("get_top_tags", result.method)
-        self.assertEqual({"limit": "10", "page": "2"}, result.params)
+        self.assertEqual({"limit": 10, "page": 2}, result.params)
         self.assertIsInstance(result, TagInfoList)
 
         self.assertFixtureEqual("chart/get_top_tags", result.to_dict())

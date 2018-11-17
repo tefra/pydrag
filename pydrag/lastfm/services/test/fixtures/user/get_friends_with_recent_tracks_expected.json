@@ -11,31 +11,31 @@
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 },
                 {
                     "size": "extralarge",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
             "type": "FIXME",
             "age": "0",
             "bootstrap": "0",
             "registered": {
-                "unixtime": 1131903141,
-                "#text": "2005-11-13 17:32:21"
+                "timestamp": 1131903141,
+                "text": "2005-11-13 17:32:21"
             },
-            "scrobblesource": "FIXME",
-            "realname": "\u2605\u2665\u2605 Badass Mod from the Future - Last Seen Tomorrow Afternoon\u2605\u2665\u2605",
-            "recenttrack": {
+            "source": "FIXME",
+            "real_name": "\u2605\u2665\u2605 Badass Mod from the Future - Last Seen Tomorrow Afternoon\u2605\u2665\u2605",
+            "recent_track": {
                 "artist": {
                     "mbid": "",
                     "name": "Planningtorock",
@@ -49,8 +49,8 @@
                     "name": "Powerhouse",
                     "url": "https://www.last.fm/music/Planningtorock/Powerhouse"
                 },
-                "@attr": {
-                    "uts": "1541814002",
+                "attr": {
+                    "timestamp": 1541814002,
                     "date": "10 Nov 2018, 01:40"
                 }
             }
@@ -66,31 +66,31 @@
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 },
                 {
                     "size": "extralarge",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
             "type": "FIXME",
             "age": "0",
             "bootstrap": "0",
             "registered": {
-                "unixtime": 1295373579,
-                "#text": "2011-01-18 17:59:39"
+                "timestamp": 1295373579,
+                "text": "2011-01-18 17:59:39"
             },
-            "scrobblesource": "FIXME",
-            "realname": "Fran",
-            "recenttrack": {
+            "source": "FIXME",
+            "real_name": "Fran",
+            "recent_track": {
                 "artist": {
                     "mbid": "",
                     "name": "Hue And Cry",
@@ -104,8 +104,8 @@
                     "name": "Seduced And Abandoned",
                     "url": "https://www.last.fm/music/Hue+And+Cry/Seduced+And+Abandoned"
                 },
-                "@attr": {
-                    "uts": "1541434940",
+                "attr": {
+                    "timestamp": 1541434940,
                     "date": "05 Nov 2018, 16:22"
                 }
             }
@@ -121,31 +121,31 @@
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 },
                 {
                     "size": "extralarge",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
             "type": "FIXME",
             "age": "0",
             "bootstrap": "0",
             "registered": {
-                "unixtime": 1189696970,
-                "#text": "2007-09-13 15:22:50"
+                "timestamp": 1189696970,
+                "text": "2007-09-13 15:22:50"
             },
-            "scrobblesource": "FIXME",
-            "realname": "Michael Coffey",
-            "recenttrack": {
+            "source": "FIXME",
+            "real_name": "Michael Coffey",
+            "recent_track": {
                 "artist": {
                     "mbid": "",
                     "name": "Camera Obscura",
@@ -159,8 +159,8 @@
                     "name": "My Maudlin Career",
                     "url": "https://www.last.fm/music/Camera+Obscura/My+Maudlin+Career"
                 },
-                "@attr": {
-                    "uts": "1541807828",
+                "attr": {
+                    "timestamp": 1541807828,
                     "date": "09 Nov 2018, 23:57"
                 }
             }
@@ -176,30 +176,30 @@
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 },
                 {
                     "size": "extralarge",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
             "type": "FIXME",
             "age": "0",
             "bootstrap": "0",
             "registered": {
-                "unixtime": 1178878400,
-                "#text": "2007-05-11 10:13:20"
+                "timestamp": 1178878400,
+                "text": "2007-05-11 10:13:20"
             },
-            "scrobblesource": "FIXME",
-            "realname": "Mass Dosage"
+            "source": "FIXME",
+            "real_name": "Mass Dosage"
         },
         {
             "playlists": "0",
@@ -212,30 +212,30 @@
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 },
                 {
                     "size": "extralarge",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
             "type": "FIXME",
             "age": "0",
             "bootstrap": "0",
             "registered": {
-                "unixtime": 1253887486,
-                "#text": "2009-09-25 14:04:46"
+                "timestamp": 1253887486,
+                "text": "2009-09-25 14:04:46"
             },
-            "scrobblesource": "FIXME",
-            "realname": "Matt Knapman"
+            "source": "FIXME",
+            "real_name": "Matt Knapman"
         },
         {
             "playlists": "0",
@@ -248,31 +248,31 @@
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 },
                 {
                     "size": "extralarge",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
             "type": "FIXME",
             "age": "0",
             "bootstrap": "0",
             "registered": {
-                "unixtime": 1149249486,
-                "#text": "2006-06-02 11:58:06"
+                "timestamp": 1149249486,
+                "text": "2006-06-02 11:58:06"
             },
-            "scrobblesource": "FIXME",
-            "realname": "Jono Cole",
-            "recenttrack": {
+            "source": "FIXME",
+            "real_name": "Jono Cole",
+            "recent_track": {
                 "artist": {
                     "mbid": "",
                     "name": "Jon Hopkins",
@@ -286,8 +286,8 @@
                     "name": "Singularity",
                     "url": "https://www.last.fm/music/Jon+Hopkins/Singularity"
                 },
-                "@attr": {
-                    "uts": "1541793197",
+                "attr": {
+                    "timestamp": 1541793197,
                     "date": "09 Nov 2018, 19:53"
                 }
             }
@@ -303,31 +303,31 @@
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 },
                 {
                     "size": "extralarge",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
             "type": "FIXME",
             "age": "0",
             "bootstrap": "0",
             "registered": {
-                "unixtime": 1043531232,
-                "#text": "2003-01-25 21:47:12"
+                "timestamp": 1043531232,
+                "text": "2003-01-25 21:47:12"
             },
-            "scrobblesource": "FIXME",
-            "realname": "Isaac",
-            "recenttrack": {
+            "source": "FIXME",
+            "real_name": "Isaac",
+            "recent_track": {
                 "artist": {
                     "mbid": "",
                     "name": "Clutch",
@@ -341,8 +341,8 @@
                     "name": "Psychic Warfare (Deluxe Version)",
                     "url": "https://www.last.fm/music/Clutch/Psychic+Warfare+(Deluxe+Version)"
                 },
-                "@attr": {
-                    "uts": "1528576868",
+                "attr": {
+                    "timestamp": 1528576868,
                     "date": "09 Jun 2018, 20:41"
                 }
             }
@@ -358,31 +358,31 @@
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 },
                 {
                     "size": "extralarge",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
             "type": "FIXME",
             "age": "0",
             "bootstrap": "0",
             "registered": {
-                "unixtime": 1149267624,
-                "#text": "2006-06-02 17:00:24"
+                "timestamp": 1149267624,
+                "text": "2006-06-02 17:00:24"
             },
-            "scrobblesource": "FIXME",
-            "realname": "Laura Weiss",
-            "recenttrack": {
+            "source": "FIXME",
+            "real_name": "Laura Weiss",
+            "recent_track": {
                 "artist": {
                     "mbid": "",
                     "name": "Guillemots",
@@ -396,8 +396,8 @@
                     "name": "Through The Windowpane",
                     "url": "https://www.last.fm/music/Guillemots/Through+The+Windowpane"
                 },
-                "@attr": {
-                    "uts": "1258993528",
+                "attr": {
+                    "timestamp": 1258993528,
                     "date": "23 Nov 2009, 16:25"
                 }
             }
@@ -413,30 +413,30 @@
             "image": [
                 {
                     "size": "small",
-                    "#text": ""
+                    "text": ""
                 },
                 {
                     "size": "medium",
-                    "#text": ""
+                    "text": ""
                 },
                 {
                     "size": "large",
-                    "#text": ""
+                    "text": ""
                 },
                 {
                     "size": "extralarge",
-                    "#text": ""
+                    "text": ""
                 }
             ],
             "type": "FIXME",
             "age": "0",
             "bootstrap": "0",
             "registered": {
-                "unixtime": 1058918400,
-                "#text": "2003-07-23 00:00:00"
+                "timestamp": 1058918400,
+                "text": "2003-07-23 00:00:00"
             },
-            "scrobblesource": "FIXME",
-            "recenttrack": {
+            "source": "FIXME",
+            "recent_track": {
                 "artist": {
                     "mbid": "",
                     "name": "St\u00e9phane Kerecki Quartet",
@@ -450,8 +450,8 @@
                     "name": "French Touch",
                     "url": "https://www.last.fm/music/St%C3%A9phane+Kerecki+Quartet/French+Touch"
                 },
-                "@attr": {
-                    "uts": "1539543956",
+                "attr": {
+                    "timestamp": 1539543956,
                     "date": "14 Oct 2018, 19:05"
                 }
             }
@@ -467,31 +467,31 @@
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 },
                 {
                     "size": "extralarge",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
             "type": "FIXME",
             "age": "0",
             "bootstrap": "0",
             "registered": {
-                "unixtime": 1205656168,
-                "#text": "2008-03-16 08:29:28"
+                "timestamp": 1205656168,
+                "text": "2008-03-16 08:29:28"
             },
-            "scrobblesource": "FIXME",
-            "realname": "Micka\u00ebl",
-            "recenttrack": {
+            "source": "FIXME",
+            "real_name": "Micka\u00ebl",
+            "recent_track": {
                 "artist": {
                     "mbid": "",
                     "name": "Lomepal",
@@ -505,8 +505,8 @@
                     "name": "Flip",
                     "url": "https://www.last.fm/music/Lomepal/Flip"
                 },
-                "@attr": {
-                    "uts": "1537657255",
+                "attr": {
+                    "timestamp": 1537657255,
                     "date": "22 Sep 2018, 23:00"
                 }
             }
@@ -522,31 +522,31 @@
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 },
                 {
                     "size": "extralarge",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
             "type": "FIXME",
             "age": "0",
             "bootstrap": "0",
             "registered": {
-                "unixtime": 1204912892,
-                "#text": "2008-03-07 18:01:32"
+                "timestamp": 1204912892,
+                "text": "2008-03-07 18:01:32"
             },
-            "scrobblesource": "FIXME",
-            "realname": "Orlena",
-            "recenttrack": {
+            "source": "FIXME",
+            "real_name": "Orlena",
+            "recent_track": {
                 "artist": {
                     "mbid": "",
                     "name": "Lily Allen",
@@ -560,8 +560,8 @@
                     "name": "It's Not Me, It's You",
                     "url": "https://www.last.fm/music/Lily+Allen/It%27s+Not+Me,+It%27s+You"
                 },
-                "@attr": {
-                    "uts": "1423242190",
+                "attr": {
+                    "timestamp": 1423242190,
                     "date": "06 Feb 2015, 17:03"
                 }
             }
@@ -577,31 +577,31 @@
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 },
                 {
                     "size": "extralarge",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
             "type": "FIXME",
             "age": "0",
             "bootstrap": "0",
             "registered": {
-                "unixtime": 1109532368,
-                "#text": "2005-02-27 19:26:08"
+                "timestamp": 1109532368,
+                "text": "2005-02-27 19:26:08"
             },
-            "scrobblesource": "FIXME",
-            "realname": "Annett",
-            "recenttrack": {
+            "source": "FIXME",
+            "real_name": "Annett",
+            "recent_track": {
                 "artist": {
                     "mbid": "",
                     "name": "Courtney Barnett",
@@ -615,8 +615,8 @@
                     "name": "Sometimes I Sit and Think, and Sometimes I Just Sit",
                     "url": "https://www.last.fm/music/Courtney+Barnett/Sometimes+I+Sit+and+Think,+and+Sometimes+I+Just+Sit"
                 },
-                "@attr": {
-                    "uts": "1541604513",
+                "attr": {
+                    "timestamp": 1541604513,
                     "date": "07 Nov 2018, 15:28"
                 }
             }
@@ -632,31 +632,31 @@
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 },
                 {
                     "size": "extralarge",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
             "type": "FIXME",
             "age": "0",
             "bootstrap": "0",
             "registered": {
-                "unixtime": 1074004263,
-                "#text": "2004-01-13 14:31:03"
+                "timestamp": 1074004263,
+                "text": "2004-01-13 14:31:03"
             },
-            "scrobblesource": "FIXME",
-            "realname": "\u00c9douard",
-            "recenttrack": {
+            "source": "FIXME",
+            "real_name": "\u00c9douard",
+            "recent_track": {
                 "artist": {
                     "mbid": "",
                     "name": "The National",
@@ -670,8 +670,8 @@
                     "name": "Alligator",
                     "url": "https://www.last.fm/music/The+National/Alligator"
                 },
-                "@attr": {
-                    "uts": "1457714457",
+                "attr": {
+                    "timestamp": 1457714457,
                     "date": "11 Mar 2016, 16:40"
                 }
             }
@@ -687,31 +687,31 @@
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 },
                 {
                     "size": "extralarge",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
             "type": "FIXME",
             "age": "0",
             "bootstrap": "0",
             "registered": {
-                "unixtime": 1149200023,
-                "#text": "2006-06-01 22:13:43"
+                "timestamp": 1149200023,
+                "text": "2006-06-01 22:13:43"
             },
-            "scrobblesource": "FIXME",
-            "realname": "Lyndsey",
-            "recenttrack": {
+            "source": "FIXME",
+            "real_name": "Lyndsey",
+            "recent_track": {
                 "artist": {
                     "mbid": "",
                     "name": "Escape the Fate",
@@ -725,8 +725,8 @@
                     "name": "Ungrateful (Deluxe)",
                     "url": "https://www.last.fm/music/Escape+the+Fate/Ungrateful+(Deluxe)"
                 },
-                "@attr": {
-                    "uts": "1541802027",
+                "attr": {
+                    "timestamp": 1541802027,
                     "date": "09 Nov 2018, 22:20"
                 }
             }
@@ -742,31 +742,31 @@
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 },
                 {
                     "size": "extralarge",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
             "type": "FIXME",
             "age": "0",
             "bootstrap": "0",
             "registered": {
-                "unixtime": 1116892800,
-                "#text": "2003-07-17 00:00:00"
+                "timestamp": 1116892800,
+                "text": "2003-07-17 00:00:00"
             },
-            "scrobblesource": "FIXME",
-            "realname": "Duncan",
-            "recenttrack": {
+            "source": "FIXME",
+            "real_name": "Duncan",
+            "recent_track": {
                 "artist": {
                     "mbid": "",
                     "name": "Shed Seven",
@@ -780,8 +780,8 @@
                     "name": "Going for Gold",
                     "url": "https://www.last.fm/music/Shed+Seven/Going+for+Gold"
                 },
-                "@attr": {
-                    "uts": "1525192984",
+                "attr": {
+                    "timestamp": 1525192984,
                     "date": "01 May 2018, 16:43"
                 }
             }
@@ -797,30 +797,30 @@
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 },
                 {
                     "size": "extralarge",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
             "type": "FIXME",
             "age": "0",
             "bootstrap": "0",
             "registered": {
-                "unixtime": 1042848000,
-                "#text": "2003-01-18 00:00:00"
+                "timestamp": 1042848000,
+                "text": "2003-01-18 00:00:00"
             },
-            "scrobblesource": "FIXME",
-            "recenttrack": {
+            "source": "FIXME",
+            "recent_track": {
                 "artist": {
                     "mbid": "",
                     "name": "Induceve",
@@ -834,8 +834,8 @@
                     "name": "Dubsided One (Mixed by Subskrpt)",
                     "url": "https://www.last.fm/music/Induceve/Dubsided+One+(Mixed+by+Subskrpt)"
                 },
-                "@attr": {
-                    "uts": "1536177490",
+                "attr": {
+                    "timestamp": 1536177490,
                     "date": "05 Sep 2018, 19:58"
                 }
             }
@@ -851,31 +851,31 @@
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 },
                 {
                     "size": "extralarge",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
             "type": "FIXME",
             "age": "0",
             "bootstrap": "0",
             "registered": {
-                "unixtime": 1101438942,
-                "#text": "2004-11-26 03:15:42"
+                "timestamp": 1101438942,
+                "text": "2004-11-26 03:15:42"
             },
-            "scrobblesource": "FIXME",
-            "realname": "Max Howell",
-            "recenttrack": {
+            "source": "FIXME",
+            "real_name": "Max Howell",
+            "recent_track": {
                 "artist": {
                     "mbid": "",
                     "name": "Cyndi Lauper",
@@ -889,8 +889,8 @@
                     "name": "",
                     "url": ""
                 },
-                "@attr": {
-                    "uts": "1379887472",
+                "attr": {
+                    "timestamp": 1379887472,
                     "date": "22 Sep 2013, 22:04"
                 }
             }
@@ -906,31 +906,31 @@
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 },
                 {
                     "size": "extralarge",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
             "type": "FIXME",
             "age": "0",
             "bootstrap": "0",
             "registered": {
-                "unixtime": 1102157209,
-                "#text": "2004-12-04 10:46:49"
+                "timestamp": 1102157209,
+                "text": "2004-12-04 10:46:49"
             },
-            "scrobblesource": "FIXME",
-            "realname": "James Wheare",
-            "recenttrack": {
+            "source": "FIXME",
+            "real_name": "James Wheare",
+            "recent_track": {
                 "artist": {
                     "mbid": "",
                     "name": "The Beatles",
@@ -944,8 +944,8 @@
                     "name": "The Beatles No. 1",
                     "url": "https://www.last.fm/music/The+Beatles/The+Beatles+No.+1"
                 },
-                "@attr": {
-                    "uts": "1541445245",
+                "attr": {
+                    "timestamp": 1541445245,
                     "date": "05 Nov 2018, 19:14"
                 }
             }
@@ -961,31 +961,31 @@
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 },
                 {
                     "size": "extralarge",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
             "type": "FIXME",
             "age": "0",
             "bootstrap": "0",
             "registered": {
-                "unixtime": 1181561307,
-                "#text": "2007-06-11 11:28:27"
+                "timestamp": 1181561307,
+                "text": "2007-06-11 11:28:27"
             },
-            "scrobblesource": "FIXME",
-            "realname": "Nancy Walker",
-            "recenttrack": {
+            "source": "FIXME",
+            "real_name": "Nancy Walker",
+            "recent_track": {
                 "artist": {
                     "mbid": "",
                     "name": "Johann Sebastian Bach",
@@ -999,8 +999,8 @@
                     "name": "",
                     "url": ""
                 },
-                "@attr": {
-                    "uts": "1409765424",
+                "attr": {
+                    "timestamp": 1409765424,
                     "date": "03 Sep 2014, 17:30"
                 }
             }
@@ -1016,31 +1016,31 @@
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 },
                 {
                     "size": "extralarge",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
             "type": "FIXME",
             "age": "0",
             "bootstrap": "0",
             "registered": {
-                "unixtime": 1073173934,
-                "#text": "2004-01-03 23:52:14"
+                "timestamp": 1073173934,
+                "text": "2004-01-03 23:52:14"
             },
-            "scrobblesource": "FIXME",
-            "realname": "David Singleton",
-            "recenttrack": {
+            "source": "FIXME",
+            "real_name": "David Singleton",
+            "recent_track": {
                 "artist": {
                     "mbid": "",
                     "name": "Black Marble",
@@ -1054,8 +1054,8 @@
                     "name": "A Different Arrangement",
                     "url": "https://www.last.fm/music/Black+Marble/A+Different+Arrangement"
                 },
-                "@attr": {
-                    "uts": "1541515900",
+                "attr": {
+                    "timestamp": 1541515900,
                     "date": "06 Nov 2018, 14:51"
                 }
             }
@@ -1071,31 +1071,31 @@
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 },
                 {
                     "size": "extralarge",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
             "type": "FIXME",
             "age": "0",
             "bootstrap": "0",
             "registered": {
-                "unixtime": 1038322223,
-                "#text": "2002-11-26 14:50:23"
+                "timestamp": 1038322223,
+                "text": "2002-11-26 14:50:23"
             },
-            "scrobblesource": "FIXME",
-            "realname": "Paul Wheeler",
-            "recenttrack": {
+            "source": "FIXME",
+            "real_name": "Paul Wheeler",
+            "recent_track": {
                 "artist": {
                     "mbid": "",
                     "name": "The Who",
@@ -1109,8 +1109,8 @@
                     "name": "Live In Hyde Park",
                     "url": "https://www.last.fm/music/The+Who/Live+In+Hyde+Park"
                 },
-                "@attr": {
-                    "uts": "1541778409",
+                "attr": {
+                    "timestamp": 1541778409,
                     "date": "09 Nov 2018, 15:46"
                 }
             }
@@ -1126,31 +1126,31 @@
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 },
                 {
                     "size": "extralarge",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
             "type": "FIXME",
             "age": "0",
             "bootstrap": "0",
             "registered": {
-                "unixtime": 1056625372,
-                "#text": "2003-06-26 11:02:52"
+                "timestamp": 1056625372,
+                "text": "2003-06-26 11:02:52"
             },
-            "scrobblesource": "FIXME",
-            "realname": "Sebastian Pietsch",
-            "recenttrack": {
+            "source": "FIXME",
+            "real_name": "Sebastian Pietsch",
+            "recent_track": {
                 "artist": {
                     "mbid": "",
                     "name": "Nick Drake",
@@ -1164,8 +1164,8 @@
                     "name": "Five Leaves Left",
                     "url": "https://www.last.fm/music/Nick+Drake/Five+Leaves+Left"
                 },
-                "@attr": {
-                    "uts": "1541779082",
+                "attr": {
+                    "timestamp": 1541779082,
                     "date": "09 Nov 2018, 15:58"
                 }
             }
@@ -1181,31 +1181,31 @@
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 },
                 {
                     "size": "extralarge",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
             "type": "FIXME",
             "age": "0",
             "bootstrap": "0",
             "registered": {
-                "unixtime": 1050964125,
-                "#text": "2004-10-11 01:16:28"
+                "timestamp": 1050964125,
+                "text": "2004-10-11 01:16:28"
             },
-            "scrobblesource": "FIXME",
-            "realname": "Toby Padilla",
-            "recenttrack": {
+            "source": "FIXME",
+            "real_name": "Toby Padilla",
+            "recent_track": {
                 "artist": {
                     "mbid": "",
                     "name": "Rise Against",
@@ -1219,8 +1219,8 @@
                     "name": "",
                     "url": ""
                 },
-                "@attr": {
-                    "uts": "1380293357",
+                "attr": {
+                    "timestamp": 1380293357,
                     "date": "27 Sep 2013, 14:49"
                 }
             }
@@ -1236,29 +1236,29 @@
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 },
                 {
                     "size": "extralarge",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
             "type": "FIXME",
             "age": "0",
             "bootstrap": "0",
             "registered": {
-                "unixtime": 1081515284,
-                "#text": "2004-04-09 12:54:44"
+                "timestamp": 1081515284,
+                "text": "2004-04-09 12:54:44"
             },
-            "scrobblesource": "FIXME"
+            "source": "FIXME"
         },
         {
             "playlists": "0",
@@ -1271,31 +1271,31 @@
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 },
                 {
                     "size": "extralarge",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
             "type": "FIXME",
             "age": "0",
             "bootstrap": "0",
             "registered": {
-                "unixtime": 1187266835,
-                "#text": "2007-08-16 12:20:35"
+                "timestamp": 1187266835,
+                "text": "2007-08-16 12:20:35"
             },
-            "scrobblesource": "FIXME",
-            "realname": "Luke Walkey",
-            "recenttrack": {
+            "source": "FIXME",
+            "real_name": "Luke Walkey",
+            "recent_track": {
                 "artist": {
                     "mbid": "",
                     "name": "Grizzly Bear",
@@ -1309,8 +1309,8 @@
                     "name": "Painted Ruins",
                     "url": "https://www.last.fm/music/Grizzly+Bear/Painted+Ruins"
                 },
-                "@attr": {
-                    "uts": "1517725960",
+                "attr": {
+                    "timestamp": 1517725960,
                     "date": "04 Feb 2018, 06:32"
                 }
             }
@@ -1326,31 +1326,31 @@
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 },
                 {
                     "size": "extralarge",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
             "type": "FIXME",
             "age": "0",
             "bootstrap": "0",
             "registered": {
-                "unixtime": 1163677779,
-                "#text": "2006-11-16 11:49:39"
+                "timestamp": 1163677779,
+                "text": "2006-11-16 11:49:39"
             },
-            "scrobblesource": "FIXME",
-            "realname": "Adam Renberg",
-            "recenttrack": {
+            "source": "FIXME",
+            "real_name": "Adam Renberg",
+            "recent_track": {
                 "artist": {
                     "mbid": "",
                     "name": "Paula Abdul",
@@ -1364,8 +1364,8 @@
                     "name": "Spellbound",
                     "url": "https://www.last.fm/music/Paula+Abdul/Spellbound"
                 },
-                "@attr": {
-                    "uts": "1411676186",
+                "attr": {
+                    "timestamp": 1411676186,
                     "date": "25 Sep 2014, 20:16"
                 }
             }
@@ -1381,30 +1381,30 @@
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 },
                 {
                     "size": "extralarge",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
             "type": "FIXME",
             "age": "0",
             "bootstrap": "0",
             "registered": {
-                "unixtime": 1174612864,
-                "#text": "2007-03-23 01:21:04"
+                "timestamp": 1174612864,
+                "text": "2007-03-23 01:21:04"
             },
-            "scrobblesource": "FIXME",
-            "recenttrack": {
+            "source": "FIXME",
+            "recent_track": {
                 "artist": {
                     "mbid": "",
                     "name": "Mad Men",
@@ -1418,8 +1418,8 @@
                     "name": "Mad Men, Season 2",
                     "url": "https://www.last.fm/music/Mad+Men/Mad+Men,+Season+2"
                 },
-                "@attr": {
-                    "uts": "1224602145",
+                "attr": {
+                    "timestamp": 1224602145,
                     "date": "21 Oct 2008, 15:15"
                 }
             }
@@ -1435,31 +1435,31 @@
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 },
                 {
                     "size": "extralarge",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
             "type": "FIXME",
             "age": "0",
             "bootstrap": "0",
             "registered": {
-                "unixtime": 1160572285,
-                "#text": "2006-10-11 13:11:25"
+                "timestamp": 1160572285,
+                "text": "2006-10-11 13:11:25"
             },
-            "scrobblesource": "FIXME",
-            "realname": "Roel van der Ven",
-            "recenttrack": {
+            "source": "FIXME",
+            "real_name": "Roel van der Ven",
+            "recent_track": {
                 "artist": {
                     "mbid": "",
                     "name": "Robyn",
@@ -1473,8 +1473,8 @@
                     "name": "Honey",
                     "url": "https://www.last.fm/music/Robyn/Honey"
                 },
-                "@attr": {
-                    "uts": "1541771105",
+                "attr": {
+                    "timestamp": 1541771105,
                     "date": "09 Nov 2018, 13:45"
                 }
             }
@@ -1490,30 +1490,30 @@
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 },
                 {
                     "size": "extralarge",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
             "type": "FIXME",
             "age": "0",
             "bootstrap": "0",
             "registered": {
-                "unixtime": 1176855503,
-                "#text": "2007-04-18 00:18:23"
+                "timestamp": 1176855503,
+                "text": "2007-04-18 00:18:23"
             },
-            "scrobblesource": "FIXME",
-            "recenttrack": {
+            "source": "FIXME",
+            "recent_track": {
                 "artist": {
                     "mbid": "",
                     "name": "Girls",
@@ -1527,8 +1527,8 @@
                     "name": "Album",
                     "url": "https://www.last.fm/music/Girls/Album"
                 },
-                "@attr": {
-                    "uts": "1266097047",
+                "attr": {
+                    "timestamp": 1266097047,
                     "date": "13 Feb 2010, 21:37"
                 }
             }
@@ -1544,30 +1544,30 @@
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 },
                 {
                     "size": "extralarge",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
             "type": "FIXME",
             "age": "0",
             "bootstrap": "0",
             "registered": {
-                "unixtime": 1168189467,
-                "#text": "2007-01-07 17:04:27"
+                "timestamp": 1168189467,
+                "text": "2007-01-07 17:04:27"
             },
-            "scrobblesource": "FIXME",
-            "recenttrack": {
+            "source": "FIXME",
+            "recent_track": {
                 "artist": {
                     "mbid": "",
                     "name": "Beans On Toast",
@@ -1581,8 +1581,8 @@
                     "name": "A Spanner in the Works",
                     "url": "https://www.last.fm/music/Beans+On+Toast/A+Spanner+in+the+Works"
                 },
-                "@attr": {
-                    "uts": "1480617154",
+                "attr": {
+                    "timestamp": 1480617154,
                     "date": "01 Dec 2016, 18:32"
                 }
             }
@@ -1598,31 +1598,31 @@
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 },
                 {
                     "size": "extralarge",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
             "type": "FIXME",
             "age": "0",
             "bootstrap": "0",
             "registered": {
-                "unixtime": 1101118480,
-                "#text": "2004-11-22 10:14:40"
+                "timestamp": 1101118480,
+                "text": "2004-11-22 10:14:40"
             },
-            "scrobblesource": "FIXME",
-            "realname": "saul klein",
-            "recenttrack": {
+            "source": "FIXME",
+            "real_name": "saul klein",
+            "recent_track": {
                 "artist": {
                     "mbid": "",
                     "name": "Bill Medley",
@@ -1636,8 +1636,8 @@
                     "name": "Dirty Dancing (Original Motion Picture Soundtrack)",
                     "url": "https://www.last.fm/music/Bill+Medley/Dirty+Dancing+(Original+Motion+Picture+Soundtrack)"
                 },
-                "@attr": {
-                    "uts": "1531384375",
+                "attr": {
+                    "timestamp": 1531384375,
                     "date": "12 Jul 2018, 08:32"
                 }
             }
@@ -1653,31 +1653,31 @@
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 },
                 {
                     "size": "extralarge",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
             "type": "FIXME",
             "age": "0",
             "bootstrap": "0",
             "registered": {
-                "unixtime": 1155054846,
-                "#text": "2006-08-08 16:34:06"
+                "timestamp": 1155054846,
+                "text": "2006-08-08 16:34:06"
             },
-            "scrobblesource": "FIXME",
-            "realname": "Ingrid",
-            "recenttrack": {
+            "source": "FIXME",
+            "real_name": "Ingrid",
+            "recent_track": {
                 "artist": {
                     "mbid": "",
                     "name": "Emil\u00edana Torrini",
@@ -1691,8 +1691,8 @@
                     "name": "Me And Armini",
                     "url": "https://www.last.fm/music/Emil%C3%ADana+Torrini/Me+And+Armini"
                 },
-                "@attr": {
-                    "uts": "1427973704",
+                "attr": {
+                    "timestamp": 1427973704,
                     "date": "02 Apr 2015, 11:21"
                 }
             }
@@ -1708,31 +1708,31 @@
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 },
                 {
                     "size": "extralarge",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
             "type": "FIXME",
             "age": "0",
             "bootstrap": "0",
             "registered": {
-                "unixtime": 1038322313,
-                "#text": "2002-11-26 14:51:53"
+                "timestamp": 1038322313,
+                "text": "2002-11-26 14:51:53"
             },
-            "scrobblesource": "FIXME",
-            "realname": "Lunchbox",
-            "recenttrack": {
+            "source": "FIXME",
+            "real_name": "Lunchbox",
+            "recent_track": {
                 "artist": {
                     "mbid": "",
                     "name": "BrainCells, SnappleMan",
@@ -1746,8 +1746,8 @@
                     "name": "",
                     "url": ""
                 },
-                "@attr": {
-                    "uts": "1308479117",
+                "attr": {
+                    "timestamp": 1308479117,
                     "date": "19 Jun 2011, 10:25"
                 }
             }
@@ -1763,31 +1763,31 @@
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 },
                 {
                     "size": "extralarge",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
             "type": "FIXME",
             "age": "0",
             "bootstrap": "0",
             "registered": {
-                "unixtime": 1128376466,
-                "#text": "2005-10-03 21:54:26"
+                "timestamp": 1128376466,
+                "text": "2005-10-03 21:54:26"
             },
-            "scrobblesource": "FIXME",
-            "realname": "Anthony V",
-            "recenttrack": {
+            "source": "FIXME",
+            "real_name": "Anthony V",
+            "recent_track": {
                 "artist": {
                     "mbid": "",
                     "name": "The Prodigy",
@@ -1801,8 +1801,8 @@
                     "name": "Music for the Jilted Generation",
                     "url": "https://www.last.fm/music/The+Prodigy/Music+for+the+Jilted+Generation"
                 },
-                "@attr": {
-                    "uts": "1541723988",
+                "attr": {
+                    "timestamp": 1541723988,
                     "date": "09 Nov 2018, 00:39"
                 }
             }
@@ -1818,31 +1818,31 @@
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 },
                 {
                     "size": "extralarge",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
             "type": "FIXME",
             "age": "0",
             "bootstrap": "0",
             "registered": {
-                "unixtime": 1097014614,
-                "#text": "2004-10-05 22:16:54"
+                "timestamp": 1097014614,
+                "text": "2004-10-05 22:16:54"
             },
-            "scrobblesource": "FIXME",
-            "realname": "Miss Ann Thrope",
-            "recenttrack": {
+            "source": "FIXME",
+            "real_name": "Miss Ann Thrope",
+            "recent_track": {
                 "artist": {
                     "mbid": "",
                     "name": "Pink Floyd",
@@ -1856,8 +1856,8 @@
                     "name": "The Dark Side Of The Moon",
                     "url": "https://www.last.fm/music/Pink+Floyd/The+Dark+Side+Of+The+Moon"
                 },
-                "@attr": {
-                    "uts": "1498716545",
+                "attr": {
+                    "timestamp": 1498716545,
                     "date": "29 Jun 2017, 06:09"
                 }
             }
@@ -1873,30 +1873,30 @@
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 },
                 {
                     "size": "extralarge",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
             "type": "FIXME",
             "age": "0",
             "bootstrap": "0",
             "registered": {
-                "unixtime": 1169575898,
-                "#text": "2007-01-23 18:11:38"
+                "timestamp": 1169575898,
+                "text": "2007-01-23 18:11:38"
             },
-            "scrobblesource": "FIXME",
-            "recenttrack": {
+            "source": "FIXME",
+            "recent_track": {
                 "artist": {
                     "mbid": "",
                     "name": "Compulsive Gamblers",
@@ -1910,8 +1910,8 @@
                     "name": "Crystal Gazing Luck Amazing",
                     "url": "https://www.last.fm/music/Compulsive+Gamblers/Crystal+Gazing+Luck+Amazing"
                 },
-                "@attr": {
-                    "uts": "1288240661",
+                "attr": {
+                    "timestamp": 1288240661,
                     "date": "28 Oct 2010, 04:37"
                 }
             }
@@ -1927,31 +1927,31 @@
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 },
                 {
                     "size": "extralarge",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
             "type": "FIXME",
             "age": "0",
             "bootstrap": "0",
             "registered": {
-                "unixtime": 1108817161,
-                "#text": "2005-02-19 12:46:01"
+                "timestamp": 1108817161,
+                "text": "2005-02-19 12:46:01"
             },
-            "scrobblesource": "FIXME",
-            "realname": "\u266b Julian Stahnke",
-            "recenttrack": {
+            "source": "FIXME",
+            "real_name": "\u266b Julian Stahnke",
+            "recent_track": {
                 "artist": {
                     "mbid": "",
                     "name": "John Cale",
@@ -1965,8 +1965,8 @@
                     "name": "Paris 1919",
                     "url": "https://www.last.fm/music/John+Cale/Paris+1919"
                 },
-                "@attr": {
-                    "uts": "1541778781",
+                "attr": {
+                    "timestamp": 1541778781,
                     "date": "09 Nov 2018, 15:53"
                 }
             }
@@ -1982,31 +1982,31 @@
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 },
                 {
                     "size": "extralarge",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
             "type": "FIXME",
             "age": "0",
             "bootstrap": "0",
             "registered": {
-                "unixtime": 1154528131,
-                "#text": "2006-08-02 14:15:31"
+                "timestamp": 1154528131,
+                "text": "2006-08-02 14:15:31"
             },
-            "scrobblesource": "FIXME",
-            "realname": "David",
-            "recenttrack": {
+            "source": "FIXME",
+            "real_name": "David",
+            "recent_track": {
                 "artist": {
                     "mbid": "",
                     "name": "iamamiwhoami",
@@ -2020,8 +2020,8 @@
                     "name": "",
                     "url": ""
                 },
-                "@attr": {
-                    "uts": "1499296909",
+                "attr": {
+                    "timestamp": 1499296909,
                     "date": "05 Jul 2017, 23:21"
                 }
             }
@@ -2037,30 +2037,30 @@
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 },
                 {
                     "size": "extralarge",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
             "type": "FIXME",
             "age": "0",
             "bootstrap": "0",
             "registered": {
-                "unixtime": 1161590672,
-                "#text": "2006-10-23 08:04:32"
+                "timestamp": 1161590672,
+                "text": "2006-10-23 08:04:32"
             },
-            "scrobblesource": "FIXME",
-            "recenttrack": {
+            "source": "FIXME",
+            "recent_track": {
                 "artist": {
                     "mbid": "",
                     "name": "Pacific Heights",
@@ -2074,8 +2074,8 @@
                     "name": "A Lost Light",
                     "url": "https://www.last.fm/music/Pacific+Heights/A+Lost+Light"
                 },
-                "@attr": {
-                    "uts": "1541756519",
+                "attr": {
+                    "timestamp": 1541756519,
                     "date": "09 Nov 2018, 09:41"
                 }
             }
@@ -2091,31 +2091,31 @@
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 },
                 {
                     "size": "extralarge",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
             "type": "FIXME",
             "age": "0",
             "bootstrap": "0",
             "registered": {
-                "unixtime": 1164319122,
-                "#text": "2006-11-23 21:58:42"
+                "timestamp": 1164319122,
+                "text": "2006-11-23 21:58:42"
             },
-            "scrobblesource": "FIXME",
-            "realname": "Claudia",
-            "recenttrack": {
+            "source": "FIXME",
+            "real_name": "Claudia",
+            "recent_track": {
                 "artist": {
                     "mbid": "",
                     "name": "Ska-P",
@@ -2129,8 +2129,8 @@
                     "name": "Que Corra La Voz",
                     "url": "https://www.last.fm/music/Ska-P/Que+Corra+La+Voz"
                 },
-                "@attr": {
-                    "uts": "1390265944",
+                "attr": {
+                    "timestamp": 1390265944,
                     "date": "21 Jan 2014, 00:59"
                 }
             }
@@ -2146,31 +2146,31 @@
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 },
                 {
                     "size": "extralarge",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
             "type": "FIXME",
             "age": "0",
             "bootstrap": "0",
             "registered": {
-                "unixtime": 1156770844,
-                "#text": "2006-08-28 13:14:04"
+                "timestamp": 1156770844,
+                "text": "2006-08-28 13:14:04"
             },
-            "scrobblesource": "FIXME",
-            "realname": "Graziela Pancheri",
-            "recenttrack": {
+            "source": "FIXME",
+            "real_name": "Graziela Pancheri",
+            "recent_track": {
                 "artist": {
                     "mbid": "",
                     "name": "The Rapture",
@@ -2184,8 +2184,8 @@
                     "name": "Out of the Races and Onto the Tracks",
                     "url": "https://www.last.fm/music/The+Rapture/Out+of+the+Races+and+Onto+the+Tracks"
                 },
-                "@attr": {
-                    "uts": "1541790295",
+                "attr": {
+                    "timestamp": 1541790295,
                     "date": "09 Nov 2018, 19:04"
                 }
             }
@@ -2201,31 +2201,31 @@
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 },
                 {
                     "size": "extralarge",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
             "type": "FIXME",
             "age": "0",
             "bootstrap": "0",
             "registered": {
-                "unixtime": 1156444135,
-                "#text": "2006-08-24 18:28:55"
+                "timestamp": 1156444135,
+                "text": "2006-08-24 18:28:55"
             },
-            "scrobblesource": "FIXME",
-            "realname": "Claire Levy",
-            "recenttrack": {
+            "source": "FIXME",
+            "real_name": "Claire Levy",
+            "recent_track": {
                 "artist": {
                     "mbid": "",
                     "name": "John Williams",
@@ -2239,8 +2239,8 @@
                     "name": "",
                     "url": ""
                 },
-                "@attr": {
-                    "uts": "1420991611",
+                "attr": {
+                    "timestamp": 1420991611,
                     "date": "11 Jan 2015, 15:53"
                 }
             }
@@ -2256,31 +2256,31 @@
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 },
                 {
                     "size": "extralarge",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
             "type": "FIXME",
             "age": "0",
             "bootstrap": "0",
             "registered": {
-                "unixtime": 1103006475,
-                "#text": "2004-12-14 06:41:15"
+                "timestamp": 1103006475,
+                "text": "2004-12-14 06:41:15"
             },
-            "scrobblesource": "FIXME",
-            "realname": "Stefan Baumschlager",
-            "recenttrack": {
+            "source": "FIXME",
+            "real_name": "Stefan Baumschlager",
+            "recent_track": {
                 "artist": {
                     "mbid": "",
                     "name": "Pentatones",
@@ -2294,8 +2294,8 @@
                     "name": "What If",
                     "url": "https://www.last.fm/music/Pentatones/What+If"
                 },
-                "@attr": {
-                    "uts": "1503482329",
+                "attr": {
+                    "timestamp": 1503482329,
                     "date": "23 Aug 2017, 09:58"
                 }
             }
@@ -2311,31 +2311,31 @@
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 },
                 {
                     "size": "extralarge",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
             "type": "FIXME",
             "age": "0",
             "bootstrap": "0",
             "registered": {
-                "unixtime": 1156681361,
-                "#text": "2006-08-27 12:22:41"
+                "timestamp": 1156681361,
+                "text": "2006-08-27 12:22:41"
             },
-            "scrobblesource": "FIXME",
-            "realname": "Laura",
-            "recenttrack": {
+            "source": "FIXME",
+            "real_name": "Laura",
+            "recent_track": {
                 "artist": {
                     "mbid": "",
                     "name": "Echo Lake",
@@ -2349,8 +2349,8 @@
                     "name": "",
                     "url": ""
                 },
-                "@attr": {
-                    "uts": "1541785371",
+                "attr": {
+                    "timestamp": 1541785371,
                     "date": "09 Nov 2018, 17:42"
                 }
             }
@@ -2366,31 +2366,31 @@
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 },
                 {
                     "size": "extralarge",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
             "type": "FIXME",
             "age": "0",
             "bootstrap": "0",
             "registered": {
-                "unixtime": 1110143018,
-                "#text": "2005-03-06 21:03:38"
+                "timestamp": 1110143018,
+                "text": "2005-03-06 21:03:38"
             },
-            "scrobblesource": "FIXME",
-            "realname": "Yllona",
-            "recenttrack": {
+            "source": "FIXME",
+            "real_name": "Yllona",
+            "recent_track": {
                 "artist": {
                     "mbid": "",
                     "name": "Oliver Mtukudzi",
@@ -2404,8 +2404,8 @@
                     "name": "Africa Fete 99",
                     "url": "https://www.last.fm/music/Oliver+Mtukudzi/Africa+Fete+99"
                 },
-                "@attr": {
-                    "uts": "1387572956",
+                "attr": {
+                    "timestamp": 1387572956,
                     "date": "20 Dec 2013, 20:55"
                 }
             }
@@ -2421,30 +2421,30 @@
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 },
                 {
                     "size": "extralarge",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
             "type": "FIXME",
             "age": "0",
             "bootstrap": "0",
             "registered": {
-                "unixtime": 1082025256,
-                "#text": "2004-04-15 10:34:16"
+                "timestamp": 1082025256,
+                "text": "2004-04-15 10:34:16"
             },
-            "scrobblesource": "FIXME",
-            "realname": "cherie matrix-holt"
+            "source": "FIXME",
+            "real_name": "cherie matrix-holt"
         },
         {
             "playlists": "0",
@@ -2457,31 +2457,31 @@
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 },
                 {
                     "size": "extralarge",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
             "type": "FIXME",
             "age": "0",
             "bootstrap": "0",
             "registered": {
-                "unixtime": 1078663450,
-                "#text": "2004-03-07 12:44:10"
+                "timestamp": 1078663450,
+                "text": "2004-03-07 12:44:10"
             },
-            "scrobblesource": "FIXME",
-            "realname": "Jonty",
-            "recenttrack": {
+            "source": "FIXME",
+            "real_name": "Jonty",
+            "recent_track": {
                 "artist": {
                     "mbid": "",
                     "name": "Michael Mayer",
@@ -2495,8 +2495,8 @@
                     "name": "&",
                     "url": "https://www.last.fm/music/Michael+Mayer/&"
                 },
-                "@attr": {
-                    "uts": "1541794368",
+                "attr": {
+                    "timestamp": 1541794368,
                     "date": "09 Nov 2018, 20:12"
                 }
             }
@@ -2512,30 +2512,30 @@
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 },
                 {
                     "size": "extralarge",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
             "type": "FIXME",
             "age": "0",
             "bootstrap": "0",
             "registered": {
-                "unixtime": 1138797498,
-                "#text": "2006-02-01 12:38:18"
+                "timestamp": 1138797498,
+                "text": "2006-02-01 12:38:18"
             },
-            "scrobblesource": "FIXME",
-            "recenttrack": {
+            "source": "FIXME",
+            "recent_track": {
                 "artist": {
                     "mbid": "",
                     "name": "Sleeping at Last",
@@ -2549,8 +2549,8 @@
                     "name": "Atlas: Year One",
                     "url": "https://www.last.fm/music/Sleeping+at+Last/Atlas:+Year+One"
                 },
-                "@attr": {
-                    "uts": "1541178969",
+                "attr": {
+                    "timestamp": 1541178969,
                     "date": "02 Nov 2018, 17:16"
                 }
             }
@@ -2566,31 +2566,31 @@
             "image": [
                 {
                     "size": "small",
-                    "#text": ""
+                    "text": ""
                 },
                 {
                     "size": "medium",
-                    "#text": ""
+                    "text": ""
                 },
                 {
                     "size": "large",
-                    "#text": ""
+                    "text": ""
                 },
                 {
                     "size": "extralarge",
-                    "#text": ""
+                    "text": ""
                 }
             ],
             "type": "FIXME",
             "age": "0",
             "bootstrap": "0",
             "registered": {
-                "unixtime": 1104155132,
-                "#text": "2004-12-27 13:45:32"
+                "timestamp": 1104155132,
+                "text": "2004-12-27 13:45:32"
             },
-            "scrobblesource": "FIXME",
-            "realname": "Muz",
-            "recenttrack": {
+            "source": "FIXME",
+            "real_name": "Muz",
+            "recent_track": {
                 "artist": {
                     "mbid": "",
                     "name": "The Offspring",
@@ -2604,8 +2604,8 @@
                     "name": "Greatest Hits",
                     "url": "https://www.last.fm/music/The+Offspring/Greatest+Hits"
                 },
-                "@attr": {
-                    "uts": "1541818919",
+                "attr": {
+                    "timestamp": 1541818919,
                     "date": "10 Nov 2018, 03:01"
                 }
             }
@@ -2621,31 +2621,31 @@
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 },
                 {
                     "size": "extralarge",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
             "type": "FIXME",
             "age": "0",
             "bootstrap": "0",
             "registered": {
-                "unixtime": 1058054400,
-                "#text": "2003-07-13 00:00:00"
+                "timestamp": 1058054400,
+                "text": "2003-07-13 00:00:00"
             },
-            "scrobblesource": "FIXME",
-            "realname": "Mischa Zurke",
-            "recenttrack": {
+            "source": "FIXME",
+            "real_name": "Mischa Zurke",
+            "recent_track": {
                 "artist": {
                     "mbid": "",
                     "name": "Fantastic Negrito",
@@ -2659,18 +2659,18 @@
                     "name": "Working Poor",
                     "url": "https://www.last.fm/music/Fantastic+Negrito/Working+Poor"
                 },
-                "@attr": {
-                    "uts": "1479156716",
+                "attr": {
+                    "timestamp": 1479156716,
                     "date": "14 Nov 2016, 20:51"
                 }
             }
         }
     ],
-    "@attr": {
+    "attr": {
         "page": 1,
+        "user": "RJ",
         "total": 89,
-        "perPage": 50,
-        "totalPages": 2,
-        "for": "RJ"
+        "limit": 50,
+        "total_pages": 2
     }
 }

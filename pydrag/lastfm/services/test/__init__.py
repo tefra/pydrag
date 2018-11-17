@@ -33,37 +33,25 @@ fixture = config.VCR(
 )
 
 
-def s(value):
-    _type = type(value)
-    if _type in [int]:
-        return str(value)
-
-    if isinstance(value, list):
-        for idx, v in enumerate(value):
-            value[idx] = s(v)
-
-    elif isinstance(value, dict):
-        if "streamable" in value:
-            del value["streamable"]
-
-        for k, v in value.items():
-            value[k] = s(v)
-    return value
-
-
 class MethodTestCase(TestCase):
     def setUp(self):
         self.maxDiff = None
         super(MethodTestCase, self).setUp()
 
     def load_fixture(self, file_name):
-        with open(
-            "{}/{}_expected.json".format(fixtures_dir, file_name), "r"
-        ) as f:
-            return json.load(f)
+        path = "{}/{}_expected.json".format(fixtures_dir, file_name)
+        try:
+            with open(path, "r") as f:
+                return json.load(f)
+        except FileNotFoundError:
+            return None
 
-    def assertFixtureEqual(self, fixture, actual):
-        self.assertDictEqual(self.load_fixture(fixture), actual)
+    def assertFixtureEqual(self, file_name, actual):
+        expected = self.load_fixture(file_name)
+        if expected is None:
+            path = "{}/{}_expected.json".format(fixtures_dir, file_name)
+            with open(path, "w") as f:
+                json.dump(actual, f)
+            return self.assertFixtureEqual(file_name, actual)
 
-    def assertDictEqual(self, d1, d2, msg=None):
-        super(MethodTestCase, self).assertDictEqual(s(d1), s(d2))
+        self.assertDictEqual(expected, actual)

@@ -5,7 +5,7 @@
             "name": "Womb Sounds Heartbeat",
             "url": "https://www.last.fm/music/Womb+Sounds+Heartbeat",
             "playcount": 35,
-            "@attr": {
+            "attr": {
                 "rank": "1"
             }
         },
@@ -14,7 +14,7 @@
             "name": "The Gaslight Anthem",
             "url": "https://www.last.fm/music/The+Gaslight+Anthem",
             "playcount": 10,
-            "@attr": {
+            "attr": {
                 "rank": "2"
             }
         },
@@ -23,7 +23,7 @@
             "name": "Kacey Musgraves",
             "url": "https://www.last.fm/music/Kacey+Musgraves",
             "playcount": 3,
-            "@attr": {
+            "attr": {
                 "rank": "3"
             }
         },
@@ -32,7 +32,7 @@
             "name": "Ferris & Sylvester",
             "url": "https://www.last.fm/music/Ferris+&+Sylvester",
             "playcount": 2,
-            "@attr": {
+            "attr": {
                 "rank": "4"
             }
         },
@@ -41,7 +41,7 @@
             "name": "Mario",
             "url": "https://www.last.fm/music/Mario",
             "playcount": 2,
-            "@attr": {
+            "attr": {
                 "rank": "5"
             }
         },
@@ -50,7 +50,7 @@
             "name": "Nao",
             "url": "https://www.last.fm/music/Nao",
             "playcount": 2,
-            "@attr": {
+            "attr": {
                 "rank": "6"
             }
         },
@@ -59,7 +59,7 @@
             "name": "Amber Mark",
             "url": "https://www.last.fm/music/Amber+Mark",
             "playcount": 1,
-            "@attr": {
+            "attr": {
                 "rank": "7"
             }
         },
@@ -68,7 +68,7 @@
             "name": "Ar'mon & Trey",
             "url": "https://www.last.fm/music/Ar%27mon+&+Trey",
             "playcount": 1,
-            "@attr": {
+            "attr": {
                 "rank": "8"
             }
         },
@@ -77,7 +77,7 @@
             "name": "Aretha Franklin",
             "url": "https://www.last.fm/music/Aretha+Franklin",
             "playcount": 1,
-            "@attr": {
+            "attr": {
                 "rank": "9"
             }
         },
@@ -86,7 +86,7 @@
             "name": "Brian Deady",
             "url": "https://www.last.fm/music/Brian+Deady",
             "playcount": 1,
-            "@attr": {
+            "attr": {
                 "rank": "10"
             }
         },
@@ -95,7 +95,7 @@
             "name": "Catherine McGrath",
             "url": "https://www.last.fm/music/Catherine+McGrath",
             "playcount": 1,
-            "@attr": {
+            "attr": {
                 "rank": "11"
             }
         },
@@ -104,7 +104,7 @@
             "name": "Childish Gambino",
             "url": "https://www.last.fm/music/Childish+Gambino",
             "playcount": 1,
-            "@attr": {
+            "attr": {
                 "rank": "12"
             }
         },
@@ -113,7 +113,7 @@
             "name": "Dram",
             "url": "https://www.last.fm/music/Dram",
             "playcount": 1,
-            "@attr": {
+            "attr": {
                 "rank": "13"
             }
         },
@@ -122,7 +122,7 @@
             "name": "Enno Aare",
             "url": "https://www.last.fm/music/Enno+Aare",
             "playcount": 1,
-            "@attr": {
+            "attr": {
                 "rank": "14"
             }
         },
@@ -131,7 +131,7 @@
             "name": "Filmore",
             "url": "https://www.last.fm/music/Filmore",
             "playcount": 1,
-            "@attr": {
+            "attr": {
                 "rank": "15"
             }
         },
@@ -140,7 +140,7 @@
             "name": "Fleetwood Mac",
             "url": "https://www.last.fm/music/Fleetwood+Mac",
             "playcount": 1,
-            "@attr": {
+            "attr": {
                 "rank": "16"
             }
         },
@@ -149,7 +149,7 @@
             "name": "Franz Schubert",
             "url": "https://www.last.fm/music/Franz+Schubert",
             "playcount": 1,
-            "@attr": {
+            "attr": {
                 "rank": "17"
             }
         },
@@ -158,7 +158,7 @@
             "name": "Ilham",
             "url": "https://www.last.fm/music/Ilham",
             "playcount": 1,
-            "@attr": {
+            "attr": {
                 "rank": "18"
             }
         },
@@ -167,7 +167,7 @@
             "name": "India.Arie",
             "url": "https://www.last.fm/music/India.Arie",
             "playcount": 1,
-            "@attr": {
+            "attr": {
                 "rank": "19"
             }
         },
@@ -176,7 +176,7 @@
             "name": "Into The Ark",
             "url": "https://www.last.fm/music/Into+The+Ark",
             "playcount": 1,
-            "@attr": {
+            "attr": {
                 "rank": "20"
             }
         },
@@ -185,7 +185,7 @@
             "name": "Jackie Wilson",
             "url": "https://www.last.fm/music/Jackie+Wilson",
             "playcount": 1,
-            "@attr": {
+            "attr": {
                 "rank": "21"
             }
         },
@@ -194,7 +194,7 @@
             "name": "JamesDavis",
             "url": "https://www.last.fm/music/JamesDavis",
             "playcount": 1,
-            "@attr": {
+            "attr": {
                 "rank": "22"
             }
         },
@@ -203,7 +203,7 @@
             "name": "Kiana Led\u00e9",
             "url": "https://www.last.fm/music/Kiana+Led%C3%A9",
             "playcount": 1,
-            "@attr": {
+            "attr": {
                 "rank": "23"
             }
         },
@@ -212,7 +212,7 @@
             "name": "Kylie Minogue",
             "url": "https://www.last.fm/music/Kylie+Minogue",
             "playcount": 1,
-            "@attr": {
+            "attr": {
                 "rank": "24"
             }
         },
@@ -221,7 +221,7 @@
             "name": "Liza",
             "url": "https://www.last.fm/music/Liza",
             "playcount": 1,
-            "@attr": {
+            "attr": {
                 "rank": "25"
             }
         },
@@ -230,7 +230,7 @@
             "name": "Maddie & Tae",
             "url": "https://www.last.fm/music/Maddie+&+Tae",
             "playcount": 1,
-            "@attr": {
+            "attr": {
                 "rank": "26"
             }
         },
@@ -239,7 +239,7 @@
             "name": "Major.",
             "url": "https://www.last.fm/music/Major.",
             "playcount": 1,
-            "@attr": {
+            "attr": {
                 "rank": "27"
             }
         },
@@ -248,7 +248,7 @@
             "name": "Marsha Ambrosius",
             "url": "https://www.last.fm/music/Marsha+Ambrosius",
             "playcount": 1,
-            "@attr": {
+            "attr": {
                 "rank": "28"
             }
         },
@@ -257,7 +257,7 @@
             "name": "masego",
             "url": "https://www.last.fm/music/masego",
             "playcount": 1,
-            "@attr": {
+            "attr": {
                 "rank": "29"
             }
         },
@@ -266,7 +266,7 @@
             "name": "Melat",
             "url": "https://www.last.fm/music/Melat",
             "playcount": 1,
-            "@attr": {
+            "attr": {
                 "rank": "30"
             }
         },
@@ -275,7 +275,7 @@
             "name": "Nikki Blonsky",
             "url": "https://www.last.fm/music/Nikki+Blonsky",
             "playcount": 1,
-            "@attr": {
+            "attr": {
                 "rank": "31"
             }
         },
@@ -284,7 +284,7 @@
             "name": "Njomza",
             "url": "https://www.last.fm/music/Njomza",
             "playcount": 1,
-            "@attr": {
+            "attr": {
                 "rank": "32"
             }
         },
@@ -293,7 +293,7 @@
             "name": "Paul Simon",
             "url": "https://www.last.fm/music/Paul+Simon",
             "playcount": 1,
-            "@attr": {
+            "attr": {
                 "rank": "33"
             }
         },
@@ -302,7 +302,7 @@
             "name": "Queen Naija",
             "url": "https://www.last.fm/music/Queen+Naija",
             "playcount": 1,
-            "@attr": {
+            "attr": {
                 "rank": "34"
             }
         },
@@ -311,7 +311,7 @@
             "name": "R.Lum.R",
             "url": "https://www.last.fm/music/R.Lum.R",
             "playcount": 1,
-            "@attr": {
+            "attr": {
                 "rank": "35"
             }
         },
@@ -320,7 +320,7 @@
             "name": "Ro James",
             "url": "https://www.last.fm/music/Ro+James",
             "playcount": 1,
-            "@attr": {
+            "attr": {
                 "rank": "36"
             }
         },
@@ -329,7 +329,7 @@
             "name": "Ryan Trey",
             "url": "https://www.last.fm/music/Ryan+Trey",
             "playcount": 1,
-            "@attr": {
+            "attr": {
                 "rank": "37"
             }
         },
@@ -338,7 +338,7 @@
             "name": "Sat-B",
             "url": "https://www.last.fm/music/Sat-B",
             "playcount": 1,
-            "@attr": {
+            "attr": {
                 "rank": "38"
             }
         },
@@ -347,7 +347,7 @@
             "name": "Sauti Sol",
             "url": "https://www.last.fm/music/Sauti+Sol",
             "playcount": 1,
-            "@attr": {
+            "attr": {
                 "rank": "39"
             }
         },
@@ -356,7 +356,7 @@
             "name": "Shawn Stockman",
             "url": "https://www.last.fm/music/Shawn+Stockman",
             "playcount": 1,
-            "@attr": {
+            "attr": {
                 "rank": "40"
             }
         },
@@ -365,7 +365,7 @@
             "name": "Stevie Wonder",
             "url": "https://www.last.fm/music/Stevie+Wonder",
             "playcount": 1,
-            "@attr": {
+            "attr": {
                 "rank": "41"
             }
         },
@@ -374,7 +374,7 @@
             "name": "Summer Walker",
             "url": "https://www.last.fm/music/Summer+Walker",
             "playcount": 1,
-            "@attr": {
+            "attr": {
                 "rank": "42"
             }
         },
@@ -383,7 +383,7 @@
             "name": "Tamia",
             "url": "https://www.last.fm/music/Tamia",
             "playcount": 1,
-            "@attr": {
+            "attr": {
                 "rank": "43"
             }
         },
@@ -392,7 +392,7 @@
             "name": "The Wandering Hearts",
             "url": "https://www.last.fm/music/The+Wandering+Hearts",
             "playcount": 1,
-            "@attr": {
+            "attr": {
                 "rank": "44"
             }
         },
@@ -401,7 +401,7 @@
             "name": "The Wild Things",
             "url": "https://www.last.fm/music/The+Wild+Things",
             "playcount": 1,
-            "@attr": {
+            "attr": {
                 "rank": "45"
             }
         },
@@ -410,7 +410,7 @@
             "name": "Van Morrison",
             "url": "https://www.last.fm/music/Van+Morrison",
             "playcount": 1,
-            "@attr": {
+            "attr": {
                 "rank": "46"
             }
         },
@@ -419,14 +419,14 @@
             "name": "Free Nationals",
             "url": "https://www.last.fm/music/Free+Nationals",
             "playcount": 1,
-            "@attr": {
+            "attr": {
                 "rank": "47"
             }
         }
     ],
-    "@attr": {
+    "attr": {
         "user": "RJ",
-        "to": "1541764800",
-        "from": "1541160000"
+        "to_date": "1541764800",
+        "from_date": "1541160000"
     }
 }

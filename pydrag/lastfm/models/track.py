@@ -1,8 +1,8 @@
 from typing import List
 
-from attr import attrs
+from attr import dataclass
 
-from pydrag.core import BaseModel, mattrib
+from pydrag.core import BaseModel
 from pydrag.lastfm.models.album import AlbumInfo
 from pydrag.lastfm.models.common import (
     Attributes,
@@ -14,56 +14,56 @@ from pydrag.lastfm.models.common import (
 )
 
 
-@attrs(auto_attribs=True)
+@dataclass
 class TrackInfo(Track):
     wiki: Wiki = None
     album: AlbumInfo = None
-    top_tags: Tags = mattrib("toptags", default=None)
+    top_tags: Tags = None
 
 
-@attrs(auto_attribs=True)
+@dataclass
 class CorrectionTrack(BaseModel):
-    attr: Attributes = mattrib("@attr")
+    attr: Attributes
     track: TrackInfo = None
 
 
-@attrs(auto_attribs=True)
+@dataclass
 class TrackCorrection(BaseModel):
     correction: CorrectionTrack
 
 
-@attrs(auto_attribs=True)
+@dataclass
 class TrackMatches(BaseModel):
     track: List[TrackSimpleArtist]
 
 
-@attrs(auto_attribs=True)
+@dataclass
 class TrackSearch(OpenSearch):
-    matches: TrackMatches = mattrib("trackmatches")
+    matches: TrackMatches
 
 
-@attrs(auto_attribs=True)
+@dataclass
 class Corrected(BaseModel):
-    text: str = mattrib("#text", default=None)
+    text: str = None
     code: str = None
     corrected: int = None
 
 
-@attrs(auto_attribs=True)
+@dataclass
 class TrackUpdateNowPlaying(BaseModel):
     album: Corrected = None
     artist: Corrected = None
     track: Corrected = None
     timestamp: int = None
-    ignored_message: Corrected = mattrib("ignoredMessage", default=None)
-    album_artist: Corrected = mattrib("albumArtist", default=None)
-    attr: Attributes = mattrib("@attr", default=None)
+    ignored_message: Corrected = None
+    album_artist: Corrected = None
+    attr: Attributes = None
 
 
-@attrs(auto_attribs=True)
+@dataclass
 class TrackScrobble(BaseModel):
     scrobble: List[TrackUpdateNowPlaying]
-    attr: Attributes = mattrib("@attr")
+    attr: Attributes
 
     @classmethod
     def from_dict(cls, data: dict):
@@ -73,16 +73,16 @@ class TrackScrobble(BaseModel):
         return super().from_dict(data)
 
 
-@attrs(auto_attribs=True)
+@dataclass
 class ScrobbleTrack(BaseModel):
     artist: str
     track: str
     timestamp: int
     album: str = None
     context: str = None
-    stream_id: str = mattrib("streamId", default=None)
-    chosen_by_user: bool = mattrib("ignoredMessage", default=True)
-    track_number: str = mattrib("ignoredMessage", default=None)
+    stream_id: str = None
+    chosen_by_user: bool = None
+    track_number: str = None
     mbid: str = None
-    album_artist: str = mattrib("albumArtist", default=None)
+    album_artist: str = None
     duration: int = None

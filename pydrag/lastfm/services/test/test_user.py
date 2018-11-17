@@ -28,7 +28,7 @@ class UserServiceTests(MethodTestCase):
         self.assertEqual("User", result.namespace)
         self.assertEqual("get_artist_tracks", result.method)
         self.assertEqual(
-            {"artist": "Trivium", "user": "rj", "page": "1"}, result.params
+            {"artist": "Trivium", "user": "rj", "page": 1}, result.params
         )
         self.assertIsInstance(result, ArtistTrackList)
         self.assertFixtureEqual("user/get_artist_tracks", result.to_dict())
@@ -40,7 +40,7 @@ class UserServiceTests(MethodTestCase):
         self.assertEqual("User", result.namespace)
         self.assertEqual("get_friends", result.method)
         self.assertEqual(
-            {"recenttracks": True, "user": "rj", "page": "1", "limit": "50"},
+            {"recenttracks": True, "user": "rj", "page": 1, "limit": 50},
             result.params,
         )
         self.assertIsInstance(result, UserFriends)
@@ -64,9 +64,7 @@ class UserServiceTests(MethodTestCase):
 
         self.assertEqual("User", result.namespace)
         self.assertEqual("get_loved_tracks", result.method)
-        self.assertEqual(
-            {"user": "rj", "page": "1", "limit": "50"}, result.params
-        )
+        self.assertEqual({"user": "rj", "page": 1, "limit": 50}, result.params)
 
         self.assertIsInstance(result, ArtistTrackList)
         self.assertFixtureEqual("user/get_loved_tracks", result.to_dict())
@@ -82,8 +80,8 @@ class UserServiceTests(MethodTestCase):
                 "tag": "rock",
                 "taggingtype": "track",
                 "user": "rj",
-                "page": "1",
-                "limit": "50",
+                "page": 1,
+                "limit": 50,
             },
             result.params,
         )
@@ -127,8 +125,8 @@ class UserServiceTests(MethodTestCase):
                 "tag": "rock",
                 "taggingtype": "artist",
                 "user": "rj",
-                "page": "1",
-                "limit": "50",
+                "page": 1,
+                "limit": 50,
             },
             result.params,
         )
@@ -149,7 +147,7 @@ class UserServiceTests(MethodTestCase):
         self.assertEqual("User", result.namespace)
         self.assertEqual("get_recent_tracks", result.method)
         self.assertEqual(
-            {"extended": False, "user": "rj", "page": "1", "limit": "50"},
+            {"extended": False, "user": "rj", "page": 1, "limit": 50},
             result.params,
         )
 
@@ -163,7 +161,7 @@ class UserServiceTests(MethodTestCase):
         self.assertEqual("User", result.namespace)
         self.assertEqual("get_top_albums", result.method)
         self.assertEqual(
-            {"period": "7day", "user": "rj", "page": "1", "limit": "50"},
+            {"period": "7day", "user": "rj", "page": 1, "limit": 50},
             result.params,
         )
 
@@ -177,7 +175,7 @@ class UserServiceTests(MethodTestCase):
         self.assertEqual("User", result.namespace)
         self.assertEqual("get_top_artists", result.method)
         self.assertEqual(
-            {"period": "7day", "user": "rj", "page": "1", "limit": "50"},
+            {"period": "7day", "user": "rj", "page": 1, "limit": 50},
             result.params,
         )
 
@@ -190,7 +188,7 @@ class UserServiceTests(MethodTestCase):
 
         self.assertEqual("User", result.namespace)
         self.assertEqual("get_top_tags", result.method)
-        self.assertEqual({"user": "rj", "limit": "50"}, result.params)
+        self.assertEqual({"user": "rj", "limit": 50}, result.params)
 
         self.assertIsInstance(result, TagList)
         self.assertFixtureEqual("user/get_top_tags", result.to_dict())
@@ -202,7 +200,7 @@ class UserServiceTests(MethodTestCase):
         self.assertEqual("User", result.namespace)
         self.assertEqual("get_top_tracks", result.method)
         self.assertEqual(
-            {"period": "7day", "user": "rj", "page": "1", "limit": "1"},
+            {"period": "7day", "user": "rj", "page": 1, "limit": 1},
             result.params,
         )
 

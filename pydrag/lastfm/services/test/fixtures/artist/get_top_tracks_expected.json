@@ -11,25 +11,25 @@
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 },
                 {
                     "size": "extralarge",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
             "playcount": 9314129,
             "listeners": 1359980,
             "streamable": "0",
-            "@attr": {
+            "attr": {
                 "rank": "1"
             }
         },
@@ -44,25 +44,25 @@
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 },
                 {
                     "size": "extralarge",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
             "playcount": 7840169,
             "listeners": 1230922,
             "streamable": "0",
-            "@attr": {
+            "attr": {
                 "rank": "2"
             }
         },
@@ -78,25 +78,25 @@
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 },
                 {
                     "size": "extralarge",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
             "playcount": 6951933,
             "listeners": 1092549,
             "streamable": "0",
-            "@attr": {
+            "attr": {
                 "rank": "3"
             }
         },
@@ -112,25 +112,25 @@
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 },
                 {
                     "size": "extralarge",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
             "playcount": 6391027,
             "listeners": 958422,
             "streamable": "0",
-            "@attr": {
+            "attr": {
                 "rank": "4"
             }
         },
@@ -146,25 +146,25 @@
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 },
                 {
                     "size": "extralarge",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
             "playcount": 4457223,
             "listeners": 764741,
             "streamable": "0",
-            "@attr": {
+            "attr": {
                 "rank": "5"
             }
         },
@@ -179,25 +179,25 @@
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 },
                 {
                     "size": "extralarge",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
             "playcount": 3495677,
             "listeners": 598089,
             "streamable": "0",
-            "@attr": {
+            "attr": {
                 "rank": "6"
             }
         },
@@ -213,25 +213,25 @@
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 },
                 {
                     "size": "extralarge",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
             "playcount": 2593925,
             "listeners": 540050,
             "streamable": "0",
-            "@attr": {
+            "attr": {
                 "rank": "7"
             }
         },
@@ -247,25 +247,25 @@
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 },
                 {
                     "size": "extralarge",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
             "playcount": 3744264,
             "listeners": 527893,
             "streamable": "0",
-            "@attr": {
+            "attr": {
                 "rank": "8"
             }
         },
@@ -280,25 +280,25 @@
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 },
                 {
                     "size": "extralarge",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
             "playcount": 2935472,
             "listeners": 499393,
             "streamable": "0",
-            "@attr": {
+            "attr": {
                 "rank": "9"
             }
         },
@@ -314,25 +314,25 @@
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 },
                 {
                     "size": "extralarge",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
             "playcount": 2731773,
             "listeners": 491669,
             "streamable": "0",
-            "@attr": {
+            "attr": {
                 "rank": "10"
             }
         },
@@ -347,25 +347,25 @@
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 },
                 {
                     "size": "extralarge",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
             "playcount": 2016181,
             "listeners": 406589,
             "streamable": "0",
-            "@attr": {
+            "attr": {
                 "rank": "11"
             }
         },
@@ -380,25 +380,25 @@
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 },
                 {
                     "size": "extralarge",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
             "playcount": 2460454,
             "listeners": 387497,
             "streamable": "0",
-            "@attr": {
+            "attr": {
                 "rank": "12"
             }
         },
@@ -413,25 +413,25 @@
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 },
                 {
                     "size": "extralarge",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
             "playcount": 2100336,
             "listeners": 378626,
             "streamable": "0",
-            "@attr": {
+            "attr": {
                 "rank": "13"
             }
         },
@@ -446,25 +446,25 @@
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 },
                 {
                     "size": "extralarge",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
             "playcount": 2136561,
             "listeners": 367556,
             "streamable": "0",
-            "@attr": {
+            "attr": {
                 "rank": "14"
             }
         },
@@ -480,25 +480,25 @@
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 },
                 {
                     "size": "extralarge",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
             "playcount": 1923696,
             "listeners": 355879,
             "streamable": "0",
-            "@attr": {
+            "attr": {
                 "rank": "15"
             }
         },
@@ -514,25 +514,25 @@
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 },
                 {
                     "size": "extralarge",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
             "playcount": 1932437,
             "listeners": 327508,
             "streamable": "0",
-            "@attr": {
+            "attr": {
                 "rank": "16"
             }
         },
@@ -547,25 +547,25 @@
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 },
                 {
                     "size": "extralarge",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
             "playcount": 1839992,
             "listeners": 313333,
             "streamable": "0",
-            "@attr": {
+            "attr": {
                 "rank": "17"
             }
         },
@@ -581,25 +581,25 @@
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 },
                 {
                     "size": "extralarge",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
             "playcount": 1770029,
             "listeners": 303296,
             "streamable": "0",
-            "@attr": {
+            "attr": {
                 "rank": "18"
             }
         },
@@ -615,25 +615,25 @@
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 },
                 {
                     "size": "extralarge",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
             "playcount": 1528651,
             "listeners": 294881,
             "streamable": "0",
-            "@attr": {
+            "attr": {
                 "rank": "19"
             }
         },
@@ -649,25 +649,25 @@
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 },
                 {
                     "size": "extralarge",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
             "playcount": 1352966,
             "listeners": 293880,
             "streamable": "0",
-            "@attr": {
+            "attr": {
                 "rank": "20"
             }
         },
@@ -683,25 +683,25 @@
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 },
                 {
                     "size": "extralarge",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
             "playcount": 1377833,
             "listeners": 269718,
             "streamable": "0",
-            "@attr": {
+            "attr": {
                 "rank": "21"
             }
         },
@@ -717,25 +717,25 @@
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 },
                 {
                     "size": "extralarge",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
             "playcount": 1759519,
             "listeners": 262636,
             "streamable": "0",
-            "@attr": {
+            "attr": {
                 "rank": "22"
             }
         },
@@ -750,25 +750,25 @@
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 },
                 {
                     "size": "extralarge",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
             "playcount": 1193015,
             "listeners": 242756,
             "streamable": "0",
-            "@attr": {
+            "attr": {
                 "rank": "23"
             }
         },
@@ -783,25 +783,25 @@
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 },
                 {
                     "size": "extralarge",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
             "playcount": 1135931,
             "listeners": 241540,
             "streamable": "0",
-            "@attr": {
+            "attr": {
                 "rank": "24"
             }
         },
@@ -817,25 +817,25 @@
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 },
                 {
                     "size": "extralarge",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
             "playcount": 1118034,
             "listeners": 231938,
             "streamable": "0",
-            "@attr": {
+            "attr": {
                 "rank": "25"
             }
         },
@@ -851,25 +851,25 @@
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 },
                 {
                     "size": "extralarge",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
             "playcount": 1121322,
             "listeners": 214524,
             "streamable": "0",
-            "@attr": {
+            "attr": {
                 "rank": "26"
             }
         },
@@ -885,25 +885,25 @@
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 },
                 {
                     "size": "extralarge",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
             "playcount": 935944,
             "listeners": 199751,
             "streamable": "0",
-            "@attr": {
+            "attr": {
                 "rank": "27"
             }
         },
@@ -919,25 +919,25 @@
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 },
                 {
                     "size": "extralarge",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
             "playcount": 1264920,
             "listeners": 196412,
             "streamable": "0",
-            "@attr": {
+            "attr": {
                 "rank": "28"
             }
         },
@@ -953,25 +953,25 @@
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 },
                 {
                     "size": "extralarge",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
             "playcount": 794114,
             "listeners": 185365,
             "streamable": "0",
-            "@attr": {
+            "attr": {
                 "rank": "29"
             }
         },
@@ -987,25 +987,25 @@
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 },
                 {
                     "size": "extralarge",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
             "playcount": 722932,
             "listeners": 181349,
             "streamable": "0",
-            "@attr": {
+            "attr": {
                 "rank": "30"
             }
         },
@@ -1021,25 +1021,25 @@
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 },
                 {
                     "size": "extralarge",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
             "playcount": 838564,
             "listeners": 176095,
             "streamable": "0",
-            "@attr": {
+            "attr": {
                 "rank": "31"
             }
         },
@@ -1054,25 +1054,25 @@
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 },
                 {
                     "size": "extralarge",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
             "playcount": 855675,
             "listeners": 175187,
             "streamable": "0",
-            "@attr": {
+            "attr": {
                 "rank": "32"
             }
         },
@@ -1088,25 +1088,25 @@
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 },
                 {
                     "size": "extralarge",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
             "playcount": 675282,
             "listeners": 169646,
             "streamable": "0",
-            "@attr": {
+            "attr": {
                 "rank": "33"
             }
         },
@@ -1122,25 +1122,25 @@
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 },
                 {
                     "size": "extralarge",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
             "playcount": 719983,
             "listeners": 167308,
             "streamable": "0",
-            "@attr": {
+            "attr": {
                 "rank": "34"
             }
         },
@@ -1156,25 +1156,25 @@
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 },
                 {
                     "size": "extralarge",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
             "playcount": 717853,
             "listeners": 163404,
             "streamable": "0",
-            "@attr": {
+            "attr": {
                 "rank": "35"
             }
         },
@@ -1189,25 +1189,25 @@
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 },
                 {
                     "size": "extralarge",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
             "playcount": 710531,
             "listeners": 162821,
             "streamable": "0",
-            "@attr": {
+            "attr": {
                 "rank": "36"
             }
         },
@@ -1223,25 +1223,25 @@
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 },
                 {
                     "size": "extralarge",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
             "playcount": 701799,
             "listeners": 162601,
             "streamable": "0",
-            "@attr": {
+            "attr": {
                 "rank": "37"
             }
         },
@@ -1257,25 +1257,25 @@
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 },
                 {
                     "size": "extralarge",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
             "playcount": 685094,
             "listeners": 156845,
             "streamable": "0",
-            "@attr": {
+            "attr": {
                 "rank": "38"
             }
         },
@@ -1291,25 +1291,25 @@
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 },
                 {
                     "size": "extralarge",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
             "playcount": 739790,
             "listeners": 154997,
             "streamable": "0",
-            "@attr": {
+            "attr": {
                 "rank": "39"
             }
         },
@@ -1324,25 +1324,25 @@
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 },
                 {
                     "size": "extralarge",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
             "playcount": 679595,
             "listeners": 153811,
             "streamable": "0",
-            "@attr": {
+            "attr": {
                 "rank": "40"
             }
         },
@@ -1358,25 +1358,25 @@
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 },
                 {
                     "size": "extralarge",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
             "playcount": 645979,
             "listeners": 153513,
             "streamable": "0",
-            "@attr": {
+            "attr": {
                 "rank": "41"
             }
         },
@@ -1391,25 +1391,25 @@
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 },
                 {
                     "size": "extralarge",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
             "playcount": 703526,
             "listeners": 153395,
             "streamable": "0",
-            "@attr": {
+            "attr": {
                 "rank": "42"
             }
         },
@@ -1424,25 +1424,25 @@
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 },
                 {
                     "size": "extralarge",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
             "playcount": 706883,
             "listeners": 152753,
             "streamable": "0",
-            "@attr": {
+            "attr": {
                 "rank": "43"
             }
         },
@@ -1457,25 +1457,25 @@
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 },
                 {
                     "size": "extralarge",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
             "playcount": 686645,
             "listeners": 152390,
             "streamable": "0",
-            "@attr": {
+            "attr": {
                 "rank": "44"
             }
         },
@@ -1491,25 +1491,25 @@
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 },
                 {
                     "size": "extralarge",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
             "playcount": 742996,
             "listeners": 148169,
             "streamable": "0",
-            "@attr": {
+            "attr": {
                 "rank": "45"
             }
         },
@@ -1524,25 +1524,25 @@
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 },
                 {
                     "size": "extralarge",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
             "playcount": 1041229,
             "listeners": 147475,
             "streamable": "0",
-            "@attr": {
+            "attr": {
                 "rank": "46"
             }
         },
@@ -1557,25 +1557,25 @@
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 },
                 {
                     "size": "extralarge",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
             "playcount": 575344,
             "listeners": 144241,
             "streamable": "0",
-            "@attr": {
+            "attr": {
                 "rank": "47"
             }
         },
@@ -1591,25 +1591,25 @@
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 },
                 {
                     "size": "extralarge",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
             "playcount": 727765,
             "listeners": 138268,
             "streamable": "0",
-            "@attr": {
+            "attr": {
                 "rank": "48"
             }
         },
@@ -1625,25 +1625,25 @@
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 },
                 {
                     "size": "extralarge",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
             "playcount": 642560,
             "listeners": 137006,
             "streamable": "0",
-            "@attr": {
+            "attr": {
                 "rank": "49"
             }
         },
@@ -1658,34 +1658,34 @@
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 },
                 {
                     "size": "extralarge",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
             "playcount": 626628,
             "listeners": 135819,
             "streamable": "0",
-            "@attr": {
+            "attr": {
                 "rank": "50"
             }
         }
     ],
-    "@attr": {
+    "attr": {
         "page": 1,
         "total": 144845,
         "artist": "Guns N' Roses",
-        "perPage": 50,
-        "totalPages": 2897
+        "limit": 50,
+        "total_pages": 2897
     }
 }

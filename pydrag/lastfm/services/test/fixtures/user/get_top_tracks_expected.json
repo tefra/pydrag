@@ -12,34 +12,34 @@
             "image": [
                 {
                     "size": "small",
-                    "#text": ""
+                    "text": ""
                 },
                 {
                     "size": "medium",
-                    "#text": ""
+                    "text": ""
                 },
                 {
                     "size": "large",
-                    "#text": ""
+                    "text": ""
                 },
                 {
                     "size": "extralarge",
-                    "#text": ""
+                    "text": ""
                 }
             ],
             "playcount": 35,
-            "streamable": "{'#text': '0', 'fulltrack': '0'}",
+            "streamable": "{'text': '0', 'fulltrack': '0'}",
             "duration": "0",
-            "@attr": {
+            "attr": {
                 "rank": "1"
             }
         }
     ],
-    "@attr": {
+    "attr": {
         "page": 1,
         "user": "RJ",
         "total": 64,
-        "perPage": 1,
-        "totalPages": 64
+        "limit": 1,
+        "total_pages": 64
     }
 }

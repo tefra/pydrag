@@ -51,9 +51,9 @@
             "count": 642670
         }
     ],
-    "@attr": {
+    "attr": {
         "total": 2693772,
         "offset": 20,
-        "num_res": 10
+        "limit": 10
     }
 }

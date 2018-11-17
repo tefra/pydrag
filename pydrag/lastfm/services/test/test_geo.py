@@ -15,7 +15,7 @@ class GeoServiceTests(MethodTestCase):
         self.assertEqual("Geo", result.namespace)
         self.assertEqual("get_top_artists", result.method)
         self.assertEqual(
-            {"country": "greece", "limit": "10", "page": "1"}, result.params
+            {"country": "greece", "limit": 10, "page": 1}, result.params
         )
         self.assertIsInstance(result, ArtistList)
 
@@ -28,7 +28,7 @@ class GeoServiceTests(MethodTestCase):
         self.assertEqual("Geo", result.namespace)
         self.assertEqual("get_top_tracks", result.method)
         self.assertEqual(
-            {"country": "greece", "limit": "10", "page": "1"}, result.params
+            {"country": "greece", "limit": 10, "page": 1}, result.params
         )
         self.assertIsInstance(result, TrackList)
 

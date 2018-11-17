@@ -109,7 +109,7 @@ class ArtistServiceTests(MethodTestCase):
         self.assertEqual("Artist", result.namespace)
         self.assertEqual("search", result.method)
         self.assertEqual(
-            {"artist": "gun", "page": "1", "limit": "50"}, result.params
+            {"artist": "gun", "page": 1, "limit": 50}, result.params
         )
 
         self.assertIsInstance(result, ArtistSearch)

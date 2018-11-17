@@ -1,19 +1,11 @@
 from abc import ABCMeta
 from typing import Dict, TypeVar
 
-import cattr
-from attr import attrib
-from cattr import structure, unstructure
+from attr import asdict, attrib, fields
+from cattr import structure
 from requests import Response
 
 T = TypeVar("T", bound="BaseModel")
-
-
-def mattrib(name, **kwargs):
-    metadata = kwargs.get("metadata", {})
-    metadata.update(dict(name=name))
-    kwargs.update(dict(metadata=metadata))
-    return attrib(**kwargs)
 
 
 class BaseModel(metaclass=ABCMeta):
@@ -27,53 +19,50 @@ class BaseModel(metaclass=ABCMeta):
     response: Response = attrib(init=False)
 
     def to_dict(self: T) -> Dict:
-        return unstructure(self)
+        return asdict(self, filter=lambda f, v: v is not None)
 
     def get_fields(self):
-        return self.__class__.__attrs_attrs__
+        return fields(self)
 
     @classmethod
     def from_dict(cls: T, data: dict) -> T:
         return structure(data, cls)
 
 
-def structure_attrs_fromdict(obj, cl):
-    conv_obj = dict()
-    dispatch = cattr.global_converter._structure_func.dispatch
-    for a in cl.__attrs_attrs__:
-        type_ = a.type
-        if type_ is None:
-            continue
-        name = a.name
-        meta_name = a.metadata.get("name")
+def pythonic_variables(data):
+    map = {
+        "albummatches": "matches",
+        "artistmatches": "matches",
+        "trackmatches": "matches",
+        "opensearch:Query": "query",
+        "perPage": "limit",
+        "totalPages": "total_pages",
+        "startPage": "page",
+        "trackcorrected": "track_corrected",
+        "artistcorrected": "artist_corrected",
+        "to": "to_date",
+        "for": "user",
+        "from": "from_date",
+        "tagcount": "tag_count",
+        "@attr": "attr",
+        "#text": "text",
+        "unixtime": "timestamp",
+        "uts": "timestamp",
+        "searchTerms": "search_terms",
+        "opensearch:itemsPerPage": "limit",
+        "opensearch:startIndex": "offset",
+        "opensearch:totalResults": "total",
+        "toptags": "top_tags",
+        "ignoredMessage": "ignored_message",
+        "albumArtist": "album_artist",
+        "streamId": "stream_id",
+        "albumArtist": "album_artist",
+        "scrobblesource": "source",
+        "realname": "real_name",
+        "recenttrack": "recent_track",
+        "recenttrack": "recent_track",
+        "ontour": "on_tour",
+        "num_res": "limit",
+    }
 
-        if name in obj:
-            value = obj[name]
-        elif meta_name and meta_name in obj:
-            value = obj[meta_name]
-        else:
-            continue
-
-        conv_obj[name] = dispatch(type_)(value, type_)
-
-    return cl(**conv_obj)
-
-
-def unstructure_attrs_asdict(obj):
-    attrs = obj.__class__.__attrs_attrs__
-    dispatch = cattr.global_converter._unstructure_func.dispatch
-    rv = cattr.global_converter._dict_factory()
-    for a in attrs:
-        name = a.name
-        v = getattr(obj, name)
-        name = a.metadata.get("name", name)
-
-        if v is None:
-            continue
-
-        rv[name] = dispatch(v.__class__)(v)
-    return rv
-
-
-cattr.register_structure_hook(BaseModel, structure_attrs_fromdict)
-cattr.register_unstructure_hook(BaseModel, unstructure_attrs_asdict)
+    return {map.get(key, key): value for key, value in data}

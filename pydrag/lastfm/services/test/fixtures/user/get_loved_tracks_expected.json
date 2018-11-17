@@ -1,10 +1,10 @@
 {
-    "@attr": {
+    "attr": {
         "page": 1,
         "user": "RJ",
         "total": 700,
-        "perPage": 50,
-        "totalPages": 14
+        "limit": 50,
+        "total_pages": 14
     },
     "track": [
         {
@@ -16,28 +16,28 @@
             "name": "Fire",
             "mbid": "CENSORED7ecf",
             "url": "https://www.last.fm/music/The+Black+Seeds/_/Fire",
-            "streamable": "{'#text': '0', 'fulltrack': '0'}",
+            "streamable": "{'text': '0', 'fulltrack': '0'}",
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 },
                 {
                     "size": "extralarge",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
             "date": {
-                "uts": "1459767227",
-                "#text": "04 Apr 2016, 10:53"
+                "timestamp": 1459767227,
+                "text": "04 Apr 2016, 10:53"
             }
         },
         {
@@ -49,28 +49,28 @@
             "name": "Just Jammin'",
             "mbid": "CENSORED5a53",
             "url": "https://www.last.fm/music/Gramatik/_/Just+Jammin%27",
-            "streamable": "{'#text': '0', 'fulltrack': '0'}",
+            "streamable": "{'text': '0', 'fulltrack': '0'}",
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 },
                 {
                     "size": "extralarge",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
             "date": {
-                "uts": "1457357120",
-                "#text": "07 Mar 2016, 13:25"
+                "timestamp": 1457357120,
+                "text": "07 Mar 2016, 13:25"
             }
         },
         {
@@ -82,28 +82,28 @@
             "name": "Giddy Up",
             "mbid": "CENSORED8f30",
             "url": "https://www.last.fm/music/Tahuna+Breaks/_/Giddy+Up",
-            "streamable": "{'#text': '0', 'fulltrack': '0'}",
+            "streamable": "{'text': '0', 'fulltrack': '0'}",
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 },
                 {
                     "size": "extralarge",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
             "date": {
-                "uts": "1443718648",
-                "#text": "01 Oct 2015, 16:57"
+                "timestamp": 1443718648,
+                "text": "01 Oct 2015, 16:57"
             }
         },
         {
@@ -115,28 +115,28 @@
             "name": "The Nod",
             "mbid": "CENSORED3c41",
             "url": "https://www.last.fm/music/Fat+Freddy%27s+Drop/_/The+Nod",
-            "streamable": "{'#text': '0', 'fulltrack': '0'}",
+            "streamable": "{'text': '0', 'fulltrack': '0'}",
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 },
                 {
                     "size": "extralarge",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
             "date": {
-                "uts": "1441635789",
-                "#text": "07 Sep 2015, 14:23"
+                "timestamp": 1441635789,
+                "text": "07 Sep 2015, 14:23"
             }
         },
         {
@@ -148,28 +148,28 @@
             "name": "Lady Day and John Coltrane",
             "mbid": "CENSOREDd357",
             "url": "https://www.last.fm/music/Gil+Scott-Heron/_/Lady+Day+and+John+Coltrane",
-            "streamable": "{'#text': '0', 'fulltrack': '0'}",
+            "streamable": "{'text': '0', 'fulltrack': '0'}",
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 },
                 {
                     "size": "extralarge",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
             "date": {
-                "uts": "1441634911",
-                "#text": "07 Sep 2015, 14:08"
+                "timestamp": 1441634911,
+                "text": "07 Sep 2015, 14:08"
             }
         },
         {
@@ -181,28 +181,28 @@
             "name": "Ain't Got Time To Waste",
             "mbid": "",
             "url": "https://www.last.fm/music/Aim/_/Ain%27t+Got+Time+To+Waste",
-            "streamable": "{'#text': '0', 'fulltrack': '0'}",
+            "streamable": "{'text': '0', 'fulltrack': '0'}",
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 },
                 {
                     "size": "extralarge",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
             "date": {
-                "uts": "1441632958",
-                "#text": "07 Sep 2015, 13:35"
+                "timestamp": 1441632958,
+                "text": "07 Sep 2015, 13:35"
             }
         },
         {
@@ -214,28 +214,28 @@
             "name": "Hold This Down (feat. Dean Curtis)",
             "mbid": "",
             "url": "https://www.last.fm/music/Roman+Scott/_/Hold+This+Down+(feat.+Dean+Curtis)",
-            "streamable": "{'#text': '0', 'fulltrack': '0'}",
+            "streamable": "{'text': '0', 'fulltrack': '0'}",
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 },
                 {
                     "size": "extralarge",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
             "date": {
-                "uts": "1438428646",
-                "#text": "01 Aug 2015, 11:30"
+                "timestamp": 1438428646,
+                "text": "01 Aug 2015, 11:30"
             }
         },
         {
@@ -247,28 +247,28 @@
             "name": "Dancing on My Own",
             "mbid": "CENSORED18d3",
             "url": "https://www.last.fm/music/Robyn/_/Dancing+on+My+Own",
-            "streamable": "{'#text': '0', 'fulltrack': '0'}",
+            "streamable": "{'text': '0', 'fulltrack': '0'}",
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 },
                 {
                     "size": "extralarge",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
             "date": {
-                "uts": "1438338847",
-                "#text": "31 Jul 2015, 10:34"
+                "timestamp": 1438338847,
+                "text": "31 Jul 2015, 10:34"
             }
         },
         {
@@ -280,28 +280,28 @@
             "name": "The Boston Rag",
             "mbid": "CENSOREDea8b",
             "url": "https://www.last.fm/music/Steely+Dan/_/The+Boston+Rag",
-            "streamable": "{'#text': '0', 'fulltrack': '0'}",
+            "streamable": "{'text': '0', 'fulltrack': '0'}",
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 },
                 {
                     "size": "extralarge",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
             "date": {
-                "uts": "1431384798",
-                "#text": "11 May 2015, 22:53"
+                "timestamp": 1431384798,
+                "text": "11 May 2015, 22:53"
             }
         },
         {
@@ -313,28 +313,28 @@
             "name": "You Need Love",
             "mbid": "CENSORED4ca1",
             "url": "https://www.last.fm/music/Candye+Kane/_/You+Need+Love",
-            "streamable": "{'#text': '0', 'fulltrack': '0'}",
+            "streamable": "{'text': '0', 'fulltrack': '0'}",
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 },
                 {
                     "size": "extralarge",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
             "date": {
-                "uts": "1431384115",
-                "#text": "11 May 2015, 22:41"
+                "timestamp": 1431384115,
+                "text": "11 May 2015, 22:41"
             }
         },
         {
@@ -346,28 +346,28 @@
             "name": "Don't You Know",
             "mbid": "CENSOREDd884",
             "url": "https://www.last.fm/music/Gramatik/_/Don%27t+You+Know",
-            "streamable": "{'#text': '0', 'fulltrack': '0'}",
+            "streamable": "{'text': '0', 'fulltrack': '0'}",
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 },
                 {
                     "size": "extralarge",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
             "date": {
-                "uts": "1429885760",
-                "#text": "24 Apr 2015, 14:29"
+                "timestamp": 1429885760,
+                "text": "24 Apr 2015, 14:29"
             }
         },
         {
@@ -379,28 +379,28 @@
             "name": "Hey Laura",
             "mbid": "CENSORED7cf4",
             "url": "https://www.last.fm/music/Gregory+Porter/_/Hey+Laura",
-            "streamable": "{'#text': '0', 'fulltrack': '0'}",
+            "streamable": "{'text': '0', 'fulltrack': '0'}",
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 },
                 {
                     "size": "extralarge",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
             "date": {
-                "uts": "1429113655",
-                "#text": "15 Apr 2015, 16:00"
+                "timestamp": 1429113655,
+                "text": "15 Apr 2015, 16:00"
             }
         },
         {
@@ -412,28 +412,28 @@
             "name": "Mexico",
             "mbid": "",
             "url": "https://www.last.fm/music/Cruzados/_/Mexico",
-            "streamable": "{'#text': '0', 'fulltrack': '0'}",
+            "streamable": "{'text': '0', 'fulltrack': '0'}",
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 },
                 {
                     "size": "extralarge",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
             "date": {
-                "uts": "1425743665",
-                "#text": "07 Mar 2015, 15:54"
+                "timestamp": 1425743665,
+                "text": "07 Mar 2015, 15:54"
             }
         },
         {
@@ -445,28 +445,28 @@
             "name": "Pretty Wasted",
             "mbid": "CENSOREDffd6",
             "url": "https://www.last.fm/music/Tito+&+Tarantula/_/Pretty+Wasted",
-            "streamable": "{'#text': '0', 'fulltrack': '0'}",
+            "streamable": "{'text': '0', 'fulltrack': '0'}",
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 },
                 {
                     "size": "extralarge",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
             "date": {
-                "uts": "1425738160",
-                "#text": "07 Mar 2015, 14:22"
+                "timestamp": 1425738160,
+                "text": "07 Mar 2015, 14:22"
             }
         },
         {
@@ -478,28 +478,28 @@
             "name": "Axel F",
             "mbid": "CENSORED7331",
             "url": "https://www.last.fm/music/Harold+Faltermeyer/_/Axel+F",
-            "streamable": "{'#text': '0', 'fulltrack': '0'}",
+            "streamable": "{'text': '0', 'fulltrack': '0'}",
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 },
                 {
                     "size": "extralarge",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
             "date": {
-                "uts": "1421345797",
-                "#text": "15 Jan 2015, 18:16"
+                "timestamp": 1421345797,
+                "text": "15 Jan 2015, 18:16"
             }
         },
         {
@@ -511,28 +511,28 @@
             "name": "The Future Soon",
             "mbid": "CENSORED0269",
             "url": "https://www.last.fm/music/Jonathan+Coulton/_/The+Future+Soon",
-            "streamable": "{'#text': '0', 'fulltrack': '0'}",
+            "streamable": "{'text': '0', 'fulltrack': '0'}",
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 },
                 {
                     "size": "extralarge",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
             "date": {
-                "uts": "1413064820",
-                "#text": "11 Oct 2014, 22:00"
+                "timestamp": 1413064820,
+                "text": "11 Oct 2014, 22:00"
             }
         },
         {
@@ -544,28 +544,28 @@
             "name": "Jack Sparrow",
             "mbid": "",
             "url": "https://www.last.fm/music/The+Lonely+Island/_/Jack+Sparrow",
-            "streamable": "{'#text': '0', 'fulltrack': '0'}",
+            "streamable": "{'text': '0', 'fulltrack': '0'}",
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 },
                 {
                     "size": "extralarge",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
             "date": {
-                "uts": "1413064693",
-                "#text": "11 Oct 2014, 21:58"
+                "timestamp": 1413064693,
+                "text": "11 Oct 2014, 21:58"
             }
         },
         {
@@ -577,28 +577,28 @@
             "name": "I'm on a Boat",
             "mbid": "",
             "url": "https://www.last.fm/music/The+Lonely+Island/_/I%27m+on+a+Boat",
-            "streamable": "{'#text': '0', 'fulltrack': '0'}",
+            "streamable": "{'text': '0', 'fulltrack': '0'}",
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 },
                 {
                     "size": "extralarge",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
             "date": {
-                "uts": "1413064690",
-                "#text": "11 Oct 2014, 21:58"
+                "timestamp": 1413064690,
+                "text": "11 Oct 2014, 21:58"
             }
         },
         {
@@ -610,28 +610,28 @@
             "name": "Dick In A Box",
             "mbid": "",
             "url": "https://www.last.fm/music/The+Lonely+Island/_/Dick+In+A+Box",
-            "streamable": "{'#text': '0', 'fulltrack': '0'}",
+            "streamable": "{'text': '0', 'fulltrack': '0'}",
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 },
                 {
                     "size": "extralarge",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
             "date": {
-                "uts": "1413064686",
-                "#text": "11 Oct 2014, 21:58"
+                "timestamp": 1413064686,
+                "text": "11 Oct 2014, 21:58"
             }
         },
         {
@@ -643,28 +643,28 @@
             "name": "Jungle - Feat. Maverick Sabre",
             "mbid": "",
             "url": "https://www.last.fm/music/Professor+Green/_/Jungle+-+Feat.+Maverick+Sabre",
-            "streamable": "{'#text': '0', 'fulltrack': '0'}",
+            "streamable": "{'text': '0', 'fulltrack': '0'}",
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 },
                 {
                     "size": "extralarge",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
             "date": {
-                "uts": "1413064683",
-                "#text": "11 Oct 2014, 21:58"
+                "timestamp": 1413064683,
+                "text": "11 Oct 2014, 21:58"
             }
         },
         {
@@ -676,28 +676,28 @@
             "name": "Baby Got Back",
             "mbid": "CENSOREDacd6",
             "url": "https://www.last.fm/music/Jonathan+Coulton/_/Baby+Got+Back",
-            "streamable": "{'#text': '0', 'fulltrack': '0'}",
+            "streamable": "{'text': '0', 'fulltrack': '0'}",
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 },
                 {
                     "size": "extralarge",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
             "date": {
-                "uts": "1413064675",
-                "#text": "11 Oct 2014, 21:57"
+                "timestamp": 1413064675,
+                "text": "11 Oct 2014, 21:57"
             }
         },
         {
@@ -709,28 +709,28 @@
             "name": "Stroker Ace",
             "mbid": "CENSORED85c5",
             "url": "https://www.last.fm/music/Lovage/_/Stroker+Ace",
-            "streamable": "{'#text': '0', 'fulltrack': '0'}",
+            "streamable": "{'text': '0', 'fulltrack': '0'}",
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 },
                 {
                     "size": "extralarge",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
             "date": {
-                "uts": "1412604686",
-                "#text": "06 Oct 2014, 14:11"
+                "timestamp": 1412604686,
+                "text": "06 Oct 2014, 14:11"
             }
         },
         {
@@ -742,28 +742,28 @@
             "name": "East Side Soldier (feat. Yukmouth, Dru Down & Pooh Man)",
             "mbid": "",
             "url": "https://www.last.fm/music/Seagram/_/East+Side+Soldier+(feat.+Yukmouth,+Dru+Down+&+Pooh+Man)",
-            "streamable": "{'#text': '0', 'fulltrack': '0'}",
+            "streamable": "{'text': '0', 'fulltrack': '0'}",
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 },
                 {
                     "size": "extralarge",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
             "date": {
-                "uts": "1412297575",
-                "#text": "03 Oct 2014, 00:52"
+                "timestamp": 1412297575,
+                "text": "03 Oct 2014, 00:52"
             }
         },
         {
@@ -775,28 +775,28 @@
             "name": "Ain't No Love",
             "mbid": "",
             "url": "https://www.last.fm/music/Pooh-Man/_/Ain%27t+No+Love",
-            "streamable": "{'#text': '0', 'fulltrack': '0'}",
+            "streamable": "{'text': '0', 'fulltrack': '0'}",
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 },
                 {
                     "size": "extralarge",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
             "date": {
-                "uts": "1412296612",
-                "#text": "03 Oct 2014, 00:36"
+                "timestamp": 1412296612,
+                "text": "03 Oct 2014, 00:36"
             }
         },
         {
@@ -808,28 +808,28 @@
             "name": "Hypnotize",
             "mbid": "CENSORED3662",
             "url": "https://www.last.fm/music/The+Notorious+B.I.G./_/Hypnotize",
-            "streamable": "{'#text': '0', 'fulltrack': '0'}",
+            "streamable": "{'text': '0', 'fulltrack': '0'}",
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 },
                 {
                     "size": "extralarge",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
             "date": {
-                "uts": "1412295881",
-                "#text": "03 Oct 2014, 00:24"
+                "timestamp": 1412295881,
+                "text": "03 Oct 2014, 00:24"
             }
         },
         {
@@ -841,28 +841,28 @@
             "name": "Aint Coming Home Tonight",
             "mbid": "",
             "url": "https://www.last.fm/music/The+B+Foundation/_/Aint+Coming+Home+Tonight",
-            "streamable": "{'#text': '0', 'fulltrack': '0'}",
+            "streamable": "{'text': '0', 'fulltrack': '0'}",
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 },
                 {
                     "size": "extralarge",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
             "date": {
-                "uts": "1409953370",
-                "#text": "05 Sep 2014, 21:42"
+                "timestamp": 1409953370,
+                "text": "05 Sep 2014, 21:42"
             }
         },
         {
@@ -874,28 +874,28 @@
             "name": "Tequila Makes Her Clothes Fall Off",
             "mbid": "CENSORED0861",
             "url": "https://www.last.fm/music/Joe+Nichols/_/Tequila+Makes+Her+Clothes+Fall+Off",
-            "streamable": "{'#text': '0', 'fulltrack': '0'}",
+            "streamable": "{'text': '0', 'fulltrack': '0'}",
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 },
                 {
                     "size": "extralarge",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
             "date": {
-                "uts": "1409608816",
-                "#text": "01 Sep 2014, 22:00"
+                "timestamp": 1409608816,
+                "text": "01 Sep 2014, 22:00"
             }
         },
         {
@@ -907,28 +907,28 @@
             "name": "Pickup Man",
             "mbid": "CENSORED6f69",
             "url": "https://www.last.fm/music/Joe+Diffie/_/Pickup+Man",
-            "streamable": "{'#text': '0', 'fulltrack': '0'}",
+            "streamable": "{'text': '0', 'fulltrack': '0'}",
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 },
                 {
                     "size": "extralarge",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
             "date": {
-                "uts": "1409608514",
-                "#text": "01 Sep 2014, 21:55"
+                "timestamp": 1409608514,
+                "text": "01 Sep 2014, 21:55"
             }
         },
         {
@@ -940,28 +940,28 @@
             "name": "Beer Or Gasoline",
             "mbid": "CENSOREDe1ff",
             "url": "https://www.last.fm/music/Chris+Young/_/Beer+Or+Gasoline",
-            "streamable": "{'#text': '0', 'fulltrack': '0'}",
+            "streamable": "{'text': '0', 'fulltrack': '0'}",
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 },
                 {
                     "size": "extralarge",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
             "date": {
-                "uts": "1409608506",
-                "#text": "01 Sep 2014, 21:55"
+                "timestamp": 1409608506,
+                "text": "01 Sep 2014, 21:55"
             }
         },
         {
@@ -973,28 +973,28 @@
             "name": "Rain Is a Good Thing",
             "mbid": "CENSORED29e9",
             "url": "https://www.last.fm/music/Luke+Bryan/_/Rain+Is+a+Good+Thing",
-            "streamable": "{'#text': '0', 'fulltrack': '0'}",
+            "streamable": "{'text': '0', 'fulltrack': '0'}",
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 },
                 {
                     "size": "extralarge",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
             "date": {
-                "uts": "1409608504",
-                "#text": "01 Sep 2014, 21:55"
+                "timestamp": 1409608504,
+                "text": "01 Sep 2014, 21:55"
             }
         },
         {
@@ -1006,28 +1006,28 @@
             "name": "Somethin' 'Bout a Truck",
             "mbid": "CENSOREDdc8e",
             "url": "https://www.last.fm/music/Kip+Moore/_/Somethin%27+%27Bout+a+Truck",
-            "streamable": "{'#text': '0', 'fulltrack': '0'}",
+            "streamable": "{'text': '0', 'fulltrack': '0'}",
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 },
                 {
                     "size": "extralarge",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
             "date": {
-                "uts": "1409608502",
-                "#text": "01 Sep 2014, 21:55"
+                "timestamp": 1409608502,
+                "text": "01 Sep 2014, 21:55"
             }
         },
         {
@@ -1039,28 +1039,28 @@
             "name": "All Over The Road",
             "mbid": "CENSOREDb4b5",
             "url": "https://www.last.fm/music/Easton+Corbin/_/All+Over+The+Road",
-            "streamable": "{'#text': '0', 'fulltrack': '0'}",
+            "streamable": "{'text': '0', 'fulltrack': '0'}",
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 },
                 {
                     "size": "extralarge",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
             "date": {
-                "uts": "1409603460",
-                "#text": "01 Sep 2014, 20:31"
+                "timestamp": 1409603460,
+                "text": "01 Sep 2014, 20:31"
             }
         },
         {
@@ -1072,28 +1072,28 @@
             "name": "Almost Like the Blues",
             "mbid": "CENSORED1b9f",
             "url": "https://www.last.fm/music/Leonard+Cohen/_/Almost+Like+the+Blues",
-            "streamable": "{'#text': '0', 'fulltrack': '0'}",
+            "streamable": "{'text': '0', 'fulltrack': '0'}",
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 },
                 {
                     "size": "extralarge",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
             "date": {
-                "uts": "1408842114",
-                "#text": "24 Aug 2014, 01:01"
+                "timestamp": 1408842114,
+                "text": "24 Aug 2014, 01:01"
             }
         },
         {
@@ -1105,28 +1105,28 @@
             "name": "Northern Lights",
             "mbid": "CENSORED86d1",
             "url": "https://www.last.fm/music/Renaissance/_/Northern+Lights",
-            "streamable": "{'#text': '0', 'fulltrack': '0'}",
+            "streamable": "{'text': '0', 'fulltrack': '0'}",
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 },
                 {
                     "size": "extralarge",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
             "date": {
-                "uts": "1407167830",
-                "#text": "04 Aug 2014, 15:57"
+                "timestamp": 1407167830,
+                "text": "04 Aug 2014, 15:57"
             }
         },
         {
@@ -1138,28 +1138,28 @@
             "name": "Hit The Road Jack",
             "mbid": "CENSORED535c",
             "url": "https://www.last.fm/music/Peter+White/_/Hit+The+Road+Jack",
-            "streamable": "{'#text': '0', 'fulltrack': '0'}",
+            "streamable": "{'text': '0', 'fulltrack': '0'}",
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 },
                 {
                     "size": "extralarge",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
             "date": {
-                "uts": "1407067144",
-                "#text": "03 Aug 2014, 11:59"
+                "timestamp": 1407067144,
+                "text": "03 Aug 2014, 11:59"
             }
         },
         {
@@ -1171,28 +1171,28 @@
             "name": "That Lady - Pts. 1 & 2",
             "mbid": "",
             "url": "https://www.last.fm/music/The+Isley+Brothers/_/That+Lady+-+Pts.+1+&+2",
-            "streamable": "{'#text': '0', 'fulltrack': '0'}",
+            "streamable": "{'text': '0', 'fulltrack': '0'}",
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 },
                 {
                     "size": "extralarge",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
             "date": {
-                "uts": "1403625541",
-                "#text": "24 Jun 2014, 15:59"
+                "timestamp": 1403625541,
+                "text": "24 Jun 2014, 15:59"
             }
         },
         {
@@ -1204,28 +1204,28 @@
             "name": "Wandering Eye - Radio Edit",
             "mbid": "",
             "url": "https://www.last.fm/music/Fat+Freddy%27s+Drop/_/Wandering+Eye+-+Radio+Edit",
-            "streamable": "{'#text': '0', 'fulltrack': '0'}",
+            "streamable": "{'text': '0', 'fulltrack': '0'}",
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 },
                 {
                     "size": "extralarge",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
             "date": {
-                "uts": "1402575515",
-                "#text": "12 Jun 2014, 12:18"
+                "timestamp": 1402575515,
+                "text": "12 Jun 2014, 12:18"
             }
         },
         {
@@ -1237,28 +1237,28 @@
             "name": "Silver Rain (feat. Joe Kibble)",
             "mbid": "",
             "url": "https://www.last.fm/music/Marcus+Miller,+Joe+Kibble/_/Silver+Rain+(feat.+Joe+Kibble)",
-            "streamable": "{'#text': '0', 'fulltrack': '0'}",
+            "streamable": "{'text': '0', 'fulltrack': '0'}",
             "image": [
                 {
                     "size": "small",
-                    "#text": ""
+                    "text": ""
                 },
                 {
                     "size": "medium",
-                    "#text": ""
+                    "text": ""
                 },
                 {
                     "size": "large",
-                    "#text": ""
+                    "text": ""
                 },
                 {
                     "size": "extralarge",
-                    "#text": ""
+                    "text": ""
                 }
             ],
             "date": {
-                "uts": "1401236954",
-                "#text": "28 May 2014, 00:29"
+                "timestamp": 1401236954,
+                "text": "28 May 2014, 00:29"
             }
         },
         {
@@ -1270,28 +1270,28 @@
             "name": "Silver Rain",
             "mbid": "CENSOREDe965",
             "url": "https://www.last.fm/music/Marcus+Miller/_/Silver+Rain",
-            "streamable": "{'#text': '0', 'fulltrack': '0'}",
+            "streamable": "{'text': '0', 'fulltrack': '0'}",
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 },
                 {
                     "size": "extralarge",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
             "date": {
-                "uts": "1401236941",
-                "#text": "28 May 2014, 00:29"
+                "timestamp": 1401236941,
+                "text": "28 May 2014, 00:29"
             }
         },
         {
@@ -1303,28 +1303,28 @@
             "name": "The Boogie Back",
             "mbid": "CENSORED3cbf",
             "url": "https://www.last.fm/music/Roy+Ayers/_/The+Boogie+Back",
-            "streamable": "{'#text': '0', 'fulltrack': '0'}",
+            "streamable": "{'text': '0', 'fulltrack': '0'}",
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 },
                 {
                     "size": "extralarge",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
             "date": {
-                "uts": "1400493300",
-                "#text": "19 May 2014, 09:55"
+                "timestamp": 1400493300,
+                "text": "19 May 2014, 09:55"
             }
         },
         {
@@ -1336,28 +1336,28 @@
             "name": "Boogie Stupid",
             "mbid": "CENSORED025d",
             "url": "https://www.last.fm/music/John+Scofield/_/Boogie+Stupid",
-            "streamable": "{'#text': '0', 'fulltrack': '0'}",
+            "streamable": "{'text': '0', 'fulltrack': '0'}",
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 },
                 {
                     "size": "extralarge",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
             "date": {
-                "uts": "1400375584",
-                "#text": "18 May 2014, 01:13"
+                "timestamp": 1400375584,
+                "text": "18 May 2014, 01:13"
             }
         },
         {
@@ -1369,28 +1369,28 @@
             "name": "Just Don't Want To Be Lonely",
             "mbid": "CENSORED29cc",
             "url": "https://www.last.fm/music/John+Scofield/_/Just+Don%27t+Want+To+Be+Lonely",
-            "streamable": "{'#text': '0', 'fulltrack': '0'}",
+            "streamable": "{'text': '0', 'fulltrack': '0'}",
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 },
                 {
                     "size": "extralarge",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
             "date": {
-                "uts": "1400375170",
-                "#text": "18 May 2014, 01:06"
+                "timestamp": 1400375170,
+                "text": "18 May 2014, 01:06"
             }
         },
         {
@@ -1402,28 +1402,28 @@
             "name": "Funk in the Hole",
             "mbid": "CENSORED9f6c",
             "url": "https://www.last.fm/music/Roy+Ayers/_/Funk+in+the+Hole",
-            "streamable": "{'#text': '0', 'fulltrack': '0'}",
+            "streamable": "{'text': '0', 'fulltrack': '0'}",
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 },
                 {
                     "size": "extralarge",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
             "date": {
-                "uts": "1400375139",
-                "#text": "18 May 2014, 01:05"
+                "timestamp": 1400375139,
+                "text": "18 May 2014, 01:05"
             }
         },
         {
@@ -1435,28 +1435,28 @@
             "name": "What A Job",
             "mbid": "",
             "url": "https://www.last.fm/music/Devin+the+Dude/_/What+A+Job",
-            "streamable": "{'#text': '0', 'fulltrack': '0'}",
+            "streamable": "{'text': '0', 'fulltrack': '0'}",
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 },
                 {
                     "size": "extralarge",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
             "date": {
-                "uts": "1400375132",
-                "#text": "18 May 2014, 01:05"
+                "timestamp": 1400375132,
+                "text": "18 May 2014, 01:05"
             }
         },
         {
@@ -1468,28 +1468,28 @@
             "name": "Cissy Strut",
             "mbid": "CENSORED6253",
             "url": "https://www.last.fm/music/The+Meters/_/Cissy+Strut",
-            "streamable": "{'#text': '0', 'fulltrack': '0'}",
+            "streamable": "{'text': '0', 'fulltrack': '0'}",
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 },
                 {
                     "size": "extralarge",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
             "date": {
-                "uts": "1400375129",
-                "#text": "18 May 2014, 01:05"
+                "timestamp": 1400375129,
+                "text": "18 May 2014, 01:05"
             }
         },
         {
@@ -1501,28 +1501,28 @@
             "name": "Romantic",
             "mbid": "CENSORED96ce",
             "url": "https://www.last.fm/music/Soulive/_/Romantic",
-            "streamable": "{'#text': '0', 'fulltrack': '0'}",
+            "streamable": "{'text': '0', 'fulltrack': '0'}",
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 },
                 {
                     "size": "extralarge",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
             "date": {
-                "uts": "1400375126",
-                "#text": "18 May 2014, 01:05"
+                "timestamp": 1400375126,
+                "text": "18 May 2014, 01:05"
             }
         },
         {
@@ -1534,28 +1534,28 @@
             "name": "The red one",
             "mbid": "",
             "url": "https://www.last.fm/music/John+Scofield/_/The+red+one",
-            "streamable": "{'#text': '0', 'fulltrack': '0'}",
+            "streamable": "{'text': '0', 'fulltrack': '0'}",
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 },
                 {
                     "size": "extralarge",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
             "date": {
-                "uts": "1400375120",
-                "#text": "18 May 2014, 01:05"
+                "timestamp": 1400375120,
+                "text": "18 May 2014, 01:05"
             }
         },
         {
@@ -1567,28 +1567,28 @@
             "name": "Doctor Doctor",
             "mbid": "CENSORED9462",
             "url": "https://www.last.fm/music/Labi+Siffre/_/Doctor+Doctor",
-            "streamable": "{'#text': '0', 'fulltrack': '0'}",
+            "streamable": "{'text': '0', 'fulltrack': '0'}",
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 },
                 {
                     "size": "extralarge",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
             "date": {
-                "uts": "1400372038",
-                "#text": "18 May 2014, 00:13"
+                "timestamp": 1400372038,
+                "text": "18 May 2014, 00:13"
             }
         },
         {
@@ -1600,28 +1600,28 @@
             "name": "I Got The...",
             "mbid": "CENSORED1c66",
             "url": "https://www.last.fm/music/Labi+Siffre/_/I+Got+The...",
-            "streamable": "{'#text': '0', 'fulltrack': '0'}",
+            "streamable": "{'text': '0', 'fulltrack': '0'}",
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 },
                 {
                     "size": "extralarge",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
             "date": {
-                "uts": "1400249073",
-                "#text": "16 May 2014, 14:04"
+                "timestamp": 1400249073,
+                "text": "16 May 2014, 14:04"
             }
         },
         {
@@ -1633,28 +1633,28 @@
             "name": "I Got The... - 2006 Digital Remaster",
             "mbid": "",
             "url": "https://www.last.fm/music/Labi+Siffre/_/I+Got+The...+-+2006+Digital+Remaster",
-            "streamable": "{'#text': '0', 'fulltrack': '0'}",
+            "streamable": "{'text': '0', 'fulltrack': '0'}",
             "image": [
                 {
                     "size": "small",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                 },
                 {
                     "size": "medium",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                 },
                 {
                     "size": "large",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                 },
                 {
                     "size": "extralarge",
-                    "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
             "date": {
-                "uts": "1400249068",
-                "#text": "16 May 2014, 14:04"
+                "timestamp": 1400249068,
+                "text": "16 May 2014, 14:04"
             }
         }
     ]

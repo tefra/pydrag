@@ -1,16 +1,16 @@
 from math import ceil
-from typing import List
+from typing import List, Optional
 
-from attr import attrs
+from attr import dataclass
 
-from pydrag.core import BaseModel, mattrib
+from pydrag.core import BaseModel
 from pydrag.lastfm.mixins import PagerMixin
 
 
-@attrs(auto_attribs=True)
+@dataclass
 class Attributes(BaseModel):
     tag: str = None
-    uts: str = None
+    timestamp: int = None
     rank: str = None
     date: str = None
     page: int = None
@@ -22,75 +22,67 @@ class Attributes(BaseModel):
     offset: int = None
     artist: str = None
     position: int = None
-    num_res: int = None
-    limit: int = mattrib("perPage", default=None)
+    limit: int = None
     track: str = None
-    total_pages: int = mattrib("totalPages", default=None)
+    total_pages: int = None
     accepted: int = None
     ignored: int = None
-    track_corrected: int = mattrib("trackcorrected", default=None)
-    artist_corrected: int = mattrib("artistcorrected", default=None)
-    to_date: str = mattrib("to", default=None)
-    for_user: str = mattrib("for", default=None)
-    from_date: str = mattrib("from", default=None)
+    track_corrected: int = None
+    artist_corrected: int = None
+    to_date: str = None
+    from_date: str = None
 
 
-@attrs(auto_attribs=True)
+@dataclass
 class AttrModel(BaseModel, PagerMixin):
-    attr: Attributes = mattrib("@attr")
+    attr: Attributes
 
 
-@attrs(auto_attribs=True)
+@dataclass
 class Image(BaseModel):
     size: str
-    text: str = mattrib("#text")
+    text: str
 
 
-@attrs(auto_attribs=True)
+@dataclass
 class Date(BaseModel):
-    timestamp: int = mattrib("unixtime")
-    text: str = mattrib("#text")
+    timestamp: int
+    text: str
 
 
-@attrs(auto_attribs=True)
-class DateUTS(BaseModel):
-    uts: str
-    text: str = mattrib("#text")
-
-
-@attrs(auto_attribs=True)
+@dataclass
 class SimpleArtist(BaseModel):
     mbid: str = None
     name: str = None
     url: str = None
-    text: str = mattrib("#text", default=None)
+    text: str = None
 
 
-@attrs(auto_attribs=True)
+@dataclass
 class Artist(BaseModel):
     mbid: str = None
     name: str = None
     url: str = None
-    tag_count: int = mattrib("tagcount", default=None)
+    tag_count: int = None
     listeners: int = None
     playcount: int = None
     streamable: str = None
     image: List[Image] = None
     match: str = None
-    attr: Attributes = mattrib("@attr", default=None)
+    attr: Attributes = None
 
 
-@attrs(auto_attribs=True)
+@dataclass
 class Artists(BaseModel):
     artist: List[Artist]
 
 
-@attrs(auto_attribs=True)
+@dataclass
 class ArtistList(Artists, AttrModel):
     pass
 
 
-@attrs(auto_attribs=True)
+@dataclass
 class Track(BaseModel):
     name: str
     url: str
@@ -101,73 +93,73 @@ class Track(BaseModel):
     listeners: int = None
     streamable: str = None
     duration: str = None
-    match: float = None
-    attr: Attributes = mattrib("@attr", default=None)
+    match: Optional[float] = None
+    attr: Attributes = None
 
 
-@attrs(auto_attribs=True)
+@dataclass
 class Tracks(BaseModel):
     track: List[Track]
 
 
-@attrs(auto_attribs=True)
+@dataclass
 class TrackList(Tracks, AttrModel):
     pass
 
 
-@attrs(auto_attribs=True)
+@dataclass
 class TrackSimpleArtist(Track):
     artist: str = None
 
 
-@attrs(auto_attribs=True)
+@dataclass
 class Album(BaseModel):
     mbid: str = None
-    text: str = mattrib("#text", default=None)
+    text: str = None
     name: str = None
     title: str = None
     playcount: int = None
     url: str = None
     artist: SimpleArtist = None
     image: List[Image] = None
-    attr: Attributes = mattrib("@attr", default=None)
+    attr: Attributes = None
 
 
-@attrs(auto_attribs=True)
+@dataclass
 class Albums(BaseModel):
     album: List[Album]
 
 
-@attrs(auto_attribs=True)
+@dataclass
 class AlbumList(Albums, AttrModel):
     pass
 
 
-@attrs(auto_attribs=True)
+@dataclass
 class Chart(BaseModel):
-    text: str = mattrib("#text")
-    from_date: str = mattrib("from")
-    to_date: str = mattrib("to")
+    text: str
+    from_date: str
+    to_date: str
 
 
-@attrs(auto_attribs=True)
+@dataclass
 class Charts(BaseModel):
     chart: List[Chart]
 
 
-@attrs(auto_attribs=True)
+@dataclass
 class Link(BaseModel):
     href: str
     rel: str
-    text: str = mattrib("#text")
+    text: str
 
 
-@attrs(auto_attribs=True)
+@dataclass
 class Links(BaseModel):
     link: Link
 
 
-@attrs(auto_attribs=True)
+@dataclass
 class Wiki(BaseModel):
     content: str = None
     summary: str = None
@@ -175,54 +167,55 @@ class Wiki(BaseModel):
     links: Links = None
 
 
-@attrs(auto_attribs=True)
+@dataclass
 class Tag(BaseModel):
     name: str
     url: str
     count: int = None
 
 
-@attrs(auto_attribs=True)
+@dataclass
 class TagInfo(BaseModel):
     name: str
     reach: int
     url: str = None
     taggings: int = None
+    streamable: int = None
     count: int = None
     total: int = None
     wiki: Wiki = None
 
 
-@attrs(auto_attribs=True)
+@dataclass
 class TagInfoList(BaseModel):
     tag: List[TagInfo]
-    attr: Attributes = mattrib("@attr")
+    attr: Attributes
 
 
-@attrs(auto_attribs=True)
+@dataclass
 class Tags(BaseModel):
     tag: List[Tag]
 
 
-@attrs(auto_attribs=True)
+@dataclass
 class TagList(Tags, AttrModel):
     pass
 
 
-@attrs(auto_attribs=True)
+@dataclass
 class Query(BaseModel):
     role: str
-    page: int = mattrib("startPage")
-    text: str = mattrib("#text")
-    search_terms: str = mattrib("searchTerms", default=None)
+    page: int
+    text: str
+    search_terms: str = None
 
 
-@attrs(auto_attribs=True)
+@dataclass
 class OpenSearch(AttrModel):
-    query: Query = mattrib("opensearch:Query")
-    limit: int = mattrib("opensearch:itemsPerPage")
-    offset: int = mattrib("opensearch:startIndex")
-    total: int = mattrib("opensearch:totalResults")
+    query: Query
+    limit: int
+    offset: int
+    total: int
 
     def get_page(self):
         return self.query.page
@@ -237,6 +230,6 @@ class OpenSearch(AttrModel):
         return ceil(self.total / self.limit)
 
 
-@attrs(auto_attribs=True)
+@dataclass
 class ChartList(Charts, AttrModel):
     pass

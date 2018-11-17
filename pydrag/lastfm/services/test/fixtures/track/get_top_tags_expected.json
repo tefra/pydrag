@@ -176,7 +176,7 @@
             "count": 1
         }
     ],
-    "@attr": {
+    "attr": {
         "artist": "AC/DC",
         "track": "Hells Bells"
     }

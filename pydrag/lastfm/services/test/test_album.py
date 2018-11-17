@@ -107,7 +107,7 @@ class AlbumServiceTests(MethodTestCase):
         self.assertEqual("Album", result.namespace)
         self.assertEqual("search", result.method)
         self.assertEqual(
-            {"album": "fire", "page": "1", "limit": "50"}, result.params
+            {"album": "fire", "page": 1, "limit": 50}, result.params
         )
         self.assertIsInstance(result, AlbumSearch)
         self.assertFixtureEqual("album/search", result.to_dict())

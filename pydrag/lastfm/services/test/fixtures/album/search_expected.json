@@ -1,17 +1,17 @@
 {
-    "@attr": {
-        "for": "fire"
+    "attr": {
+        "user": "fire"
     },
-    "opensearch:Query": {
+    "query": {
         "role": "request",
-        "startPage": 1,
-        "#text": "",
-        "searchTerms": "fire"
+        "page": 1,
+        "text": "",
+        "search_terms": "fire"
     },
-    "opensearch:itemsPerPage": 50,
-    "opensearch:startIndex": 0,
-    "opensearch:totalResults": 661041,
-    "albummatches": {
+    "limit": 50,
+    "offset": 0,
+    "total": 661041,
+    "matches": {
         "album": [
             {
                 "mbid": "CENSOREDb9e4",
@@ -20,22 +20,23 @@
                 "image": [
                     {
                         "size": "small",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                     },
                     {
                         "size": "medium",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                     },
                     {
                         "size": "large",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                     },
                     {
                         "size": "extralarge",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                     }
                 ],
-                "artist": "The Strokes"
+                "artist": "The Strokes",
+                "streamable": 0
             },
             {
                 "mbid": "CENSORED7ca5",
@@ -44,22 +45,23 @@
                 "image": [
                     {
                         "size": "small",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                     },
                     {
                         "size": "medium",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                     },
                     {
                         "size": "large",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                     },
                     {
                         "size": "extralarge",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                     }
                 ],
-                "artist": "Foals"
+                "artist": "Foals",
+                "streamable": 0
             },
             {
                 "mbid": "CENSOREDb0f2",
@@ -68,22 +70,23 @@
                 "image": [
                     {
                         "size": "small",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                     },
                     {
                         "size": "medium",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                     },
                     {
                         "size": "large",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                     },
                     {
                         "size": "extralarge",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                     }
                 ],
-                "artist": "Friendly Fires"
+                "artist": "Friendly Fires",
+                "streamable": 0
             },
             {
                 "mbid": "CENSOREDd7f5",
@@ -92,22 +95,23 @@
                 "image": [
                     {
                         "size": "small",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                     },
                     {
                         "size": "medium",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                     },
                     {
                         "size": "large",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                     },
                     {
                         "size": "extralarge",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                     }
                 ],
-                "artist": "Beyonc\u00e9"
+                "artist": "Beyonc\u00e9",
+                "streamable": 0
             },
             {
                 "mbid": "CENSOREDcf7b",
@@ -116,22 +120,23 @@
                 "image": [
                     {
                         "size": "small",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                     },
                     {
                         "size": "medium",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                     },
                     {
                         "size": "large",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                     },
                     {
                         "size": "extralarge",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                     }
                 ],
-                "artist": "Arcade Fire"
+                "artist": "Arcade Fire",
+                "streamable": 0
             },
             {
                 "mbid": "CENSORED62ba",
@@ -140,22 +145,23 @@
                 "image": [
                     {
                         "size": "small",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                     },
                     {
                         "size": "medium",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                     },
                     {
                         "size": "large",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                     },
                     {
                         "size": "extralarge",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                     }
                 ],
-                "artist": "Portugal. The Man"
+                "artist": "Portugal. The Man",
+                "streamable": 0
             },
             {
                 "mbid": "CENSORED004b",
@@ -164,22 +170,23 @@
                 "image": [
                     {
                         "size": "small",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                     },
                     {
                         "size": "medium",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                     },
                     {
                         "size": "large",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                     },
                     {
                         "size": "extralarge",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                     }
                 ],
-                "artist": "Bullet for My Valentine"
+                "artist": "Bullet for My Valentine",
+                "streamable": 0
             },
             {
                 "mbid": "CENSOREDc082",
@@ -188,22 +195,23 @@
                 "image": [
                     {
                         "size": "small",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                     },
                     {
                         "size": "medium",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                     },
                     {
                         "size": "large",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                     },
                     {
                         "size": "extralarge",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                     }
                 ],
-                "artist": "Electric Six"
+                "artist": "Electric Six",
+                "streamable": 0
             },
             {
                 "mbid": "CENSOREDfcfe",
@@ -212,22 +220,23 @@
                 "image": [
                     {
                         "size": "small",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                     },
                     {
                         "size": "medium",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                     },
                     {
                         "size": "large",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                     },
                     {
                         "size": "extralarge",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                     }
                 ],
-                "artist": "Arcade Fire"
+                "artist": "Arcade Fire",
+                "streamable": 0
             },
             {
                 "mbid": "CENSORED605d",
@@ -236,22 +245,23 @@
                 "image": [
                     {
                         "size": "small",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                     },
                     {
                         "size": "medium",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                     },
                     {
                         "size": "large",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                     },
                     {
                         "size": "extralarge",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                     }
                 ],
-                "artist": "Anberlin"
+                "artist": "Anberlin",
+                "streamable": 0
             },
             {
                 "mbid": "CENSOREDd687",
@@ -260,22 +270,23 @@
                 "image": [
                     {
                         "size": "small",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                     },
                     {
                         "size": "medium",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                     },
                     {
                         "size": "large",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                     },
                     {
                         "size": "extralarge",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                     }
                 ],
-                "artist": "Arcade Fire"
+                "artist": "Arcade Fire",
+                "streamable": 0
             },
             {
                 "mbid": "CENSORED2ec4",
@@ -284,22 +295,23 @@
                 "image": [
                     {
                         "size": "small",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                     },
                     {
                         "size": "medium",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                     },
                     {
                         "size": "large",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                     },
                     {
                         "size": "extralarge",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                     }
                 ],
-                "artist": "Taking Back Sunday"
+                "artist": "Taking Back Sunday",
+                "streamable": 0
             },
             {
                 "mbid": "CENSOREDd393",
@@ -308,22 +320,23 @@
                 "image": [
                     {
                         "size": "small",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                     },
                     {
                         "size": "medium",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                     },
                     {
                         "size": "large",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                     },
                     {
                         "size": "extralarge",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                     }
                 ],
-                "artist": "Stars"
+                "artist": "Stars",
+                "streamable": 0
             },
             {
                 "mbid": "CENSORED6597",
@@ -332,22 +345,23 @@
                 "image": [
                     {
                         "size": "small",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                     },
                     {
                         "size": "medium",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                     },
                     {
                         "size": "large",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                     },
                     {
                         "size": "extralarge",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                     }
                 ],
-                "artist": "Galaxie 500"
+                "artist": "Galaxie 500",
+                "streamable": 0
             },
             {
                 "mbid": "CENSORED960d",
@@ -356,22 +370,23 @@
                 "image": [
                     {
                         "size": "small",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                     },
                     {
                         "size": "medium",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                     },
                     {
                         "size": "large",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                     },
                     {
                         "size": "extralarge",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                     }
                 ],
-                "artist": "Boy"
+                "artist": "Boy",
+                "streamable": 0
             },
             {
                 "mbid": "CENSORED61ca",
@@ -380,22 +395,23 @@
                 "image": [
                     {
                         "size": "small",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                     },
                     {
                         "size": "medium",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                     },
                     {
                         "size": "large",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                     },
                     {
                         "size": "extralarge",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                     }
                 ],
-                "artist": "Blood Red Shoes"
+                "artist": "Blood Red Shoes",
+                "streamable": 0
             },
             {
                 "mbid": "CENSOREDebee",
@@ -404,22 +420,23 @@
                 "image": [
                     {
                         "size": "small",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                     },
                     {
                         "size": "medium",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                     },
                     {
                         "size": "large",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                     },
                     {
                         "size": "extralarge",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                     }
                 ],
-                "artist": "Menomena"
+                "artist": "Menomena",
+                "streamable": 0
             },
             {
                 "mbid": "CENSOREDd662",
@@ -428,22 +445,23 @@
                 "image": [
                     {
                         "size": "small",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                     },
                     {
                         "size": "medium",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                     },
                     {
                         "size": "large",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                     },
                     {
                         "size": "extralarge",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                     }
                 ],
-                "artist": "DragonForce"
+                "artist": "DragonForce",
+                "streamable": 0
             },
             {
                 "mbid": "CENSORED924c",
@@ -452,22 +470,23 @@
                 "image": [
                     {
                         "size": "small",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                     },
                     {
                         "size": "medium",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                     },
                     {
                         "size": "large",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                     },
                     {
                         "size": "extralarge",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                     }
                 ],
-                "artist": "Kate Nash"
+                "artist": "Kate Nash",
+                "streamable": 0
             },
             {
                 "mbid": "CENSORED9818",
@@ -476,22 +495,23 @@
                 "image": [
                     {
                         "size": "small",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                     },
                     {
                         "size": "medium",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                     },
                     {
                         "size": "large",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                     },
                     {
                         "size": "extralarge",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                     }
                 ],
-                "artist": "Coldplay"
+                "artist": "Coldplay",
+                "streamable": 0
             },
             {
                 "mbid": "CENSORED787c",
@@ -500,22 +520,23 @@
                 "image": [
                     {
                         "size": "small",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                     },
                     {
                         "size": "medium",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                     },
                     {
                         "size": "large",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                     },
                     {
                         "size": "extralarge",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                     }
                 ],
-                "artist": "Adam Green"
+                "artist": "Adam Green",
+                "streamable": 0
             },
             {
                 "mbid": "CENSORED0913",
@@ -524,22 +545,23 @@
                 "image": [
                     {
                         "size": "small",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                     },
                     {
                         "size": "medium",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                     },
                     {
                         "size": "large",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                     },
                     {
                         "size": "extralarge",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                     }
                 ],
-                "artist": "Mando Diao"
+                "artist": "Mando Diao",
+                "streamable": 0
             },
             {
                 "mbid": "CENSORED95ea",
@@ -548,22 +570,23 @@
                 "image": [
                     {
                         "size": "small",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                     },
                     {
                         "size": "medium",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                     },
                     {
                         "size": "large",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                     },
                     {
                         "size": "extralarge",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                     }
                 ],
-                "artist": "Alicia Keys"
+                "artist": "Alicia Keys",
+                "streamable": 0
             },
             {
                 "mbid": "CENSORED7ddf",
@@ -572,22 +595,23 @@
                 "image": [
                     {
                         "size": "small",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                     },
                     {
                         "size": "medium",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                     },
                     {
                         "size": "large",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                     },
                     {
                         "size": "extralarge",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                     }
                 ],
-                "artist": "Arcade Fire"
+                "artist": "Arcade Fire",
+                "streamable": 0
             },
             {
                 "mbid": "CENSORED8cf3",
@@ -596,22 +620,23 @@
                 "image": [
                     {
                         "size": "small",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                     },
                     {
                         "size": "medium",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                     },
                     {
                         "size": "large",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                     },
                     {
                         "size": "extralarge",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                     }
                 ],
-                "artist": "Birdy"
+                "artist": "Birdy",
+                "streamable": 0
             },
             {
                 "mbid": "CENSOREDfc3a",
@@ -620,22 +645,23 @@
                 "image": [
                     {
                         "size": "small",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                     },
                     {
                         "size": "medium",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                     },
                     {
                         "size": "large",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                     },
                     {
                         "size": "extralarge",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                     }
                 ],
-                "artist": "Bloodhound Gang"
+                "artist": "Bloodhound Gang",
+                "streamable": 0
             },
             {
                 "mbid": "",
@@ -644,22 +670,23 @@
                 "image": [
                     {
                         "size": "small",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                     },
                     {
                         "size": "medium",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                     },
                     {
                         "size": "large",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                     },
                     {
                         "size": "extralarge",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                     }
                 ],
-                "artist": "Kygo"
+                "artist": "Kygo",
+                "streamable": 0
             },
             {
                 "mbid": "CENSOREDf015",
@@ -668,22 +695,23 @@
                 "image": [
                     {
                         "size": "small",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                     },
                     {
                         "size": "medium",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                     },
                     {
                         "size": "large",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                     },
                     {
                         "size": "extralarge",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                     }
                 ],
-                "artist": "Hey"
+                "artist": "Hey",
+                "streamable": 0
             },
             {
                 "mbid": "CENSOREDd96c",
@@ -692,22 +720,23 @@
                 "image": [
                     {
                         "size": "small",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                     },
                     {
                         "size": "medium",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                     },
                     {
                         "size": "large",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                     },
                     {
                         "size": "extralarge",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                     }
                 ],
-                "artist": "Razorlight"
+                "artist": "Razorlight",
+                "streamable": 0
             },
             {
                 "mbid": "CENSOREDa90d",
@@ -716,22 +745,23 @@
                 "image": [
                     {
                         "size": "small",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                     },
                     {
                         "size": "medium",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                     },
                     {
                         "size": "large",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                     },
                     {
                         "size": "extralarge",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                     }
                 ],
-                "artist": "Sonic Syndicate"
+                "artist": "Sonic Syndicate",
+                "streamable": 0
             },
             {
                 "mbid": "CENSOREDe1d1",
@@ -740,22 +770,23 @@
                 "image": [
                     {
                         "size": "small",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                     },
                     {
                         "size": "medium",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                     },
                     {
                         "size": "large",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                     },
                     {
                         "size": "extralarge",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                     }
                 ],
-                "artist": "WU LYF"
+                "artist": "WU LYF",
+                "streamable": 0
             },
             {
                 "mbid": "CENSOREDd1d3",
@@ -764,22 +795,23 @@
                 "image": [
                     {
                         "size": "small",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                     },
                     {
                         "size": "medium",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                     },
                     {
                         "size": "large",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                     },
                     {
                         "size": "extralarge",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                     }
                 ],
-                "artist": "Angel Olsen"
+                "artist": "Angel Olsen",
+                "streamable": 0
             },
             {
                 "mbid": "CENSORED6879",
@@ -788,22 +820,23 @@
                 "image": [
                     {
                         "size": "small",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                     },
                     {
                         "size": "medium",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                     },
                     {
                         "size": "large",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                     },
                     {
                         "size": "extralarge",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                     }
                 ],
-                "artist": "Arcade Fire"
+                "artist": "Arcade Fire",
+                "streamable": 0
             },
             {
                 "mbid": "CENSOREDe4c6",
@@ -812,22 +845,23 @@
                 "image": [
                     {
                         "size": "small",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                     },
                     {
                         "size": "medium",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                     },
                     {
                         "size": "large",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                     },
                     {
                         "size": "extralarge",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                     }
                 ],
-                "artist": "Bathory"
+                "artist": "Bathory",
+                "streamable": 0
             },
             {
                 "mbid": "",
@@ -836,22 +870,23 @@
                 "image": [
                     {
                         "size": "small",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                     },
                     {
                         "size": "medium",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                     },
                     {
                         "size": "large",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                     },
                     {
                         "size": "extralarge",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                     }
                 ],
-                "artist": "Judas Priest"
+                "artist": "Judas Priest",
+                "streamable": 0
             },
             {
                 "mbid": "",
@@ -860,22 +895,23 @@
                 "image": [
                     {
                         "size": "small",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                     },
                     {
                         "size": "medium",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                     },
                     {
                         "size": "large",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                     },
                     {
                         "size": "extralarge",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                     }
                 ],
-                "artist": "Marshmello"
+                "artist": "Marshmello",
+                "streamable": 0
             },
             {
                 "mbid": "",
@@ -884,22 +920,23 @@
                 "image": [
                     {
                         "size": "small",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                     },
                     {
                         "size": "medium",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                     },
                     {
                         "size": "large",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                     },
                     {
                         "size": "extralarge",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                     }
                 ],
-                "artist": "White Lies"
+                "artist": "White Lies",
+                "streamable": 0
             },
             {
                 "mbid": "CENSOREDc738",
@@ -908,22 +945,23 @@
                 "image": [
                     {
                         "size": "small",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                     },
                     {
                         "size": "medium",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                     },
                     {
                         "size": "large",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                     },
                     {
                         "size": "extralarge",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                     }
                 ],
-                "artist": "Deerhoof"
+                "artist": "Deerhoof",
+                "streamable": 0
             },
             {
                 "mbid": "CENSOREDe522",
@@ -932,22 +970,23 @@
                 "image": [
                     {
                         "size": "small",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                     },
                     {
                         "size": "medium",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                     },
                     {
                         "size": "large",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                     },
                     {
                         "size": "extralarge",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                     }
                 ],
-                "artist": "The Gun Club"
+                "artist": "The Gun Club",
+                "streamable": 0
             },
             {
                 "mbid": "CENSOREDb9ca",
@@ -956,22 +995,23 @@
                 "image": [
                     {
                         "size": "small",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                     },
                     {
                         "size": "medium",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                     },
                     {
                         "size": "large",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                     },
                     {
                         "size": "extralarge",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                     }
                 ],
-                "artist": "Blue \u00d6yster Cult"
+                "artist": "Blue \u00d6yster Cult",
+                "streamable": 0
             },
             {
                 "mbid": "CENSORED41c0",
@@ -980,22 +1020,23 @@
                 "image": [
                     {
                         "size": "small",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                     },
                     {
                         "size": "medium",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                     },
                     {
                         "size": "large",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                     },
                     {
                         "size": "extralarge",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                     }
                 ],
-                "artist": "Ryan Adams"
+                "artist": "Ryan Adams",
+                "streamable": 0
             },
             {
                 "mbid": "CENSOREDf673",
@@ -1004,22 +1045,23 @@
                 "image": [
                     {
                         "size": "small",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                     },
                     {
                         "size": "medium",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                     },
                     {
                         "size": "large",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                     },
                     {
                         "size": "extralarge",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                     }
                 ],
-                "artist": "U2"
+                "artist": "U2",
+                "streamable": 0
             },
             {
                 "mbid": "CENSORED5358",
@@ -1028,22 +1070,23 @@
                 "image": [
                     {
                         "size": "small",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                     },
                     {
                         "size": "medium",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                     },
                     {
                         "size": "large",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                     },
                     {
                         "size": "extralarge",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                     }
                 ],
-                "artist": "Kaskade"
+                "artist": "Kaskade",
+                "streamable": 0
             },
             {
                 "mbid": "CENSORED6fec",
@@ -1052,22 +1095,23 @@
                 "image": [
                     {
                         "size": "small",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                     },
                     {
                         "size": "medium",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                     },
                     {
                         "size": "large",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                     },
                     {
                         "size": "extralarge",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                     }
                 ],
-                "artist": "Blackmore's Night"
+                "artist": "Blackmore's Night",
+                "streamable": 0
             },
             {
                 "mbid": "",
@@ -1076,22 +1120,23 @@
                 "image": [
                     {
                         "size": "small",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                     },
                     {
                         "size": "medium",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                     },
                     {
                         "size": "large",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                     },
                     {
                         "size": "extralarge",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                     }
                 ],
-                "artist": "Bullet for My Valentine"
+                "artist": "Bullet for My Valentine",
+                "streamable": 0
             },
             {
                 "mbid": "CENSORED3f4a",
@@ -1100,22 +1145,23 @@
                 "image": [
                     {
                         "size": "small",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                     },
                     {
                         "size": "medium",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                     },
                     {
                         "size": "large",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                     },
                     {
                         "size": "extralarge",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                     }
                 ],
-                "artist": "Sean Lennon"
+                "artist": "Sean Lennon",
+                "streamable": 0
             },
             {
                 "mbid": "",
@@ -1124,22 +1170,23 @@
                 "image": [
                     {
                         "size": "small",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                     },
                     {
                         "size": "medium",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                     },
                     {
                         "size": "large",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                     },
                     {
                         "size": "extralarge",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                     }
                 ],
-                "artist": "Birdy"
+                "artist": "Birdy",
+                "streamable": 0
             },
             {
                 "mbid": "CENSOREDccf5",
@@ -1148,22 +1195,23 @@
                 "image": [
                     {
                         "size": "small",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                     },
                     {
                         "size": "medium",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                     },
                     {
                         "size": "large",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                     },
                     {
                         "size": "extralarge",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                     }
                 ],
-                "artist": "Free"
+                "artist": "Free",
+                "streamable": 0
             },
             {
                 "mbid": "CENSORED3a96",
@@ -1172,22 +1220,23 @@
                 "image": [
                     {
                         "size": "small",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                     },
                     {
                         "size": "medium",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                     },
                     {
                         "size": "large",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                     },
                     {
                         "size": "extralarge",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                     }
                 ],
-                "artist": "Deep Purple"
+                "artist": "Deep Purple",
+                "streamable": 0
             },
             {
                 "mbid": "CENSORED799a",
@@ -1196,22 +1245,23 @@
                 "image": [
                     {
                         "size": "small",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
                     },
                     {
                         "size": "medium",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
                     },
                     {
                         "size": "large",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
                     },
                     {
                         "size": "extralarge",
-                        "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                        "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                     }
                 ],
-                "artist": "Tobacco"
+                "artist": "Tobacco",
+                "streamable": 0
             }
         ]
     }
