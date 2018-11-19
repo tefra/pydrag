@@ -8,7 +8,7 @@
                 "body": null,
                 "headers": {
                     "User-Agent": [
-                        "python-requests/2.20.0"
+                        "python-requests/2.20.1"
                     ],
                     "Accept-Encoding": [
                         "gzip, deflate"
@@ -30,21 +30,6 @@
                     "Access-Control-Request-Headers": [
                         "Origin, X-Atmosphere-tracking-id, X-Atmosphere-Framework, X-Cache-Date, Content-Type, X-Atmosphere-Transport, *"
                     ],
-                    "Access-Control-Allow-Methods": [
-                        "POST, GET, OPTIONS"
-                    ],
-                    "Content-Length": [
-                        "135"
-                    ],
-                    "Access-Control-Allow-Origin": [
-                        "*"
-                    ],
-                    "Date": [
-                        "Sun, 11 Nov 2018 00:04:26 GMT"
-                    ],
-                    "Content-Type": [
-                        "application/json; charset=UTF-8"
-                    ],
                     "Access-Control-Max-Age": [
                         "86400"
                     ],
@@ -53,6 +38,21 @@
                     ],
                     "Connection": [
                         "keep-alive"
+                    ],
+                    "Content-Length": [
+                        "135"
+                    ],
+                    "Access-Control-Allow-Methods": [
+                        "POST, GET, OPTIONS"
+                    ],
+                    "Date": [
+                        "Sun, 18 Nov 2018 20:50:40 GMT"
+                    ],
+                    "Content-Type": [
+                        "application/json; charset=UTF-8"
+                    ],
+                    "Access-Control-Allow-Origin": [
+                        "*"
                     ]
                 },
                 "body": {
