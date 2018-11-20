@@ -7,7 +7,7 @@ from attr import asdict, attrib, fields
 from cattr import structure
 from requests import Response
 
-from pydrag.lastfm import config
+from pydrag.lastfm import config, md5
 
 T = TypeVar("T", bound="BaseModel")
 
@@ -57,6 +57,39 @@ class BaseModel(metaclass=ABCMeta):
         return obj
 
     @classmethod
+    def submit(
+        cls, bind=None, stateful=False, authenticate=False, params={}
+    ) -> T:
+        assert "method" in params
+        if bind is None:
+            bind = cls
+
+        data = cls._prepare(params)
+        if authenticate:
+            data.update(
+                dict(
+                    username=config.username,
+                    authToken=md5(str(config.username) + str(config.password)),
+                )
+            )
+
+        if stateful:
+            from pydrag.lastfm.models.auth import AuthSession
+
+            data.update({"sk": AuthSession.get().key})
+
+        if authenticate or "sk" in data:
+            data.update({"api_sig": cls.sign(data)})
+
+        url = config.api_root_url
+        response = requests.post(url, data=data)
+        response.raise_for_status()
+        body = response.json(object_pairs_hook=pythonic_variables)
+        obj = cls._bind(bind, response, body)
+        obj.params = params
+        return obj
+
+    @classmethod
     def _bind(cls, bind, resp: Response, body: Union[dict, list, None]) -> T:
         assert isinstance(body, dict)
 
@@ -70,6 +103,15 @@ class BaseModel(metaclass=ABCMeta):
             obj = bind()
 
         return obj
+
+    @staticmethod
+    def sign(params):
+        keys = sorted(params.keys())
+        keys.remove("format")
+
+        signature = [str(k) + str(params[k]) for k in keys if params.get(k)]
+        signature.append(str(config.api_secret))
+        return md5("".join(signature))
 
 
 def pythonic_variables(data):
