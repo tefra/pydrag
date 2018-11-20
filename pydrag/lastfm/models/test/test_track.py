@@ -3,47 +3,48 @@ from datetime import datetime, timedelta
 
 from pydrag.core import BaseModel
 from pydrag.lastfm.models.common import TagList, TrackList
+from pydrag.lastfm.models.test import MethodTestCase, fixture
 from pydrag.lastfm.models.track import (
     ScrobbleTrack,
+    Track,
     TrackCorrection,
-    TrackInfo,
     TrackScrobble,
     TrackSearch,
     TrackUpdateNowPlaying,
 )
-from pydrag.lastfm.services.test import MethodTestCase, fixture
-from pydrag.lastfm.services.track import TrackService
 
 
 class TrackServiceTests(MethodTestCase):
     def setUp(self):
-        self.track = TrackService(track="Hells Bell", artist="AC / DC")
+        self.track = Track.from_artist_track(
+            artist="AC / DC", track="Hells Bell"
+        )
         super(TrackServiceTests, self).setUp()
 
     @fixture.use_cassette(path="track/add_tags")
     def test_add_tags(self):
         result = self.track.add_tags(["foo", "bar"])
-        self.assertDictEqual(
-            {"track": "Hells Bell", "sk": "CENSORED", "tags": "foo,bar"},
-            result.params,
-        )
+        expected_params = {
+            "method": "track.addTags",
+            "tags": "foo,bar",
+            "track": "Hells Bell",
+        }
+        self.assertDictEqual(expected_params, result.params)
         self.assertIsInstance(result, BaseModel)
 
     @fixture.use_cassette(path="track/get_tags")
     def test_get_tags(self):
         result = self.track.get_tags(user="RJ")
+        expected_params = {
+            "artist": "AC / DC",
+            "autocorrect": True,
+            "mbid": None,
+            "method": "track.getTags",
+            "track": "Hells Bell",
+            "user": "RJ",
+        }
 
-        self.assertEqual("Track", result.namespace)
-        self.assertEqual("get_tags", result.method)
-        self.assertDictEqual(
-            {
-                "artist": "AC / DC",
-                "autocorrect": True,
-                "track": "Hells Bell",
-                "user": "RJ",
-            },
-            result.params,
-        )
+        self.assertDictEqual(expected_params, result.params)
 
         self.assertIsInstance(result, TagList)
         self.assertFixtureEqual("track/get_tags", result.to_dict())
@@ -51,72 +52,73 @@ class TrackServiceTests(MethodTestCase):
     @fixture.use_cassette(path="track/remove_tag")
     def test_remove_tag(self):
         result = self.track.remove_tag("bar")
-        self.assertDictEqual(
-            {"track": "Hells Bell", "sk": "CENSORED", "tag": "bar"},
-            result.params,
-        )
+        expected_params = {
+            "method": "track.removeTag",
+            "tag": "bar",
+            "track": "Hells Bell",
+        }
+        self.assertDictEqual(expected_params, result.params)
         self.assertIsInstance(result, BaseModel)
 
     @fixture.use_cassette(path="track/get_info")
-    def test_get_info(self):
-        self.track.mbid = None
-        result = self.track.get_info()
+    def test_find(self):
+        result = Track.find(artist="AC / DC", track="Hells Bell")
+        expected_params = {
+            "artist": "AC / DC",
+            "autocorrect": True,
+            "lang": "en",
+            "method": "track.getInfo",
+            "track": "Hells Bell",
+            "username": None,
+        }
 
-        self.assertEqual("Track", result.namespace)
-        self.assertEqual("get_info", result.method)
-        self.assertDictEqual(
-            {
-                "artist": "AC / DC",
-                "track": "Hells Bell",
-                "autocorrect": True,
-                "lang": "en",
-            },
-            result.params,
-        )
-        self.assertIsInstance(result, TrackInfo)
+        self.assertDictEqual(expected_params, result.params)
+        self.assertIsInstance(result, Track)
         self.assertFixtureEqual("track/get_info", result.to_dict())
 
     @fixture.use_cassette(path="track/get_correction")
     def test_get_correction(self):
-        self.track.track = "Hells Bell"
-        result = self.track.get_correction()
-
-        self.assertEqual("Track", result.namespace)
-        self.assertEqual("get_correction", result.method)
-        self.assertEqual(
-            {"artist": "AC / DC", "track": "Hells Bell"}, result.params
-        )
+        result = Track.get_correction(track="Hells Bell", artist="AC / DC")
+        expected_params = {
+            "artist": "AC / DC",
+            "method": "track.getCorrection",
+            "track": "Hells Bell",
+        }
+        self.assertEqual(expected_params, result.params)
         self.assertIsInstance(result, TrackCorrection)
         self.assertFixtureEqual("track/get_correction", result.to_dict())
 
     @fixture.use_cassette(path="track/get_top_tags")
     def test_get_top_tags(self):
-        result = self.track.get_top_tags(True)
+        result = self.track.get_top_tags()
+        expected_params = {
+            "artist": "AC / DC",
+            "autocorrect": True,
+            "mbid": None,
+            "method": "track.getTopTags",
+            "track": "Hells Bell",
+        }
 
-        self.assertEqual("Track", result.namespace)
-        self.assertEqual("get_top_tags", result.method)
-        self.assertEqual(
-            {"artist": "AC / DC", "autocorrect": True, "track": "Hells Bell"},
-            result.params,
-        )
+        self.assertEqual(expected_params, result.params)
 
         self.assertIsInstance(result, TagList)
         self.assertFixtureEqual("track/get_top_tags", result.to_dict())
 
     @fixture.use_cassette(path="track/search")
     def test_search(self):
-        self.track.track = "gun"
-        result = self.track.search(page=4, limit=5)
+        result = Track.search(track="gun", page=4, limit=5)
 
-        self.assertEqual("Track", result.namespace)
-        self.assertEqual("search", result.method)
-        self.assertEqual(
-            {"track": "gun", "page": 4, "limit": 5}, result.params
-        )
+        expected_params = {
+            "limit": 5,
+            "method": "track.search",
+            "page": 4,
+            "track": "gun",
+        }
+
+        self.assertEqual(expected_params, result.params)
 
         self.assertIsInstance(result, TrackSearch)
         self.assertFixtureEqual("track/search", result.to_dict())
-
         self.assertEqual(4, result.get_page())
         self.assertEqual(5, result.get_limit())
         self.assertEqual(1443087, result.get_total())
@@ -126,57 +128,59 @@ class TrackServiceTests(MethodTestCase):
 
     @fixture.use_cassette(path="track/get_similar")
     def test_get_similar(self):
-        result = self.track.get_similar(True)
+        result = self.track.get_similar()
+        expected_params = {
+            "artist": "AC / DC",
+            "autocorrect": True,
+            "limit": 50,
+            "mbid": None,
+            "method": "track.getSimilar",
+            "track": "Hells Bell",
+        }
 
-        self.assertEqual("Track", result.namespace)
-        self.assertEqual("get_similar", result.method)
-        self.assertEqual(
-            {
-                "artist": "AC / DC",
-                "autocorrect": True,
-                "limit": 50,
-                "track": "Hells Bell",
-            },
-            result.params,
-        )
+        self.assertEqual(expected_params, result.params)
 
         self.assertIsInstance(result, TrackList)
         self.assertFixtureEqual("track/get_similar", result.to_dict())
 
     @fixture.use_cassette(path="track/love")
     def test_love(self):
-        result = TrackService(track="Hells Bells", artist="AC / DC").love()
-        self.assertDictEqual(
-            {"artist": "AC / DC", "sk": "CENSORED", "track": "Hells Bells"},
-            result.params,
-        )
+        result = self.track.love()
+        expected_params = {
+            "artist": "AC / DC",
+            "method": "track.love",
+            "track": "Hells Bell",
+        }
+        self.assertEqual(expected_params, result.params)
         self.assertIsInstance(result, BaseModel)
 
     @fixture.use_cassette(path="track/unlove")
     def test_unlove(self):
-        result = TrackService(track="Hells Bells", artist="AC / DC").unlove()
-        self.assertDictEqual(
-            {"artist": "AC / DC", "sk": "CENSORED", "track": "Hells Bells"},
-            result.params,
-        )
+        result = self.track.unlove()
+        expected_params = {
+            "artist": "AC / DC",
+            "method": "track.unlove",
+            "track": "Hells Bell",
+        }
+        self.assertEqual(expected_params, result.params)
         self.assertIsInstance(result, BaseModel)
 
     @fixture.use_cassette(path="track/update_now_playing")
     def test_update_now_playing(self):
-        result = TrackService(
-            track="Hells Bells", artist="AC/DC"
-        ).update_now_playing(track_number=2)
-        result.response.json()
-        result.to_dict()
-        self.assertDictEqual(
-            {
-                "artist": "AC/DC",
-                "sk": "CENSORED",
-                "track": "Hells Bells",
-                "trackNumber": 2,
-            },
-            result.params,
+        result = Track.update_now_playing(
+            track="Hells Bells", artist="AC/DC", track_number=2
         )
+        expected_params = {
+            "album": None,
+            "albumArtist": None,
+            "artist": "AC/DC",
+            "context": None,
+            "duration": None,
+            "method": "track.updateNowPlaying",
+            "track": "Hells Bells",
+            "trackNumber": 2,
+        }
+        self.assertEqual(expected_params, result.params)
         self.assertIsInstance(result, TrackUpdateNowPlaying)
         self.assertFixtureEqual("track/update_now_playing", result.to_dict())
 
@@ -199,7 +203,7 @@ class TrackServiceTests(MethodTestCase):
                 ScrobbleTrack(artist=artist, track=track, timestamp=timestamp)
             )
 
-        result = TrackService.scrobble_tracks(tracks, batch_size=2)
+        result = Track.scrobble_tracks(tracks, batch_size=2)
         actual = result.to_dict()
         expected = {
             "attr": {"accepted": 5, "ignored": 0},

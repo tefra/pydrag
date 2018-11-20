@@ -1,13 +1,14 @@
-from typing import List
+from typing import List, Optional, TypeVar
 
 from attr import dataclass
 
 from pydrag.core import BaseModel
-from pydrag.lastfm import POST, api
 from pydrag.lastfm.models.album import AlbumInfo
 from pydrag.lastfm.models.common import (
     Attributes,
+    Image,
     OpenSearch,
+    SimpleArtist,
     TagList,
     Tags,
     Track,
@@ -91,21 +92,110 @@ class ScrobbleTrack(BaseModel):
     duration: int = None
 
 
-class TrackService:
-    """Last.fm Track API interface for easy access/navigation."""
+T = TypeVar("T", bound="Track")
 
-    def __init__(
-        self, track: str = None, artist: str = None, mbid: str = None
-    ):
+
+@dataclass
+class Track(BaseModel):
+    name: str
+    url: str
+    artist: SimpleArtist
+    mbid: str = None
+    image: List[Image] = None
+    playcount: int = None
+    listeners: int = None
+    streamable: str = None
+    duration: str = None
+    match: Optional[float] = None
+    wiki: Wiki = None
+    album: AlbumInfo = None
+    top_tags: Tags = None
+    attr: Attributes = None
+
+    @classmethod
+    def from_artist_track(cls, artist: str, track: str):
+        return Track(artist=SimpleArtist(name=artist), name=track, url=None)
+
+    @classmethod
+    def find(
+        cls, artist: str, track: str, user: str = None, lang: str = "en"
+    ) -> T:
+
         """
+        Get the metadata for a track on Last.fm.
+
+        :param artist: The artist name
         :param track: The track name
-        :param mbid: The musicbrainz id for the track
+        :param autocorrect: If enabled auto correct misspelled names
+        :param user: The username for the context of the request.
+         If supplied, response will include the user's playcount for this track
+        :param lang: The language to return the biography in, ISO 639
+        :returns: Track
         """
-        self.mbid = mbid
-        self.track = track
-        self.artist = artist
+        return cls.retrieve(
+            params=dict(
+                method="track.getInfo",
+                artist=artist,
+                track=track,
+                autocorrect=True,
+                username=user,
+                lang=lang,
+            )
+        )
 
-    @api.operation(method=POST, stateful=True)
+    @classmethod
+    def find_by_mbid(cls, mbid: str, user: str = None, lang: str = "en") -> T:
+        """
+        Get the metadata for a track on Last.fm.
+
+        :param mbid: The musicbrainz id for the track
+        :param user: The username for the context of the request.
+         If supplied, response will include the user's playcount for this track
+        :param lang: The language to return the biography in, ISO 639
+        :returns: Track
+        """
+        return cls.retrieve(
+            params=dict(
+                method="track.getInfo",
+                mbid=mbid,
+                autocorrect=True,
+                username=user,
+                lang=lang,
+            )
+        )
+
+    @classmethod
+    def get_correction(self, track: str, artist: str) -> TrackCorrection:
+        """
+        Use the last.fm corrections data to check whether the supplied track
+        has a correction to a canonical track.
+
+        :returns: TrackCorrection
+        """
+        return self.retrieve(
+            bind=TrackCorrection,
+            params=dict(
+                method="track.getCorrection", artist=artist, track=track
+            ),
+        )
+
+    @classmethod
+    def search(cls, track: str, limit: int = 50, page: int = 1) -> TrackSearch:
+        """
+        Search for an track by name. Returns track matches sorted by relevance.
+
+        :param str track: The track name.
+        :param int page: The page number to fetch.
+        :param int limit: The number of results to fetch per page.
+        :returns: TrackSearch
+        """
+        return cls.retrieve(
+            bind=TrackSearch,
+            params=dict(
+                method="track.search", limit=limit, page=page, track=track
+            ),
+        )
+
     def add_tags(self, tags: List[str]) -> BaseModel:
         """
         Tag an track with one or more user supplied tags.
@@ -114,10 +204,14 @@ class TrackService:
         Accepts a maximum of 10 tags.
         :returns: BaseModel
         """
-        assert self.track is not None
-        return dict(track=self.track, tags=",".join(tags))
+        return self.submit(
+            bind=BaseModel,
+            stateful=True,
+            params=dict(
+                method="track.addTags", track=self.name, tags=",".join(tags)
+            ),
+        )
 
-    @api.operation(method=POST, stateful=True)
     def remove_tag(self, tag: str) -> BaseModel:
         """
         Remove a user's tag from an track.
@@ -125,139 +219,104 @@ class TrackService:
         :param tag: A single user tag to remove from this track.
         :returns: BaseModel
         """
-        assert self.track is not None
-        return dict(track=self.track, tag=tag)
-
-    @api.operation
-    def get_info(
-        self, autocorrect: bool = True, user: str = None, lang: str = "en"
-    ) -> TrackInfo:
-        """
-        Get the metadata for a track on Last.fm.
-
-        :param autocorrect: If enabled auto correct misspelled names
-        :param user: The username for the context of the request.
-         If supplied, response will include the user's playcount for this track
-        :param lang: The language to return the biography in, ISO 639
-        :returns: TrackInfo
-        """
-
-        self.assert_mbid_or_track_and_artist()
-        return dict(
-            mbid=self.mbid,
-            track=self.track,
-            artist=self.artist,
-            autocorrect=autocorrect,
-            username=user,
-            lang=lang,
+        return self.submit(
+            bind=BaseModel,
+            stateful=True,
+            params=dict(method="track.removeTag", track=self.name, tag=tag),
         )
 
-    @api.operation
-    def get_correction(self) -> TrackCorrection:
-        """
-        Use the last.fm corrections data to check whether the supplied track
-        has a correction to a canonical track.
-
-        :returns: TrackCorrection
-        """
-        self.assert_mbid_or_track_and_artist()
-        return dict(track=self.track, artist=self.artist, mbid=self.mbid)
-
-    @api.operation
-    def get_similar(
-        self, autocorrect: bool = True, limit: int = 50
-    ) -> TrackList:
+    def get_similar(self, limit: int = 50) -> TrackList:
         """
         Get all the tracks similar to this track.
 
-        :param autocorrect: If enabled auto correct misspelled names
         :param int limit: Limit the number of similar tracks returned
         :returns: TrackSimilar
         """
-        self.assert_mbid_or_track_and_artist()
-        return dict(
-            mbid=self.mbid,
-            track=self.track,
-            artist=self.artist,
-            autocorrect=autocorrect,
-            limit=limit,
+        return self.retrieve(
+            bind=TrackList,
+            params=dict(
+                method="track.getSimilar",
+                mbid=self.mbid,
+                artist=self.artist.name,
+                track=self.name,
+                autocorrect=True,
+                limit=limit,
+            ),
         )
 
-    @api.operation
-    def get_tags(self, user: str, autocorrect: bool = True) -> TagList:
+    def get_tags(self, user: str) -> TagList:
         """
         Get the tags applied by an individual user to an track on Last.fm.
 
         :param user: The username for the context of the request.
-        :param autocorrect: If enabled auto correct misspelled names
         :returns: TagList
         """
-        self.assert_mbid_or_track_and_artist()
-        return dict(
-            mbid=self.mbid,
-            track=self.track,
-            artist=self.artist,
-            autocorrect=autocorrect,
-            user=user,
+        return self.retrieve(
+            bind=TagList,
+            params=dict(
+                method="track.getTags",
+                mbid=self.mbid,
+                artist=self.artist.name,
+                track=self.name,
+                autocorrect=True,
+                user=user,
+            ),
         )
 
-    @api.operation
-    def get_top_tags(self, autocorrect: bool = True) -> TagList:
+    def get_top_tags(self) -> TagList:
         """
         Get the top tags for an track on Last.fm, ordered by popularity.
 
-        :param autocorrect: If enabled auto correct misspelled names
         :returns: TagList
         """
-        self.assert_mbid_or_track_and_artist()
-        return dict(
-            mbid=self.mbid,
-            track=self.track,
-            artist=self.artist,
-            autocorrect=autocorrect,
+        return self.retrieve(
+            bind=TagList,
+            params=dict(
+                method="track.getTopTags",
+                mbid=self.mbid,
+                artist=self.artist.name,
+                track=self.name,
+                autocorrect=True,
+            ),
         )
 
-    @api.operation
-    def search(self, limit: int = 50, page: int = 1) -> TrackSearch:
-        """
-        Search for an track by name. Returns track matches sorted by relevance.
-
-        :param int page: The page number to fetch. Defaults to first page.
-        :param int limit: The number of results to fetch per page.
-        :returns: TrackSearch
-        """
-        assert self.track is not None
-        return dict(limit=limit, page=page, track=self.track)
-
-    @api.operation(method=POST, stateful=True)
     def love(self) -> BaseModel:
         """
         Love a track for a user profile.
 
         :returns: BaseModel
         """
-        assert self.track and self.artist
-        return dict(artist=self.artist, track=self.track)
+        return self.submit(
+            bind=BaseModel,
+            stateful=True,
+            params=dict(
+                method="track.love", artist=self.artist.name, track=self.name
+            ),
+        )
 
-    @api.operation(method=POST, stateful=True)
     def unlove(self) -> BaseModel:
         """
         Unlove a track for a user profile.
 
         :returns: BaseModel
         """
-        assert self.track and self.artist
-        return dict(artist=self.artist, track=self.track)
+        return self.submit(
+            bind=BaseModel,
+            stateful=True,
+            params=dict(
+                method="track.unlove", artist=self.artist.name, track=self.name
+            ),
+        )
 
-    @api.operation(method=POST, stateful=True)
-    def scrobble(self, tracks: List[ScrobbleTrack]) -> TrackScrobble:
-        params = dict()
+    @classmethod
+    def scrobble(cls, tracks: List[ScrobbleTrack]) -> TrackScrobble:
+        params = dict(method="track.scrobble")
         for idx, track in enumerate(tracks):
             for field, value in track.to_dict().items():
                 if value is None:
                     continue
                 params.update({"{}[{}]".format(field, idx): value})
-        return params
+        return cls.submit(bind=TrackScrobble, stateful=True, params=params)
 
     @classmethod
     def scrobble_tracks(
@@ -281,7 +340,7 @@ class TrackService:
         status = None
         batches = list(divide_chunks(tracks, batch_size))
         for batch in batches:
-            result = TrackService().scrobble(batch)
+            result = Track.scrobble(batch)
             if status is None:
                 status = result
                 status.response = None
@@ -291,9 +350,11 @@ class TrackService:
                 status.scrobble.extend(status.scrobble)
         return status
 
-    @api.operation(method=POST, stateful=True)
+    @classmethod
     def update_now_playing(
-        self,
+        cls,
+        artist: str,
+        track: str,
         album: str = None,
         track_number: int = None,
         context: str = None,
@@ -301,6 +362,8 @@ class TrackService:
         album_artist: str = None,
     ) -> TrackUpdateNowPlaying:
         """
+        :param artist: The artist name
+        :param track: The track name
         :param album: The album name
         :param track_number: The track number of the track on the album
         :param context: Sub-client version (not public)
@@ -308,19 +371,18 @@ class TrackService:
         :param album_artist: The album artist
         :return: BaseModel
         """
-        assert self.track and self.artist
 
-        return dict(
-            artist=self.artist,
-            track=self.track,
-            album=album,
-            trackNumber=track_number,
-            context=context,
-            duration=duration,
-            albumArtist=album_artist,
-        )
-
-    def assert_mbid_or_track_and_artist(self):
-        assert self.mbid is not None or (
-            self.track is not None and self.artist is not None
+        return cls.submit(
+            bind=TrackUpdateNowPlaying,
+            stateful=True,
+            params=dict(
+                method="track.updateNowPlaying",
+                artist=artist,
+                track=track,
+                album=album,
+                trackNumber=track_number,
+                context=context,
+                duration=duration,
+                albumArtist=album_artist,
+            ),
         )
