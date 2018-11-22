@@ -7,11 +7,10 @@ from pydrag.lastfm.models.common import (
     Artist,
     ArtistList,
     Artists,
-    Attributes,
-    AttrModel,
+    CorrectionAttributes,
     Image,
     OpenSearch,
-    Query,
+    RootAttributes,
     TagList,
     Tags,
     TrackList,
@@ -20,8 +19,9 @@ from pydrag.lastfm.models.common import (
 
 
 @dataclass
-class CorrectionArtist(AttrModel):
+class CorrectionArtist(BaseModel):
     artist: Artist
+    attr: CorrectionAttributes
 
 
 @dataclass
@@ -37,7 +37,6 @@ class ArtistMatches(BaseModel):
 @dataclass
 class ArtistSearch(OpenSearch):
     matches: ArtistMatches
-    query: Query
 
 
 T = TypeVar("T", bound="Artist")
@@ -54,7 +53,7 @@ class Artist(BaseModel):
     streamable: str = None
     image: List[Image] = None
     match: str = None
-    attr: Attributes = None
+    attr: RootAttributes = None
     tags: Tags = None
     bio: Wiki = None
     on_tour: int = None

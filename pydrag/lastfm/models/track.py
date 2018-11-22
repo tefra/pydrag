@@ -6,8 +6,10 @@ from pydrag.core import BaseModel
 from pydrag.lastfm.models.album import AlbumInfo
 from pydrag.lastfm.models.common import (
     Attributes,
+    CorrectionAttributes,
     Image,
     OpenSearch,
+    RootAttributes,
     SimpleArtist,
     TagList,
     Tags,
@@ -27,7 +29,7 @@ class TrackInfo(Track):
 
 @dataclass
 class CorrectionTrack(BaseModel):
-    attr: Attributes
+    attr: CorrectionAttributes
     track: TrackInfo = None
 
 
@@ -110,7 +112,7 @@ class Track(BaseModel):
     wiki: Wiki = None
     album: AlbumInfo = None
     top_tags: Tags = None
-    attr: Attributes = None
+    attr: RootAttributes = None
 
     @classmethod
     def from_artist_track(cls, artist: str, track: str):

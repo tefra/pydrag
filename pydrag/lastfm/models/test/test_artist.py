@@ -102,13 +102,6 @@ class ArtistServiceTests(MethodTestCase):
         self.assertIsInstance(result, ArtistSearch)
         self.assertFixtureEqual("artist/search", result.to_dict())
 
-        self.assertEqual(1, result.get_page())
-        self.assertEqual(50, result.get_limit())
-        self.assertEqual(101477, result.get_total())
-        self.assertEqual(2030, result.get_total_pages())
-        self.assertFalse(result.has_prev())
-        self.assertTrue(result.has_next())
-
     @fixture.use_cassette(path="artist/get_top_tracks")
     def test_get_top_tracks(self):
         result = self.artist.get_top_tracks()

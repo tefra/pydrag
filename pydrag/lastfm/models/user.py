@@ -43,8 +43,7 @@ class ArtistTrackList(AttrModel):
 
 
 @dataclass
-class UserPersonalTags(BaseModel):
-    attr: Attributes
+class UserPersonalTags(AttrModel):
     tracks: Tracks = None
     albums: Albums = None
     artists: Artists = None
@@ -386,6 +385,5 @@ class User(BaseModel):
 
 
 @dataclass
-class UserFriends(BaseModel):
+class UserFriends(AttrModel):
     user: List[User]
-    attr: Attributes = None

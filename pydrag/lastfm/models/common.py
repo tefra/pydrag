@@ -1,41 +1,47 @@
-from math import ceil
 from typing import List, Optional
 
 from attr import dataclass
 
 from pydrag.core import BaseModel
-from pydrag.lastfm.mixins import PagerMixin
+
+
+@dataclass
+class CorrectionAttributes(BaseModel):
+    index: int = None
+    track_corrected: int = None
+    artist_corrected: int = None
 
 
 @dataclass
 class Attributes(BaseModel):
-    tag: str = None
     timestamp: int = None
     rank: str = None
     date: str = None
-    page: int = None
-    user: str = None
-    index: int = None
-    country: str = None
-    total: int = None
-    album: str = None
-    offset: int = None
-    artist: str = None
-    position: int = None
-    limit: int = None
-    track: str = None
-    total_pages: int = None
-    accepted: int = None
     ignored: int = None
-    track_corrected: int = None
-    artist_corrected: int = None
-    to_date: str = None
-    from_date: str = None
+    position: int = None
+    accepted: int = None
 
 
 @dataclass
-class AttrModel(BaseModel, PagerMixin):
-    attr: Attributes
+class RootAttributes(BaseModel):
+    tag: str = None
+    page: int = None
+    user: str = None
+    country: str = None
+    total: int = None
+    album: str = None
+    artist: str = None
+    limit: int = None
+    track: str = None
+    total_pages: int = None
+    to_date: str = None
+    from_date: str = None
+    offset: int = None
+
+
+@dataclass
+class AttrModel(BaseModel):
+    attr: RootAttributes
 
 
 @dataclass
@@ -187,9 +193,8 @@ class TagInfo(BaseModel):
 
 
 @dataclass
-class TagInfoList(BaseModel):
+class TagInfoList(AttrModel):
     tag: List[TagInfo]
-    attr: Attributes
 
 
 @dataclass
@@ -216,18 +221,6 @@ class OpenSearch(AttrModel):
     limit: int
     offset: int
     total: int
-
-    def get_page(self):
-        return self.query.page
-
-    def get_limit(self):
-        return self.limit
-
-    def get_total(self):
-        return self.total
-
-    def get_total_pages(self):
-        return ceil(self.total / self.limit)
 
 
 @dataclass

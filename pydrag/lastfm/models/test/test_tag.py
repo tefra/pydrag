@@ -60,13 +60,6 @@ class TagServiceTests(MethodTestCase):
         self.assertIsInstance(result, ArtistList)
         self.assertFixtureEqual("tag/get_top_artists", result.to_dict())
 
-        self.assertEqual(1, result.get_page())
-        self.assertEqual(2, result.get_limit())
-        self.assertEqual(61526, result.get_total())
-        self.assertEqual(30763, result.get_total_pages())
-        self.assertFalse(result.has_prev())
-        self.assertTrue(result.has_next())
-
     @fixture.use_cassette(path="tag/get_top_tracks")
     def test_get_top_tracks(self):
         result = self.tag.get_top_tracks(page=1, limit=2)

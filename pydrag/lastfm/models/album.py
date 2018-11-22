@@ -5,9 +5,9 @@ from attr import dataclass
 from pydrag.core import BaseModel
 from pydrag.lastfm.models.common import (
     Album,
-    Attributes,
     Image,
     OpenSearch,
+    RootAttributes,
     TagList,
     Tags,
     Tracks,
@@ -47,7 +47,7 @@ class Album(BaseModel):
     playcount: int = None
     url: str = None
     image: List[Image] = None
-    attr: Attributes = None
+    attr: RootAttributes = None
     artist: str = None
     listeners: int = None
     tags: Tags = None
