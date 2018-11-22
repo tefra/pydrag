@@ -1,14 +1,15 @@
-from typing import List
+from typing import List, TypeVar
 
 from attr import dataclass
 
 from pydrag.core import BaseModel
-from pydrag.lastfm import POST, api
 from pydrag.lastfm.models.common import (
     Artist,
     ArtistList,
     Artists,
+    Attributes,
     AttrModel,
+    Image,
     OpenSearch,
     Query,
     TagList,
@@ -29,17 +30,8 @@ class ArtistCorrection(BaseModel):
 
 
 @dataclass
-class ArtistInfo(Artist):
-    tags: Tags = None
-    bio: Wiki = None
-    on_tour: int = None
-    stats: Artist = None
-    similar: Artists = None
-
-
-@dataclass
 class ArtistMatches(BaseModel):
-    artist: List[ArtistInfo]
+    artist: List[Artist]
 
 
 @dataclass
@@ -48,147 +40,73 @@ class ArtistSearch(OpenSearch):
     query: Query
 
 
-class ArtistService:
-    """Last.fm Artist API interface for easy access/navigation."""
+T = TypeVar("T", bound="Artist")
 
-    def __init__(self, artist: str = None, mbid: str = None):
-        """
-        :param artist: The artist name
-        :param mbid: The musicbrainz id for the artist
-        """
-        self.mbid = mbid
-        self.artist = artist
 
-    @api.operation(method=POST, stateful=True)
-    def add_tags(self, tags: List[str]) -> BaseModel:
-        """
-        Tag an artist with one or more user supplied tags.
+@dataclass
+class Artist(BaseModel):
+    mbid: str = None
+    name: str = None
+    url: str = None
+    tag_count: int = None
+    listeners: int = None
+    playcount: int = None
+    streamable: str = None
+    image: List[Image] = None
+    match: str = None
+    attr: Attributes = None
+    tags: Tags = None
+    bio: Wiki = None
+    on_tour: int = None
+    stats: Artist = None
+    similar: Artists = None
 
-        :param tags: A list of user supplied tags to apply to this artist.
-        Accepts a maximum of 10 tags.
-        :returns: BaseModel
-        """
-        assert self.artist is not None
-        return dict(artist=self.artist, tags=",".join(tags))
-
-    @api.operation(method=POST, stateful=True)
-    def remove_tag(self, tag: str) -> BaseModel:
-        """
-        Remove a user's tag from an artist.
-
-        :param tag: A single user tag to remove from this artist.
-        :returns: BaseModel
-        """
-        assert self.artist is not None
-        return dict(artist=self.artist, tag=tag)
-
-    @api.operation
-    def get_info(
-        self, autocorrect: bool = True, user: str = None, lang: str = "en"
-    ) -> ArtistInfo:
+    @classmethod
+    def find(cls, artist: str, user: str = None, lang: str = "en") -> T:
         """
         Get the metadata for an artist. Includes biography, truncated at 300
         characters.
 
-        :param autocorrect: If enabled auto correct misspelled names
-        :param user: The username for the context of the request.
-        If supplied, response will include the user's playcount
+        :param user: The username for the context of the request. If supplied, response will include the user's playcount
         :param lang: The language to return the biography in, ISO-639
         :returns: ArtistInfo
         """
 
-        self.assert_mbid_or_artist()
-        return dict(
-            mbid=self.mbid,
-            artist=self.artist,
-            autocorrect=autocorrect,
-            username=user,
-            lang=lang,
+        return cls.retrieve(
+            params=dict(
+                method="artist.getInfo",
+                artist=artist,
+                autocorrect=True,
+                username=user,
+                lang=lang,
+            )
         )
 
-    @api.operation
-    def get_correction(self) -> ArtistCorrection:
+    @classmethod
+    def find_by_mbid(cls, mbid: str, user: str = None, lang: str = "en") -> T:
         """
-        Use the last.fm corrections data to check whether the supplied artist
-        has a correction to a canonical artist.
+        Get the metadata for an artist. Includes biography, truncated at 300
+        characters.
 
-        :returns: ArtistCorrection
+        :param user: The username for the context of the request. If supplied, response will include the user's playcount
+        :param lang: The language to return the biography in, ISO-639
+        :returns: ArtistInfo
         """
-        assert self.artist is not None
-        return dict(artist=self.artist)
 
-    @api.operation
-    def get_similar(
-        self, autocorrect: bool = True, limit: int = 50
-    ) -> ArtistList:
-        """
-        Get all the artists similar to this artist.
-
-        :param autocorrect: If enabled auto correct misspelled names
-        :param int limit: Limit the number of similar artists returned
-        :returns: ArtistList
-        """
-        self.assert_mbid_or_artist()
-        return dict(
-            mbid=self.mbid,
-            artist=self.artist,
-            autocorrect=autocorrect,
-            limit=limit,
+        return cls.retrieve(
+            params=dict(
+                method="artist.getInfo",
+                mbid=mbid,
+                autocorrect=True,
+                username=user,
+                lang=lang,
+            )
         )
 
-    @api.operation
-    def get_tags(self, user: str, autocorrect: bool = True) -> TagList:
-        """
-        Get the tags applied by an individual user to an artist on Last.fm.
-
-        :param user: The username for the context of the request.
-        :param autocorrect: If enabled auto correct misspelled names
-        :returns: TagList
-        """
-        self.assert_mbid_or_artist()
-        return dict(
-            mbid=self.mbid,
-            artist=self.artist,
-            autocorrect=autocorrect,
-            user=user,
-        )
-
-    @api.operation
-    def get_top_tags(self, autocorrect: bool = True) -> TagList:
-        """
-        Get the top tags for an artist on Last.fm, ordered by popularity.
-
-        :param autocorrect: If enabled auto correct misspelled names
-        :returns: TagList
-        """
-        self.assert_mbid_or_artist()
-        return dict(
-            mbid=self.mbid, artist=self.artist, autocorrect=autocorrect
-        )
-
-    @api.operation
-    def get_top_tracks(
-        self, autocorrect: bool = True, limit: int = 50, page: int = 1
-    ) -> TrackList:
-        """
-        Get the top tags for an artist on Last.fm, ordered by popularity.
-
-        :param autocorrect: If enabled auto correct misspelled names
-        :param int page: The page number to fetch. Defaults to first page.
-        :param int limit: The number of results to fetch per page.
-        :returns: ArtistTopTracks
-        """
-        self.assert_mbid_or_artist()
-        return dict(
-            mbid=self.mbid,
-            artist=self.artist,
-            autocorrect=autocorrect,
-            limit=limit,
-            page=page,
-        )
-
-    @api.operation
-    def search(self, limit: int = 50, page: int = 1) -> ArtistSearch:
+    @classmethod
+    def search(
+        cls, artist: str, limit: int = 50, page: int = 1
+    ) -> ArtistSearch:
         """
         Search for an artist by name. Returns artist matches sorted by
         relevance.
@@ -197,8 +115,122 @@ class ArtistService:
         :param int limit: The number of results to fetch per page.
         :returns: ArtistSearch
         """
-        assert self.artist is not None
-        return dict(limit=limit, page=page, artist=self.artist)
+        return cls.retrieve(
+            bind=ArtistSearch,
+            params=dict(
+                method="artist.search", limit=limit, page=page, artist=artist
+            ),
+        )
 
-    def assert_mbid_or_artist(self):
-        assert self.mbid is not None or self.artist is not None
+    def add_tags(self, tags: List[str]) -> BaseModel:
+        """
+        Tag an artist with one or more user supplied tags.
+
+        :param tags: A list of user supplied tags to apply to this artist.
+        Accepts a maximum of 10 tags.
+        :returns: BaseModel
+        """
+        return self.submit(
+            bind=BaseModel,
+            stateful=True,
+            params=dict(
+                method="artist.addTags", arist=self.name, tags=",".join(tags)
+            ),
+        )
+
+    def remove_tag(self, tag: str) -> BaseModel:
+        """
+        Remove a user's tag from an artist.
+
+        :param tag: A single user tag to remove from this artist.
+        :returns: BaseModel
+        """
+        return self.submit(
+            bind=BaseModel,
+            stateful=True,
+            params=dict(method="artist.removeTag", arist=self.name, tag=tag),
+        )
+
+    def get_correction(self) -> ArtistCorrection:
+        """
+        Use the last.fm corrections data to check whether the supplied artist
+        has a correction to a canonical artist.
+
+        :returns: ArtistCorrection
+        """
+        return self.retrieve(
+            bind=ArtistCorrection,
+            params=dict(method="artist.getCorrection", artist=self.name),
+        )
+
+    def get_similar(self, limit: int = 50) -> ArtistList:
+        """
+        Get all the artists similar to this artist.
+
+        :param int limit: Limit the number of similar artists returned
+        :returns: ArtistList
+        """
+        return self.retrieve(
+            bind=ArtistList,
+            params=dict(
+                method="artist.getSimilar",
+                mbid=self.mbid,
+                artist=self.name,
+                autocorrect=True,
+                limit=limit,
+            ),
+        )
+
+    def get_tags(self, user: str) -> TagList:
+        """
+        Get the tags applied by an individual user to an artist on Last.fm.
+
+        :param user: The username for the context of the request.
+        :returns: TagList
+        """
+        return self.retrieve(
+            bind=TagList,
+            params=dict(
+                method="artist.getTags",
+                mbid=self.mbid,
+                artist=self.name,
+                autocorrect=True,
+                user=user,
+            ),
+        )
+
+    def get_top_tags(self) -> TagList:
+        """
+        Get the top tags for an artist on Last.fm, ordered by popularity.
+
+        :returns: TagList
+        """
+        return self.retrieve(
+            bind=TagList,
+            params=dict(
+                method="artist.getTopTags",
+                mbid=self.mbid,
+                artist=self.name,
+                autocorrect=True,
+            ),
+        )
+
+    def get_top_tracks(self, limit: int = 50, page: int = 1) -> TrackList:
+        """
+        Get the top tags for an artist on Last.fm, ordered by popularity.
+
+        :param int page: The page number to fetch. Defaults to first page.
+        :param int limit: The number of results to fetch per page.
+        :returns: ArtistTopTracks
+        """
+        return self.retrieve(
+            bind=TrackList,
+            params=dict(
+                method="artist.getTopTracks",
+                mbid=self.mbid,
+                artist=self.name,
+                autocorrect=True,
+                limit=limit,
+                page=page,
+            ),
+        )
