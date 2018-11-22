@@ -4,7 +4,7 @@
         {
             "request": {
                 "method": "GET",
-                "uri": "https://ws.audioscrobbler.com/2.0/?album=A+Night+at+the+Opera&api_key=LAST_FM_API_KEY&artist=Queen&autocorrect=0&format=json&mbid=6defd963-fe91-4550-b18e-82c685603c2b&method=album.getTopTags",
+                "uri": "https://ws.audioscrobbler.com/2.0/?album=A+Night+at+the+Opera&api_key=LAST_FM_API_KEY&artist=Queen&autocorrect=1&format=json&mbid=6defd963-fe91-4550-b18e-82c685603c2b&method=album.getTopTags",
                 "body": null,
                 "headers": {
                     "User-Agent": [

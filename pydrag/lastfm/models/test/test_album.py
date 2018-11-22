@@ -1,14 +1,13 @@
 from pydrag.core import BaseModel
-from pydrag.lastfm.models.album import AlbumInfo, AlbumSearch
+from pydrag.lastfm.models.album import Album, AlbumSearch
 from pydrag.lastfm.models.common import TagList
-from pydrag.lastfm.services.album import AlbumService
-from pydrag.lastfm.services.test import MethodTestCase, fixture
+from pydrag.lastfm.models.test import MethodTestCase, fixture
 
 
 class AlbumServiceTests(MethodTestCase):
     def setUp(self):
-        self.album = AlbumService(
-            album="A Night at the Opera",
+        self.album = Album(
+            name="A Night at the Opera",
             artist="Queen",
             mbid="6defd963-fe91-4550-b18e-82c685603c2b",
         )
@@ -17,98 +16,86 @@ class AlbumServiceTests(MethodTestCase):
     @fixture.use_cassette(path="album/add_tags")
     def test_add_tags(self):
         result = self.album.add_tags(["foo", "bar"])
-        self.assertDictEqual(
-            {
-                "album": "A Night at the Opera",
-                "artist": "Queen",
-                "sk": "CENSORED",
-                "tags": "foo,bar",
-            },
-            result.params,
-        )
+        expected_params = {
+            "album": "A Night at the Opera",
+            "arist": "Queen",
+            "method": "album.addTags",
+            "tags": "foo,bar",
+        }
+        self.assertEqual(expected_params, result.params)
+
         self.assertIsInstance(result, BaseModel)
 
     @fixture.use_cassette(path="album/get_tags")
     def test_get_tags(self):
         result = self.album.get_tags(user="Zaratoustre")
+        expected_params = {
+            "album": "A Night at the Opera",
+            "artist": "Queen",
+            "autocorrect": True,
+            "mbid": "6defd963-fe91-4550-b18e-82c685603c2b",
+            "method": "album.getTags",
+            "user": "Zaratoustre",
+        }
+        self.assertEqual(expected_params, result.params)
 
-        self.assertEqual("Album", result.namespace)
-        self.assertEqual("get_tags", result.method)
-        self.assertEqual(
-            {
-                "album": "A Night at the Opera",
-                "artist": "Queen",
-                "autocorrect": True,
-                "mbid": "6defd963-fe91-4550-b18e-82c685603c2b",
-                "user": "Zaratoustre",
-            },
-            result.params,
-        )
         self.assertIsInstance(result, TagList)
         self.assertFixtureEqual("album/get_tags", result.to_dict())
 
     @fixture.use_cassette(path="album/remove_tag")
     def test_remove_tag(self):
         result = self.album.remove_tag("bar")
-        self.assertDictEqual(
-            {
-                "album": "A Night at the Opera",
-                "artist": "Queen",
-                "sk": "CENSORED",
-                "tag": "bar",
-            },
-            result.params,
-        )
+        expected_params = {
+            "album": "A Night at the Opera",
+            "artist": "Queen",
+            "method": "album.removeTag",
+            "tag": "bar",
+        }
+        self.assertEqual(expected_params, result.params)
+
         self.assertIsInstance(result, BaseModel)
 
     @fixture.use_cassette(path="album/get_info")
-    def test_get_info(self):
-        self.album.artist = None
-        self.album.album = None
-        result = self.album.get_info()
+    def test_find(self):
+        result = Album.find_by_mbid("6defd963-fe91-4550-b18e-82c685603c2b")
+        expected_params = {
+            "autocorrect": True,
+            "lang": "en",
+            "mbid": "6defd963-fe91-4550-b18e-82c685603c2b",
+            "method": "album.getInfo",
+            "username": None,
+        }
+        self.assertEqual(expected_params, result.params)
 
-        self.assertEqual("Album", result.namespace)
-        self.assertEqual("get_info", result.method)
-        self.assertEqual(
-            {
-                "autocorrect": True,
-                "lang": "en",
-                "mbid": "6defd963-fe91-4550-b18e-82c685603c2b",
-            },
-            result.params,
-        )
-        self.assertIsInstance(result, AlbumInfo)
+        self.assertIsInstance(result, Album)
         self.assertFixtureEqual("album/get_info", result.to_dict())
 
     @fixture.use_cassette(path="album/get_top_tags")
     def test_get_top_tags(self):
-        result = self.album.get_top_tags(False)
-
-        self.assertEqual("Album", result.namespace)
-        self.assertEqual("get_top_tags", result.method)
-        self.assertEqual(
-            {
-                "album": "A Night at the Opera",
-                "artist": "Queen",
-                "autocorrect": False,
-                "mbid": "6defd963-fe91-4550-b18e-82c685603c2b",
-            },
-            result.params,
-        )
+        result = self.album.get_top_tags()
+        expected_params = {
+            "album": "A Night at the Opera",
+            "artist": "Queen",
+            "autocorrect": True,
+            "mbid": "6defd963-fe91-4550-b18e-82c685603c2b",
+            "method": "album.getTopTags",
+        }
+        self.assertEqual(expected_params, result.params)
 
         self.assertIsInstance(result, TagList)
         self.assertFixtureEqual("album/get_top_tags", result.to_dict())
 
     @fixture.use_cassette(path="album/search")
     def test_search(self):
-        self.album.album = "fire"
-        result = self.album.search()
+        result = Album.search("fire")
+        expected_params = {
+            "album": "fire",
+            "limit": 50,
+            "method": "album.search",
+            "page": 1,
+        }
+        self.assertEqual(expected_params, result.params)
 
-        self.assertEqual("Album", result.namespace)
-        self.assertEqual("search", result.method)
-        self.assertEqual(
-            {"album": "fire", "page": 1, "limit": 50}, result.params
-        )
         self.assertIsInstance(result, AlbumSearch)
         self.assertFixtureEqual("album/search", result.to_dict())
 
