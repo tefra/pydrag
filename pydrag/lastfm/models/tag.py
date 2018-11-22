@@ -31,8 +31,9 @@ class Tag(BaseModel):
         """
         Get the metadata for a tag.
 
+        :param name: The tag name
         :param lang: The language to return the wiki in, ISO-639
-        :return: TagInfo
+        :return: Tag
         """
         return cls.retrieve(
             params=dict(method="tag.getInfo", tag=name, lang=lang)
@@ -55,6 +56,20 @@ class Tag(BaseModel):
                 num_res=limit,
                 offset=((page - 1) * limit),
             ),
+        )
+
+    @classmethod
+    def get_top_tags_chart(cls, limit: int = 50, page: int = 1) -> TagInfoList:
+        """
+        Get the top tags chart.
+
+        :param int limit: The number of results to fetch per page.
+        :param int page: The page number to fetch. Defaults to first page.
+        :returns: TagInfoList
+        """
+        return cls.retrieve(
+            bind=TagInfoList,
+            params=dict(method="chart.getTopTags", limit=limit, page=page),
         )
 
     def get_similar(self) -> TagInfoList:

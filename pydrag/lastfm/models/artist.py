@@ -67,6 +67,7 @@ class Artist(BaseModel):
         Get the metadata for an artist. Includes biography, truncated at 300
         characters.
 
+        :param artist:  The artist name to retrieve.
         :param user: The username for the context of the request. If supplied, response will include the user's playcount
         :param lang: The language to return the biography in, ISO-639
         :returns: ArtistInfo
@@ -88,6 +89,7 @@ class Artist(BaseModel):
         Get the metadata for an artist. Includes biography, truncated at 300
         characters.
 
+        :param mbid:  The musicbrainz id for the artist
         :param user: The username for the context of the request. If supplied, response will include the user's playcount
         :param lang: The language to return the biography in, ISO-639
         :returns: ArtistInfo
@@ -111,7 +113,8 @@ class Artist(BaseModel):
         Search for an artist by name. Returns artist matches sorted by
         relevance.
 
-        :param int page: The page number to fetch. Defaults to first page.
+        :param artist: The artist name to search.
+        :param int page: The page number to fetch.
         :param int limit: The number of results to fetch per page.
         :returns: ArtistSearch
         """
@@ -120,6 +123,42 @@ class Artist(BaseModel):
             params=dict(
                 method="artist.search", limit=limit, page=page, artist=artist
             ),
+        )
+
+    @classmethod
+    def get_top_artists_by_country(
+        cls, country: str, limit: int = 50, page: int = 1
+    ) -> ArtistList:
+        """
+        :param country: The country name to fetch results.
+        :param int limit: The number of results to fetch per page.
+        :param int page: The page number to fetch.
+        :returns: TrackList
+        """
+        return cls.retrieve(
+            bind=ArtistList,
+            params=dict(
+                method="geo.getTopArtists",
+                country=country,
+                limit=limit,
+                page=page,
+            ),
+        )
+
+    @classmethod
+    def get_top_artists_chart(
+        cls, limit: int = 50, page: int = 1
+    ) -> ArtistList:
+        """
+        Get the top artists chart.
+
+        :param int limit: The number of results to fetch per page.
+        :param int page: The page number to fetch. Defaults to first page.
+        :returns: ArtistList
+        """
+        return cls.retrieve(
+            bind=ArtistList,
+            params=dict(method="chart.getTopArtists", limit=limit, page=page),
         )
 
     def add_tags(self, tags: List[str]) -> BaseModel:
@@ -219,7 +258,7 @@ class Artist(BaseModel):
         """
         Get the top tags for an artist on Last.fm, ordered by popularity.
 
-        :param int page: The page number to fetch. Defaults to first page.
+        :param int page: The page number to fetch.
         :param int limit: The number of results to fetch per page.
         :returns: ArtistTopTracks
         """

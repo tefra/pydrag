@@ -276,3 +276,16 @@ class UserServiceTests(MethodTestCase):
         self.assertFixtureEqual(
             "user/get_weekly_track_chart", result.to_dict()
         )
+
+    @fixture.use_cassette(path="library/get_artists")
+    def test_get_artists(self):
+        result = self.user.get_artists()
+        expected_params = {
+            "limit": 50,
+            "method": "library.getArtists",
+            "page": 1,
+            "user": "rj",
+        }
+        self.assertEqual(expected_params, result.params)
+        self.assertIsInstance(result, ArtistList)
+        self.assertFixtureEqual("library/get_artists", result.to_dict())

@@ -277,3 +277,32 @@ class TrackServiceTests(MethodTestCase):
 
         self.assertIsInstance(result, TrackScrobble)
         self.assertDictEqual(expected, actual)
+
+    @fixture.use_cassette(path="geo/get_top_tracks")
+    def test_get_top_tracks_by_country(self):
+        result = Track.get_top_tracks_by_country(
+            country="greece", page=1, limit=10
+        )
+        expected_params = {
+            "country": "greece",
+            "limit": 10,
+            "method": "geo.getTopTracks",
+            "page": 1,
+        }
+
+        self.assertEqual(expected_params, result.params)
+        self.assertIsInstance(result, TrackList)
+        self.assertFixtureEqual("geo/get_top_tracks", result.to_dict())
+
+    @fixture.use_cassette(path="chart/get_top_tracks")
+    def test_get_top_tracks_chart(self):
+        result = Track.get_top_tracks_chart(limit=10, page=2)
+        expected_params = {
+            "limit": 10,
+            "method": "chart.getTopTracks",
+            "page": 2,
+        }
+
+        self.assertEqual(expected_params, result.params)
+        self.assertIsInstance(result, TrackList)
+        self.assertFixtureEqual("chart/get_top_tracks", result.to_dict())

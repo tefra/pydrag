@@ -62,8 +62,8 @@ class Album(BaseModel):
         """
         Get the metadata and tracklist for an album on Last.fm.
 
-        :param album:
-        :param artist:
+        :param album: The album name to find.
+        :param artist: The album artist to find.
         :param user: The username for the context of the request. If supplied, response will include the user's playcount for this album
         :param lang: The language to return the biography in, ISO-639
         :returns: AlbumInfo
@@ -85,7 +85,7 @@ class Album(BaseModel):
         """
         Get the metadata and tracklist for an album on Last.fm.
 
-        :param mbid:
+        :param mbid: The musicbrainz id for the album.
         :param user: The username for the context of the request. If supplied, response will include the user's playcount for this album
         :param lang: The language to return the biography in, ISO-639
         :returns: AlbumInfo
@@ -106,7 +106,7 @@ class Album(BaseModel):
         """
         Search for an album by name.Returns album matches sorted by relevance.
 
-        :param album:
+        :param album: The album name to search.
         :param int page: The page number to fetch. Defaults to first page.
         :param int limit: The number of results to fetch per page.
         :returns: AlbumSearch

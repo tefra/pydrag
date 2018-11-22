@@ -98,7 +98,20 @@ class TagServiceTests(MethodTestCase):
     def test_get_weekly_chart_list(self):
         result = self.tag.get_weekly_chart_list()
         expected_params = {"method": "tag.getWeeklyChartList", "tag": "rap"}
-        self.assertEqual(expected_params, result.params)
 
+        self.assertEqual(expected_params, result.params)
         self.assertIsInstance(result, ChartList)
         self.assertFixtureEqual("tag/get_weekly_chart_list", result.to_dict())
+
+    @fixture.use_cassette(path="chart/get_top_tags")
+    def test_get_top_tags_chart(self):
+        result = Tag.get_top_tags_chart(limit=10, page=2)
+        expected_params = {
+            "limit": 10,
+            "method": "chart.getTopTags",
+            "page": 2,
+        }
+
+        self.assertEqual(expected_params, result.params)
+        self.assertIsInstance(result, TagInfoList)
+        self.assertFixtureEqual("chart/get_top_tags", result.to_dict())

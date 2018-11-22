@@ -77,6 +77,22 @@ class User(BaseModel):
         """
         return cls.retrieve(params=dict(method="user.getInfo", user=username))
 
+    def get_artists(self, limit: int = 50, page: int = 1) -> ArtistList:
+        """
+        :param int page: The page number to fetch. Defaults to first page.
+        :param int limit: The number of results to fetch per page.
+        :returns: ArtistList
+        """
+        return self.retrieve(
+            bind=ArtistList,
+            params=dict(
+                method="library.getArtists",
+                user=self.name,
+                page=page,
+                limit=limit,
+            ),
+        )
+
     def get_artist_tracks(
         self,
         artist: str,

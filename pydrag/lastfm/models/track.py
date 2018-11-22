@@ -126,7 +126,6 @@ class Track(BaseModel):
 
         :param artist: The artist name
         :param track: The track name
-        :param autocorrect: If enabled auto correct misspelled names
         :param user: The username for the context of the request.
          If supplied, response will include the user's playcount for this track
         :param lang: The language to return the biography in, ISO 639
@@ -165,14 +164,14 @@ class Track(BaseModel):
         )
 
     @classmethod
-    def get_correction(self, track: str, artist: str) -> TrackCorrection:
+    def get_correction(cls, track: str, artist: str) -> TrackCorrection:
         """
         Use the last.fm corrections data to check whether the supplied track
         has a correction to a canonical track.
 
         :returns: TrackCorrection
         """
-        return self.retrieve(
+        return cls.retrieve(
             bind=TrackCorrection,
             params=dict(
                 method="track.getCorrection", artist=artist, track=track
@@ -196,12 +195,45 @@ class Track(BaseModel):
             ),
         )
 
+    @classmethod
+    def get_top_tracks_by_country(
+        cls, country: str, limit: int = 50, page: int = 1
+    ) -> TrackList:
+        """
+        :param country: The country to fetch the top tracks.
+        :param int limit: The number of results to fetch per page.
+        :param int page: The page number to fetch. Defaults to first page.
+        :returns: TrackList
+        """
+        return cls.retrieve(
+            bind=TrackList,
+            params=dict(
+                method="geo.getTopTracks",
+                country=country,
+                limit=limit,
+                page=page,
+            ),
+        )
+
+    @classmethod
+    def get_top_tracks_chart(cls, limit: int = 50, page: int = 1) -> TrackList:
+        """
+        Get the top tracks chart.
+
+        :param int limit: The number of results to fetch per page.
+        :param int page: The page number to fetch. Defaults to first page.
+        :returns: TrackList
+        """
+        return cls.retrieve(
+            bind=TrackList,
+            params=dict(method="chart.getTopTracks", limit=limit, page=page),
+        )
+
     def add_tags(self, tags: List[str]) -> BaseModel:
         """
         Tag an track with one or more user supplied tags.
 
-        :param tags: A list of user supplied tags to apply to this track.
-        Accepts a maximum of 10 tags.
+        :param tags: A list of user supplied tags to apply to this track. Accepts a maximum of 10 tags.
         :returns: BaseModel
         """
         return self.submit(
