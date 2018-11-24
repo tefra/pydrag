@@ -4,12 +4,12 @@ from pydrag.lastfm.models.common import ArtistList, TagList, TrackList
 from pydrag.lastfm.models.test import MethodTestCase, fixture
 
 
-class ArtistServiceTests(MethodTestCase):
+class ArtistTests(MethodTestCase):
     def setUp(self):
         self.artist = Artist(
             name="Guns N' Roses", mbid="eeb1195b-f213-4ce1-b28c-8565211f8e43"
         )
-        super(ArtistServiceTests, self).setUp()
+        super(ArtistTests, self).setUp()
 
     @fixture.use_cassette(path="artist/add_tags")
     def test_add_tags(self):
@@ -49,7 +49,6 @@ class ArtistServiceTests(MethodTestCase):
 
     @fixture.use_cassette(path="artist/find")
     def test_find(self):
-        self.artist.artist = None
         result = Artist.find("Guns N' Roses")
         expected_params = {
             "artist": "Guns N' Roses",

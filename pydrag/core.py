@@ -52,7 +52,7 @@ class BaseModel(metaclass=ABCMeta):
         response = requests.get(url)
         response.raise_for_status()
         body = response.json(object_pairs_hook=pythonic_variables)
-        obj = cls._bind(bind, response, body)
+        obj = cls._bind(bind, body)
         obj.params = params
         return obj
 
@@ -85,12 +85,12 @@ class BaseModel(metaclass=ABCMeta):
         response = requests.post(url, data=data)
         response.raise_for_status()
         body = response.json(object_pairs_hook=pythonic_variables)
-        obj = cls._bind(bind, response, body)
+        obj = cls._bind(bind, body)
         obj.params = params
         return obj
 
     @classmethod
-    def _bind(cls, bind, resp: Response, body: Union[dict, list, None]) -> T:
+    def _bind(cls, bind, body: Union[dict, list, None]) -> T:
         assert isinstance(body, dict)
 
         if body:

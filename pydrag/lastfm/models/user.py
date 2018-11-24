@@ -7,9 +7,8 @@ from pydrag.lastfm import Period
 from pydrag.lastfm.models.common import (
     Album,
     AlbumList,
-    Albums,
+    Artist,
     ArtistList,
-    Artists,
     Attributes,
     AttrModel,
     ChartList,
@@ -17,8 +16,8 @@ from pydrag.lastfm.models.common import (
     Image,
     SimpleArtist,
     TagList,
+    Track,
     TrackList,
-    Tracks,
 )
 
 T = TypeVar("T", bound="User")
@@ -44,9 +43,18 @@ class ArtistTrackList(AttrModel):
 
 @dataclass
 class UserPersonalTags(AttrModel):
-    tracks: Tracks = None
-    albums: Albums = None
-    artists: Artists = None
+    tracks: List[Track] = None
+    albums: List[Album] = None
+    artists: List[Artist] = None
+
+    @classmethod
+    def from_dict(cls, data: dict):
+        for what in ["tracks", "albums", "artists"]:
+            try:
+                data[what] = data[what][what[:-1]]
+            except KeyError:
+                pass
+        return super().from_dict(data)
 
 
 @dataclass

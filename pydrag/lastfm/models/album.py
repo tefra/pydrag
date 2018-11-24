@@ -8,9 +8,9 @@ from pydrag.lastfm.models.common import (
     Image,
     OpenSearch,
     RootAttributes,
+    Tag,
     TagList,
-    Tags,
-    Tracks,
+    Track,
     Wiki,
 )
 
@@ -19,9 +19,9 @@ from pydrag.lastfm.models.common import (
 class AlbumInfo(Album):
     artist: str = None
     listeners: int = None
-    tags: Tags = None
+    tags: List[Tag] = None
     streamable: int = None
-    tracks: Tracks = None
+    tracks: List[Track] = None
     wiki: Wiki = None
 
 
@@ -50,10 +50,19 @@ class Album(BaseModel):
     attr: RootAttributes = None
     artist: str = None
     listeners: int = None
-    tags: Tags = None
+    tags: List[Tag] = None
     streamable: int = None
-    tracks: Tracks = None
+    tracks: List[Track] = None
     wiki: Wiki = None
+
+    @classmethod
+    def from_dict(cls, data: dict):
+        for what in ["tracks", "tags"]:
+            try:
+                data[what] = data[what][what[:-1]]
+            except KeyError:
+                pass
+        return super().from_dict(data)
 
     @classmethod
     def find(

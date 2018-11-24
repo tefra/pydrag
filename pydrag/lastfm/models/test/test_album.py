@@ -4,14 +4,14 @@ from pydrag.lastfm.models.common import TagList
 from pydrag.lastfm.models.test import MethodTestCase, fixture
 
 
-class AlbumServiceTests(MethodTestCase):
+class AlbumTests(MethodTestCase):
     def setUp(self):
         self.album = Album(
             name="A Night at the Opera",
             artist="Queen",
             mbid="6defd963-fe91-4550-b18e-82c685603c2b",
         )
-        super(AlbumServiceTests, self).setUp()
+        super(AlbumTests, self).setUp()
 
     @fixture.use_cassette(path="album/add_tags")
     def test_add_tags(self):

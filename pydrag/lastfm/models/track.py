@@ -11,8 +11,8 @@ from pydrag.lastfm.models.common import (
     OpenSearch,
     RootAttributes,
     SimpleArtist,
+    Tag,
     TagList,
-    Tags,
     Track,
     TrackList,
     TrackSimpleArtist,
@@ -24,7 +24,7 @@ from pydrag.lastfm.models.common import (
 class TrackInfo(Track):
     wiki: Wiki = None
     album: AlbumInfo = None
-    top_tags: Tags = None
+    top_tags: List[Tag] = None
 
 
 @dataclass
@@ -111,8 +111,16 @@ class Track(BaseModel):
     match: Optional[float] = None
     wiki: Wiki = None
     album: AlbumInfo = None
-    top_tags: Tags = None
+    top_tags: List[Tag] = None
     attr: RootAttributes = None
+
+    @classmethod
+    def from_dict(cls, data: dict):
+        try:
+            data["top_tags"] = data["top_tags"]["tag"]
+        except KeyError:
+            pass
+        return super().from_dict(data)
 
     @classmethod
     def from_artist_track(cls, artist: str, track: str):

@@ -11,8 +11,8 @@ from pydrag.lastfm.models.common import (
     Image,
     OpenSearch,
     RootAttributes,
+    Tag,
     TagList,
-    Tags,
     TrackList,
     Wiki,
 )
@@ -54,11 +54,20 @@ class Artist(BaseModel):
     image: List[Image] = None
     match: str = None
     attr: RootAttributes = None
-    tags: Tags = None
+    tags: List[Tag] = None
     bio: Wiki = None
     on_tour: int = None
     stats: Artist = None
     similar: Artists = None
+
+    @classmethod
+    def from_dict(cls, data: dict):
+        for what in ["tags"]:
+            try:
+                data[what] = data[what][what[:-1]]
+            except KeyError:
+                pass
+        return super().from_dict(data)
 
     @classmethod
     def find(cls, artist: str, user: str = None, lang: str = "en") -> T:

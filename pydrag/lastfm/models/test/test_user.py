@@ -15,7 +15,7 @@ from pydrag.lastfm.models.user import (
 )
 
 
-class UserServiceTests(MethodTestCase):
+class UserTests(MethodTestCase):
     def setUp(self):
         self.user = User(
             playlists=None,
@@ -31,7 +31,7 @@ class UserServiceTests(MethodTestCase):
             bootstrap=None,
             registered=None,
         )
-        super(UserServiceTests, self).setUp()
+        super(UserTests, self).setUp()
 
     @fixture.use_cassette(path="user/get_artist_tracks")
     def test_get_artist_tracks(self):

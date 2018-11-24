@@ -104,13 +104,8 @@ class Track(BaseModel):
 
 
 @dataclass
-class Tracks(BaseModel):
+class TrackList(AttrModel):
     track: List[Track]
-
-
-@dataclass
-class TrackList(Tracks, AttrModel):
-    pass
 
 
 @dataclass
@@ -198,13 +193,8 @@ class TagInfoList(AttrModel):
 
 
 @dataclass
-class Tags(BaseModel):
+class TagList(AttrModel):
     tag: List[Tag]
-
-
-@dataclass
-class TagList(Tags, AttrModel):
-    pass
 
 
 @dataclass

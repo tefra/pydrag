@@ -43,28 +43,26 @@
         },
         "artist": "AC/DC"
     },
-    "top_tags": {
-        "tag": [
-            {
-                "name": "hard rock",
-                "url": "https://www.last.fm/tag/hard+rock"
-            },
-            {
-                "name": "rock",
-                "url": "https://www.last.fm/tag/rock"
-            },
-            {
-                "name": "classic rock",
-                "url": "https://www.last.fm/tag/classic+rock"
-            },
-            {
-                "name": "ACDC",
-                "url": "https://www.last.fm/tag/ACDC"
-            },
-            {
-                "name": "heavy metal",
-                "url": "https://www.last.fm/tag/heavy+metal"
-            }
-        ]
-    }
+    "top_tags": [
+        {
+            "name": "hard rock",
+            "url": "https://www.last.fm/tag/hard+rock"
+        },
+        {
+            "name": "rock",
+            "url": "https://www.last.fm/tag/rock"
+        },
+        {
+            "name": "classic rock",
+            "url": "https://www.last.fm/tag/classic+rock"
+        },
+        {
+            "name": "ACDC",
+            "url": "https://www.last.fm/tag/ACDC"
+        },
+        {
+            "name": "heavy metal",
+            "url": "https://www.last.fm/tag/heavy+metal"
+        }
+    ]
 }

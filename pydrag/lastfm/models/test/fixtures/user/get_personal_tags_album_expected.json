@@ -7,7 +7,5 @@
         "limit": 50,
         "total_pages": 0
     },
-    "albums": {
-        "album": []
-    }
+    "albums": []
 }
