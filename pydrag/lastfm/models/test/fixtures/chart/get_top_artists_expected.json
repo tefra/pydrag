@@ -1,5 +1,5 @@
 {
-    "artist": [
+    "data": [
         {
             "mbid": "CENSORED298a",
             "name": "Arctic Monkeys",
@@ -300,11 +300,5 @@
                 }
             ]
         }
-    ],
-    "attr": {
-        "page": 2,
-        "total": 2872961,
-        "limit": 10,
-        "total_pages": 287297
-    }
+    ]
 }

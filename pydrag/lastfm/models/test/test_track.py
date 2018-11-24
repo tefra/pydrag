@@ -1,25 +1,23 @@
 import time
 from datetime import datetime, timedelta
 
-from pydrag.core import BaseModel
-from pydrag.lastfm.models.common import TagList, TrackList
+from pydrag.core import BaseListModel, BaseModel
 from pydrag.lastfm.models.test import MethodTestCase, fixture
 from pydrag.lastfm.models.track import (
     ScrobbleTrack,
     Track,
     TrackCorrection,
     TrackScrobble,
-    TrackSearch,
     TrackUpdateNowPlaying,
 )
 
 
-class TrackServiceTests(MethodTestCase):
+class TrackTests(MethodTestCase):
     def setUp(self):
         self.track = Track.from_artist_track(
             artist="AC / DC", track="Hells Bell"
         )
-        super(TrackServiceTests, self).setUp()
+        super(TrackTests, self).setUp()
 
     @fixture.use_cassette(path="track/add_tags")
     def test_add_tags(self):
@@ -46,7 +44,7 @@ class TrackServiceTests(MethodTestCase):
 
         self.assertDictEqual(expected_params, result.params)
 
-        self.assertIsInstance(result, TagList)
+        self.assertIsInstance(result, BaseListModel)
         self.assertFixtureEqual("track/get_tags", result.to_dict())
 
     @fixture.use_cassette(path="track/remove_tag")
@@ -101,7 +99,7 @@ class TrackServiceTests(MethodTestCase):
 
         self.assertEqual(expected_params, result.params)
 
-        self.assertIsInstance(result, TagList)
+        self.assertIsInstance(result, BaseListModel)
         self.assertFixtureEqual("track/get_top_tags", result.to_dict())
 
     @fixture.use_cassette(path="track/search")
@@ -117,7 +115,7 @@ class TrackServiceTests(MethodTestCase):
 
         self.assertEqual(expected_params, result.params)
 
-        self.assertIsInstance(result, TrackSearch)
+        self.assertIsInstance(result, BaseListModel)
         self.assertFixtureEqual("track/search", result.to_dict())
 
     @fixture.use_cassette(path="track/get_similar")
@@ -134,7 +132,7 @@ class TrackServiceTests(MethodTestCase):
 
         self.assertEqual(expected_params, result.params)
 
-        self.assertIsInstance(result, TrackList)
+        self.assertIsInstance(result, BaseListModel)
         self.assertFixtureEqual("track/get_similar", result.to_dict())
 
     @fixture.use_cassette(path="track/love")
@@ -285,7 +283,7 @@ class TrackServiceTests(MethodTestCase):
         }
 
         self.assertEqual(expected_params, result.params)
-        self.assertIsInstance(result, TrackList)
+        self.assertIsInstance(result, BaseListModel)
         self.assertFixtureEqual("geo/get_top_tracks", result.to_dict())
 
     @fixture.use_cassette(path="chart/get_top_tracks")
@@ -298,5 +296,5 @@ class TrackServiceTests(MethodTestCase):
         }
 
         self.assertEqual(expected_params, result.params)
-        self.assertIsInstance(result, TrackList)
+        self.assertIsInstance(result, BaseListModel)
         self.assertFixtureEqual("chart/get_top_tracks", result.to_dict())

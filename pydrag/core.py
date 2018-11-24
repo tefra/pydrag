@@ -1,9 +1,10 @@
 from abc import ABCMeta
-from typing import Dict, TypeVar, Union
+from collections import UserList
+from typing import Any, Dict, List, TypeVar
 from urllib.parse import urlencode
 
 import requests
-from attr import asdict, attrib, fields
+from attr import asdict, attrib, dataclass, fields
 from cattr import structure
 from requests import Response
 
@@ -42,7 +43,7 @@ class BaseModel(metaclass=ABCMeta):
         return params
 
     @classmethod
-    def retrieve(cls, bind=None, params={}) -> T:
+    def retrieve(cls, bind=None, many=None, params={}) -> T:
         assert "method" in params
         if bind is None:
             bind = cls
@@ -52,7 +53,7 @@ class BaseModel(metaclass=ABCMeta):
         response = requests.get(url)
         response.raise_for_status()
         body = response.json(object_pairs_hook=pythonic_variables)
-        obj = cls._bind(bind, body)
+        obj = cls._bind(bind, body, many)
         obj.params = params
         return obj
 
@@ -90,13 +91,22 @@ class BaseModel(metaclass=ABCMeta):
         return obj
 
     @classmethod
-    def _bind(cls, bind, body: Union[dict, list, None]) -> T:
+    def _bind(cls, bind, body: Any, many: str = None) -> T:
         assert isinstance(body, dict)
 
         if body:
             data = body.get(next(iter(body.keys())))
             if isinstance(data, dict):
-                obj = bind.from_dict(data)
+                if many:
+                    if isinstance(many, str):
+                        many = (many,)
+                    for m in many:
+                        data = data.pop(m)
+
+                    items = [bind.from_dict(d) for d in data]
+                    obj = BaseListModel(data=items)
+                else:
+                    obj = bind.from_dict(data)
             else:
                 obj = bind(data)
         else:
@@ -114,12 +124,19 @@ class BaseModel(metaclass=ABCMeta):
         return md5("".join(signature))
 
 
+@dataclass
+class BaseListModel(UserList):
+    data: List[BaseModel] = attrib(factory=list)
+
+    def to_dict(self: T) -> Dict:
+        return dict(data=[item.to_dict() for item in self])
+
+
 def pythonic_variables(data):
     map = {
-        "albummatches": "matches",
-        "artistmatches": "matches",
-        "trackmatches": "matches",
-        "opensearch:Query": "query",
+        "albummatches": "albums",
+        "artistmatches": "artists",
+        "trackmatches": "tracks",
         "perPage": "limit",
         "totalPages": "total_pages",
         "startPage": "page",
@@ -148,6 +165,7 @@ def pythonic_variables(data):
         "recenttrack": "recent_track",
         "ontour": "on_tour",
         "num_res": "limit",
+        "title": "name",
     }
 
     return {map.get(key, key): value for key, value in data}

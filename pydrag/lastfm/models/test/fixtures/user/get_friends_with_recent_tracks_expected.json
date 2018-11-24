@@ -1,5 +1,5 @@
 {
-    "user": [
+    "data": [
         {
             "playlists": "0",
             "playcount": 316299,
@@ -2665,12 +2665,5 @@
                 }
             }
         }
-    ],
-    "attr": {
-        "page": 1,
-        "user": "RJ",
-        "total": 89,
-        "limit": 50,
-        "total_pages": 2
-    }
+    ]
 }

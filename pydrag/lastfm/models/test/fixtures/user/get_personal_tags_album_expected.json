@@ -1,11 +1,3 @@
 {
-    "attr": {
-        "tag": "hell",
-        "page": 1,
-        "user": "Zaratoustre",
-        "total": 0,
-        "limit": 50,
-        "total_pages": 0
-    },
-    "albums": []
+    "data": []
 }

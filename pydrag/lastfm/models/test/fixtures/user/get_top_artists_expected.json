@@ -1,5 +1,5 @@
 {
-    "artist": [
+    "data": [
         {
             "mbid": "",
             "name": "Womb Sounds Heartbeat",
@@ -1536,12 +1536,5 @@
                 "rank": "48"
             }
         }
-    ],
-    "attr": {
-        "page": 1,
-        "user": "RJ",
-        "total": 48,
-        "limit": 50,
-        "total_pages": 1
-    }
+    ]
 }

@@ -1,13 +1,5 @@
 {
-    "attr": {
-        "tag": "rock",
-        "page": 1,
-        "user": "RJ",
-        "total": 20,
-        "limit": 50,
-        "total_pages": 1
-    },
-    "artists": [
+    "data": [
         {
             "mbid": "CENSORED194e",
             "name": "Jack Bruce",

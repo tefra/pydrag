@@ -1,6 +1,5 @@
-from pydrag.core import BaseModel
-from pydrag.lastfm.models.album import Album, AlbumSearch
-from pydrag.lastfm.models.common import TagList
+from pydrag.core import BaseListModel, BaseModel
+from pydrag.lastfm.models.album import Album
 from pydrag.lastfm.models.test import MethodTestCase, fixture
 
 
@@ -39,7 +38,7 @@ class AlbumTests(MethodTestCase):
         }
         self.assertEqual(expected_params, result.params)
 
-        self.assertIsInstance(result, TagList)
+        self.assertIsInstance(result, BaseListModel)
         self.assertFixtureEqual("album/get_tags", result.to_dict())
 
     @fixture.use_cassette(path="album/remove_tag")
@@ -82,7 +81,7 @@ class AlbumTests(MethodTestCase):
         }
         self.assertEqual(expected_params, result.params)
 
-        self.assertIsInstance(result, TagList)
+        self.assertIsInstance(result, BaseListModel)
         self.assertFixtureEqual("album/get_top_tags", result.to_dict())
 
     @fixture.use_cassette(path="album/search")
@@ -96,5 +95,5 @@ class AlbumTests(MethodTestCase):
         }
         self.assertEqual(expected_params, result.params)
 
-        self.assertIsInstance(result, AlbumSearch)
+        self.assertIsInstance(result, BaseListModel)
         self.assertFixtureEqual("album/search", result.to_dict())

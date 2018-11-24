@@ -1,16 +1,9 @@
-from typing import TypeVar
+from typing import List, TypeVar
 
 from attr import dataclass
 
 from pydrag.core import BaseModel
-from pydrag.lastfm.models.common import (
-    AlbumList,
-    ArtistList,
-    ChartList,
-    TagInfoList,
-    TrackList,
-    Wiki,
-)
+from pydrag.lastfm.models.common import Chart, Wiki
 
 T = TypeVar("T", bound="Tag")
 
@@ -40,17 +33,18 @@ class Tag(BaseModel):
         )
 
     @classmethod
-    def get_top_tags(cls, limit: int = 50, page: int = 1) -> TagInfoList:
+    def get_top_tags(cls, limit: int = 50, page: int = 1) -> List[T]:
         """
         Fetches the top global tags on Last.fm, sorted by popularity Old school
         pagination on this endpoint, keep uniformity.
 
         :param int limit: The number of results to fetch per page.
         :param int page: The page number to fetch.
-        :returns: TagTopTags
+        :returns: List[Tag]
         """
         return cls.retrieve(
-            bind=TagInfoList,
+            bind=Tag,
+            many="tag",
             params=dict(
                 method="tag.getTopTags",
                 num_res=limit,
@@ -59,41 +53,46 @@ class Tag(BaseModel):
         )
 
     @classmethod
-    def get_top_tags_chart(cls, limit: int = 50, page: int = 1) -> TagInfoList:
+    def get_top_tags_chart(cls, limit: int = 50, page: int = 1) -> List[T]:
         """
         Get the top tags chart.
 
         :param int limit: The number of results to fetch per page.
-        :param int page: The page number to fetch. Defaults to first page.
-        :returns: TagInfoList
+        :param int page: The page number to fetch.
+        :returns: List[Tag]
         """
         return cls.retrieve(
-            bind=TagInfoList,
+            bind=Tag,
+            many="tag",
             params=dict(method="chart.getTopTags", limit=limit, page=page),
         )
 
-    def get_similar(self) -> TagInfoList:
+    def get_similar(self) -> List[T]:
         """
         Search for tags similar to this one. Returns tags ranked by similarity,
         based on listening data.
 
-        :return: TagInfo
+        :return: List[Tag]
         """
         return self.retrieve(
-            bind=TagInfoList,
+            bind=Tag,
+            many="tag",
             params=dict(method="tag.getSimilar", tag=self.name),
         )
 
-    def get_top_albums(self, limit: int = 50, page: int = 1) -> AlbumList:
+    def get_top_albums(self, limit: int = 50, page: int = 1) -> List:
         """
         Get the top albums tagged by this tag, ordered by tag count.
 
         :param int limit: The number of results to fetch per page.
         :param int page: The page number to fetch.
-        :returns: TagTopAlbums
+        :returns: List[Album]
         """
+        from pydrag.lastfm.models.album import Album
+
         return self.retrieve(
-            bind=AlbumList,
+            bind=Album,
+            many="album",
             params=dict(
                 method="tag.getTopAlbums",
                 tag=self.name,
@@ -102,16 +101,19 @@ class Tag(BaseModel):
             ),
         )
 
-    def get_top_artists(self, limit: int = 50, page: int = 1) -> ArtistList:
+    def get_top_artists(self, limit: int = 50, page: int = 1) -> List:
         """
         Get the top artists tagged by this tag, ordered by tag count.
 
         :param int limit: The number of results to fetch per page.
         :param int page: The page number to fetch.
-        :returns: ArtistList
+        :returns: List[Artist]
         """
+        from pydrag.lastfm.models.artist import Artist
+
         return self.retrieve(
-            bind=ArtistList,
+            bind=Artist,
+            many="artist",
             params=dict(
                 method="tag.getTopArtists",
                 tag=self.name,
@@ -120,16 +122,19 @@ class Tag(BaseModel):
             ),
         )
 
-    def get_top_tracks(self, limit: int = 50, page: int = 1) -> TrackList:
+    def get_top_tracks(self, limit: int = 50, page: int = 1) -> List:
         """
         Get the top tracks tagged by this tag, ordered by tag count.
 
         :param int limit: The number of results to fetch per page.
         :param int page: The page number to fetch.
-        :returns: TagTopArtists
+        :returns: List[Track]
         """
+        from pydrag.lastfm.models.track import Track
+
         return self.retrieve(
-            bind=TrackList,
+            bind=Track,
+            many="track",
             params=dict(
                 method="tag.getTopTracks",
                 tag=self.name,
@@ -138,14 +143,15 @@ class Tag(BaseModel):
             ),
         )
 
-    def get_weekly_chart_list(self) -> ChartList:
+    def get_weekly_chart_list(self) -> List[Chart]:
         """
         Get a list of available charts for this tag, expressed as date ranges
         which can be sent to the chart services.
 
-        :return: TagWeeklyChartList
+        :return: List[Chart]
         """
         return self.retrieve(
-            bind=ChartList,
+            bind=Chart,
+            many="chart",
             params=dict(method="tag.getWeeklyChartList", tag=self.name),
         )

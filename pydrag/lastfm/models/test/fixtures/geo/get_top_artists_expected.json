@@ -1,5 +1,5 @@
 {
-    "artist": [
+    "data": [
         {
             "mbid": "CENSORED2711",
             "name": "Radiohead",
@@ -290,12 +290,5 @@
                 }
             ]
         }
-    ],
-    "attr": {
-        "page": 1,
-        "country": "Greece",
-        "total": 326901,
-        "limit": 10,
-        "total_pages": 32691
-    }
+    ]
 }

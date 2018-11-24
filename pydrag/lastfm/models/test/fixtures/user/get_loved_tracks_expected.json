@@ -1,12 +1,5 @@
 {
-    "attr": {
-        "page": 1,
-        "user": "RJ",
-        "total": 700,
-        "limit": 50,
-        "total_pages": 14
-    },
-    "track": [
+    "data": [
         {
             "artist": {
                 "mbid": "CENSORED9f2d",

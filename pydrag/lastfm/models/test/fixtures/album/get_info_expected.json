@@ -29,7 +29,9 @@
             "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
         }
     ],
-    "artist": "Queen",
+    "artist": {
+        "name": "Queen"
+    },
     "listeners": 605690,
     "tags": [
         {
@@ -63,9 +65,9 @@
                 "url": "https://www.last.fm/music/Queen"
             },
             "streamable": "{'text': '0', 'fulltrack': '0'}",
-            "duration": "223",
+            "duration": 223,
             "attr": {
-                "rank": "1"
+                "rank": 1
             }
         },
         {
@@ -77,9 +79,9 @@
                 "url": "https://www.last.fm/music/Queen"
             },
             "streamable": "{'text': '0', 'fulltrack': '0'}",
-            "duration": "67",
+            "duration": 67,
             "attr": {
-                "rank": "2"
+                "rank": 2
             }
         },
         {
@@ -91,9 +93,9 @@
                 "url": "https://www.last.fm/music/Queen"
             },
             "streamable": "{'text': '0', 'fulltrack': '0'}",
-            "duration": "185",
+            "duration": 185,
             "attr": {
-                "rank": "3"
+                "rank": 3
             }
         },
         {
@@ -105,9 +107,9 @@
                 "url": "https://www.last.fm/music/Queen"
             },
             "streamable": "{'text': '0', 'fulltrack': '0'}",
-            "duration": "170",
+            "duration": 170,
             "attr": {
-                "rank": "4"
+                "rank": 4
             }
         },
         {
@@ -119,9 +121,9 @@
                 "url": "https://www.last.fm/music/Queen"
             },
             "streamable": "{'text': '0', 'fulltrack': '0'}",
-            "duration": "210",
+            "duration": 210,
             "attr": {
-                "rank": "5"
+                "rank": 5
             }
         },
         {
@@ -133,9 +135,9 @@
                 "url": "https://www.last.fm/music/Queen"
             },
             "streamable": "{'text': '0', 'fulltrack': '0'}",
-            "duration": "241",
+            "duration": 241,
             "attr": {
-                "rank": "6"
+                "rank": 6
             }
         },
         {
@@ -147,9 +149,9 @@
                 "url": "https://www.last.fm/music/Queen"
             },
             "streamable": "{'text': '0', 'fulltrack': '0'}",
-            "duration": "188",
+            "duration": 188,
             "attr": {
-                "rank": "7"
+                "rank": 7
             }
         },
         {
@@ -161,9 +163,9 @@
                 "url": "https://www.last.fm/music/Queen"
             },
             "streamable": "{'text': '0', 'fulltrack': '0'}",
-            "duration": "134",
+            "duration": 134,
             "attr": {
-                "rank": "8"
+                "rank": 8
             }
         },
         {
@@ -175,9 +177,9 @@
                 "url": "https://www.last.fm/music/Queen"
             },
             "streamable": "{'text': '0', 'fulltrack': '0'}",
-            "duration": "497",
+            "duration": 497,
             "attr": {
-                "rank": "9"
+                "rank": 9
             }
         },
         {
@@ -189,9 +191,9 @@
                 "url": "https://www.last.fm/music/Queen"
             },
             "streamable": "{'text': '0', 'fulltrack': '0'}",
-            "duration": "218",
+            "duration": 218,
             "attr": {
-                "rank": "10"
+                "rank": 10
             }
         },
         {
@@ -203,9 +205,9 @@
                 "url": "https://www.last.fm/music/Queen"
             },
             "streamable": "{'text': '0', 'fulltrack': '0'}",
-            "duration": "356",
+            "duration": 356,
             "attr": {
-                "rank": "11"
+                "rank": 11
             }
         },
         {
@@ -217,9 +219,9 @@
                 "url": "https://www.last.fm/music/Queen"
             },
             "streamable": "{'text': '0', 'fulltrack': '0'}",
-            "duration": "64",
+            "duration": 64,
             "attr": {
-                "rank": "12"
+                "rank": 12
             }
         }
     ],

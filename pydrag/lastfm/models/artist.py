@@ -3,40 +3,32 @@ from typing import List, TypeVar
 from attr import dataclass
 
 from pydrag.core import BaseModel
-from pydrag.lastfm.models.common import (
-    Artist,
-    ArtistList,
-    Artists,
-    CorrectionAttributes,
-    Image,
-    OpenSearch,
-    RootAttributes,
-    Tag,
-    TagList,
-    TrackList,
-    Wiki,
-)
+from pydrag.lastfm.models.common import Image, RootAttributes, Wiki
+from pydrag.lastfm.models.tag import Tag
+
+
+@dataclass
+class ArtistMini(BaseModel):
+    name: str
+    url: str
+    image: List[Image] = None
+    mbid: str = None
+
+
+@dataclass
+class CorrectionArtistAttr(BaseModel):
+    index: int
 
 
 @dataclass
 class CorrectionArtist(BaseModel):
-    artist: Artist
-    attr: CorrectionAttributes
+    artist: ArtistMini
+    attr: CorrectionArtistAttr
 
 
 @dataclass
 class ArtistCorrection(BaseModel):
     correction: CorrectionArtist
-
-
-@dataclass
-class ArtistMatches(BaseModel):
-    artist: List[Artist]
-
-
-@dataclass
-class ArtistSearch(OpenSearch):
-    matches: ArtistMatches
 
 
 T = TypeVar("T", bound="Artist")
@@ -57,16 +49,23 @@ class Artist(BaseModel):
     tags: List[Tag] = None
     bio: Wiki = None
     on_tour: int = None
-    stats: Artist = None
-    similar: Artists = None
+    similar: List[ArtistMini] = None
+    text: str = None
 
     @classmethod
     def from_dict(cls, data: dict):
-        for what in ["tags"]:
-            try:
-                data[what] = data[what][what[:-1]]
-            except KeyError:
-                pass
+        try:
+            data["tags"] = data["tags"]["tag"]
+        except KeyError:
+            pass
+        try:
+            data["similar"] = data["similar"]["artist"]
+        except KeyError:
+            pass
+        try:
+            data.update(data.pop("stats"))
+        except KeyError:
+            pass
         return super().from_dict(data)
 
     @classmethod
@@ -78,7 +77,7 @@ class Artist(BaseModel):
         :param artist:  The artist name to retrieve.
         :param user: The username for the context of the request. If supplied, response will include the user's playcount
         :param lang: The language to return the biography in, ISO-639
-        :returns: ArtistInfo
+        :returns: Artist
         """
 
         return cls.retrieve(
@@ -100,7 +99,7 @@ class Artist(BaseModel):
         :param mbid:  The musicbrainz id for the artist
         :param user: The username for the context of the request. If supplied, response will include the user's playcount
         :param lang: The language to return the biography in, ISO-639
-        :returns: ArtistInfo
+        :returns: Artist
         """
 
         return cls.retrieve(
@@ -114,9 +113,7 @@ class Artist(BaseModel):
         )
 
     @classmethod
-    def search(
-        cls, artist: str, limit: int = 50, page: int = 1
-    ) -> ArtistSearch:
+    def search(cls, artist: str, limit: int = 50, page: int = 1) -> List[T]:
         """
         Search for an artist by name. Returns artist matches sorted by
         relevance.
@@ -124,10 +121,11 @@ class Artist(BaseModel):
         :param artist: The artist name to search.
         :param int page: The page number to fetch.
         :param int limit: The number of results to fetch per page.
-        :returns: ArtistSearch
+        :returns: List[Artist]
         """
         return cls.retrieve(
-            bind=ArtistSearch,
+            bind=Artist,
+            many=("artists", "artist"),
             params=dict(
                 method="artist.search", limit=limit, page=page, artist=artist
             ),
@@ -136,15 +134,16 @@ class Artist(BaseModel):
     @classmethod
     def get_top_artists_by_country(
         cls, country: str, limit: int = 50, page: int = 1
-    ) -> ArtistList:
+    ) -> List[T]:
         """
         :param country: The country name to fetch results.
         :param int limit: The number of results to fetch per page.
         :param int page: The page number to fetch.
-        :returns: TrackList
+        :returns: List[Artist]
         """
         return cls.retrieve(
-            bind=ArtistList,
+            bind=Artist,
+            many="artist",
             params=dict(
                 method="geo.getTopArtists",
                 country=country,
@@ -154,18 +153,17 @@ class Artist(BaseModel):
         )
 
     @classmethod
-    def get_top_artists_chart(
-        cls, limit: int = 50, page: int = 1
-    ) -> ArtistList:
+    def get_top_artists_chart(cls, limit: int = 50, page: int = 1) -> List[T]:
         """
         Get the top artists chart.
 
         :param int limit: The number of results to fetch per page.
-        :param int page: The page number to fetch. Defaults to first page.
-        :returns: ArtistList
+        :param int page: The page number to fetch.
+        :returns: List[Artist]
         """
         return cls.retrieve(
-            bind=ArtistList,
+            bind=Artist,
+            many="artist",
             params=dict(method="chart.getTopArtists", limit=limit, page=page),
         )
 
@@ -210,15 +208,16 @@ class Artist(BaseModel):
             params=dict(method="artist.getCorrection", artist=self.name),
         )
 
-    def get_similar(self, limit: int = 50) -> ArtistList:
+    def get_similar(self, limit: int = 50) -> List[T]:
         """
         Get all the artists similar to this artist.
 
         :param int limit: Limit the number of similar artists returned
-        :returns: ArtistList
+        :returns: List[Artist]
         """
         return self.retrieve(
-            bind=ArtistList,
+            bind=Artist,
+            many="artist",
             params=dict(
                 method="artist.getSimilar",
                 mbid=self.mbid,
@@ -228,15 +227,16 @@ class Artist(BaseModel):
             ),
         )
 
-    def get_tags(self, user: str) -> TagList:
+    def get_tags(self, user: str) -> List[Tag]:
         """
         Get the tags applied by an individual user to an artist on Last.fm.
 
         :param user: The username for the context of the request.
-        :returns: TagList
+        :returns: List[Tag]
         """
         return self.retrieve(
-            bind=TagList,
+            bind=Tag,
+            many="tag",
             params=dict(
                 method="artist.getTags",
                 mbid=self.mbid,
@@ -246,14 +246,15 @@ class Artist(BaseModel):
             ),
         )
 
-    def get_top_tags(self) -> TagList:
+    def get_top_tags(self) -> List[Tag]:
         """
         Get the top tags for an artist on Last.fm, ordered by popularity.
 
-        :returns: TagList
+        :returns: List[Tag]
         """
         return self.retrieve(
-            bind=TagList,
+            bind=Tag,
+            many="tag",
             params=dict(
                 method="artist.getTopTags",
                 mbid=self.mbid,
@@ -262,16 +263,19 @@ class Artist(BaseModel):
             ),
         )
 
-    def get_top_tracks(self, limit: int = 50, page: int = 1) -> TrackList:
+    def get_top_tracks(self, limit: int = 50, page: int = 1) -> List:
         """
         Get the top tags for an artist on Last.fm, ordered by popularity.
 
         :param int page: The page number to fetch.
         :param int limit: The number of results to fetch per page.
-        :returns: ArtistTopTracks
+        :returns: List[Track]
         """
+        from pydrag.lastfm.models.track import Track
+
         return self.retrieve(
-            bind=TrackList,
+            bind=Track,
+            many="track",
             params=dict(
                 method="artist.getTopTracks",
                 mbid=self.mbid,

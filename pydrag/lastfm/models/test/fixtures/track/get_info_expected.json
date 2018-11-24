@@ -18,7 +18,7 @@
     },
     "album": {
         "mbid": "CENSORED8675",
-        "title": "Back in Black",
+        "name": "Back in Black",
         "url": "https://www.last.fm/music/AC%2FDC/Back+in+Black",
         "image": [
             {
@@ -41,7 +41,9 @@
         "attr": {
             "position": 1
         },
-        "artist": "AC/DC"
+        "artist": {
+            "name": "AC/DC"
+        }
     },
     "top_tags": [
         {

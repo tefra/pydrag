@@ -1,5 +1,5 @@
 {
-    "artist": [
+    "data": [
         {
             "mbid": "CENSOREDcb1d",
             "name": "Dream Theater",
@@ -1500,12 +1500,5 @@
                 }
             ]
         }
-    ],
-    "attr": {
-        "page": 1,
-        "user": "RJ",
-        "total": 10806,
-        "limit": 50,
-        "total_pages": 217
-    }
+    ]
 }

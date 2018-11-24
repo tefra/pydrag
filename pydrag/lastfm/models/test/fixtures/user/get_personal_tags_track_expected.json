@@ -1,13 +1,5 @@
 {
-    "attr": {
-        "tag": "rock",
-        "page": 1,
-        "user": "RJ",
-        "total": 5,
-        "limit": 50,
-        "total_pages": 1
-    },
-    "tracks": [
+    "data": [
         {
             "name": "Arc Of A Diver",
             "url": "https://www.last.fm/music/Steve+Winwood/_/Arc+Of+A+Diver",

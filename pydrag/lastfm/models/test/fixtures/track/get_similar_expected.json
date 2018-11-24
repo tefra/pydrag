@@ -1,5 +1,5 @@
 {
-    "track": [
+    "data": [
         {
             "name": "Shoot to Thrill",
             "url": "https://www.last.fm/music/AC%2FDC/_/Shoot+to+Thrill",
@@ -1998,8 +1998,5 @@
             "duration": "0",
             "match": 0.107828
         }
-    ],
-    "attr": {
-        "artist": "AC/DC"
-    }
+    ]
 }

@@ -1,5 +1,5 @@
 {
-    "tag": [
+    "data": [
         {
             "name": "guitar",
             "url": "https://www.last.fm/tag/guitar"
@@ -12,9 +12,5 @@
             "name": "rock",
             "url": "https://www.last.fm/tag/rock"
         }
-    ],
-    "attr": {
-        "artist": "AC/DC",
-        "track": "Hells Bells"
-    }
+    ]
 }

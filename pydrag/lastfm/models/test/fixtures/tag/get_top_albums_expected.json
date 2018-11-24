@@ -1,5 +1,5 @@
 {
-    "album": [
+    "data": [
         {
             "mbid": "CENSORED3bd6",
             "name": "The Eminem Show",
@@ -62,12 +62,5 @@
                 "rank": "2"
             }
         }
-    ],
-    "attr": {
-        "tag": "rap",
-        "page": 1,
-        "total": 13538,
-        "limit": 2,
-        "total_pages": 6769
-    }
+    ]
 }

@@ -1,5 +1,5 @@
 {
-    "track": [
+    "data": [
         {
             "name": "Sweet Child o' Mine",
             "url": "https://www.last.fm/music/Guns+N%27+Roses/_/Sweet+Child+o%27+Mine",
@@ -1680,12 +1680,5 @@
                 "rank": "50"
             }
         }
-    ],
-    "attr": {
-        "page": 1,
-        "total": 144845,
-        "artist": "Guns N' Roses",
-        "limit": 50,
-        "total_pages": 2897
-    }
+    ]
 }

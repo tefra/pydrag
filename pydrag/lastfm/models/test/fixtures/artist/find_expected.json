@@ -64,162 +64,158 @@
         }
     },
     "on_tour": 1,
-    "stats": {
-        "listeners": 3209290,
-        "playcount": 114772084
-    },
-    "similar": {
-        "artist": [
-            {
-                "name": "Slash",
-                "url": "https://www.last.fm/music/Slash",
-                "image": [
-                    {
-                        "size": "small",
-                        "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
-                    },
-                    {
-                        "size": "medium",
-                        "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
-                    },
-                    {
-                        "size": "large",
-                        "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
-                    },
-                    {
-                        "size": "extralarge",
-                        "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
-                    },
-                    {
-                        "size": "mega",
-                        "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
-                    },
-                    {
-                        "size": "",
-                        "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
-                    }
-                ]
-            },
-            {
-                "name": "Aerosmith",
-                "url": "https://www.last.fm/music/Aerosmith",
-                "image": [
-                    {
-                        "size": "small",
-                        "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
-                    },
-                    {
-                        "size": "medium",
-                        "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
-                    },
-                    {
-                        "size": "large",
-                        "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
-                    },
-                    {
-                        "size": "extralarge",
-                        "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
-                    },
-                    {
-                        "size": "mega",
-                        "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
-                    },
-                    {
-                        "size": "",
-                        "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
-                    }
-                ]
-            },
-            {
-                "name": "Slash's Snakepit",
-                "url": "https://www.last.fm/music/Slash%27s+Snakepit",
-                "image": [
-                    {
-                        "size": "small",
-                        "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
-                    },
-                    {
-                        "size": "medium",
-                        "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
-                    },
-                    {
-                        "size": "large",
-                        "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
-                    },
-                    {
-                        "size": "extralarge",
-                        "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
-                    },
-                    {
-                        "size": "mega",
-                        "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
-                    },
-                    {
-                        "size": "",
-                        "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
-                    }
-                ]
-            },
-            {
-                "name": "Velvet Revolver",
-                "url": "https://www.last.fm/music/Velvet+Revolver",
-                "image": [
-                    {
-                        "size": "small",
-                        "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
-                    },
-                    {
-                        "size": "medium",
-                        "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
-                    },
-                    {
-                        "size": "large",
-                        "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
-                    },
-                    {
-                        "size": "extralarge",
-                        "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
-                    },
-                    {
-                        "size": "mega",
-                        "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
-                    },
-                    {
-                        "size": "",
-                        "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
-                    }
-                ]
-            },
-            {
-                "name": "M\u00f6tley Cr\u00fce",
-                "url": "https://www.last.fm/music/M%C3%B6tley+Cr%C3%BCe",
-                "image": [
-                    {
-                        "size": "small",
-                        "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
-                    },
-                    {
-                        "size": "medium",
-                        "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
-                    },
-                    {
-                        "size": "large",
-                        "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
-                    },
-                    {
-                        "size": "extralarge",
-                        "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
-                    },
-                    {
-                        "size": "mega",
-                        "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
-                    },
-                    {
-                        "size": "",
-                        "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
-                    }
-                ]
-            }
-        ]
-    }
+    "listeners": 3209290,
+    "playcount": 114772084,
+    "similar": [
+        {
+            "name": "Slash",
+            "url": "https://www.last.fm/music/Slash",
+            "image": [
+                {
+                    "size": "small",
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                },
+                {
+                    "size": "medium",
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                },
+                {
+                    "size": "large",
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                },
+                {
+                    "size": "extralarge",
+                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                },
+                {
+                    "size": "mega",
+                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                },
+                {
+                    "size": "",
+                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                }
+            ]
+        },
+        {
+            "name": "Aerosmith",
+            "url": "https://www.last.fm/music/Aerosmith",
+            "image": [
+                {
+                    "size": "small",
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                },
+                {
+                    "size": "medium",
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                },
+                {
+                    "size": "large",
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                },
+                {
+                    "size": "extralarge",
+                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                },
+                {
+                    "size": "mega",
+                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                },
+                {
+                    "size": "",
+                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                }
+            ]
+        },
+        {
+            "name": "Slash's Snakepit",
+            "url": "https://www.last.fm/music/Slash%27s+Snakepit",
+            "image": [
+                {
+                    "size": "small",
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                },
+                {
+                    "size": "medium",
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                },
+                {
+                    "size": "large",
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                },
+                {
+                    "size": "extralarge",
+                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                },
+                {
+                    "size": "mega",
+                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                },
+                {
+                    "size": "",
+                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                }
+            ]
+        },
+        {
+            "name": "Velvet Revolver",
+            "url": "https://www.last.fm/music/Velvet+Revolver",
+            "image": [
+                {
+                    "size": "small",
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                },
+                {
+                    "size": "medium",
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                },
+                {
+                    "size": "large",
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                },
+                {
+                    "size": "extralarge",
+                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                },
+                {
+                    "size": "mega",
+                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                },
+                {
+                    "size": "",
+                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                }
+            ]
+        },
+        {
+            "name": "M\u00f6tley Cr\u00fce",
+            "url": "https://www.last.fm/music/M%C3%B6tley+Cr%C3%BCe",
+            "image": [
+                {
+                    "size": "small",
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                },
+                {
+                    "size": "medium",
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                },
+                {
+                    "size": "large",
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                },
+                {
+                    "size": "extralarge",
+                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                },
+                {
+                    "size": "mega",
+                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                },
+                {
+                    "size": "",
+                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                }
+            ]
+        }
+    ]
 }

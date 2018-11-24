@@ -1,5 +1,5 @@
 {
-    "artist": [
+    "data": [
         {
             "mbid": "CENSOREDf850",
             "name": "Slash",
@@ -1650,8 +1650,5 @@
             ],
             "match": "0.314931"
         }
-    ],
-    "attr": {
-        "artist": "Guns N' Roses"
-    }
+    ]
 }

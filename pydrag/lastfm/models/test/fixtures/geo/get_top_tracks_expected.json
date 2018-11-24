@@ -1,5 +1,5 @@
 {
-    "track": [
+    "data": [
         {
             "name": "Do I Wanna Know?",
             "url": "https://www.last.fm/music/Arctic+Monkeys/_/Do+I+Wanna+Know%3F",
@@ -340,12 +340,5 @@
                 "rank": "9"
             }
         }
-    ],
-    "attr": {
-        "page": 1,
-        "country": "Greece",
-        "total": 2525955,
-        "limit": 10,
-        "total_pages": 252596
-    }
+    ]
 }

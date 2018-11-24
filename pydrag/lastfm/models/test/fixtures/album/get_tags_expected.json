@@ -1,5 +1,5 @@
 {
-    "tag": [
+    "data": [
         {
             "name": "bar",
             "url": "https://www.last.fm/tag/bar"
@@ -8,9 +8,5 @@
             "name": "foo",
             "url": "https://www.last.fm/tag/foo"
         }
-    ],
-    "attr": {
-        "album": "A Night at the Opera",
-        "artist": "Queen"
-    }
+    ]
 }

@@ -3,49 +3,16 @@ from typing import List, Optional, TypeVar
 from attr import dataclass
 
 from pydrag.core import BaseModel
-from pydrag.lastfm.models.album import AlbumInfo
+from pydrag.lastfm.models.album import Album
+from pydrag.lastfm.models.artist import Artist
 from pydrag.lastfm.models.common import (
     Attributes,
-    CorrectionAttributes,
+    Date,
     Image,
-    OpenSearch,
     RootAttributes,
-    SimpleArtist,
-    Tag,
-    TagList,
-    Track,
-    TrackList,
-    TrackSimpleArtist,
     Wiki,
 )
-
-
-@dataclass
-class TrackInfo(Track):
-    wiki: Wiki = None
-    album: AlbumInfo = None
-    top_tags: List[Tag] = None
-
-
-@dataclass
-class CorrectionTrack(BaseModel):
-    attr: CorrectionAttributes
-    track: TrackInfo = None
-
-
-@dataclass
-class TrackCorrection(BaseModel):
-    correction: CorrectionTrack
-
-
-@dataclass
-class TrackMatches(BaseModel):
-    track: List[TrackSimpleArtist]
-
-
-@dataclass
-class TrackSearch(OpenSearch):
-    matches: TrackMatches
+from pydrag.lastfm.models.tag import Tag
 
 
 @dataclass
@@ -100,8 +67,8 @@ T = TypeVar("T", bound="Track")
 @dataclass
 class Track(BaseModel):
     name: str
-    url: str
-    artist: SimpleArtist
+    url: str = None
+    artist: Artist = None
     mbid: str = None
     image: List[Image] = None
     playcount: int = None
@@ -110,9 +77,11 @@ class Track(BaseModel):
     duration: str = None
     match: Optional[float] = None
     wiki: Wiki = None
-    album: AlbumInfo = None
+    album: Album = None
     top_tags: List[Tag] = None
     attr: RootAttributes = None
+    date: Date = None
+    loved: int = None
 
     @classmethod
     def from_dict(cls, data: dict):
@@ -120,11 +89,21 @@ class Track(BaseModel):
             data["top_tags"] = data["top_tags"]["tag"]
         except KeyError:
             pass
+
+        try:
+            if isinstance(data["album"]["artist"], str):
+                data["album"]["artist"] = dict(name=data["album"]["artist"])
+        except KeyError:
+            pass
+
+        if isinstance(data.get("artist"), str):
+            data["artist"] = dict(name=data["artist"])
+
         return super().from_dict(data)
 
     @classmethod
     def from_artist_track(cls, artist: str, track: str):
-        return Track(artist=SimpleArtist(name=artist), name=track, url=None)
+        return Track(artist=Artist(name=artist), name=track, url=None)
 
     @classmethod
     def find(
@@ -174,7 +153,7 @@ class Track(BaseModel):
         )
 
     @classmethod
-    def get_correction(cls, track: str, artist: str) -> TrackCorrection:
+    def get_correction(cls, track: str, artist: str):
         """
         Use the last.fm corrections data to check whether the supplied track
         has a correction to a canonical track.
@@ -189,17 +168,18 @@ class Track(BaseModel):
         )
 
     @classmethod
-    def search(cls, track: str, limit: int = 50, page: int = 1) -> TrackSearch:
+    def search(cls, track: str, limit: int = 50, page: int = 1) -> List[T]:
         """
         Search for an track by name. Returns track matches sorted by relevance.
 
         :param str track: The track name.
         :param int page: The page number to fetch.
         :param int limit: The number of results to fetch per page.
-        :returns: TrackSearch
+        :returns: List[Track]
         """
         return cls.retrieve(
-            bind=TrackSearch,
+            bind=Track,
+            many=("tracks", "track"),
             params=dict(
                 method="track.search", limit=limit, page=page, track=track
             ),
@@ -208,15 +188,16 @@ class Track(BaseModel):
     @classmethod
     def get_top_tracks_by_country(
         cls, country: str, limit: int = 50, page: int = 1
-    ) -> TrackList:
+    ) -> List[T]:
         """
         :param country: The country to fetch the top tracks.
         :param int limit: The number of results to fetch per page.
-        :param int page: The page number to fetch. Defaults to first page.
-        :returns: TrackList
+        :param int page: The page number to fetch.
+        :returns: List[Track]
         """
         return cls.retrieve(
-            bind=TrackList,
+            bind=Track,
+            many="track",
             params=dict(
                 method="geo.getTopTracks",
                 country=country,
@@ -226,16 +207,17 @@ class Track(BaseModel):
         )
 
     @classmethod
-    def get_top_tracks_chart(cls, limit: int = 50, page: int = 1) -> TrackList:
+    def get_top_tracks_chart(cls, limit: int = 50, page: int = 1) -> List[T]:
         """
         Get the top tracks chart.
 
         :param int limit: The number of results to fetch per page.
-        :param int page: The page number to fetch. Defaults to first page.
-        :returns: TrackList
+        :param int page: The page number to fetch.
+        :returns: List[Track]
         """
         return cls.retrieve(
-            bind=TrackList,
+            bind=Track,
+            many="track",
             params=dict(method="chart.getTopTracks", limit=limit, page=page),
         )
 
@@ -267,7 +249,7 @@ class Track(BaseModel):
             params=dict(method="track.removeTag", track=self.name, tag=tag),
         )
 
-    def get_similar(self, limit: int = 50) -> TrackList:
+    def get_similar(self, limit: int = 50) -> List[T]:
         """
         Get all the tracks similar to this track.
 
@@ -275,7 +257,8 @@ class Track(BaseModel):
         :returns: TrackSimilar
         """
         return self.retrieve(
-            bind=TrackList,
+            bind=Track,
+            many="track",
             params=dict(
                 method="track.getSimilar",
                 mbid=self.mbid,
@@ -286,15 +269,16 @@ class Track(BaseModel):
             ),
         )
 
-    def get_tags(self, user: str) -> TagList:
+    def get_tags(self, user: str) -> List[Tag]:
         """
         Get the tags applied by an individual user to an track on Last.fm.
 
         :param user: The username for the context of the request.
-        :returns: TagList
+        :returns: List[Tag]
         """
         return self.retrieve(
-            bind=TagList,
+            bind=Tag,
+            many="tag",
             params=dict(
                 method="track.getTags",
                 mbid=self.mbid,
@@ -305,14 +289,15 @@ class Track(BaseModel):
             ),
         )
 
-    def get_top_tags(self) -> TagList:
+    def get_top_tags(self) -> List[Tag]:
         """
         Get the top tags for an track on Last.fm, ordered by popularity.
 
-        :returns: TagList
+        :returns: List[Tag]
         """
         return self.retrieve(
-            bind=TagList,
+            bind=Tag,
+            many="tag",
             params=dict(
                 method="track.getTopTags",
                 mbid=self.mbid,
@@ -428,3 +413,21 @@ class Track(BaseModel):
                 albumArtist=album_artist,
             ),
         )
+
+
+@dataclass
+class CorrectionAttributes(BaseModel):
+    index: int = None
+    track_corrected: int = None
+    artist_corrected: int = None
+
+
+@dataclass
+class CorrectionTrack(BaseModel):
+    attr: CorrectionAttributes
+    track: Track = None
+
+
+@dataclass
+class TrackCorrection(BaseModel):
+    correction: CorrectionTrack

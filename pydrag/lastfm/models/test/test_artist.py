@@ -1,6 +1,5 @@
-from pydrag.core import BaseModel
-from pydrag.lastfm.models.artist import Artist, ArtistCorrection, ArtistSearch
-from pydrag.lastfm.models.common import ArtistList, TagList, TrackList
+from pydrag.core import BaseListModel, BaseModel
+from pydrag.lastfm.models.artist import Artist, ArtistCorrection
 from pydrag.lastfm.models.test import MethodTestCase, fixture
 
 
@@ -33,7 +32,7 @@ class ArtistTests(MethodTestCase):
             "user": "Zaratoustre",
         }
         self.assertEqual(expected_params, result.params)
-        self.assertIsInstance(result, TagList)
+        self.assertIsInstance(result, BaseListModel)
         self.assertFixtureEqual("artist/get_tags", result.to_dict())
 
     @fixture.use_cassette(path="artist/remove_tag")
@@ -85,7 +84,7 @@ class ArtistTests(MethodTestCase):
         }
         self.assertEqual(expected_params, result.params)
 
-        self.assertIsInstance(result, TagList)
+        self.assertIsInstance(result, BaseListModel)
         self.assertFixtureEqual("artist/get_top_tags", result.to_dict())
 
     @fixture.use_cassette(path="artist/search")
@@ -98,7 +97,7 @@ class ArtistTests(MethodTestCase):
             "page": 1,
         }
         self.assertEqual(expected_params, result.params)
-        self.assertIsInstance(result, ArtistSearch)
+        self.assertIsInstance(result, BaseListModel)
         self.assertFixtureEqual("artist/search", result.to_dict())
 
     @fixture.use_cassette(path="artist/get_top_tracks")
@@ -114,7 +113,7 @@ class ArtistTests(MethodTestCase):
         }
         self.assertEqual(expected_params, result.params)
 
-        self.assertIsInstance(result, TrackList)
+        self.assertIsInstance(result, BaseListModel)
         self.assertFixtureEqual("artist/get_top_tracks", result.to_dict())
 
     @fixture.use_cassette(path="artist/get_similar")
@@ -129,7 +128,7 @@ class ArtistTests(MethodTestCase):
         }
         self.assertEqual(expected_params, result.params)
 
-        self.assertIsInstance(result, ArtistList)
+        self.assertIsInstance(result, BaseListModel)
         self.assertFixtureEqual("artist/get_similar", result.to_dict())
 
     @fixture.use_cassette(path="geo/get_top_artists")
@@ -146,7 +145,7 @@ class ArtistTests(MethodTestCase):
         }
         self.assertEqual(expected_params, result.params)
 
-        self.assertIsInstance(result, ArtistList)
+        self.assertIsInstance(result, BaseListModel)
 
         self.assertFixtureEqual("geo/get_top_artists", result.to_dict())
 
@@ -160,5 +159,5 @@ class ArtistTests(MethodTestCase):
         }
 
         self.assertEqual(expected_params, result.params)
-        self.assertIsInstance(result, ArtistList)
+        self.assertIsInstance(result, BaseListModel)
         self.assertFixtureEqual("chart/get_top_artists", result.to_dict())

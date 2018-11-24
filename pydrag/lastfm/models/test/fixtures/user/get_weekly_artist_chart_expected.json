@@ -1,5 +1,5 @@
 {
-    "artist": [
+    "data": [
         {
             "mbid": "",
             "name": "Womb Sounds Heartbeat",
@@ -423,10 +423,5 @@
                 "rank": "47"
             }
         }
-    ],
-    "attr": {
-        "user": "RJ",
-        "to_date": "1541764800",
-        "from_date": "1541160000"
-    }
+    ]
 }

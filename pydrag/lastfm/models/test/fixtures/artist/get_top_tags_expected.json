@@ -1,5 +1,5 @@
 {
-    "tag": [
+    "data": [
         {
             "name": "hard rock",
             "url": "https://www.last.fm/tag/hard+rock",
@@ -125,8 +125,5 @@
             "url": "https://www.last.fm/tag/blues+rock",
             "count": 1
         }
-    ],
-    "attr": {
-        "artist": "Guns N' Roses"
-    }
+    ]
 }

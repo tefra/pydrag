@@ -1,5 +1,5 @@
 {
-    "track": [
+    "data": [
         {
             "name": "Stronger",
             "url": "https://www.last.fm/music/Kanye+West/_/Stronger",
@@ -66,12 +66,5 @@
                 "rank": "2"
             }
         }
-    ],
-    "attr": {
-        "tag": "rap",
-        "page": 1,
-        "total": 104399,
-        "limit": 2,
-        "total_pages": 52200
-    }
+    ]
 }

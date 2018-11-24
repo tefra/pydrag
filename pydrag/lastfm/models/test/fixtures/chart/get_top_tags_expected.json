@@ -1,5 +1,5 @@
 {
-    "tag": [
+    "data": [
         {
             "name": "rock",
             "reach": 393374,
@@ -80,11 +80,5 @@
             "streamable": 1,
             "wiki": {}
         }
-    ],
-    "attr": {
-        "page": 2,
-        "total": 2693674,
-        "limit": 10,
-        "total_pages": 269368
-    }
+    ]
 }

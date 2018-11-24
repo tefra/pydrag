@@ -3,56 +3,50 @@ from typing import List, TypeVar
 from attr import dataclass
 
 from pydrag.core import BaseModel
-from pydrag.lastfm.models.common import (
-    Album,
-    Image,
-    OpenSearch,
-    RootAttributes,
-    Tag,
-    TagList,
-    Track,
-    Wiki,
-)
-
-
-@dataclass
-class AlbumInfo(Album):
-    artist: str = None
-    listeners: int = None
-    tags: List[Tag] = None
-    streamable: int = None
-    tracks: List[Track] = None
-    wiki: Wiki = None
-
-
-@dataclass
-class AlbumMatches(BaseModel):
-    album: List[AlbumInfo]
-
-
-@dataclass
-class AlbumSearch(OpenSearch):
-    matches: AlbumMatches
-
+from pydrag.lastfm.models.artist import Artist
+from pydrag.lastfm.models.common import AttrModel, Image, Wiki
+from pydrag.lastfm.models.tag import Tag
 
 T = TypeVar("T", bound="Album")
 
 
 @dataclass
-class Album(BaseModel):
+class TrackMiniAttr(BaseModel):
+    rank: int
+
+
+@dataclass
+class TrackMini(BaseModel):
+    name: str
+    url: str
+    artist: Artist
+    streamable: str
+    duration: int
+    attr: TrackMiniAttr
+
+    def get_info(self) -> BaseModel:
+        """
+
+        :returns: Track
+        """
+        from pydrag.lastfm.models.track import Track
+
+        return Track.find(artist=self.artist.name, track=self.name)
+
+
+@dataclass
+class Album(AttrModel):
     mbid: str = None
-    text: str = None
     name: str = None
-    title: str = None
+    text: str = None
+    image: List[Image] = None
     playcount: int = None
     url: str = None
-    image: List[Image] = None
-    attr: RootAttributes = None
-    artist: str = None
+    artist: Artist = None
     listeners: int = None
     tags: List[Tag] = None
     streamable: int = None
-    tracks: List[Track] = None
+    tracks: List[TrackMini] = None
     wiki: Wiki = None
 
     @classmethod
@@ -62,6 +56,9 @@ class Album(BaseModel):
                 data[what] = data[what][what[:-1]]
             except KeyError:
                 pass
+
+        if isinstance(data.get("artist"), str):
+            data["artist"] = dict(name=data["artist"])
         return super().from_dict(data)
 
     @classmethod
@@ -75,7 +72,7 @@ class Album(BaseModel):
         :param artist: The album artist to find.
         :param user: The username for the context of the request. If supplied, response will include the user's playcount for this album
         :param lang: The language to return the biography in, ISO-639
-        :returns: AlbumInfo
+        :returns: Album
         """
 
         return cls.retrieve(
@@ -97,7 +94,7 @@ class Album(BaseModel):
         :param mbid: The musicbrainz id for the album.
         :param user: The username for the context of the request. If supplied, response will include the user's playcount for this album
         :param lang: The language to return the biography in, ISO-639
-        :returns: AlbumInfo
+        :returns: Album
         """
 
         return cls.retrieve(
@@ -111,18 +108,19 @@ class Album(BaseModel):
         )
 
     @classmethod
-    def search(cls, album: str, limit: int = 50, page: int = 1) -> AlbumSearch:
+    def search(cls, album: str, limit: int = 50, page: int = 1) -> List[T]:
         """
         Search for an album by name.Returns album matches sorted by relevance.
 
         :param album: The album name to search.
-        :param int page: The page number to fetch. Defaults to first page.
+        :param int page: The page number to fetch.
         :param int limit: The number of results to fetch per page.
-        :returns: AlbumSearch
+        :returns: List[Album]
         """
 
         return cls.retrieve(
-            bind=AlbumSearch,
+            bind=Album,
+            many=("albums", "album"),
             params=dict(
                 method="album.search", limit=limit, page=page, album=album
             ),
@@ -166,15 +164,16 @@ class Album(BaseModel):
             ),
         )
 
-    def get_tags(self, user: str) -> TagList:
+    def get_tags(self, user: str) -> List[Tag]:
         """
         Get the tags applied by an individual user to an album on Last.fm.
 
         :param user: The username for the context of the request.
-        :returns: TagList
+        :returns: List[Tag]
         """
         return self.retrieve(
-            bind=TagList,
+            bind=Tag,
+            many="tag",
             params=dict(
                 method="album.getTags",
                 mbid=self.mbid,
@@ -185,14 +184,15 @@ class Album(BaseModel):
             ),
         )
 
-    def get_top_tags(self) -> TagList:
+    def get_top_tags(self) -> List[Tag]:
         """
         Get the top tags for an album on Last.fm, ordered by popularity.
 
-        :returns: TagList
+        :returns: List[Tag]
         """
         return self.retrieve(
-            bind=TagList,
+            bind=Tag,
+            many="tag",
             params=dict(
                 method="album.getTopTags",
                 mbid=self.mbid,

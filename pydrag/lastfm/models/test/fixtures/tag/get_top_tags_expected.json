@@ -1,5 +1,5 @@
 {
-    "tag": [
+    "data": [
         {
             "name": "black metal",
             "reach": 60919,
@@ -50,10 +50,5 @@
             "reach": 102845,
             "count": 642670
         }
-    ],
-    "attr": {
-        "total": 2693772,
-        "offset": 20,
-        "limit": 10
-    }
+    ]
 }

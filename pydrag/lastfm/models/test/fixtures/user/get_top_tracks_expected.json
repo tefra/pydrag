@@ -1,5 +1,5 @@
 {
-    "track": [
+    "data": [
         {
             "name": "Einschlafhilfe Baby Sleepy - 60 Minuten",
             "url": "https://www.last.fm/music/Womb+Sounds+Heartbeat/_/Einschlafhilfe+Baby+Sleepy+-+60+Minuten",
@@ -34,12 +34,5 @@
                 "rank": "1"
             }
         }
-    ],
-    "attr": {
-        "page": 1,
-        "user": "RJ",
-        "total": 64,
-        "limit": 1,
-        "total_pages": 64
-    }
+    ]
 }

@@ -1,5 +1,5 @@
 {
-    "track": [
+    "data": [
         {
             "name": "Thank U, Next",
             "url": "https://www.last.fm/music/Ariana+Grande/_/Thank+U,+Next",
@@ -640,11 +640,5 @@
             "streamable": "{'text': '0', 'fulltrack': '0'}",
             "duration": "272"
         }
-    ],
-    "attr": {
-        "page": 2,
-        "total": 23146193,
-        "limit": 10,
-        "total_pages": 2314620
-    }
+    ]
 }

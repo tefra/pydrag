@@ -1,5 +1,5 @@
 {
-    "album": [
+    "data": [
         {
             "mbid": "",
             "name": "Einschlafhilfe Baby Sleepy",
@@ -1600,12 +1600,5 @@
                 "rank": "50"
             }
         }
-    ],
-    "attr": {
-        "page": 1,
-        "user": "RJ",
-        "total": 52,
-        "limit": 50,
-        "total_pages": 2
-    }
+    ]
 }

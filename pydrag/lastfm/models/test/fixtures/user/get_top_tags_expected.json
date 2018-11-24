@@ -1,5 +1,5 @@
 {
-    "tag": [
+    "data": [
         {
             "name": "rock",
             "url": "https://www.last.fm/tag/rock",
@@ -250,8 +250,5 @@
             "url": "https://www.last.fm/tag/romantic",
             "count": 1
         }
-    ],
-    "attr": {
-        "user": "RJ"
-    }
+    ]
 }

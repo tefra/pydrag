@@ -1,5 +1,5 @@
 {
-    "artist": [
+    "data": [
         {
             "mbid": "CENSORED13d4",
             "name": "Eminem",
@@ -61,12 +61,5 @@
                 "rank": "2"
             }
         }
-    ],
-    "attr": {
-        "tag": "rap",
-        "page": 1,
-        "total": 61526,
-        "limit": 2,
-        "total_pages": 30763
-    }
+    ]
 }

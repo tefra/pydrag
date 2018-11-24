@@ -1,5 +1,5 @@
 {
-    "tag": [
+    "data": [
         {
             "name": "classic rock",
             "url": "https://www.last.fm/tag/classic+rock",
@@ -500,9 +500,5 @@
             "url": "https://www.last.fm/tag/8+of+10+stars",
             "count": 2
         }
-    ],
-    "attr": {
-        "album": "A Night at the Opera",
-        "artist": "Queen"
-    }
+    ]
 }
