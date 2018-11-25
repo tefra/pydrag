@@ -18,7 +18,7 @@ class AuthSession(BaseModel):
         """
         Create a web service session for a user.
 
-        :returns: AuthSession
+        :rtype: :class:`~pydrag.lastfm.models.auth.AuthSession`
         """
         return cls.submit(
             authenticate=True, params=dict(method="auth.getMobileSession")

@@ -26,8 +26,9 @@ class TrackMini(BaseModel):
 
     def get_info(self) -> BaseModel:
         """
+        Returns a proper full Album instance.
 
-        :returns: Track
+        :rtype: :class:`~pydrag.lastfm.models.album.Album`
         """
         from pydrag.lastfm.models.track import Track
 
@@ -72,7 +73,7 @@ class Album(AttrModel):
         :param artist: The album artist to find.
         :param user: The username for the context of the request. If supplied, response will include the user's playcount for this album
         :param lang: The language to return the biography in, ISO-639
-        :returns: Album
+        :rtype: :class:`~pydrag.lastfm.models.album.Album`
         """
 
         return cls.retrieve(
@@ -94,7 +95,7 @@ class Album(AttrModel):
         :param mbid: The musicbrainz id for the album.
         :param user: The username for the context of the request. If supplied, response will include the user's playcount for this album
         :param lang: The language to return the biography in, ISO-639
-        :returns: Album
+        :rtype: :class:`~pydrag.lastfm.models.album.Album`
         """
 
         return cls.retrieve(
@@ -113,9 +114,9 @@ class Album(AttrModel):
         Search for an album by name.Returns album matches sorted by relevance.
 
         :param album: The album name to search.
-        :param int page: The page number to fetch.
-        :param int limit: The number of results to fetch per page.
-        :returns: List[Album]
+        :param page: The page number to fetch.
+        :param limit: The number of results to fetch per page.
+        :rtype: :class:`list` of :class:`~pydrag.lastfm.models.album.Album`
         """
 
         return cls.retrieve(
@@ -130,9 +131,8 @@ class Album(AttrModel):
         """
         Tag an album using a list of user supplied tags.
 
-        :param tags: A list of user supplied tags to apply to this album.
-         Accepts a maximum of 10 tags.
-        :returns: BaseModel
+        :param tags: A list of user supplied tags to apply to this album. Accepts a maximum of 10 tags.
+        :rtype: :class:`~pydrag.core.BaseModel`
         """
 
         return self.submit(
@@ -150,8 +150,8 @@ class Album(AttrModel):
         """
         Remove a user's tag from an album.
 
-        :param tag  : A single user tag to remove from this album.
-        :returns: BaseModel
+        :param tag: A single user tag to remove from this album.
+        :rtype: :class:`~pydrag.core.BaseModel`
         """
         return self.submit(
             bind=BaseModel,
@@ -169,7 +169,7 @@ class Album(AttrModel):
         Get the tags applied by an individual user to an album on Last.fm.
 
         :param user: The username for the context of the request.
-        :returns: List[Tag]
+        :rtype: :class:`list` of :class:`~pydrag.lastfm.models.tag.Tag`
         """
         return self.retrieve(
             bind=Tag,
@@ -188,7 +188,7 @@ class Album(AttrModel):
         """
         Get the top tags for an album on Last.fm, ordered by popularity.
 
-        :returns: List[Tag]
+        :rtype: :class:`list` of :class:`~pydrag.lastfm.models.tag.Tag`
         """
         return self.retrieve(
             bind=Tag,

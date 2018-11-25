@@ -62,6 +62,7 @@ class ScrobbleTrack(BaseModel):
 
 
 T = TypeVar("T", bound="Track")
+TC = TypeVar("T", bound="TrackCorrection")
 
 
 @dataclass
@@ -84,7 +85,17 @@ class Track(BaseModel):
     loved: int = None
 
     @classmethod
-    def from_dict(cls, data: dict):
+    def from_dict(cls, data: dict) -> T:
+        """
+        In order to be more consistent than Last.fm api we have to normalize
+        the input dictionary to fix a couple of things:
+
+        * Flatten top tags list
+        * Make sure artist field is always a dictionary
+
+        :param data:
+        :rtype: :class:`~pydrag.lastfm.models.track.Track`
+        """
         try:
             data["top_tags"] = data["top_tags"]["tag"]
         except KeyError:
@@ -102,23 +113,18 @@ class Track(BaseModel):
         return super().from_dict(data)
 
     @classmethod
-    def from_artist_track(cls, artist: str, track: str):
-        return Track(artist=Artist(name=artist), name=track, url=None)
-
-    @classmethod
     def find(
         cls, artist: str, track: str, user: str = None, lang: str = "en"
     ) -> T:
 
         """
-        Get the metadata for a track on Last.fm.
+        Get the metadata for a track.
 
         :param artist: The artist name
         :param track: The track name
-        :param user: The username for the context of the request.
-         If supplied, response will include the user's playcount for this track
+        :param user: The username for the context of the request. If supplied, response will include the user's playcount for this track
         :param lang: The language to return the biography in, ISO 639
-        :returns: Track
+        :rtype: :class:`~pydrag.lastfm.models.track.Track`
         """
         return cls.retrieve(
             params=dict(
@@ -134,13 +140,12 @@ class Track(BaseModel):
     @classmethod
     def find_by_mbid(cls, mbid: str, user: str = None, lang: str = "en") -> T:
         """
-        Get the metadata for a track on Last.fm.
+        Get the metadata for a track.
 
         :param mbid: The musicbrainz id for the track
-        :param user: The username for the context of the request.
-         If supplied, response will include the user's playcount for this track
+        :param user: The username for the context of the request. If supplied, response will include the user's playcount for this track
         :param lang: The language to return the biography in, ISO 639
-        :returns: Track
+        :rtype: :class:`~pydrag.lastfm.models.track.Track`
         """
         return cls.retrieve(
             params=dict(
@@ -153,12 +158,12 @@ class Track(BaseModel):
         )
 
     @classmethod
-    def get_correction(cls, track: str, artist: str):
+    def get_correction(cls, track: str, artist: str) -> TC:
         """
         Use the last.fm corrections data to check whether the supplied track
         has a correction to a canonical track.
 
-        :returns: TrackCorrection
+        :rtype: :class:`~pydrag.lastfm.models.track.TrackCorrection`
         """
         return cls.retrieve(
             bind=TrackCorrection,
@@ -172,10 +177,10 @@ class Track(BaseModel):
         """
         Search for an track by name. Returns track matches sorted by relevance.
 
-        :param str track: The track name.
-        :param int page: The page number to fetch.
-        :param int limit: The number of results to fetch per page.
-        :returns: List[Track]
+        :param track: The track name.
+        :param page: The page number to fetch.
+        :param limit: The number of results to fetch per page.
+        :rtype: :class:`list` of :class:`~pydrag.lastfm.models.track.Track`
         """
         return cls.retrieve(
             bind=Track,
@@ -191,9 +196,9 @@ class Track(BaseModel):
     ) -> List[T]:
         """
         :param country: The country to fetch the top tracks.
-        :param int limit: The number of results to fetch per page.
-        :param int page: The page number to fetch.
-        :returns: List[Track]
+        :param limit: The number of results to fetch per page.
+        :param page: The page number to fetch.
+        :rtype: :class:`list` of :class:`~pydrag.lastfm.models.track.Track`
         """
         return cls.retrieve(
             bind=Track,
@@ -211,9 +216,9 @@ class Track(BaseModel):
         """
         Get the top tracks chart.
 
-        :param int limit: The number of results to fetch per page.
-        :param int page: The page number to fetch.
-        :returns: List[Track]
+        :param limit: The number of results to fetch per page.
+        :param page: The page number to fetch.
+        :rtype: :class:`list` of :class:`~pydrag.lastfm.models.track.Track`
         """
         return cls.retrieve(
             bind=Track,
@@ -226,7 +231,8 @@ class Track(BaseModel):
         Tag an track with one or more user supplied tags.
 
         :param tags: A list of user supplied tags to apply to this track. Accepts a maximum of 10 tags.
-        :returns: BaseModel
+        :type tags: :class:`list` of :class:`str`
+        :rtype: :class:`~pydrag.core.BaseModel`
         """
         return self.submit(
             bind=BaseModel,
@@ -241,7 +247,7 @@ class Track(BaseModel):
         Remove a user's tag from an track.
 
         :param tag: A single user tag to remove from this track.
-        :returns: BaseModel
+        :rtype: :class:`~pydrag.core.BaseModel`
         """
         return self.submit(
             bind=BaseModel,
@@ -253,8 +259,8 @@ class Track(BaseModel):
         """
         Get all the tracks similar to this track.
 
-        :param int limit: Limit the number of similar tracks returned
-        :returns: TrackSimilar
+        :param limit: Limit the number of similar tracks returned
+        :rtype: :class:`list` of :class:`~pydrag.lastfm.models.track.Track`
         """
         return self.retrieve(
             bind=Track,
@@ -274,7 +280,7 @@ class Track(BaseModel):
         Get the tags applied by an individual user to an track on Last.fm.
 
         :param user: The username for the context of the request.
-        :returns: List[Tag]
+        :rtype: :class:`list` of :class:`~pydrag.lastfm.models.tag.Tag`
         """
         return self.retrieve(
             bind=Tag,
@@ -293,7 +299,7 @@ class Track(BaseModel):
         """
         Get the top tags for an track on Last.fm, ordered by popularity.
 
-        :returns: List[Tag]
+        :rtype: :class:`list` of :class:`~pydrag.lastfm.models.tag.Tag`
         """
         return self.retrieve(
             bind=Tag,
@@ -311,7 +317,7 @@ class Track(BaseModel):
         """
         Love a track for a user profile.
 
-        :returns: BaseModel
+        :rtype: :class:`~pydrag.core.BaseModel`
         """
         return self.submit(
             bind=BaseModel,
@@ -325,7 +331,7 @@ class Track(BaseModel):
         """
         Unlove a track for a user profile.
 
-        :returns: BaseModel
+        :rtype: :class:`~pydrag.core.BaseModel`
         """
         return self.submit(
             bind=BaseModel,
@@ -356,7 +362,7 @@ class Track(BaseModel):
 
         :param tracks: The tracks to scrobble
         :param batch_size: The number of tracks to submit per cycle
-        :returns: TrackScrobble: after we aggregate the results
+        :rtype: :class:`~pydrag.lastfm.models.track.TrackScrobble`
         """
         batch_size = min(batch_size, 50)
 
@@ -396,7 +402,7 @@ class Track(BaseModel):
         :param context: Sub-client version (not public)
         :param duration: The length of the track in seconds
         :param album_artist: The album artist
-        :return: BaseModel
+        :rtype: :class:`~pydrag.core.BaseModel`
         """
 
         return cls.submit(

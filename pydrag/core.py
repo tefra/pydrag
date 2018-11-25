@@ -8,7 +8,8 @@ from attr import asdict, attrib, dataclass, fields
 from cattr import structure
 from requests import Response
 
-from pydrag.lastfm import config, md5
+from pydrag.lastfm.config import config
+from pydrag.lastfm.utils import md5
 
 T = TypeVar("T", bound="BaseModel")
 
@@ -100,10 +101,14 @@ class BaseModel(metaclass=ABCMeta):
                 if many:
                     if isinstance(many, str):
                         many = (many,)
-                    for m in many:
-                        data = data.pop(m)
 
-                    items = [bind.from_dict(d) for d in data]
+                    try:
+                        for m in many:
+                            data = data.pop(m)
+                        items = [bind.from_dict(d) for d in data]
+                    except KeyError:
+                        items = []
+
                     obj = BaseListModel(data=items)
                 else:
                     obj = bind.from_dict(data)
@@ -129,6 +134,11 @@ class BaseListModel(UserList):
     data: List[BaseModel] = attrib(factory=list)
 
     def to_dict(self: T) -> Dict:
+        """
+
+        :return:
+        :rtype:
+        """
         return dict(data=[item.to_dict() for item in self])
 
 

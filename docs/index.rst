@@ -2,16 +2,18 @@
 Welcome to pydrag's documentation!
 ==================================
 
+
 .. image:: https://travis-ci.org/tefra/pydrag.svg?branch=master
         :target: https://travis-ci.org/tefra/pydrag
-
-.. image:: https://img.shields.io/github/languages/top/tefra/pydrag.svg
 
 .. image:: https://codecov.io/gh/tefra/pydrag/branch/master/graph/badge.svg
         :target: https://codecov.io/gh/tefra/pydrag
 
 .. image:: https://img.shields.io/badge/code%20style-black-000000.svg
         :target: https://github.com/ambv/black
+
+.. image:: https://img.shields.io/github/languages/top/tefra/pydrag.svg
+        :target: https://pydrag.readthedocs.io/
 
 ----
 

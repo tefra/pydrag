@@ -16,7 +16,7 @@ import sys
 
 sys.path.insert(0, os.path.abspath(".."))
 
-import pydrag  # noqa
+import pydrag  # NOQA isort:skip
 
 # -- Project information -----------------------------------------------------
 
@@ -41,6 +41,7 @@ release = ""
 # ones.
 extensions = [
     "sphinx.ext.autodoc",
+    "sphinx_autodoc_typehints",
     "sphinx.ext.doctest",
     "sphinx.ext.intersphinx",
     "sphinx.ext.todo",

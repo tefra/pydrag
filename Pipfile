@@ -14,6 +14,8 @@ pytest-cov = "*"
 vcrpy = "*"
 sphinx = "*"
 sphinx-rtd-theme = "*"
+ipython = "*"
+sphinx-autodoc-typehints = "*"
 
 [packages]
 "e1839a8" = {path = ".", editable = true}

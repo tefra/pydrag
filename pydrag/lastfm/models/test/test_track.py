@@ -2,6 +2,7 @@ import time
 from datetime import datetime, timedelta
 
 from pydrag.core import BaseListModel, BaseModel
+from pydrag.lastfm import Artist
 from pydrag.lastfm.models.test import MethodTestCase, fixture
 from pydrag.lastfm.models.track import (
     ScrobbleTrack,
@@ -14,8 +15,8 @@ from pydrag.lastfm.models.track import (
 
 class TrackTests(MethodTestCase):
     def setUp(self):
-        self.track = Track.from_artist_track(
-            artist="AC / DC", track="Hells Bell"
+        self.track = Track(
+            artist=Artist(name="AC / DC"), name="Hells Bell", url=None
         )
         super(TrackTests, self).setUp()
 

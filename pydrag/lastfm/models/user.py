@@ -3,7 +3,7 @@ from typing import List, TypeVar, Union
 from attr import dataclass
 
 from pydrag.core import BaseModel
-from pydrag.lastfm import Period
+from pydrag.lastfm.constants import Period
 from pydrag.lastfm.models.album import Album
 from pydrag.lastfm.models.artist import Artist
 from pydrag.lastfm.models.common import Chart, Date, Image
@@ -36,15 +36,18 @@ class User(BaseModel):
         """
         Get information about a user profile.
 
-        :returns: User
+        :rtype: :class:`~pydrag.lastfm.models.user.User`
         """
         return cls.retrieve(params=dict(method="user.getInfo", user=username))
 
     def get_artists(self, limit: int = 50, page: int = 1) -> List[Artist]:
         """
-        :param int page: The page number to fetch.
-        :param int limit: The number of results to fetch per page.
-        :returns: List[Artist]
+        Retrieve a paginated list of all the artists in the user's library,
+        with playcounts and tagcounts.
+
+        :param page: The page number to fetch.
+        :param limit: The number of results to fetch per page.
+        :rtype: :class:`list` of :class:`~pydrag.lastfm.models.artist.Artist`
         """
         return self.retrieve(
             bind=Artist,
@@ -72,8 +75,8 @@ class User(BaseModel):
         :param artist: The artist name you are interested in
         :param from_date: An unix timestamp to start at.
         :param to_date: An unix timestamp to end at.
-        :param int page: The page number to fetch.
-        :returns: List[Track]
+        :param page: The page number to fetch.
+        :rtype: :class:`list` of :class:`~pydrag.lastfm.models.track.Track`
         """
         return self.retrieve(
             bind=Track,
@@ -96,9 +99,9 @@ class User(BaseModel):
 
         :param recent_tracks: Whether or not to include information about
          friends' recent listening in the response.
-        :param int page: The page number to fetch.
-        :param int limit: The number of results to fetch per page.
-        :returns: List[User]
+        :param page: The page number to fetch.
+        :param limit: The number of results to fetch per page.
+        :rtype: :class:`list` of :class:`~pydrag.lastfm.models.user.User`
         """
         return self.retrieve(
             bind=User,
@@ -114,11 +117,11 @@ class User(BaseModel):
 
     def get_loved_tracks(self, limit: int = 50, page: int = 1) -> List[Track]:
         """
-        Get loved tracks list.
+        Get the user's loved tracks list.
 
-        :param int page: The page number to fetch.
-        :param int limit: The number of results to fetch per page.
-        :returns: List[Track]
+        :param page: The page number to fetch.
+        :param limit: The number of results to fetch per page.
+        :rtype: :class:`list` of :class:`~pydrag.lastfm.models.track.Track`
         """
         return self.retrieve(
             bind=Track,
@@ -139,9 +142,9 @@ class User(BaseModel):
 
         :param tag: The tag you're interested in.
         :param type: The type of items which have been tagged
-        :param int page: The page number to fetch.
-        :param int limit: The number of results to fetch per page.
-        :returns: List[Union[Artist, Track, Album]]
+        :param page: The page number to fetch.
+        :param limit: The number of results to fetch per page.
+        :rtype: :class:`list` of :class:`~pydrag.lastfm.models.track.Track`  or :class:`~pydrag.lastfm.models.artist.Artist` or :class:`~pydrag.lastfm.models.album.Album`
         """
 
         map = dict(artist=Artist, album=Album, track=Track)
@@ -175,9 +178,9 @@ class User(BaseModel):
 
         :param from_date: Beginning timestamp of a range - only display scrobbles after this time, in UNIX timestamp format (integer number of seconds since 00:00:00, January 1st 1970 UTC). This must be in the UTC time zone.
         :param to_date: End timestamp of a range - only display scrobbles before this time, in UNIX timestamp format (integer number of seconds since 00:00:00, January 1st 1970 UTC). This must be in the UTC time zone.
-        :param int limit: The number of results to fetch per page.
-        :param int page: The page number to fetch.
-        :returns: List[Track]
+        :param limit: The number of results to fetch per page.
+        :param page: The page number to fetch.
+        :rtype: :class:`list` of :class:`~pydrag.lastfm.models.track.Track`
         """
         return self.retrieve(
             bind=Track,
@@ -201,9 +204,10 @@ class User(BaseModel):
         period.
 
         :param Period period:
-        :param int limit: The number of results to fetch per page.
-        :param int page: The page number to fetch.
-        :returns: List[Album]
+        :param limit: The number of results to fetch per page.
+        :param page: The page number to fetch.
+        :rtype: :class:`list` of :class:`~pydrag.lastfm.models.album.Album`
+        :rtype: List[Album]
         """
         assert isinstance(period, Period)
 
@@ -227,9 +231,9 @@ class User(BaseModel):
         period.
 
         :param Period period:
-        :param int limit: The number of results to fetch per page.
-        :param int page: The page number to fetch.
-        :returns: List[Artist]
+        :param limit: The number of results to fetch per page.
+        :param page: The page number to fetch.
+        :rtype: :class:`list` of :class:`~pydrag.lastfm.models.artist.Artist`
         """
         assert isinstance(period, Period)
         return self.retrieve(
@@ -248,8 +252,9 @@ class User(BaseModel):
         """
         Get the top tags used by this user.
 
-         :param int limit: Limit the number of tags returned
-        :returns: List[Tag]
+        :param limit: Limit the number of tags returned
+        :rtype: :class:`list` of :class:`~pydrag.lastfm.models.tag.Tag`
+        :rtype: List[Tag]
         """
         return self.retrieve(
             bind=Tag,
@@ -265,9 +270,9 @@ class User(BaseModel):
         period.
 
         :param Period period:
-        :param int limit: The number of results to fetch per page.
-        :param int page: The page number to fetch.
-        :returns: List[Track]
+        :param limit: The number of results to fetch per page.
+        :param page: The page number to fetch.
+        :rtype: :class:`list` of :class:`~pydrag.lastfm.models.track.Track`
         """
 
         assert isinstance(period, Period)
@@ -289,7 +294,7 @@ class User(BaseModel):
         """
         :param from_date:  The date at which the chart should start from.
         :param to_date: The date at which the chart should end on.
-        :returns: List[Album]
+        :rtype: :class:`list` of :class:`~pydrag.lastfm.models.album.Album`
         """
         return self.retrieve(
             bind=Album,
@@ -312,7 +317,7 @@ class User(BaseModel):
 
         :param from_date:  The date at which the chart should start from.
         :param to_date: The date at which the chart should end on.
-        :returns: List[Artist]
+        :rtype: :class:`list` of :class:`~pydrag.lastfm.models.artist.Artist`
         """
         return self.retrieve(
             bind=Artist,
@@ -331,7 +336,7 @@ class User(BaseModel):
         date range is supplied, it will return the most recent artist chart for
         this user.
 
-        :return: List[Chart]
+        :rtype: :class:`list` of :class:`~pydrag.lastfm.models.common.Chart`
         """
         return self.retrieve(
             bind=Chart,
@@ -348,7 +353,7 @@ class User(BaseModel):
 
         :param from_date:  The date at which the chart should start from.
         :param to_date: The date at which the chart should end on.
-        :returns: List[Track]
+        :rtype: :class:`list` of :class:`~pydrag.lastfm.models.track.Track`
         """
         return self.retrieve(
             bind=Track,

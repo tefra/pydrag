@@ -26,7 +26,7 @@ class Tag(BaseModel):
 
         :param name: The tag name
         :param lang: The language to return the wiki in, ISO-639
-        :return: Tag
+        :rtype: :class:`~pydrag.lastfm.models.tag.Tag`
         """
         return cls.retrieve(
             params=dict(method="tag.getInfo", tag=name, lang=lang)
@@ -38,9 +38,9 @@ class Tag(BaseModel):
         Fetches the top global tags on Last.fm, sorted by popularity Old school
         pagination on this endpoint, keep uniformity.
 
-        :param int limit: The number of results to fetch per page.
-        :param int page: The page number to fetch.
-        :returns: List[Tag]
+        :param limit: The number of results to fetch per page.
+        :param page: The page number to fetch.
+        :rtype: :class:`list` of :class:`~pydrag.lastfm.models.tag.Tag`
         """
         return cls.retrieve(
             bind=Tag,
@@ -57,9 +57,9 @@ class Tag(BaseModel):
         """
         Get the top tags chart.
 
-        :param int limit: The number of results to fetch per page.
-        :param int page: The page number to fetch.
-        :returns: List[Tag]
+        :param limit: The number of results to fetch per page.
+        :param page: The page number to fetch.
+        :rtype: :class:`list` of :class:`~pydrag.lastfm.models.tag.Tag`
         """
         return cls.retrieve(
             bind=Tag,
@@ -72,7 +72,7 @@ class Tag(BaseModel):
         Search for tags similar to this one. Returns tags ranked by similarity,
         based on listening data.
 
-        :return: List[Tag]
+        :rtype: :class:`list` of :class:`~pydrag.lastfm.models.tag.Tag`
         """
         return self.retrieve(
             bind=Tag,
@@ -84,9 +84,9 @@ class Tag(BaseModel):
         """
         Get the top albums tagged by this tag, ordered by tag count.
 
-        :param int limit: The number of results to fetch per page.
-        :param int page: The page number to fetch.
-        :returns: List[Album]
+        :param limit: The number of results to fetch per page.
+        :param page: The page number to fetch.
+        :rtype: :class:`list` of :class:`~pydrag.lastfm.models.album.Album`
         """
         from pydrag.lastfm.models.album import Album
 
@@ -105,9 +105,9 @@ class Tag(BaseModel):
         """
         Get the top artists tagged by this tag, ordered by tag count.
 
-        :param int limit: The number of results to fetch per page.
-        :param int page: The page number to fetch.
-        :returns: List[Artist]
+        :param limit: The number of results to fetch per page.
+        :param page: The page number to fetch.
+        :rtype: :class:`list` of :class:`~pydrag.lastfm.models.artist.Artist`
         """
         from pydrag.lastfm.models.artist import Artist
 
@@ -126,9 +126,9 @@ class Tag(BaseModel):
         """
         Get the top tracks tagged by this tag, ordered by tag count.
 
-        :param int limit: The number of results to fetch per page.
-        :param int page: The page number to fetch.
-        :returns: List[Track]
+        :param limit: The number of results to fetch per page.
+        :param page: The page number to fetch.
+        :rtype: :class:`list` of :class:`~pydrag.lastfm.models.track.Track`
         """
         from pydrag.lastfm.models.track import Track
 
@@ -148,7 +148,7 @@ class Tag(BaseModel):
         Get a list of available charts for this tag, expressed as date ranges
         which can be sent to the chart services.
 
-        :return: List[Chart]
+        :rtype: :class:`list` of :class:`~pydrag.lastfm.models.common.Chart`
         """
         return self.retrieve(
             bind=Chart,
