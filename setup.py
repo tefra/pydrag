@@ -22,7 +22,7 @@ install_requires = [
 ]
 
 if __name__ == "__main__":
-    with open("README.md") as f:
+    with open("README.rst") as f:
         readme = f.read()
 
     setup(
