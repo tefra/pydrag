@@ -1,0 +1,64 @@
+{
+    "version": 1,
+    "interactions": [
+        {
+            "request": {
+                "method": "GET",
+                "uri": "https://ws.audioscrobbler.com/2.0/?api_key=LAST_FM_API_KEY&artist=Trivium&format=json&method=user.getArtistTracks&page=1&user=rj",
+                "body": null,
+                "headers": {
+                    "User-Agent": [
+                        "python-requests/2.20.1"
+                    ],
+                    "Accept-Encoding": [
+                        "gzip, deflate"
+                    ],
+                    "Accept": [
+                        "*/*"
+                    ],
+                    "Connection": [
+                        "keep-alive"
+                    ]
+                }
+            },
+            "response": {
+                "status": {
+                    "code": 200,
+                    "message": "OK"
+                },
+                "headers": {
+                    "Access-Control-Allow-Origin": [
+                        "*"
+                    ],
+                    "Server": [
+                        "openresty/1.9.7.5"
+                    ],
+                    "Connection": [
+                        "keep-alive"
+                    ],
+                    "Content-Length": [
+                        "125"
+                    ],
+                    "Content-Type": [
+                        "application/json; charset=UTF-8"
+                    ],
+                    "Access-Control-Request-Headers": [
+                        "Origin, X-Atmosphere-tracking-id, X-Atmosphere-Framework, X-Cache-Date, Content-Type, X-Atmosphere-Transport, *"
+                    ],
+                    "Access-Control-Allow-Methods": [
+                        "POST, GET, OPTIONS"
+                    ],
+                    "Access-Control-Max-Age": [
+                        "86400"
+                    ],
+                    "Date": [
+                        "Sun, 18 Nov 2018 20:29:14 GMT"
+                    ]
+                },
+                "body": {
+                    "string": "{\"artisttracks\":{\"track\":[],\"@attr\":{\"user\":\"RJ\",\"artist\":\"Trivium\",\"page\":\"1\",\"perPage\":\"50\",\"totalPages\":\"0\",\"total\":\"0\"}}}"
+                }
+            }
+        }
+    ]
+}

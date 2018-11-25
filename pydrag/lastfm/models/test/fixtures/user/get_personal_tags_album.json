@@ -1,0 +1,64 @@
+{
+    "version": 1,
+    "interactions": [
+        {
+            "request": {
+                "method": "GET",
+                "uri": "https://ws.audioscrobbler.com/2.0/?api_key=LAST_FM_API_KEY&format=json&limit=50&method=user.getPersonalTags&page=1&tag=hell&taggingtype=album&user=Zaratoustre",
+                "body": null,
+                "headers": {
+                    "User-Agent": [
+                        "python-requests/2.20.1"
+                    ],
+                    "Accept-Encoding": [
+                        "gzip, deflate"
+                    ],
+                    "Accept": [
+                        "*/*"
+                    ],
+                    "Connection": [
+                        "keep-alive"
+                    ]
+                }
+            },
+            "response": {
+                "status": {
+                    "code": 200,
+                    "message": "OK"
+                },
+                "headers": {
+                    "Access-Control-Request-Headers": [
+                        "Origin, X-Atmosphere-tracking-id, X-Atmosphere-Framework, X-Cache-Date, Content-Type, X-Atmosphere-Transport, *"
+                    ],
+                    "Access-Control-Max-Age": [
+                        "86400"
+                    ],
+                    "Server": [
+                        "openresty/1.9.7.5"
+                    ],
+                    "Connection": [
+                        "keep-alive"
+                    ],
+                    "Content-Length": [
+                        "135"
+                    ],
+                    "Access-Control-Allow-Methods": [
+                        "POST, GET, OPTIONS"
+                    ],
+                    "Date": [
+                        "Sun, 18 Nov 2018 20:50:40 GMT"
+                    ],
+                    "Content-Type": [
+                        "application/json; charset=UTF-8"
+                    ],
+                    "Access-Control-Allow-Origin": [
+                        "*"
+                    ]
+                },
+                "body": {
+                    "string": "{\"taggings\":{\"albums\":{\"album\":[]},\"@attr\":{\"user\":\"Zaratoustre\",\"tag\":\"hell\",\"page\":\"1\",\"perPage\":\"50\",\"totalPages\":\"0\",\"total\":\"0\"}}}"
+                }
+            }
+        }
+    ]
+}

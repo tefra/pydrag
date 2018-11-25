@@ -1,19 +1,10 @@
-from urllib.parse import urlencode
+from typing import TypeVar
 
 from attr import dataclass
 
 from pydrag.core import BaseModel
-from pydrag.lastfm import config
 
-
-@dataclass
-class AuthToken(BaseModel):
-    token: str
-
-    @property
-    def auth_url(self):
-        params = dict(token=self.token, api_key=config.api_key)
-        return "https://www.last.fm/api/auth?{}".format(urlencode(params))
+V = TypeVar("V", bound="AuthSession")
 
 
 @dataclass
@@ -21,8 +12,14 @@ class AuthSession(BaseModel):
     key: str
     name: str
     subscriber: int
-    token: str = None
 
+    @classmethod
+    def get(cls) -> V:
+        """
+        Create a web service session for a user.
 
-class AuthMobileSession(AuthSession):
-    pass
+        :returns: AuthSession
+        """
+        return cls.submit(
+            authenticate=True, params=dict(method="auth.getMobileSession")
+        )

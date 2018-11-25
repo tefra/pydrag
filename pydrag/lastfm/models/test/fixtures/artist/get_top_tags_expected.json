@@ -1,0 +1,129 @@
+{
+    "data": [
+        {
+            "name": "hard rock",
+            "url": "https://www.last.fm/tag/hard+rock",
+            "count": 100
+        },
+        {
+            "name": "rock",
+            "url": "https://www.last.fm/tag/rock",
+            "count": 70
+        },
+        {
+            "name": "classic rock",
+            "url": "https://www.last.fm/tag/classic+rock",
+            "count": 55
+        },
+        {
+            "name": "80s",
+            "url": "https://www.last.fm/tag/80s",
+            "count": 38
+        },
+        {
+            "name": "metal",
+            "url": "https://www.last.fm/tag/metal",
+            "count": 24
+        },
+        {
+            "name": "heavy metal",
+            "url": "https://www.last.fm/tag/heavy+metal",
+            "count": 11
+        },
+        {
+            "name": "seen live",
+            "url": "https://www.last.fm/tag/seen+live",
+            "count": 11
+        },
+        {
+            "name": "Guns N Roses",
+            "url": "https://www.last.fm/tag/Guns+N+Roses",
+            "count": 5
+        },
+        {
+            "name": "american",
+            "url": "https://www.last.fm/tag/american",
+            "count": 5
+        },
+        {
+            "name": "hair metal",
+            "url": "https://www.last.fm/tag/hair+metal",
+            "count": 4
+        },
+        {
+            "name": "90s",
+            "url": "https://www.last.fm/tag/90s",
+            "count": 4
+        },
+        {
+            "name": "glam rock",
+            "url": "https://www.last.fm/tag/glam+rock",
+            "count": 4
+        },
+        {
+            "name": "alternative",
+            "url": "https://www.last.fm/tag/alternative",
+            "count": 3
+        },
+        {
+            "name": "Glam Metal",
+            "url": "https://www.last.fm/tag/Glam+Metal",
+            "count": 3
+        },
+        {
+            "name": "Guns N' Roses",
+            "url": "https://www.last.fm/tag/Guns+N%27+Roses",
+            "count": 2
+        },
+        {
+            "name": "Slash",
+            "url": "https://www.last.fm/tag/Slash",
+            "count": 2
+        },
+        {
+            "name": "rock n roll",
+            "url": "https://www.last.fm/tag/rock+n+roll",
+            "count": 2
+        },
+        {
+            "name": "USA",
+            "url": "https://www.last.fm/tag/USA",
+            "count": 2
+        },
+        {
+            "name": "sleaze rock",
+            "url": "https://www.last.fm/tag/sleaze+rock",
+            "count": 2
+        },
+        {
+            "name": "alternative rock",
+            "url": "https://www.last.fm/tag/alternative+rock",
+            "count": 2
+        },
+        {
+            "name": "guitar",
+            "url": "https://www.last.fm/tag/guitar",
+            "count": 2
+        },
+        {
+            "name": "Axl Rose",
+            "url": "https://www.last.fm/tag/Axl+Rose",
+            "count": 2
+        },
+        {
+            "name": "male vocalists",
+            "url": "https://www.last.fm/tag/male+vocalists",
+            "count": 2
+        },
+        {
+            "name": "punk",
+            "url": "https://www.last.fm/tag/punk",
+            "count": 2
+        },
+        {
+            "name": "blues rock",
+            "url": "https://www.last.fm/tag/blues+rock",
+            "count": 1
+        }
+    ]
+}
