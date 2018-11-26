@@ -1,6 +1,6 @@
 from abc import ABCMeta
 from collections import UserList
-from typing import Any, Dict, List, TypeVar
+from typing import Any, Dict, List, Optional, Type, TypeVar, Union
 from urllib.parse import urlencode
 
 import requests
@@ -12,17 +12,12 @@ from pydrag.lastfm.config import config
 from pydrag.lastfm.utils import md5
 
 T = TypeVar("T", bound="BaseModel")
+TL = TypeVar("TL", bound="BaseListModel")
 
 
 class BaseModel(metaclass=ABCMeta):
-    signed: bool = attrib(init=False)
-    auth: bool = attrib(init=False)
-    stateful: bool = attrib(init=False)
-    namespace: str = attrib(init=False)
-    method: str = attrib(init=False)
-    http_method: str = attrib(init=False)
-    params: dict = attrib(init=False)
-    response: Response = attrib(init=False)
+    params: Optional[dict] = attrib(init=False)
+    response: Optional[Response] = attrib(init=False)
 
     def to_dict(self: T) -> Dict:
         return asdict(self, filter=lambda f, v: v is not None)
@@ -44,7 +39,7 @@ class BaseModel(metaclass=ABCMeta):
         return params
 
     @classmethod
-    def retrieve(cls, bind=None, many=None, params={}) -> T:
+    def retrieve(cls, bind=None, many=None, params={}) -> Union[T, TL]:
         assert "method" in params
         if bind is None:
             bind = cls
@@ -54,14 +49,14 @@ class BaseModel(metaclass=ABCMeta):
         response = requests.get(url)
         response.raise_for_status()
         body = response.json(object_pairs_hook=pythonic_variables)
-        obj = cls._bind(bind, body, many)
+        obj: Union[T, TL] = cls._bind(bind, body, many)
         obj.params = params
         return obj
 
     @classmethod
     def submit(
         cls, bind=None, stateful=False, authenticate=False, params={}
-    ) -> T:
+    ) -> Union[T, TL]:
         assert "method" in params
         if bind is None:
             bind = cls
@@ -78,7 +73,8 @@ class BaseModel(metaclass=ABCMeta):
         if stateful:
             from pydrag.lastfm.models.auth import AuthSession
 
-            data.update({"sk": AuthSession.get().key})
+            session = AuthSession.get()
+            data.update({"sk": session.key})
 
         if authenticate or "sk" in data:
             data.update({"api_sig": cls.sign(data)})
@@ -87,12 +83,14 @@ class BaseModel(metaclass=ABCMeta):
         response = requests.post(url, data=data)
         response.raise_for_status()
         body = response.json(object_pairs_hook=pythonic_variables)
-        obj = cls._bind(bind, body)
+        obj: Union[T, TL] = cls._bind(bind, body)
         obj.params = params
         return obj
 
     @classmethod
-    def _bind(cls, bind, body: Any, many: str = None) -> T:
+    def _bind(
+        cls, bind: Type, body: Any, many: Union[str, tuple] = None
+    ) -> Union[T, TL]:
         assert isinstance(body, dict)
 
         if body:
@@ -117,7 +115,7 @@ class BaseModel(metaclass=ABCMeta):
         else:
             obj = bind()
 
-        return obj
+        return obj  # type: ignore
 
     @staticmethod
     def sign(params):
@@ -129,11 +127,13 @@ class BaseModel(metaclass=ABCMeta):
         return md5("".join(signature))
 
 
-@dataclass
+@dataclass(cmp=False)
 class BaseListModel(UserList):
-    data: List[BaseModel] = attrib(factory=list)
+    data: List[BaseModel] = []
+    params: Optional[dict] = attrib(init=False)
+    response: Optional[Response] = attrib(init=False)
 
-    def to_dict(self: T) -> Dict:
+    def to_dict(self) -> Dict:
         """
 
         :return:

@@ -17,20 +17,20 @@ from pydrag.lastfm.models.tag import Tag
 
 @dataclass
 class Corrected(BaseModel):
-    text: str = None
-    code: str = None
-    corrected: int = None
+    text: Optional[str] = None
+    code: Optional[str] = None
+    corrected: Optional[int] = None
 
 
 @dataclass
 class TrackUpdateNowPlaying(BaseModel):
-    album: Corrected = None
-    artist: Corrected = None
-    track: Corrected = None
-    timestamp: int = None
-    ignored_message: Corrected = None
-    album_artist: Corrected = None
-    attr: Attributes = None
+    album: Optional[Corrected] = None
+    artist: Optional[Corrected] = None
+    track: Optional[Corrected] = None
+    timestamp: Optional[int] = None
+    ignored_message: Optional[Corrected] = None
+    album_artist: Optional[Corrected] = None
+    attr: Optional[Attributes] = None
 
 
 @dataclass
@@ -51,38 +51,38 @@ class ScrobbleTrack(BaseModel):
     artist: str
     track: str
     timestamp: int
-    album: str = None
-    context: str = None
-    stream_id: str = None
-    chosen_by_user: bool = None
-    track_number: str = None
-    mbid: str = None
-    album_artist: str = None
-    duration: int = None
+    album: Optional[str] = None
+    context: Optional[str] = None
+    stream_id: Optional[str] = None
+    chosen_by_user: Optional[bool] = None
+    track_number: Optional[str] = None
+    mbid: Optional[str] = None
+    album_artist: Optional[str] = None
+    duration: Optional[int] = None
 
 
 T = TypeVar("T", bound="Track")
-TC = TypeVar("T", bound="TrackCorrection")
+TC = TypeVar("TC", bound="TrackCorrection")
 
 
 @dataclass
 class Track(BaseModel):
     name: str
-    url: str = None
-    artist: Artist = None
-    mbid: str = None
-    image: List[Image] = None
-    playcount: int = None
-    listeners: int = None
-    streamable: str = None
-    duration: str = None
+    artist: Artist
+    url: Optional[str] = None
+    mbid: Optional[str] = None
+    image: Optional[List[Image]] = None
+    playcount: Optional[int] = None
+    listeners: Optional[int] = None
+    streamable: Optional[str] = None
+    duration: Optional[str] = None
     match: Optional[float] = None
-    wiki: Wiki = None
-    album: Album = None
-    top_tags: List[Tag] = None
-    attr: RootAttributes = None
-    date: Date = None
-    loved: int = None
+    wiki: Optional[Wiki] = None
+    album: Optional[Album] = None
+    top_tags: Optional[List[Tag]] = None
+    attr: Optional[RootAttributes] = None
+    date: Optional[Date] = None
+    loved: Optional[int] = None
 
     @classmethod
     def from_dict(cls, data: dict) -> T:
@@ -354,7 +354,7 @@ class Track(BaseModel):
     @classmethod
     def scrobble_tracks(
         cls, tracks: List[ScrobbleTrack], batch_size=10
-    ) -> TrackScrobble:
+    ) -> Optional[TrackScrobble]:
         """
         Split tracks into the desired batch size, with maximum size set to 50
         and send the tracks for processing, I am debating if this even belongs
@@ -423,15 +423,15 @@ class Track(BaseModel):
 
 @dataclass
 class CorrectionAttributes(BaseModel):
-    index: int = None
-    track_corrected: int = None
-    artist_corrected: int = None
+    index: int
+    track_corrected: int
+    artist_corrected: int
 
 
 @dataclass
 class CorrectionTrack(BaseModel):
     attr: CorrectionAttributes
-    track: Track = None
+    track: Track
 
 
 @dataclass

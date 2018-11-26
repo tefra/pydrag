@@ -1,4 +1,4 @@
-from typing import List, TypeVar
+from typing import List, Optional, TypeVar
 
 from attr import dataclass
 
@@ -11,13 +11,13 @@ T = TypeVar("T", bound="Tag")
 @dataclass
 class Tag(BaseModel):
     name: str
-    reach: int = None
-    url: str = None
-    taggings: int = None
-    streamable: int = None
-    count: int = None
-    total: int = None
-    wiki: Wiki = None
+    reach: Optional[int] = None
+    url: Optional[str] = None
+    taggings: Optional[int] = None
+    streamable: Optional[int] = None
+    count: Optional[int] = None
+    total: Optional[int] = None
+    wiki: Optional[Wiki] = None
 
     @classmethod
     def find(cls, name: str, lang: str = None) -> T:

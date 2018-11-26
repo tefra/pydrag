@@ -1,3 +1,5 @@
+from typing import Optional
+
 from attr import dataclass
 
 from pydrag.core import BaseModel
@@ -5,40 +7,40 @@ from pydrag.core import BaseModel
 
 @dataclass
 class Attributes(BaseModel):
-    timestamp: int = None
-    rank: str = None
-    date: str = None
-    ignored: int = None
-    position: int = None
-    accepted: int = None
+    timestamp: Optional[int] = None
+    rank: Optional[str] = None
+    date: Optional[str] = None
+    ignored: Optional[int] = None
+    position: Optional[int] = None
+    accepted: Optional[int] = None
 
 
 @dataclass
 class RootAttributes(BaseModel):
-    tag: str = None
-    page: int = None
-    user: str = None
-    country: str = None
-    total: int = None
-    album: str = None
-    artist: str = None
-    limit: int = None
-    track: str = None
-    total_pages: int = None
-    to_date: str = None
-    from_date: str = None
-    offset: int = None
-    timestamp: int = None
-    rank: str = None
-    date: str = None
-    ignored: int = None
-    position: int = None
-    accepted: int = None
+    tag: Optional[str] = None
+    page: Optional[int] = None
+    user: Optional[str] = None
+    country: Optional[str] = None
+    total: Optional[int] = None
+    album: Optional[str] = None
+    artist: Optional[str] = None
+    limit: Optional[int] = None
+    track: Optional[str] = None
+    total_pages: Optional[int] = None
+    to_date: Optional[str] = None
+    from_date: Optional[str] = None
+    offset: Optional[int] = None
+    timestamp: Optional[int] = None
+    rank: Optional[str] = None
+    date: Optional[str] = None
+    ignored: Optional[int] = None
+    position: Optional[int] = None
+    accepted: Optional[int] = None
 
 
 @dataclass
 class AttrModel(BaseModel):
-    attr: RootAttributes = None
+    attr: Optional[RootAttributes] = None
 
 
 @dataclass
@@ -74,7 +76,7 @@ class Links(BaseModel):
 
 @dataclass
 class Wiki(BaseModel):
-    content: str = None
-    summary: str = None
-    published: str = None
-    links: Links = None
+    content: Optional[str] = None
+    summary: Optional[str] = None
+    published: Optional[str] = None
+    links: Optional[Links] = None

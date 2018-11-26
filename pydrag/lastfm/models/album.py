@@ -1,4 +1,4 @@
-from typing import List, TypeVar
+from typing import List, Optional, TypeVar
 
 from attr import dataclass
 
@@ -32,23 +32,24 @@ class TrackMini(BaseModel):
         """
         from pydrag.lastfm.models.track import Track
 
+        assert self.artist.name is not None
         return Track.find(artist=self.artist.name, track=self.name)
 
 
 @dataclass
 class Album(AttrModel):
-    mbid: str = None
-    name: str = None
-    text: str = None
-    image: List[Image] = None
-    playcount: int = None
-    url: str = None
-    artist: Artist = None
-    listeners: int = None
-    tags: List[Tag] = None
-    streamable: int = None
-    tracks: List[TrackMini] = None
-    wiki: Wiki = None
+    mbid: Optional[str] = None
+    name: Optional[str] = None
+    text: Optional[str] = None
+    image: Optional[List[Image]] = None
+    playcount: Optional[int] = None
+    url: Optional[str] = None
+    artist: Optional[Artist] = None
+    listeners: Optional[int] = None
+    tags: Optional[List[Tag]] = None
+    streamable: Optional[int] = None
+    tracks: Optional[List[TrackMini]] = None
+    wiki: Optional[Wiki] = None
 
     @classmethod
     def from_dict(cls, data: dict):
@@ -64,7 +65,11 @@ class Album(AttrModel):
 
     @classmethod
     def find(
-        cls, artist: str, album: str, user: str = None, lang: str = "en"
+        cls,
+        artist: str,
+        album: str,
+        user: Optional[str] = None,
+        lang: str = "en",
     ) -> T:
         """
         Get the metadata and tracklist for an album on Last.fm.

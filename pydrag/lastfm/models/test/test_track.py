@@ -2,7 +2,7 @@ import time
 from datetime import datetime, timedelta
 
 from pydrag.core import BaseListModel, BaseModel
-from pydrag.lastfm import Artist
+from pydrag.lastfm.models.artist import Artist
 from pydrag.lastfm.models.test import MethodTestCase, fixture
 from pydrag.lastfm.models.track import (
     ScrobbleTrack,

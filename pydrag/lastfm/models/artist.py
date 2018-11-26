@@ -1,4 +1,4 @@
-from typing import List, TypeVar
+from typing import List, Optional, TypeVar
 
 from attr import dataclass
 
@@ -11,8 +11,8 @@ from pydrag.lastfm.models.tag import Tag
 class ArtistMini(BaseModel):
     name: str
     url: str
-    image: List[Image] = None
-    mbid: str = None
+    mbid: Optional[str] = None
+    image: Optional[List[Image]] = None
 
 
 @dataclass
@@ -36,21 +36,21 @@ T = TypeVar("T", bound="Artist")
 
 @dataclass
 class Artist(BaseModel):
-    mbid: str = None
-    name: str = None
-    url: str = None
-    tag_count: int = None
-    listeners: int = None
-    playcount: int = None
-    streamable: str = None
-    image: List[Image] = None
-    match: str = None
-    attr: RootAttributes = None
-    tags: List[Tag] = None
-    bio: Wiki = None
-    on_tour: int = None
-    similar: List[ArtistMini] = None
-    text: str = None
+    name: Optional[str] = None
+    mbid: Optional[str] = None
+    url: Optional[str] = None
+    tag_count: Optional[int] = None
+    listeners: Optional[int] = None
+    playcount: Optional[int] = None
+    streamable: Optional[str] = None
+    image: Optional[List[Image]] = None
+    match: Optional[str] = None
+    attr: Optional[RootAttributes] = None
+    tags: Optional[List[Tag]] = None
+    bio: Optional[Wiki] = None
+    on_tour: Optional[int] = None
+    similar: Optional[List[ArtistMini]] = None
+    text: Optional[str] = None
 
     @classmethod
     def from_dict(cls, data: dict):

@@ -1,4 +1,4 @@
-from typing import List, TypeVar, Union
+from typing import List, Optional, TypeVar, Union
 
 from attr import dataclass
 
@@ -27,9 +27,9 @@ class User(BaseModel):
     age: str
     bootstrap: str
     registered: Date
-    source: str = None
-    real_name: str = None
-    recent_track: Track = None
+    source: Optional[str] = None
+    real_name: Optional[str] = None
+    recent_track: Optional[Track] = None
 
     @classmethod
     def find(cls, username: str) -> T:

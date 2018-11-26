@@ -4,7 +4,7 @@ from attr import dataclass
 
 from pydrag.core import BaseModel
 
-V = TypeVar("V", bound="AuthSession")
+T = TypeVar("T", bound="AuthSession")
 
 
 @dataclass
@@ -14,7 +14,7 @@ class AuthSession(BaseModel):
     subscriber: int
 
     @classmethod
-    def get(cls) -> V:
+    def get(cls) -> "AuthSession":
         """
         Create a web service session for a user.
 

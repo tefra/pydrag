@@ -10,13 +10,13 @@ class Config:
     api_key: str
     api_secret: str
     username: str
-    password: str = attrib(converter=lambda x: not x or md5(x))
+    password: str = attrib(converter=md5)
     api_root_url: str = "https://ws.audioscrobbler.com/2.0/"
 
 
 config = Config(
-    api_key=os.getenv("LASTFM_API_KEY"),
-    api_secret=os.getenv("LASTFM_API_SECRET"),
-    username=os.getenv("LASTFM_USERNAME"),
-    password=os.getenv("LASTFM_PASSWORD"),
+    api_key=os.getenv("LASTFM_API_KEY", "-"),
+    api_secret=os.getenv("LASTFM_API_SECRET", ""),
+    username=os.getenv("LASTFM_USERNAME", ""),
+    password=os.getenv("LASTFM_PASSWORD", ""),
 )
