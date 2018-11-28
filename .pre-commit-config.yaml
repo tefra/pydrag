@@ -8,7 +8,7 @@ repos:
     hooks:
       - id: isort
   - repo: https://github.com/ambv/black
-    rev: stable
+    rev: 18.9b0
     hooks:
       - id: black
         language_version: python3.6
@@ -36,6 +36,6 @@ repos:
         args: ['--in-place', '--pre-summary-newline']
 
   - repo: https://github.com/pre-commit/mirrors-mypy
-    rev: 'master'  # Use the sha / tag you want to point at
+    rev: v0.641
     hooks:
     -   id: mypy
