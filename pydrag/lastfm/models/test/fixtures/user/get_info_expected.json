@@ -1,9 +1,8 @@
 {
-    "playlists": "0",
+    "playlists": 0,
     "playcount": 128549,
     "gender": "n",
     "name": "RJ",
-    "subscriber": "1",
     "url": "https://www.last.fm/user/RJ",
     "country": "United Kingdom",
     "image": [
@@ -24,9 +23,7 @@
             "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
         }
     ],
-    "type": "alum",
-    "age": "0",
-    "bootstrap": "0",
+    "age": 0,
     "registered": {
         "timestamp": 1037793040,
         "text": "1037793040"

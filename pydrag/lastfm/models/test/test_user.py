@@ -11,15 +11,13 @@ class UserTests(MethodTestCase):
             playcount=None,
             gender=None,
             name="rj",
-            subscriber=None,
             url=None,
             country=None,
             image=None,
-            type=None,
             age=None,
-            bootstrap=None,
             registered=None,
         )
+        self.maxDiff = None
         super(UserTests, self).setUp()
 
     @fixture.use_cassette(path="user/get_artist_tracks")

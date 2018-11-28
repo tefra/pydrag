@@ -4,7 +4,6 @@
             "mbid": "CENSORED13d4",
             "name": "Eminem",
             "url": "https://www.last.fm/music/Eminem",
-            "streamable": "0",
             "image": [
                 {
                     "size": "small",
@@ -34,7 +33,6 @@
         {
             "name": "Lil' Wayne",
             "url": "https://www.last.fm/music/Lil%27+Wayne",
-            "streamable": "0",
             "image": [
                 {
                     "size": "small",

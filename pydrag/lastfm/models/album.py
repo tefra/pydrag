@@ -1,4 +1,4 @@
-from typing import List, Optional, TypeVar
+from typing import List, Optional
 
 from attr import dataclass
 
@@ -6,8 +6,6 @@ from pydrag.core import BaseModel
 from pydrag.lastfm.models.artist import Artist
 from pydrag.lastfm.models.common import AttrModel, Image, Wiki
 from pydrag.lastfm.models.tag import Tag
-
-T = TypeVar("T", bound="Album")
 
 
 @dataclass
@@ -20,7 +18,6 @@ class TrackMini(BaseModel):
     name: str
     url: str
     artist: Artist
-    streamable: str
     duration: int
     attr: TrackMiniAttr
 
@@ -38,16 +35,31 @@ class TrackMini(BaseModel):
 
 @dataclass
 class Album(AttrModel):
-    mbid: Optional[str] = None
+    """
+    Last.FM track, chart and geo api client.
+
+    :param name: Artist name/title
+    :param mbid: Musicbrainz ID
+    :param url: Last.fm profile url
+    :param image: List of images
+    :param text: NOIDEA
+    :param playcount: Total artist playcount
+    :param artist: Album artist
+    :param listeners: Total unique listeners
+    :param tags: List of top tags
+    :param tracks: List of album tracks
+    :param wiki: Album wiki information
+    """
+
     name: Optional[str] = None
-    text: Optional[str] = None
-    image: Optional[List[Image]] = None
-    playcount: Optional[int] = None
+    mbid: Optional[str] = None
     url: Optional[str] = None
+    image: Optional[List[Image]] = None
+    text: Optional[str] = None
+    playcount: Optional[int] = None
     artist: Optional[Artist] = None
     listeners: Optional[int] = None
     tags: Optional[List[Tag]] = None
-    streamable: Optional[int] = None
     tracks: Optional[List[TrackMini]] = None
     wiki: Optional[Wiki] = None
 
@@ -70,7 +82,7 @@ class Album(AttrModel):
         album: str,
         user: Optional[str] = None,
         lang: str = "en",
-    ) -> T:
+    ) -> "Album":
         """
         Get the metadata and tracklist for an album on Last.fm.
 
@@ -93,7 +105,9 @@ class Album(AttrModel):
         )
 
     @classmethod
-    def find_by_mbid(cls, mbid: str, user: str = None, lang: str = "en") -> T:
+    def find_by_mbid(
+        cls, mbid: str, user: str = None, lang: str = "en"
+    ) -> "Album":
         """
         Get the metadata and tracklist for an album on Last.fm.
 
@@ -114,7 +128,9 @@ class Album(AttrModel):
         )
 
     @classmethod
-    def search(cls, album: str, limit: int = 50, page: int = 1) -> List[T]:
+    def search(
+        cls, album: str, limit: int = 50, page: int = 1
+    ) -> List["Album"]:
         """
         Search for an album by name.Returns album matches sorted by relevance.
 

@@ -1,4 +1,4 @@
-from typing import List, Optional, TypeVar
+from typing import List, Optional
 
 from attr import dataclass
 
@@ -61,12 +61,28 @@ class ScrobbleTrack(BaseModel):
     duration: Optional[int] = None
 
 
-T = TypeVar("T", bound="Track")
-TC = TypeVar("TC", bound="TrackCorrection")
-
-
 @dataclass
 class Track(BaseModel):
+    """
+    Last.FM track, chart and geo api client.
+
+    :param name: Track name/title
+    :param artist: Artist name
+    :param url: Last.fm profile url
+    :param mbid: Musicbrainz ID
+    :param image: List of images
+    :param playcount: Total track playcount
+    :param listeners: Total unique listeners
+    :param duration: Track duration in seconds, should be int
+    :param match: Search query match weight
+    :param wiki: Track wiki information
+    :param album: Track album information
+    :param top_tags: Top user tags
+    :param attr: Metadata details
+    :param date: Date the user listened or loved this track
+    :param loved: True/False if the track is one of the user's loved ones
+    """
+
     name: str
     artist: Artist
     url: Optional[str] = None
@@ -74,7 +90,6 @@ class Track(BaseModel):
     image: Optional[List[Image]] = None
     playcount: Optional[int] = None
     listeners: Optional[int] = None
-    streamable: Optional[str] = None
     duration: Optional[str] = None
     match: Optional[float] = None
     wiki: Optional[Wiki] = None
@@ -85,7 +100,7 @@ class Track(BaseModel):
     loved: Optional[int] = None
 
     @classmethod
-    def from_dict(cls, data: dict) -> T:
+    def from_dict(cls, data: dict) -> "Track":
         """
         In order to be more consistent than Last.fm api we have to normalize
         the input dictionary to fix a couple of things:
@@ -115,7 +130,7 @@ class Track(BaseModel):
     @classmethod
     def find(
         cls, artist: str, track: str, user: str = None, lang: str = "en"
-    ) -> T:
+    ) -> "Track":
 
         """
         Get the metadata for a track.
@@ -138,7 +153,9 @@ class Track(BaseModel):
         )
 
     @classmethod
-    def find_by_mbid(cls, mbid: str, user: str = None, lang: str = "en") -> T:
+    def find_by_mbid(
+        cls, mbid: str, user: str = None, lang: str = "en"
+    ) -> "Track":
         """
         Get the metadata for a track.
 
@@ -158,7 +175,7 @@ class Track(BaseModel):
         )
 
     @classmethod
-    def get_correction(cls, track: str, artist: str) -> TC:
+    def get_correction(cls, track: str, artist: str) -> "TrackCorrection":
         """
         Use the last.fm corrections data to check whether the supplied track
         has a correction to a canonical track.
@@ -173,7 +190,9 @@ class Track(BaseModel):
         )
 
     @classmethod
-    def search(cls, track: str, limit: int = 50, page: int = 1) -> List[T]:
+    def search(
+        cls, track: str, limit: int = 50, page: int = 1
+    ) -> List["Track"]:
         """
         Search for an track by name. Returns track matches sorted by relevance.
 
@@ -193,7 +212,7 @@ class Track(BaseModel):
     @classmethod
     def get_top_tracks_by_country(
         cls, country: str, limit: int = 50, page: int = 1
-    ) -> List[T]:
+    ) -> List["Track"]:
         """
         :param country: The country to fetch the top tracks.
         :param limit: The number of results to fetch per page.
@@ -212,7 +231,9 @@ class Track(BaseModel):
         )
 
     @classmethod
-    def get_top_tracks_chart(cls, limit: int = 50, page: int = 1) -> List[T]:
+    def get_top_tracks_chart(
+        cls, limit: int = 50, page: int = 1
+    ) -> List["Track"]:
         """
         Get the top tracks chart.
 
@@ -255,7 +276,7 @@ class Track(BaseModel):
             params=dict(method="track.removeTag", track=self.name, tag=tag),
         )
 
-    def get_similar(self, limit: int = 50) -> List[T]:
+    def get_similar(self, limit: int = 50) -> List["Track"]:
         """
         Get all the tracks similar to this track.
 

@@ -1,4 +1,4 @@
-from typing import List, Optional, TypeVar
+from typing import List, Optional
 
 from attr import dataclass
 
@@ -31,18 +31,34 @@ class ArtistCorrection(BaseModel):
     correction: CorrectionArtist
 
 
-T = TypeVar("T", bound="Artist")
-
-
 @dataclass
 class Artist(BaseModel):
+
+    """
+    Last.FM track, chart and geo api client.
+
+    :param name: Artist name/title
+    :param mbid: Musicbrainz ID
+    :param url: Last.fm profile url
+    :param tag_count: Number of tags
+    :param listeners: Total unique listeners
+    :param playcount: Total artist playcount
+    :param image: List of images
+    :param match: Search query match weight
+    :param attr: Metadata details
+    :param tags: List of top tags
+    :param bio: Artist bio information
+    :param on_tour: Artist currently on tour flag should be boolean
+    :param similar: List of similar artists
+    :param text: NOIDEA
+    """
+
     name: Optional[str] = None
     mbid: Optional[str] = None
     url: Optional[str] = None
     tag_count: Optional[int] = None
     listeners: Optional[int] = None
     playcount: Optional[int] = None
-    streamable: Optional[str] = None
     image: Optional[List[Image]] = None
     match: Optional[str] = None
     attr: Optional[RootAttributes] = None
@@ -69,7 +85,7 @@ class Artist(BaseModel):
         return super().from_dict(data)
 
     @classmethod
-    def find(cls, artist: str, user: str = None, lang: str = "en") -> T:
+    def find(cls, artist: str, user: str = None, lang: str = "en") -> "Artist":
         """
         Get the metadata for an artist. Includes biography, truncated at 300
         characters.
@@ -91,7 +107,9 @@ class Artist(BaseModel):
         )
 
     @classmethod
-    def find_by_mbid(cls, mbid: str, user: str = None, lang: str = "en") -> T:
+    def find_by_mbid(
+        cls, mbid: str, user: str = None, lang: str = "en"
+    ) -> "Artist":
         """
         Get the metadata for an artist. Includes biography, truncated at 300
         characters.
@@ -113,7 +131,9 @@ class Artist(BaseModel):
         )
 
     @classmethod
-    def search(cls, artist: str, limit: int = 50, page: int = 1) -> List[T]:
+    def search(
+        cls, artist: str, limit: int = 50, page: int = 1
+    ) -> List["Artist"]:
         """
         Search for an artist by name. Returns artist matches sorted by
         relevance.
@@ -134,7 +154,7 @@ class Artist(BaseModel):
     @classmethod
     def get_top_artists_by_country(
         cls, country: str, limit: int = 50, page: int = 1
-    ) -> List[T]:
+    ) -> List["Artist"]:
         """
         :param country: The country name to fetch results.
         :param limit: The number of results to fetch per page.
@@ -153,7 +173,9 @@ class Artist(BaseModel):
         )
 
     @classmethod
-    def get_top_artists_chart(cls, limit: int = 50, page: int = 1) -> List[T]:
+    def get_top_artists_chart(
+        cls, limit: int = 50, page: int = 1
+    ) -> List["Artist"]:
         """
         Get the top artists chart.
 
@@ -207,7 +229,7 @@ class Artist(BaseModel):
             params=dict(method="artist.getCorrection", artist=self.name),
         )
 
-    def get_similar(self, limit: int = 50) -> List[T]:
+    def get_similar(self, limit: int = 50) -> List["Artist"]:
         """
         Get all the artists similar to this artist.
 

@@ -169,7 +169,6 @@ def pythonic_variables(data):
         "albumArtist": "album_artist",
         "streamId": "stream_id",
         "albumArtist": "album_artist",
-        "scrobblesource": "source",
         "realname": "real_name",
         "recenttrack": "recent_track",
         "recenttrack": "recent_track",
@@ -178,4 +177,10 @@ def pythonic_variables(data):
         "title": "name",
     }
 
-    return {map.get(key, key): value for key, value in data}
+    """
+    A list of fields that dont make make sense in the api responses
+    Either they don't always have the same value type or have a dev message
+    """
+    fixme = ["subscriber", "type", "scrobblesource", "bootstrap", "streamable"]
+
+    return {map.get(k, k): v for k, v in data if k not in fixme}

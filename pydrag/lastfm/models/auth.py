@@ -1,17 +1,12 @@
-from typing import TypeVar
-
 from attr import dataclass
 
 from pydrag.core import BaseModel
-
-T = TypeVar("T", bound="AuthSession")
 
 
 @dataclass
 class AuthSession(BaseModel):
     key: str
     name: str
-    subscriber: int
 
     @classmethod
     def get(cls) -> "AuthSession":

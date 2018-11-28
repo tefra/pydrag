@@ -1,11 +1,10 @@
 {
     "data": [
         {
-            "playlists": "0",
+            "playlists": 0,
             "playcount": 316299,
             "gender": "n",
             "name": "Babs_05",
-            "subscriber": "FIXME",
             "url": "https://www.last.fm/user/Babs_05",
             "country": "",
             "image": [
@@ -26,14 +25,11 @@
                     "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
-            "type": "FIXME",
-            "age": "0",
-            "bootstrap": "0",
+            "age": 0,
             "registered": {
                 "timestamp": 1131903141,
                 "text": "2005-11-13 17:32:21"
             },
-            "source": "FIXME",
             "real_name": "\u2605\u2665\u2605 Badass Mod from the Future - Last Seen Tomorrow Afternoon\u2605\u2665\u2605",
             "recent_track": {
                 "artist": {
@@ -56,11 +52,10 @@
             }
         },
         {
-            "playlists": "0",
+            "playlists": 0,
             "playcount": 34849,
             "gender": "n",
             "name": "franhale",
-            "subscriber": "FIXME",
             "url": "https://www.last.fm/user/franhale",
             "country": "United Kingdom",
             "image": [
@@ -81,14 +76,11 @@
                     "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
-            "type": "FIXME",
-            "age": "0",
-            "bootstrap": "0",
+            "age": 0,
             "registered": {
                 "timestamp": 1295373579,
                 "text": "2011-01-18 17:59:39"
             },
-            "source": "FIXME",
             "real_name": "Fran",
             "recent_track": {
                 "artist": {
@@ -111,11 +103,10 @@
             }
         },
         {
-            "playlists": "0",
+            "playlists": 0,
             "playcount": 99954,
             "gender": "n",
             "name": "eartle",
-            "subscriber": "FIXME",
             "url": "https://www.last.fm/user/eartle",
             "country": "United Kingdom",
             "image": [
@@ -136,14 +127,11 @@
                     "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
-            "type": "FIXME",
-            "age": "0",
-            "bootstrap": "0",
+            "age": 0,
             "registered": {
                 "timestamp": 1189696970,
                 "text": "2007-09-13 15:22:50"
             },
-            "source": "FIXME",
             "real_name": "Michael Coffey",
             "recent_track": {
                 "artist": {
@@ -166,11 +154,10 @@
             }
         },
         {
-            "playlists": "0",
+            "playlists": 0,
             "playcount": 170696,
             "gender": "n",
             "name": "massdosage",
-            "subscriber": "FIXME",
             "url": "https://www.last.fm/user/massdosage",
             "country": "United Kingdom",
             "image": [
@@ -191,22 +178,18 @@
                     "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
-            "type": "FIXME",
-            "age": "0",
-            "bootstrap": "0",
+            "age": 0,
             "registered": {
                 "timestamp": 1178878400,
                 "text": "2007-05-11 10:13:20"
             },
-            "source": "FIXME",
             "real_name": "Mass Dosage"
         },
         {
-            "playlists": "0",
+            "playlists": 0,
             "playcount": 81065,
             "gender": "n",
             "name": "Knapster01",
-            "subscriber": "FIXME",
             "url": "https://www.last.fm/user/Knapster01",
             "country": "United Kingdom",
             "image": [
@@ -227,22 +210,18 @@
                     "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
-            "type": "FIXME",
-            "age": "0",
-            "bootstrap": "0",
+            "age": 0,
             "registered": {
                 "timestamp": 1253887486,
                 "text": "2009-09-25 14:04:46"
             },
-            "source": "FIXME",
             "real_name": "Matt Knapman"
         },
         {
-            "playlists": "0",
+            "playlists": 0,
             "playcount": 47454,
             "gender": "n",
             "name": "jonocole",
-            "subscriber": "FIXME",
             "url": "https://www.last.fm/user/jonocole",
             "country": "United Kingdom",
             "image": [
@@ -263,14 +242,11 @@
                     "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
-            "type": "FIXME",
-            "age": "0",
-            "bootstrap": "0",
+            "age": 0,
             "registered": {
                 "timestamp": 1149249486,
                 "text": "2006-06-02 11:58:06"
             },
-            "source": "FIXME",
             "real_name": "Jono Cole",
             "recent_track": {
                 "artist": {
@@ -293,11 +269,10 @@
             }
         },
         {
-            "playlists": "0",
+            "playlists": 0,
             "playcount": 20028,
             "gender": "n",
             "name": "isaac",
-            "subscriber": "FIXME",
             "url": "https://www.last.fm/user/isaac",
             "country": "United Kingdom",
             "image": [
@@ -318,14 +293,11 @@
                     "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
-            "type": "FIXME",
-            "age": "0",
-            "bootstrap": "0",
+            "age": 0,
             "registered": {
                 "timestamp": 1043531232,
                 "text": "2003-01-25 21:47:12"
             },
-            "source": "FIXME",
             "real_name": "Isaac",
             "recent_track": {
                 "artist": {
@@ -348,11 +320,10 @@
             }
         },
         {
-            "playlists": "0",
+            "playlists": 0,
             "playcount": 1858,
             "gender": "n",
             "name": "lobsterclaw",
-            "subscriber": "FIXME",
             "url": "https://www.last.fm/user/lobsterclaw",
             "country": "United Kingdom",
             "image": [
@@ -373,14 +344,11 @@
                     "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
-            "type": "FIXME",
-            "age": "0",
-            "bootstrap": "0",
+            "age": 0,
             "registered": {
                 "timestamp": 1149267624,
                 "text": "2006-06-02 17:00:24"
             },
-            "source": "FIXME",
             "real_name": "Laura Weiss",
             "recent_track": {
                 "artist": {
@@ -403,11 +371,10 @@
             }
         },
         {
-            "playlists": "0",
+            "playlists": 0,
             "playcount": 11928,
             "gender": "n",
             "name": "jajo",
-            "subscriber": "FIXME",
             "url": "https://www.last.fm/user/jajo",
             "country": "",
             "image": [
@@ -428,14 +395,11 @@
                     "text": ""
                 }
             ],
-            "type": "FIXME",
-            "age": "0",
-            "bootstrap": "0",
+            "age": 0,
             "registered": {
                 "timestamp": 1058918400,
                 "text": "2003-07-23 00:00:00"
             },
-            "source": "FIXME",
             "recent_track": {
                 "artist": {
                     "mbid": "",
@@ -457,11 +421,10 @@
             }
         },
         {
-            "playlists": "0",
+            "playlists": 0,
             "playcount": 62580,
             "gender": "n",
             "name": "mremond",
-            "subscriber": "FIXME",
             "url": "https://www.last.fm/user/mremond",
             "country": "France",
             "image": [
@@ -482,14 +445,11 @@
                     "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
-            "type": "FIXME",
-            "age": "0",
-            "bootstrap": "0",
+            "age": 0,
             "registered": {
                 "timestamp": 1205656168,
                 "text": "2008-03-16 08:29:28"
             },
-            "source": "FIXME",
             "real_name": "Micka\u00ebl",
             "recent_track": {
                 "artist": {
@@ -512,11 +472,10 @@
             }
         },
         {
-            "playlists": "0",
+            "playlists": 0,
             "playcount": 10013,
             "gender": "n",
             "name": "Orlenay",
-            "subscriber": "FIXME",
             "url": "https://www.last.fm/user/Orlenay",
             "country": "United States",
             "image": [
@@ -537,14 +496,11 @@
                     "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
-            "type": "FIXME",
-            "age": "0",
-            "bootstrap": "0",
+            "age": 0,
             "registered": {
                 "timestamp": 1204912892,
                 "text": "2008-03-07 18:01:32"
             },
-            "source": "FIXME",
             "real_name": "Orlena",
             "recent_track": {
                 "artist": {
@@ -567,11 +523,10 @@
             }
         },
         {
-            "playlists": "0",
+            "playlists": 0,
             "playcount": 114736,
             "gender": "n",
             "name": "schlagschnitzel",
-            "subscriber": "FIXME",
             "url": "https://www.last.fm/user/schlagschnitzel",
             "country": "United Kingdom",
             "image": [
@@ -592,14 +547,11 @@
                     "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
-            "type": "FIXME",
-            "age": "0",
-            "bootstrap": "0",
+            "age": 0,
             "registered": {
                 "timestamp": 1109532368,
                 "text": "2005-02-27 19:26:08"
             },
-            "source": "FIXME",
             "real_name": "Annett",
             "recent_track": {
                 "artist": {
@@ -622,11 +574,10 @@
             }
         },
         {
-            "playlists": "0",
+            "playlists": 0,
             "playcount": 30932,
             "gender": "n",
             "name": "Edouard",
-            "subscriber": "FIXME",
             "url": "https://www.last.fm/user/Edouard",
             "country": "France",
             "image": [
@@ -647,14 +598,11 @@
                     "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
-            "type": "FIXME",
-            "age": "0",
-            "bootstrap": "0",
+            "age": 0,
             "registered": {
                 "timestamp": 1074004263,
                 "text": "2004-01-13 14:31:03"
             },
-            "source": "FIXME",
             "real_name": "\u00c9douard",
             "recent_track": {
                 "artist": {
@@ -677,11 +625,10 @@
             }
         },
         {
-            "playlists": "0",
+            "playlists": 0,
             "playcount": 29796,
             "gender": "n",
             "name": "naniel",
-            "subscriber": "FIXME",
             "url": "https://www.last.fm/user/naniel",
             "country": "United Kingdom",
             "image": [
@@ -702,14 +649,11 @@
                     "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
-            "type": "FIXME",
-            "age": "0",
-            "bootstrap": "0",
+            "age": 0,
             "registered": {
                 "timestamp": 1149200023,
                 "text": "2006-06-01 22:13:43"
             },
-            "source": "FIXME",
             "real_name": "Lyndsey",
             "recent_track": {
                 "artist": {
@@ -732,11 +676,10 @@
             }
         },
         {
-            "playlists": "0",
+            "playlists": 0,
             "playcount": 38735,
             "gender": "n",
             "name": "dunk",
-            "subscriber": "FIXME",
             "url": "https://www.last.fm/user/dunk",
             "country": "United Kingdom",
             "image": [
@@ -757,14 +700,11 @@
                     "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
-            "type": "FIXME",
-            "age": "0",
-            "bootstrap": "0",
+            "age": 0,
             "registered": {
                 "timestamp": 1116892800,
                 "text": "2003-07-17 00:00:00"
             },
-            "source": "FIXME",
             "real_name": "Duncan",
             "recent_track": {
                 "artist": {
@@ -787,11 +727,10 @@
             }
         },
         {
-            "playlists": "0",
+            "playlists": 0,
             "playcount": 26530,
             "gender": "n",
             "name": "RUPERT",
-            "subscriber": "FIXME",
             "url": "https://www.last.fm/user/RUPERT",
             "country": "United Kingdom",
             "image": [
@@ -812,14 +751,11 @@
                     "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
-            "type": "FIXME",
-            "age": "0",
-            "bootstrap": "0",
+            "age": 0,
             "registered": {
                 "timestamp": 1042848000,
                 "text": "2003-01-18 00:00:00"
             },
-            "source": "FIXME",
             "recent_track": {
                 "artist": {
                     "mbid": "",
@@ -841,11 +777,10 @@
             }
         },
         {
-            "playlists": "0",
+            "playlists": 0,
             "playcount": 89874,
             "gender": "n",
             "name": "mxcl",
-            "subscriber": "FIXME",
             "url": "https://www.last.fm/user/mxcl",
             "country": "United Kingdom",
             "image": [
@@ -866,14 +801,11 @@
                     "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
-            "type": "FIXME",
-            "age": "0",
-            "bootstrap": "0",
+            "age": 0,
             "registered": {
                 "timestamp": 1101438942,
                 "text": "2004-11-26 03:15:42"
             },
-            "source": "FIXME",
             "real_name": "Max Howell",
             "recent_track": {
                 "artist": {
@@ -896,11 +828,10 @@
             }
         },
         {
-            "playlists": "0",
+            "playlists": 0,
             "playcount": 66835,
             "gender": "n",
             "name": "jwheare",
-            "subscriber": "FIXME",
             "url": "https://www.last.fm/user/jwheare",
             "country": "United Kingdom",
             "image": [
@@ -921,14 +852,11 @@
                     "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
-            "type": "FIXME",
-            "age": "0",
-            "bootstrap": "0",
+            "age": 0,
             "registered": {
                 "timestamp": 1102157209,
                 "text": "2004-12-04 10:46:49"
             },
-            "source": "FIXME",
             "real_name": "James Wheare",
             "recent_track": {
                 "artist": {
@@ -951,11 +879,10 @@
             }
         },
         {
-            "playlists": "0",
+            "playlists": 0,
             "playcount": 77575,
             "gender": "n",
             "name": "nancyvw",
-            "subscriber": "FIXME",
             "url": "https://www.last.fm/user/nancyvw",
             "country": "United Kingdom",
             "image": [
@@ -976,14 +903,11 @@
                     "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
-            "type": "FIXME",
-            "age": "0",
-            "bootstrap": "0",
+            "age": 0,
             "registered": {
                 "timestamp": 1181561307,
                 "text": "2007-06-11 11:28:27"
             },
-            "source": "FIXME",
             "real_name": "Nancy Walker",
             "recent_track": {
                 "artist": {
@@ -1006,11 +930,10 @@
             }
         },
         {
-            "playlists": "0",
+            "playlists": 0,
             "playcount": 75870,
             "gender": "n",
             "name": "underpangs",
-            "subscriber": "FIXME",
             "url": "https://www.last.fm/user/underpangs",
             "country": "United Kingdom",
             "image": [
@@ -1031,14 +954,11 @@
                     "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
-            "type": "FIXME",
-            "age": "0",
-            "bootstrap": "0",
+            "age": 0,
             "registered": {
                 "timestamp": 1073173934,
                 "text": "2004-01-03 23:52:14"
             },
-            "source": "FIXME",
             "real_name": "David Singleton",
             "recent_track": {
                 "artist": {
@@ -1061,11 +981,10 @@
             }
         },
         {
-            "playlists": "0",
+            "playlists": 0,
             "playcount": 66410,
             "gender": "n",
             "name": "p_wheel",
-            "subscriber": "FIXME",
             "url": "https://www.last.fm/user/p_wheel",
             "country": "United Kingdom",
             "image": [
@@ -1086,14 +1005,11 @@
                     "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
-            "type": "FIXME",
-            "age": "0",
-            "bootstrap": "0",
+            "age": 0,
             "registered": {
                 "timestamp": 1038322223,
                 "text": "2002-11-26 14:50:23"
             },
-            "source": "FIXME",
             "real_name": "Paul Wheeler",
             "recent_track": {
                 "artist": {
@@ -1116,11 +1032,10 @@
             }
         },
         {
-            "playlists": "0",
+            "playlists": 0,
             "playcount": 222696,
             "gender": "n",
             "name": "spietsch",
-            "subscriber": "FIXME",
             "url": "https://www.last.fm/user/spietsch",
             "country": "Switzerland",
             "image": [
@@ -1141,14 +1056,11 @@
                     "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
-            "type": "FIXME",
-            "age": "0",
-            "bootstrap": "0",
+            "age": 0,
             "registered": {
                 "timestamp": 1056625372,
                 "text": "2003-06-26 11:02:52"
             },
-            "source": "FIXME",
             "real_name": "Sebastian Pietsch",
             "recent_track": {
                 "artist": {
@@ -1171,11 +1083,10 @@
             }
         },
         {
-            "playlists": "0",
+            "playlists": 0,
             "playcount": 16141,
             "gender": "n",
             "name": "musicmobs",
-            "subscriber": "FIXME",
             "url": "https://www.last.fm/user/musicmobs",
             "country": "United States",
             "image": [
@@ -1196,14 +1107,11 @@
                     "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
-            "type": "FIXME",
-            "age": "0",
-            "bootstrap": "0",
+            "age": 0,
             "registered": {
                 "timestamp": 1050964125,
                 "text": "2004-10-11 01:16:28"
             },
-            "source": "FIXME",
             "real_name": "Toby Padilla",
             "recent_track": {
                 "artist": {
@@ -1226,11 +1134,10 @@
             }
         },
         {
-            "playlists": "0",
+            "playlists": 0,
             "playcount": 171880,
             "gender": "n",
             "name": "Schrollum",
-            "subscriber": "FIXME",
             "url": "https://www.last.fm/user/Schrollum",
             "country": "",
             "image": [
@@ -1251,21 +1158,17 @@
                     "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
-            "type": "FIXME",
-            "age": "0",
-            "bootstrap": "0",
+            "age": 0,
             "registered": {
                 "timestamp": 1081515284,
                 "text": "2004-04-09 12:54:44"
-            },
-            "source": "FIXME"
+            }
         },
         {
-            "playlists": "0",
+            "playlists": 0,
             "playcount": 66481,
             "gender": "n",
             "name": "luke_10",
-            "subscriber": "FIXME",
             "url": "https://www.last.fm/user/luke_10",
             "country": "Australia",
             "image": [
@@ -1286,14 +1189,11 @@
                     "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
-            "type": "FIXME",
-            "age": "0",
-            "bootstrap": "0",
+            "age": 0,
             "registered": {
                 "timestamp": 1187266835,
                 "text": "2007-08-16 12:20:35"
             },
-            "source": "FIXME",
             "real_name": "Luke Walkey",
             "recent_track": {
                 "artist": {
@@ -1316,11 +1216,10 @@
             }
         },
         {
-            "playlists": "0",
+            "playlists": 0,
             "playcount": 83299,
             "gender": "n",
             "name": "tgwizard",
-            "subscriber": "FIXME",
             "url": "https://www.last.fm/user/tgwizard",
             "country": "Sweden",
             "image": [
@@ -1341,14 +1240,11 @@
                     "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
-            "type": "FIXME",
-            "age": "0",
-            "bootstrap": "0",
+            "age": 0,
             "registered": {
                 "timestamp": 1163677779,
                 "text": "2006-11-16 11:49:39"
             },
-            "source": "FIXME",
             "real_name": "Adam Renberg",
             "recent_track": {
                 "artist": {
@@ -1371,11 +1267,10 @@
             }
         },
         {
-            "playlists": "0",
+            "playlists": 0,
             "playcount": 9462,
             "gender": "n",
             "name": "pkeanecbs",
-            "subscriber": "FIXME",
             "url": "https://www.last.fm/user/pkeanecbs",
             "country": "United States",
             "image": [
@@ -1396,14 +1291,11 @@
                     "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
-            "type": "FIXME",
-            "age": "0",
-            "bootstrap": "0",
+            "age": 0,
             "registered": {
                 "timestamp": 1174612864,
                 "text": "2007-03-23 01:21:04"
             },
-            "source": "FIXME",
             "recent_track": {
                 "artist": {
                     "mbid": "",
@@ -1425,11 +1317,10 @@
             }
         },
         {
-            "playlists": "0",
+            "playlists": 0,
             "playcount": 93804,
             "gender": "n",
             "name": "Roelven",
-            "subscriber": "FIXME",
             "url": "https://www.last.fm/user/Roelven",
             "country": "Germany",
             "image": [
@@ -1450,14 +1341,11 @@
                     "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
-            "type": "FIXME",
-            "age": "0",
-            "bootstrap": "0",
+            "age": 0,
             "registered": {
                 "timestamp": 1160572285,
                 "text": "2006-10-11 13:11:25"
             },
-            "source": "FIXME",
             "real_name": "Roel van der Ven",
             "recent_track": {
                 "artist": {
@@ -1480,11 +1368,10 @@
             }
         },
         {
-            "playlists": "0",
+            "playlists": 0,
             "playcount": 5900,
             "gender": "n",
             "name": "BecFrost",
-            "subscriber": "FIXME",
             "url": "https://www.last.fm/user/BecFrost",
             "country": "United Kingdom",
             "image": [
@@ -1505,14 +1392,11 @@
                     "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
-            "type": "FIXME",
-            "age": "0",
-            "bootstrap": "0",
+            "age": 0,
             "registered": {
                 "timestamp": 1176855503,
                 "text": "2007-04-18 00:18:23"
             },
-            "source": "FIXME",
             "recent_track": {
                 "artist": {
                     "mbid": "",
@@ -1534,11 +1418,10 @@
             }
         },
         {
-            "playlists": "0",
+            "playlists": 0,
             "playcount": 53016,
             "gender": "n",
             "name": "gracehn001",
-            "subscriber": "FIXME",
             "url": "https://www.last.fm/user/gracehn001",
             "country": "United Kingdom",
             "image": [
@@ -1559,14 +1442,11 @@
                     "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
-            "type": "FIXME",
-            "age": "0",
-            "bootstrap": "0",
+            "age": 0,
             "registered": {
                 "timestamp": 1168189467,
                 "text": "2007-01-07 17:04:27"
             },
-            "source": "FIXME",
             "recent_track": {
                 "artist": {
                     "mbid": "",
@@ -1588,11 +1468,10 @@
             }
         },
         {
-            "playlists": "0",
+            "playlists": 0,
             "playcount": 18505,
             "gender": "n",
             "name": "saulklein",
-            "subscriber": "FIXME",
             "url": "https://www.last.fm/user/saulklein",
             "country": "United Kingdom",
             "image": [
@@ -1613,14 +1492,11 @@
                     "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
-            "type": "FIXME",
-            "age": "0",
-            "bootstrap": "0",
+            "age": 0,
             "registered": {
                 "timestamp": 1101118480,
                 "text": "2004-11-22 10:14:40"
             },
-            "source": "FIXME",
             "real_name": "saul klein",
             "recent_track": {
                 "artist": {
@@ -1643,11 +1519,10 @@
             }
         },
         {
-            "playlists": "0",
+            "playlists": 0,
             "playcount": 129262,
             "gender": "n",
             "name": "arrdis",
-            "subscriber": "FIXME",
             "url": "https://www.last.fm/user/arrdis",
             "country": "Sweden",
             "image": [
@@ -1668,14 +1543,11 @@
                     "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
-            "type": "FIXME",
-            "age": "0",
-            "bootstrap": "0",
+            "age": 0,
             "registered": {
                 "timestamp": 1155054846,
                 "text": "2006-08-08 16:34:06"
             },
-            "source": "FIXME",
             "real_name": "Ingrid",
             "recent_track": {
                 "artist": {
@@ -1698,11 +1570,10 @@
             }
         },
         {
-            "playlists": "0",
+            "playlists": 0,
             "playcount": 5053,
             "gender": "n",
             "name": "jarvis",
-            "subscriber": "FIXME",
             "url": "https://www.last.fm/user/jarvis",
             "country": "United Kingdom",
             "image": [
@@ -1723,14 +1594,11 @@
                     "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
-            "type": "FIXME",
-            "age": "0",
-            "bootstrap": "0",
+            "age": 0,
             "registered": {
                 "timestamp": 1038322313,
                 "text": "2002-11-26 14:51:53"
             },
-            "source": "FIXME",
             "real_name": "Lunchbox",
             "recent_track": {
                 "artist": {
@@ -1753,11 +1621,10 @@
             }
         },
         {
-            "playlists": "0",
+            "playlists": 0,
             "playcount": 96159,
             "gender": "n",
             "name": "fascinated",
-            "subscriber": "FIXME",
             "url": "https://www.last.fm/user/fascinated",
             "country": "United States",
             "image": [
@@ -1778,14 +1645,11 @@
                     "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
-            "type": "FIXME",
-            "age": "0",
-            "bootstrap": "0",
+            "age": 0,
             "registered": {
                 "timestamp": 1128376466,
                 "text": "2005-10-03 21:54:26"
             },
-            "source": "FIXME",
             "real_name": "Anthony V",
             "recent_track": {
                 "artist": {
@@ -1808,11 +1672,10 @@
             }
         },
         {
-            "playlists": "0",
+            "playlists": 0,
             "playcount": 93261,
             "gender": "n",
             "name": "HawkeVIPER",
-            "subscriber": "FIXME",
             "url": "https://www.last.fm/user/HawkeVIPER",
             "country": "United Kingdom",
             "image": [
@@ -1833,14 +1696,11 @@
                     "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
-            "type": "FIXME",
-            "age": "0",
-            "bootstrap": "0",
+            "age": 0,
             "registered": {
                 "timestamp": 1097014614,
                 "text": "2004-10-05 22:16:54"
             },
-            "source": "FIXME",
             "real_name": "Miss Ann Thrope",
             "recent_track": {
                 "artist": {
@@ -1863,11 +1723,10 @@
             }
         },
         {
-            "playlists": "0",
+            "playlists": 0,
             "playcount": 1170,
             "gender": "n",
             "name": "marquezmj",
-            "subscriber": "FIXME",
             "url": "https://www.last.fm/user/marquezmj",
             "country": "",
             "image": [
@@ -1888,14 +1747,11 @@
                     "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
-            "type": "FIXME",
-            "age": "0",
-            "bootstrap": "0",
+            "age": 0,
             "registered": {
                 "timestamp": 1169575898,
                 "text": "2007-01-23 18:11:38"
             },
-            "source": "FIXME",
             "recent_track": {
                 "artist": {
                     "mbid": "",
@@ -1917,11 +1773,10 @@
             }
         },
         {
-            "playlists": "0",
+            "playlists": 0,
             "playcount": 80507,
             "gender": "n",
             "name": "julians",
-            "subscriber": "FIXME",
             "url": "https://www.last.fm/user/julians",
             "country": "Germany",
             "image": [
@@ -1942,14 +1797,11 @@
                     "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
-            "type": "FIXME",
-            "age": "0",
-            "bootstrap": "0",
+            "age": 0,
             "registered": {
                 "timestamp": 1108817161,
                 "text": "2005-02-19 12:46:01"
             },
-            "source": "FIXME",
             "real_name": "\u266b Julian Stahnke",
             "recent_track": {
                 "artist": {
@@ -1972,11 +1824,10 @@
             }
         },
         {
-            "playlists": "0",
+            "playlists": 0,
             "playcount": 74064,
             "gender": "n",
             "name": "david",
-            "subscriber": "FIXME",
             "url": "https://www.last.fm/user/david",
             "country": "Canada",
             "image": [
@@ -1997,14 +1848,11 @@
                     "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
-            "type": "FIXME",
-            "age": "0",
-            "bootstrap": "0",
+            "age": 0,
             "registered": {
                 "timestamp": 1154528131,
                 "text": "2006-08-02 14:15:31"
             },
-            "source": "FIXME",
             "real_name": "David",
             "recent_track": {
                 "artist": {
@@ -2027,11 +1875,10 @@
             }
         },
         {
-            "playlists": "0",
+            "playlists": 0,
             "playcount": 69009,
             "gender": "n",
             "name": "pellitero",
-            "subscriber": "FIXME",
             "url": "https://www.last.fm/user/pellitero",
             "country": "United Kingdom",
             "image": [
@@ -2052,14 +1899,11 @@
                     "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
-            "type": "FIXME",
-            "age": "0",
-            "bootstrap": "0",
+            "age": 0,
             "registered": {
                 "timestamp": 1161590672,
                 "text": "2006-10-23 08:04:32"
             },
-            "source": "FIXME",
             "recent_track": {
                 "artist": {
                     "mbid": "",
@@ -2081,11 +1925,10 @@
             }
         },
         {
-            "playlists": "0",
+            "playlists": 0,
             "playcount": 11152,
             "gender": "n",
             "name": "claoi",
-            "subscriber": "FIXME",
             "url": "https://www.last.fm/user/claoi",
             "country": "Italy",
             "image": [
@@ -2106,14 +1949,11 @@
                     "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
-            "type": "FIXME",
-            "age": "0",
-            "bootstrap": "0",
+            "age": 0,
             "registered": {
                 "timestamp": 1164319122,
                 "text": "2006-11-23 21:58:42"
             },
-            "source": "FIXME",
             "real_name": "Claudia",
             "recent_track": {
                 "artist": {
@@ -2136,11 +1976,10 @@
             }
         },
         {
-            "playlists": "0",
+            "playlists": 0,
             "playcount": 43762,
             "gender": "n",
             "name": "grazziee",
-            "subscriber": "FIXME",
             "url": "https://www.last.fm/user/grazziee",
             "country": "Belgium",
             "image": [
@@ -2161,14 +2000,11 @@
                     "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
-            "type": "FIXME",
-            "age": "0",
-            "bootstrap": "0",
+            "age": 0,
             "registered": {
                 "timestamp": 1156770844,
                 "text": "2006-08-28 13:14:04"
             },
-            "source": "FIXME",
             "real_name": "Graziela Pancheri",
             "recent_track": {
                 "artist": {
@@ -2191,11 +2027,10 @@
             }
         },
         {
-            "playlists": "0",
+            "playlists": 0,
             "playcount": 4732,
             "gender": "n",
             "name": "clairewkyb",
-            "subscriber": "FIXME",
             "url": "https://www.last.fm/user/clairewkyb",
             "country": "United Kingdom",
             "image": [
@@ -2216,14 +2051,11 @@
                     "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
-            "type": "FIXME",
-            "age": "0",
-            "bootstrap": "0",
+            "age": 0,
             "registered": {
                 "timestamp": 1156444135,
                 "text": "2006-08-24 18:28:55"
             },
-            "source": "FIXME",
             "real_name": "Claire Levy",
             "recent_track": {
                 "artist": {
@@ -2246,11 +2078,10 @@
             }
         },
         {
-            "playlists": "0",
+            "playlists": 0,
             "playcount": 46942,
             "gender": "n",
             "name": "lumberjack",
-            "subscriber": "FIXME",
             "url": "https://www.last.fm/user/lumberjack",
             "country": "Germany",
             "image": [
@@ -2271,14 +2102,11 @@
                     "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
-            "type": "FIXME",
-            "age": "0",
-            "bootstrap": "0",
+            "age": 0,
             "registered": {
                 "timestamp": 1103006475,
                 "text": "2004-12-14 06:41:15"
             },
-            "source": "FIXME",
             "real_name": "Stefan Baumschlager",
             "recent_track": {
                 "artist": {
@@ -2301,11 +2129,10 @@
             }
         },
         {
-            "playlists": "0",
+            "playlists": 0,
             "playcount": 103278,
             "gender": "n",
             "name": "foreverautumn",
-            "subscriber": "FIXME",
             "url": "https://www.last.fm/user/foreverautumn",
             "country": "United Kingdom",
             "image": [
@@ -2326,14 +2153,11 @@
                     "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
-            "type": "FIXME",
-            "age": "0",
-            "bootstrap": "0",
+            "age": 0,
             "registered": {
                 "timestamp": 1156681361,
                 "text": "2006-08-27 12:22:41"
             },
-            "source": "FIXME",
             "real_name": "Laura",
             "recent_track": {
                 "artist": {
@@ -2356,11 +2180,10 @@
             }
         },
         {
-            "playlists": "0",
+            "playlists": 0,
             "playcount": 173395,
             "gender": "n",
             "name": "Yllona",
-            "subscriber": "FIXME",
             "url": "https://www.last.fm/user/Yllona",
             "country": "United States",
             "image": [
@@ -2381,14 +2204,11 @@
                     "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
-            "type": "FIXME",
-            "age": "0",
-            "bootstrap": "0",
+            "age": 0,
             "registered": {
                 "timestamp": 1110143018,
                 "text": "2005-03-06 21:03:38"
             },
-            "source": "FIXME",
             "real_name": "Yllona",
             "recent_track": {
                 "artist": {
@@ -2411,11 +2231,10 @@
             }
         },
         {
-            "playlists": "0",
+            "playlists": 0,
             "playcount": 22395,
             "gender": "n",
             "name": "cakemix",
-            "subscriber": "FIXME",
             "url": "https://www.last.fm/user/cakemix",
             "country": "United Kingdom",
             "image": [
@@ -2436,22 +2255,18 @@
                     "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
-            "type": "FIXME",
-            "age": "0",
-            "bootstrap": "0",
+            "age": 0,
             "registered": {
                 "timestamp": 1082025256,
                 "text": "2004-04-15 10:34:16"
             },
-            "source": "FIXME",
             "real_name": "cherie matrix-holt"
         },
         {
-            "playlists": "0",
+            "playlists": 0,
             "playcount": 90953,
             "gender": "n",
             "name": "Jonty",
-            "subscriber": "FIXME",
             "url": "https://www.last.fm/user/Jonty",
             "country": "United Kingdom",
             "image": [
@@ -2472,14 +2287,11 @@
                     "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
-            "type": "FIXME",
-            "age": "0",
-            "bootstrap": "0",
+            "age": 0,
             "registered": {
                 "timestamp": 1078663450,
                 "text": "2004-03-07 12:44:10"
             },
-            "source": "FIXME",
             "real_name": "Jonty",
             "recent_track": {
                 "artist": {
@@ -2502,11 +2314,10 @@
             }
         },
         {
-            "playlists": "0",
+            "playlists": 0,
             "playcount": 138578,
             "gender": "n",
             "name": "nova77LF",
-            "subscriber": "FIXME",
             "url": "https://www.last.fm/user/nova77LF",
             "country": "United States",
             "image": [
@@ -2527,14 +2338,11 @@
                     "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
-            "type": "FIXME",
-            "age": "0",
-            "bootstrap": "0",
+            "age": 0,
             "registered": {
                 "timestamp": 1138797498,
                 "text": "2006-02-01 12:38:18"
             },
-            "source": "FIXME",
             "recent_track": {
                 "artist": {
                     "mbid": "",
@@ -2556,11 +2364,10 @@
             }
         },
         {
-            "playlists": "0",
+            "playlists": 0,
             "playcount": 193851,
             "gender": "n",
             "name": "muz",
-            "subscriber": "FIXME",
             "url": "https://www.last.fm/user/muz",
             "country": "",
             "image": [
@@ -2581,14 +2388,11 @@
                     "text": ""
                 }
             ],
-            "type": "FIXME",
-            "age": "0",
-            "bootstrap": "0",
+            "age": 0,
             "registered": {
                 "timestamp": 1104155132,
                 "text": "2004-12-27 13:45:32"
             },
-            "source": "FIXME",
             "real_name": "Muz",
             "recent_track": {
                 "artist": {
@@ -2611,11 +2415,10 @@
             }
         },
         {
-            "playlists": "0",
+            "playlists": 0,
             "playcount": 32643,
             "gender": "n",
             "name": "mischa",
-            "subscriber": "FIXME",
             "url": "https://www.last.fm/user/mischa",
             "country": "United Kingdom",
             "image": [
@@ -2636,14 +2439,11 @@
                     "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
-            "type": "FIXME",
-            "age": "0",
-            "bootstrap": "0",
+            "age": 0,
             "registered": {
                 "timestamp": 1058054400,
                 "text": "2003-07-13 00:00:00"
             },
-            "source": "FIXME",
             "real_name": "Mischa Zurke",
             "recent_track": {
                 "artist": {
