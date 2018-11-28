@@ -4,21 +4,13 @@ verify_ssl = true
 name = "pypi"
 
 [dev-packages]
-black = "==18.9b0"
 pre-commit = "*"
 "flake8" = "*"
-coverage = "*"
-codecov = "*"
 pytest = "*"
 pytest-cov = "*"
 vcrpy = "*"
-sphinx = "*"
-sphinx-rtd-theme = "*"
 ipython = "*"
-sphinx-autodoc-typehints = "*"
+tox = "*"
 
 [packages]
 "e1839a8" = {path = ".", editable = true}
-
-[requires]
-python_version = "3.6.5"
