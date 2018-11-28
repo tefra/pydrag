@@ -1,15 +1,26 @@
+sudo: false
 language: python
 
-python:
-  - 3.6
+cache: pip
+
+matrix:
+  include:
+    - python: '3.6'
+      env: TOXENV=py36
+    - python: '3.7'
+      env: TOXENV=py37
+      dist: xenial
+      sudo: true
+
+before_install:
+  - pip install --upgrade pip
+  - pip install --upgrade setuptools
 
 install:
-  - pip install pipenv
-  - pipenv install --dev --three
-
+  - pip install tox codecov
 
 script:
-  - pipenv run pytest --cov=./
+  - tox
 
 after_success:
-  - pipenv run codecov
+  - codecov

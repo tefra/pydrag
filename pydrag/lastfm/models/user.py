@@ -1,4 +1,4 @@
-from typing import List, Optional, TypeVar, Union
+from typing import List, Optional, Union
 
 from attr import dataclass
 
@@ -10,29 +10,38 @@ from pydrag.lastfm.models.common import Chart, Date, Image
 from pydrag.lastfm.models.tag import Tag
 from pydrag.lastfm.models.track import Track
 
-T = TypeVar("T", bound="User")
-
 
 @dataclass
 class User(BaseModel):
-    playlists: str
+    """
+    Last.FM user and user library api client.
+
+    :param playcount: Total track playcount
+    :param gender: Gender
+    :param name: Display name
+    :param url: Last.fm profile url
+    :param country: Country name
+    :param image: User's avatar in multiple sizes
+    :param age: Self explanatory
+    :param registered: Registraton date
+    :param real_name: The full name
+    :param recent_track: User's most recent scrobble track
+    """
+
+    playlists: int
     playcount: int
     gender: str
     name: str
-    subscriber: str
     url: str
     country: str
     image: List[Image]
-    type: str
-    age: str
-    bootstrap: str
+    age: int
     registered: Date
-    source: Optional[str] = None
     real_name: Optional[str] = None
     recent_track: Optional[Track] = None
 
     @classmethod
-    def find(cls, username: str) -> T:
+    def find(cls, username: str) -> "User":
         """
         Get information about a user profile.
 
@@ -93,7 +102,7 @@ class User(BaseModel):
 
     def get_friends(
         self, recent_tracks: bool, limit: int = 50, page: int = 1
-    ) -> List[T]:
+    ) -> List["User"]:
         """
         Get a list of the user's friends on Last.fm.
 

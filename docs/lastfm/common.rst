@@ -3,7 +3,6 @@ Common
 
 .. autoclass:: pydrag.lastfm.models.common.AttrModel
     :members:
-    :undoc-members:
     :show-inheritance:
 
 

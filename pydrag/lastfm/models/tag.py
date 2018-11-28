@@ -1,26 +1,35 @@
-from typing import List, Optional, TypeVar
+from typing import List, Optional
 
 from attr import dataclass
 
 from pydrag.core import BaseModel
 from pydrag.lastfm.models.common import Chart, Wiki
 
-T = TypeVar("T", bound="Tag")
-
 
 @dataclass
 class Tag(BaseModel):
+    """
+    Last.FM tag, chart and geo api client.
+
+    :param name: Tag name
+    :param reach: NOIDEA
+    :param url: Last.fm tag url
+    :param taggings: Number of tagged objects
+    :param count: NOIDEA
+    :param total: NOIDEA
+    :param wiki: Track wiki information
+    """
+
     name: str
     reach: Optional[int] = None
     url: Optional[str] = None
     taggings: Optional[int] = None
-    streamable: Optional[int] = None
     count: Optional[int] = None
     total: Optional[int] = None
     wiki: Optional[Wiki] = None
 
     @classmethod
-    def find(cls, name: str, lang: str = None) -> T:
+    def find(cls, name: str, lang: str = None) -> "Tag":
         """
         Get the metadata for a tag.
 
@@ -33,7 +42,7 @@ class Tag(BaseModel):
         )
 
     @classmethod
-    def get_top_tags(cls, limit: int = 50, page: int = 1) -> List[T]:
+    def get_top_tags(cls, limit: int = 50, page: int = 1) -> List["Tag"]:
         """
         Fetches the top global tags on Last.fm, sorted by popularity Old school
         pagination on this endpoint, keep uniformity.
@@ -53,7 +62,7 @@ class Tag(BaseModel):
         )
 
     @classmethod
-    def get_top_tags_chart(cls, limit: int = 50, page: int = 1) -> List[T]:
+    def get_top_tags_chart(cls, limit: int = 50, page: int = 1) -> List["Tag"]:
         """
         Get the top tags chart.
 
@@ -67,7 +76,7 @@ class Tag(BaseModel):
             params=dict(method="chart.getTopTags", limit=limit, page=page),
         )
 
-    def get_similar(self) -> List[T]:
+    def get_similar(self) -> List["Tag"]:
         """
         Search for tags similar to this one. Returns tags ranked by similarity,
         based on listening data.
