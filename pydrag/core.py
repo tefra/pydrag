@@ -8,8 +8,8 @@ from attr import asdict, attrib, dataclass, fields
 from cattr import structure
 from requests import Response
 
-from pydrag.lastfm.config import config
-from pydrag.lastfm.utils import md5
+from pydrag.lastfm import config
+from pydrag.utils import md5
 
 T = TypeVar("T", bound="BaseModel")
 TL = TypeVar("TL", bound="BaseListModel")
