@@ -1,7 +1,8 @@
 import json
 import os
-from unittest import TestCase
 import re
+from unittest import TestCase
+from pydrag import lastfm
 from vcr import config, VCR
 
 where_am_i = os.path.dirname(os.path.realpath(__file__))
@@ -31,6 +32,10 @@ fixture = config.VCR(
     path_transformer=VCR.ensure_suffix(".json"),
     serializer="json",
 )
+
+
+if lastfm.config is None:
+    lastfm.configure("foo")
 
 
 class MethodTestCase(TestCase):

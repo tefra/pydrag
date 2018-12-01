@@ -15,6 +15,7 @@ class Config:
     api_root_url: str = "https://ws.audioscrobbler.com/2.0/"
 
 
+config = None
 try:
     """Attempt to create a config using environmental variables."""
     config = Config(
