@@ -7,16 +7,6 @@ from pydrag.core import BaseModel
 
 @dataclass
 class Attributes(BaseModel):
-    timestamp: Optional[int] = None
-    rank: Optional[str] = None
-    date: Optional[str] = None
-    ignored: Optional[int] = None
-    position: Optional[int] = None
-    accepted: Optional[int] = None
-
-
-@dataclass
-class RootAttributes(BaseModel):
     tag: Optional[str] = None
     page: Optional[int] = None
     user: Optional[str] = None
@@ -36,11 +26,6 @@ class RootAttributes(BaseModel):
     ignored: Optional[int] = None
     position: Optional[int] = None
     accepted: Optional[int] = None
-
-
-@dataclass
-class AttrModel(BaseModel):
-    attr: Optional[RootAttributes] = None
 
 
 @dataclass

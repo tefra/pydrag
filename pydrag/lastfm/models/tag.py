@@ -30,18 +30,9 @@ class Tag(BaseModel):
 
     @classmethod
     def from_dict(cls, data: dict):
-        data.update({k: str(data[k]) for k in ["url", "name"] if k in data})
-        data.update(
-            {
-                k: int(data[k])
-                for k in ["reach", "taggings", "count", "total"]
-                if k in data
-            }
-        )
-
         if "wiki" in data:
             data["wiki"] = Wiki.from_dict(data["wiki"])
-        return cls(**data)
+        return super(Tag, cls).from_dict(data)
 
     @classmethod
     def find(cls, name: str, lang: str = None) -> "Tag":

@@ -42,22 +42,17 @@ class User(BaseModel):
 
     @classmethod
     def from_dict(cls, data: dict):
-        obj = dict(
-            playlists=int(data["playlists"]),
-            playcount=int(data["playcount"]),
-            gender=str(data["gender"]),
-            name=str(data["name"]),
-            url=str(data["url"]),
-            country=str(data["country"]),
-            age=int(data["age"]),
-            registered=Date.from_dict(data["registered"]),
-            image=list(map(Image.from_dict, data["image"])),
+        data.update(
+            dict(
+                registered=Date.from_dict(data["registered"]),
+                image=list(map(Image.from_dict, data["image"])),
+            )
         )
         if "real_name" in data:
-            obj["real_name"] = str(data["real_name"])
+            data["real_name"] = str(data["real_name"])
         if "recent_track" in data:
-            obj["recent_track"] = Track.from_dict(data["recent_track"])
-        return cls(**obj)
+            data["recent_track"] = Track.from_dict(data["recent_track"])
+        return super(User, cls).from_dict(data)
 
     @classmethod
     def find(cls, username: str) -> "User":

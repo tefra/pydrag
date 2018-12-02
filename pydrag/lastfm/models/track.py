@@ -5,13 +5,7 @@ from attr import dataclass
 from pydrag.core import BaseModel
 from pydrag.lastfm.models.album import Album
 from pydrag.lastfm.models.artist import Artist
-from pydrag.lastfm.models.common import (
-    Attributes,
-    Date,
-    Image,
-    RootAttributes,
-    Wiki,
-)
+from pydrag.lastfm.models.common import Attributes, Date, Image, Wiki
 from pydrag.lastfm.models.tag import Tag
 
 
@@ -51,7 +45,8 @@ class TrackUpdateNowPlaying(BaseModel):
             data["timestamp"] = int(data["timestamp"])
         if "attr" in data:
             data["attr"] = Attributes.from_dict(data["attr"])
-        return super().from_dict(data)
+
+        return super(TrackUpdateNowPlaying, cls).from_dict(data)
 
 
 @dataclass
@@ -117,18 +112,22 @@ class Track(BaseModel):
     image: Optional[List[Image]] = None
     playcount: Optional[int] = None
     listeners: Optional[int] = None
-    duration: Optional[str] = None
+    duration: Optional[int] = None
     match: Optional[float] = None
     wiki: Optional[Wiki] = None
     album: Optional[Album] = None
     top_tags: Optional[List[Tag]] = None
-    attr: Optional[RootAttributes] = None
+    attr: Optional[Attributes] = None
     date: Optional[Date] = None
     loved: Optional[int] = None
 
     @classmethod
     def from_dict(cls, data: dict) -> "Track":
-        data = cls._compat(data)
+        try:
+            if isinstance(data["album"]["artist"], str):
+                data["album"]["artist"] = dict(name=data["album"]["artist"])
+        except KeyError:
+            pass
 
         try:
             correction = data.pop("correction")
@@ -139,55 +138,36 @@ class Track(BaseModel):
         if isinstance(data["artist"], str):
             data["artist"] = dict(name=data["artist"])
 
-        obj = dict(
-            name=str(data["name"]), artist=Artist.from_dict(data["artist"])
+        data.update(
+            dict(
+                name=str(data["name"]), artist=Artist.from_dict(data["artist"])
+            )
         )
-        obj.update(
-            {k: str(data[k]) for k in ["url", "mbid", "duration"] if k in data}
-        )
-        obj.update(
-            {k: int(data[k]) for k in ["playcount", "listeners"] if k in data}
-        )
+
+        if data.get("duration") == "FIXME":
+            data["duration"] = 0
 
         if "loved" in data:
-            obj["loved"] = True if data["loved"] == "1" else False
+            data["loved"] = True if data["loved"] == "1" else False
 
         if "image" in data:
-            obj["image"] = list(map(Image.from_dict, data["image"]))
+            data["image"] = list(map(Image.from_dict, data["image"]))
         if "top_tags" in data:
-            obj["top_tags"] = list(map(Tag.from_dict, data["top_tags"]["tag"]))
+            data["top_tags"] = list(
+                map(Tag.from_dict, data["top_tags"]["tag"])
+            )
         if "match" in data:
-            obj["match"] = float(data["match"])
+            data["match"] = float(data["match"])
         if "wiki" in data:
-            obj["wiki"] = Wiki.from_dict(data["wiki"])
+            data["wiki"] = Wiki.from_dict(data["wiki"])
         if "album" in data:
-            obj["album"] = Album.from_dict(data["album"])
+            data["album"] = Album.from_dict(data["album"])
         if "attr" in data:
-            obj["attr"] = RootAttributes.from_dict(data["attr"])
+            data["attr"] = Attributes.from_dict(data["attr"])
         if "date" in data:
-            obj["date"] = Date.from_dict(data["date"])
+            data["date"] = Date.from_dict(data["date"])
 
-        return cls(**obj)
-
-    @classmethod
-    def _compat(cls, data):
-        """
-        In order to be more consistent than Last.fm api we have to normalize
-        the input dictionary to fix a couple of things:
-
-        * Flatten top tags list
-        * Make sure artist field is always a dictionary
-
-        :param data:
-        :rtype: :class:`~pydrag.lastfm.models.track.Track`
-        """
-        try:
-            if isinstance(data["album"]["artist"], str):
-                data["album"]["artist"] = dict(name=data["album"]["artist"])
-        except KeyError:
-            pass
-
-        return data
+        return super(Track, cls).from_dict(data)
 
     @classmethod
     def find(
