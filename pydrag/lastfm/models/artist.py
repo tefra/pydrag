@@ -18,6 +18,7 @@ class Artist(BaseModel):
     :param tag_count: Number of tags
     :param listeners: Total unique listeners
     :param playcount: Total artist playcount
+    :param playcount: Total user artist playcount, if user context is enabled
     :param image: List of images
     :param match: Search query match weight
     :param tags: List of top tags
@@ -33,6 +34,7 @@ class Artist(BaseModel):
     tag_count: Optional[int] = None
     listeners: Optional[int] = None
     playcount: Optional[int] = None
+    userplaycount: Optional[int] = None
     image: Optional[List[Image]] = None
     match: Optional[float] = None
     tags: Optional[List[Tag]] = None
@@ -118,6 +120,21 @@ class Artist(BaseModel):
                 lang=lang,
             )
         )
+
+    def get_info(self, user: str = None, lang: str = "en") -> "Artist":
+        """
+        There are many ways we end up with an incomplete instance of an artist
+        instance likes charts, tags etc, This is a quick method to refresh our
+        object with complete data from the find methods.
+
+        :param user: The username for the context of the request. If supplied, response will include the user's playcount
+        :param lang: The language to return the biography in, ISO-639
+        :rtype: :class:`~pydrag.lastfm.models.artist.Artist`
+        """
+        if self.mbid:
+            return self.find_by_mbid(self.mbid, user, lang)
+        else:
+            return self.find(self.name, user, lang)
 
     @classmethod
     def search(

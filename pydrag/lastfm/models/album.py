@@ -17,7 +17,6 @@ class Album(BaseModel):
     :param mbid: Musicbrainz ID
     :param url: Last.fm profile url
     :param image: List of images
-    :param text: NOIDEA
     :param playcount: Total artist playcount
     :param artist: Album artist
     :param listeners: Total unique listeners
@@ -27,11 +26,10 @@ class Album(BaseModel):
     :param attr: Album metadata
     """
 
-    name: Optional[str] = None
+    name: str
     mbid: Optional[str] = None
     url: Optional[str] = None
     image: Optional[List[Image]] = None
-    text: Optional[str] = None
     playcount: Optional[int] = None
     artist: Optional[Artist] = None
     listeners: Optional[int] = None
@@ -45,6 +43,8 @@ class Album(BaseModel):
         if isinstance(data.get("artist"), str):
             data["artist"] = dict(name=data["artist"])
 
+        if "name" not in data and "text" in data:
+            data["name"] = data.pop("text")
         if "artist" in data:
             data["artist"] = Artist.from_dict(data["artist"])
         if "image" in data:
@@ -115,11 +115,21 @@ class Album(BaseModel):
             )
         )
 
-    def get_info(self):
+    def get_info(self, user: str = None, lang: str = "en") -> "Album":
+        """
+        There are many ways we end up with an incomplete instance of an album
+        instance likes charts, tags etc, This is a quick method to refresh our
+        object with complete data from the find methods.
+
+        :param user: The username for the context of the request. If supplied, response will include the user's playcount
+        :param lang: The language to return the biography in, ISO-639
+        :rtype: :class:`~pydrag.lastfm.models.artist.Album`
+        """
         if self.mbid:
-            return self.find_by_mbid(self.mbid)
+            return self.find_by_mbid(self.mbid, user, lang)
         else:
-            return self.find(self.artist.name, self.name)
+            assert self.artist is not None
+            return self.find(self.artist.name, self.name, user, lang)
 
     @classmethod
     def search(
@@ -149,13 +159,13 @@ class Album(BaseModel):
         :param tags: A list of user supplied tags to apply to this album. Accepts a maximum of 10 tags.
         :rtype: :class:`~pydrag.core.BaseModel`
         """
-
+        assert self.artist is not None
         return self.submit(
             bind=BaseModel,
             stateful=True,
             params=dict(
                 method="album.addTags",
-                arist=self.artist,
+                arist=self.artist.name,
                 album=self.name,
                 tags=",".join(tags),
             ),
@@ -168,13 +178,14 @@ class Album(BaseModel):
         :param tag: A single user tag to remove from this album.
         :rtype: :class:`~pydrag.core.BaseModel`
         """
+        assert self.artist is not None
         return self.submit(
             bind=BaseModel,
             stateful=True,
             params=dict(
                 method="album.removeTag",
                 album=self.name,
-                artist=self.artist,
+                artist=self.artist.name,
                 tag=tag,
             ),
         )
@@ -186,6 +197,7 @@ class Album(BaseModel):
         :param user: The username for the context of the request.
         :rtype: :class:`list` of :class:`~pydrag.lastfm.models.tag.Tag`
         """
+        assert self.artist is not None
         return self.retrieve(
             bind=Tag,
             many="tag",
@@ -193,7 +205,7 @@ class Album(BaseModel):
                 method="album.getTags",
                 mbid=self.mbid,
                 album=self.name,
-                artist=self.artist,
+                artist=self.artist.name,
                 autocorrect=True,
                 user=user,
             ),
@@ -205,6 +217,7 @@ class Album(BaseModel):
 
         :rtype: :class:`list` of :class:`~pydrag.lastfm.models.tag.Tag`
         """
+        assert self.artist is not None
         return self.retrieve(
             bind=Tag,
             many="tag",
@@ -212,7 +225,7 @@ class Album(BaseModel):
                 method="album.getTopTags",
                 mbid=self.mbid,
                 album=self.name,
-                artist=self.artist,
+                artist=self.artist.name,
                 autocorrect=True,
             ),
         )

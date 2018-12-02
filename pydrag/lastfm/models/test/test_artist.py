@@ -1,3 +1,5 @@
+from unittest import mock
+
 from pydrag.core import BaseListModel, BaseModel
 from pydrag.lastfm.models.artist import Artist
 from pydrag.lastfm.models.test import MethodTestCase, fixture
@@ -5,8 +7,11 @@ from pydrag.lastfm.models.test import MethodTestCase, fixture
 
 class ArtistTests(MethodTestCase):
     def setUp(self):
-        self.artist = Artist(
-            name="Guns N' Roses", mbid="eeb1195b-f213-4ce1-b28c-8565211f8e43"
+        self.artist = Artist.from_dict(
+            dict(
+                name="Guns N' Roses",
+                mbid="eeb1195b-f213-4ce1-b28c-8565211f8e43",
+            )
         )
         super(ArtistTests, self).setUp()
 
@@ -59,6 +64,42 @@ class ArtistTests(MethodTestCase):
         self.assertEqual(expected_params, result.params)
         self.assertIsInstance(result, Artist)
         self.assertFixtureEqual("artist/find", result.to_dict())
+
+    @fixture.use_cassette(path="artist/find_by_mbid")
+    def test_find_by_mbid(self):
+        result = Artist.find_by_mbid(
+            "eeb1195b-f213-4ce1-b28c-8565211f8e43",
+            user="Zaratoustre",
+            lang="it",
+        )
+        expected_params = {
+            "autocorrect": True,
+            "lang": "it",
+            "mbid": "eeb1195b-f213-4ce1-b28c-8565211f8e43",
+            "method": "artist.getInfo",
+            "username": "Zaratoustre",
+        }
+        self.assertEqual(expected_params, result.params)
+        self.assertIsInstance(result, Artist)
+        self.assertFixtureEqual("artist/find_by_mbid", result.to_dict())
+
+    @mock.patch.object(Artist, "find")
+    @mock.patch.object(Artist, "find_by_mbid", return_value="Me")
+    def test_get_info_when_mbid_is_available(self, find_by_mbid, find):
+        self.assertEqual("Me", self.artist.get_info("rj", "it"))
+
+        self.assertIsNotNone(self.artist.mbid)
+        find_by_mbid.assert_called_once_with(self.artist.mbid, "rj", "it")
+        find.assert_not_called()
+
+    @mock.patch.object(Artist, "find", return_value="Me")
+    @mock.patch.object(Artist, "find_by_mbid")
+    def test_get_info_when_mbid_is_not_available(self, find_by_mbid, find):
+        self.artist.mbid = None
+        self.assertEqual("Me", self.artist.get_info("rj", "it"))
+
+        find.assert_called_once_with(self.artist.name, "rj", "it")
+        find_by_mbid.assert_not_called()
 
     @fixture.use_cassette(path="artist/get_correction")
     def test_get_correction(self):

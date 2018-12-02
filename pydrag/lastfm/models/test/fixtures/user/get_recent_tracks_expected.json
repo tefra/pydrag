@@ -47,7 +47,7 @@
             ],
             "album": {
                 "mbid": "CENSORED63df",
-                "text": "Bless Its Pointed Little Head"
+                "name": "Bless Its Pointed Little Head"
             },
             "date": {
                 "timestamp": 1542874436,
@@ -102,7 +102,7 @@
             ],
             "album": {
                 "mbid": "CENSORED0cca",
-                "text": "With the Lights Out"
+                "name": "With the Lights Out"
             },
             "date": {
                 "timestamp": 1542874137,
@@ -157,7 +157,7 @@
             ],
             "album": {
                 "mbid": "CENSOREDef68",
-                "text": "Elect the Dead"
+                "name": "Elect the Dead"
             },
             "date": {
                 "timestamp": 1542873958,
@@ -212,7 +212,7 @@
             ],
             "album": {
                 "mbid": "",
-                "text": "The Fast And The Furious: Tokyo Drift"
+                "name": "The Fast And The Furious: Tokyo Drift"
             },
             "date": {
                 "timestamp": 1542873725,
@@ -267,7 +267,7 @@
             ],
             "album": {
                 "mbid": "",
-                "text": "Loved"
+                "name": "Loved"
             },
             "date": {
                 "timestamp": 1542873457,
@@ -322,7 +322,7 @@
             ],
             "album": {
                 "mbid": "CENSORED1d64",
-                "text": "It's Dark And Hell Is Hot"
+                "name": "It's Dark And Hell Is Hot"
             },
             "date": {
                 "timestamp": 1542873243,
@@ -377,7 +377,7 @@
             ],
             "album": {
                 "mbid": "",
-                "text": "The Marshall Mathers LP2"
+                "name": "The Marshall Mathers LP2"
             },
             "date": {
                 "timestamp": 1542872878,
@@ -432,7 +432,7 @@
             ],
             "album": {
                 "mbid": "CENSORED20dc",
-                "text": "Mezmerize"
+                "name": "Mezmerize"
             },
             "date": {
                 "timestamp": 1542872416,
@@ -487,7 +487,7 @@
             ],
             "album": {
                 "mbid": "",
-                "text": "Monkey Business"
+                "name": "Monkey Business"
             },
             "date": {
                 "timestamp": 1542872204,
@@ -542,7 +542,7 @@
             ],
             "album": {
                 "mbid": "",
-                "text": "The W"
+                "name": "The W"
             },
             "date": {
                 "timestamp": 1542871965,
@@ -597,7 +597,7 @@
             ],
             "album": {
                 "mbid": "CENSORED02bd",
-                "text": "Strange Days"
+                "name": "Strange Days"
             },
             "date": {
                 "timestamp": 1542871834,
@@ -652,7 +652,7 @@
             ],
             "album": {
                 "mbid": "CENSOREDb68f",
-                "text": "Danger Days: The True Lives of the Fabulous Killjoys"
+                "name": "Danger Days: The True Lives of the Fabulous Killjoys"
             },
             "date": {
                 "timestamp": 1542871541,
@@ -707,7 +707,7 @@
             ],
             "album": {
                 "mbid": "CENSORED6480",
-                "text": "Donnie Darko"
+                "name": "Donnie Darko"
             },
             "date": {
                 "timestamp": 1542871288,
@@ -762,7 +762,7 @@
             ],
             "album": {
                 "mbid": "",
-                "text": "Lovers"
+                "name": "Lovers"
             },
             "date": {
                 "timestamp": 1542871172,
@@ -817,7 +817,7 @@
             ],
             "album": {
                 "mbid": "",
-                "text": "8 Mile"
+                "name": "8 Mile"
             },
             "date": {
                 "timestamp": 1542816642,
@@ -872,7 +872,7 @@
             ],
             "album": {
                 "mbid": "CENSORED5000",
-                "text": "Sting In The Tail"
+                "name": "Sting In The Tail"
             },
             "date": {
                 "timestamp": 1542816369,
@@ -927,7 +927,7 @@
             ],
             "album": {
                 "mbid": "CENSORED349c",
-                "text": "Hypnotize"
+                "name": "Hypnotize"
             },
             "date": {
                 "timestamp": 1542816201,
@@ -982,7 +982,7 @@
             ],
             "album": {
                 "mbid": "CENSORED9b85",
-                "text": "Sigh No More"
+                "name": "Sigh No More"
             },
             "date": {
                 "timestamp": 1542816025,
@@ -1037,7 +1037,7 @@
             ],
             "album": {
                 "mbid": "CENSORED0974",
-                "text": "Past Masters"
+                "name": "Past Masters"
             },
             "date": {
                 "timestamp": 1542788207,
@@ -1092,7 +1092,7 @@
             ],
             "album": {
                 "mbid": "CENSORED3895",
-                "text": "The Better Life"
+                "name": "The Better Life"
             },
             "date": {
                 "timestamp": 1542787973,
@@ -1147,7 +1147,7 @@
             ],
             "album": {
                 "mbid": "CENSOREDc7fb",
-                "text": "Rage Against the Machine"
+                "name": "Rage Against the Machine"
             },
             "date": {
                 "timestamp": 1542787658,
@@ -1202,7 +1202,7 @@
             ],
             "album": {
                 "mbid": "CENSOREDce39",
-                "text": "Live in Texas"
+                "name": "Live in Texas"
             },
             "date": {
                 "timestamp": 1542787447,
@@ -1257,7 +1257,7 @@
             ],
             "album": {
                 "mbid": "",
-                "text": "Beck O.S.T. - Beck"
+                "name": "Beck O.S.T. - Beck"
             },
             "date": {
                 "timestamp": 1542787071,
@@ -1312,7 +1312,7 @@
             ],
             "album": {
                 "mbid": "CENSOREDb66b",
-                "text": "Let It Be"
+                "name": "Let It Be"
             },
             "date": {
                 "timestamp": 1542786854,
@@ -1367,7 +1367,7 @@
             ],
             "album": {
                 "mbid": "CENSORED6f1c",
-                "text": "Sunshine On Leith"
+                "name": "Sunshine On Leith"
             },
             "date": {
                 "timestamp": 1542786635,
@@ -1422,7 +1422,7 @@
             ],
             "album": {
                 "mbid": "",
-                "text": "Nathaniel Rateliff & The Night Sweats"
+                "name": "Nathaniel Rateliff & The Night Sweats"
             },
             "date": {
                 "timestamp": 1542786382,
@@ -1477,7 +1477,7 @@
             ],
             "album": {
                 "mbid": "CENSORED09e3",
-                "text": "Before I Self Destruct"
+                "name": "Before I Self Destruct"
             },
             "date": {
                 "timestamp": 1542786188,
@@ -1532,7 +1532,7 @@
             ],
             "album": {
                 "mbid": "CENSORED269f",
-                "text": "Harakiri"
+                "name": "Harakiri"
             },
             "date": {
                 "timestamp": 1542785928,
@@ -1587,7 +1587,7 @@
             ],
             "album": {
                 "mbid": "CENSORED90be",
-                "text": "Back to Bedlam"
+                "name": "Back to Bedlam"
             },
             "date": {
                 "timestamp": 1542785723,
@@ -1642,7 +1642,7 @@
             ],
             "album": {
                 "mbid": "",
-                "text": "Year Of The Dog... Again"
+                "name": "Year Of The Dog... Again"
             },
             "date": {
                 "timestamp": 1542785433,
@@ -1697,7 +1697,7 @@
             ],
             "album": {
                 "mbid": "",
-                "text": "The Getaway"
+                "name": "The Getaway"
             },
             "date": {
                 "timestamp": 1542785169,
@@ -1752,7 +1752,7 @@
             ],
             "album": {
                 "mbid": "",
-                "text": "Loved"
+                "name": "Loved"
             },
             "date": {
                 "timestamp": 1542784932,
@@ -1807,7 +1807,7 @@
             ],
             "album": {
                 "mbid": "CENSORED41ad",
-                "text": "The Best Damn Thing"
+                "name": "The Best Damn Thing"
             },
             "date": {
                 "timestamp": 1542784726,
@@ -1862,7 +1862,7 @@
             ],
             "album": {
                 "mbid": "",
-                "text": "Loved"
+                "name": "Loved"
             },
             "date": {
                 "timestamp": 1542734883,
@@ -1917,7 +1917,7 @@
             ],
             "album": {
                 "mbid": "CENSOREDe393",
-                "text": "Fear of the Dark"
+                "name": "Fear of the Dark"
             },
             "date": {
                 "timestamp": 1542734445,
@@ -1972,7 +1972,7 @@
             ],
             "album": {
                 "mbid": "CENSOREDef68",
-                "text": "Elect the Dead"
+                "name": "Elect the Dead"
             },
             "date": {
                 "timestamp": 1542734215,
@@ -2027,7 +2027,7 @@
             ],
             "album": {
                 "mbid": "",
-                "text": "The Matrix"
+                "name": "The Matrix"
             },
             "date": {
                 "timestamp": 1542711253,
@@ -2082,7 +2082,7 @@
             ],
             "album": {
                 "mbid": "",
-                "text": "Monkey Business"
+                "name": "Monkey Business"
             },
             "date": {
                 "timestamp": 1542711014,
@@ -2137,7 +2137,7 @@
             ],
             "album": {
                 "mbid": "CENSORED653c",
-                "text": "Imperfect Harmonies"
+                "name": "Imperfect Harmonies"
             },
             "date": {
                 "timestamp": 1542710767,
@@ -2192,7 +2192,7 @@
             ],
             "album": {
                 "mbid": "CENSORED73e2",
-                "text": "Demon Days"
+                "name": "Demon Days"
             },
             "date": {
                 "timestamp": 1542710543,
@@ -2247,7 +2247,7 @@
             ],
             "album": {
                 "mbid": "",
-                "text": "Simply The Best Of 80s"
+                "name": "Simply The Best Of 80s"
             },
             "date": {
                 "timestamp": 1542710298,
@@ -2302,7 +2302,7 @@
             ],
             "album": {
                 "mbid": "CENSOREDc1ad",
-                "text": "Sleeping with Ghosts"
+                "name": "Sleeping with Ghosts"
             },
             "date": {
                 "timestamp": 1542710107,
@@ -2357,7 +2357,7 @@
             ],
             "album": {
                 "mbid": "",
-                "text": "History Begins"
+                "name": "History Begins"
             },
             "date": {
                 "timestamp": 1542709813,
@@ -2412,7 +2412,7 @@
             ],
             "album": {
                 "mbid": "CENSORED2836",
-                "text": "The Who by Numbers"
+                "name": "The Who by Numbers"
             },
             "date": {
                 "timestamp": 1542709591,
@@ -2467,7 +2467,7 @@
             ],
             "album": {
                 "mbid": "CENSORED3241",
-                "text": "Bestwishes"
+                "name": "Bestwishes"
             },
             "date": {
                 "timestamp": 1542701972,
@@ -2522,7 +2522,7 @@
             ],
             "album": {
                 "mbid": "",
-                "text": "Revolution Radio"
+                "name": "Revolution Radio"
             },
             "date": {
                 "timestamp": 1542701768,
@@ -2577,7 +2577,7 @@
             ],
             "album": {
                 "mbid": "",
-                "text": "True Blood Volume 1"
+                "name": "True Blood Volume 1"
             },
             "date": {
                 "timestamp": 1542701605,
@@ -2632,7 +2632,7 @@
             ],
             "album": {
                 "mbid": "",
-                "text": "\u03a5\u03c0'\u039f\u03c8\u03b9\u03bd"
+                "name": "\u03a5\u03c0'\u039f\u03c8\u03b9\u03bd"
             },
             "date": {
                 "timestamp": 1542701434,
@@ -2687,7 +2687,7 @@
             ],
             "album": {
                 "mbid": "CENSORED5574",
-                "text": "\u03a3\u03c6\u03b5\u03bd\u03c4\u03cc\u03bd\u03b1"
+                "name": "\u03a3\u03c6\u03b5\u03bd\u03c4\u03cc\u03bd\u03b1"
             },
             "date": {
                 "timestamp": 1542701159,
@@ -2742,7 +2742,7 @@
             ],
             "album": {
                 "mbid": "",
-                "text": "\u0391\u03bd\u03c4\u03b9\u03bb\u03b7\u03c8\u03af\u03b5\u03c2 \u03c3\u03c5\u03bd\u03b5\u03af\u03b4\u03b7\u03c3\u03b7\u03c2"
+                "name": "\u0391\u03bd\u03c4\u03b9\u03bb\u03b7\u03c8\u03af\u03b5\u03c2 \u03c3\u03c5\u03bd\u03b5\u03af\u03b4\u03b7\u03c3\u03b7\u03c2"
             },
             "date": {
                 "timestamp": 1542700871,
