@@ -17,7 +17,6 @@ TL = TypeVar("TL", bound="BaseListModel")
 
 class BaseModel(metaclass=ABCMeta):
     params: Optional[dict] = attrib(init=False)
-    response: Optional[Response] = attrib(init=False)
 
     def to_dict(self: T) -> Dict:
         return asdict(self, filter=lambda f, v: v is not None)

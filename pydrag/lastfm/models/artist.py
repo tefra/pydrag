@@ -14,26 +14,18 @@ class ArtistMini(BaseModel):
     mbid: Optional[str] = None
     image: Optional[List[Image]] = None
 
-
-@dataclass
-class CorrectionArtistAttr(BaseModel):
-    index: int
-
-
-@dataclass
-class CorrectionArtist(BaseModel):
-    artist: ArtistMini
-    attr: CorrectionArtistAttr
-
-
-@dataclass
-class ArtistCorrection(BaseModel):
-    correction: CorrectionArtist
+    @classmethod
+    def from_dict(cls, data: dict):
+        try:
+            correction = data.pop("correction")
+            data = correction.pop("artist")
+        except KeyError:
+            pass
+        return super().from_dict(data)
 
 
 @dataclass
 class Artist(BaseModel):
-
     """
     Last.FM track, chart and geo api client.
 
@@ -217,15 +209,15 @@ class Artist(BaseModel):
             params=dict(method="artist.removeTag", arist=self.name, tag=tag),
         )
 
-    def get_correction(self) -> ArtistCorrection:
+    def get_correction(self) -> "ArtistMini":
         """
         Use the last.fm corrections data to check whether the supplied artist
         has a correction to a canonical artist.
 
-        :rtype: :class:`~pydrag.lastfm.models.artist.ArtistCorrection`
+        :rtype: :class:`~pydrag.lastfm.models.artist.ArtistMini`
         """
         return self.retrieve(
-            bind=ArtistCorrection,
+            bind=ArtistMini,
             params=dict(method="artist.getCorrection", artist=self.name),
         )
 

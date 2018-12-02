@@ -125,6 +125,12 @@ class Track(BaseModel):
         if isinstance(data.get("artist"), str):
             data["artist"] = dict(name=data["artist"])
 
+        try:
+            correction = data.pop("correction")
+            data = correction.pop("track")
+        except KeyError:
+            pass
+
         return super().from_dict(data)
 
     @classmethod
@@ -175,15 +181,15 @@ class Track(BaseModel):
         )
 
     @classmethod
-    def get_correction(cls, track: str, artist: str) -> "TrackCorrection":
+    def get_correction(cls, track: str, artist: str) -> "Track":
         """
         Use the last.fm corrections data to check whether the supplied track
         has a correction to a canonical track.
 
-        :rtype: :class:`~pydrag.lastfm.models.track.TrackCorrection`
+        :rtype: :class:`~pydrag.lastfm.models.track.Track`
         """
         return cls.retrieve(
-            bind=TrackCorrection,
+            bind=Track,
             params=dict(
                 method="track.getCorrection", artist=artist, track=track
             ),
@@ -397,7 +403,6 @@ class Track(BaseModel):
             result = Track.scrobble(batch)
             if status is None:
                 status = result
-                status.response = None
             elif result.scrobble:
                 status.attr.accepted += result.attr.accepted
                 status.attr.ignored += result.attr.ignored
@@ -440,21 +445,3 @@ class Track(BaseModel):
                 albumArtist=album_artist,
             ),
         )
-
-
-@dataclass
-class CorrectionAttributes(BaseModel):
-    index: int
-    track_corrected: int
-    artist_corrected: int
-
-
-@dataclass
-class CorrectionTrack(BaseModel):
-    attr: CorrectionAttributes
-    track: Track
-
-
-@dataclass
-class TrackCorrection(BaseModel):
-    correction: CorrectionTrack
