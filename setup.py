@@ -5,7 +5,6 @@ install_requires = [
     "certifi == 2018.10.15",
     "chardet == 3.0.4",
     "idna == 2.7",
-    "python-dotenv == 0.9.1",
     "requests == 2.20.1",
     "urllib3 == 1.24.1",
 ]

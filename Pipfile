@@ -10,6 +10,7 @@ pytest-cov = "*"
 vcrpy = "*"
 ipython = "*"
 tox = "*"
+codecov = "*"
 "e1839a8" = {path = "."}
 
 [packages]
