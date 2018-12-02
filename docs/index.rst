@@ -6,6 +6,9 @@ pydrag: Fluent Last.fm API Wrapper
 .. image:: https://travis-ci.org/tefra/pydrag.svg?branch=master
         :target: https://travis-ci.org/tefra/pydrag
 
+.. image:: https://readthedocs.org/projects/pydrag/badge
+    :target: https://pydrag.readthedocs.io/en/latest
+
 .. image:: https://codecov.io/gh/tefra/pydrag/branch/master/graph/badge.svg
         :target: https://codecov.io/gh/tefra/pydrag
 
