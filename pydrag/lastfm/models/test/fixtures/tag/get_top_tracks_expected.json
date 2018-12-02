@@ -29,7 +29,7 @@
             ],
             "duration": "314",
             "attr": {
-                "rank": "1"
+                "rank": 1
             }
         },
         {
@@ -61,7 +61,7 @@
             ],
             "duration": "339",
             "attr": {
-                "rank": "2"
+                "rank": 2
             }
         }
     ]

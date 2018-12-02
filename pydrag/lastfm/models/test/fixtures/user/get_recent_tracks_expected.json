@@ -53,7 +53,7 @@
                 "timestamp": 1542874436,
                 "text": "22 Nov 2018, 08:13"
             },
-            "loved": 1
+            "loved": true
         },
         {
             "name": "Smells Like Teen Spirit (Butch Vig Mix) (Recorded May, 1991)",
@@ -108,7 +108,7 @@
                 "timestamp": 1542874137,
                 "text": "22 Nov 2018, 08:08"
             },
-            "loved": 0
+            "loved": false
         },
         {
             "name": "Sky is Over",
@@ -163,7 +163,7 @@
                 "timestamp": 1542873958,
                 "text": "22 Nov 2018, 08:05"
             },
-            "loved": 1
+            "loved": true
         },
         {
             "name": "Six Days (Remix) (feat. Mos Def)",
@@ -218,7 +218,7 @@
                 "timestamp": 1542873725,
                 "text": "22 Nov 2018, 08:02"
             },
-            "loved": 0
+            "loved": false
         },
         {
             "name": "Sinnerman",
@@ -273,7 +273,7 @@
                 "timestamp": 1542873457,
                 "text": "22 Nov 2018, 07:57"
             },
-            "loved": 1
+            "loved": true
         },
         {
             "name": "Ruff Ryder's Anthem",
@@ -328,7 +328,7 @@
                 "timestamp": 1542873243,
                 "text": "22 Nov 2018, 07:54"
             },
-            "loved": 1
+            "loved": true
         },
         {
             "name": "Rap God",
@@ -383,7 +383,7 @@
                 "timestamp": 1542872878,
                 "text": "22 Nov 2018, 07:47"
             },
-            "loved": 1
+            "loved": true
         },
         {
             "name": "Radio/Video",
@@ -438,7 +438,7 @@
                 "timestamp": 1542872416,
                 "text": "22 Nov 2018, 07:40"
             },
-            "loved": 1
+            "loved": true
         },
         {
             "name": "Pump It",
@@ -493,7 +493,7 @@
                 "timestamp": 1542872204,
                 "text": "22 Nov 2018, 07:36"
             },
-            "loved": 1
+            "loved": true
         },
         {
             "name": "Protect Ya Neck (The Jump Off)",
@@ -548,7 +548,7 @@
                 "timestamp": 1542871965,
                 "text": "22 Nov 2018, 07:32"
             },
-            "loved": 1
+            "loved": true
         },
         {
             "name": "People Are Strange",
@@ -603,7 +603,7 @@
                 "timestamp": 1542871834,
                 "text": "22 Nov 2018, 07:30"
             },
-            "loved": 1
+            "loved": true
         },
         {
             "name": "Na Na Na (Na Na Na Na Na Na Na Na Na)",
@@ -658,7 +658,7 @@
                 "timestamp": 1542871541,
                 "text": "22 Nov 2018, 07:25"
             },
-            "loved": 1
+            "loved": true
         },
         {
             "name": "Mad World (feat. Gary Jules) (Alternate Mix)",
@@ -713,7 +713,7 @@
                 "timestamp": 1542871288,
                 "text": "22 Nov 2018, 07:21"
             },
-            "loved": 0
+            "loved": false
         },
         {
             "name": "Lovers",
@@ -768,7 +768,7 @@
                 "timestamp": 1542871172,
                 "text": "22 Nov 2018, 07:19"
             },
-            "loved": 1
+            "loved": true
         },
         {
             "name": "Lose Yourself",
@@ -823,7 +823,7 @@
                 "timestamp": 1542816642,
                 "text": "21 Nov 2018, 16:10"
             },
-            "loved": 1
+            "loved": true
         },
         {
             "name": "Lorelei",
@@ -878,7 +878,7 @@
                 "timestamp": 1542816369,
                 "text": "21 Nov 2018, 16:06"
             },
-            "loved": 1
+            "loved": true
         },
         {
             "name": "Lonely Day",
@@ -933,7 +933,7 @@
                 "timestamp": 1542816201,
                 "text": "21 Nov 2018, 16:03"
             },
-            "loved": 1
+            "loved": true
         },
         {
             "name": "Little Lion Man",
@@ -988,7 +988,7 @@
                 "timestamp": 1542816025,
                 "text": "21 Nov 2018, 16:00"
             },
-            "loved": 1
+            "loved": true
         },
         {
             "name": "Let It Be",
@@ -1043,7 +1043,7 @@
                 "timestamp": 1542788207,
                 "text": "21 Nov 2018, 08:16"
             },
-            "loved": 1
+            "loved": true
         },
         {
             "name": "Kryptonite",
@@ -1098,7 +1098,7 @@
                 "timestamp": 1542787973,
                 "text": "21 Nov 2018, 08:12"
             },
-            "loved": 1
+            "loved": true
         },
         {
             "name": "Killing in the Name",
@@ -1153,7 +1153,7 @@
                 "timestamp": 1542787658,
                 "text": "21 Nov 2018, 08:07"
             },
-            "loved": 1
+            "loved": true
         },
         {
             "name": "In the End",
@@ -1208,7 +1208,7 @@
                 "timestamp": 1542787447,
                 "text": "21 Nov 2018, 08:04"
             },
-            "loved": 1
+            "loved": true
         },
         {
             "name": "I've Got A Feeling",
@@ -1263,7 +1263,7 @@
                 "timestamp": 1542787071,
                 "text": "21 Nov 2018, 07:57"
             },
-            "loved": 1
+            "loved": true
         },
         {
             "name": "I've Got a Feeling",
@@ -1318,7 +1318,7 @@
                 "timestamp": 1542786854,
                 "text": "21 Nov 2018, 07:54"
             },
-            "loved": 1
+            "loved": true
         },
         {
             "name": "I'm Gonna Be (500 Miles)",
@@ -1373,7 +1373,7 @@
                 "timestamp": 1542786635,
                 "text": "21 Nov 2018, 07:50"
             },
-            "loved": 1
+            "loved": true
         },
         {
             "name": "I Need Never Get Old",
@@ -1428,7 +1428,7 @@
                 "timestamp": 1542786382,
                 "text": "21 Nov 2018, 07:46"
             },
-            "loved": 1
+            "loved": true
         },
         {
             "name": "Hold Me Down",
@@ -1483,7 +1483,7 @@
                 "timestamp": 1542786188,
                 "text": "21 Nov 2018, 07:43"
             },
-            "loved": 1
+            "loved": true
         },
         {
             "name": "Harakiri",
@@ -1538,7 +1538,7 @@
                 "timestamp": 1542785928,
                 "text": "21 Nov 2018, 07:38"
             },
-            "loved": 1
+            "loved": true
         },
         {
             "name": "Goodbye My Lover",
@@ -1593,7 +1593,7 @@
                 "timestamp": 1542785723,
                 "text": "21 Nov 2018, 07:35"
             },
-            "loved": 1
+            "loved": true
         },
         {
             "name": "Goodbye",
@@ -1648,7 +1648,7 @@
                 "timestamp": 1542785433,
                 "text": "21 Nov 2018, 07:30"
             },
-            "loved": 1
+            "loved": true
         },
         {
             "name": "Go Robot",
@@ -1703,7 +1703,7 @@
                 "timestamp": 1542785169,
                 "text": "21 Nov 2018, 07:26"
             },
-            "loved": 1
+            "loved": true
         },
         {
             "name": "Girls Just Want to Have Fun",
@@ -1758,7 +1758,7 @@
                 "timestamp": 1542784932,
                 "text": "21 Nov 2018, 07:22"
             },
-            "loved": 1
+            "loved": true
         },
         {
             "name": "Girlfriend",
@@ -1813,7 +1813,7 @@
                 "timestamp": 1542784726,
                 "text": "21 Nov 2018, 07:18"
             },
-            "loved": 1
+            "loved": true
         },
         {
             "name": "Footsteps",
@@ -1868,7 +1868,7 @@
                 "timestamp": 1542734883,
                 "text": "20 Nov 2018, 17:28"
             },
-            "loved": 1
+            "loved": true
         },
         {
             "name": "Fear of the Dark",
@@ -1923,7 +1923,7 @@
                 "timestamp": 1542734445,
                 "text": "20 Nov 2018, 17:20"
             },
-            "loved": 1
+            "loved": true
         },
         {
             "name": "Empty Walls",
@@ -1978,7 +1978,7 @@
                 "timestamp": 1542734215,
                 "text": "20 Nov 2018, 17:16"
             },
-            "loved": 1
+            "loved": true
         },
         {
             "name": "Dragula (Hot Rod Herman remix)",
@@ -2033,7 +2033,7 @@
                 "timestamp": 1542711253,
                 "text": "20 Nov 2018, 10:54"
             },
-            "loved": 1
+            "loved": true
         },
         {
             "name": "Don't Phunk with My Heart",
@@ -2088,7 +2088,7 @@
                 "timestamp": 1542711014,
                 "text": "20 Nov 2018, 10:50"
             },
-            "loved": 1
+            "loved": true
         },
         {
             "name": "Disowned Inc.",
@@ -2143,7 +2143,7 @@
                 "timestamp": 1542710767,
                 "text": "20 Nov 2018, 10:46"
             },
-            "loved": 1
+            "loved": true
         },
         {
             "name": "Dirty Harry",
@@ -2198,7 +2198,7 @@
                 "timestamp": 1542710543,
                 "text": "20 Nov 2018, 10:42"
             },
-            "loved": 1
+            "loved": true
         },
         {
             "name": "Blue Monday",
@@ -2253,7 +2253,7 @@
                 "timestamp": 1542710298,
                 "text": "20 Nov 2018, 10:38"
             },
-            "loved": 1
+            "loved": true
         },
         {
             "name": "The Bitter End",
@@ -2308,7 +2308,7 @@
                 "timestamp": 1542710107,
                 "text": "20 Nov 2018, 10:35"
             },
-            "loved": 1
+            "loved": true
         },
         {
             "name": "Billie Jean",
@@ -2363,7 +2363,7 @@
                 "timestamp": 1542709813,
                 "text": "20 Nov 2018, 10:30"
             },
-            "loved": 1
+            "loved": true
         },
         {
             "name": "Behind Blue Eyes (live)",
@@ -2418,7 +2418,7 @@
                 "timestamp": 1542709591,
                 "text": "20 Nov 2018, 10:26"
             },
-            "loved": 0
+            "loved": false
         },
         {
             "name": "Beauty and the Beast",
@@ -2473,7 +2473,7 @@
                 "timestamp": 1542701972,
                 "text": "20 Nov 2018, 08:19"
             },
-            "loved": 1
+            "loved": true
         },
         {
             "name": "Bang Bang",
@@ -2528,7 +2528,7 @@
                 "timestamp": 1542701768,
                 "text": "20 Nov 2018, 08:16"
             },
-            "loved": 1
+            "loved": true
         },
         {
             "name": "Bad Things",
@@ -2583,7 +2583,7 @@
                 "timestamp": 1542701605,
                 "text": "20 Nov 2018, 08:13"
             },
-            "loved": 1
+            "loved": true
         },
         {
             "name": "\u03a4\u03bf \u03a4\u03b5\u03bb\u03b5\u03c5\u03c4\u03b1\u03af\u03bf \u0393\u03c1\u03ac\u03bc\u03bc\u03b1 \u0395\u03bd\u03cc\u03c2 \u0391\u03c5\u03c4\u03cc\u03c7\u03b5\u03b9\u03c1\u03b1",
@@ -2638,7 +2638,7 @@
                 "timestamp": 1542701434,
                 "text": "20 Nov 2018, 08:10"
             },
-            "loved": 1
+            "loved": true
         },
         {
             "name": "\u03a3\u03c6\u03b5\u03bd\u03c4\u03cc\u03bd\u03b1",
@@ -2693,7 +2693,7 @@
                 "timestamp": 1542701159,
                 "text": "20 Nov 2018, 08:05"
             },
-            "loved": 1
+            "loved": true
         },
         {
             "name": "\u03a0\u03ac\u03c1\u03b5 \u039b\u03af\u03b3\u03bf \u03a6\u03c9\u03c2 (Remix)",
@@ -2748,7 +2748,7 @@
                 "timestamp": 1542700871,
                 "text": "20 Nov 2018, 08:01"
             },
-            "loved": 1
+            "loved": true
         }
     ]
 }

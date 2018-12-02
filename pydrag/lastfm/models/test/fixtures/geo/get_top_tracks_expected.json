@@ -30,7 +30,7 @@
             "listeners": 867724,
             "duration": "272",
             "attr": {
-                "rank": "0"
+                "rank": 0
             }
         },
         {
@@ -63,7 +63,7 @@
             "listeners": 261777,
             "duration": "0",
             "attr": {
-                "rank": "1"
+                "rank": 1
             }
         },
         {
@@ -96,7 +96,7 @@
             "listeners": 1288368,
             "duration": "279",
             "attr": {
-                "rank": "2"
+                "rank": 2
             }
         },
         {
@@ -129,7 +129,7 @@
             "listeners": 1605374,
             "duration": "0",
             "attr": {
-                "rank": "3"
+                "rank": 3
             }
         },
         {
@@ -162,7 +162,7 @@
             "listeners": 1607794,
             "duration": "239",
             "attr": {
-                "rank": "4"
+                "rank": 4
             }
         },
         {
@@ -195,7 +195,7 @@
             "listeners": 215983,
             "duration": "0",
             "attr": {
-                "rank": "5"
+                "rank": 5
             }
         },
         {
@@ -228,7 +228,7 @@
             "listeners": 382761,
             "duration": "0",
             "attr": {
-                "rank": "6"
+                "rank": 6
             }
         },
         {
@@ -261,7 +261,7 @@
             "listeners": 1481075,
             "duration": "449",
             "attr": {
-                "rank": "7"
+                "rank": 7
             }
         },
         {
@@ -294,7 +294,7 @@
             "listeners": 1789826,
             "duration": "208",
             "attr": {
-                "rank": "8"
+                "rank": 8
             }
         },
         {
@@ -327,7 +327,7 @@
             "listeners": 2031860,
             "duration": "301",
             "attr": {
-                "rank": "9"
+                "rank": 9
             }
         }
     ]

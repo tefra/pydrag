@@ -29,7 +29,7 @@
             "playcount": 9314129,
             "listeners": 1359980,
             "attr": {
-                "rank": "1"
+                "rank": 1
             }
         },
         {
@@ -61,7 +61,7 @@
             "playcount": 7840169,
             "listeners": 1230922,
             "attr": {
-                "rank": "2"
+                "rank": 2
             }
         },
         {
@@ -94,7 +94,7 @@
             "playcount": 6951933,
             "listeners": 1092549,
             "attr": {
-                "rank": "3"
+                "rank": 3
             }
         },
         {
@@ -127,7 +127,7 @@
             "playcount": 6391027,
             "listeners": 958422,
             "attr": {
-                "rank": "4"
+                "rank": 4
             }
         },
         {
@@ -160,7 +160,7 @@
             "playcount": 4457223,
             "listeners": 764741,
             "attr": {
-                "rank": "5"
+                "rank": 5
             }
         },
         {
@@ -192,7 +192,7 @@
             "playcount": 3495677,
             "listeners": 598089,
             "attr": {
-                "rank": "6"
+                "rank": 6
             }
         },
         {
@@ -225,7 +225,7 @@
             "playcount": 2593925,
             "listeners": 540050,
             "attr": {
-                "rank": "7"
+                "rank": 7
             }
         },
         {
@@ -258,7 +258,7 @@
             "playcount": 3744264,
             "listeners": 527893,
             "attr": {
-                "rank": "8"
+                "rank": 8
             }
         },
         {
@@ -290,7 +290,7 @@
             "playcount": 2935472,
             "listeners": 499393,
             "attr": {
-                "rank": "9"
+                "rank": 9
             }
         },
         {
@@ -323,7 +323,7 @@
             "playcount": 2731773,
             "listeners": 491669,
             "attr": {
-                "rank": "10"
+                "rank": 10
             }
         },
         {
@@ -355,7 +355,7 @@
             "playcount": 2016181,
             "listeners": 406589,
             "attr": {
-                "rank": "11"
+                "rank": 11
             }
         },
         {
@@ -387,7 +387,7 @@
             "playcount": 2460454,
             "listeners": 387497,
             "attr": {
-                "rank": "12"
+                "rank": 12
             }
         },
         {
@@ -419,7 +419,7 @@
             "playcount": 2100336,
             "listeners": 378626,
             "attr": {
-                "rank": "13"
+                "rank": 13
             }
         },
         {
@@ -451,7 +451,7 @@
             "playcount": 2136561,
             "listeners": 367556,
             "attr": {
-                "rank": "14"
+                "rank": 14
             }
         },
         {
@@ -484,7 +484,7 @@
             "playcount": 1923696,
             "listeners": 355879,
             "attr": {
-                "rank": "15"
+                "rank": 15
             }
         },
         {
@@ -517,7 +517,7 @@
             "playcount": 1932437,
             "listeners": 327508,
             "attr": {
-                "rank": "16"
+                "rank": 16
             }
         },
         {
@@ -549,7 +549,7 @@
             "playcount": 1839992,
             "listeners": 313333,
             "attr": {
-                "rank": "17"
+                "rank": 17
             }
         },
         {
@@ -582,7 +582,7 @@
             "playcount": 1770029,
             "listeners": 303296,
             "attr": {
-                "rank": "18"
+                "rank": 18
             }
         },
         {
@@ -615,7 +615,7 @@
             "playcount": 1528651,
             "listeners": 294881,
             "attr": {
-                "rank": "19"
+                "rank": 19
             }
         },
         {
@@ -648,7 +648,7 @@
             "playcount": 1352966,
             "listeners": 293880,
             "attr": {
-                "rank": "20"
+                "rank": 20
             }
         },
         {
@@ -681,7 +681,7 @@
             "playcount": 1377833,
             "listeners": 269718,
             "attr": {
-                "rank": "21"
+                "rank": 21
             }
         },
         {
@@ -714,7 +714,7 @@
             "playcount": 1759519,
             "listeners": 262636,
             "attr": {
-                "rank": "22"
+                "rank": 22
             }
         },
         {
@@ -746,7 +746,7 @@
             "playcount": 1193015,
             "listeners": 242756,
             "attr": {
-                "rank": "23"
+                "rank": 23
             }
         },
         {
@@ -778,7 +778,7 @@
             "playcount": 1135931,
             "listeners": 241540,
             "attr": {
-                "rank": "24"
+                "rank": 24
             }
         },
         {
@@ -811,7 +811,7 @@
             "playcount": 1118034,
             "listeners": 231938,
             "attr": {
-                "rank": "25"
+                "rank": 25
             }
         },
         {
@@ -844,7 +844,7 @@
             "playcount": 1121322,
             "listeners": 214524,
             "attr": {
-                "rank": "26"
+                "rank": 26
             }
         },
         {
@@ -877,7 +877,7 @@
             "playcount": 935944,
             "listeners": 199751,
             "attr": {
-                "rank": "27"
+                "rank": 27
             }
         },
         {
@@ -910,7 +910,7 @@
             "playcount": 1264920,
             "listeners": 196412,
             "attr": {
-                "rank": "28"
+                "rank": 28
             }
         },
         {
@@ -943,7 +943,7 @@
             "playcount": 794114,
             "listeners": 185365,
             "attr": {
-                "rank": "29"
+                "rank": 29
             }
         },
         {
@@ -976,7 +976,7 @@
             "playcount": 722932,
             "listeners": 181349,
             "attr": {
-                "rank": "30"
+                "rank": 30
             }
         },
         {
@@ -1009,7 +1009,7 @@
             "playcount": 838564,
             "listeners": 176095,
             "attr": {
-                "rank": "31"
+                "rank": 31
             }
         },
         {
@@ -1041,7 +1041,7 @@
             "playcount": 855675,
             "listeners": 175187,
             "attr": {
-                "rank": "32"
+                "rank": 32
             }
         },
         {
@@ -1074,7 +1074,7 @@
             "playcount": 675282,
             "listeners": 169646,
             "attr": {
-                "rank": "33"
+                "rank": 33
             }
         },
         {
@@ -1107,7 +1107,7 @@
             "playcount": 719983,
             "listeners": 167308,
             "attr": {
-                "rank": "34"
+                "rank": 34
             }
         },
         {
@@ -1140,7 +1140,7 @@
             "playcount": 717853,
             "listeners": 163404,
             "attr": {
-                "rank": "35"
+                "rank": 35
             }
         },
         {
@@ -1172,7 +1172,7 @@
             "playcount": 710531,
             "listeners": 162821,
             "attr": {
-                "rank": "36"
+                "rank": 36
             }
         },
         {
@@ -1205,7 +1205,7 @@
             "playcount": 701799,
             "listeners": 162601,
             "attr": {
-                "rank": "37"
+                "rank": 37
             }
         },
         {
@@ -1238,7 +1238,7 @@
             "playcount": 685094,
             "listeners": 156845,
             "attr": {
-                "rank": "38"
+                "rank": 38
             }
         },
         {
@@ -1271,7 +1271,7 @@
             "playcount": 739790,
             "listeners": 154997,
             "attr": {
-                "rank": "39"
+                "rank": 39
             }
         },
         {
@@ -1303,7 +1303,7 @@
             "playcount": 679595,
             "listeners": 153811,
             "attr": {
-                "rank": "40"
+                "rank": 40
             }
         },
         {
@@ -1336,7 +1336,7 @@
             "playcount": 645979,
             "listeners": 153513,
             "attr": {
-                "rank": "41"
+                "rank": 41
             }
         },
         {
@@ -1368,7 +1368,7 @@
             "playcount": 703526,
             "listeners": 153395,
             "attr": {
-                "rank": "42"
+                "rank": 42
             }
         },
         {
@@ -1400,7 +1400,7 @@
             "playcount": 706883,
             "listeners": 152753,
             "attr": {
-                "rank": "43"
+                "rank": 43
             }
         },
         {
@@ -1432,7 +1432,7 @@
             "playcount": 686645,
             "listeners": 152390,
             "attr": {
-                "rank": "44"
+                "rank": 44
             }
         },
         {
@@ -1465,7 +1465,7 @@
             "playcount": 742996,
             "listeners": 148169,
             "attr": {
-                "rank": "45"
+                "rank": 45
             }
         },
         {
@@ -1497,7 +1497,7 @@
             "playcount": 1041229,
             "listeners": 147475,
             "attr": {
-                "rank": "46"
+                "rank": 46
             }
         },
         {
@@ -1529,7 +1529,7 @@
             "playcount": 575344,
             "listeners": 144241,
             "attr": {
-                "rank": "47"
+                "rank": 47
             }
         },
         {
@@ -1562,7 +1562,7 @@
             "playcount": 727765,
             "listeners": 138268,
             "attr": {
-                "rank": "48"
+                "rank": 48
             }
         },
         {
@@ -1595,7 +1595,7 @@
             "playcount": 642560,
             "listeners": 137006,
             "attr": {
-                "rank": "49"
+                "rank": 49
             }
         },
         {
@@ -1627,7 +1627,7 @@
             "playcount": 626628,
             "listeners": 135819,
             "attr": {
-                "rank": "50"
+                "rank": 50
             }
         }
     ]

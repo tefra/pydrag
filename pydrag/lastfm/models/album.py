@@ -4,7 +4,7 @@ from attr import dataclass
 
 from pydrag.core import BaseModel
 from pydrag.lastfm.models.artist import Artist
-from pydrag.lastfm.models.common import AttrModel, Image, Wiki
+from pydrag.lastfm.models.common import AttrModel, Image, RootAttributes, Wiki
 from pydrag.lastfm.models.tag import Tag
 
 
@@ -20,6 +20,12 @@ class TrackMini(BaseModel):
     artist: Artist
     duration: int
     attr: TrackMiniAttr
+
+    @classmethod
+    def from_dict(cls, data: dict):
+        data["artist"] = Artist.from_dict(data["artist"])
+        data["attr"] = TrackMiniAttr.from_dict(data["attr"])
+        return super(TrackMini, cls).from_dict(data)
 
     def get_info(self) -> BaseModel:
         """
@@ -65,15 +71,35 @@ class Album(AttrModel):
 
     @classmethod
     def from_dict(cls, data: dict):
-        for what in ["tracks", "tags"]:
-            try:
-                data[what] = data[what][what[:-1]]
-            except KeyError:
-                pass
-
         if isinstance(data.get("artist"), str):
             data["artist"] = dict(name=data["artist"])
-        return super().from_dict(data)
+
+            data.update(
+                {
+                    k: str(data[k])
+                    for k in ["name", "mbid", "url", "text"]
+                    if k in data
+                }
+            )
+        data.update(
+            {k: int(data[k]) for k in ["playcount", "listeners"] if k in data}
+        )
+
+        if "artist" in data:
+            data["artist"] = Artist.from_dict(data["artist"])
+        if "image" in data:
+            data["image"] = list(map(Image.from_dict, data["image"]))
+        if "tags" in data:
+            data["tags"] = list(map(Tag.from_dict, data["tags"]["tag"]))
+        if "tracks" in data:
+            data["tracks"] = list(
+                map(TrackMini.from_dict, data["tracks"]["track"])
+            )
+        if "wiki" in data:
+            data["wiki"] = Wiki.from_dict(data["wiki"])
+        if "attr" in data:
+            data["attr"] = RootAttributes.from_dict(data["attr"])
+        return cls(**data)
 
     @classmethod
     def find(

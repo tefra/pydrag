@@ -1,4 +1,4 @@
-from typing import Optional
+from typing import List, Optional
 
 from attr import dataclass
 
@@ -31,7 +31,7 @@ class RootAttributes(BaseModel):
     from_date: Optional[str] = None
     offset: Optional[int] = None
     timestamp: Optional[int] = None
-    rank: Optional[str] = None
+    rank: Optional[int] = None
     date: Optional[str] = None
     ignored: Optional[int] = None
     position: Optional[int] = None
@@ -70,13 +70,17 @@ class Link(BaseModel):
 
 
 @dataclass
-class Links(BaseModel):
-    link: Link
-
-
-@dataclass
 class Wiki(BaseModel):
     content: Optional[str] = None
     summary: Optional[str] = None
     published: Optional[str] = None
-    links: Optional[Links] = None
+    links: Optional[List[Link]] = None
+
+    @classmethod
+    def from_dict(cls, data: dict):
+        if "links" in data:
+            if isinstance(data["links"]["link"], dict):
+                data["links"]["link"] = [data["links"]["link"]]
+
+            data["links"] = list(map(Link.from_dict, data["links"]["link"]))
+        return super().from_dict(data)

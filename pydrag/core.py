@@ -5,7 +5,6 @@ from urllib.parse import urlencode
 
 import requests
 from attr import asdict, attrib, dataclass, fields
-from cattr import structure
 from requests import Response
 
 from pydrag.lastfm import config
@@ -19,14 +18,26 @@ class BaseModel(metaclass=ABCMeta):
     params: Optional[dict] = attrib(init=False)
 
     def to_dict(self: T) -> Dict:
-        return asdict(self, filter=lambda f, v: v is not None)
+        """
+        Convert our object to a traditional dictionary. Filter out None values
+        and dictionary values. The last one is like a validation for the unit
+        tests in case we forgot to properly deserialize an dict to an object.
 
-    def get_fields(self):
-        return fields(self.__class__)
+        :rtype: Dict
+        """
+        return asdict(
+            self, filter=lambda f, v: v is not None and type(v) != dict
+        )
 
     @classmethod
     def from_dict(cls, data: dict):
-        return structure(data, cls)
+        for f in fields(cls):
+            if f.type == str or (f.type == Optional[str] and f.name in data):
+                data[f.name] = str(data[f.name])
+            elif f.type == int or (f.type == Optional[int] and f.name in data):
+                data[f.name] = int(data[f.name])
+
+        return cls(**data)  # type: ignore
 
     @staticmethod
     def _prepare(params: dict) -> dict:

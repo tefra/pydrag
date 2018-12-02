@@ -21,6 +21,9 @@ class ArtistMini(BaseModel):
             data = correction.pop("artist")
         except KeyError:
             pass
+
+        if "image" in data:
+            data["image"] = list(map(Image.from_dict, data["image"]))
         return super().from_dict(data)
 
 
@@ -63,18 +66,41 @@ class Artist(BaseModel):
     @classmethod
     def from_dict(cls, data: dict):
         try:
-            data["tags"] = data["tags"]["tag"]
-        except KeyError:
-            pass
-        try:
-            data["similar"] = data["similar"]["artist"]
-        except KeyError:
-            pass
-        try:
             data.update(data.pop("stats"))
         except KeyError:
             pass
-        return super().from_dict(data)
+
+        data.update(
+            {
+                k: str(data[k])
+                for k in ["name", "mbid", "url", "match", "text"]
+                if k in data
+            }
+        )
+        data.update(
+            {
+                k: int(data[k])
+                for k in ["tag_count", "listeners", "playcount"]
+                if k in data
+            }
+        )
+
+        if "on_tour" in data:
+            data["on_tour"] = True if data["on_tour"] == "1" else False
+        if "image" in data:
+            data["image"] = list(map(Image.from_dict, data["image"]))
+        if "tags" in data:
+            data["tags"] = list(map(Tag.from_dict, data["tags"]["tag"]))
+        if "bio" in data:
+            data["bio"] = Wiki.from_dict(data["bio"])
+        if "similar" in data and data["similar"]:
+            data["similar"] = list(
+                map(ArtistMini.from_dict, data["similar"]["artist"])
+            )
+        if "attr" in data:
+            data["attr"] = RootAttributes.from_dict(data["attr"])
+
+        return cls(**data)
 
     @classmethod
     def find(cls, artist: str, user: str = None, lang: str = "en") -> "Artist":

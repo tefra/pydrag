@@ -29,6 +29,21 @@ class Tag(BaseModel):
     wiki: Optional[Wiki] = None
 
     @classmethod
+    def from_dict(cls, data: dict):
+        data.update({k: str(data[k]) for k in ["url", "name"] if k in data})
+        data.update(
+            {
+                k: int(data[k])
+                for k in ["reach", "taggings", "count", "total"]
+                if k in data
+            }
+        )
+
+        if "wiki" in data:
+            data["wiki"] = Wiki.from_dict(data["wiki"])
+        return cls(**data)
+
+    @classmethod
     def find(cls, name: str, lang: str = None) -> "Tag":
         """
         Get the metadata for a tag.

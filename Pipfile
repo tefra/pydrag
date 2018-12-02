@@ -10,6 +10,7 @@ pytest-cov = "*"
 vcrpy = "*"
 ipython = "*"
 tox = "*"
+"e1839a8" = {path = "."}
 
 [packages]
 "e1839a8" = {path = ".", editable = true}

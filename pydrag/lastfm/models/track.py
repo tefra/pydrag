@@ -32,6 +32,27 @@ class TrackUpdateNowPlaying(BaseModel):
     album_artist: Optional[Corrected] = None
     attr: Optional[Attributes] = None
 
+    @classmethod
+    def from_dict(cls, data: dict):
+        data.update(
+            {
+                k: Corrected.from_dict(data[k])
+                for k in [
+                    "album",
+                    "artist",
+                    "track",
+                    "ignored_message",
+                    "album_artist",
+                ]
+                if k in data
+            }
+        )
+        if "timestamp" in data:
+            data["timestamp"] = int(data["timestamp"])
+        if "attr" in data:
+            data["attr"] = Attributes.from_dict(data["attr"])
+        return super().from_dict(data)
+
 
 @dataclass
 class TrackScrobble(BaseModel):
@@ -40,10 +61,16 @@ class TrackScrobble(BaseModel):
 
     @classmethod
     def from_dict(cls, data: dict):
-        if isinstance(data, dict) and data.get("scrobble"):
-            if isinstance(data["scrobble"], dict):
-                data["scrobble"] = [data["scrobble"]]
-        return super().from_dict(data)
+        scrobble = data.pop("scrobble", [])
+        if isinstance(scrobble, dict):
+            scrobble = [scrobble]
+
+        return super().from_dict(
+            dict(
+                scrobble=list(map(TrackUpdateNowPlaying.from_dict, scrobble)),
+                attr=Attributes.from_dict(data["attr"]),
+            )
+        )
 
 
 @dataclass
@@ -101,6 +128,49 @@ class Track(BaseModel):
 
     @classmethod
     def from_dict(cls, data: dict) -> "Track":
+        data = cls._compat(data)
+
+        try:
+            correction = data.pop("correction")
+            data = correction.pop("track")
+        except KeyError:
+            pass
+
+        if isinstance(data["artist"], str):
+            data["artist"] = dict(name=data["artist"])
+
+        obj = dict(
+            name=str(data["name"]), artist=Artist.from_dict(data["artist"])
+        )
+        obj.update(
+            {k: str(data[k]) for k in ["url", "mbid", "duration"] if k in data}
+        )
+        obj.update(
+            {k: int(data[k]) for k in ["playcount", "listeners"] if k in data}
+        )
+
+        if "loved" in data:
+            obj["loved"] = True if data["loved"] == "1" else False
+
+        if "image" in data:
+            obj["image"] = list(map(Image.from_dict, data["image"]))
+        if "top_tags" in data:
+            obj["top_tags"] = list(map(Tag.from_dict, data["top_tags"]["tag"]))
+        if "match" in data:
+            obj["match"] = float(data["match"])
+        if "wiki" in data:
+            obj["wiki"] = Wiki.from_dict(data["wiki"])
+        if "album" in data:
+            obj["album"] = Album.from_dict(data["album"])
+        if "attr" in data:
+            obj["attr"] = RootAttributes.from_dict(data["attr"])
+        if "date" in data:
+            obj["date"] = Date.from_dict(data["date"])
+
+        return cls(**obj)
+
+    @classmethod
+    def _compat(cls, data):
         """
         In order to be more consistent than Last.fm api we have to normalize
         the input dictionary to fix a couple of things:
@@ -112,26 +182,12 @@ class Track(BaseModel):
         :rtype: :class:`~pydrag.lastfm.models.track.Track`
         """
         try:
-            data["top_tags"] = data["top_tags"]["tag"]
-        except KeyError:
-            pass
-
-        try:
             if isinstance(data["album"]["artist"], str):
                 data["album"]["artist"] = dict(name=data["album"]["artist"])
         except KeyError:
             pass
 
-        if isinstance(data.get("artist"), str):
-            data["artist"] = dict(name=data["artist"])
-
-        try:
-            correction = data.pop("correction")
-            data = correction.pop("track")
-        except KeyError:
-            pass
-
-        return super().from_dict(data)
+        return data
 
     @classmethod
     def find(
