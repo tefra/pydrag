@@ -127,6 +127,12 @@ class Album(AttrModel):
             )
         )
 
+    def get_info(self):
+        if self.mbid:
+            return self.find_by_mbid(self.mbid)
+        else:
+            return self.find(self.artist.name, self.name)
+
     @classmethod
     def search(
         cls, album: str, limit: int = 50, page: int = 1
