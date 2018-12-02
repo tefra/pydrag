@@ -23,7 +23,7 @@ class BaseModel(metaclass=ABCMeta):
         return asdict(self, filter=lambda f, v: v is not None)
 
     def get_fields(self):
-        return fields(self)
+        return fields(self.__class__)
 
     @classmethod
     def from_dict(cls, data: dict):
