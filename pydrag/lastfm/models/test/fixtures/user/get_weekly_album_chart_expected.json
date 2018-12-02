@@ -10,7 +10,7 @@
                 "text": "Womb Sounds Heartbeat"
             },
             "attr": {
-                "rank": "1"
+                "rank": 1
             }
         },
         {
@@ -23,7 +23,7 @@
                 "text": "The Gaslight Anthem"
             },
             "attr": {
-                "rank": "2"
+                "rank": 2
             }
         },
         {
@@ -36,7 +36,7 @@
                 "text": "Kacey Musgraves"
             },
             "attr": {
-                "rank": "3"
+                "rank": 3
             }
         },
         {
@@ -49,7 +49,7 @@
                 "text": "Ilham"
             },
             "attr": {
-                "rank": "4"
+                "rank": 4
             }
         },
         {
@@ -62,7 +62,7 @@
                 "text": "Nao"
             },
             "attr": {
-                "rank": "5"
+                "rank": 5
             }
         },
         {
@@ -75,7 +75,7 @@
                 "text": "Aretha Franklin"
             },
             "attr": {
-                "rank": "6"
+                "rank": 6
             }
         },
         {
@@ -88,7 +88,7 @@
                 "text": "Major."
             },
             "attr": {
-                "rank": "7"
+                "rank": 7
             }
         },
         {
@@ -101,7 +101,7 @@
                 "text": "Van Morrison"
             },
             "attr": {
-                "rank": "8"
+                "rank": 8
             }
         },
         {
@@ -114,7 +114,7 @@
                 "text": "Into The Ark"
             },
             "attr": {
-                "rank": "9"
+                "rank": 9
             }
         },
         {
@@ -127,7 +127,7 @@
                 "text": "Amber Mark"
             },
             "attr": {
-                "rank": "10"
+                "rank": 10
             }
         },
         {
@@ -140,7 +140,7 @@
                 "text": "Filmore"
             },
             "attr": {
-                "rank": "11"
+                "rank": 11
             }
         },
         {
@@ -153,7 +153,7 @@
                 "text": "Mario"
             },
             "attr": {
-                "rank": "12"
+                "rank": 12
             }
         },
         {
@@ -166,7 +166,7 @@
                 "text": "Brian Deady"
             },
             "attr": {
-                "rank": "13"
+                "rank": 13
             }
         },
         {
@@ -179,7 +179,7 @@
                 "text": "Enno Aare"
             },
             "attr": {
-                "rank": "14"
+                "rank": 14
             }
         },
         {
@@ -192,7 +192,7 @@
                 "text": "Ro James"
             },
             "attr": {
-                "rank": "15"
+                "rank": 15
             }
         },
         {
@@ -205,7 +205,7 @@
                 "text": "Ar'mon & Trey"
             },
             "attr": {
-                "rank": "16"
+                "rank": 16
             }
         },
         {
@@ -218,7 +218,7 @@
                 "text": "Kylie Minogue"
             },
             "attr": {
-                "rank": "17"
+                "rank": 17
             }
         },
         {
@@ -231,7 +231,7 @@
                 "text": "Paul Simon"
             },
             "attr": {
-                "rank": "18"
+                "rank": 18
             }
         },
         {
@@ -244,7 +244,7 @@
                 "text": "Nikki Blonsky"
             },
             "attr": {
-                "rank": "19"
+                "rank": 19
             }
         },
         {
@@ -257,7 +257,7 @@
                 "text": "Queen Naija"
             },
             "attr": {
-                "rank": "20"
+                "rank": 20
             }
         },
         {
@@ -270,7 +270,7 @@
                 "text": "masego"
             },
             "attr": {
-                "rank": "21"
+                "rank": 21
             }
         },
         {
@@ -283,7 +283,7 @@
                 "text": "Tamia"
             },
             "attr": {
-                "rank": "22"
+                "rank": 22
             }
         },
         {
@@ -296,7 +296,7 @@
                 "text": "Ferris & Sylvester"
             },
             "attr": {
-                "rank": "23"
+                "rank": 23
             }
         },
         {
@@ -309,7 +309,7 @@
                 "text": "Melat"
             },
             "attr": {
-                "rank": "24"
+                "rank": 24
             }
         },
         {
@@ -322,7 +322,7 @@
                 "text": "Marsha Ambrosius"
             },
             "attr": {
-                "rank": "25"
+                "rank": 25
             }
         },
         {
@@ -335,7 +335,7 @@
                 "text": "Liza"
             },
             "attr": {
-                "rank": "26"
+                "rank": 26
             }
         },
         {
@@ -348,7 +348,7 @@
                 "text": "R.Lum.R"
             },
             "attr": {
-                "rank": "27"
+                "rank": 27
             }
         },
         {
@@ -361,7 +361,7 @@
                 "text": "Kacey Musgraves"
             },
             "attr": {
-                "rank": "28"
+                "rank": 28
             }
         },
         {
@@ -374,7 +374,7 @@
                 "text": "Franz Schubert"
             },
             "attr": {
-                "rank": "29"
+                "rank": 29
             }
         },
         {
@@ -387,7 +387,7 @@
                 "text": "Kiana Led\u00e9"
             },
             "attr": {
-                "rank": "30"
+                "rank": 30
             }
         },
         {
@@ -400,7 +400,7 @@
                 "text": "Stevie Wonder"
             },
             "attr": {
-                "rank": "31"
+                "rank": 31
             }
         },
         {
@@ -413,7 +413,7 @@
                 "text": "Childish Gambino"
             },
             "attr": {
-                "rank": "32"
+                "rank": 32
             }
         },
         {
@@ -426,7 +426,7 @@
                 "text": "Fleetwood Mac"
             },
             "attr": {
-                "rank": "33"
+                "rank": 33
             }
         },
         {
@@ -439,7 +439,7 @@
                 "text": "Dram"
             },
             "attr": {
-                "rank": "34"
+                "rank": 34
             }
         },
         {
@@ -452,7 +452,7 @@
                 "text": "Jackie Wilson"
             },
             "attr": {
-                "rank": "35"
+                "rank": 35
             }
         },
         {
@@ -465,7 +465,7 @@
                 "text": "The Wandering Hearts"
             },
             "attr": {
-                "rank": "36"
+                "rank": 36
             }
         },
         {
@@ -478,7 +478,7 @@
                 "text": "Sauti Sol"
             },
             "attr": {
-                "rank": "37"
+                "rank": 37
             }
         },
         {
@@ -491,7 +491,7 @@
                 "text": "Nao"
             },
             "attr": {
-                "rank": "38"
+                "rank": 38
             }
         },
         {
@@ -504,7 +504,7 @@
                 "text": "Njomza"
             },
             "attr": {
-                "rank": "39"
+                "rank": 39
             }
         },
         {
@@ -517,7 +517,7 @@
                 "text": "Ryan Trey"
             },
             "attr": {
-                "rank": "40"
+                "rank": 40
             }
         },
         {
@@ -530,7 +530,7 @@
                 "text": "Shawn Stockman"
             },
             "attr": {
-                "rank": "41"
+                "rank": 41
             }
         },
         {
@@ -543,7 +543,7 @@
                 "text": "India.Arie"
             },
             "attr": {
-                "rank": "42"
+                "rank": 42
             }
         },
         {
@@ -556,7 +556,7 @@
                 "text": "Mario"
             },
             "attr": {
-                "rank": "43"
+                "rank": 43
             }
         },
         {
@@ -569,7 +569,7 @@
                 "text": "JamesDavis"
             },
             "attr": {
-                "rank": "44"
+                "rank": 44
             }
         },
         {
@@ -582,7 +582,7 @@
                 "text": "Sat-B"
             },
             "attr": {
-                "rank": "45"
+                "rank": 45
             }
         },
         {
@@ -595,7 +595,7 @@
                 "text": "Free Nationals"
             },
             "attr": {
-                "rank": "46"
+                "rank": 46
             }
         },
         {
@@ -608,7 +608,7 @@
                 "text": "Summer Walker"
             },
             "attr": {
-                "rank": "47"
+                "rank": 47
             }
         },
         {
@@ -621,7 +621,7 @@
                 "text": "Catherine McGrath"
             },
             "attr": {
-                "rank": "48"
+                "rank": 48
             }
         },
         {
@@ -634,7 +634,7 @@
                 "text": "Ferris & Sylvester"
             },
             "attr": {
-                "rank": "49"
+                "rank": 49
             }
         },
         {
@@ -647,7 +647,7 @@
                 "text": "Maddie & Tae"
             },
             "attr": {
-                "rank": "50"
+                "rank": 50
             }
         },
         {
@@ -660,7 +660,7 @@
                 "text": "The Wild Things"
             },
             "attr": {
-                "rank": "51"
+                "rank": 51
             }
         }
     ]

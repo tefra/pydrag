@@ -3,37 +3,12 @@ from typing import List, Optional
 from attr import dataclass
 
 from pydrag.core import BaseModel
-from pydrag.lastfm.models.common import Image, RootAttributes, Wiki
+from pydrag.lastfm.models.common import Attributes, Image, Wiki
 from pydrag.lastfm.models.tag import Tag
 
 
 @dataclass
-class ArtistMini(BaseModel):
-    name: str
-    url: str
-    mbid: Optional[str] = None
-    image: Optional[List[Image]] = None
-
-
-@dataclass
-class CorrectionArtistAttr(BaseModel):
-    index: int
-
-
-@dataclass
-class CorrectionArtist(BaseModel):
-    artist: ArtistMini
-    attr: CorrectionArtistAttr
-
-
-@dataclass
-class ArtistCorrection(BaseModel):
-    correction: CorrectionArtist
-
-
-@dataclass
 class Artist(BaseModel):
-
     """
     Last.FM track, chart and geo api client.
 
@@ -61,28 +36,42 @@ class Artist(BaseModel):
     playcount: Optional[int] = None
     image: Optional[List[Image]] = None
     match: Optional[str] = None
-    attr: Optional[RootAttributes] = None
+    attr: Optional[Attributes] = None
     tags: Optional[List[Tag]] = None
     bio: Optional[Wiki] = None
     on_tour: Optional[int] = None
-    similar: Optional[List[ArtistMini]] = None
+    similar: Optional[List["Artist"]] = None
     text: Optional[str] = None
 
     @classmethod
     def from_dict(cls, data: dict):
         try:
-            data["tags"] = data["tags"]["tag"]
-        except KeyError:
-            pass
-        try:
-            data["similar"] = data["similar"]["artist"]
-        except KeyError:
-            pass
-        try:
             data.update(data.pop("stats"))
         except KeyError:
             pass
-        return super().from_dict(data)
+
+        try:
+            correction = data.pop("correction")
+            data = correction.pop("artist")
+        except KeyError:
+            pass
+
+        if "on_tour" in data:
+            data["on_tour"] = True if data["on_tour"] == "1" else False
+        if "image" in data:
+            data["image"] = list(map(Image.from_dict, data["image"]))
+        if "tags" in data:
+            data["tags"] = list(map(Tag.from_dict, data["tags"]["tag"]))
+        if "bio" in data:
+            data["bio"] = Wiki.from_dict(data["bio"])
+        if "similar" in data and data["similar"]:
+            data["similar"] = list(
+                map(cls.from_dict, data["similar"]["artist"])
+            )
+        if "attr" in data:
+            data["attr"] = Attributes.from_dict(data["attr"])
+
+        return super(Artist, cls).from_dict(data)
 
     @classmethod
     def find(cls, artist: str, user: str = None, lang: str = "en") -> "Artist":
@@ -217,16 +206,15 @@ class Artist(BaseModel):
             params=dict(method="artist.removeTag", arist=self.name, tag=tag),
         )
 
-    def get_correction(self) -> ArtistCorrection:
+    def get_correction(self) -> "Artist":
         """
         Use the last.fm corrections data to check whether the supplied artist
         has a correction to a canonical artist.
 
-        :rtype: :class:`~pydrag.lastfm.models.artist.ArtistCorrection`
+        :rtype: :class:`~pydrag.lastfm.models.artist.Artist`
         """
         return self.retrieve(
-            bind=ArtistCorrection,
-            params=dict(method="artist.getCorrection", artist=self.name),
+            params=dict(method="artist.getCorrection", artist=self.name)
         )
 
     def get_similar(self, limit: int = 50) -> List["Artist"]:

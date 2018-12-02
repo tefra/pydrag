@@ -1,12 +1,5 @@
 {
-    "correction": {
-        "attr": {
-            "index": 0
-        },
-        "artist": {
-            "mbid": "CENSORED8e43",
-            "name": "Guns N' Roses",
-            "url": "https://www.last.fm/music/Guns+N%27+Roses"
-        }
-    }
+    "mbid": "CENSORED8e43",
+    "name": "Guns N' Roses",
+    "url": "https://www.last.fm/music/Guns+N%27+Roses"
 }

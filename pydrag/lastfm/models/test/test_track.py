@@ -7,7 +7,6 @@ from pydrag.lastfm.models.test import MethodTestCase, fixture
 from pydrag.lastfm.models.track import (
     ScrobbleTrack,
     Track,
-    TrackCorrection,
     TrackScrobble,
     TrackUpdateNowPlaying,
 )
@@ -84,7 +83,7 @@ class TrackTests(MethodTestCase):
             "track": "Hells Bell",
         }
         self.assertEqual(expected_params, result.params)
-        self.assertIsInstance(result, TrackCorrection)
+        self.assertIsInstance(result, Track)
         self.assertFixtureEqual("track/get_correction", result.to_dict())
 
     @fixture.use_cassette(path="track/get_top_tags")

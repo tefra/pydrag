@@ -36,7 +36,7 @@
                 }
             ],
             "playcount": 3465004,
-            "duration": "0",
+            "duration": 0,
             "match": 1.0
         },
         {
@@ -75,7 +75,7 @@
                 }
             ],
             "playcount": 1634631,
-            "duration": "215",
+            "duration": 215,
             "match": 0.991725
         },
         {
@@ -114,7 +114,7 @@
                 }
             ],
             "playcount": 6951933,
-            "duration": "406",
+            "duration": 406,
             "match": 0.269601
         },
         {
@@ -152,7 +152,7 @@
                 }
             ],
             "playcount": 7840169,
-            "duration": "273",
+            "duration": 273,
             "match": 0.242951
         },
         {
@@ -191,7 +191,7 @@
                 }
             ],
             "playcount": 4365210,
-            "duration": "342",
+            "duration": 342,
             "match": 0.231092
         },
         {
@@ -230,7 +230,7 @@
                 }
             ],
             "playcount": 8015261,
-            "duration": "0",
+            "duration": 0,
             "match": 0.219304
         },
         {
@@ -269,7 +269,7 @@
                 }
             ],
             "playcount": 2928303,
-            "duration": "253",
+            "duration": 253,
             "match": 0.214881
         },
         {
@@ -308,7 +308,7 @@
                 }
             ],
             "playcount": 2909659,
-            "duration": "368",
+            "duration": 368,
             "match": 0.212694
         },
         {
@@ -347,7 +347,7 @@
                 }
             ],
             "playcount": 5099395,
-            "duration": "356",
+            "duration": 356,
             "match": 0.196856
         },
         {
@@ -386,7 +386,7 @@
                 }
             ],
             "playcount": 10768765,
-            "duration": "807",
+            "duration": 807,
             "match": 0.195529
         },
         {
@@ -425,7 +425,7 @@
                 }
             ],
             "playcount": 3997058,
-            "duration": "267",
+            "duration": 267,
             "match": 0.194265
         },
         {
@@ -464,7 +464,7 @@
                 }
             ],
             "playcount": 2193608,
-            "duration": "211",
+            "duration": 211,
             "match": 0.191464
         },
         {
@@ -503,7 +503,7 @@
                 }
             ],
             "playcount": 3453625,
-            "duration": "255",
+            "duration": 255,
             "match": 0.185447
         },
         {
@@ -542,7 +542,7 @@
                 }
             ],
             "playcount": 5647249,
-            "duration": "399",
+            "duration": 399,
             "match": 0.185328
         },
         {
@@ -581,7 +581,7 @@
                 }
             ],
             "playcount": 1426941,
-            "duration": "237",
+            "duration": 237,
             "match": 0.18345
         },
         {
@@ -620,7 +620,7 @@
                 }
             ],
             "playcount": 1377374,
-            "duration": "217",
+            "duration": 217,
             "match": 0.180265
         },
         {
@@ -659,7 +659,7 @@
                 }
             ],
             "playcount": 6271205,
-            "duration": "267",
+            "duration": 267,
             "match": 0.175017
         },
         {
@@ -698,7 +698,7 @@
                 }
             ],
             "playcount": 2047141,
-            "duration": "218",
+            "duration": 218,
             "match": 0.173136
         },
         {
@@ -737,7 +737,7 @@
                 }
             ],
             "playcount": 2394061,
-            "duration": "357",
+            "duration": 357,
             "match": 0.169157
         },
         {
@@ -776,7 +776,7 @@
                 }
             ],
             "playcount": 1822570,
-            "duration": "314",
+            "duration": 314,
             "match": 0.169025
         },
         {
@@ -814,7 +814,7 @@
                 }
             ],
             "playcount": 5976269,
-            "duration": "0",
+            "duration": 0,
             "match": 0.164309
         },
         {
@@ -853,7 +853,7 @@
                 }
             ],
             "playcount": 736571,
-            "duration": "359",
+            "duration": 359,
             "match": 0.164245
         },
         {
@@ -892,7 +892,7 @@
                 }
             ],
             "playcount": 2400993,
-            "duration": "272",
+            "duration": 272,
             "match": 0.160055
         },
         {
@@ -931,7 +931,7 @@
                 }
             ],
             "playcount": 2816083,
-            "duration": "351",
+            "duration": 351,
             "match": 0.158766
         },
         {
@@ -970,7 +970,7 @@
                 }
             ],
             "playcount": 3221362,
-            "duration": "155",
+            "duration": 155,
             "match": 0.158658
         },
         {
@@ -1009,7 +1009,7 @@
                 }
             ],
             "playcount": 1191933,
-            "duration": "0",
+            "duration": 0,
             "match": 0.153869
         },
         {
@@ -1048,7 +1048,7 @@
                 }
             ],
             "playcount": 3012761,
-            "duration": "282",
+            "duration": 282,
             "match": 0.149157
         },
         {
@@ -1087,7 +1087,7 @@
                 }
             ],
             "playcount": 1676938,
-            "duration": "256",
+            "duration": 256,
             "match": 0.147308
         },
         {
@@ -1126,7 +1126,7 @@
                 }
             ],
             "playcount": 5777309,
-            "duration": "249",
+            "duration": 249,
             "match": 0.146738
         },
         {
@@ -1165,7 +1165,7 @@
                 }
             ],
             "playcount": 932975,
-            "duration": "223",
+            "duration": 223,
             "match": 0.144174
         },
         {
@@ -1204,7 +1204,7 @@
                 }
             ],
             "playcount": 1703109,
-            "duration": "208",
+            "duration": 208,
             "match": 0.142916
         },
         {
@@ -1243,7 +1243,7 @@
                 }
             ],
             "playcount": 1758590,
-            "duration": "159",
+            "duration": 159,
             "match": 0.14289
         },
         {
@@ -1282,7 +1282,7 @@
                 }
             ],
             "playcount": 4253006,
-            "duration": "304",
+            "duration": 304,
             "match": 0.142829
         },
         {
@@ -1321,7 +1321,7 @@
                 }
             ],
             "playcount": 5699336,
-            "duration": "214",
+            "duration": 214,
             "match": 0.141832
         },
         {
@@ -1360,7 +1360,7 @@
                 }
             ],
             "playcount": 1960427,
-            "duration": "0",
+            "duration": 0,
             "match": 0.141771
         },
         {
@@ -1399,7 +1399,7 @@
                 }
             ],
             "playcount": 5278059,
-            "duration": "128",
+            "duration": 128,
             "match": 0.141725
         },
         {
@@ -1438,7 +1438,7 @@
                 }
             ],
             "playcount": 963345,
-            "duration": "277",
+            "duration": 277,
             "match": 0.141038
         },
         {
@@ -1477,7 +1477,7 @@
                 }
             ],
             "playcount": 1705194,
-            "duration": "276",
+            "duration": 276,
             "match": 0.140399
         },
         {
@@ -1516,7 +1516,7 @@
                 }
             ],
             "playcount": 2298778,
-            "duration": "255",
+            "duration": 255,
             "match": 0.137259
         },
         {
@@ -1555,7 +1555,7 @@
                 }
             ],
             "playcount": 833534,
-            "duration": "500",
+            "duration": 500,
             "match": 0.13554
         },
         {
@@ -1594,7 +1594,7 @@
                 }
             ],
             "playcount": 2717553,
-            "duration": "0",
+            "duration": 0,
             "match": 0.131617
         },
         {
@@ -1633,7 +1633,7 @@
                 }
             ],
             "playcount": 1839017,
-            "duration": "255",
+            "duration": 255,
             "match": 0.131216
         },
         {
@@ -1672,7 +1672,7 @@
                 }
             ],
             "playcount": 3513214,
-            "duration": "307",
+            "duration": 307,
             "match": 0.126384
         },
         {
@@ -1711,7 +1711,7 @@
                 }
             ],
             "playcount": 1660959,
-            "duration": "183",
+            "duration": 183,
             "match": 0.12294
         },
         {
@@ -1750,7 +1750,7 @@
                 }
             ],
             "playcount": 872981,
-            "duration": "508",
+            "duration": 508,
             "match": 0.120665
         },
         {
@@ -1789,7 +1789,7 @@
                 }
             ],
             "playcount": 843857,
-            "duration": "343",
+            "duration": 343,
             "match": 0.118658
         },
         {
@@ -1828,7 +1828,7 @@
                 }
             ],
             "playcount": 5046132,
-            "duration": "287",
+            "duration": 287,
             "match": 0.114652
         },
         {
@@ -1867,7 +1867,7 @@
                 }
             ],
             "playcount": 3179777,
-            "duration": "238",
+            "duration": 238,
             "match": 0.113273
         },
         {
@@ -1906,7 +1906,7 @@
                 }
             ],
             "playcount": 645348,
-            "duration": "250",
+            "duration": 250,
             "match": 0.11173
         },
         {
@@ -1945,7 +1945,7 @@
                 }
             ],
             "playcount": 1243135,
-            "duration": "0",
+            "duration": 0,
             "match": 0.107828
         }
     ]

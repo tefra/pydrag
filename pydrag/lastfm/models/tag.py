@@ -29,6 +29,12 @@ class Tag(BaseModel):
     wiki: Optional[Wiki] = None
 
     @classmethod
+    def from_dict(cls, data: dict):
+        if "wiki" in data:
+            data["wiki"] = Wiki.from_dict(data["wiki"])
+        return super(Tag, cls).from_dict(data)
+
+    @classmethod
     def find(cls, name: str, lang: str = None) -> "Tag":
         """
         Get the metadata for a tag.

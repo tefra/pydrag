@@ -1,19 +1,10 @@
 {
-    "correction": {
-        "attr": {
-            "index": 0,
-            "track_corrected": 1,
-            "artist_corrected": 1
-        },
-        "track": {
-            "name": "Hells Bells",
-            "url": "https://www.last.fm/music/AC%2FDC/_/Hells+Bells",
-            "artist": {
-                "mbid": "CENSORED3ed1",
-                "name": "AC/DC",
-                "url": "https://www.last.fm/music/AC%2FDC"
-            },
-            "mbid": "CENSOREDb286"
-        }
-    }
+    "name": "Hells Bells",
+    "url": "https://www.last.fm/music/AC%2FDC/_/Hells+Bells",
+    "artist": {
+        "mbid": "CENSORED3ed1",
+        "name": "AC/DC",
+        "url": "https://www.last.fm/music/AC%2FDC"
+    },
+    "mbid": "CENSOREDb286"
 }

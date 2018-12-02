@@ -28,9 +28,9 @@
                 }
             ],
             "playcount": 35,
-            "duration": "0",
+            "duration": 0,
             "attr": {
-                "rank": "1"
+                "rank": 1
             }
         }
     ]

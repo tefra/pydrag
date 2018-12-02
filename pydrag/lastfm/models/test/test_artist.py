@@ -1,5 +1,5 @@
 from pydrag.core import BaseListModel, BaseModel
-from pydrag.lastfm.models.artist import Artist, ArtistCorrection
+from pydrag.lastfm.models.artist import Artist
 from pydrag.lastfm.models.test import MethodTestCase, fixture
 
 
@@ -70,7 +70,7 @@ class ArtistTests(MethodTestCase):
             "method": "artist.getCorrection",
         }
         self.assertEqual(expected_params, result.params)
-        self.assertIsInstance(result, ArtistCorrection)
+        self.assertIsInstance(result, Artist)
         self.assertFixtureEqual("artist/get_correction", result.to_dict())
 
     @fixture.use_cassette(path="artist/get_top_tags")

@@ -27,9 +27,9 @@
                     "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
-            "duration": "314",
+            "duration": 314,
             "attr": {
-                "rank": "1"
+                "rank": 1
             }
         },
         {
@@ -59,9 +59,9 @@
                     "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
-            "duration": "339",
+            "duration": 339,
             "attr": {
-                "rank": "2"
+                "rank": 2
             }
         }
     ]

@@ -5,13 +5,7 @@ from attr import dataclass
 from pydrag.core import BaseModel
 from pydrag.lastfm.models.album import Album
 from pydrag.lastfm.models.artist import Artist
-from pydrag.lastfm.models.common import (
-    Attributes,
-    Date,
-    Image,
-    RootAttributes,
-    Wiki,
-)
+from pydrag.lastfm.models.common import Attributes, Date, Image, Wiki
 from pydrag.lastfm.models.tag import Tag
 
 
@@ -32,6 +26,28 @@ class TrackUpdateNowPlaying(BaseModel):
     album_artist: Optional[Corrected] = None
     attr: Optional[Attributes] = None
 
+    @classmethod
+    def from_dict(cls, data: dict):
+        data.update(
+            {
+                k: Corrected.from_dict(data[k])
+                for k in [
+                    "album",
+                    "artist",
+                    "track",
+                    "ignored_message",
+                    "album_artist",
+                ]
+                if k in data
+            }
+        )
+        if "timestamp" in data:
+            data["timestamp"] = int(data["timestamp"])
+        if "attr" in data:
+            data["attr"] = Attributes.from_dict(data["attr"])
+
+        return super(TrackUpdateNowPlaying, cls).from_dict(data)
+
 
 @dataclass
 class TrackScrobble(BaseModel):
@@ -40,10 +56,16 @@ class TrackScrobble(BaseModel):
 
     @classmethod
     def from_dict(cls, data: dict):
-        if isinstance(data, dict) and data.get("scrobble"):
-            if isinstance(data["scrobble"], dict):
-                data["scrobble"] = [data["scrobble"]]
-        return super().from_dict(data)
+        scrobble = data.pop("scrobble", [])
+        if isinstance(scrobble, dict):
+            scrobble = [scrobble]
+
+        return super().from_dict(
+            dict(
+                scrobble=list(map(TrackUpdateNowPlaying.from_dict, scrobble)),
+                attr=Attributes.from_dict(data["attr"]),
+            )
+        )
 
 
 @dataclass
@@ -90,42 +112,62 @@ class Track(BaseModel):
     image: Optional[List[Image]] = None
     playcount: Optional[int] = None
     listeners: Optional[int] = None
-    duration: Optional[str] = None
+    duration: Optional[int] = None
     match: Optional[float] = None
     wiki: Optional[Wiki] = None
     album: Optional[Album] = None
     top_tags: Optional[List[Tag]] = None
-    attr: Optional[RootAttributes] = None
+    attr: Optional[Attributes] = None
     date: Optional[Date] = None
     loved: Optional[int] = None
 
     @classmethod
     def from_dict(cls, data: dict) -> "Track":
-        """
-        In order to be more consistent than Last.fm api we have to normalize
-        the input dictionary to fix a couple of things:
-
-        * Flatten top tags list
-        * Make sure artist field is always a dictionary
-
-        :param data:
-        :rtype: :class:`~pydrag.lastfm.models.track.Track`
-        """
-        try:
-            data["top_tags"] = data["top_tags"]["tag"]
-        except KeyError:
-            pass
-
         try:
             if isinstance(data["album"]["artist"], str):
                 data["album"]["artist"] = dict(name=data["album"]["artist"])
         except KeyError:
             pass
 
-        if isinstance(data.get("artist"), str):
+        try:
+            correction = data.pop("correction")
+            data = correction.pop("track")
+        except KeyError:
+            pass
+
+        if isinstance(data["artist"], str):
             data["artist"] = dict(name=data["artist"])
 
-        return super().from_dict(data)
+        data.update(
+            dict(
+                name=str(data["name"]), artist=Artist.from_dict(data["artist"])
+            )
+        )
+
+        if data.get("duration") == "FIXME":
+            data["duration"] = 0
+
+        if "loved" in data:
+            data["loved"] = True if data["loved"] == "1" else False
+
+        if "image" in data:
+            data["image"] = list(map(Image.from_dict, data["image"]))
+        if "top_tags" in data:
+            data["top_tags"] = list(
+                map(Tag.from_dict, data["top_tags"]["tag"])
+            )
+        if "match" in data:
+            data["match"] = float(data["match"])
+        if "wiki" in data:
+            data["wiki"] = Wiki.from_dict(data["wiki"])
+        if "album" in data:
+            data["album"] = Album.from_dict(data["album"])
+        if "attr" in data:
+            data["attr"] = Attributes.from_dict(data["attr"])
+        if "date" in data:
+            data["date"] = Date.from_dict(data["date"])
+
+        return super(Track, cls).from_dict(data)
 
     @classmethod
     def find(
@@ -175,15 +217,15 @@ class Track(BaseModel):
         )
 
     @classmethod
-    def get_correction(cls, track: str, artist: str) -> "TrackCorrection":
+    def get_correction(cls, track: str, artist: str) -> "Track":
         """
         Use the last.fm corrections data to check whether the supplied track
         has a correction to a canonical track.
 
-        :rtype: :class:`~pydrag.lastfm.models.track.TrackCorrection`
+        :rtype: :class:`~pydrag.lastfm.models.track.Track`
         """
         return cls.retrieve(
-            bind=TrackCorrection,
+            bind=Track,
             params=dict(
                 method="track.getCorrection", artist=artist, track=track
             ),
@@ -397,7 +439,6 @@ class Track(BaseModel):
             result = Track.scrobble(batch)
             if status is None:
                 status = result
-                status.response = None
             elif result.scrobble:
                 status.attr.accepted += result.attr.accepted
                 status.attr.ignored += result.attr.ignored
@@ -440,21 +481,3 @@ class Track(BaseModel):
                 albumArtist=album_artist,
             ),
         )
-
-
-@dataclass
-class CorrectionAttributes(BaseModel):
-    index: int
-    track_corrected: int
-    artist_corrected: int
-
-
-@dataclass
-class CorrectionTrack(BaseModel):
-    attr: CorrectionAttributes
-    track: Track
-
-
-@dataclass
-class TrackCorrection(BaseModel):
-    correction: CorrectionTrack

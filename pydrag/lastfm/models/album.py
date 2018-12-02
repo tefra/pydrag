@@ -4,37 +4,12 @@ from attr import dataclass
 
 from pydrag.core import BaseModel
 from pydrag.lastfm.models.artist import Artist
-from pydrag.lastfm.models.common import AttrModel, Image, Wiki
+from pydrag.lastfm.models.common import Attributes, Image, Wiki
 from pydrag.lastfm.models.tag import Tag
 
 
 @dataclass
-class TrackMiniAttr(BaseModel):
-    rank: int
-
-
-@dataclass
-class TrackMini(BaseModel):
-    name: str
-    url: str
-    artist: Artist
-    duration: int
-    attr: TrackMiniAttr
-
-    def get_info(self) -> BaseModel:
-        """
-        Returns a proper full Album instance.
-
-        :rtype: :class:`~pydrag.lastfm.models.album.Album`
-        """
-        from pydrag.lastfm.models.track import Track
-
-        assert self.artist.name is not None
-        return Track.find(artist=self.artist.name, track=self.name)
-
-
-@dataclass
-class Album(AttrModel):
+class Album(BaseModel):
     """
     Last.FM track, chart and geo api client.
 
@@ -49,6 +24,7 @@ class Album(AttrModel):
     :param tags: List of top tags
     :param tracks: List of album tracks
     :param wiki: Album wiki information
+    :param attr: Album metadata
     """
 
     name: Optional[str] = None
@@ -60,20 +36,32 @@ class Album(AttrModel):
     artist: Optional[Artist] = None
     listeners: Optional[int] = None
     tags: Optional[List[Tag]] = None
-    tracks: Optional[List[TrackMini]] = None
+    tracks: Optional[List["Track"]] = None  # type: ignore
     wiki: Optional[Wiki] = None
+    attr: Optional[Attributes] = None
 
     @classmethod
     def from_dict(cls, data: dict):
-        for what in ["tracks", "tags"]:
-            try:
-                data[what] = data[what][what[:-1]]
-            except KeyError:
-                pass
-
         if isinstance(data.get("artist"), str):
             data["artist"] = dict(name=data["artist"])
-        return super().from_dict(data)
+
+        if "artist" in data:
+            data["artist"] = Artist.from_dict(data["artist"])
+        if "image" in data:
+            data["image"] = list(map(Image.from_dict, data["image"]))
+        if "tags" in data:
+            data["tags"] = list(map(Tag.from_dict, data["tags"]["tag"]))
+        if "tracks" in data:
+            from pydrag.lastfm.models.track import Track
+
+            data["tracks"] = list(
+                map(Track.from_dict, data["tracks"]["track"])
+            )
+        if "wiki" in data:
+            data["wiki"] = Wiki.from_dict(data["wiki"])
+        if "attr" in data:
+            data["attr"] = Attributes.from_dict(data["attr"])
+        return super(Album, cls).from_dict(data)
 
     @classmethod
     def find(
