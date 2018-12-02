@@ -7,7 +7,7 @@
             "url": "https://www.last.fm/music/Womb+Sounds+Heartbeat/Einschlafhilfe+Baby+Sleepy",
             "artist": {
                 "mbid": "",
-                "text": "Womb Sounds Heartbeat"
+                "name": "Womb Sounds Heartbeat"
             },
             "attr": {
                 "rank": 1
@@ -20,7 +20,7 @@
             "url": "https://www.last.fm/music/The+Gaslight+Anthem/The+%2759+Sound",
             "artist": {
                 "mbid": "CENSORED17e3",
-                "text": "The Gaslight Anthem"
+                "name": "The Gaslight Anthem"
             },
             "attr": {
                 "rank": 2
@@ -33,7 +33,7 @@
             "url": "https://www.last.fm/music/Kacey+Musgraves/Golden+Hour",
             "artist": {
                 "mbid": "CENSORED40cb",
-                "text": "Kacey Musgraves"
+                "name": "Kacey Musgraves"
             },
             "attr": {
                 "rank": 3
@@ -46,7 +46,7 @@
             "url": "https://www.last.fm/music/Ilham/41-10",
             "artist": {
                 "mbid": "",
-                "text": "Ilham"
+                "name": "Ilham"
             },
             "attr": {
                 "rank": 4
@@ -59,7 +59,7 @@
             "url": "https://www.last.fm/music/Nao/Another+Lifetime",
             "artist": {
                 "mbid": "CENSORED1fed",
-                "text": "Nao"
+                "name": "Nao"
             },
             "attr": {
                 "rank": 5
@@ -72,7 +72,7 @@
             "url": "https://www.last.fm/music/Aretha+Franklin/Aretha+Now",
             "artist": {
                 "mbid": "CENSORED299e",
-                "text": "Aretha Franklin"
+                "name": "Aretha Franklin"
             },
             "attr": {
                 "rank": 6
@@ -85,7 +85,7 @@
             "url": "https://www.last.fm/music/Major./Better+With+You+in+It",
             "artist": {
                 "mbid": "",
-                "text": "Major."
+                "name": "Major."
             },
             "attr": {
                 "rank": 7
@@ -98,7 +98,7 @@
             "url": "https://www.last.fm/music/Van+Morrison/Blowin%27+Your+Mind%21",
             "artist": {
                 "mbid": "CENSORED3559",
-                "text": "Van Morrison"
+                "name": "Van Morrison"
             },
             "attr": {
                 "rank": 8
@@ -111,7 +111,7 @@
             "url": "https://www.last.fm/music/Into+The+Ark/Burning+Love+(Acoustic)",
             "artist": {
                 "mbid": "",
-                "text": "Into The Ark"
+                "name": "Into The Ark"
             },
             "attr": {
                 "rank": 9
@@ -124,7 +124,7 @@
             "url": "https://www.last.fm/music/Amber+Mark/Conex%C3%A3o+-+EP",
             "artist": {
                 "mbid": "",
-                "text": "Amber Mark"
+                "name": "Amber Mark"
             },
             "attr": {
                 "rank": 10
@@ -137,7 +137,7 @@
             "url": "https://www.last.fm/music/Filmore/Country+Song",
             "artist": {
                 "mbid": "CENSORED0c76",
-                "text": "Filmore"
+                "name": "Filmore"
             },
             "attr": {
                 "rank": 11
@@ -150,7 +150,7 @@
             "url": "https://www.last.fm/music/Mario/Drowning",
             "artist": {
                 "mbid": "CENSORED2cc7",
-                "text": "Mario"
+                "name": "Mario"
             },
             "attr": {
                 "rank": 12
@@ -163,7 +163,7 @@
             "url": "https://www.last.fm/music/Brian+Deady/Eloise+(Lean+Into+the+Wave)",
             "artist": {
                 "mbid": "CENSORED1726",
-                "text": "Brian Deady"
+                "name": "Brian Deady"
             },
             "attr": {
                 "rank": 13
@@ -176,7 +176,7 @@
             "url": "https://www.last.fm/music/Enno+Aare/Enno+Aare",
             "artist": {
                 "mbid": "",
-                "text": "Enno Aare"
+                "name": "Enno Aare"
             },
             "attr": {
                 "rank": 14
@@ -189,7 +189,7 @@
             "url": "https://www.last.fm/music/Ro+James/Excuse+Me",
             "artist": {
                 "mbid": "",
-                "text": "Ro James"
+                "name": "Ro James"
             },
             "attr": {
                 "rank": 15
@@ -202,7 +202,7 @@
             "url": "https://www.last.fm/music/Ar%27mon+&+Trey/Forever",
             "artist": {
                 "mbid": "",
-                "text": "Ar'mon & Trey"
+                "name": "Ar'mon & Trey"
             },
             "attr": {
                 "rank": 16
@@ -215,7 +215,7 @@
             "url": "https://www.last.fm/music/Kylie+Minogue/Golden",
             "artist": {
                 "mbid": "CENSORED684c",
-                "text": "Kylie Minogue"
+                "name": "Kylie Minogue"
             },
             "attr": {
                 "rank": 17
@@ -228,7 +228,7 @@
             "url": "https://www.last.fm/music/Paul+Simon/Graceland+(25th+Anniversary+Deluxe+Edition)",
             "artist": {
                 "mbid": "CENSOREDebb9",
-                "text": "Paul Simon"
+                "name": "Paul Simon"
             },
             "attr": {
                 "rank": 18
@@ -241,7 +241,7 @@
             "url": "https://www.last.fm/music/Nikki+Blonsky/Hairspray+%5BDeluxe+Capbox+(Ex+USA)%5D",
             "artist": {
                 "mbid": "CENSOREDfd5d",
-                "text": "Nikki Blonsky"
+                "name": "Nikki Blonsky"
             },
             "attr": {
                 "rank": 19
@@ -254,7 +254,7 @@
             "url": "https://www.last.fm/music/Queen+Naija/Karma",
             "artist": {
                 "mbid": "",
-                "text": "Queen Naija"
+                "name": "Queen Naija"
             },
             "attr": {
                 "rank": 20
@@ -267,7 +267,7 @@
             "url": "https://www.last.fm/music/masego/Lady+Lady",
             "artist": {
                 "mbid": "",
-                "text": "masego"
+                "name": "masego"
             },
             "attr": {
                 "rank": 21
@@ -280,7 +280,7 @@
             "url": "https://www.last.fm/music/Tamia/Leave+It+Smokin%E2%80%99",
             "artist": {
                 "mbid": "CENSORED7396",
-                "text": "Tamia"
+                "name": "Tamia"
             },
             "attr": {
                 "rank": 22
@@ -293,7 +293,7 @@
             "url": "https://www.last.fm/music/Ferris+&+Sylvester/Made+In+Streatham",
             "artist": {
                 "mbid": "",
-                "text": "Ferris & Sylvester"
+                "name": "Ferris & Sylvester"
             },
             "attr": {
                 "rank": 23
@@ -306,7 +306,7 @@
             "url": "https://www.last.fm/music/Melat/Move+Me+II+:+The+Present",
             "artist": {
                 "mbid": "",
-                "text": "Melat"
+                "name": "Melat"
             },
             "attr": {
                 "rank": 24
@@ -319,7 +319,7 @@
             "url": "https://www.last.fm/music/Marsha+Ambrosius/Old+Times",
             "artist": {
                 "mbid": "CENSOREDd8aa",
-                "text": "Marsha Ambrosius"
+                "name": "Marsha Ambrosius"
             },
             "attr": {
                 "rank": 25
@@ -332,7 +332,7 @@
             "url": "https://www.last.fm/music/Liza/Passes+Me",
             "artist": {
                 "mbid": "CENSORED8446",
-                "text": "Liza"
+                "name": "Liza"
             },
             "attr": {
                 "rank": 26
@@ -345,7 +345,7 @@
             "url": "https://www.last.fm/music/R.Lum.R/Right+Here,+I+Need+To+Know",
             "artist": {
                 "mbid": "",
-                "text": "R.Lum.R"
+                "name": "R.Lum.R"
             },
             "attr": {
                 "rank": 27
@@ -358,7 +358,7 @@
             "url": "https://www.last.fm/music/Kacey+Musgraves/Same+Trailer+Different+Park",
             "artist": {
                 "mbid": "CENSORED40cb",
-                "text": "Kacey Musgraves"
+                "name": "Kacey Musgraves"
             },
             "attr": {
                 "rank": 28
@@ -371,7 +371,7 @@
             "url": "https://www.last.fm/music/Franz+Schubert/Schubert:+Piano+Sonatas+D.840,+850+&+894",
             "artist": {
                 "mbid": "CENSORED65ed",
-                "text": "Franz Schubert"
+                "name": "Franz Schubert"
             },
             "attr": {
                 "rank": 29
@@ -384,7 +384,7 @@
             "url": "https://www.last.fm/music/Kiana+Led%C3%A9/Selfless",
             "artist": {
                 "mbid": "",
-                "text": "Kiana Led\u00e9"
+                "name": "Kiana Led\u00e9"
             },
             "attr": {
                 "rank": 30
@@ -397,7 +397,7 @@
             "url": "https://www.last.fm/music/Stevie+Wonder/Signed+Sealed+And+Delivered",
             "artist": {
                 "mbid": "CENSOREDe986",
-                "text": "Stevie Wonder"
+                "name": "Stevie Wonder"
             },
             "attr": {
                 "rank": 31
@@ -410,7 +410,7 @@
             "url": "https://www.last.fm/music/Childish+Gambino/Summer+Pack",
             "artist": {
                 "mbid": "CENSORED607e",
-                "text": "Childish Gambino"
+                "name": "Childish Gambino"
             },
             "attr": {
                 "rank": 32
@@ -423,7 +423,7 @@
             "url": "https://www.last.fm/music/Fleetwood+Mac/Tango+In+the+Night+(Deluxe)",
             "artist": {
                 "mbid": "CENSORED5b1a",
-                "text": "Fleetwood Mac"
+                "name": "Fleetwood Mac"
             },
             "attr": {
                 "rank": 33
@@ -436,7 +436,7 @@
             "url": "https://www.last.fm/music/Dram/That%27s+A+Girls+Name",
             "artist": {
                 "mbid": "",
-                "text": "Dram"
+                "name": "Dram"
             },
             "attr": {
                 "rank": 34
@@ -449,7 +449,7 @@
             "url": "https://www.last.fm/music/Jackie+Wilson/The+Ultimate+Jackie+Wilson",
             "artist": {
                 "mbid": "CENSORED05dd",
-                "text": "Jackie Wilson"
+                "name": "Jackie Wilson"
             },
             "attr": {
                 "rank": 35
@@ -462,7 +462,7 @@
             "url": "https://www.last.fm/music/The+Wandering+Hearts/Wild+Silence",
             "artist": {
                 "mbid": "",
-                "text": "The Wandering Hearts"
+                "name": "The Wandering Hearts"
             },
             "attr": {
                 "rank": 36
@@ -475,7 +475,7 @@
             "url": "https://www.last.fm/music/Sauti+Sol/Tujiangalie",
             "artist": {
                 "mbid": "CENSORED80b9",
-                "text": "Sauti Sol"
+                "name": "Sauti Sol"
             },
             "attr": {
                 "rank": 37
@@ -488,7 +488,7 @@
             "url": "https://www.last.fm/music/Nao/Make+It+Out+Alive+(feat.+SiR)",
             "artist": {
                 "mbid": "CENSORED1fed",
-                "text": "Nao"
+                "name": "Nao"
             },
             "attr": {
                 "rank": 38
@@ -501,7 +501,7 @@
             "url": "https://www.last.fm/music/Njomza/Lonely+Nights",
             "artist": {
                 "mbid": "",
-                "text": "Njomza"
+                "name": "Njomza"
             },
             "attr": {
                 "rank": 39
@@ -514,7 +514,7 @@
             "url": "https://www.last.fm/music/Ryan+Trey/august",
             "artist": {
                 "mbid": "",
-                "text": "Ryan Trey"
+                "name": "Ryan Trey"
             },
             "attr": {
                 "rank": 40
@@ -527,7 +527,7 @@
             "url": "https://www.last.fm/music/Shawn+Stockman/Feelin+Lil+Som%27n+-+Single",
             "artist": {
                 "mbid": "CENSORED87d4",
-                "text": "Shawn Stockman"
+                "name": "Shawn Stockman"
             },
             "attr": {
                 "rank": 41
@@ -540,7 +540,7 @@
             "url": "https://www.last.fm/music/India.Arie/That+Magic",
             "artist": {
                 "mbid": "CENSOREDefdd",
-                "text": "India.Arie"
+                "name": "India.Arie"
             },
             "attr": {
                 "rank": 42
@@ -553,7 +553,7 @@
             "url": "https://www.last.fm/music/Mario/Dancing+Shadows",
             "artist": {
                 "mbid": "CENSORED2cc7",
-                "text": "Mario"
+                "name": "Mario"
             },
             "attr": {
                 "rank": 43
@@ -566,7 +566,7 @@
             "url": "https://www.last.fm/music/JamesDavis/Speedboat",
             "artist": {
                 "mbid": "",
-                "text": "JamesDavis"
+                "name": "JamesDavis"
             },
             "attr": {
                 "rank": 44
@@ -579,7 +579,7 @@
             "url": "https://www.last.fm/music/Sat-B/Feel+Love",
             "artist": {
                 "mbid": "",
-                "text": "Sat-B"
+                "name": "Sat-B"
             },
             "attr": {
                 "rank": 45
@@ -592,7 +592,7 @@
             "url": "https://www.last.fm/music/Free+Nationals/Beauty+&+Essex+(feat.+Daniel+Caesar+&+Unknown+Mortal+Orchestra)",
             "artist": {
                 "mbid": "",
-                "text": "Free Nationals"
+                "name": "Free Nationals"
             },
             "attr": {
                 "rank": 46
@@ -605,7 +605,7 @@
             "url": "https://www.last.fm/music/Summer+Walker/Last+Day+Of+Summer",
             "artist": {
                 "mbid": "",
-                "text": "Summer Walker"
+                "name": "Summer Walker"
             },
             "attr": {
                 "rank": 47
@@ -618,7 +618,7 @@
             "url": "https://www.last.fm/music/Catherine+McGrath/The+Acoustics",
             "artist": {
                 "mbid": "",
-                "text": "Catherine McGrath"
+                "name": "Catherine McGrath"
             },
             "attr": {
                 "rank": 48
@@ -631,7 +631,7 @@
             "url": "https://www.last.fm/music/Ferris+&+Sylvester/Burning+River",
             "artist": {
                 "mbid": "",
-                "text": "Ferris & Sylvester"
+                "name": "Ferris & Sylvester"
             },
             "attr": {
                 "rank": 49
@@ -644,7 +644,7 @@
             "url": "https://www.last.fm/music/Maddie+&+Tae/Die+From+A+Broken+Heart",
             "artist": {
                 "mbid": "CENSOREDb79f",
-                "text": "Maddie & Tae"
+                "name": "Maddie & Tae"
             },
             "attr": {
                 "rank": 50
@@ -657,7 +657,7 @@
             "url": "https://www.last.fm/music/The+Wild+Things/Better+off+Alone",
             "artist": {
                 "mbid": "CENSOREDae52",
-                "text": "The Wild Things"
+                "name": "The Wild Things"
             },
             "attr": {
                 "rank": 51

@@ -30,7 +30,7 @@
                     "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
-            "match": "1"
+            "match": 1
         },
         {
             "mbid": "CENSORED57cb",
@@ -62,7 +62,7 @@
                     "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
-            "match": "0.963093"
+            "match": 0.963093
         },
         {
             "mbid": "CENSORED6119",
@@ -94,7 +94,7 @@
                     "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
-            "match": "0.872626"
+            "match": 0.872626
         },
         {
             "mbid": "CENSOREDe16a",
@@ -126,7 +126,7 @@
                     "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
-            "match": "0.863939"
+            "match": 0.863939
         },
         {
             "mbid": "CENSOREDd17c",
@@ -158,7 +158,7 @@
                     "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
-            "match": "0.826084"
+            "match": 0.826084
         },
         {
             "mbid": "CENSOREDa140",
@@ -190,7 +190,7 @@
                     "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
-            "match": "0.762287"
+            "match": 0.762287
         },
         {
             "mbid": "CENSORED3ed1",
@@ -222,7 +222,7 @@
                     "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
-            "match": "0.690787"
+            "match": 0.690787
         },
         {
             "mbid": "CENSORED4965",
@@ -254,7 +254,7 @@
                     "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
-            "match": "0.664058"
+            "match": 0.664058
         },
         {
             "mbid": "CENSORED024e",
@@ -286,7 +286,7 @@
                     "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
-            "match": "0.608040"
+            "match": 0.60804
         },
         {
             "mbid": "CENSORED7c15",
@@ -318,7 +318,7 @@
                     "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
-            "match": "0.607536"
+            "match": 0.607536
         },
         {
             "mbid": "CENSOREDb7d8",
@@ -350,7 +350,7 @@
                     "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
-            "match": "0.588754"
+            "match": 0.588754
         },
         {
             "mbid": "CENSORED3283",
@@ -382,7 +382,7 @@
                     "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
-            "match": "0.583697"
+            "match": 0.583697
         },
         {
             "mbid": "CENSORED47b6",
@@ -414,7 +414,7 @@
                     "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
-            "match": "0.530646"
+            "match": 0.530646
         },
         {
             "mbid": "CENSORED674a",
@@ -446,7 +446,7 @@
                     "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
-            "match": "0.512607"
+            "match": 0.512607
         },
         {
             "mbid": "CENSOREDf3ba",
@@ -478,7 +478,7 @@
                     "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
-            "match": "0.497304"
+            "match": 0.497304
         },
         {
             "mbid": "CENSOREDfe61",
@@ -510,7 +510,7 @@
                     "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
-            "match": "0.487769"
+            "match": 0.487769
         },
         {
             "mbid": "CENSOREDd03c",
@@ -542,7 +542,7 @@
                     "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
-            "match": "0.485873"
+            "match": 0.485873
         },
         {
             "mbid": "CENSORED6934",
@@ -574,7 +574,7 @@
                     "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
-            "match": "0.474779"
+            "match": 0.474779
         },
         {
             "mbid": "CENSORED3767",
@@ -606,7 +606,7 @@
                     "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
-            "match": "0.465815"
+            "match": 0.465815
         },
         {
             "mbid": "CENSORED2522",
@@ -638,7 +638,7 @@
                     "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
-            "match": "0.465410"
+            "match": 0.46541
         },
         {
             "mbid": "CENSOREDe781",
@@ -670,7 +670,7 @@
                     "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
-            "match": "0.464768"
+            "match": 0.464768
         },
         {
             "mbid": "CENSOREDf1a7",
@@ -702,7 +702,7 @@
                     "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
-            "match": "0.448956"
+            "match": 0.448956
         },
         {
             "mbid": "CENSOREDb2ab",
@@ -734,7 +734,7 @@
                     "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
-            "match": "0.442616"
+            "match": 0.442616
         },
         {
             "mbid": "CENSORED75bf",
@@ -766,7 +766,7 @@
                     "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
-            "match": "0.438935"
+            "match": 0.438935
         },
         {
             "mbid": "CENSORED196f",
@@ -798,7 +798,7 @@
                     "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
-            "match": "0.427768"
+            "match": 0.427768
         },
         {
             "mbid": "CENSORED45ae",
@@ -830,7 +830,7 @@
                     "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
-            "match": "0.422601"
+            "match": 0.422601
         },
         {
             "mbid": "CENSORED5f54",
@@ -862,7 +862,7 @@
                     "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
-            "match": "0.417202"
+            "match": 0.417202
         },
         {
             "mbid": "CENSORED302a",
@@ -894,7 +894,7 @@
                     "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
-            "match": "0.409386"
+            "match": 0.409386
         },
         {
             "mbid": "CENSORED1396",
@@ -926,7 +926,7 @@
                     "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
-            "match": "0.409267"
+            "match": 0.409267
         },
         {
             "mbid": "CENSORED1167",
@@ -958,7 +958,7 @@
                     "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
-            "match": "0.408861"
+            "match": 0.408861
         },
         {
             "mbid": "CENSORED4ed0",
@@ -990,7 +990,7 @@
                     "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
-            "match": "0.391082"
+            "match": 0.391082
         },
         {
             "mbid": "CENSORED790a",
@@ -1022,7 +1022,7 @@
                     "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
-            "match": "0.390521"
+            "match": 0.390521
         },
         {
             "mbid": "CENSORED9843",
@@ -1054,7 +1054,7 @@
                     "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
-            "match": "0.384453"
+            "match": 0.384453
         },
         {
             "mbid": "CENSORED9f2a",
@@ -1086,7 +1086,7 @@
                     "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
-            "match": "0.378539"
+            "match": 0.378539
         },
         {
             "mbid": "CENSOREDda4b",
@@ -1118,7 +1118,7 @@
                     "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
-            "match": "0.375018"
+            "match": 0.375018
         },
         {
             "mbid": "CENSOREDc455",
@@ -1150,7 +1150,7 @@
                     "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
-            "match": "0.369881"
+            "match": 0.369881
         },
         {
             "mbid": "CENSORED7b05",
@@ -1182,7 +1182,7 @@
                     "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
-            "match": "0.368421"
+            "match": 0.368421
         },
         {
             "mbid": "CENSOREDdfb9",
@@ -1214,7 +1214,7 @@
                     "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
-            "match": "0.364523"
+            "match": 0.364523
         },
         {
             "mbid": "CENSORED21a8",
@@ -1246,7 +1246,7 @@
                     "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
-            "match": "0.362216"
+            "match": 0.362216
         },
         {
             "mbid": "CENSORED3f92",
@@ -1278,7 +1278,7 @@
                     "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
-            "match": "0.360609"
+            "match": 0.360609
         },
         {
             "mbid": "CENSOREDb339",
@@ -1310,7 +1310,7 @@
                     "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
-            "match": "0.360172"
+            "match": 0.360172
         },
         {
             "mbid": "CENSOREDcb1f",
@@ -1342,7 +1342,7 @@
                     "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
-            "match": "0.350902"
+            "match": 0.350902
         },
         {
             "mbid": "CENSOREDf88b",
@@ -1374,7 +1374,7 @@
                     "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
-            "match": "0.337440"
+            "match": 0.33744
         },
         {
             "mbid": "CENSOREDcd0b",
@@ -1406,7 +1406,7 @@
                     "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
-            "match": "0.335578"
+            "match": 0.335578
         },
         {
             "mbid": "CENSORED1ae5",
@@ -1438,7 +1438,7 @@
                     "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
-            "match": "0.334525"
+            "match": 0.334525
         },
         {
             "mbid": "CENSORED9c76",
@@ -1470,7 +1470,7 @@
                     "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
-            "match": "0.321871"
+            "match": 0.321871
         },
         {
             "mbid": "CENSORED1456",
@@ -1502,7 +1502,7 @@
                     "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
-            "match": "0.320493"
+            "match": 0.320493
         },
         {
             "mbid": "CENSORED2726",
@@ -1534,7 +1534,7 @@
                     "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
-            "match": "0.318446"
+            "match": 0.318446
         },
         {
             "mbid": "CENSORED1553",
@@ -1566,7 +1566,7 @@
                     "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
-            "match": "0.317225"
+            "match": 0.317225
         },
         {
             "mbid": "CENSOREDfca1",
@@ -1598,7 +1598,7 @@
                     "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
-            "match": "0.314931"
+            "match": 0.314931
         }
     ]
 }

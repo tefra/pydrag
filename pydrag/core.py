@@ -32,10 +32,15 @@ class BaseModel(metaclass=ABCMeta):
     @classmethod
     def from_dict(cls, data: dict):
         for f in fields(cls):
-            if f.type == str or (f.type == Optional[str] and f.name in data):
+            if f.name not in data:
+                continue
+
+            if f.type == str or f.type == Optional[str]:
                 data[f.name] = str(data[f.name])
-            elif f.type == int or (f.type == Optional[int] and f.name in data):
+            elif f.type == int or f.type == Optional[int]:
                 data[f.name] = int(data[f.name])
+            elif f.type == float or f.type == Optional[float]:
+                data[f.name] = float(data[f.name])
 
         return cls(**data)  # type: ignore
 

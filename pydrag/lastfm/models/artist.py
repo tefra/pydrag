@@ -20,28 +20,26 @@ class Artist(BaseModel):
     :param playcount: Total artist playcount
     :param image: List of images
     :param match: Search query match weight
-    :param attr: Metadata details
     :param tags: List of top tags
     :param bio: Artist bio information
-    :param on_tour: Artist currently on tour flag should be boolean
+    :param on_tour: Artist currently on tour flag
     :param similar: List of similar artists
-    :param text: NOIDEA
+    :param attr: Metadata details
     """
 
-    name: Optional[str] = None
+    name: str
     mbid: Optional[str] = None
     url: Optional[str] = None
     tag_count: Optional[int] = None
     listeners: Optional[int] = None
     playcount: Optional[int] = None
     image: Optional[List[Image]] = None
-    match: Optional[str] = None
-    attr: Optional[Attributes] = None
+    match: Optional[float] = None
     tags: Optional[List[Tag]] = None
     bio: Optional[Wiki] = None
-    on_tour: Optional[int] = None
+    on_tour: Optional[bool] = None
     similar: Optional[List["Artist"]] = None
-    text: Optional[str] = None
+    attr: Optional[Attributes] = None
 
     @classmethod
     def from_dict(cls, data: dict):
@@ -56,6 +54,8 @@ class Artist(BaseModel):
         except KeyError:
             pass
 
+        if "name" not in data and "text" in data:
+            data["name"] = data.pop("text")
         if "on_tour" in data:
             data["on_tour"] = True if data["on_tour"] == "1" else False
         if "image" in data:

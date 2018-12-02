@@ -100,9 +100,9 @@ class Track(BaseModel):
     :param wiki: Track wiki information
     :param album: Track album information
     :param top_tags: Top user tags
-    :param attr: Metadata details
     :param date: Date the user listened or loved this track
     :param loved: True/False if the track is one of the user's loved ones
+    :param attr: Metadata details
     """
 
     name: str
@@ -117,9 +117,9 @@ class Track(BaseModel):
     wiki: Optional[Wiki] = None
     album: Optional[Album] = None
     top_tags: Optional[List[Tag]] = None
-    attr: Optional[Attributes] = None
     date: Optional[Date] = None
     loved: Optional[int] = None
+    attr: Optional[Attributes] = None
 
     @classmethod
     def from_dict(cls, data: dict) -> "Track":
@@ -146,10 +146,8 @@ class Track(BaseModel):
 
         if data.get("duration") == "FIXME":
             data["duration"] = 0
-
         if "loved" in data:
             data["loved"] = True if data["loved"] == "1" else False
-
         if "image" in data:
             data["image"] = list(map(Image.from_dict, data["image"]))
         if "top_tags" in data:

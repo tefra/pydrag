@@ -68,4 +68,4 @@ class Wiki(BaseModel):
                 data["links"]["link"] = [data["links"]["link"]]
 
             data["links"] = list(map(Link.from_dict, data["links"]["link"]))
-        return super().from_dict(data)
+        return super(Wiki, cls).from_dict(data)

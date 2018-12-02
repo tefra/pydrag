@@ -5,7 +5,7 @@
             "url": "https://www.last.fm/music/Womb+Sounds+Heartbeat/_/Einschlafhilfe+Baby+Sleepy+-+60+Minuten",
             "artist": {
                 "mbid": "",
-                "text": "Womb Sounds Heartbeat"
+                "name": "Womb Sounds Heartbeat"
             },
             "mbid": "",
             "image": [
@@ -32,7 +32,7 @@
             "url": "https://www.last.fm/music/Jackie+Wilson/_/(Your+Love+Keeps+Lifting+Me)+Higher+&+Higher",
             "artist": {
                 "mbid": "CENSORED05dd",
-                "text": "Jackie Wilson"
+                "name": "Jackie Wilson"
             },
             "mbid": "CENSORED2922",
             "image": [
@@ -59,7 +59,7 @@
             "url": "https://www.last.fm/music/Nao/_/Another+Lifetime",
             "artist": {
                 "mbid": "CENSORED1fed",
-                "text": "Nao"
+                "name": "Nao"
             },
             "mbid": "",
             "image": [
@@ -86,7 +86,7 @@
             "url": "https://www.last.fm/music/Dram/_/Best+Hugs",
             "artist": {
                 "mbid": "",
-                "text": "Dram"
+                "name": "Dram"
             },
             "mbid": "",
             "image": [
@@ -113,7 +113,7 @@
             "url": "https://www.last.fm/music/Major./_/Better+With+You+in+It",
             "artist": {
                 "mbid": "",
-                "text": "Major."
+                "name": "Major."
             },
             "mbid": "",
             "image": [
@@ -140,7 +140,7 @@
             "url": "https://www.last.fm/music/Van+Morrison/_/Brown+Eyed+Girl",
             "artist": {
                 "mbid": "CENSORED3559",
-                "text": "Van Morrison"
+                "name": "Van Morrison"
             },
             "mbid": "CENSORED3542",
             "image": [
@@ -167,7 +167,7 @@
             "url": "https://www.last.fm/music/The+Wandering+Hearts/_/Burning+Bridges",
             "artist": {
                 "mbid": "",
-                "text": "The Wandering Hearts"
+                "name": "The Wandering Hearts"
             },
             "mbid": "",
             "image": [
@@ -194,7 +194,7 @@
             "url": "https://www.last.fm/music/Into+The+Ark/_/Burning+Love+-+Acoustic",
             "artist": {
                 "mbid": "",
-                "text": "Into The Ark"
+                "name": "Into The Ark"
             },
             "mbid": "",
             "image": [
@@ -221,7 +221,7 @@
             "url": "https://www.last.fm/music/The+Gaslight+Anthem/_/Casanova,+Baby%21",
             "artist": {
                 "mbid": "CENSORED17e3",
-                "text": "The Gaslight Anthem"
+                "name": "The Gaslight Anthem"
             },
             "mbid": "CENSORED7a95",
             "image": [
@@ -248,7 +248,7 @@
             "url": "https://www.last.fm/music/Filmore/_/Country+Song",
             "artist": {
                 "mbid": "CENSORED0c76",
-                "text": "Filmore"
+                "name": "Filmore"
             },
             "mbid": "",
             "image": [
@@ -275,7 +275,7 @@
             "url": "https://www.last.fm/music/Summer+Walker/_/CPR",
             "artist": {
                 "mbid": "",
-                "text": "Summer Walker"
+                "name": "Summer Walker"
             },
             "mbid": "",
             "image": [
@@ -302,7 +302,7 @@
             "url": "https://www.last.fm/music/Ilham/_/cycle+of+games",
             "artist": {
                 "mbid": "",
-                "text": "Ilham"
+                "name": "Ilham"
             },
             "mbid": "",
             "image": [
@@ -329,7 +329,7 @@
             "url": "https://www.last.fm/music/Mario/_/Drowning",
             "artist": {
                 "mbid": "CENSORED2cc7",
-                "text": "Mario"
+                "name": "Mario"
             },
             "mbid": "",
             "image": [
@@ -356,7 +356,7 @@
             "url": "https://www.last.fm/music/Enno+Aare/_/Ella%27s+Lullaby",
             "artist": {
                 "mbid": "",
-                "text": "Enno Aare"
+                "name": "Enno Aare"
             },
             "mbid": "",
             "image": [
@@ -383,7 +383,7 @@
             "url": "https://www.last.fm/music/Brian+Deady/_/Eloise+(Lean+Into+the+Wave)",
             "artist": {
                 "mbid": "CENSORED1726",
-                "text": "Brian Deady"
+                "name": "Brian Deady"
             },
             "mbid": "",
             "image": [
@@ -410,7 +410,7 @@
             "url": "https://www.last.fm/music/The+Gaslight+Anthem/_/Even+Cowgirls+Get+The+Blues",
             "artist": {
                 "mbid": "CENSORED17e3",
-                "text": "The Gaslight Anthem"
+                "name": "The Gaslight Anthem"
             },
             "mbid": "CENSORED52c0",
             "image": [
@@ -437,7 +437,7 @@
             "url": "https://www.last.fm/music/Fleetwood+Mac/_/Everywhere+-+2017+Remastered",
             "artist": {
                 "mbid": "CENSORED5b1a",
-                "text": "Fleetwood Mac"
+                "name": "Fleetwood Mac"
             },
             "mbid": "",
             "image": [
@@ -464,7 +464,7 @@
             "url": "https://www.last.fm/music/Kiana+Led%C3%A9/_/EX",
             "artist": {
                 "mbid": "",
-                "text": "Kiana Led\u00e9"
+                "name": "Kiana Led\u00e9"
             },
             "mbid": "",
             "image": [
@@ -491,7 +491,7 @@
             "url": "https://www.last.fm/music/Ro+James/_/Excuse+Me",
             "artist": {
                 "mbid": "",
-                "text": "Ro James"
+                "name": "Ro James"
             },
             "mbid": "",
             "image": [
@@ -518,7 +518,7 @@
             "url": "https://www.last.fm/music/Childish+Gambino/_/Feels+Like+Summer",
             "artist": {
                 "mbid": "CENSORED607e",
-                "text": "Childish Gambino"
+                "name": "Childish Gambino"
             },
             "mbid": "",
             "image": [
@@ -545,7 +545,7 @@
             "url": "https://www.last.fm/music/The+Gaslight+Anthem/_/Film+Noir",
             "artist": {
                 "mbid": "CENSORED17e3",
-                "text": "The Gaslight Anthem"
+                "name": "The Gaslight Anthem"
             },
             "mbid": "CENSOREDaa05",
             "image": [
@@ -572,7 +572,7 @@
             "url": "https://www.last.fm/music/Ar%27mon+&+Trey/_/Forever",
             "artist": {
                 "mbid": "",
-                "text": "Ar'mon & Trey"
+                "name": "Ar'mon & Trey"
             },
             "mbid": "",
             "image": [
@@ -599,7 +599,7 @@
             "url": "https://www.last.fm/music/The+Gaslight+Anthem/_/Great+Expectations",
             "artist": {
                 "mbid": "CENSORED17e3",
-                "text": "The Gaslight Anthem"
+                "name": "The Gaslight Anthem"
             },
             "mbid": "CENSOREDbeda",
             "image": [
@@ -626,7 +626,7 @@
             "url": "https://www.last.fm/music/The+Gaslight+Anthem/_/High+Lonesome",
             "artist": {
                 "mbid": "CENSORED17e3",
-                "text": "The Gaslight Anthem"
+                "name": "The Gaslight Anthem"
             },
             "mbid": "CENSORED3950",
             "image": [
@@ -653,7 +653,7 @@
             "url": "https://www.last.fm/music/R.Lum.R/_/I+Need+To+Know",
             "artist": {
                 "mbid": "",
-                "text": "R.Lum.R"
+                "name": "R.Lum.R"
             },
             "mbid": "",
             "image": [
@@ -680,7 +680,7 @@
             "url": "https://www.last.fm/music/Aretha+Franklin/_/I+Say+a+Little+Prayer",
             "artist": {
                 "mbid": "CENSORED299e",
-                "text": "Aretha Franklin"
+                "name": "Aretha Franklin"
             },
             "mbid": "CENSORED48c2",
             "image": [
@@ -707,7 +707,7 @@
             "url": "https://www.last.fm/music/Queen+Naija/_/Karma",
             "artist": {
                 "mbid": "",
-                "text": "Queen Naija"
+                "name": "Queen Naija"
             },
             "mbid": "",
             "image": [
@@ -734,7 +734,7 @@
             "url": "https://www.last.fm/music/masego/_/Lady+Lady",
             "artist": {
                 "mbid": "",
-                "text": "masego"
+                "name": "masego"
             },
             "mbid": "",
             "image": [
@@ -761,7 +761,7 @@
             "url": "https://www.last.fm/music/Tamia/_/Leave+It+Smokin%E2%80%99",
             "artist": {
                 "mbid": "CENSORED7396",
-                "text": "Tamia"
+                "name": "Tamia"
             },
             "mbid": "",
             "image": [
@@ -788,7 +788,7 @@
             "url": "https://www.last.fm/music/Njomza/_/Lonely+Nights",
             "artist": {
                 "mbid": "",
-                "text": "Njomza"
+                "name": "Njomza"
             },
             "mbid": "",
             "image": [
@@ -815,7 +815,7 @@
             "url": "https://www.last.fm/music/Kacey+Musgraves/_/Love+Is+A+Wild+Thing",
             "artist": {
                 "mbid": "CENSORED40cb",
-                "text": "Kacey Musgraves"
+                "name": "Kacey Musgraves"
             },
             "mbid": "",
             "image": [
@@ -842,7 +842,7 @@
             "url": "https://www.last.fm/music/Amber+Mark/_/Love+Is+Stronger+Than+Pride",
             "artist": {
                 "mbid": "",
-                "text": "Amber Mark"
+                "name": "Amber Mark"
             },
             "mbid": "",
             "image": [
@@ -869,7 +869,7 @@
             "url": "https://www.last.fm/music/Nao/_/Make+It+Out+Alive+(feat.+SiR)",
             "artist": {
                 "mbid": "CENSORED1fed",
-                "text": "Nao"
+                "name": "Nao"
             },
             "mbid": "",
             "image": [
@@ -896,7 +896,7 @@
             "url": "https://www.last.fm/music/The+Gaslight+Anthem/_/Meet+Me+By+The+River%27s+Edge",
             "artist": {
                 "mbid": "CENSORED17e3",
-                "text": "The Gaslight Anthem"
+                "name": "The Gaslight Anthem"
             },
             "mbid": "",
             "image": [
@@ -923,7 +923,7 @@
             "url": "https://www.last.fm/music/Kacey+Musgraves/_/Merry+Go+%27Round",
             "artist": {
                 "mbid": "CENSORED40cb",
-                "text": "Kacey Musgraves"
+                "name": "Kacey Musgraves"
             },
             "mbid": "CENSOREDa926",
             "image": [
@@ -950,7 +950,7 @@
             "url": "https://www.last.fm/music/The+Gaslight+Anthem/_/Miles+Davis+&+The+Cool",
             "artist": {
                 "mbid": "CENSORED17e3",
-                "text": "The Gaslight Anthem"
+                "name": "The Gaslight Anthem"
             },
             "mbid": "CENSORED15c7",
             "image": [
@@ -977,7 +977,7 @@
             "url": "https://www.last.fm/music/Marsha+Ambrosius/_/Old+Times",
             "artist": {
                 "mbid": "CENSOREDd8aa",
-                "text": "Marsha Ambrosius"
+                "name": "Marsha Ambrosius"
             },
             "mbid": "",
             "image": [
@@ -1004,7 +1004,7 @@
             "url": "https://www.last.fm/music/The+Gaslight+Anthem/_/Old+White+Lincoln",
             "artist": {
                 "mbid": "CENSORED17e3",
-                "text": "The Gaslight Anthem"
+                "name": "The Gaslight Anthem"
             },
             "mbid": "CENSOREDad59",
             "image": [
@@ -1031,7 +1031,7 @@
             "url": "https://www.last.fm/music/Liza/_/Passes+Me",
             "artist": {
                 "mbid": "CENSORED8446",
-                "text": "Liza"
+                "name": "Liza"
             },
             "mbid": "",
             "image": [
@@ -1058,7 +1058,7 @@
             "url": "https://www.last.fm/music/Melat/_/Push",
             "artist": {
                 "mbid": "",
-                "text": "Melat"
+                "name": "Melat"
             },
             "mbid": "",
             "image": [
@@ -1085,7 +1085,7 @@
             "url": "https://www.last.fm/music/Kylie+Minogue/_/Radio+On",
             "artist": {
                 "mbid": "CENSORED684c",
-                "text": "Kylie Minogue"
+                "name": "Kylie Minogue"
             },
             "mbid": "",
             "image": [
@@ -1112,7 +1112,7 @@
             "url": "https://www.last.fm/music/Stevie+Wonder/_/Signed,+Sealed,+Delivered+(I%27m+Yours)",
             "artist": {
                 "mbid": "CENSOREDe986",
-                "text": "Stevie Wonder"
+                "name": "Stevie Wonder"
             },
             "mbid": "CENSORED482c",
             "image": [
@@ -1139,7 +1139,7 @@
             "url": "https://www.last.fm/music/Ferris+&+Sylvester/_/Sometimes",
             "artist": {
                 "mbid": "",
-                "text": "Ferris & Sylvester"
+                "name": "Ferris & Sylvester"
             },
             "mbid": "",
             "image": [
@@ -1166,7 +1166,7 @@
             "url": "https://www.last.fm/music/Kacey+Musgraves/_/Space+Cowboy",
             "artist": {
                 "mbid": "CENSORED40cb",
-                "text": "Kacey Musgraves"
+                "name": "Kacey Musgraves"
             },
             "mbid": "",
             "image": [
@@ -1193,7 +1193,7 @@
             "url": "https://www.last.fm/music/The+Gaslight+Anthem/_/The+%2759+Sound",
             "artist": {
                 "mbid": "CENSORED17e3",
-                "text": "The Gaslight Anthem"
+                "name": "The Gaslight Anthem"
             },
             "mbid": "CENSORED6886",
             "image": [
@@ -1220,7 +1220,7 @@
             "url": "https://www.last.fm/music/The+Gaslight+Anthem/_/The+Patient+Ferris+Wheel",
             "artist": {
                 "mbid": "CENSORED17e3",
-                "text": "The Gaslight Anthem"
+                "name": "The Gaslight Anthem"
             },
             "mbid": "CENSOREDc99f",
             "image": [
@@ -1247,7 +1247,7 @@
             "url": "https://www.last.fm/music/Sauti+Sol/_/Tujiangalie",
             "artist": {
                 "mbid": "CENSORED80b9",
-                "text": "Sauti Sol"
+                "name": "Sauti Sol"
             },
             "mbid": "",
             "image": [
@@ -1274,7 +1274,7 @@
             "url": "https://www.last.fm/music/Franz+Schubert/_/Vier+Impromptus,+op.90+D.899:+Vier+Impromptus,+op.90+D.899:+III.+Andante+mosso,+G+flat+major",
             "artist": {
                 "mbid": "CENSORED65ed",
-                "text": "Franz Schubert"
+                "name": "Franz Schubert"
             },
             "mbid": "",
             "image": [
@@ -1301,7 +1301,7 @@
             "url": "https://www.last.fm/music/Paul+Simon/_/You+Can+Call+Me+Al",
             "artist": {
                 "mbid": "CENSOREDebb9",
-                "text": "Paul Simon"
+                "name": "Paul Simon"
             },
             "mbid": "CENSORED7429",
             "image": [
@@ -1328,7 +1328,7 @@
             "url": "https://www.last.fm/music/Nikki+Blonsky/_/You+Can%27t+Stop+The+Beat+(%22Hairspray%22)",
             "artist": {
                 "mbid": "CENSOREDfd5d",
-                "text": "Nikki Blonsky"
+                "name": "Nikki Blonsky"
             },
             "mbid": "",
             "image": [
@@ -1355,7 +1355,7 @@
             "url": "https://www.last.fm/music/Shawn+Stockman/_/Feelin%E2%80%99+lil+Som%E2%80%99n",
             "artist": {
                 "mbid": "CENSORED87d4",
-                "text": "Shawn Stockman"
+                "name": "Shawn Stockman"
             },
             "mbid": "",
             "image": [
@@ -1382,7 +1382,7 @@
             "url": "https://www.last.fm/music/Ryan+Trey/_/Temptations",
             "artist": {
                 "mbid": "",
-                "text": "Ryan Trey"
+                "name": "Ryan Trey"
             },
             "mbid": "",
             "image": [
@@ -1409,7 +1409,7 @@
             "url": "https://www.last.fm/music/India.Arie/_/That+Magic",
             "artist": {
                 "mbid": "CENSOREDefdd",
-                "text": "India.Arie"
+                "name": "India.Arie"
             },
             "mbid": "",
             "image": [
@@ -1436,7 +1436,7 @@
             "url": "https://www.last.fm/music/JamesDavis/_/Speedboat",
             "artist": {
                 "mbid": "",
-                "text": "JamesDavis"
+                "name": "JamesDavis"
             },
             "mbid": "",
             "image": [
@@ -1463,7 +1463,7 @@
             "url": "https://www.last.fm/music/Mario/_/Goes+Like+That",
             "artist": {
                 "mbid": "CENSORED2cc7",
-                "text": "Mario"
+                "name": "Mario"
             },
             "mbid": "",
             "image": [
@@ -1490,7 +1490,7 @@
             "url": "https://www.last.fm/music/Sat-B/_/Feel+Love",
             "artist": {
                 "mbid": "",
-                "text": "Sat-B"
+                "name": "Sat-B"
             },
             "mbid": "",
             "image": [
@@ -1517,7 +1517,7 @@
             "url": "https://www.last.fm/music/Free+Nationals/_/Beauty+&+Essex+(feat.+Daniel+Caesar+&+Unknown+Mortal+Orchestra)",
             "artist": {
                 "mbid": "",
-                "text": "Free Nationals"
+                "name": "Free Nationals"
             },
             "mbid": "",
             "image": [
@@ -1544,7 +1544,7 @@
             "url": "https://www.last.fm/music/Catherine+McGrath/_/She%27ll+Never+Love+You+-+Acoustic",
             "artist": {
                 "mbid": "",
-                "text": "Catherine McGrath"
+                "name": "Catherine McGrath"
             },
             "mbid": "",
             "image": [
@@ -1571,7 +1571,7 @@
             "url": "https://www.last.fm/music/Ferris+&+Sylvester/_/Burning+River",
             "artist": {
                 "mbid": "",
-                "text": "Ferris & Sylvester"
+                "name": "Ferris & Sylvester"
             },
             "mbid": "",
             "image": [
@@ -1598,7 +1598,7 @@
             "url": "https://www.last.fm/music/Maddie+&+Tae/_/Die+From+A+Broken+Heart",
             "artist": {
                 "mbid": "CENSOREDb79f",
-                "text": "Maddie & Tae"
+                "name": "Maddie & Tae"
             },
             "mbid": "",
             "image": [
@@ -1625,7 +1625,7 @@
             "url": "https://www.last.fm/music/The+Wild+Things/_/Better+off+Alone",
             "artist": {
                 "mbid": "CENSOREDae52",
-                "text": "The Wild Things"
+                "name": "The Wild Things"
             },
             "mbid": "",
             "image": [
