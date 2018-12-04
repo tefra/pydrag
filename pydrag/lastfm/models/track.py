@@ -122,7 +122,7 @@ class Track(BaseModel):
     attr: Optional[Attributes] = None
 
     @classmethod
-    def from_dict(cls, data: dict) -> "Track":
+    def from_dict(cls, data: dict):
         try:
             if isinstance(data["album"]["artist"], str):
                 data["album"]["artist"] = dict(name=data["album"]["artist"])
@@ -243,7 +243,7 @@ class Track(BaseModel):
         """
         return cls.retrieve(
             bind=Track,
-            many=("tracks", "track"),
+            many="tracks.track",
             params=dict(
                 method="track.search", limit=limit, page=page, track=track
             ),

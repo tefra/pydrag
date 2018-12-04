@@ -1,6 +1,6 @@
 from abc import ABCMeta
 from collections import UserList
-from typing import Any, Dict, List, Optional, Type, TypeVar, Union
+from typing import Dict, List, Optional, Type, TypeVar, Union
 from urllib.parse import urlencode
 
 import requests
@@ -30,7 +30,7 @@ class BaseModel(metaclass=ABCMeta):
         )
 
     @classmethod
-    def from_dict(cls, data: dict):
+    def from_dict(cls: Type, data: dict) -> T:
         for f in fields(cls):
             if f.name not in data:
                 continue
@@ -42,7 +42,7 @@ class BaseModel(metaclass=ABCMeta):
             elif f.type == float or f.type == Optional[float]:
                 data[f.name] = float(data[f.name])
 
-        return cls(**data)  # type: ignore
+        return cls(**data)
 
     @staticmethod
     def _prepare(params: dict) -> dict:
@@ -104,33 +104,25 @@ class BaseModel(metaclass=ABCMeta):
 
     @classmethod
     def _bind(
-        cls, bind: Type, body: Any, many: Union[str, tuple] = None
+        cls, bind: Type[T], body: Optional[Dict], many: Optional[str] = None
     ) -> Union[T, TL]:
         assert isinstance(body, dict)
 
-        if body:
-            data = body.get(next(iter(body.keys())))
-            if isinstance(data, dict):
-                if many:
-                    if isinstance(many, str):
-                        many = (many,)
+        if not body:
+            return bind()
 
-                    try:
-                        for m in many:
-                            data = data.pop(m)
-                        items = [bind.from_dict(d) for d in data]
-                    except KeyError:
-                        items = []
+        data = body[next(iter(body.keys()))]
+        if many is None:
+            return bind.from_dict(data)
 
-                    obj = BaseListModel(data=items)
-                else:
-                    obj = bind.from_dict(data)
-            else:
-                obj = bind(data)
-        else:
-            obj = bind()
+        try:
+            for m in many.split("."):
+                data = data.pop(m)
+            items: list = [bind.from_dict(d) for d in data]
+        except KeyError:
+            items = []
 
-        return obj  # type: ignore
+        return BaseListModel(data=items)  # type: ignore
 
     @staticmethod
     def sign(params):
@@ -150,9 +142,9 @@ class BaseListModel(UserList):
 
     def to_dict(self) -> Dict:
         """
+        Convert our data list to a dictionary.
 
-        :return:
-        :rtype:
+        :rtype: dict
         """
         return dict(data=[item.to_dict() for item in self])
 

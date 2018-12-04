@@ -151,7 +151,7 @@ class Artist(BaseModel):
         """
         return cls.retrieve(
             bind=Artist,
-            many=("artists", "artist"),
+            many="artists.artist",
             params=dict(
                 method="artist.search", limit=limit, page=page, artist=artist
             ),

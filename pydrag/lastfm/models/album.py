@@ -146,7 +146,7 @@ class Album(BaseModel):
 
         return cls.retrieve(
             bind=Album,
-            many=("albums", "album"),
+            many="albums.album",
             params=dict(
                 method="album.search", limit=limit, page=page, album=album
             ),

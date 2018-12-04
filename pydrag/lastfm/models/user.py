@@ -176,7 +176,7 @@ class User(BaseModel):
 
         return self.retrieve(
             bind=bind,
-            many=("{}s".format(type), type),
+            many="{0}s.{0}".format(type),
             params=dict(
                 method="user.getPersonalTags",
                 user=self.name,
