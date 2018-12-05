@@ -1,4 +1,4 @@
-from pydrag.core import BaseListModel
+from pydrag.core import ListModel
 from pydrag.lastfm.constants import Period
 from pydrag.lastfm.models.test import MethodTestCase, fixture
 from pydrag.lastfm.models.user import User
@@ -32,7 +32,7 @@ class UserTests(MethodTestCase):
             "user": "rj",
         }
         self.assertEqual(expected_params, result.params)
-        self.assertIsInstance(result, BaseListModel)
+        self.assertIsInstance(result, ListModel)
         self.assertFixtureEqual("user/get_artist_tracks", result.to_dict())
 
     @fixture.use_cassette(path="user/get_friends_with_recent_tracks")
@@ -46,7 +46,7 @@ class UserTests(MethodTestCase):
             "user": "rj",
         }
         self.assertEqual(expected_params, result.params)
-        self.assertIsInstance(result, BaseListModel)
+        self.assertIsInstance(result, ListModel)
         self.assertFixtureEqual(
             "user/get_friends_with_recent_tracks", result.to_dict()
         )
@@ -70,7 +70,7 @@ class UserTests(MethodTestCase):
         }
         self.assertEqual(expected_params, result.params)
 
-        self.assertIsInstance(result, BaseListModel)
+        self.assertIsInstance(result, ListModel)
         self.assertFixtureEqual("user/get_loved_tracks", result.to_dict())
 
     @fixture.use_cassette(path="user/get_personal_tags_track")
@@ -86,7 +86,7 @@ class UserTests(MethodTestCase):
         }
         self.assertEqual(expected_params, result.params)
 
-        self.assertIsInstance(result, BaseListModel)
+        self.assertIsInstance(result, ListModel)
         self.assertFixtureEqual(
             "user/get_personal_tags_track", result.to_dict()
         )
@@ -105,7 +105,7 @@ class UserTests(MethodTestCase):
         }
         self.assertEqual(expected_params, result.params)
         #
-        self.assertIsInstance(result, BaseListModel)
+        self.assertIsInstance(result, ListModel)
         self.assertFixtureEqual(
             "user/get_personal_tags_album", result.to_dict()
         )
@@ -123,7 +123,7 @@ class UserTests(MethodTestCase):
         }
         self.assertEqual(expected_params, result.params)
 
-        self.assertIsInstance(result, BaseListModel)
+        self.assertIsInstance(result, ListModel)
         self.assertFixtureEqual(
             "user/get_personal_tags_artist", result.to_dict()
         )
@@ -147,7 +147,7 @@ class UserTests(MethodTestCase):
         }
         self.assertEqual(expected_params, result.params)
 
-        self.assertIsInstance(result, BaseListModel)
+        self.assertIsInstance(result, ListModel)
         self.assertFixtureEqual("user/get_recent_tracks", result.to_dict())
 
     @fixture.use_cassette(path="user/get_top_albums")
@@ -162,7 +162,7 @@ class UserTests(MethodTestCase):
         }
         self.assertEqual(expected_params, result.params)
 
-        self.assertIsInstance(result, BaseListModel)
+        self.assertIsInstance(result, ListModel)
         self.assertFixtureEqual("user/get_top_albums", result.to_dict())
 
     @fixture.use_cassette(path="user/get_top_artists")
@@ -177,7 +177,7 @@ class UserTests(MethodTestCase):
         }
         self.assertEqual(expected_params, result.params)
 
-        self.assertIsInstance(result, BaseListModel)
+        self.assertIsInstance(result, ListModel)
         self.assertFixtureEqual("user/get_top_artists", result.to_dict())
 
     @fixture.use_cassette(path="user/get_top_tags")
@@ -190,7 +190,7 @@ class UserTests(MethodTestCase):
         }
         self.assertEqual(expected_params, result.params)
 
-        self.assertIsInstance(result, BaseListModel)
+        self.assertIsInstance(result, ListModel)
         self.assertFixtureEqual("user/get_top_tags", result.to_dict())
 
     @fixture.use_cassette(path="user/get_top_tracks")
@@ -205,7 +205,7 @@ class UserTests(MethodTestCase):
         }
         self.assertEqual(expected_params, result.params)
 
-        self.assertIsInstance(result, BaseListModel)
+        self.assertIsInstance(result, ListModel)
         self.assertFixtureEqual("user/get_top_tracks", result.to_dict())
 
     @fixture.use_cassette(path="user/get_weekly_album_chart")
@@ -219,7 +219,7 @@ class UserTests(MethodTestCase):
         }
         self.assertEqual(expected_params, result.params)
 
-        self.assertIsInstance(result, BaseListModel)
+        self.assertIsInstance(result, ListModel)
         self.assertFixtureEqual(
             "user/get_weekly_album_chart", result.to_dict()
         )
@@ -235,7 +235,7 @@ class UserTests(MethodTestCase):
         }
         self.assertEqual(expected_params, result.params)
 
-        self.assertIsInstance(result, BaseListModel)
+        self.assertIsInstance(result, ListModel)
         self.assertFixtureEqual(
             "user/get_weekly_artist_chart", result.to_dict()
         )
@@ -246,7 +246,7 @@ class UserTests(MethodTestCase):
         expected_params = {"method": "user.getWeeklyChartList", "user": "rj"}
         self.assertEqual(expected_params, result.params)
 
-        self.assertIsInstance(result, BaseListModel)
+        self.assertIsInstance(result, ListModel)
         self.assertFixtureEqual("user/get_weekly_chart_list", result.to_dict())
 
     @fixture.use_cassette(path="user/get_weekly_track_chart")
@@ -260,7 +260,7 @@ class UserTests(MethodTestCase):
         }
         self.assertEqual(expected_params, result.params)
 
-        self.assertIsInstance(result, BaseListModel)
+        self.assertIsInstance(result, ListModel)
         self.assertFixtureEqual(
             "user/get_weekly_track_chart", result.to_dict()
         )
@@ -275,5 +275,5 @@ class UserTests(MethodTestCase):
             "user": "rj",
         }
         self.assertEqual(expected_params, result.params)
-        self.assertIsInstance(result, BaseListModel)
+        self.assertIsInstance(result, ListModel)
         self.assertFixtureEqual("library/get_artists", result.to_dict())

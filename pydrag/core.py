@@ -1,23 +1,20 @@
-from abc import ABCMeta
 from collections import UserList
-from typing import Dict, List, Optional, Type, TypeVar, Union
+from typing import Dict, List, Optional, Sequence, Type, TypeVar
 from urllib.parse import urlencode
 
+import attr
 import requests
-from attr import asdict, attrib, dataclass, fields
-from requests import Response
 
 from pydrag.lastfm import config
 from pydrag.utils import md5
 
-T = TypeVar("T", bound="BaseModel")
-TL = TypeVar("TL", bound="BaseListModel")
+T = TypeVar("T")
 
 
-class BaseModel(metaclass=ABCMeta):
-    params: Optional[dict] = attrib(init=False)
+class BaseModel:
+    params: Optional[dict] = attr.attrib(init=False)
 
-    def to_dict(self: T) -> Dict:
+    def to_dict(self: "BaseModel") -> Dict:
         """
         Convert our object to a traditional dictionary. Filter out None values
         and dictionary values. The last one is like a validation for the unit
@@ -25,14 +22,14 @@ class BaseModel(metaclass=ABCMeta):
 
         :rtype: Dict
         """
-        return asdict(
+        return attr.asdict(
             self, filter=lambda f, v: v is not None and type(v) != dict
         )
 
     @classmethod
-    def from_dict(cls: Type, data: dict) -> T:
-        for f in fields(cls):
-            if f.name not in data:
+    def from_dict(cls: Type, data: dict) -> "BaseModel":
+        for f in attr.fields(cls):
+            if f.name not in data or data[f.name] is None:
                 continue
 
             if f.type == str or f.type == Optional[str]:
@@ -44,39 +41,56 @@ class BaseModel(metaclass=ABCMeta):
 
         return cls(**data)
 
-    @staticmethod
-    def _prepare(params: dict) -> dict:
-        def cast(x):
-            return str(int(x is True) if type(x) == bool else x)
 
-        params = dict((k, cast(v)) for k, v in params.items() if v is not None)
-        params.update(dict(format="json", api_key=config.api_key))
-        return params
+@attr.dataclass(cmp=False)
+class ListModel(UserList, Sequence[T], extra=list):
+    data: List[T] = []
+
+    def to_dict(self) -> Dict:
+        return dict(data=[item.to_dict() for item in self])
+
+
+@attr.dataclass
+class RawResponse(BaseModel):
+    data: Optional[dict] = None
+
+    def to_dict(self):
+        return self.data
 
     @classmethod
-    def retrieve(cls, bind=None, many=None, params={}) -> Union[T, TL]:
+    def from_dict(cls, data):
+        return cls(data)
+
+
+class ApiMixin:
+    @classmethod
+    def validate(cls, bind, params):
         assert "method" in params
         if bind is None:
-            bind = cls
+            bind = RawResponse
+        return bind, cls.prepare_params(params)
 
-        data = cls._prepare(params)
+    @classmethod
+    def retrieve(cls, bind=None, many=None, params={}):
+        bind, data = cls.validate(bind, params)
         url = "{}?{}".format(config.api_root_url, urlencode(data))
         response = requests.get(url)
         response.raise_for_status()
         body = response.json(object_pairs_hook=pythonic_variables)
-        obj: Union[T, TL] = cls._bind(bind, body, many)
+        obj = cls.bind_data(bind, body, many)
         obj.params = params
         return obj
 
     @classmethod
     def submit(
-        cls, bind=None, stateful=False, authenticate=False, params={}
-    ) -> Union[T, TL]:
-        assert "method" in params
-        if bind is None:
-            bind = cls
-
-        data = cls._prepare(params)
+        cls,
+        bind=None,
+        many=None,
+        stateful=False,
+        authenticate=False,
+        params={},
+    ):
+        bind, data = cls.validate(bind, params)
         if authenticate:
             data.update(
                 dict(
@@ -98,14 +112,26 @@ class BaseModel(metaclass=ABCMeta):
         response = requests.post(url, data=data)
         response.raise_for_status()
         body = response.json(object_pairs_hook=pythonic_variables)
-        obj: Union[T, TL] = cls._bind(bind, body)
+        obj = cls.bind_data(bind, body, many)
         obj.params = params
         return obj
 
+    @staticmethod
+    def prepare_params(params: dict) -> dict:
+        def cast(x):
+            return str(int(x is True) if type(x) == bool else x)
+
+        params = dict((k, cast(v)) for k, v in params.items() if v is not None)
+        params.update(dict(format="json", api_key=config.api_key))
+        return params
+
     @classmethod
-    def _bind(
-        cls, bind: Type[T], body: Optional[Dict], many: Optional[str] = None
-    ) -> Union[T, TL]:
+    def bind_data(
+        cls,
+        bind: Type[BaseModel],
+        body: Optional[Dict],
+        many: Optional[str] = None,
+    ):
         assert isinstance(body, dict)
 
         if not body:
@@ -118,11 +144,15 @@ class BaseModel(metaclass=ABCMeta):
         try:
             for m in many.split("."):
                 data = data.pop(m)
+
+            if isinstance(data, dict):
+                data = [data]
+
             items: list = [bind.from_dict(d) for d in data]
         except KeyError:
             items = []
 
-        return BaseListModel(data=items)  # type: ignore
+        return ListModel(data=items)
 
     @staticmethod
     def sign(params):
@@ -132,21 +162,6 @@ class BaseModel(metaclass=ABCMeta):
         signature = [str(k) + str(params[k]) for k in keys if params.get(k)]
         signature.append(str(config.api_secret))
         return md5("".join(signature))
-
-
-@dataclass(cmp=False)
-class BaseListModel(UserList):
-    data: List[BaseModel] = []
-    params: Optional[dict] = attrib(init=False)
-    response: Optional[Response] = attrib(init=False)
-
-    def to_dict(self) -> Dict:
-        """
-        Convert our data list to a dictionary.
-
-        :rtype: dict
-        """
-        return dict(data=[item.to_dict() for item in self])
 
 
 def pythonic_variables(data):

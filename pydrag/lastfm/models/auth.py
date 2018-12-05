@@ -1,10 +1,10 @@
 from attr import dataclass
 
-from pydrag.core import BaseModel
+from pydrag.core import ApiMixin, BaseModel
 
 
 @dataclass
-class AuthSession(BaseModel):
+class AuthSession(BaseModel, ApiMixin):
     key: str
     name: str
 
@@ -16,5 +16,7 @@ class AuthSession(BaseModel):
         :rtype: :class:`~pydrag.lastfm.models.auth.AuthSession`
         """
         return cls.submit(
-            authenticate=True, params=dict(method="auth.getMobileSession")
+            bind=AuthSession,
+            authenticate=True,
+            params=dict(method="auth.getMobileSession"),
         )

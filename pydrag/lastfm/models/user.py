@@ -2,7 +2,7 @@ from typing import List, Optional, Union
 
 from attr import dataclass
 
-from pydrag.core import BaseModel
+from pydrag.core import ApiMixin, BaseModel, ListModel
 from pydrag.lastfm.constants import Period
 from pydrag.lastfm.models.album import Album
 from pydrag.lastfm.models.artist import Artist
@@ -12,7 +12,7 @@ from pydrag.lastfm.models.track import Track
 
 
 @dataclass
-class User(BaseModel):
+class User(BaseModel, ApiMixin):
     """
     Last.FM user and user library api client.
 
@@ -61,16 +61,18 @@ class User(BaseModel):
 
         :rtype: :class:`~pydrag.lastfm.models.user.User`
         """
-        return cls.retrieve(params=dict(method="user.getInfo", user=username))
+        return cls.retrieve(
+            bind=User, params=dict(method="user.getInfo", user=username)
+        )
 
-    def get_artists(self, limit: int = 50, page: int = 1) -> List[Artist]:
+    def get_artists(self, limit: int = 50, page: int = 1) -> ListModel[Artist]:
         """
         Retrieve a paginated list of all the artists in the user's library,
         with playcounts and tagcounts.
 
         :param page: The page number to fetch.
         :param limit: The number of results to fetch per page.
-        :rtype: :class:`list` of :class:`~pydrag.lastfm.models.artist.Artist`
+        :rtype: :class:`~pydrag.core.ListModel` of :class:`~pydrag.lastfm.models.artist.Artist`
         """
         return self.retrieve(
             bind=Artist,
@@ -89,7 +91,7 @@ class User(BaseModel):
         from_date: str = None,
         to_date: str = None,
         page: int = 1,
-    ) -> List[Track]:
+    ) -> ListModel[Track]:
         """
         Get a list of tracks by a given artist scrobbled by this user,
         including scrobble time. Can be limited to specific timeranges,
@@ -99,7 +101,7 @@ class User(BaseModel):
         :param from_date: An unix timestamp to start at.
         :param to_date: An unix timestamp to end at.
         :param page: The page number to fetch.
-        :rtype: :class:`list` of :class:`~pydrag.lastfm.models.track.Track`
+        :rtype: :class:`~pydrag.core.ListModel` of :class:`~pydrag.lastfm.models.track.Track`
         """
         return self.retrieve(
             bind=Track,
@@ -116,7 +118,7 @@ class User(BaseModel):
 
     def get_friends(
         self, recent_tracks: bool, limit: int = 50, page: int = 1
-    ) -> List["User"]:
+    ) -> ListModel["User"]:
         """
         Get a list of the user's friends on Last.fm.
 
@@ -124,7 +126,7 @@ class User(BaseModel):
          friends' recent listening in the response.
         :param page: The page number to fetch.
         :param limit: The number of results to fetch per page.
-        :rtype: :class:`list` of :class:`~pydrag.lastfm.models.user.User`
+        :rtype: :class:`~pydrag.core.ListModel` of :class:`~pydrag.lastfm.models.user.User`
         """
         return self.retrieve(
             bind=User,
@@ -138,13 +140,15 @@ class User(BaseModel):
             ),
         )
 
-    def get_loved_tracks(self, limit: int = 50, page: int = 1) -> List[Track]:
+    def get_loved_tracks(
+        self, limit: int = 50, page: int = 1
+    ) -> ListModel[Track]:
         """
         Get the user's loved tracks list.
 
         :param page: The page number to fetch.
         :param limit: The number of results to fetch per page.
-        :rtype: :class:`list` of :class:`~pydrag.lastfm.models.track.Track`
+        :rtype: :class:`~pydrag.core.ListModel` of :class:`~pydrag.lastfm.models.track.Track`
         """
         return self.retrieve(
             bind=Track,
@@ -159,7 +163,7 @@ class User(BaseModel):
 
     def get_personal_tags(
         self, tag: str, type: str, limit: int = 50, page: int = 1
-    ) -> List[Union[Artist, Track, Album]]:
+    ) -> ListModel[Union[Artist, Track, Album]]:
         """
         Get the user's personal tags.
 
@@ -167,7 +171,7 @@ class User(BaseModel):
         :param type: The type of items which have been tagged
         :param page: The page number to fetch.
         :param limit: The number of results to fetch per page.
-        :rtype: :class:`list` of :class:`~pydrag.lastfm.models.track.Track`  or :class:`~pydrag.lastfm.models.artist.Artist` or :class:`~pydrag.lastfm.models.album.Album`
+        :rtype: :class:`~pydrag.core.ListModel` of :class:`~pydrag.lastfm.models.track.Track`  or :class:`~pydrag.lastfm.models.artist.Artist` or :class:`~pydrag.lastfm.models.album.Album`
         """
 
         map = dict(artist=Artist, album=Album, track=Track)
@@ -193,7 +197,7 @@ class User(BaseModel):
         to_date: str = None,
         limit: int = 50,
         page: int = 1,
-    ) -> List[Track]:
+    ) -> ListModel[Track]:
         """
         Get a list of the recent tracks listened to by this user. Also includes
         the currently playing track with the nowplaying="true" attribute if the
@@ -203,7 +207,7 @@ class User(BaseModel):
         :param to_date: End timestamp of a range - only display scrobbles before this time, in UNIX timestamp format (integer number of seconds since 00:00:00, January 1st 1970 UTC). This must be in the UTC time zone.
         :param limit: The number of results to fetch per page.
         :param page: The page number to fetch.
-        :rtype: :class:`list` of :class:`~pydrag.lastfm.models.track.Track`
+        :rtype: :class:`~pydrag.core.ListModel` of :class:`~pydrag.lastfm.models.track.Track`
         """
         return self.retrieve(
             bind=Track,
@@ -221,7 +225,7 @@ class User(BaseModel):
 
     def get_top_albums(
         self, period: Period, limit: int = 50, page: int = 1
-    ) -> List[Album]:
+    ) -> ListModel[Album]:
         """
         Get the top albums listened to by a user. You can stipulate a time
         period.
@@ -229,7 +233,7 @@ class User(BaseModel):
         :param Period period:
         :param limit: The number of results to fetch per page.
         :param page: The page number to fetch.
-        :rtype: :class:`list` of :class:`~pydrag.lastfm.models.album.Album`
+        :rtype: :class:`~pydrag.core.ListModel` of :class:`~pydrag.lastfm.models.album.Album`
         :rtype: List[Album]
         """
         assert isinstance(period, Period)
@@ -248,7 +252,7 @@ class User(BaseModel):
 
     def get_top_artists(
         self, period: Period, limit: int = 50, page: int = 1
-    ) -> List[Artist]:
+    ) -> ListModel[Artist]:
         """
         Get the top artists listened to by a user. You can stipulate a time
         period.
@@ -256,7 +260,7 @@ class User(BaseModel):
         :param Period period:
         :param limit: The number of results to fetch per page.
         :param page: The page number to fetch.
-        :rtype: :class:`list` of :class:`~pydrag.lastfm.models.artist.Artist`
+        :rtype: :class:`~pydrag.core.ListModel` of :class:`~pydrag.lastfm.models.artist.Artist`
         """
         assert isinstance(period, Period)
         return self.retrieve(
@@ -271,12 +275,12 @@ class User(BaseModel):
             ),
         )
 
-    def get_top_tags(self, limit: int = 50) -> List[Tag]:
+    def get_top_tags(self, limit: int = 50) -> ListModel[Tag]:
         """
         Get the top tags used by this user.
 
         :param limit: Limit the number of tags returned
-        :rtype: :class:`list` of :class:`~pydrag.lastfm.models.tag.Tag`
+        :rtype: :class:`~pydrag.core.ListModel` of :class:`~pydrag.lastfm.models.tag.Tag`
         :rtype: List[Tag]
         """
         return self.retrieve(
@@ -287,7 +291,7 @@ class User(BaseModel):
 
     def get_top_tracks(
         self, period: Period, limit: int = 50, page: int = 1
-    ) -> List[Track]:
+    ) -> ListModel[Track]:
         """
         Get the top tracks listened to by a user. You can stipulate a time
         period.
@@ -295,7 +299,7 @@ class User(BaseModel):
         :param Period period:
         :param limit: The number of results to fetch per page.
         :param page: The page number to fetch.
-        :rtype: :class:`list` of :class:`~pydrag.lastfm.models.track.Track`
+        :rtype: :class:`~pydrag.core.ListModel` of :class:`~pydrag.lastfm.models.track.Track`
         """
 
         assert isinstance(period, Period)
@@ -313,11 +317,11 @@ class User(BaseModel):
 
     def get_weekly_album_chart(
         self, from_date: str = None, to_date: str = None
-    ) -> List[Album]:
+    ) -> ListModel[Album]:
         """
         :param from_date:  The date at which the chart should start from.
         :param to_date: The date at which the chart should end on.
-        :rtype: :class:`list` of :class:`~pydrag.lastfm.models.album.Album`
+        :rtype: :class:`~pydrag.core.ListModel` of :class:`~pydrag.lastfm.models.album.Album`
         """
         return self.retrieve(
             bind=Album,
@@ -332,7 +336,7 @@ class User(BaseModel):
 
     def get_weekly_artist_chart(
         self, from_date: str = None, to_date: str = None
-    ) -> List[Artist]:
+    ) -> ListModel[Artist]:
         """
         Get an album chart for a user profile, for a given date range. If no
         date range is supplied, it will return the most recent album chart for
@@ -340,7 +344,7 @@ class User(BaseModel):
 
         :param from_date:  The date at which the chart should start from.
         :param to_date: The date at which the chart should end on.
-        :rtype: :class:`list` of :class:`~pydrag.lastfm.models.artist.Artist`
+        :rtype: :class:`~pydrag.core.ListModel` of :class:`~pydrag.lastfm.models.artist.Artist`
         """
         return self.retrieve(
             bind=Artist,
@@ -353,13 +357,13 @@ class User(BaseModel):
             },
         )
 
-    def get_weekly_chart_list(self) -> List[Chart]:
+    def get_weekly_chart_list(self) -> ListModel[Chart]:
         """
         Get an artist chart for a user profile, for a given date range. If no
         date range is supplied, it will return the most recent artist chart for
         this user.
 
-        :rtype: :class:`list` of :class:`~pydrag.lastfm.models.common.Chart`
+        :rtype: :class:`~pydrag.core.ListModel` of :class:`~pydrag.lastfm.models.common.Chart`
         """
         return self.retrieve(
             bind=Chart,
@@ -369,14 +373,14 @@ class User(BaseModel):
 
     def get_weekly_track_chart(
         self, from_date: str = None, to_date: str = None
-    ) -> List[Track]:
+    ) -> ListModel[Track]:
         """
         Get a list of available charts for this user, expressed as date ranges
         which can be sent to the chart services.
 
         :param from_date:  The date at which the chart should start from.
         :param to_date: The date at which the chart should end on.
-        :rtype: :class:`list` of :class:`~pydrag.lastfm.models.track.Track`
+        :rtype: :class:`~pydrag.core.ListModel` of :class:`~pydrag.lastfm.models.track.Track`
         """
         return self.retrieve(
             bind=Track,

@@ -2,12 +2,12 @@ from typing import List, Optional
 
 from attr import dataclass
 
-from pydrag.core import BaseModel
+from pydrag.core import ApiMixin, BaseModel, ListModel
 from pydrag.lastfm.models.common import Chart, Wiki
 
 
 @dataclass
-class Tag(BaseModel):
+class Tag(BaseModel, ApiMixin):
     """
     Last.FM tag, chart and geo api client.
 
@@ -44,18 +44,18 @@ class Tag(BaseModel):
         :rtype: :class:`~pydrag.lastfm.models.tag.Tag`
         """
         return cls.retrieve(
-            params=dict(method="tag.getInfo", tag=name, lang=lang)
+            bind=Tag, params=dict(method="tag.getInfo", tag=name, lang=lang)
         )
 
     @classmethod
-    def get_top_tags(cls, limit: int = 50, page: int = 1) -> List["Tag"]:
+    def get_top_tags(cls, limit: int = 50, page: int = 1) -> ListModel["Tag"]:
         """
         Fetches the top global tags on Last.fm, sorted by popularity Old school
         pagination on this endpoint, keep uniformity.
 
         :param limit: The number of results to fetch per page.
         :param page: The page number to fetch.
-        :rtype: :class:`list` of :class:`~pydrag.lastfm.models.tag.Tag`
+        :rtype: :class:`pydrag.core.ListModel` of :class:`~pydrag.lastfm.models.tag.Tag`
         """
         return cls.retrieve(
             bind=Tag,
@@ -68,13 +68,15 @@ class Tag(BaseModel):
         )
 
     @classmethod
-    def get_top_tags_chart(cls, limit: int = 50, page: int = 1) -> List["Tag"]:
+    def get_top_tags_chart(
+        cls, limit: int = 50, page: int = 1
+    ) -> ListModel["Tag"]:
         """
         Get the top tags chart.
 
         :param limit: The number of results to fetch per page.
         :param page: The page number to fetch.
-        :rtype: :class:`list` of :class:`~pydrag.lastfm.models.tag.Tag`
+        :rtype: :class:`pydrag.core.ListModel` of :class:`~pydrag.lastfm.models.tag.Tag`
         """
         return cls.retrieve(
             bind=Tag,
@@ -82,12 +84,12 @@ class Tag(BaseModel):
             params=dict(method="chart.getTopTags", limit=limit, page=page),
         )
 
-    def get_similar(self) -> List["Tag"]:
+    def get_similar(self) -> ListModel["Tag"]:
         """
         Search for tags similar to this one. Returns tags ranked by similarity,
         based on listening data.
 
-        :rtype: :class:`list` of :class:`~pydrag.lastfm.models.tag.Tag`
+        :rtype: :class:`pydrag.core.ListModel` of :class:`~pydrag.lastfm.models.tag.Tag`
         """
         return self.retrieve(
             bind=Tag,
@@ -101,7 +103,7 @@ class Tag(BaseModel):
 
         :param limit: The number of results to fetch per page.
         :param page: The page number to fetch.
-        :rtype: :class:`list` of :class:`~pydrag.lastfm.models.album.Album`
+        :rtype: :class:`pydrag.core.ListModel` of :class:`~pydrag.lastfm.models.album.Album`
         """
         from pydrag.lastfm.models.album import Album
 
@@ -122,7 +124,7 @@ class Tag(BaseModel):
 
         :param limit: The number of results to fetch per page.
         :param page: The page number to fetch.
-        :rtype: :class:`list` of :class:`~pydrag.lastfm.models.artist.Artist`
+        :rtype: :class:`pydrag.core.ListModel` of :class:`~pydrag.lastfm.models.artist.Artist`
         """
         from pydrag.lastfm.models.artist import Artist
 
@@ -143,7 +145,7 @@ class Tag(BaseModel):
 
         :param limit: The number of results to fetch per page.
         :param page: The page number to fetch.
-        :rtype: :class:`list` of :class:`~pydrag.lastfm.models.track.Track`
+        :rtype: :class:`pydrag.core.ListModel` of :class:`~pydrag.lastfm.models.track.Track`
         """
         from pydrag.lastfm.models.track import Track
 
@@ -158,12 +160,12 @@ class Tag(BaseModel):
             ),
         )
 
-    def get_weekly_chart_list(self) -> List[Chart]:
+    def get_weekly_chart_list(self) -> ListModel[Chart]:
         """
         Get a list of available charts for this tag, expressed as date ranges
         which can be sent to the chart services.
 
-        :rtype: :class:`list` of :class:`~pydrag.lastfm.models.common.Chart`
+        :rtype: :class:`pydrag.core.ListModel` of :class:`~pydrag.lastfm.models.common.Chart`
         """
         return self.retrieve(
             bind=Chart,

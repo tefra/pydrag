@@ -2,14 +2,14 @@ from typing import List, Optional
 
 from attr import dataclass
 
-from pydrag.core import BaseModel
+from pydrag.core import ApiMixin, BaseModel, ListModel, RawResponse
 from pydrag.lastfm.models.artist import Artist
 from pydrag.lastfm.models.common import Attributes, Image, Wiki
 from pydrag.lastfm.models.tag import Tag
 
 
 @dataclass
-class Album(BaseModel):
+class Album(BaseModel, ApiMixin):
     """
     Last.FM track, chart and geo api client.
 
@@ -82,6 +82,7 @@ class Album(BaseModel):
         """
 
         return cls.retrieve(
+            bind=Album,
             params=dict(
                 method="album.getInfo",
                 album=album,
@@ -89,7 +90,7 @@ class Album(BaseModel):
                 autocorrect=True,
                 username=user,
                 lang=lang,
-            )
+            ),
         )
 
     @classmethod
@@ -106,13 +107,14 @@ class Album(BaseModel):
         """
 
         return cls.retrieve(
+            bind=Album,
             params=dict(
                 method="album.getInfo",
                 mbid=mbid,
                 autocorrect=True,
                 username=user,
                 lang=lang,
-            )
+            ),
         )
 
     def get_info(self, user: str = None, lang: str = "en") -> "Album":
@@ -134,14 +136,14 @@ class Album(BaseModel):
     @classmethod
     def search(
         cls, album: str, limit: int = 50, page: int = 1
-    ) -> List["Album"]:
+    ) -> ListModel["Album"]:
         """
         Search for an album by name.Returns album matches sorted by relevance.
 
         :param album: The album name to search.
         :param page: The page number to fetch.
         :param limit: The number of results to fetch per page.
-        :rtype: :class:`list` of :class:`~pydrag.lastfm.models.album.Album`
+        :rtype: :class:`pydrag.core.ListModel` of :class:`~pydrag.lastfm.models.album.Album`
         """
 
         return cls.retrieve(
@@ -152,16 +154,16 @@ class Album(BaseModel):
             ),
         )
 
-    def add_tags(self, tags: List[str]) -> BaseModel:
+    def add_tags(self, tags: List[str]) -> RawResponse:
         """
         Tag an album using a list of user supplied tags.
 
         :param tags: A list of user supplied tags to apply to this album. Accepts a maximum of 10 tags.
-        :rtype: :class:`~pydrag.core.BaseModel`
+        :rtype: :class:`~pydrag.core.RawResponse`
         """
         assert self.artist is not None
         return self.submit(
-            bind=BaseModel,
+            bind=RawResponse,
             stateful=True,
             params=dict(
                 method="album.addTags",
@@ -171,16 +173,16 @@ class Album(BaseModel):
             ),
         )
 
-    def remove_tag(self, tag: str) -> BaseModel:
+    def remove_tag(self, tag: str) -> RawResponse:
         """
         Remove a user's tag from an album.
 
         :param tag: A single user tag to remove from this album.
-        :rtype: :class:`~pydrag.core.BaseModel`
+        :rtype: :class:`~pydrag.core.RawResponse`
         """
         assert self.artist is not None
         return self.submit(
-            bind=BaseModel,
+            bind=RawResponse,
             stateful=True,
             params=dict(
                 method="album.removeTag",
@@ -190,12 +192,12 @@ class Album(BaseModel):
             ),
         )
 
-    def get_tags(self, user: str) -> List[Tag]:
+    def get_tags(self, user: str) -> ListModel[Tag]:
         """
         Get the tags applied by an individual user to an album on Last.fm.
 
         :param user: The username for the context of the request.
-        :rtype: :class:`list` of :class:`~pydrag.lastfm.models.tag.Tag`
+        :rtype: :class:`pydrag.core.ListModel` of :class:`~pydrag.lastfm.models.tag.Tag`
         """
         assert self.artist is not None
         return self.retrieve(
@@ -211,11 +213,11 @@ class Album(BaseModel):
             ),
         )
 
-    def get_top_tags(self) -> List[Tag]:
+    def get_top_tags(self) -> ListModel[Tag]:
         """
         Get the top tags for an album on Last.fm, ordered by popularity.
 
-        :rtype: :class:`list` of :class:`~pydrag.lastfm.models.tag.Tag`
+        :rtype: :class:`pydrag.core.ListModel` of :class:`~pydrag.lastfm.models.tag.Tag`
         """
         assert self.artist is not None
         return self.retrieve(

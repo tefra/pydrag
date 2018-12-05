@@ -1,4 +1,4 @@
-from pydrag.core import BaseListModel
+from pydrag.core import ListModel
 from pydrag.lastfm.models.tag import Tag
 from pydrag.lastfm.models.test import MethodTestCase, fixture
 
@@ -23,7 +23,7 @@ class TagTests(MethodTestCase):
         result = self.tag.get_similar()
         expected_params = {"method": "tag.getSimilar", "tag": "Disco"}
         self.assertEqual(expected_params, result.params)
-        self.assertIsInstance(result, BaseListModel)
+        self.assertIsInstance(result, ListModel)
         self.assertFixtureEqual("tag/get_similar", result.to_dict())
 
     @fixture.use_cassette(path="tag/get_top_albums")
@@ -37,7 +37,7 @@ class TagTests(MethodTestCase):
         }
         self.assertEqual(expected_params, result.params)
 
-        self.assertIsInstance(result, BaseListModel)
+        self.assertIsInstance(result, ListModel)
         self.assertFixtureEqual("tag/get_top_albums", result.to_dict())
 
     @fixture.use_cassette(path="tag/get_top_artists")
@@ -51,7 +51,7 @@ class TagTests(MethodTestCase):
         }
         self.assertEqual(expected_params, result.params)
 
-        self.assertIsInstance(result, BaseListModel)
+        self.assertIsInstance(result, ListModel)
         self.assertFixtureEqual("tag/get_top_artists", result.to_dict())
 
     @fixture.use_cassette(path="tag/get_top_tracks")
@@ -65,7 +65,7 @@ class TagTests(MethodTestCase):
         }
         self.assertEqual(expected_params, result.params)
 
-        self.assertIsInstance(result, BaseListModel)
+        self.assertIsInstance(result, ListModel)
         self.assertFixtureEqual("tag/get_top_tracks", result.to_dict())
 
     @fixture.use_cassette(path="tag/get_top_tags")
@@ -78,7 +78,7 @@ class TagTests(MethodTestCase):
         }
         self.assertEqual(expected_params, result.params)
         self.assertEqual(10, len(result))
-        self.assertIsInstance(result, BaseListModel)
+        self.assertIsInstance(result, ListModel)
         self.assertFixtureEqual("tag/get_top_tags", result.to_dict())
 
     @fixture.use_cassette(path="tag/get_weekly_chart_list")
@@ -87,7 +87,7 @@ class TagTests(MethodTestCase):
         expected_params = {"method": "tag.getWeeklyChartList", "tag": "rap"}
 
         self.assertEqual(expected_params, result.params)
-        self.assertIsInstance(result, BaseListModel)
+        self.assertIsInstance(result, ListModel)
         self.assertFixtureEqual("tag/get_weekly_chart_list", result.to_dict())
 
     @fixture.use_cassette(path="chart/get_top_tags")
@@ -100,5 +100,5 @@ class TagTests(MethodTestCase):
         }
 
         self.assertEqual(expected_params, result.params)
-        self.assertIsInstance(result, BaseListModel)
+        self.assertIsInstance(result, ListModel)
         self.assertFixtureEqual("chart/get_top_tags", result.to_dict())

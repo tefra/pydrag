@@ -1,6 +1,6 @@
 from unittest import mock
 
-from pydrag.core import BaseListModel, BaseModel
+from pydrag.core import ListModel, RawResponse
 from pydrag.lastfm.models.album import Album
 from pydrag.lastfm.models.test import MethodTestCase, fixture
 
@@ -26,8 +26,21 @@ class AlbumTests(MethodTestCase):
             "tags": "foo,bar",
         }
         self.assertEqual(expected_params, result.params)
+        self.assertIsInstance(result, RawResponse)
+        self.assertIsNone(result.data)
 
-        self.assertIsInstance(result, BaseModel)
+    @fixture.use_cassette(path="album/remove_tag")
+    def test_remove_tag(self):
+        result = self.album.remove_tag("bar")
+        expected_params = {
+            "album": "A Night at the Opera",
+            "artist": "Queen",
+            "method": "album.removeTag",
+            "tag": "bar",
+        }
+        self.assertEqual(expected_params, result.params)
+        self.assertIsInstance(result, RawResponse)
+        self.assertIsNone(result.data)
 
     @fixture.use_cassette(path="album/get_tags")
     def test_get_tags(self):
@@ -42,21 +55,8 @@ class AlbumTests(MethodTestCase):
         }
         self.assertEqual(expected_params, result.params)
 
-        self.assertIsInstance(result, BaseListModel)
+        self.assertIsInstance(result, ListModel)
         self.assertFixtureEqual("album/get_tags", result.to_dict())
-
-    @fixture.use_cassette(path="album/remove_tag")
-    def test_remove_tag(self):
-        result = self.album.remove_tag("bar")
-        expected_params = {
-            "album": "A Night at the Opera",
-            "artist": "Queen",
-            "method": "album.removeTag",
-            "tag": "bar",
-        }
-        self.assertEqual(expected_params, result.params)
-
-        self.assertIsInstance(result, BaseModel)
 
     @fixture.use_cassette(path="album/find")
     def test_find(self):
@@ -121,7 +121,7 @@ class AlbumTests(MethodTestCase):
         }
         self.assertEqual(expected_params, result.params)
 
-        self.assertIsInstance(result, BaseListModel)
+        self.assertIsInstance(result, ListModel)
         self.assertFixtureEqual("album/get_top_tags", result.to_dict())
 
     @fixture.use_cassette(path="album/search")
@@ -135,5 +135,5 @@ class AlbumTests(MethodTestCase):
         }
         self.assertEqual(expected_params, result.params)
 
-        self.assertIsInstance(result, BaseListModel)
+        self.assertIsInstance(result, ListModel)
         self.assertFixtureEqual("album/search", result.to_dict())

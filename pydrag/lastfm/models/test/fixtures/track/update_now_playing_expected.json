@@ -1,22 +1,4 @@
 {
-    "album": {
-        "text": "",
-        "corrected": 0
-    },
-    "artist": {
-        "text": "AC/DC",
-        "corrected": 0
-    },
-    "track": {
-        "text": "Hells Bells",
-        "corrected": 0
-    },
-    "ignored_message": {
-        "text": "",
-        "code": "0"
-    },
-    "album_artist": {
-        "text": "",
-        "corrected": 0
-    }
+    "artist": "AC/DC",
+    "track": "Hells Bells"
 }

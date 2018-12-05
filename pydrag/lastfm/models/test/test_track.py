@@ -1,15 +1,10 @@
 import time
 from datetime import datetime, timedelta
 
-from pydrag.core import BaseListModel, BaseModel
+from pydrag.core import BaseModel, ListModel, RawResponse
 from pydrag.lastfm.models.artist import Artist
 from pydrag.lastfm.models.test import MethodTestCase, fixture
-from pydrag.lastfm.models.track import (
-    ScrobbleTrack,
-    Track,
-    TrackScrobble,
-    TrackUpdateNowPlaying,
-)
+from pydrag.lastfm.models.track import ScrobbleTrack, Track
 
 
 class TrackTests(MethodTestCase):
@@ -28,7 +23,20 @@ class TrackTests(MethodTestCase):
             "track": "Hells Bell",
         }
         self.assertDictEqual(expected_params, result.params)
-        self.assertIsInstance(result, BaseModel)
+        self.assertIsInstance(result, RawResponse)
+        self.assertIsNone(result.data)
+
+    @fixture.use_cassette(path="track/remove_tag")
+    def test_remove_tag(self):
+        result = self.track.remove_tag("bar")
+        expected_params = {
+            "method": "track.removeTag",
+            "tag": "bar",
+            "track": "Hells Bell",
+        }
+        self.assertDictEqual(expected_params, result.params)
+        self.assertIsInstance(result, RawResponse)
+        self.assertIsNone(result.data)
 
     @fixture.use_cassette(path="track/get_tags")
     def test_get_tags(self):
@@ -44,19 +52,8 @@ class TrackTests(MethodTestCase):
 
         self.assertDictEqual(expected_params, result.params)
 
-        self.assertIsInstance(result, BaseListModel)
+        self.assertIsInstance(result, ListModel)
         self.assertFixtureEqual("track/get_tags", result.to_dict())
-
-    @fixture.use_cassette(path="track/remove_tag")
-    def test_remove_tag(self):
-        result = self.track.remove_tag("bar")
-        expected_params = {
-            "method": "track.removeTag",
-            "tag": "bar",
-            "track": "Hells Bell",
-        }
-        self.assertDictEqual(expected_params, result.params)
-        self.assertIsInstance(result, BaseModel)
 
     @fixture.use_cassette(path="track/get_info")
     def test_find(self):
@@ -99,7 +96,7 @@ class TrackTests(MethodTestCase):
 
         self.assertEqual(expected_params, result.params)
 
-        self.assertIsInstance(result, BaseListModel)
+        self.assertIsInstance(result, ListModel)
         self.assertFixtureEqual("track/get_top_tags", result.to_dict())
 
     @fixture.use_cassette(path="track/search")
@@ -115,7 +112,7 @@ class TrackTests(MethodTestCase):
 
         self.assertEqual(expected_params, result.params)
 
-        self.assertIsInstance(result, BaseListModel)
+        self.assertIsInstance(result, ListModel)
         self.assertFixtureEqual("track/search", result.to_dict())
 
     @fixture.use_cassette(path="track/get_similar")
@@ -132,7 +129,7 @@ class TrackTests(MethodTestCase):
 
         self.assertEqual(expected_params, result.params)
 
-        self.assertIsInstance(result, BaseListModel)
+        self.assertIsInstance(result, ListModel)
         self.assertFixtureEqual("track/get_similar", result.to_dict())
 
     @fixture.use_cassette(path="track/love")
@@ -173,7 +170,7 @@ class TrackTests(MethodTestCase):
             "trackNumber": 2,
         }
         self.assertEqual(expected_params, result.params)
-        self.assertIsInstance(result, TrackUpdateNowPlaying)
+        self.assertIsInstance(result, ScrobbleTrack)
         self.assertFixtureEqual("track/update_now_playing", result.to_dict())
 
     @fixture.use_cassette(path="track/scrobble_tracks")
@@ -196,79 +193,8 @@ class TrackTests(MethodTestCase):
             )
 
         result = Track.scrobble_tracks(tracks, batch_size=2)
-        actual = result.to_dict()
-        expected = {
-            "attr": {"accepted": 5, "ignored": 0},
-            "scrobble": [
-                {
-                    "album": {"corrected": 0},
-                    "album_artist": {"text": "", "corrected": 0},
-                    "artist": {"text": "Green Day", "corrected": 0},
-                    "ignored_message": {"text": "", "code": "0"},
-                    "timestamp": 1541878500,
-                    "track": {"text": "Bang Bang", "corrected": 0},
-                },
-                {
-                    "album": {"corrected": 0},
-                    "album_artist": {"text": "", "corrected": 0},
-                    "artist": {"text": "Awolnation", "corrected": 0},
-                    "ignored_message": {"text": "", "code": "0"},
-                    "timestamp": 1541878500,
-                    "track": {"text": "Sail", "corrected": 0},
-                },
-                {
-                    "album": {"corrected": 0},
-                    "album_artist": {"text": "", "corrected": 0},
-                    "artist": {"text": "Green Day", "corrected": 0},
-                    "ignored_message": {"text": "", "code": "0"},
-                    "timestamp": 1541878500,
-                    "track": {"text": "Bang Bang", "corrected": 0},
-                },
-                {
-                    "album": {"corrected": 0},
-                    "album_artist": {"text": "", "corrected": 0},
-                    "artist": {"text": "Awolnation", "corrected": 0},
-                    "ignored_message": {"text": "", "code": "0"},
-                    "timestamp": 1541878500,
-                    "track": {"text": "Sail", "corrected": 0},
-                },
-                {
-                    "album": {"corrected": 0},
-                    "album_artist": {"text": "", "corrected": 0},
-                    "artist": {"text": "Green Day", "corrected": 0},
-                    "ignored_message": {"text": "", "code": "0"},
-                    "timestamp": 1541878500,
-                    "track": {"text": "Bang Bang", "corrected": 0},
-                },
-                {
-                    "album": {"corrected": 0},
-                    "album_artist": {"text": "", "corrected": 0},
-                    "artist": {"text": "Awolnation", "corrected": 0},
-                    "ignored_message": {"text": "", "code": "0"},
-                    "timestamp": 1541878500,
-                    "track": {"text": "Sail", "corrected": 0},
-                },
-                {
-                    "album": {"corrected": 0},
-                    "album_artist": {"text": "", "corrected": 0},
-                    "artist": {"text": "Green Day", "corrected": 0},
-                    "ignored_message": {"text": "", "code": "0"},
-                    "timestamp": 1541878500,
-                    "track": {"text": "Bang Bang", "corrected": 0},
-                },
-                {
-                    "album": {"corrected": 0},
-                    "album_artist": {"text": "", "corrected": 0},
-                    "artist": {"text": "Awolnation", "corrected": 0},
-                    "ignored_message": {"text": "", "code": "0"},
-                    "timestamp": 1541878500,
-                    "track": {"text": "Sail", "corrected": 0},
-                },
-            ],
-        }
-
-        self.assertIsInstance(result, TrackScrobble)
-        self.assertDictEqual(expected, actual)
+        self.assertIsInstance(result, ListModel)
+        self.assertFixtureEqual("track/scrobble_tracks", result.to_dict())
 
     @fixture.use_cassette(path="geo/get_top_tracks")
     def test_get_top_tracks_by_country(self):
@@ -281,9 +207,8 @@ class TrackTests(MethodTestCase):
             "method": "geo.getTopTracks",
             "page": 1,
         }
-
         self.assertEqual(expected_params, result.params)
-        self.assertIsInstance(result, BaseListModel)
+        self.assertIsInstance(result, ListModel)
         self.assertFixtureEqual("geo/get_top_tracks", result.to_dict())
 
     @fixture.use_cassette(path="chart/get_top_tracks")
@@ -296,5 +221,5 @@ class TrackTests(MethodTestCase):
         }
 
         self.assertEqual(expected_params, result.params)
-        self.assertIsInstance(result, BaseListModel)
+        self.assertIsInstance(result, ListModel)
         self.assertFixtureEqual("chart/get_top_tracks", result.to_dict())
