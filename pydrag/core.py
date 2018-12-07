@@ -5,7 +5,7 @@ from urllib.parse import urlencode
 import attr
 import requests
 
-from pydrag.lastfm import config
+from pydrag import config
 from pydrag.utils import md5
 
 T = TypeVar("T")
@@ -100,7 +100,7 @@ class ApiMixin:
             )
 
         if stateful:
-            from pydrag.lastfm.models.auth import AuthSession
+            from pydrag.models.auth import AuthSession
 
             session = AuthSession.get()
             data.update({"sk": session.key})

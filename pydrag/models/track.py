@@ -3,10 +3,10 @@ from typing import List, Optional
 from attr import dataclass
 
 from pydrag.core import ApiMixin, BaseModel, ListModel, RawResponse
-from pydrag.lastfm.models.album import Album
-from pydrag.lastfm.models.artist import Artist
-from pydrag.lastfm.models.common import Attributes, Date, Image, Wiki
-from pydrag.lastfm.models.tag import Tag
+from pydrag.models.album import Album
+from pydrag.models.artist import Artist
+from pydrag.models.common import Attributes, Date, Image, Wiki
+from pydrag.models.tag import Tag
 
 
 @dataclass
@@ -142,7 +142,7 @@ class Track(ApiMixin, BaseModel):
         :param track: The track name
         :param user: The username for the context of the request. If supplied, response will include the user's playcount for this track
         :param lang: The language to return the biography in, ISO 639
-        :rtype: :class:`~pydrag.lastfm.models.track.Track`
+        :rtype: :class:`~pydrag.models.track.Track`
         """
         return cls.retrieve(
             bind=Track,
@@ -166,7 +166,7 @@ class Track(ApiMixin, BaseModel):
         :param mbid: The musicbrainz id for the track
         :param user: The username for the context of the request. If supplied, response will include the user's playcount for this track
         :param lang: The language to return the biography in, ISO 639
-        :rtype: :class:`~pydrag.lastfm.models.track.Track`
+        :rtype: :class:`~pydrag.models.track.Track`
         """
         return cls.retrieve(
             bind=Track,
@@ -185,7 +185,7 @@ class Track(ApiMixin, BaseModel):
         Use the last.fm corrections data to check whether the supplied track
         has a correction to a canonical track.
 
-        :rtype: :class:`~pydrag.lastfm.models.track.Track`
+        :rtype: :class:`~pydrag.models.track.Track`
         """
         return cls.retrieve(
             bind=Track,
@@ -204,7 +204,7 @@ class Track(ApiMixin, BaseModel):
         :param track: The track name.
         :param page: The page number to fetch.
         :param limit: The number of results to fetch per page.
-        :rtype: :class:`pydrag.core.ListModel` of :class:`~pydrag.lastfm.models.track.Track`
+        :rtype: :class:`pydrag.core.ListModel` of :class:`~pydrag.models.track.Track`
         """
         return cls.retrieve(
             bind=Track,
@@ -222,7 +222,7 @@ class Track(ApiMixin, BaseModel):
         :param country: The country to fetch the top tracks.
         :param limit: The number of results to fetch per page.
         :param page: The page number to fetch.
-        :rtype: :class:`pydrag.core.ListModel` of :class:`~pydrag.lastfm.models.track.Track`
+        :rtype: :class:`pydrag.core.ListModel` of :class:`~pydrag.models.track.Track`
         """
         return cls.retrieve(
             bind=Track,
@@ -244,7 +244,7 @@ class Track(ApiMixin, BaseModel):
 
         :param limit: The number of results to fetch per page.
         :param page: The page number to fetch.
-        :rtype: :class:`pydrag.core.ListModel` of :class:`~pydrag.lastfm.models.track.Track`
+        :rtype: :class:`pydrag.core.ListModel` of :class:`~pydrag.models.track.Track`
         """
         return cls.retrieve(
             bind=Track,
@@ -286,7 +286,7 @@ class Track(ApiMixin, BaseModel):
         Get all the tracks similar to this track.
 
         :param limit: Limit the number of similar tracks returned
-        :rtype: :class:`pydrag.core.ListModel` of :class:`~pydrag.lastfm.models.track.Track`
+        :rtype: :class:`pydrag.core.ListModel` of :class:`~pydrag.models.track.Track`
         """
         return self.retrieve(
             bind=Track,
@@ -306,7 +306,7 @@ class Track(ApiMixin, BaseModel):
         Get the tags applied by an individual user to an track on Last.fm.
 
         :param user: The username for the context of the request.
-        :rtype: :class:`pydrag.core.ListModel` of :class:`~pydrag.lastfm.models.tag.Tag`
+        :rtype: :class:`pydrag.core.ListModel` of :class:`~pydrag.models.tag.Tag`
         """
         return self.retrieve(
             bind=Tag,
@@ -325,7 +325,7 @@ class Track(ApiMixin, BaseModel):
         """
         Get the top tags for an track on Last.fm, ordered by popularity.
 
-        :rtype: :class:`pydrag.core.ListModel` of :class:`~pydrag.lastfm.models.tag.Tag`
+        :rtype: :class:`pydrag.core.ListModel` of :class:`~pydrag.models.tag.Tag`
         """
         return self.retrieve(
             bind=Tag,
@@ -378,7 +378,7 @@ class Track(ApiMixin, BaseModel):
 
         :param tracks: The tracks to scrobble
         :param batch_size: The number of tracks to submit per cycle
-        :rtype: :class:`pydrag.core.ListModel` of :class:`~pydrag.lastfm.models.track.ScrobbleTrack`
+        :rtype: :class:`pydrag.core.ListModel` of :class:`~pydrag.models.track.ScrobbleTrack`
         """
 
         def divide_chunks(l, n):
@@ -399,8 +399,8 @@ class Track(ApiMixin, BaseModel):
     ) -> ListModel[ScrobbleTrack]:
         """
         :param tracks: A list fo tracks to scrobble
-        :type tracks: :class:`list` of :class:`~pydrag.lastfm.models.track.ScrobbleTrack`
-        :rtype: :class:`pydrag.core.ListModel` of :class:`~pydrag.lastfm.models.track.ScrobbleTrack`
+        :type tracks: :class:`list` of :class:`~pydrag.models.track.ScrobbleTrack`
+        :rtype: :class:`pydrag.core.ListModel` of :class:`~pydrag.models.track.ScrobbleTrack`
         """
         params = dict(method="track.scrobble")
         for idx, track in enumerate(tracks):

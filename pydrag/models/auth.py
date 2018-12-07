@@ -13,7 +13,7 @@ class AuthSession(BaseModel, ApiMixin):
         """
         Create a web service session for a user.
 
-        :rtype: :class:`~pydrag.lastfm.models.auth.AuthSession`
+        :rtype: :class:`~pydrag.models.auth.AuthSession`
         """
         return cls.submit(
             bind=AuthSession,

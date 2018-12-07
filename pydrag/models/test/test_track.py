@@ -2,9 +2,9 @@ import time
 from datetime import datetime, timedelta
 
 from pydrag.core import BaseModel, ListModel, RawResponse
-from pydrag.lastfm.models.artist import Artist
-from pydrag.lastfm.models.test import MethodTestCase, fixture
-from pydrag.lastfm.models.track import ScrobbleTrack, Track
+from pydrag.models.artist import Artist
+from pydrag.models.test import MethodTestCase, fixture
+from pydrag.models.track import ScrobbleTrack, Track
 
 
 class TrackTests(MethodTestCase):

@@ -1,6 +1,6 @@
 from pydrag.core import ListModel
-from pydrag.lastfm.models.tag import Tag
-from pydrag.lastfm.models.test import MethodTestCase, fixture
+from pydrag.models.tag import Tag
+from pydrag.models.test import MethodTestCase, fixture
 
 
 class TagTests(MethodTestCase):

@@ -3,12 +3,13 @@ import os
 import re
 from unittest import TestCase
 
-from vcr import config, VCR
-from pydrag import lastfm
+import vcr
+
+from pydrag import config, configure
 
 
-if not lastfm.config.api_key:
-    lastfm.configure("foo")
+if not config.api_key:
+    configure("foo")
 
 where_am_i = os.path.dirname(os.path.realpath(__file__))
 fixtures_dir = os.path.join(where_am_i, "fixtures")
@@ -29,12 +30,12 @@ def censore_response(response):
     return response
 
 
-fixture = config.VCR(
+fixture = vcr.config.VCR(
     filter_query_parameters=censored_parameters,
     filter_post_data_parameters=censored_parameters,
     before_record_response=censore_response,
     cassette_library_dir=fixtures_dir,
-    path_transformer=VCR.ensure_suffix(".json"),
+    path_transformer=vcr.VCR.ensure_suffix(".json"),
     serializer="json",
 )
 

@@ -1,8 +1,8 @@
 from unittest import mock
 
 from pydrag.core import ListModel, RawResponse
-from pydrag.lastfm.models.artist import Artist
-from pydrag.lastfm.models.test import MethodTestCase, fixture
+from pydrag.models.artist import Artist
+from pydrag.models.test import MethodTestCase, fixture
 
 
 class ArtistTests(MethodTestCase):

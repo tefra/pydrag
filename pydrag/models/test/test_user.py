@@ -1,7 +1,7 @@
+from pydrag.constants import Period
 from pydrag.core import ListModel
-from pydrag.lastfm.constants import Period
-from pydrag.lastfm.models.test import MethodTestCase, fixture
-from pydrag.lastfm.models.user import User
+from pydrag.models.test import MethodTestCase, fixture
+from pydrag.models.user import User
 
 
 class UserTests(MethodTestCase):
