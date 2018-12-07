@@ -3,7 +3,7 @@ from datetime import datetime, timedelta
 
 from pydrag.core import BaseModel, ListModel, RawResponse
 from pydrag.models.artist import Artist
-from pydrag.models.test import MethodTestCase, fixture
+from pydrag.models.tests import MethodTestCase, fixture
 from pydrag.models.track import ScrobbleTrack, Track
 
 

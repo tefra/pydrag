@@ -2,7 +2,7 @@ from unittest import mock
 
 from pydrag.core import ListModel, RawResponse
 from pydrag.models.album import Album
-from pydrag.models.test import MethodTestCase, fixture
+from pydrag.models.tests import MethodTestCase, fixture
 
 
 class AlbumTests(MethodTestCase):

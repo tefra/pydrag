@@ -1,5 +1,5 @@
 from pydrag.models.auth import AuthSession
-from pydrag.models.test import MethodTestCase, fixture
+from pydrag.models.tests import MethodTestCase, fixture
 
 
 class AuthSessionTests(MethodTestCase):

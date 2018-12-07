@@ -1,6 +1,6 @@
 from pydrag.constants import Period
 from pydrag.core import ListModel
-from pydrag.models.test import MethodTestCase, fixture
+from pydrag.models.tests import MethodTestCase, fixture
 from pydrag.models.user import User
 
 
