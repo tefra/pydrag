@@ -43,7 +43,7 @@ class BaseModel:
 
 
 @attr.dataclass(cmp=False)
-class ListModel(UserList, Sequence[T], extra=list):
+class ListModel(UserList, Sequence[T]):
     data: List[T] = []
 
     def to_dict(self) -> Dict:

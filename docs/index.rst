@@ -42,7 +42,7 @@ Simple example
 
 For most of the read operations you only need to provide your **API KEY**.
 
-All pydrag models always return either a single instance or a list of :class:`~pydrag.lastfm.models.artist.Artist`, :class:`~pydrag.lastfm.models.user.User`, :class:`~pydrag.lastfm.models.track.Track`, :class:`~pydrag.lastfm.models.tag.Tag`, :class:`~pydrag.lastfm.models.album.Album`
+All pydrag models always return either a single instance or a list of :class:`~pydrag.models.artist.Artist`, :class:`~pydrag.models.user.User`, :class:`~pydrag.models.track.Track`, :class:`~pydrag.models.tag.Tag`, :class:`~pydrag.models.album.Album`
 
 Combine that with pydrag's fluent syntax you can do some pretty cool stuff!
 

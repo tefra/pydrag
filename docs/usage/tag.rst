@@ -7,7 +7,7 @@ Retrieve tag
 
 .. code-block :: python
 
-    >>> from pydrag.lastfm import Tag
+    >>> from pydrag import Tag
     >>>
     >>> tag = Tag.find(name="rap", lang="en")
     >>> tag.name
@@ -22,7 +22,7 @@ Get top tags
 
 .. code-block :: python
 
-    >>> from pydrag.lastfm import Tag
+    >>> from pydrag import Tag
     >>> tags = Tag.get_top_tags(limit=10, page=1)
     >>> [x.name for x in tags]
     ['rock', 'electronic', 'seen live', 'alternative', 'indie', 'pop', 'female vocalists', 'metal', 'alternative rock', 'classic rock']
