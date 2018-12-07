@@ -28,7 +28,7 @@ pydrag aims to offer a modern interface with fluid syntax for the `Last.fm <http
 
 .. code-block:: python
 
-    >>> from pydrag.lastfm.models.user import User
+    >>> from pydrag.models.user import User
     >>> rj = User.find("RJ")
     >>> rj.real_name
     'Richard Jones '
@@ -37,7 +37,7 @@ pydrag aims to offer a modern interface with fluid syntax for the `Last.fm <http
     >>> first.name
     'Fu-Gee-La'
     >>> type(first)
-    <class 'pydrag.lastfm.models.track.Track'>
+    <class 'pydrag.models.track.Track'>
     >>> similar = first.get_similar(limit=1)
     >>> similar[0].name
     'Family Business'

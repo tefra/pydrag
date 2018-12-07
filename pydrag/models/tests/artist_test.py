@@ -1,8 +1,8 @@
 from unittest import mock
 
-from pydrag.core import BaseListModel, BaseModel
-from pydrag.lastfm.models.artist import Artist
-from pydrag.lastfm.models.test import MethodTestCase, fixture
+from pydrag.core import ListModel, RawResponse
+from pydrag.models.artist import Artist
+from pydrag.models.tests import MethodTestCase, fixture
 
 
 class ArtistTests(MethodTestCase):
@@ -24,7 +24,20 @@ class ArtistTests(MethodTestCase):
             "tags": "foo,bar",
         }
         self.assertEqual(expected_params, result.params)
-        self.assertIsInstance(result, BaseModel)
+        self.assertIsInstance(result, RawResponse)
+        self.assertIsNone(result.data)
+
+    @fixture.use_cassette(path="artist/remove_tag")
+    def test_remove_tag(self):
+        result = self.artist.remove_tag("bar")
+        expected_params = {
+            "arist": "Guns N' Roses",
+            "method": "artist.removeTag",
+            "tag": "bar",
+        }
+        self.assertEqual(expected_params, result.params)
+        self.assertIsInstance(result, RawResponse)
+        self.assertIsNone(result.data)
 
     @fixture.use_cassette(path="artist/get_tags")
     def test_get_tags(self):
@@ -37,19 +50,8 @@ class ArtistTests(MethodTestCase):
             "user": "Zaratoustre",
         }
         self.assertEqual(expected_params, result.params)
-        self.assertIsInstance(result, BaseListModel)
+        self.assertIsInstance(result, ListModel)
         self.assertFixtureEqual("artist/get_tags", result.to_dict())
-
-    @fixture.use_cassette(path="artist/remove_tag")
-    def test_remove_tag(self):
-        result = self.artist.remove_tag("bar")
-        expected_params = {
-            "arist": "Guns N' Roses",
-            "method": "artist.removeTag",
-            "tag": "bar",
-        }
-        self.assertEqual(expected_params, result.params)
-        self.assertIsInstance(result, BaseModel)
 
     @fixture.use_cassette(path="artist/find")
     def test_find(self):
@@ -125,7 +127,7 @@ class ArtistTests(MethodTestCase):
         }
         self.assertEqual(expected_params, result.params)
 
-        self.assertIsInstance(result, BaseListModel)
+        self.assertIsInstance(result, ListModel)
         self.assertFixtureEqual("artist/get_top_tags", result.to_dict())
 
     @fixture.use_cassette(path="artist/search")
@@ -138,7 +140,7 @@ class ArtistTests(MethodTestCase):
             "page": 1,
         }
         self.assertEqual(expected_params, result.params)
-        self.assertIsInstance(result, BaseListModel)
+        self.assertIsInstance(result, ListModel)
         self.assertFixtureEqual("artist/search", result.to_dict())
 
     @fixture.use_cassette(path="artist/get_top_tracks")
@@ -154,7 +156,7 @@ class ArtistTests(MethodTestCase):
         }
         self.assertEqual(expected_params, result.params)
 
-        self.assertIsInstance(result, BaseListModel)
+        self.assertIsInstance(result, ListModel)
         self.assertFixtureEqual("artist/get_top_tracks", result.to_dict())
 
     @fixture.use_cassette(path="artist/get_similar")
@@ -169,7 +171,7 @@ class ArtistTests(MethodTestCase):
         }
         self.assertEqual(expected_params, result.params)
 
-        self.assertIsInstance(result, BaseListModel)
+        self.assertIsInstance(result, ListModel)
         self.assertFixtureEqual("artist/get_similar", result.to_dict())
 
     @fixture.use_cassette(path="geo/get_top_artists")
@@ -186,7 +188,7 @@ class ArtistTests(MethodTestCase):
         }
         self.assertEqual(expected_params, result.params)
 
-        self.assertIsInstance(result, BaseListModel)
+        self.assertIsInstance(result, ListModel)
 
         self.assertFixtureEqual("geo/get_top_artists", result.to_dict())
 
@@ -200,5 +202,5 @@ class ArtistTests(MethodTestCase):
         }
 
         self.assertEqual(expected_params, result.params)
-        self.assertIsInstance(result, BaseListModel)
+        self.assertIsInstance(result, ListModel)
         self.assertFixtureEqual("chart/get_top_artists", result.to_dict())

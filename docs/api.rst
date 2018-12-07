@@ -6,7 +6,7 @@ This page lists all of the last.fm interfaces exposed by the `pydrag` package.
 Track Class
 -----------
 
-.. autoclass:: pydrag.lastfm.models.track.Track
+.. autoclass:: pydrag.Track
     :members:
     :show-inheritance:
 
@@ -14,7 +14,7 @@ Track Class
 Album Class
 -----------
 
-.. autoclass:: pydrag.lastfm.models.album.Album
+.. autoclass:: pydrag.Album
     :members:
     :show-inheritance:
 
@@ -22,7 +22,7 @@ Album Class
 Artist Class
 ------------
 
-.. autoclass:: pydrag.lastfm.models.artist.Artist
+.. autoclass:: pydrag.Artist
     :members:
     :show-inheritance:
 
@@ -31,7 +31,7 @@ Artist Class
 User Class
 ----------
 
-.. autoclass:: pydrag.lastfm.models.user.User
+.. autoclass:: pydrag.User
     :members:
     :show-inheritance:
 
@@ -39,7 +39,7 @@ User Class
 Tag Class
 ---------
 
-.. autoclass:: pydrag.lastfm.models.tag.Tag
+.. autoclass:: pydrag.Tag
     :members:
     :show-inheritance:
 
@@ -53,49 +53,60 @@ Common Classes
     :show-inheritance:
 
 
-.. autoclass:: pydrag.core.BaseListModel
+.. autoclass:: pydrag.core.ListModel
     :members:
     :undoc-members:
     :show-inheritance:
 
 
-.. autoclass:: pydrag.lastfm.models.common.Attributes
+.. autoclass:: pydrag.core.RawResponse
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+.. autoclass:: pydrag.core.ApiMixin
     :members:
     :undoc-members:
     :show-inheritance:
 
 
-.. autoclass:: pydrag.lastfm.models.common.Image
+.. autoclass:: pydrag.models.common.Attributes
     :members:
     :undoc-members:
     :show-inheritance:
 
 
-.. autoclass:: pydrag.lastfm.models.common.Image
+.. autoclass:: pydrag.models.common.Image
     :members:
     :undoc-members:
     :show-inheritance:
 
 
-.. autoclass:: pydrag.lastfm.models.common.Date
+.. autoclass:: pydrag.models.common.Image
     :members:
     :undoc-members:
     :show-inheritance:
 
 
-.. autoclass:: pydrag.lastfm.models.common.Chart
+.. autoclass:: pydrag.models.common.Date
     :members:
     :undoc-members:
     :show-inheritance:
 
 
-.. autoclass:: pydrag.lastfm.models.common.Link
+.. autoclass:: pydrag.models.common.Chart
     :members:
     :undoc-members:
     :show-inheritance:
 
 
-.. autoclass:: pydrag.lastfm.models.common.Wiki
+.. autoclass:: pydrag.models.common.Link
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+
+.. autoclass:: pydrag.models.common.Wiki
     :members:
     :undoc-members:
     :show-inheritance:

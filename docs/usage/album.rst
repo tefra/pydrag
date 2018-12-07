@@ -7,7 +7,7 @@ Retrieve album
 
 .. code-block :: python
 
-    >>> from pydrag.lastfm import Album
+    >>> from pydrag import Album
     >>>
     >>> album = Album.find(artist="Queen", album="A Night at the Opera")
     >>> len(album.tracks)

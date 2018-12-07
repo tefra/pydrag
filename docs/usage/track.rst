@@ -7,7 +7,7 @@ Retrieve track
 
 .. code-block :: python
 
-    >>> from pydrag.lastfm import Track
+    >>> from pydrag import Track
     >>>
     >>> track = Track.find(artist="AC / DC", track="Hells Bell")
     >>>
@@ -23,7 +23,7 @@ You can also use MusicBrainz ids to retrieve tracks
 
 .. code-block :: python
 
-    >>> from pydrag.lastfm import Track
+    >>> from pydrag import Track
     >>>
     >>> track = Track.find_by_mbid("dfee97091197486fbe21c6217e4a8402")
 
@@ -32,7 +32,7 @@ Search tracks
 --------------
 .. code-block :: python
 
-    >>> from pydrag.lastfm import Track
+    >>> from pydrag import Track
     >>>
     >>> tracks = Track.search(track="wait and bleed")
     >>> [t.name for t in tracks]
@@ -45,7 +45,7 @@ Top tracks by country
 
 .. code-block :: python
 
-    >>> from pydrag.lastfm import Track
+    >>> from pydrag import Track
     >>>
     >>> tracks = Track.get_top_tracks_by_country(country="italy", limit=5)
     >>> [t.name for t in tracks]
@@ -58,7 +58,7 @@ Top tracks chart
 
 .. code-block :: python
 
-    >>> from pydrag.lastfm import Track
+    >>> from pydrag import Track
     >>>
     >>> tracks =  Track.get_top_tracks_chart(limit=3)
     >>> [t.name for t in tracks]

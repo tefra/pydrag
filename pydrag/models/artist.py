@@ -2,13 +2,13 @@ from typing import List, Optional
 
 from attr import dataclass
 
-from pydrag.core import BaseModel
-from pydrag.lastfm.models.common import Attributes, Image, Wiki
-from pydrag.lastfm.models.tag import Tag
+from pydrag.core import ApiMixin, BaseModel, ListModel, RawResponse
+from pydrag.models.common import Attributes, Image, Wiki
+from pydrag.models.tag import Tag
 
 
 @dataclass
-class Artist(BaseModel):
+class Artist(BaseModel, ApiMixin):
     """
     Last.FM track, chart and geo api client.
 
@@ -84,17 +84,18 @@ class Artist(BaseModel):
         :param artist:  The artist name to retrieve.
         :param user: The username for the context of the request. If supplied, response will include the user's playcount
         :param lang: The language to return the biography in, ISO-639
-        :rtype: :class:`~pydrag.lastfm.models.artist.Artist`
+        :rtype: :class:`~pydrag.models.artist.Artist`
         """
 
         return cls.retrieve(
+            bind=Artist,
             params=dict(
                 method="artist.getInfo",
                 artist=artist,
                 autocorrect=True,
                 username=user,
                 lang=lang,
-            )
+            ),
         )
 
     @classmethod
@@ -108,17 +109,18 @@ class Artist(BaseModel):
         :param mbid:  The musicbrainz id for the artist
         :param user: The username for the context of the request. If supplied, response will include the user's playcount
         :param lang: The language to return the biography in, ISO-639
-        :rtype: :class:`~pydrag.lastfm.models.artist.Artist`
+        :rtype: :class:`~pydrag.models.artist.Artist`
         """
 
         return cls.retrieve(
+            bind=Artist,
             params=dict(
                 method="artist.getInfo",
                 mbid=mbid,
                 autocorrect=True,
                 username=user,
                 lang=lang,
-            )
+            ),
         )
 
     def get_info(self, user: str = None, lang: str = "en") -> "Artist":
@@ -129,7 +131,7 @@ class Artist(BaseModel):
 
         :param user: The username for the context of the request. If supplied, response will include the user's playcount
         :param lang: The language to return the biography in, ISO-639
-        :rtype: :class:`~pydrag.lastfm.models.artist.Artist`
+        :rtype: :class:`~pydrag.models.artist.Artist`
         """
         if self.mbid:
             return self.find_by_mbid(self.mbid, user, lang)
@@ -139,7 +141,7 @@ class Artist(BaseModel):
     @classmethod
     def search(
         cls, artist: str, limit: int = 50, page: int = 1
-    ) -> List["Artist"]:
+    ) -> ListModel["Artist"]:
         """
         Search for an artist by name. Returns artist matches sorted by
         relevance.
@@ -147,11 +149,11 @@ class Artist(BaseModel):
         :param artist: The artist name to search.
         :param page: The page number to fetch.
         :param limit: The number of results to fetch per page.
-        :rtype: :class:`list` of :class:`~pydrag.lastfm.models.artist.Artist`
+        :rtype: :class:`pydrag.core.ListModel` of :class:`~pydrag.models.artist.Artist`
         """
         return cls.retrieve(
             bind=Artist,
-            many=("artists", "artist"),
+            many="artists.artist",
             params=dict(
                 method="artist.search", limit=limit, page=page, artist=artist
             ),
@@ -160,12 +162,12 @@ class Artist(BaseModel):
     @classmethod
     def get_top_artists_by_country(
         cls, country: str, limit: int = 50, page: int = 1
-    ) -> List["Artist"]:
+    ) -> ListModel["Artist"]:
         """
         :param country: The country name to fetch results.
         :param limit: The number of results to fetch per page.
         :param page: The page number to fetch.
-        :rtype: :class:`list` of :class:`~pydrag.lastfm.models.artist.Artist`
+        :rtype: :class:`pydrag.core.ListModel` of :class:`~pydrag.models.artist.Artist`
         """
         return cls.retrieve(
             bind=Artist,
@@ -181,13 +183,13 @@ class Artist(BaseModel):
     @classmethod
     def get_top_artists_chart(
         cls, limit: int = 50, page: int = 1
-    ) -> List["Artist"]:
+    ) -> ListModel["Artist"]:
         """
         Get the top artists chart.
 
         :param limit: The number of results to fetch per page.
         :param page: The page number to fetch.
-        :rtype: :class:`list` of :class:`~pydrag.lastfm.models.artist.Artist`
+        :rtype: :class:`pydrag.core.ListModel` of :class:`~pydrag.models.artist.Artist`
         """
         return cls.retrieve(
             bind=Artist,
@@ -195,30 +197,30 @@ class Artist(BaseModel):
             params=dict(method="chart.getTopArtists", limit=limit, page=page),
         )
 
-    def add_tags(self, tags: List[str]) -> BaseModel:
+    def add_tags(self, tags: List[str]) -> RawResponse:
         """
         Tag an artist with one or more user supplied tags.
 
         :param tags: A list of user supplied tags to apply to this artist. Accepts a maximum of 10 tags.
-        :rtype: :class:`~pydrag.core.BaseModel`
+        :rtype: :class:`~pydrag.core.RawResponse`
         """
         return self.submit(
-            bind=BaseModel,
+            bind=RawResponse,
             stateful=True,
             params=dict(
                 method="artist.addTags", arist=self.name, tags=",".join(tags)
             ),
         )
 
-    def remove_tag(self, tag: str) -> BaseModel:
+    def remove_tag(self, tag: str) -> RawResponse:
         """
         Remove a user's tag from an artist.
 
         :param tag: A single user tag to remove from this artist.
-        :rtype: :class:`~pydrag.core.BaseModel`
+        :rtype: :class:`~pydrag.core.RawResponse`
         """
         return self.submit(
-            bind=BaseModel,
+            bind=RawResponse,
             stateful=True,
             params=dict(method="artist.removeTag", arist=self.name, tag=tag),
         )
@@ -228,18 +230,19 @@ class Artist(BaseModel):
         Use the last.fm corrections data to check whether the supplied artist
         has a correction to a canonical artist.
 
-        :rtype: :class:`~pydrag.lastfm.models.artist.Artist`
+        :rtype: :class:`~pydrag.models.artist.Artist`
         """
         return self.retrieve(
-            params=dict(method="artist.getCorrection", artist=self.name)
+            bind=Artist,
+            params=dict(method="artist.getCorrection", artist=self.name),
         )
 
-    def get_similar(self, limit: int = 50) -> List["Artist"]:
+    def get_similar(self, limit: int = 50) -> ListModel["Artist"]:
         """
         Get all the artists similar to this artist.
 
         :param limit: Limit the number of similar artists returned
-        :rtype: :class:`list` of :class:`~pydrag.lastfm.models.artist.Artist`
+        :rtype: :class:`pydrag.core.ListModel` of :class:`~pydrag.models.artist.Artist`
         """
         return self.retrieve(
             bind=Artist,
@@ -253,12 +256,12 @@ class Artist(BaseModel):
             ),
         )
 
-    def get_tags(self, user: str) -> List[Tag]:
+    def get_tags(self, user: str) -> ListModel[Tag]:
         """
         Get the tags applied by an individual user to an artist on Last.fm.
 
         :param user: The username for the context of the request.
-        :rtype: :class:`list` of :class:`~pydrag.lastfm.models.tag.Tag`
+        :rtype: :class:`pydrag.core.ListModel` of :class:`~pydrag.models.tag.Tag`
         """
         return self.retrieve(
             bind=Tag,
@@ -272,11 +275,11 @@ class Artist(BaseModel):
             ),
         )
 
-    def get_top_tags(self) -> List[Tag]:
+    def get_top_tags(self) -> ListModel[Tag]:
         """
         Get the top tags for an artist on Last.fm, ordered by popularity.
 
-        :rtype: :class:`list` of :class:`~pydrag.lastfm.models.tag.Tag`
+        :rtype: :class:`pydrag.core.ListModel` of :class:`~pydrag.models.tag.Tag`
         """
         return self.retrieve(
             bind=Tag,
@@ -295,9 +298,9 @@ class Artist(BaseModel):
 
         :param page: The page number to fetch.
         :param limit: The number of results to fetch per page.
-        :rtype: :class:`list` of :class:`~pydrag.lastfm.models.track.Track`
+        :rtype: :class:`pydrag.core.ListModel` of :class:`~pydrag.models.track.Track`
         """
-        from pydrag.lastfm.models.track import Track
+        from pydrag.models.track import Track
 
         return self.retrieve(
             bind=Track,

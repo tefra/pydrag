@@ -7,7 +7,7 @@ Retrieve artist
 
 .. code-block :: python
 
-    >>> from pydrag.lastfm import Artist
+    >>> from pydrag import Artist
     >>> artist = Artist.find("Guns N' Roses")
     >>> artist.name
     "Guns N' Roses"
