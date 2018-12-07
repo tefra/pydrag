@@ -1,7 +1,9 @@
 import time
 from datetime import datetime, timedelta
+from unittest import mock
 
 from pydrag.core import BaseModel, ListModel, RawResponse
+from pydrag.exceptions import ApiError
 from pydrag.models.artist import Artist
 from pydrag.models.tests import MethodTestCase, fixture
 from pydrag.models.track import ScrobbleTrack, Track
@@ -55,7 +57,7 @@ class TrackTests(MethodTestCase):
         self.assertIsInstance(result, ListModel)
         self.assertFixtureEqual("track/get_tags", result.to_dict())
 
-    @fixture.use_cassette(path="track/get_info")
+    @fixture.use_cassette(path="track/find")
     def test_find(self):
         result = Track.find(artist="AC / DC", track="Hells Bell")
         expected_params = {
@@ -69,7 +71,45 @@ class TrackTests(MethodTestCase):
 
         self.assertDictEqual(expected_params, result.params)
         self.assertIsInstance(result, Track)
-        self.assertFixtureEqual("track/get_info", result.to_dict())
+        self.assertFixtureEqual("track/find", result.to_dict())
+
+    @fixture.use_cassette(path="track/find_by_mbid")
+    def test_find_by_mbid(self):
+        result = Track.find_by_mbid(
+            mbid="b6411d6b-2dca-4004-8919-e8c27ff6b286", user="Zaratoustre"
+        )
+        expected_params = {
+            "autocorrect": True,
+            "lang": "en",
+            "method": "track.getInfo",
+            "mbid": "b6411d6b-2dca-4004-8919-e8c27ff6b286",
+            "username": "Zaratoustre",
+        }
+
+        self.assertDictEqual(expected_params, result.params)
+        self.assertIsInstance(result, Track)
+        self.assertFixtureEqual("track/find_by_mbid", result.to_dict())
+
+    @mock.patch.object(Track, "find")
+    @mock.patch.object(Track, "find_by_mbid", return_value="Me")
+    def test_get_info_when_mbid_is_available(self, find_by_mbid, find):
+        self.track.mbid = "b6411d6b-2dca-4004-8919-e8c27ff6b286"
+        self.assertEqual("Me", self.track.get_info("rj", "it"))
+
+        self.assertIsNotNone(self.track.mbid)
+        find_by_mbid.assert_called_once_with(self.track.mbid, "rj", "it")
+        find.assert_not_called()
+
+    @mock.patch.object(Track, "find", return_value="Me")
+    @mock.patch.object(Track, "find_by_mbid")
+    def test_get_info_when_mbid_is_not_available(self, find_by_mbid, find):
+        self.track.mbid = None
+        self.assertEqual("Me", self.track.get_info("rj", "it"))
+
+        find.assert_called_once_with(
+            self.track.artist.name, self.track.name, "rj", "it"
+        )
+        find_by_mbid.assert_not_called()
 
     @fixture.use_cassette(path="track/get_correction")
     def test_get_correction(self):
@@ -223,3 +263,12 @@ class TrackTests(MethodTestCase):
         self.assertEqual(expected_params, result.params)
         self.assertIsInstance(result, ListModel)
         self.assertFixtureEqual("chart/get_top_tracks", result.to_dict())
+
+    @fixture.use_cassette(path="error_response")
+    def test_error_response(self):
+        with self.assertRaises(ApiError) as con:
+            Track.find(track="Axe and the wind", artist="scorpions")
+
+        self.assertEqual("Track not found", con.exception.message)
+        self.assertEqual([], con.exception.links)
+        self.assertEqual(6, con.exception.error)

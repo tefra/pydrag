@@ -57,6 +57,7 @@ class Track(ApiMixin, BaseModel):
     :param mbid: Musicbrainz ID
     :param image: List of images
     :param playcount: Total track playcount
+    :param userplaycount: The user context total track playcount
     :param listeners: Total unique listeners
     :param duration: Track duration in seconds, should be int
     :param match: Search query match weight
@@ -74,6 +75,7 @@ class Track(ApiMixin, BaseModel):
     mbid: Optional[str] = None
     image: Optional[List[Image]] = None
     playcount: Optional[int] = None
+    userplaycount: Optional[int] = None
     listeners: Optional[int] = None
     duration: Optional[int] = None
     match: Optional[float] = None
@@ -81,7 +83,7 @@ class Track(ApiMixin, BaseModel):
     album: Optional[Album] = None
     top_tags: Optional[List[Tag]] = None
     date: Optional[Date] = None
-    loved: Optional[int] = None
+    loved: Optional[bool] = None
     attr: Optional[Attributes] = None
 
     @classmethod
@@ -109,8 +111,6 @@ class Track(ApiMixin, BaseModel):
 
         if data.get("duration") == "FIXME":
             data["duration"] = 0
-        if "loved" in data:
-            data["loved"] = True if data["loved"] == "1" else False
         if "image" in data:
             data["image"] = list(map(Image.from_dict, data["image"]))
         if "top_tags" in data:
@@ -127,6 +127,10 @@ class Track(ApiMixin, BaseModel):
             data["attr"] = Attributes.from_dict(data["attr"])
         if "date" in data:
             data["date"] = Date.from_dict(data["date"])
+        if "loved" in data:
+            data["loved"] = True if data["loved"] == "1" else False
+        elif "userloved" in data:
+            data["loved"] = True if data.pop("userloved", False) else False
 
         return super(Track, cls).from_dict(data)
 
@@ -178,6 +182,21 @@ class Track(ApiMixin, BaseModel):
                 lang=lang,
             ),
         )
+
+    def get_info(self, user: str = None, lang: str = "en") -> "Track":
+        """
+        There are many ways we end up with an incomplete instance of a track
+        instance likes charts, tags etc, This is a quick method to refresh our
+        object with complete data from the find methods.
+
+        :param user: The username for the context of the request. If supplied, response will include the user's playcount and loved status
+        :param lang: The language to return the biography in, ISO-639
+        :rtype: :class:`~pydrag.models.artist.Track`
+        """
+        if self.mbid:
+            return self.find_by_mbid(self.mbid, user, lang)
+        else:
+            return self.find(self.artist.name, self.name, user, lang)
 
     @classmethod
     def get_correction(cls, track: str, artist: str) -> "Track":
@@ -403,11 +422,13 @@ class Track(ApiMixin, BaseModel):
         :rtype: :class:`pydrag.core.ListModel` of :class:`~pydrag.models.track.ScrobbleTrack`
         """
         params = dict(method="track.scrobble")
-        for idx, track in enumerate(tracks):
-            for field, value in track.to_dict().items():
-                if value is None:
-                    continue
-                params.update({"{}[{}]".format(field, idx): value})
+        params.update(
+            {
+                "{}[{}]".format(field, idx): value
+                for idx, track in enumerate(tracks)
+                for field, value in track.to_dict().items()
+            }
+        )
         return cls.submit(
             bind=ScrobbleTrack, many="scrobble", stateful=True, params=params
         )

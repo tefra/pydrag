@@ -1,0 +1,64 @@
+{
+    "version": 1,
+    "interactions": [
+        {
+            "request": {
+                "method": "GET",
+                "uri": "https://ws.audioscrobbler.com/2.0/?api_key=LAST_FM_API_KEY&artist=scorpions&autocorrect=1&format=json&lang=en&method=track.getInfo&track=Axe+and+the+wind",
+                "body": null,
+                "headers": {
+                    "User-Agent": [
+                        "python-requests/2.20.1"
+                    ],
+                    "Accept-Encoding": [
+                        "gzip, deflate"
+                    ],
+                    "Accept": [
+                        "*/*"
+                    ],
+                    "Connection": [
+                        "keep-alive"
+                    ]
+                }
+            },
+            "response": {
+                "status": {
+                    "code": 200,
+                    "message": "OK"
+                },
+                "headers": {
+                    "Content-Length": [
+                        "50"
+                    ],
+                    "Connection": [
+                        "keep-alive"
+                    ],
+                    "Access-Control-Request-Headers": [
+                        "Origin, X-Atmosphere-tracking-id, X-Atmosphere-Framework, X-Cache-Date, Content-Type, X-Atmosphere-Transport, *"
+                    ],
+                    "Server": [
+                        "openresty/1.9.7.5"
+                    ],
+                    "Access-Control-Allow-Origin": [
+                        "*"
+                    ],
+                    "Content-Type": [
+                        "application/json; charset=UTF-8"
+                    ],
+                    "Access-Control-Allow-Methods": [
+                        "POST, GET, OPTIONS"
+                    ],
+                    "Access-Control-Max-Age": [
+                        "86400"
+                    ],
+                    "Date": [
+                        "Fri, 07 Dec 2018 22:45:02 GMT"
+                    ]
+                },
+                "body": {
+                    "string": "{\"error\":6,\"message\":\"Track not found\",\"links\":[]}"
+                }
+            }
+        }
+    ]
+}

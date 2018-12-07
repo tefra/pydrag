@@ -6,6 +6,7 @@ import attr
 import requests
 
 from pydrag import config
+from pydrag.exceptions import ApiError
 from pydrag.utils import md5
 
 T = TypeVar("T")
@@ -64,33 +65,22 @@ class RawResponse(BaseModel):
 
 class ApiMixin:
     @classmethod
-    def validate(cls, bind, params):
-        assert "method" in params
-        if bind is None:
-            bind = RawResponse
-        return bind, cls.prepare_params(params)
-
-    @classmethod
-    def retrieve(cls, bind=None, many=None, params={}):
-        bind, data = cls.validate(bind, params)
+    def retrieve(cls, bind, many=None, params={}):
+        data = cls.prepare_params(params)
         url = "{}?{}".format(config.api_root_url, urlencode(data))
         response = requests.get(url)
         response.raise_for_status()
         body = response.json(object_pairs_hook=pythonic_variables)
+        cls.raise_for_error(body)
         obj = cls.bind_data(bind, body, many)
         obj.params = params
         return obj
 
     @classmethod
     def submit(
-        cls,
-        bind=None,
-        many=None,
-        stateful=False,
-        authenticate=False,
-        params={},
+        cls, bind, many=None, stateful=False, authenticate=False, params={}
     ):
-        bind, data = cls.validate(bind, params)
+        data = cls.prepare_params(params)
         if authenticate:
             data.update(
                 dict(
@@ -112,6 +102,7 @@ class ApiMixin:
         response = requests.post(url, data=data)
         response.raise_for_status()
         body = response.json(object_pairs_hook=pythonic_variables)
+        cls.raise_for_error(body)
         obj = cls.bind_data(bind, body, many)
         obj.params = params
         return obj
@@ -132,8 +123,6 @@ class ApiMixin:
         body: Optional[Dict],
         many: Optional[str] = None,
     ):
-        assert isinstance(body, dict)
-
         if not body:
             return bind()
 
@@ -141,18 +130,18 @@ class ApiMixin:
         if many is None:
             return bind.from_dict(data)
 
-        try:
-            for m in many.split("."):
-                data = data.pop(m)
+        for m in many.split("."):
+            data = data.pop(m)
 
-            if isinstance(data, dict):
-                data = [data]
+        if isinstance(data, dict):
+            data = [data]
 
-            items: list = [bind.from_dict(d) for d in data]
-        except KeyError:
-            items = []
+        return ListModel(data=[bind.from_dict(d) for d in data])
 
-        return ListModel(data=items)
+    @staticmethod
+    def raise_for_error(body: dict):
+        if "error" in body:
+            raise ApiError(**body)
 
     @staticmethod
     def sign(params):
