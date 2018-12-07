@@ -48,10 +48,10 @@ Combine that with pydrag's fluent syntax you can do some pretty cool stuff!
 
 .. code-block :: python
 
-    >>> from pydrag import lastfm
-    >>> lastfm.configure("<api_key>")
+    >>> import pydrag
+    >>> pydrag.configure("<api_key>")
     lets say it worked
-    >>> me = lastfm.User.find("Zaratoustre")
+    >>> me = pydrag.User.find("Zaratoustre")
     >>> for friend in me.get_friends(recent_tracks=True):
     ...     friend.name, friend.recent_track.name
     ...
@@ -75,11 +75,11 @@ Find a track by artist and name, retrieve the album, add some user tags and love
 
 .. code-block :: python
 
-    >>> from pydrag import lastfm
+    >>> import pydrag
 
-    >>> lastfm.configure("<api_key>", "<api_secret>", "<username>", "<password>")
+    >>> pydrag.configure("<api_key>", "<api_secret>", "<username>", "<password>")
     lets say it worked
-    >>> track = lastfm.Track.find(artist="AC / DC", track="Hells Bell")
+    >>> track = pydrag.Track.find(artist="AC / DC", track="Hells Bell")
     >>> album = track.album
     >>> album.to_dict()
     {'attr': {'position': 1}, 'name': 'Back in Black', 'mbid': '38914b29-7788-4cff-80b7-1ced523f8675', 'url': 'https://www.last.fm/music/AC%2FDC/Back+in+Black', 'image': [{'size'
@@ -115,7 +115,7 @@ We use the excellent `vcrpy <https://vcrpy.readthedocs.io/>`_ library to record 
 
 Deleting a recorded response will force the unit-test to perform an actual webservice in order to regenerate the fixture data. All sensitive information like keys and credentials will be automatically censored.
 
-Cassette example ``test/fixtures/track/search.json``.
+Cassette example ``tests/fixtures/track/search.json``.
 
 I also recommend during development to maintain a dotenv file (.env) with your your last.fm configuration, pipenv will pick up the environmental variables and pydrag will create a default configuration for you!
 

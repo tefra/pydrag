@@ -28,7 +28,7 @@ pydrag aims to offer a modern interface with fluid syntax for the `Last.fm <http
 
 .. code-block:: python
 
-    >>> from pydrag.models.user import User
+    >>> from pydrag import User
     >>> rj = User.find("RJ")
     >>> rj.real_name
     'Richard Jones '
