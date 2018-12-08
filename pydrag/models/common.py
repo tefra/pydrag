@@ -59,25 +59,10 @@ class RawResponse(BaseModel):
 
 @dataclass
 class Attributes(BaseModel):
-    tag: Optional[str] = None
-    page: Optional[int] = None
-    user: Optional[str] = None
-    country: Optional[str] = None
-    total: Optional[int] = None
-    album: Optional[str] = None
-    artist: Optional[str] = None
-    limit: Optional[int] = None
-    track: Optional[str] = None
-    total_pages: Optional[int] = None
-    to_date: Optional[str] = None
-    from_date: Optional[str] = None
-    offset: Optional[int] = None
     timestamp: Optional[int] = None
     rank: Optional[int] = None
     date: Optional[str] = None
-    ignored: Optional[int] = None
     position: Optional[int] = None
-    accepted: Optional[int] = None
 
 
 @dataclass

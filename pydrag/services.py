@@ -1,7 +1,6 @@
 from typing import Dict, Optional, Type
-from urllib.parse import urlencode
 
-import requests
+from requests import request
 
 from pydrag.exceptions import ApiError
 from pydrag.models.common import BaseModel, ListModel
@@ -11,10 +10,59 @@ from pydrag.utils import md5
 
 class ApiMixin:
     @classmethod
-    def retrieve(cls, bind, many=None, params={}):
-        data = cls.prepare_params(params)
-        url = "{}?{}".format(config.api_root_url, urlencode(data))
-        response = requests.get(url)
+    def retrieve(
+        cls,
+        bind: Type[BaseModel],
+        many: Optional[str] = None,
+        params: dict = dict(),
+    ):
+        return cls._perform(
+            method="GET",
+            bind=bind,
+            many=many,
+            params=params,
+            stateful=False,
+            authenticate=False,
+        )
+
+    @classmethod
+    def submit(
+        cls,
+        bind: Type[BaseModel],
+        many: Optional[str] = None,
+        params: dict = dict(),
+        stateful: bool = False,
+        authenticate: bool = False,
+    ):
+        return cls._perform(
+            method="POST",
+            bind=bind,
+            many=many,
+            params=params,
+            stateful=stateful,
+            authenticate=authenticate,
+        )
+
+    @classmethod
+    def _perform(
+        cls,
+        method: str,
+        bind: Type[BaseModel],
+        many: Optional[str],
+        params: dict,
+        stateful: bool,
+        authenticate: bool,
+    ):
+        data: dict = dict()
+        query: dict = dict()
+        if method == "GET":
+            query = cls.prepare_params(params, stateful, authenticate)
+        else:
+            data = cls.prepare_params(params, stateful, authenticate)
+
+        response = request(
+            method=method, url=config.api_url, data=data, params=query
+        )
         response.raise_for_status()
         body = response.json(object_pairs_hook=pythonic_variables)
         cls.raise_for_error(body)
@@ -23,43 +71,28 @@ class ApiMixin:
         return obj
 
     @classmethod
-    def submit(
-        cls, bind, many=None, stateful=False, authenticate=False, params={}
-    ):
-        data = cls.prepare_params(params)
+    def prepare_params(
+        cls, params: dict, stateful=False, authenticate=False
+    ) -> dict:
+
+        params = dict(
+            (k, str(int(v is True) if type(v) == bool else v))
+            for k, v in params.items()
+            if v is not None
+        )
+        params.update(dict(format="json", api_key=config.api_key))
+
         if authenticate:
-            data.update(
-                dict(
-                    username=config.username,
-                    authToken=md5(str(config.username) + str(config.password)),
-                )
+            params.update(
+                dict(username=config.username, authToken=config.auth_token)
             )
 
         if stateful:
-            from pydrag.models.auth import AuthSession
+            params.update(dict(sk=cls.get_session().key))
 
-            session = AuthSession.get()
-            data.update({"sk": session.key})
+        if authenticate or stateful:
+            params.update(dict(api_sig=cls.sign(params)))
 
-        if authenticate or "sk" in data:
-            data.update({"api_sig": cls.sign(data)})
-
-        url = config.api_root_url
-        response = requests.post(url, data=data)
-        response.raise_for_status()
-        body = response.json(object_pairs_hook=pythonic_variables)
-        cls.raise_for_error(body)
-        obj = cls.bind_data(bind, body, many)
-        obj.params = params
-        return obj
-
-    @staticmethod
-    def prepare_params(params: dict) -> dict:
-        def cast(x):
-            return str(int(x is True) if type(x) == bool else x)
-
-        params = dict((k, cast(v)) for k, v in params.items() if v is not None)
-        params.update(dict(format="json", api_key=config.api_key))
         return params
 
     @classmethod
@@ -83,6 +116,12 @@ class ApiMixin:
             data = [data]
 
         return ListModel(data=[bind.from_dict(d) for d in data])
+
+    @classmethod
+    def get_session(cls):
+        from pydrag.models.auth import AuthSession
+
+        return AuthSession.get()
 
     @staticmethod
     def raise_for_error(body: dict):

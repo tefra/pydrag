@@ -12,7 +12,11 @@ class Config:
     api_secret: str
     username: str
     password: str = attrib(converter=md5)
-    api_root_url: str = "https://ws.audioscrobbler.com/2.0/"
+    api_url: str = "https://ws.audioscrobbler.com/2.0/"
+
+    @property
+    def auth_token(self):
+        return md5(str(self.username) + str(self.password))
 
 
 config = Config(
