@@ -2,9 +2,16 @@ from typing import List, Optional
 
 from attr import dataclass
 
-from pydrag.core import ApiMixin, BaseModel, ListModel, RawResponse
-from pydrag.models.common import Attributes, Image, Wiki
+from pydrag.models.common import (
+    Attributes,
+    BaseModel,
+    Image,
+    ListModel,
+    RawResponse,
+    Wiki,
+)
 from pydrag.models.tag import Tag
+from pydrag.services import ApiMixin
 
 
 @dataclass
@@ -149,7 +156,7 @@ class Artist(BaseModel, ApiMixin):
         :param artist: The artist name to search.
         :param page: The page number to fetch.
         :param limit: The number of results to fetch per page.
-        :rtype: :class:`pydrag.core.ListModel` of :class:`~pydrag.models.artist.Artist`
+        :rtype: :class:`pydrag.models.common.ListModel` of :class:`~pydrag.models.artist.Artist`
         """
         return cls.retrieve(
             bind=Artist,
@@ -167,7 +174,7 @@ class Artist(BaseModel, ApiMixin):
         :param country: The country name to fetch results.
         :param limit: The number of results to fetch per page.
         :param page: The page number to fetch.
-        :rtype: :class:`pydrag.core.ListModel` of :class:`~pydrag.models.artist.Artist`
+        :rtype: :class:`pydrag.models.common.ListModel` of :class:`~pydrag.models.artist.Artist`
         """
         return cls.retrieve(
             bind=Artist,
@@ -189,7 +196,7 @@ class Artist(BaseModel, ApiMixin):
 
         :param limit: The number of results to fetch per page.
         :param page: The page number to fetch.
-        :rtype: :class:`pydrag.core.ListModel` of :class:`~pydrag.models.artist.Artist`
+        :rtype: :class:`pydrag.models.common.ListModel` of :class:`~pydrag.models.artist.Artist`
         """
         return cls.retrieve(
             bind=Artist,
@@ -202,7 +209,7 @@ class Artist(BaseModel, ApiMixin):
         Tag an artist with one or more user supplied tags.
 
         :param tags: A list of user supplied tags to apply to this artist. Accepts a maximum of 10 tags.
-        :rtype: :class:`~pydrag.core.RawResponse`
+        :rtype: :class:`~models.common.RawResponse`
         """
         return self.submit(
             bind=RawResponse,
@@ -217,7 +224,7 @@ class Artist(BaseModel, ApiMixin):
         Remove a user's tag from an artist.
 
         :param tag: A single user tag to remove from this artist.
-        :rtype: :class:`~pydrag.core.RawResponse`
+        :rtype: :class:`~models.common.RawResponse`
         """
         return self.submit(
             bind=RawResponse,
@@ -242,7 +249,7 @@ class Artist(BaseModel, ApiMixin):
         Get all the artists similar to this artist.
 
         :param limit: Limit the number of similar artists returned
-        :rtype: :class:`pydrag.core.ListModel` of :class:`~pydrag.models.artist.Artist`
+        :rtype: :class:`pydrag.models.common.ListModel` of :class:`~pydrag.models.artist.Artist`
         """
         return self.retrieve(
             bind=Artist,
@@ -261,7 +268,7 @@ class Artist(BaseModel, ApiMixin):
         Get the tags applied by an individual user to an artist on Last.fm.
 
         :param user: The username for the context of the request.
-        :rtype: :class:`pydrag.core.ListModel` of :class:`~pydrag.models.tag.Tag`
+        :rtype: :class:`pydrag.models.common.ListModel` of :class:`~pydrag.models.tag.Tag`
         """
         return self.retrieve(
             bind=Tag,
@@ -279,7 +286,7 @@ class Artist(BaseModel, ApiMixin):
         """
         Get the top tags for an artist on Last.fm, ordered by popularity.
 
-        :rtype: :class:`pydrag.core.ListModel` of :class:`~pydrag.models.tag.Tag`
+        :rtype: :class:`pydrag.models.common.ListModel` of :class:`~pydrag.models.tag.Tag`
         """
         return self.retrieve(
             bind=Tag,
@@ -298,7 +305,7 @@ class Artist(BaseModel, ApiMixin):
 
         :param page: The page number to fetch.
         :param limit: The number of results to fetch per page.
-        :rtype: :class:`pydrag.core.ListModel` of :class:`~pydrag.models.track.Track`
+        :rtype: :class:`pydrag.models.common.ListModel` of :class:`~pydrag.models.track.Track`
         """
         from pydrag.models.track import Track
 

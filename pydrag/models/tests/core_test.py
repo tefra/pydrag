@@ -1,6 +1,6 @@
 from unittest import TestCase
 
-from pydrag.core import RawResponse
+from pydrag.models.common import RawResponse
 
 
 class RawResponseTests(TestCase):

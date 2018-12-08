@@ -1,5 +1,5 @@
 from pydrag.constants import Period
-from pydrag.core import ListModel
+from pydrag.models.common import ListModel
 from pydrag.models.tests import MethodTestCase, fixture
 from pydrag.models.user import User
 

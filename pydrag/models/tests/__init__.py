@@ -5,7 +5,7 @@ from unittest import TestCase
 
 import vcr
 
-from pydrag import config, configure
+from pydrag.models.config import config, configure
 
 
 if not config.api_key:

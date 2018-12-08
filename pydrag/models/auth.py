@@ -1,6 +1,7 @@
 from attr import dataclass
 
-from pydrag.core import ApiMixin, BaseModel
+from pydrag.models.common import BaseModel
+from pydrag.services import ApiMixin
 
 
 @dataclass

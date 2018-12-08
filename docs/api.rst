@@ -47,24 +47,19 @@ Tag Class
 Common Classes
 --------------
 
-.. autoclass:: pydrag.core.BaseModel
+.. autoclass:: pydrag.models.common.BaseModel
     :members:
     :undoc-members:
     :show-inheritance:
 
 
-.. autoclass:: pydrag.core.ListModel
+.. autoclass:: pydrag.models.common.ListModel
     :members:
     :undoc-members:
     :show-inheritance:
 
 
-.. autoclass:: pydrag.core.RawResponse
-    :members:
-    :undoc-members:
-    :show-inheritance:
-
-.. autoclass:: pydrag.core.ApiMixin
+.. autoclass:: pydrag.models.common.RawResponse
     :members:
     :undoc-members:
     :show-inheritance:
@@ -107,6 +102,14 @@ Common Classes
 
 
 .. autoclass:: pydrag.models.common.Wiki
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+Api Mixin
+---------
+
+.. autoclass:: pydrag.services.ApiMixin
     :members:
     :undoc-members:
     :show-inheritance:

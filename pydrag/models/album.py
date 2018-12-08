@@ -2,10 +2,17 @@ from typing import List, Optional
 
 from attr import dataclass
 
-from pydrag.core import ApiMixin, BaseModel, ListModel, RawResponse
 from pydrag.models.artist import Artist
-from pydrag.models.common import Attributes, Image, Wiki
+from pydrag.models.common import (
+    Attributes,
+    BaseModel,
+    Image,
+    ListModel,
+    RawResponse,
+    Wiki,
+)
 from pydrag.models.tag import Tag
+from pydrag.services import ApiMixin
 
 
 @dataclass
@@ -143,7 +150,7 @@ class Album(BaseModel, ApiMixin):
         :param album: The album name to search.
         :param page: The page number to fetch.
         :param limit: The number of results to fetch per page.
-        :rtype: :class:`pydrag.core.ListModel` of :class:`~pydrag.models.album.Album`
+        :rtype: :class:`pydrag.models.common.ListModel` of :class:`~pydrag.models.album.Album`
         """
 
         return cls.retrieve(
@@ -159,7 +166,7 @@ class Album(BaseModel, ApiMixin):
         Tag an album using a list of user supplied tags.
 
         :param tags: A list of user supplied tags to apply to this album. Accepts a maximum of 10 tags.
-        :rtype: :class:`~pydrag.core.RawResponse`
+        :rtype: :class:`~models.common.RawResponse`
         """
         assert self.artist is not None
         return self.submit(
@@ -178,7 +185,7 @@ class Album(BaseModel, ApiMixin):
         Remove a user's tag from an album.
 
         :param tag: A single user tag to remove from this album.
-        :rtype: :class:`~pydrag.core.RawResponse`
+        :rtype: :class:`~models.common.RawResponse`
         """
         assert self.artist is not None
         return self.submit(
@@ -197,7 +204,7 @@ class Album(BaseModel, ApiMixin):
         Get the tags applied by an individual user to an album on Last.fm.
 
         :param user: The username for the context of the request.
-        :rtype: :class:`pydrag.core.ListModel` of :class:`~pydrag.models.tag.Tag`
+        :rtype: :class:`pydrag.models.common.ListModel` of :class:`~pydrag.models.tag.Tag`
         """
         assert self.artist is not None
         return self.retrieve(
@@ -217,7 +224,7 @@ class Album(BaseModel, ApiMixin):
         """
         Get the top tags for an album on Last.fm, ordered by popularity.
 
-        :rtype: :class:`pydrag.core.ListModel` of :class:`~pydrag.models.tag.Tag`
+        :rtype: :class:`pydrag.models.common.ListModel` of :class:`~pydrag.models.tag.Tag`
         """
         assert self.artist is not None
         return self.retrieve(

@@ -1,4 +1,4 @@
-from pydrag.core import ListModel
+from pydrag.models.common import ListModel
 from pydrag.models.tag import Tag
 from pydrag.models.tests import MethodTestCase, fixture
 

@@ -1,8 +1,60 @@
-from typing import List, Optional
+from collections import UserList
+from typing import Dict, List, Optional, Sequence, Type, TypeVar
 
-from attr import dataclass
+from attr import asdict, attrib, dataclass, fields
 
-from pydrag.core import BaseModel
+T = TypeVar("T", bound="BaseModel")
+
+
+class BaseModel:
+    params: Optional[dict] = attrib(init=False)
+
+    def to_dict(self: "BaseModel") -> Dict:
+        """
+        Convert our object to a traditional dictionary. Filter out None values
+        and dictionary values. The last one is like a validation for the unit
+        tests in case we forgot to properly deserialize an dict to an object.
+
+        :rtype: Dict
+        """
+        return asdict(
+            self, filter=lambda f, v: v is not None and type(v) != dict
+        )
+
+    @classmethod
+    def from_dict(cls: Type, data: dict) -> "BaseModel":
+        for f in fields(cls):
+            if f.name not in data or data[f.name] is None:
+                continue
+
+            if f.type == str or f.type == Optional[str]:
+                data[f.name] = str(data[f.name])
+            elif f.type == int or f.type == Optional[int]:
+                data[f.name] = int(data[f.name])
+            elif f.type == float or f.type == Optional[float]:
+                data[f.name] = float(data[f.name])
+
+        return cls(**data)
+
+
+@dataclass(cmp=False)
+class ListModel(UserList, Sequence[T]):
+    data: List[T] = []
+
+    def to_dict(self) -> Dict:
+        return dict(data=[item.to_dict() for item in self])
+
+
+@dataclass
+class RawResponse(BaseModel):
+    data: Optional[dict] = None
+
+    def to_dict(self):
+        return self.data
+
+    @classmethod
+    def from_dict(cls, data):
+        return cls(data)
 
 
 @dataclass
