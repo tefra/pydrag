@@ -40,21 +40,21 @@ Step 1: Generate an unauthorized token
 
 .. literalinclude:: /examples/web/app.py
     :linenos:
-    :lines: 27-33
+    :lines: 30-36
 
 
 Step 2: Send the user to the last.fm site to authorize the token
 
 .. literalinclude:: /examples/web/app.py
     :linenos:
-    :lines: 36-41
+    :lines: 39-44
 
 
 Step 3:  Retrieve a session with the authorized token
 
 .. literalinclude:: /examples/web/app.py
     :linenos:
-    :lines: 44-49
+    :lines: 47-52
 
 
 
@@ -68,13 +68,13 @@ Step 1: Send the user to the last.fm site to authorize your application and prov
 
 .. literalinclude:: /examples/web/app.py
     :linenos:
-    :lines: 52-61
+    :lines: 55-64
 
 Step 3:  Retrieve a session with the authorized token
 
 .. literalinclude:: /examples/web/app.py
     :linenos:
-    :lines: 44-49
+    :lines: 47-52
 
 
 .. note::

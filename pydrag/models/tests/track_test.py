@@ -1,5 +1,4 @@
-import time
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 from unittest import mock
 
 from pydrag.exceptions import ApiError
@@ -230,12 +229,21 @@ class TrackTests(MethodTestCase):
         )
 
         tracks = []
-        date = datetime(year=2018, month=11, day=10, hour=21, minute=30)
+        date = datetime(
+            year=2018,
+            month=11,
+            day=10,
+            hour=21,
+            minute=30,
+            tzinfo=timezone.utc,
+        )
+
         for artist, track in entries:
-            _next = date + timedelta(minutes=5)
-            timestamp = int(time.mktime(_next.timetuple()))
+            date = date + timedelta(minutes=5)
             tracks.append(
-                ScrobbleTrack(artist=artist, track=track, timestamp=timestamp)
+                ScrobbleTrack(
+                    artist=artist, track=track, timestamp=int(date.timestamp())
+                )
             )
 
         result = Track.scrobble_tracks(tracks, batch_size=2)
@@ -245,8 +253,8 @@ class TrackTests(MethodTestCase):
                 "artist[0]": "Green Day",
                 "artist[1]": "Awolnation",
                 "method": "track.scrobble",
-                "timestamp[0]": 1541878500,
-                "timestamp[1]": 1541878500,
+                "timestamp[0]": 1541885700,
+                "timestamp[1]": 1541886000,
                 "track[0]": "Bang Bang",
                 "track[1]": "Sail",
             },
@@ -254,19 +262,18 @@ class TrackTests(MethodTestCase):
                 "artist[0]": "The Head and the Heart",
                 "artist[1]": "Kaleo",
                 "method": "track.scrobble",
-                "timestamp[0]": 1541878500,
-                "timestamp[1]": 1541878500,
+                "timestamp[0]": 1541886300,
+                "timestamp[1]": 1541886600,
                 "track[0]": "All We Ever Knew",
                 "track[1]": "Way Down We Go",
             },
             {
                 "artist[0]": "Disturbed",
                 "method": "track.scrobble",
-                "timestamp[0]": 1541878500,
+                "timestamp[0]": 1541886900,
                 "track[0]": "The Sound of Silence",
             },
         ]
-
         self.assertIsInstance(result, ListModel)
         self.assertEqual(expected_params, result.params)
         self.assertFixtureEqual("track/scrobble_tracks", result.to_dict())
