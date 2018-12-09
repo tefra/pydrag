@@ -4,7 +4,17 @@ from pydrag.models.common import Config
 from pydrag.models.track import Tag
 from pydrag.models.track import Track
 from pydrag.models.user import User
+from pydrag.models.auth import AuthToken, AuthSession
 
 configure = Config.instance
 
-__all__ = ["User", "Track", "Album", "Artist", "Tag", "configure"]
+__all__ = [
+    "User",
+    "Track",
+    "Album",
+    "Artist",
+    "Tag",
+    "AuthToken",
+    "AuthSession",
+    "configure",
+]

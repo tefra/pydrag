@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <title>Hello, Last.FM!</title>
+  </head>
+  <body>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <div class="container">
+      <div class="jumbotron mt-3">
+        <h1>Last.FM Demo Authentication</h1>
+          {% if show_config is sameas true %}
+            <form action="configure" method="post">
+
+                <div class="form-group row">
+                    <label class="col-sm-2 col-form-label">API Key</label>
+                    <div class="col-sm-10">
+                        <input type="text" name="api_key" class="form-control">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-2 col-form-label">API Secret</label>
+                    <div class="col-sm-10">
+                        <input type="text" name="api_secret" class="form-control">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-2 col-form-label">Username</label>
+                    <div class="col-sm-10">
+                        <input type="text" name="username" class="form-control">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-2 col-form-label">Password</label>
+                    <div class="col-sm-10">
+                        <input type="password" name="password" class="form-control" placeholder="Password">
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary mb-2">Submit</button>
+            </form>
+          {% else %}
+              <table class="table table-dark">
+                  <thead>
+                  <tr>
+                      <th scope="col">Token</th>
+                      <th scope="col">Action</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+
+                  {% for key, token in tokens.items() %}
+                  <tr>
+                      <td>{{ key }}</td>
+                      <td>
+                          {% if token is sameas true %}
+                          <a href="{{ url_for('get_session', token=key) }}">Get
+                              Session</a></li>
+                          {% elif not token %}
+                          <a href="{{ url_for('authorize_token', token=key) }}" target="_blank">Authorize</a></li>
+                          {% else %}
+                          {{ token }}
+                          {% endif %}
+                      </td>
+                  </tr>
+                  {% endfor %}
+                  </tbody>
+              </table>
+              <form action="session" method="post" class="form-inline">
+                  <a href="/gen-token" class="btn btn-primary">Generate Token</a>&nbsp;&nbsp;&nbsp;
+                  <input class="btn btn-primary" type="submit" value="Generate Session With Callback"/>
+              </form>
+
+          {% endif %}
+      </div>
+    </div>
+  </body>
+</html>

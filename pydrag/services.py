@@ -6,17 +6,16 @@ from pydrag import utils
 from pydrag.exceptions import ApiError
 from pydrag.models.common import BaseModel, Config, ListModel
 
-config = Config.instance()
-
 
 class ApiMixin:
     @classmethod
     def get_session(cls):
-        if not config.session:
+        cfg = Config.instance()
+        if not cfg.session:
             from pydrag.models.auth import AuthSession
 
-            config.session = AuthSession.get()
-        return config.session
+            cfg.session = AuthSession.authenticate()
+        return cfg.session
 
     @classmethod
     def retrieve(
@@ -30,6 +29,7 @@ class ApiMixin:
             bind=bind,
             many=many,
             params=params,
+            sign=False,
             stateful=False,
             authenticate=False,
         )
@@ -40,6 +40,7 @@ class ApiMixin:
         bind: Type[BaseModel],
         many: Optional[str] = None,
         params: Dict = dict(),
+        sign: bool = False,
         stateful: bool = False,
         authenticate: bool = False,
     ):
@@ -48,6 +49,7 @@ class ApiMixin:
             bind=bind,
             many=many,
             params=params,
+            sign=sign,
             stateful=stateful,
             authenticate=authenticate,
         )
@@ -59,18 +61,20 @@ class ApiMixin:
         bind: Type[BaseModel],
         many: Optional[str],
         params: Dict,
+        sign: bool,
         stateful: bool,
         authenticate: bool,
     ):
         data: Dict = dict()
         query: Dict = dict()
         if method == "GET":
-            query = cls.prepare_params(params, stateful, authenticate)
+            query = cls.prepare_params(params, sign, stateful, authenticate)
         else:
-            data = cls.prepare_params(params, stateful, authenticate)
+            data = cls.prepare_params(params, sign, stateful, authenticate)
 
+        cfg = Config.instance()
         response = request(
-            method=method, url=config.api_url, data=data, params=query
+            method=method, url=cfg.api_url, data=data, params=query
         )
         response.raise_for_status()
         body = response.json(object_pairs_hook=pythonic_variables)
@@ -81,25 +85,25 @@ class ApiMixin:
 
     @classmethod
     def prepare_params(
-        cls, params: Dict, stateful=False, authenticate=False
+        cls, params: Dict, sign: bool, stateful: bool, authenticate: bool
     ) -> dict:
-
+        cfg = Config.instance()
         params = dict(
             (k, str(int(v is True) if type(v) == bool else v))
             for k, v in params.items()
             if v is not None
         )
-        params.update(dict(format="json", api_key=config.api_key))
+        params.update(dict(format="json", api_key=cfg.api_key))
 
         if authenticate:
             params.update(
-                dict(username=config.username, authToken=config.auth_token)
+                dict(username=cfg.username, authToken=cfg.auth_token)
             )
 
         if stateful:
             params.update(dict(sk=cls.get_session().key))
 
-        if authenticate or stateful:
+        if authenticate or stateful or sign:
             params.update(dict(api_sig=cls.sign(params)))
 
         return params
@@ -137,7 +141,7 @@ class ApiMixin:
         keys.remove("format")
 
         signature = [str(k) + str(params[k]) for k in keys if params.get(k)]
-        signature.append(str(config.api_secret))
+        signature.append(str(Config.instance().api_secret))
         return utils.md5("".join(signature))
 
 

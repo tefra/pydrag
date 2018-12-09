@@ -74,6 +74,7 @@ class Config:
     session: "AuthSession" = attrib(default=None)  # type: ignore  # noqa: F821
 
     api_url: str = "https://ws.audioscrobbler.com/2.0/"
+    auth_url: str = "https://www.last.fm/api/auth?token={}&api_key={}"
     _instance: Optional["Config"] = None
 
     def __attrs_post_init__(self):
