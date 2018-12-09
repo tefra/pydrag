@@ -1,7 +1,7 @@
 from unittest import mock
 
-from pydrag.core import ListModel, RawResponse
 from pydrag.models.artist import Artist
+from pydrag.models.common import ListModel, RawResponse
 from pydrag.models.tests import MethodTestCase, fixture
 
 

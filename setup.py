@@ -1,13 +1,6 @@
 from setuptools import setup
 
-install_requires = [
-    "attrs == 18.2.0",
-    "certifi == 2018.10.15",
-    "chardet == 3.0.4",
-    "idna == 2.7",
-    "requests == 2.20.1",
-    "urllib3 == 1.24.1",
-]
+install_requires = ["attrs == 18.2.0", "requests == 2.20.1"]
 
 if __name__ == "__main__":
     setup(

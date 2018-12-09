@@ -2,11 +2,19 @@ from typing import List, Optional
 
 from attr import dataclass
 
-from pydrag.core import ApiMixin, BaseModel, ListModel, RawResponse
 from pydrag.models.album import Album
 from pydrag.models.artist import Artist
-from pydrag.models.common import Attributes, Date, Image, Wiki
+from pydrag.models.common import (
+    Attributes,
+    BaseModel,
+    Date,
+    Image,
+    ListModel,
+    RawResponse,
+    Wiki,
+)
 from pydrag.models.tag import Tag
+from pydrag.services import ApiMixin
 
 
 @dataclass
@@ -128,9 +136,9 @@ class Track(ApiMixin, BaseModel):
         if "date" in data:
             data["date"] = Date.from_dict(data["date"])
         if "loved" in data:
-            data["loved"] = True if data["loved"] == "1" else False
+            data["loved"] = bool(int(data["loved"]))
         elif "userloved" in data:
-            data["loved"] = True if data.pop("userloved", False) else False
+            data["loved"] = bool(int(data.pop("userloved")))
 
         return super(Track, cls).from_dict(data)
 
@@ -223,7 +231,7 @@ class Track(ApiMixin, BaseModel):
         :param track: The track name.
         :param page: The page number to fetch.
         :param limit: The number of results to fetch per page.
-        :rtype: :class:`pydrag.core.ListModel` of :class:`~pydrag.models.track.Track`
+        :rtype: :class:`pydrag.models.common.ListModel` of :class:`~pydrag.models.track.Track`
         """
         return cls.retrieve(
             bind=Track,
@@ -241,7 +249,7 @@ class Track(ApiMixin, BaseModel):
         :param country: The country to fetch the top tracks.
         :param limit: The number of results to fetch per page.
         :param page: The page number to fetch.
-        :rtype: :class:`pydrag.core.ListModel` of :class:`~pydrag.models.track.Track`
+        :rtype: :class:`pydrag.models.common.ListModel` of :class:`~pydrag.models.track.Track`
         """
         return cls.retrieve(
             bind=Track,
@@ -263,7 +271,7 @@ class Track(ApiMixin, BaseModel):
 
         :param limit: The number of results to fetch per page.
         :param page: The page number to fetch.
-        :rtype: :class:`pydrag.core.ListModel` of :class:`~pydrag.models.track.Track`
+        :rtype: :class:`pydrag.models.common.ListModel` of :class:`~pydrag.models.track.Track`
         """
         return cls.retrieve(
             bind=Track,
@@ -277,7 +285,7 @@ class Track(ApiMixin, BaseModel):
 
         :param tags: A list of user supplied tags to apply to this track. Accepts a maximum of 10 tags.
         :type tags: :class:`list` of :class:`str`
-        :rtype: :class:`~pydrag.core.RawResponse`
+        :rtype: :class:`~models.common.RawResponse`
         """
         return self.submit(
             bind=RawResponse,
@@ -292,7 +300,7 @@ class Track(ApiMixin, BaseModel):
         Remove a user's tag from an track.
 
         :param tag: A single user tag to remove from this track.
-        :rtype: :class:`~pydrag.core.RawResponse`
+        :rtype: :class:`~models.common.RawResponse`
         """
         return self.submit(
             bind=RawResponse,
@@ -305,7 +313,7 @@ class Track(ApiMixin, BaseModel):
         Get all the tracks similar to this track.
 
         :param limit: Limit the number of similar tracks returned
-        :rtype: :class:`pydrag.core.ListModel` of :class:`~pydrag.models.track.Track`
+        :rtype: :class:`pydrag.models.common.ListModel` of :class:`~pydrag.models.track.Track`
         """
         return self.retrieve(
             bind=Track,
@@ -325,7 +333,7 @@ class Track(ApiMixin, BaseModel):
         Get the tags applied by an individual user to an track on Last.fm.
 
         :param user: The username for the context of the request.
-        :rtype: :class:`pydrag.core.ListModel` of :class:`~pydrag.models.tag.Tag`
+        :rtype: :class:`pydrag.models.common.ListModel` of :class:`~pydrag.models.tag.Tag`
         """
         return self.retrieve(
             bind=Tag,
@@ -344,7 +352,7 @@ class Track(ApiMixin, BaseModel):
         """
         Get the top tags for an track on Last.fm, ordered by popularity.
 
-        :rtype: :class:`pydrag.core.ListModel` of :class:`~pydrag.models.tag.Tag`
+        :rtype: :class:`pydrag.models.common.ListModel` of :class:`~pydrag.models.tag.Tag`
         """
         return self.retrieve(
             bind=Tag,
@@ -362,7 +370,7 @@ class Track(ApiMixin, BaseModel):
         """
         Love a track for a user profile.
 
-        :rtype: :class:`~pydrag.core.RawResponse`
+        :rtype: :class:`~models.common.RawResponse`
         """
         return self.submit(
             bind=RawResponse,
@@ -376,7 +384,7 @@ class Track(ApiMixin, BaseModel):
         """
         Unlove a track for a user profile.
 
-        :rtype: :class:`~pydrag.core.RawResponse`
+        :rtype: :class:`~models.common.RawResponse`
         """
         return self.submit(
             bind=RawResponse,
@@ -397,7 +405,7 @@ class Track(ApiMixin, BaseModel):
 
         :param tracks: The tracks to scrobble
         :param batch_size: The number of tracks to submit per cycle
-        :rtype: :class:`pydrag.core.ListModel` of :class:`~pydrag.models.track.ScrobbleTrack`
+        :rtype: :class:`pydrag.models.common.ListModel` of :class:`~pydrag.models.track.ScrobbleTrack`
         """
 
         def divide_chunks(l, n):
@@ -419,7 +427,7 @@ class Track(ApiMixin, BaseModel):
         """
         :param tracks: A list fo tracks to scrobble
         :type tracks: :class:`list` of :class:`~pydrag.models.track.ScrobbleTrack`
-        :rtype: :class:`pydrag.core.ListModel` of :class:`~pydrag.models.track.ScrobbleTrack`
+        :rtype: :class:`pydrag.models.common.ListModel` of :class:`~pydrag.models.track.ScrobbleTrack`
         """
         params = dict(method="track.scrobble")
         params.update(
@@ -452,7 +460,7 @@ class Track(ApiMixin, BaseModel):
         :param context: Sub-client version (not public)
         :param duration: The length of the track in seconds
         :param album_artist: The album artist
-        :rtype: :class:`~pydrag.core.RawResponse`
+        :rtype: :class:`~models.common.RawResponse`
         """
 
         return cls.submit(

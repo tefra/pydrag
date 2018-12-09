@@ -89,7 +89,7 @@ Find a track by artist and name, retrieve the album, add some user tags and love
     >>> full_album_info = track.album.get_info()
     >>>
     >>> full_album_info.add_tags(["awesome", "love"])
-    <pydrag.core.BaseModel object at 0x7f38945ac320>
+    <pydrag.models.common.BaseModel object at 0x7f38945ac320>
     >>>
     >>> back_in_black = next(track for track in full_album_info.tracks if track.name == "Back in Black")
     >>> write_op = back_in_black.get_info().love()

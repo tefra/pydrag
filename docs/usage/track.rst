@@ -75,9 +75,9 @@ We probably need to rethink the response for write operations...
 
     >>> track = Track.find(artist="AC / DC", track="Hells Bell")
     >>> track.unlove()
-    track.love()<pydrag.core.BaseModel object at 0x7fc29950d748>
+    track.love()<pydrag.models.common.BaseModel object at 0x7fc29950d748>
     >>> track.love()
-    <pydrag.core.BaseModel object at 0x7fc296ded160>
+    <pydrag.models.common.BaseModel object at 0x7fc296ded160>
     >>>
 
 

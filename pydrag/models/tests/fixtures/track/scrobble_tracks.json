@@ -8,7 +8,7 @@
                 "body": "method=auth.getMobileSession&format=json&api_key=LAST_FM_API_KEY&username=Zaratoustre&authToken=USER_AUTH_TOKEN&api_sig=API_SIG",
                 "headers": {
                     "User-Agent": [
-                        "python-requests/2.20.0"
+                        "python-requests/2.20.1"
                     ],
                     "Accept-Encoding": [
                         "gzip, deflate"
@@ -33,20 +33,8 @@
                     "message": "OK"
                 },
                 "headers": {
-                    "content-length": [
-                        "90"
-                    ],
-                    "Connection": [
-                        "keep-alive"
-                    ],
-                    "Access-Control-Max-Age": [
-                        "86400"
-                    ],
-                    "Server": [
-                        "openresty/1.9.7.5"
-                    ],
                     "Date": [
-                        "Sat, 10 Nov 2018 20:07:14 GMT"
+                        "Sat, 08 Dec 2018 21:25:25 GMT"
                     ],
                     "Access-Control-Allow-Methods": [
                         "POST, GET, OPTIONS"
@@ -54,8 +42,20 @@
                     "Content-Type": [
                         "application/json"
                     ],
+                    "content-length": [
+                        "90"
+                    ],
+                    "Connection": [
+                        "keep-alive"
+                    ],
                     "Access-Control-Allow-Origin": [
                         "*"
+                    ],
+                    "Server": [
+                        "openresty/1.9.7.5"
+                    ],
+                    "Access-Control-Max-Age": [
+                        "86400"
                     ]
                 },
                 "body": {
@@ -67,10 +67,10 @@
             "request": {
                 "method": "POST",
                 "uri": "https://ws.audioscrobbler.com/2.0/",
-                "body": "artist%5B0%5D=Green+Day&track%5B0%5D=Bang+Bang&timestamp%5B0%5D=1541878500&chosenByUser%5B0%5D=1&artist%5B1%5D=Awolnation&track%5B1%5D=Sail&timestamp%5B1%5D=1541878500&chosenByUser%5B1%5D=1&sk=USER_SESSION&method=track.scrobble&format=json&api_key=LAST_FM_API_KEY&api_sig=API_SIG",
+                "body": "method=track.scrobble&artist%5B0%5D=Green+Day&track%5B0%5D=Bang+Bang&timestamp%5B0%5D=1541878500&artist%5B1%5D=Awolnation&track%5B1%5D=Sail&timestamp%5B1%5D=1541878500&format=json&api_key=LAST_FM_API_KEY&sk=USER_SESSION&api_sig=API_SIG",
                 "headers": {
                     "User-Agent": [
-                        "python-requests/2.20.0"
+                        "python-requests/2.20.1"
                     ],
                     "Accept-Encoding": [
                         "gzip, deflate"
@@ -82,7 +82,7 @@
                         "keep-alive"
                     ],
                     "Content-Length": [
-                        "341"
+                        "297"
                     ],
                     "Content-Type": [
                         "application/x-www-form-urlencoded"
@@ -95,33 +95,33 @@
                     "message": "OK"
                 },
                 "headers": {
+                    "Date": [
+                        "Sat, 08 Dec 2018 21:26:00 GMT"
+                    ],
+                    "Access-Control-Allow-Methods": [
+                        "POST, GET, OPTIONS"
+                    ],
+                    "Content-Type": [
+                        "application/json"
+                    ],
                     "content-length": [
                         "519"
                     ],
                     "Connection": [
                         "keep-alive"
                     ],
-                    "Access-Control-Max-Age": [
-                        "86400"
+                    "Access-Control-Allow-Origin": [
+                        "*"
                     ],
                     "Server": [
                         "openresty/1.9.7.5"
                     ],
-                    "Date": [
-                        "Sat, 10 Nov 2018 20:07:15 GMT"
-                    ],
-                    "Access-Control-Allow-Methods": [
-                        "POST, GET, OPTIONS"
-                    ],
-                    "Content-Type": [
-                        "application/json"
-                    ],
-                    "Access-Control-Allow-Origin": [
-                        "*"
+                    "Access-Control-Max-Age": [
+                        "86400"
                     ]
                 },
                 "body": {
-                    "string": "{\"scrobbles\":{\"@attr\":{\"accepted\":2,\"ignored\":0},\"scrobble\":[{\"artist\":{\"corrected\":\"0\",\"#text\":\"Green Day\"},\"ignoredMessage\":{\"code\":\"0\",\"#text\":\"\"},\"albumArtist\":{\"corrected\":\"0\",\"#text\":\"\"},\"timestamp\":\"1541878500\",\"album\":{\"corrected\":\"0\"},\"track\":{\"corrected\":\"0\",\"#text\":\"Bang Bang\"}},{\"artist\":{\"corrected\":\"0\",\"#text\":\"Awolnation\"},\"ignoredMessage\":{\"code\":\"0\",\"#text\":\"\"},\"albumArtist\":{\"corrected\":\"0\",\"#text\":\"\"},\"timestamp\":\"1541878500\",\"album\":{\"corrected\":\"0\"},\"track\":{\"corrected\":\"0\",\"#text\":\"Sail\"}}]}}"
+                    "string": "{\"scrobbles\":{\"@attr\":{\"accepted\":0,\"ignored\":2},\"scrobble\":[{\"artist\":{\"corrected\":\"0\",\"#text\":\"Green Day\"},\"ignoredMessage\":{\"code\":\"1\",\"#text\":\"\"},\"albumArtist\":{\"corrected\":\"0\",\"#text\":\"\"},\"timestamp\":\"1541878500\",\"album\":{\"corrected\":\"0\"},\"track\":{\"corrected\":\"0\",\"#text\":\"Bang Bang\"}},{\"artist\":{\"corrected\":\"0\",\"#text\":\"Awolnation\"},\"ignoredMessage\":{\"code\":\"1\",\"#text\":\"\"},\"albumArtist\":{\"corrected\":\"0\",\"#text\":\"\"},\"timestamp\":\"1541878500\",\"album\":{\"corrected\":\"0\"},\"track\":{\"corrected\":\"0\",\"#text\":\"Sail\"}}]}}"
                 }
             }
         },
@@ -129,10 +129,10 @@
             "request": {
                 "method": "POST",
                 "uri": "https://ws.audioscrobbler.com/2.0/",
-                "body": "method=auth.getMobileSession&format=json&api_key=LAST_FM_API_KEY&username=Zaratoustre&authToken=USER_AUTH_TOKEN&api_sig=API_SIG",
+                "body": "method=track.scrobble&artist%5B0%5D=The+Head+and+the+Heart&track%5B0%5D=All+We+Ever+Knew&timestamp%5B0%5D=1541878500&artist%5B1%5D=Kaleo&track%5B1%5D=Way+Down+We+Go&timestamp%5B1%5D=1541878500&format=json&api_key=LAST_FM_API_KEY&sk=USER_SESSION&api_sig=API_SIG",
                 "headers": {
                     "User-Agent": [
-                        "python-requests/2.20.0"
+                        "python-requests/2.20.1"
                     ],
                     "Accept-Encoding": [
                         "gzip, deflate"
@@ -144,7 +144,7 @@
                         "keep-alive"
                     ],
                     "Content-Length": [
-                        "186"
+                        "322"
                     ],
                     "Content-Type": [
                         "application/x-www-form-urlencoded"
@@ -157,20 +157,8 @@
                     "message": "OK"
                 },
                 "headers": {
-                    "content-length": [
-                        "90"
-                    ],
-                    "Connection": [
-                        "keep-alive"
-                    ],
-                    "Access-Control-Max-Age": [
-                        "86400"
-                    ],
-                    "Server": [
-                        "openresty/1.9.7.5"
-                    ],
                     "Date": [
-                        "Sat, 10 Nov 2018 20:07:17 GMT"
+                        "Sat, 08 Dec 2018 21:26:13 GMT"
                     ],
                     "Access-Control-Allow-Methods": [
                         "POST, GET, OPTIONS"
@@ -178,74 +166,24 @@
                     "Content-Type": [
                         "application/json"
                     ],
-                    "Access-Control-Allow-Origin": [
-                        "*"
-                    ]
-                },
-                "body": {
-                    "string": "{\"session\":{\"subscriber\":0,\"name\":\"Zaratoustre\",\"key\":\"CENSORED\"}}"
-                }
-            }
-        },
-        {
-            "request": {
-                "method": "POST",
-                "uri": "https://ws.audioscrobbler.com/2.0/",
-                "body": "artist%5B0%5D=The+Head+and+the+Heart&track%5B0%5D=All+We+Ever+Knew&timestamp%5B0%5D=1541878500&chosenByUser%5B0%5D=1&artist%5B1%5D=Kaleo&track%5B1%5D=Way+Down+We+Go&timestamp%5B1%5D=1541878500&chosenByUser%5B1%5D=1&sk=USER_SESSION&method=track.scrobble&format=json&api_key=LAST_FM_API_KEY&api_sig=API_SIG",
-                "headers": {
-                    "User-Agent": [
-                        "python-requests/2.20.0"
-                    ],
-                    "Accept-Encoding": [
-                        "gzip, deflate"
-                    ],
-                    "Accept": [
-                        "*/*"
-                    ],
-                    "Connection": [
-                        "keep-alive"
-                    ],
-                    "Content-Length": [
-                        "366"
-                    ],
-                    "Content-Type": [
-                        "application/x-www-form-urlencoded"
-                    ]
-                }
-            },
-            "response": {
-                "status": {
-                    "code": 200,
-                    "message": "OK"
-                },
-                "headers": {
                     "content-length": [
                         "544"
                     ],
                     "Connection": [
                         "keep-alive"
                     ],
-                    "Access-Control-Max-Age": [
-                        "86400"
+                    "Access-Control-Allow-Origin": [
+                        "*"
                     ],
                     "Server": [
                         "openresty/1.9.7.5"
                     ],
-                    "Date": [
-                        "Sat, 10 Nov 2018 20:07:18 GMT"
-                    ],
-                    "Access-Control-Allow-Methods": [
-                        "POST, GET, OPTIONS"
-                    ],
-                    "Content-Type": [
-                        "application/json"
-                    ],
-                    "Access-Control-Allow-Origin": [
-                        "*"
+                    "Access-Control-Max-Age": [
+                        "86400"
                     ]
                 },
                 "body": {
-                    "string": "{\"scrobbles\":{\"@attr\":{\"accepted\":2,\"ignored\":0},\"scrobble\":[{\"artist\":{\"corrected\":\"0\",\"#text\":\"The Head and the Heart\"},\"ignoredMessage\":{\"code\":\"0\",\"#text\":\"\"},\"albumArtist\":{\"corrected\":\"0\",\"#text\":\"\"},\"timestamp\":\"1541878500\",\"album\":{\"corrected\":\"0\"},\"track\":{\"corrected\":\"0\",\"#text\":\"All We Ever Knew\"}},{\"artist\":{\"corrected\":\"0\",\"#text\":\"Kaleo\"},\"ignoredMessage\":{\"code\":\"0\",\"#text\":\"\"},\"albumArtist\":{\"corrected\":\"0\",\"#text\":\"\"},\"timestamp\":\"1541878500\",\"album\":{\"corrected\":\"0\"},\"track\":{\"corrected\":\"0\",\"#text\":\"Way Down We Go\"}}]}}"
+                    "string": "{\"scrobbles\":{\"@attr\":{\"accepted\":0,\"ignored\":2},\"scrobble\":[{\"artist\":{\"corrected\":\"0\",\"#text\":\"The Head and the Heart\"},\"ignoredMessage\":{\"code\":\"1\",\"#text\":\"\"},\"albumArtist\":{\"corrected\":\"0\",\"#text\":\"\"},\"timestamp\":\"1541878500\",\"album\":{\"corrected\":\"0\"},\"track\":{\"corrected\":\"0\",\"#text\":\"All We Ever Knew\"}},{\"artist\":{\"corrected\":\"0\",\"#text\":\"Kaleo\"},\"ignoredMessage\":{\"code\":\"1\",\"#text\":\"\"},\"albumArtist\":{\"corrected\":\"0\",\"#text\":\"\"},\"timestamp\":\"1541878500\",\"album\":{\"corrected\":\"0\"},\"track\":{\"corrected\":\"0\",\"#text\":\"Way Down We Go\"}}]}}"
                 }
             }
         },
@@ -253,10 +191,10 @@
             "request": {
                 "method": "POST",
                 "uri": "https://ws.audioscrobbler.com/2.0/",
-                "body": "method=auth.getMobileSession&format=json&api_key=LAST_FM_API_KEY&username=Zaratoustre&authToken=USER_AUTH_TOKEN&api_sig=API_SIG",
+                "body": "method=track.scrobble&artist%5B0%5D=Disturbed&track%5B0%5D=The+Sound+of+Silence&timestamp%5B0%5D=1541878500&format=json&api_key=LAST_FM_API_KEY&sk=USER_SESSION&api_sig=API_SIG",
                 "headers": {
                     "User-Agent": [
-                        "python-requests/2.20.0"
+                        "python-requests/2.20.1"
                     ],
                     "Accept-Encoding": [
                         "gzip, deflate"
@@ -268,7 +206,7 @@
                         "keep-alive"
                     ],
                     "Content-Length": [
-                        "186"
+                        "237"
                     ],
                     "Content-Type": [
                         "application/x-www-form-urlencoded"
@@ -281,20 +219,8 @@
                     "message": "OK"
                 },
                 "headers": {
-                    "content-length": [
-                        "90"
-                    ],
-                    "Connection": [
-                        "keep-alive"
-                    ],
-                    "Access-Control-Max-Age": [
-                        "86400"
-                    ],
-                    "Server": [
-                        "openresty/1.9.7.5"
-                    ],
                     "Date": [
-                        "Sat, 10 Nov 2018 20:07:20 GMT"
+                        "Sat, 08 Dec 2018 21:26:46 GMT"
                     ],
                     "Access-Control-Allow-Methods": [
                         "POST, GET, OPTIONS"
@@ -302,74 +228,24 @@
                     "Content-Type": [
                         "application/json"
                     ],
-                    "Access-Control-Allow-Origin": [
-                        "*"
-                    ]
-                },
-                "body": {
-                    "string": "{\"session\":{\"subscriber\":0,\"name\":\"Zaratoustre\",\"key\":\"CENSORED\"}}"
-                }
-            }
-        },
-        {
-            "request": {
-                "method": "POST",
-                "uri": "https://ws.audioscrobbler.com/2.0/",
-                "body": "artist%5B0%5D=Disturbed&track%5B0%5D=The+Sound+of+Silence&timestamp%5B0%5D=1541878500&chosenByUser%5B0%5D=1&sk=USER_SESSION&method=track.scrobble&format=json&api_key=LAST_FM_API_KEY&api_sig=API_SIG",
-                "headers": {
-                    "User-Agent": [
-                        "python-requests/2.20.0"
-                    ],
-                    "Accept-Encoding": [
-                        "gzip, deflate"
-                    ],
-                    "Accept": [
-                        "*/*"
-                    ],
-                    "Connection": [
-                        "keep-alive"
-                    ],
-                    "Content-Length": [
-                        "259"
-                    ],
-                    "Content-Type": [
-                        "application/x-www-form-urlencoded"
-                    ]
-                }
-            },
-            "response": {
-                "status": {
-                    "code": 200,
-                    "message": "OK"
-                },
-                "headers": {
                     "content-length": [
                         "302"
                     ],
                     "Connection": [
                         "keep-alive"
                     ],
-                    "Access-Control-Max-Age": [
-                        "86400"
+                    "Access-Control-Allow-Origin": [
+                        "*"
                     ],
                     "Server": [
                         "openresty/1.9.7.5"
                     ],
-                    "Date": [
-                        "Sat, 10 Nov 2018 20:07:21 GMT"
-                    ],
-                    "Access-Control-Allow-Methods": [
-                        "POST, GET, OPTIONS"
-                    ],
-                    "Content-Type": [
-                        "application/json"
-                    ],
-                    "Access-Control-Allow-Origin": [
-                        "*"
+                    "Access-Control-Max-Age": [
+                        "86400"
                     ]
                 },
                 "body": {
-                    "string": "{\"scrobbles\":{\"@attr\":{\"accepted\":1,\"ignored\":0},\"scrobble\":{\"artist\":{\"corrected\":\"0\",\"#text\":\"Disturbed\"},\"ignoredMessage\":{\"code\":\"0\",\"#text\":\"\"},\"albumArtist\":{\"corrected\":\"0\",\"#text\":\"\"},\"timestamp\":\"1541878500\",\"album\":{\"corrected\":\"0\"},\"track\":{\"corrected\":\"0\",\"#text\":\"The Sound of Silence\"}}}}"
+                    "string": "{\"scrobbles\":{\"@attr\":{\"accepted\":0,\"ignored\":1},\"scrobble\":{\"artist\":{\"corrected\":\"0\",\"#text\":\"Disturbed\"},\"ignoredMessage\":{\"code\":\"1\",\"#text\":\"\"},\"albumArtist\":{\"corrected\":\"0\",\"#text\":\"\"},\"timestamp\":\"1541878500\",\"album\":{\"corrected\":\"0\"},\"track\":{\"corrected\":\"0\",\"#text\":\"The Sound of Silence\"}}}}"
                 }
             }
         }

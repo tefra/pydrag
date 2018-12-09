@@ -5,11 +5,12 @@ from unittest import TestCase
 
 import vcr
 
-from pydrag import config, configure
+from pydrag.models.common import Config
 
-
+config = Config.instance()
 if not config.api_key:
-    configure("foo")
+    config.api_key = "key"
+
 
 where_am_i = os.path.dirname(os.path.realpath(__file__))
 fixtures_dir = os.path.join(where_am_i, "fixtures")
@@ -43,9 +44,11 @@ fixture = vcr.config.VCR(
 class MethodTestCase(TestCase):
     def setUp(self):
         self.maxDiff = None
+        Config.instance().session = None
         super(MethodTestCase, self).setUp()
 
-    def load_fixture(self, file_name):
+    @staticmethod
+    def load_fixture(file_name):
         path = "{}/{}_expected.json".format(fixtures_dir, file_name)
         try:
             with open(path, "r") as f:

@@ -2,8 +2,8 @@ from typing import List, Optional
 
 from attr import dataclass
 
-from pydrag.core import ApiMixin, BaseModel, ListModel
-from pydrag.models.common import Chart, Wiki
+from pydrag.models.common import BaseModel, Chart, ListModel, Wiki
+from pydrag.services import ApiMixin
 
 
 @dataclass
@@ -55,7 +55,7 @@ class Tag(BaseModel, ApiMixin):
 
         :param limit: The number of results to fetch per page.
         :param page: The page number to fetch.
-        :rtype: :class:`pydrag.core.ListModel` of :class:`~pydrag.models.tag.Tag`
+        :rtype: :class:`pydrag.models.common.ListModel` of :class:`~pydrag.models.tag.Tag`
         """
         return cls.retrieve(
             bind=Tag,
@@ -76,7 +76,7 @@ class Tag(BaseModel, ApiMixin):
 
         :param limit: The number of results to fetch per page.
         :param page: The page number to fetch.
-        :rtype: :class:`pydrag.core.ListModel` of :class:`~pydrag.models.tag.Tag`
+        :rtype: :class:`pydrag.models.common.ListModel` of :class:`~pydrag.models.tag.Tag`
         """
         return cls.retrieve(
             bind=Tag,
@@ -89,7 +89,7 @@ class Tag(BaseModel, ApiMixin):
         Search for tags similar to this one. Returns tags ranked by similarity,
         based on listening data.
 
-        :rtype: :class:`pydrag.core.ListModel` of :class:`~pydrag.models.tag.Tag`
+        :rtype: :class:`pydrag.models.common.ListModel` of :class:`~pydrag.models.tag.Tag`
         """
         return self.retrieve(
             bind=Tag,
@@ -103,7 +103,7 @@ class Tag(BaseModel, ApiMixin):
 
         :param limit: The number of results to fetch per page.
         :param page: The page number to fetch.
-        :rtype: :class:`pydrag.core.ListModel` of :class:`~pydrag.models.album.Album`
+        :rtype: :class:`pydrag.models.common.ListModel` of :class:`~pydrag.models.album.Album`
         """
         from pydrag.models.album import Album
 
@@ -124,7 +124,7 @@ class Tag(BaseModel, ApiMixin):
 
         :param limit: The number of results to fetch per page.
         :param page: The page number to fetch.
-        :rtype: :class:`pydrag.core.ListModel` of :class:`~pydrag.models.artist.Artist`
+        :rtype: :class:`pydrag.models.common.ListModel` of :class:`~pydrag.models.artist.Artist`
         """
         from pydrag.models.artist import Artist
 
@@ -145,7 +145,7 @@ class Tag(BaseModel, ApiMixin):
 
         :param limit: The number of results to fetch per page.
         :param page: The page number to fetch.
-        :rtype: :class:`pydrag.core.ListModel` of :class:`~pydrag.models.track.Track`
+        :rtype: :class:`pydrag.models.common.ListModel` of :class:`~pydrag.models.track.Track`
         """
         from pydrag.models.track import Track
 
@@ -165,7 +165,7 @@ class Tag(BaseModel, ApiMixin):
         Get a list of available charts for this tag, expressed as date ranges
         which can be sent to the chart services.
 
-        :rtype: :class:`pydrag.core.ListModel` of :class:`~pydrag.models.common.Chart`
+        :rtype: :class:`pydrag.models.common.ListModel` of :class:`~pydrag.models.common.Chart`
         """
         return self.retrieve(
             bind=Chart,

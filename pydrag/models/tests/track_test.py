@@ -2,18 +2,16 @@ import time
 from datetime import datetime, timedelta
 from unittest import mock
 
-from pydrag.core import BaseModel, ListModel, RawResponse
 from pydrag.exceptions import ApiError
 from pydrag.models.artist import Artist
+from pydrag.models.common import BaseModel, ListModel, RawResponse
 from pydrag.models.tests import MethodTestCase, fixture
 from pydrag.models.track import ScrobbleTrack, Track
 
 
 class TrackTests(MethodTestCase):
     def setUp(self):
-        self.track = Track(
-            artist=Artist(name="AC / DC"), name="Hells Bell", url=None
-        )
+        self.track = Track(artist=Artist(name="AC / DC"), name="Hells Bell")
         super(TrackTests, self).setUp()
 
     @fixture.use_cassette(path="track/add_tags")
@@ -31,6 +29,7 @@ class TrackTests(MethodTestCase):
     @fixture.use_cassette(path="track/remove_tag")
     def test_remove_tag(self):
         result = self.track.remove_tag("bar")
+
         expected_params = {
             "method": "track.removeTag",
             "tag": "bar",
