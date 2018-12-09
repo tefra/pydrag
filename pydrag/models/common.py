@@ -1,7 +1,10 @@
+import os
 from collections import UserList
 from typing import Dict, List, Optional, Sequence, Type, TypeVar
 
 from attr import asdict, attrib, dataclass, fields
+
+from pydrag.utils import md5
 
 T = TypeVar("T", bound="BaseModel")
 
@@ -55,6 +58,51 @@ class RawResponse(BaseModel):
     @classmethod
     def from_dict(cls, data):
         return cls(data)
+
+
+@dataclass(auto_attribs=False)
+class Config:
+    api_key: str = attrib()
+    api_secret: str = attrib()
+    username: str = attrib()
+    password: str = attrib(converter=md5)
+    session: "AuthSession" = attrib(default=None)  # type: ignore  # noqa: F821
+
+    api_url: str = "https://ws.audioscrobbler.com/2.0/"
+    _instance: Optional["Config"] = None
+
+    def __attrs_post_init__(self):
+        Config._instance = self
+
+    @property
+    def auth_token(self):
+        return md5(str(self.username) + str(self.password))
+
+    @staticmethod
+    def instance(
+        api_key: Optional[str] = None,
+        api_secret: Optional[str] = None,
+        username: Optional[str] = None,
+        password: Optional[str] = None,
+        session: Optional[str] = None,
+    ):
+
+        params = dict(
+            api_key=api_key,
+            api_secret=api_secret,
+            username=username,
+            password=password,
+            session=session,
+        )
+        if Config._instance is None or api_key:
+            kwargs = {k: v for k, v in params.items() if v is not None}
+            if not kwargs:
+                kwargs = {
+                    k: os.getenv("LASTFM_{}".format(k.upper()), "")
+                    for k in params.keys()
+                }
+            Config(**kwargs)
+        return Config._instance
 
 
 @dataclass

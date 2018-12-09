@@ -136,9 +136,9 @@ class Track(ApiMixin, BaseModel):
         if "date" in data:
             data["date"] = Date.from_dict(data["date"])
         if "loved" in data:
-            data["loved"] = True if data["loved"] == "1" else False
+            data["loved"] = bool(int(data["loved"]))
         elif "userloved" in data:
-            data["loved"] = True if data.pop("userloved", False) else False
+            data["loved"] = bool(int(data.pop("userloved")))
 
         return super(Track, cls).from_dict(data)
 

@@ -2,13 +2,22 @@ from typing import Dict, Optional, Type
 
 from requests import request
 
+from pydrag import utils
 from pydrag.exceptions import ApiError
-from pydrag.models.common import BaseModel, ListModel
-from pydrag.models.config import config
-from pydrag.utils import md5
+from pydrag.models.common import BaseModel, Config, ListModel
+
+config = Config.instance()
 
 
 class ApiMixin:
+    @classmethod
+    def get_session(cls):
+        if not config.session:
+            from pydrag.models.auth import AuthSession
+
+            config.session = AuthSession.get()
+        return config.session
+
     @classmethod
     def retrieve(
         cls,
@@ -117,12 +126,6 @@ class ApiMixin:
 
         return ListModel(data=[bind.from_dict(d) for d in data])
 
-    @classmethod
-    def get_session(cls):
-        from pydrag.models.auth import AuthSession
-
-        return AuthSession.get()
-
     @staticmethod
     def raise_for_error(body: dict):
         if "error" in body:
@@ -135,7 +138,7 @@ class ApiMixin:
 
         signature = [str(k) + str(params[k]) for k in keys if params.get(k)]
         signature.append(str(config.api_secret))
-        return md5("".join(signature))
+        return utils.md5("".join(signature))
 
 
 def pythonic_variables(data):

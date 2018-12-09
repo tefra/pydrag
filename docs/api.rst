@@ -64,6 +64,10 @@ Common Classes
     :undoc-members:
     :show-inheritance:
 
+.. autoclass:: pydrag.models.common.Config
+    :members:
+    :undoc-members:
+    :show-inheritance:
 
 .. autoclass:: pydrag.models.common.Attributes
     :members:

@@ -66,7 +66,7 @@ class Artist(BaseModel, ApiMixin):
         if "name" not in data and "text" in data:
             data["name"] = data.pop("text")
         if "on_tour" in data:
-            data["on_tour"] = True if data["on_tour"] == "1" else False
+            data["on_tour"] = bool(int(data["on_tour"]))
         if "image" in data:
             data["image"] = list(map(Image.from_dict, data["image"]))
         if "tags" in data:

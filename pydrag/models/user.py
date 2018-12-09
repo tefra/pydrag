@@ -48,8 +48,6 @@ class User(BaseModel, ApiMixin):
                 image=list(map(Image.from_dict, data["image"])),
             )
         )
-        if "real_name" in data:
-            data["real_name"] = str(data["real_name"])
         if "recent_track" in data:
             data["recent_track"] = Track.from_dict(data["recent_track"])
         return super(User, cls).from_dict(data)
