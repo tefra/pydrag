@@ -1,4 +1,4 @@
-from typing import List, Optional
+from typing import Dict, List, Optional
 
 from attr import dataclass
 
@@ -46,7 +46,7 @@ class Album(BaseModel, ApiMixin):
     attr: Optional[Attributes] = None
 
     @classmethod
-    def from_dict(cls, data: dict):
+    def from_dict(cls, data: Dict):
         if isinstance(data.get("artist"), str):
             data["artist"] = dict(name=data["artist"])
 

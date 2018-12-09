@@ -1,18 +1,19 @@
 import os
+import time
 from collections import UserList
-from typing import Dict, List, Optional, Sequence, Type, TypeVar
+from typing import Dict, List, Optional, Sequence, Type, TypeVar, Union
 
-from attr import asdict, attrib, dataclass, fields
+from attr import Factory, asdict, attrib, dataclass, fields
 
-from pydrag.utils import md5
+from pydrag.utils import md5, to_camel_case
 
 T = TypeVar("T", bound="BaseModel")
 
 
 class BaseModel:
-    params: Optional[dict] = attrib(init=False)
+    params: Union[List, Dict, None] = attrib(init=False, default=None)
 
-    def to_dict(self: "BaseModel") -> Dict:
+    def to_dict(self) -> Dict:
         """
         Convert our object to a traditional dictionary. Filter out None values
         and dictionary values. The last one is like a validation for the unit
@@ -25,7 +26,7 @@ class BaseModel:
         )
 
     @classmethod
-    def from_dict(cls: Type, data: dict) -> "BaseModel":
+    def from_dict(cls: Type, data: Dict) -> "BaseModel":
         for f in fields(cls):
             if f.name not in data or data[f.name] is None:
                 continue
@@ -41,11 +42,15 @@ class BaseModel:
 
 
 @dataclass(cmp=False)
-class ListModel(UserList, Sequence[T]):
+class ListModel(UserList, Sequence[T], BaseModel):
     data: List[T] = []
 
     def to_dict(self) -> Dict:
         return dict(data=[item.to_dict() for item in self])
+
+    @classmethod
+    def from_dict(cls: Type, data: Dict):
+        raise NotImplementedError()
 
 
 @dataclass
@@ -147,10 +152,40 @@ class Wiki(BaseModel):
     links: Optional[List[Link]] = None
 
     @classmethod
-    def from_dict(cls, data: dict):
+    def from_dict(cls, data: Dict):
         if "links" in data:
             if isinstance(data["links"]["link"], dict):
                 data["links"]["link"] = [data["links"]["link"]]
 
             data["links"] = list(map(Link.from_dict, data["links"]["link"]))
-        return super(Wiki, cls).from_dict(data)
+        return super().from_dict(data)
+
+
+@dataclass
+class ScrobbleTrack(BaseModel):
+    artist: str
+    track: str
+    timestamp: int = attrib(default=Factory(lambda: int(time.time())))
+    track_number: Optional[str] = None
+    album: Optional[str] = None
+    album_artist: Optional[str] = None
+    duration: Optional[int] = None
+    mbid: Optional[str] = None
+    context: Optional[str] = None
+    stream_id: Optional[str] = None
+    chosen_by_user: Optional[bool] = None
+
+    def to_api_dict(self):
+        return {to_camel_case(k): v for k, v in self.to_dict().items()}
+
+    @classmethod
+    def from_dict(cls, data: Dict):
+        data.update(
+            {
+                k: data[k]["text"]
+                if data.get(k, {}).get("text", "") != ""
+                else None
+                for k in ["album", "artist", "track", "album_artist"]
+            }
+        )
+        return super().from_dict(data)

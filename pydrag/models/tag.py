@@ -1,4 +1,4 @@
-from typing import List, Optional
+from typing import Dict, List, Optional
 
 from attr import dataclass
 
@@ -29,7 +29,7 @@ class Tag(BaseModel, ApiMixin):
     wiki: Optional[Wiki] = None
 
     @classmethod
-    def from_dict(cls, data: dict):
+    def from_dict(cls, data: Dict):
         if "wiki" in data:
             data["wiki"] = Wiki.from_dict(data["wiki"])
         return super(Tag, cls).from_dict(data)

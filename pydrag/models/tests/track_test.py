@@ -4,9 +4,14 @@ from unittest import mock
 
 from pydrag.exceptions import ApiError
 from pydrag.models.artist import Artist
-from pydrag.models.common import BaseModel, ListModel, RawResponse
+from pydrag.models.common import (
+    BaseModel,
+    ListModel,
+    RawResponse,
+    ScrobbleTrack,
+)
 from pydrag.models.tests import MethodTestCase, fixture
-from pydrag.models.track import ScrobbleTrack, Track
+from pydrag.models.track import Track
 
 
 class TrackTests(MethodTestCase):
@@ -193,8 +198,10 @@ class TrackTests(MethodTestCase):
         self.assertEqual(expected_params, result.params)
         self.assertIsInstance(result, BaseModel)
 
+    @mock.patch("pydrag.models.common.time.time")
     @fixture.use_cassette(path="track/update_now_playing")
-    def test_update_now_playing(self):
+    def test_update_now_playing(self, time):
+        time.return_value = 11111111111
         result = Track.update_now_playing(
             track="Hells Bells", artist="AC/DC", track_number=2
         )
@@ -232,7 +239,36 @@ class TrackTests(MethodTestCase):
             )
 
         result = Track.scrobble_tracks(tracks, batch_size=2)
+
+        expected_params = [
+            {
+                "artist[0]": "Green Day",
+                "artist[1]": "Awolnation",
+                "method": "track.scrobble",
+                "timestamp[0]": 1541878500,
+                "timestamp[1]": 1541878500,
+                "track[0]": "Bang Bang",
+                "track[1]": "Sail",
+            },
+            {
+                "artist[0]": "The Head and the Heart",
+                "artist[1]": "Kaleo",
+                "method": "track.scrobble",
+                "timestamp[0]": 1541878500,
+                "timestamp[1]": 1541878500,
+                "track[0]": "All We Ever Knew",
+                "track[1]": "Way Down We Go",
+            },
+            {
+                "artist[0]": "Disturbed",
+                "method": "track.scrobble",
+                "timestamp[0]": 1541878500,
+                "track[0]": "The Sound of Silence",
+            },
+        ]
+
         self.assertIsInstance(result, ListModel)
+        self.assertEqual(expected_params, result.params)
         self.assertFixtureEqual("track/scrobble_tracks", result.to_dict())
 
     @fixture.use_cassette(path="geo/get_top_tracks")

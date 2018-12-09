@@ -23,7 +23,7 @@ class ApiMixin:
         cls,
         bind: Type[BaseModel],
         many: Optional[str] = None,
-        params: dict = dict(),
+        params: Dict = dict(),
     ):
         return cls._perform(
             method="GET",
@@ -39,7 +39,7 @@ class ApiMixin:
         cls,
         bind: Type[BaseModel],
         many: Optional[str] = None,
-        params: dict = dict(),
+        params: Dict = dict(),
         stateful: bool = False,
         authenticate: bool = False,
     ):
@@ -58,12 +58,12 @@ class ApiMixin:
         method: str,
         bind: Type[BaseModel],
         many: Optional[str],
-        params: dict,
+        params: Dict,
         stateful: bool,
         authenticate: bool,
     ):
-        data: dict = dict()
-        query: dict = dict()
+        data: Dict = dict()
+        query: Dict = dict()
         if method == "GET":
             query = cls.prepare_params(params, stateful, authenticate)
         else:
@@ -81,7 +81,7 @@ class ApiMixin:
 
     @classmethod
     def prepare_params(
-        cls, params: dict, stateful=False, authenticate=False
+        cls, params: Dict, stateful=False, authenticate=False
     ) -> dict:
 
         params = dict(
@@ -127,7 +127,7 @@ class ApiMixin:
         return ListModel(data=[bind.from_dict(d) for d in data])
 
     @staticmethod
-    def raise_for_error(body: dict):
+    def raise_for_error(body: Dict):
         if "error" in body:
             raise ApiError(**body)
 
@@ -164,12 +164,10 @@ def pythonic_variables(data):
         "opensearch:startIndex": "offset",
         "opensearch:totalResults": "total",
         "toptags": "top_tags",
-        "ignoredMessage": "ignored_message",
         "albumArtist": "album_artist",
         "streamId": "stream_id",
         "albumArtist": "album_artist",
         "realname": "real_name",
-        "recenttrack": "recent_track",
         "recenttrack": "recent_track",
         "ontour": "on_tour",
         "num_res": "limit",
@@ -180,6 +178,13 @@ def pythonic_variables(data):
     A list of fields that dont make make sense in the api responses
     Either they don't always have the same value type or have a dev message
     """
-    fixme = ["subscriber", "type", "scrobblesource", "bootstrap", "streamable"]
+    fixme = [
+        "subscriber",
+        "type",
+        "scrobblesource",
+        "bootstrap",
+        "streamable",
+        "ignoredMessage",
+    ]
 
     return {map.get(k, k): v for k, v in data if k not in fixme}

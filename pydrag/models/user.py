@@ -1,4 +1,4 @@
-from typing import List, Optional, Union
+from typing import Dict, List, Optional, Union
 
 from attr import dataclass
 
@@ -41,7 +41,7 @@ class User(BaseModel, ApiMixin):
     recent_track: Optional[Track] = None
 
     @classmethod
-    def from_dict(cls, data: dict):
+    def from_dict(cls, data: Dict):
         data.update(
             dict(
                 registered=Date.from_dict(data["registered"]),

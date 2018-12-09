@@ -74,11 +74,11 @@ We probably need to rethink the response for write operations...
 .. code-block :: python
 
     >>> track = Track.find(artist="AC / DC", track="Hells Bell")
-    >>> track.unlove()
-    track.love()<pydrag.models.common.BaseModel object at 0x7fc29950d748>
     >>> track.love()
-    <pydrag.models.common.BaseModel object at 0x7fc296ded160>
+    RawResponse(data=None)
     >>>
+    >>> track.unlove()
+    RawResponse(data=None)
 
 
 Tracks Tagging
@@ -113,22 +113,33 @@ Last.fm has a limit on how many tracks you can scrobble at once, pydrag allows y
 
 .. code-block :: python
 
-    entries = (
-        ("Green Day", "Bang Bang"),
-        ("Awolnation", "Sail"),
-        ("The Head and the Heart", "All We Ever Knew"),
-        ("Kaleo", "Way Down We Go"),
-        ("Disturbed", "The Sound of Silence"),
-    )
+    >>> from datetime import datetime, timedelta
+    >>> import time
+    >>> from pydrag import Track
+    >>> from pydrag.models.common import ScrobbleTrack
+    >>>
+    >>> entries = (
+    ...     ("Green Day", "Bang Bang"),
+    ...     ("Please Fail", "Now"),
+    ...     ("The Head and the Heart", "All We Ever Knew"),
+    ...     ("Kaleo", "Way Down We Go"),
+    ...     ("Disturbed", "The Sound of Silence"),
+    ... )
+    >>>
+    >>> tracks = []
+    >>> date = datetime.now()
+    >>> for artist, track in entries:
+    ...     date = date - timedelta(minutes=5)
+    ...     timestamp = int(time.mktime(date.timetuple()))
+    ...     tracks.append(
+    ...         ScrobbleTrack(artist=artist, track=track, timestamp=timestamp)
+    ...     )
+    ...
+    >>> result = Track.scrobble_tracks(tracks, batch_size=2)
+    >>> result.to_dict()
+    {'data': [{'artist': 'Green Day', 'track': 'Bang Bang', 'timestamp': 1544365120}, {'artist': 'Please Fail', 'track': 'Now', 'timestamp': 1544364820}, {'artist': 'The Head and the Heart', 'track': 'All We Ever Knew', 'timestamp': 1544364520}, {'artist': 'Kaleo', 'track': 'Way Down We Go', 'timestamp': 1544364220}, {'artist': 'Disturbed', 'track': 'The Sound of Silence', 'timestamp': 1544363920}]}
+    >>>
 
-    tracks = []
-    date = datetime(year=2018, month=11, day=10, hour=21, minute=30)
-    for artist, track in entries:
-        _next = date + timedelta(minutes=5)
-        timestamp = int(time.mktime(_next.timetuple()))
-        tracks.append(
-            ScrobbleTrack(artist=artist, track=track, timestamp=timestamp)
-        )
+.. caution:: Nothing really fails in the scrobble api
 
-    result = Track.scrobble_tracks(tracks, batch_size=2)
-    actual = result.to_dict()
+    .. image:: /_static/nothing_fails.png

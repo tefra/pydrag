@@ -1,4 +1,4 @@
-from typing import List, Optional
+from typing import Dict, List, Optional
 
 from attr import dataclass
 
@@ -11,47 +11,11 @@ from pydrag.models.common import (
     Image,
     ListModel,
     RawResponse,
+    ScrobbleTrack,
     Wiki,
 )
 from pydrag.models.tag import Tag
 from pydrag.services import ApiMixin
-
-
-@dataclass
-class ScrobbleTrack(BaseModel):
-    artist: str
-    track: str
-    track_number: Optional[str] = None
-    album: Optional[str] = None
-    album_artist: Optional[str] = None
-    duration: Optional[int] = None
-    mbid: Optional[str] = None
-    timestamp: Optional[int] = None
-    context: Optional[str] = None
-    stream_id: Optional[str] = None
-    chosen_by_user: Optional[bool] = None
-    ignored_message: Optional[str] = None
-
-    def to_dict(self):
-        return super(ScrobbleTrack, self).to_dict()
-
-    @classmethod
-    def from_dict(cls, data: dict):
-        data.update(
-            {
-                k: data[k]["text"]
-                if data.get(k, {}).get("text", "") != ""
-                else None
-                for k in [
-                    "album",
-                    "artist",
-                    "track",
-                    "ignored_message",
-                    "album_artist",
-                ]
-            }
-        )
-        return super(ScrobbleTrack, cls).from_dict(data)
 
 
 @dataclass
@@ -95,7 +59,7 @@ class Track(ApiMixin, BaseModel):
     attr: Optional[Attributes] = None
 
     @classmethod
-    def from_dict(cls, data: dict):
+    def from_dict(cls, data: Dict):
         try:
             if isinstance(data["album"]["artist"], str):
                 data["album"]["artist"] = dict(name=data["album"]["artist"])
@@ -405,20 +369,23 @@ class Track(ApiMixin, BaseModel):
 
         :param tracks: The tracks to scrobble
         :param batch_size: The number of tracks to submit per cycle
-        :rtype: :class:`pydrag.models.common.ListModel` of :class:`~pydrag.models.track.ScrobbleTrack`
+        :rtype: :class:`pydrag.models.common.ListModel` of :class:`~pydrag.models.common.ScrobbleTrack`
         """
 
         def divide_chunks(l, n):
             for i in range(0, len(l), n):
                 yield l[i : i + n]
 
-        return ListModel(
-            [
-                track
-                for batch in list(divide_chunks(tracks, min(batch_size, 50)))
-                for track in Track._scrobble(batch)
-            ]
-        )
+        data: List[ScrobbleTrack] = []
+        params = []
+        for batch in list(divide_chunks(tracks, min(batch_size, 50))):
+            res = Track._scrobble(batch)
+            data += res.data
+            params.append(res.params)
+
+        result = ListModel(data)
+        result.params = params
+        return result
 
     @classmethod
     def _scrobble(
@@ -426,15 +393,15 @@ class Track(ApiMixin, BaseModel):
     ) -> ListModel[ScrobbleTrack]:
         """
         :param tracks: A list fo tracks to scrobble
-        :type tracks: :class:`list` of :class:`~pydrag.models.track.ScrobbleTrack`
-        :rtype: :class:`pydrag.models.common.ListModel` of :class:`~pydrag.models.track.ScrobbleTrack`
+        :type tracks: :class:`list` of :class:`~pydrag.models.common.ScrobbleTrack`
+        :rtype: :class:`pydrag.models.common.ListModel` of :class:`~pydrag.models.common.ScrobbleTrack`
         """
         params = dict(method="track.scrobble")
         params.update(
             {
                 "{}[{}]".format(field, idx): value
                 for idx, track in enumerate(tracks)
-                for field, value in track.to_dict().items()
+                for field, value in track.to_api_dict().items()
             }
         )
         return cls.submit(
