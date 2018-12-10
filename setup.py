@@ -1,9 +1,8 @@
-from setuptools import setup
+from setuptools import find_packages, setup
 
 if __name__ == "__main__":
     setup(
-        packages=["pydrag"],
-        package_dir={"pydrag": "pydrag"},
+        packages=find_packages(),
         install_requires=[
             "attrs == 18.2.0",
             "requests == 2.21.0",
