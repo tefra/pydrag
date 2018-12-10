@@ -1,5 +1,5 @@
-Artist Model
-============
+Artist Webservices
+==================
 
 
 Retrieve artist

@@ -1,5 +1,5 @@
-Use Cases
-=========
+Usage Examples
+==============
 
 This page lists examples on how to use pydrag
 

@@ -1,5 +1,5 @@
-Album Model
-===========
+Album Webservices
+=================
 
 
 Retrieve album
