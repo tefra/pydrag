@@ -7,10 +7,10 @@ import vcr
 
 from pydrag.models.common import Config
 
-config = Config.instance()
-if not config.api_key:
-    config.api_key = "key"
-
+try:
+    config = Config.instance()
+except AssertionError:
+    Config.instance(api_key="key")
 
 where_am_i = os.path.dirname(os.path.realpath(__file__))
 fixtures_dir = os.path.join(where_am_i, "fixtures")

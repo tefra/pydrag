@@ -1,15 +1,17 @@
 import hashlib
+from typing import Optional
 
 
-def md5(text: str) -> str:
+def md5(text: Optional[str]) -> Optional[str]:
     """
-    Util method to produce a 32char md5 digest, if string is empty return
-    immediately.
+    Util method to produce a 32char md5 digest, if string is empty or None
+    return empty string.
 
     :param str text: The string to hash
+    :type text: Optional[str]
     :rtype: str
     """
-    if text == "":
+    if text == "" or text is None:
         return text
     return hashlib.md5(text.encode("utf-8")).hexdigest()
 

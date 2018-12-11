@@ -68,10 +68,10 @@ class RawResponse(BaseModel):
 @dataclass(auto_attribs=False)
 class Config:
     api_key: str = attrib()
-    api_secret: str = attrib()
-    username: str = attrib()
-    password: str = attrib(converter=md5)
-    session: "AuthSession" = attrib(default=None)  # type: ignore  # noqa: F821
+    api_secret: Optional[str] = attrib()
+    username: Optional[str] = attrib()
+    password: Optional[str] = attrib(converter=md5)
+    session: Optional["AuthSession"] = attrib(default=None)  # type: ignore
 
     api_url: str = "https://ws.audioscrobbler.com/2.0/"
     auth_url: str = "https://www.last.fm/api/auth?token={}&api_key={}"
@@ -93,22 +93,27 @@ class Config:
         session: Optional[str] = None,
     ):
 
-        params = dict(
-            api_key=api_key,
-            api_secret=api_secret,
-            username=username,
-            password=password,
-            session=session,
-        )
+        keys = [f.name for f in fields(Config)]
         if Config._instance is None or api_key:
-            kwargs = {k: v for k, v in params.items() if v is not None}
-            if not kwargs:
-                kwargs = {
-                    k: os.getenv("LASTFM_{}".format(k.upper()), "")
-                    for k in params.keys()
+            if api_key:
+                values = locals()
+                params = {k: values[k] for k in keys}
+            else:
+                params = {
+                    k: os.getenv(
+                        "LASTFM_{}".format(k.upper()),
+                        "" if k == "api_key" else None,
+                    )
+                    for k in keys
                 }
-            Config(**kwargs)
+            assert (
+                len(params["api_key"]) > 0
+            ), "Provide a valid last.fm api key."
+            Config(**params)
         return Config._instance
+
+    def to_dict(self):
+        return asdict(self)
 
 
 @dataclass

@@ -16,7 +16,6 @@ if __name__ == "__main__":
                 "codecov",
                 "vcrpy",
                 "tox",
-                "dot",
             ],
             "docs": ["sphinx", "sphinx-rtd-theme", "sphinx-autodoc-typehints"],
         },
