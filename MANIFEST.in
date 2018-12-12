@@ -1,7 +1,7 @@
 include LICENSE READNE.rst tox.ini
 recursive-include docs *
-recursive-include pydrag *.json
-recursive-include pydrag *.py
+recursive-include tests *
+recursive-include pydrag *
 
 
 prune docs/_build
