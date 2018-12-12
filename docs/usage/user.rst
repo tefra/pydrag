@@ -1,5 +1,5 @@
-User Model
-==========
+User Webservices
+================
 
 
 Retrieve user

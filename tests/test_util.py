@@ -8,9 +8,7 @@ class UtilTests(TestCase):
         self.assertEqual("3858f62230ac3c915f300c664312c63f", md5("foobar"))
         self.assertRegex(md5("foobar"), "^[a-z0-9]{32}$")
         self.assertEqual("", md5(""))
-
-        with self.assertRaises(AttributeError):
-            md5(None)
+        self.assertIsNone(md5(None))
 
     def test_to_camel_case(self):
         self.assertEqual("aaBb", to_camel_case("aa_bb"))
