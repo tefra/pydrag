@@ -9,7 +9,7 @@ from pydrag.services import ApiMixin
 @dataclass
 class Tag(BaseModel, ApiMixin):
     """
-    Last.FM tag, chart and geo api client.
+    Last.FM tag, chart and geo api wrapper.
 
     :param name: Tag name
     :param reach: NOIDEA
@@ -59,7 +59,7 @@ class Tag(BaseModel, ApiMixin):
         """
         return cls.retrieve(
             bind=Tag,
-            many="tag",
+            flatten="tag",
             params=dict(
                 method="tag.getTopTags",
                 num_res=limit,
@@ -80,7 +80,7 @@ class Tag(BaseModel, ApiMixin):
         """
         return cls.retrieve(
             bind=Tag,
-            many="tag",
+            flatten="tag",
             params=dict(method="chart.getTopTags", limit=limit, page=page),
         )
 
@@ -93,7 +93,7 @@ class Tag(BaseModel, ApiMixin):
         """
         return self.retrieve(
             bind=Tag,
-            many="tag",
+            flatten="tag",
             params=dict(method="tag.getSimilar", tag=self.name),
         )
 
@@ -109,7 +109,7 @@ class Tag(BaseModel, ApiMixin):
 
         return self.retrieve(
             bind=Album,
-            many="album",
+            flatten="album",
             params=dict(
                 method="tag.getTopAlbums",
                 tag=self.name,
@@ -130,7 +130,7 @@ class Tag(BaseModel, ApiMixin):
 
         return self.retrieve(
             bind=Artist,
-            many="artist",
+            flatten="artist",
             params=dict(
                 method="tag.getTopArtists",
                 tag=self.name,
@@ -151,7 +151,7 @@ class Tag(BaseModel, ApiMixin):
 
         return self.retrieve(
             bind=Track,
-            many="track",
+            flatten="track",
             params=dict(
                 method="tag.getTopTracks",
                 tag=self.name,
@@ -169,6 +169,6 @@ class Tag(BaseModel, ApiMixin):
         """
         return self.retrieve(
             bind=Chart,
-            many="chart",
+            flatten="chart",
             params=dict(method="tag.getWeeklyChartList", tag=self.name),
         )

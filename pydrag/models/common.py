@@ -27,6 +27,14 @@ class BaseModel:
 
     @classmethod
     def from_dict(cls: Type, data: Dict) -> "BaseModel":
+        """
+        Construct a BaseModel from a dictionary based on the class fields type
+        annotations. Only primitive types are supported.
+
+        :param data:
+        :type data: Type[BaseModel]
+        :rtype: :class:`~pydrag.models.common.BaseModel`
+        """
         for f in fields(cls):
             if f.name not in data or data[f.name] is None:
                 continue
@@ -34,9 +42,14 @@ class BaseModel:
             if f.type == str or f.type == Optional[str]:
                 data[f.name] = str(data[f.name])
             elif f.type == int or f.type == Optional[int]:
-                data[f.name] = int(data[f.name])
+                try:
+                    data[f.name] = int(data[f.name])
+                except ValueError:
+                    data[f.name] = 0
             elif f.type == float or f.type == Optional[float]:
                 data[f.name] = float(data[f.name])
+            elif f.type == bool or f.type == Optional[bool]:
+                data[f.name] = bool(int(data[f.name]))
 
         return cls(**data)
 

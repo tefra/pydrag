@@ -9,7 +9,13 @@ from pydrag.models.common import BaseModel, Config, ListModel
 
 class ApiMixin:
     @classmethod
-    def get_session(cls):
+    def get_session(cls) -> "AuthSession":  # type: ignore
+        """
+        Return the session from configuration or attempt to authenticate the
+        configuration user.
+
+        :rtype: :class:`~pydrag.models.auth.AuthSession`
+        """
         cfg = Config.instance()
         if not cfg.session:
             from pydrag.models.auth import AuthSession
@@ -21,13 +27,22 @@ class ApiMixin:
     def retrieve(
         cls,
         bind: Type[BaseModel],
-        many: Optional[str] = None,
+        flatten: Optional[str] = None,
         params: Dict = dict(),
     ):
+        """
+        Perform an api retrieve/get resource action.
+
+        :param bind: Class type to construct from the api response.
+        :type bind: :class:`~pydrag.models.common.BaseModel`
+        :param str flatten: A dot separated string used to flatten nested list of values
+        :param Dict params: A dictionary of query string params
+        :rtype: :class:`~pydrag.models.common.BaseModel`
+        """
         return cls._perform(
             method="GET",
             bind=bind,
-            many=many,
+            flatten=flatten,
             params=params,
             sign=False,
             stateful=False,
@@ -38,16 +53,28 @@ class ApiMixin:
     def submit(
         cls,
         bind: Type[BaseModel],
-        many: Optional[str] = None,
+        flatten: Optional[str] = None,
         params: Dict = dict(),
         sign: bool = False,
         stateful: bool = False,
         authenticate: bool = False,
     ):
+        """
+        Perform an api write/update resource action.
+
+        :param bind: Class type to construct from the api response.
+        :type bind: :class:`~pydrag.models.common.BaseModel`
+        :param str flatten: A dot separated string used to flatten nested list of values
+        :param Dict params: A dictionary of body params
+        :param bool sign: Sign the request with the api secret
+        :param bool stateful: Requires a session
+        :param bool authenticate: Perform an authentication request
+        :rtype: :class:`~pydrag.models.common.BaseModel`
+        """
         return cls._perform(
             method="POST",
             bind=bind,
-            many=many,
+            flatten=flatten,
             params=params,
             sign=sign,
             stateful=stateful,
@@ -59,12 +86,25 @@ class ApiMixin:
         cls,
         method: str,
         bind: Type[BaseModel],
-        many: Optional[str],
+        flatten: Optional[str],
         params: Dict,
         sign: bool,
         stateful: bool,
         authenticate: bool,
     ):
+        """
+        Orchestrate the request, error handling and response deserialization.
+
+        :param str method: Http method POST/GET
+        :param bind: Class type to construct from the api response.
+        :type bind: :class:`~pydrag.models.common.BaseModel`
+        :param str flatten: A dot separated string used to flatten nested
+        :param Dict params: A dictionary of body or query string params
+        :param bool sign: Sign the request with the api secret
+        :param bool stateful: Requires a session
+        :param bool authenticate: Perform an authentication request
+        :rtype: :class:`~pydrag.models.common.BaseModel`
+        """
         data: Dict = dict()
         query: Dict = dict()
         if method == "GET":
@@ -79,7 +119,7 @@ class ApiMixin:
         response.raise_for_status()
         body = response.json(object_pairs_hook=pythonic_variables)
         cls.raise_for_error(body)
-        obj = cls.bind_data(bind, body, many)
+        obj = cls.bind_data(bind, body, flatten)
         obj.params = params
         return obj
 
@@ -87,6 +127,19 @@ class ApiMixin:
     def prepare_params(
         cls, params: Dict, sign: bool, stateful: bool, authenticate: bool
     ) -> dict:
+        """
+        Perform common parameter tasks before sending the web request.
+
+        * Filter out None values,
+        * Set the preferred api format ``json``
+        * Add the api key, session or signature based on the state flags
+
+        :param Dict params: A dictionary of body or query string params
+        :param bool sign: Sign the request with the api secret
+        :param bool stateful: Add the session key to the params
+        :param bool authenticate: Add the username and auth token to the params
+        :rtype: Dict
+        """
         cfg = Config.instance()
         params = dict(
             (k, str(int(v is True) if type(v) == bool else v))
@@ -113,16 +166,28 @@ class ApiMixin:
         cls,
         bind: Type[BaseModel],
         body: Optional[Dict],
-        many: Optional[str] = None,
+        flatten: Optional[str] = None,
     ):
+        """
+        Construct a BaseModel from the response body and the flatten directive.
+
+        :param bind: Class type to construct from the api response.
+        :type bind: :class:`~pydrag.models.common.BaseModel`
+        :param Dict body: The api response
+        :param str flatten: A dot separated string used to flatten nested list of values
+        :rtype: :class:`~pydrag.models.common.BaseModel`
+        """
         if not body:
             return bind()
 
         data = body[next(iter(body.keys()))]
-        if many is None:
+        if data and not isinstance(data, Dict):
+            data = body
+
+        if flatten is None:
             return bind.from_dict(data)
 
-        for m in many.split("."):
+        for m in flatten.split("."):
             data = data.pop(m)
 
         if isinstance(data, dict):
@@ -132,17 +197,30 @@ class ApiMixin:
 
     @staticmethod
     def raise_for_error(body: Dict):
+        """
+        Parse and raise api errors.
+
+        :param Dict body: Response body
+        :raise: :class:`~pydrag.exceptions.ApiError`
+        """
         if "error" in body:
             raise ApiError(**body)
 
     @staticmethod
-    def sign(params):
+    def sign(params: Dict) -> str:
+        """
+        Last.fm signing formula for webservice calls. Exclude format, sort
+        params, append the api secret key and hash the params string.
+
+        :param Dict params:
+        :rtype: str
+        """
         keys = sorted(params.keys())
         keys.remove("format")
 
         signature = [str(k) + str(params[k]) for k in keys if params.get(k)]
         signature.append(str(Config.instance().api_secret))
-        return utils.md5("".join(signature))
+        return utils.md5("".join(signature))  # type: ignore
 
 
 def pythonic_variables(data):
@@ -150,7 +228,6 @@ def pythonic_variables(data):
         "albummatches": "albums",
         "artistmatches": "artists",
         "trackmatches": "tracks",
-        "perPage": "limit",
         "totalPages": "total_pages",
         "startPage": "page",
         "trackcorrected": "track_corrected",
@@ -176,6 +253,7 @@ def pythonic_variables(data):
         "ontour": "on_tour",
         "num_res": "limit",
         "title": "name",
+        "userloved": "loved",
     }
 
     """

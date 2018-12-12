@@ -21,7 +21,7 @@ from pydrag.services import ApiMixin
 @dataclass
 class Track(ApiMixin, BaseModel):
     """
-    Last.FM track, chart and geo api client.
+    Last.FM track, chart and geo api wrapper.
 
     :param name: Track name/title
     :param artist: Artist name
@@ -61,12 +61,6 @@ class Track(ApiMixin, BaseModel):
     @classmethod
     def from_dict(cls, data: Dict):
         try:
-            if isinstance(data["album"]["artist"], str):
-                data["album"]["artist"] = dict(name=data["album"]["artist"])
-        except KeyError:
-            pass
-
-        try:
             correction = data.pop("correction")
             data = correction.pop("track")
         except KeyError:
@@ -81,16 +75,12 @@ class Track(ApiMixin, BaseModel):
             )
         )
 
-        if data.get("duration") == "FIXME":
-            data["duration"] = 0
         if "image" in data:
             data["image"] = list(map(Image.from_dict, data["image"]))
         if "top_tags" in data:
             data["top_tags"] = list(
                 map(Tag.from_dict, data["top_tags"]["tag"])
             )
-        if "match" in data:
-            data["match"] = float(data["match"])
         if "wiki" in data:
             data["wiki"] = Wiki.from_dict(data["wiki"])
         if "album" in data:
@@ -99,10 +89,6 @@ class Track(ApiMixin, BaseModel):
             data["attr"] = Attributes.from_dict(data["attr"])
         if "date" in data:
             data["date"] = Date.from_dict(data["date"])
-        if "loved" in data:
-            data["loved"] = bool(int(data["loved"]))
-        elif "userloved" in data:
-            data["loved"] = bool(int(data.pop("userloved")))
 
         return super(Track, cls).from_dict(data)
 
@@ -199,7 +185,7 @@ class Track(ApiMixin, BaseModel):
         """
         return cls.retrieve(
             bind=Track,
-            many="tracks.track",
+            flatten="tracks.track",
             params=dict(
                 method="track.search", limit=limit, page=page, track=track
             ),
@@ -217,7 +203,7 @@ class Track(ApiMixin, BaseModel):
         """
         return cls.retrieve(
             bind=Track,
-            many="track",
+            flatten="track",
             params=dict(
                 method="geo.getTopTracks",
                 country=country,
@@ -239,7 +225,7 @@ class Track(ApiMixin, BaseModel):
         """
         return cls.retrieve(
             bind=Track,
-            many="track",
+            flatten="track",
             params=dict(method="chart.getTopTracks", limit=limit, page=page),
         )
 
@@ -281,7 +267,7 @@ class Track(ApiMixin, BaseModel):
         """
         return self.retrieve(
             bind=Track,
-            many="track",
+            flatten="track",
             params=dict(
                 method="track.getSimilar",
                 mbid=self.mbid,
@@ -301,7 +287,7 @@ class Track(ApiMixin, BaseModel):
         """
         return self.retrieve(
             bind=Tag,
-            many="tag",
+            flatten="tag",
             params=dict(
                 method="track.getTags",
                 mbid=self.mbid,
@@ -320,7 +306,7 @@ class Track(ApiMixin, BaseModel):
         """
         return self.retrieve(
             bind=Tag,
-            many="tag",
+            flatten="tag",
             params=dict(
                 method="track.getTopTags",
                 mbid=self.mbid,
@@ -405,7 +391,10 @@ class Track(ApiMixin, BaseModel):
             }
         )
         return cls.submit(
-            bind=ScrobbleTrack, many="scrobble", stateful=True, params=params
+            bind=ScrobbleTrack,
+            flatten="scrobble",
+            stateful=True,
+            params=params,
         )
 
     @classmethod

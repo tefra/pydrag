@@ -14,7 +14,7 @@ from pydrag.services import ApiMixin
 @dataclass
 class User(BaseModel, ApiMixin):
     """
-    Last.FM user and user library api client.
+    Last.FM user and user library api wrapper.
 
     :param playcount: Total track playcount
     :param gender: Gender
@@ -74,7 +74,7 @@ class User(BaseModel, ApiMixin):
         """
         return self.retrieve(
             bind=Artist,
-            many="artist",
+            flatten="artist",
             params=dict(
                 method="library.getArtists",
                 user=self.name,
@@ -103,7 +103,7 @@ class User(BaseModel, ApiMixin):
         """
         return self.retrieve(
             bind=Track,
-            many="track",
+            flatten="track",
             params=dict(
                 method="user.getArtistTracks",
                 user=self.name,
@@ -128,7 +128,7 @@ class User(BaseModel, ApiMixin):
         """
         return self.retrieve(
             bind=User,
-            many="user",
+            flatten="user",
             params=dict(
                 method="user.getFriends",
                 user=self.name,
@@ -150,7 +150,7 @@ class User(BaseModel, ApiMixin):
         """
         return self.retrieve(
             bind=Track,
-            many="track",
+            flatten="track",
             params=dict(
                 method="user.getLovedTracks",
                 user=self.name,
@@ -178,7 +178,7 @@ class User(BaseModel, ApiMixin):
 
         return self.retrieve(
             bind=bind,
-            many="{0}s.{0}".format(type),
+            flatten="{0}s.{0}".format(type),
             params=dict(
                 method="user.getPersonalTags",
                 user=self.name,
@@ -209,7 +209,7 @@ class User(BaseModel, ApiMixin):
         """
         return self.retrieve(
             bind=Track,
-            many="track",
+            flatten="track",
             params={
                 "method": "user.getRecentTracks",
                 "user": self.name,
@@ -238,7 +238,7 @@ class User(BaseModel, ApiMixin):
 
         return self.retrieve(
             bind=Album,
-            many="album",
+            flatten="album",
             params=dict(
                 method="user.getTopAlbums",
                 user=self.name,
@@ -263,7 +263,7 @@ class User(BaseModel, ApiMixin):
         assert isinstance(period, Period)
         return self.retrieve(
             bind=Artist,
-            many="artist",
+            flatten="artist",
             params=dict(
                 method="user.getTopArtists",
                 user=self.name,
@@ -283,7 +283,7 @@ class User(BaseModel, ApiMixin):
         """
         return self.retrieve(
             bind=Tag,
-            many="tag",
+            flatten="tag",
             params=dict(method="user.getTopTags", user=self.name, limit=limit),
         )
 
@@ -303,7 +303,7 @@ class User(BaseModel, ApiMixin):
         assert isinstance(period, Period)
         return self.retrieve(
             bind=Track,
-            many="track",
+            flatten="track",
             params=dict(
                 method="user.getTopTracks",
                 user=self.name,
@@ -323,7 +323,7 @@ class User(BaseModel, ApiMixin):
         """
         return self.retrieve(
             bind=Album,
-            many="album",
+            flatten="album",
             params={
                 "method": "user.getWeeklyAlbumChart",
                 "user": self.name,
@@ -346,7 +346,7 @@ class User(BaseModel, ApiMixin):
         """
         return self.retrieve(
             bind=Artist,
-            many="artist",
+            flatten="artist",
             params={
                 "method": "user.getWeeklyArtistChart",
                 "user": self.name,
@@ -365,7 +365,7 @@ class User(BaseModel, ApiMixin):
         """
         return self.retrieve(
             bind=Chart,
-            many="chart",
+            flatten="chart",
             params=dict(method="user.getWeeklyChartList", user=self.name),
         )
 
@@ -382,7 +382,7 @@ class User(BaseModel, ApiMixin):
         """
         return self.retrieve(
             bind=Track,
-            many="track",
+            flatten="track",
             params={
                 "method": "user.getWeeklyTrackChart",
                 "user": self.name,

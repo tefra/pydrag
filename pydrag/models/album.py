@@ -18,7 +18,7 @@ from pydrag.services import ApiMixin
 @dataclass
 class Album(BaseModel, ApiMixin):
     """
-    Last.FM track, chart and geo api client.
+    Last.FM track, chart and geo api wrapper.
 
     :param name: Artist name/title
     :param mbid: Musicbrainz ID
@@ -155,7 +155,7 @@ class Album(BaseModel, ApiMixin):
 
         return cls.retrieve(
             bind=Album,
-            many="albums.album",
+            flatten="albums.album",
             params=dict(
                 method="album.search", limit=limit, page=page, album=album
             ),
@@ -209,7 +209,7 @@ class Album(BaseModel, ApiMixin):
         assert self.artist is not None
         return self.retrieve(
             bind=Tag,
-            many="tag",
+            flatten="tag",
             params=dict(
                 method="album.getTags",
                 mbid=self.mbid,
@@ -229,7 +229,7 @@ class Album(BaseModel, ApiMixin):
         assert self.artist is not None
         return self.retrieve(
             bind=Tag,
-            many="tag",
+            flatten="tag",
             params=dict(
                 method="album.getTopTags",
                 mbid=self.mbid,

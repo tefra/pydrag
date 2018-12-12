@@ -17,7 +17,7 @@ from pydrag.services import ApiMixin
 @dataclass
 class Artist(BaseModel, ApiMixin):
     """
-    Last.FM track, chart and geo api client.
+    Last.FM track, chart and geo api wrapper.
 
     :param name: Artist name/title
     :param mbid: Musicbrainz ID
@@ -65,8 +65,6 @@ class Artist(BaseModel, ApiMixin):
 
         if "name" not in data and "text" in data:
             data["name"] = data.pop("text")
-        if "on_tour" in data:
-            data["on_tour"] = bool(int(data["on_tour"]))
         if "image" in data:
             data["image"] = list(map(Image.from_dict, data["image"]))
         if "tags" in data:
@@ -160,7 +158,7 @@ class Artist(BaseModel, ApiMixin):
         """
         return cls.retrieve(
             bind=Artist,
-            many="artists.artist",
+            flatten="artists.artist",
             params=dict(
                 method="artist.search", limit=limit, page=page, artist=artist
             ),
@@ -178,7 +176,7 @@ class Artist(BaseModel, ApiMixin):
         """
         return cls.retrieve(
             bind=Artist,
-            many="artist",
+            flatten="artist",
             params=dict(
                 method="geo.getTopArtists",
                 country=country,
@@ -200,7 +198,7 @@ class Artist(BaseModel, ApiMixin):
         """
         return cls.retrieve(
             bind=Artist,
-            many="artist",
+            flatten="artist",
             params=dict(method="chart.getTopArtists", limit=limit, page=page),
         )
 
@@ -253,7 +251,7 @@ class Artist(BaseModel, ApiMixin):
         """
         return self.retrieve(
             bind=Artist,
-            many="artist",
+            flatten="artist",
             params=dict(
                 method="artist.getSimilar",
                 mbid=self.mbid,
@@ -272,7 +270,7 @@ class Artist(BaseModel, ApiMixin):
         """
         return self.retrieve(
             bind=Tag,
-            many="tag",
+            flatten="tag",
             params=dict(
                 method="artist.getTags",
                 mbid=self.mbid,
@@ -290,7 +288,7 @@ class Artist(BaseModel, ApiMixin):
         """
         return self.retrieve(
             bind=Tag,
-            many="tag",
+            flatten="tag",
             params=dict(
                 method="artist.getTopTags",
                 mbid=self.mbid,
@@ -311,7 +309,7 @@ class Artist(BaseModel, ApiMixin):
 
         return self.retrieve(
             bind=Track,
-            many="track",
+            flatten="track",
             params=dict(
                 method="artist.getTopTracks",
                 mbid=self.mbid,
