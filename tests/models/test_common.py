@@ -1,7 +1,7 @@
 import os
 from unittest import TestCase, mock
 
-from pydrag.models.common import Config, RawResponse, ScrobbleTrack
+from pydrag.models.common import Config, ListModel, RawResponse, ScrobbleTrack
 from pydrag.utils import md5
 
 
@@ -13,6 +13,12 @@ class RawResponseTests(TestCase):
     def test_from_dict(self):
         raw = RawResponse.from_dict(dict(a=1))
         self.assertEqual(dict(a=1), raw.data)
+
+
+class ListModelTests(TestCase):
+    def test_from_dict(self):
+        with self.assertRaises(NotImplementedError):
+            ListModel.from_dict({})
 
 
 class ScrobbleTrackTests(TestCase):
