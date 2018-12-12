@@ -9,8 +9,8 @@ from pydrag.models.common import (
     RawResponse,
     ScrobbleTrack,
 )
-from pydrag.models.tests import MethodTestCase, fixture
 from pydrag.models.track import Track
+from tests import MethodTestCase, fixture
 
 
 class TrackTests(MethodTestCase):

@@ -13,7 +13,7 @@ except AssertionError:
     Config.instance(api_key="key")
 
 where_am_i = os.path.dirname(os.path.realpath(__file__))
-fixtures_dir = os.path.join(where_am_i, "fixtures")
+fixtures_dir = os.path.join(where_am_i, "models", "fixtures")
 
 censored_parameters = [
     ("token", "USER_TOKEN"),
@@ -24,7 +24,7 @@ censored_parameters = [
 ]
 
 
-def censore_response(response):
+def censor_response(response):
     body = response["body"]["string"]
     body = re.sub(b"[A-Za-z0-9-_]{32}", b"CENSORED", body)
     response["body"]["string"] = body
@@ -34,7 +34,7 @@ def censore_response(response):
 fixture = vcr.config.VCR(
     filter_query_parameters=censored_parameters,
     filter_post_data_parameters=censored_parameters,
-    before_record_response=censore_response,
+    before_record_response=censor_response,
     cassette_library_dir=fixtures_dir,
     path_transformer=vcr.VCR.ensure_suffix(".json"),
     serializer="json",
