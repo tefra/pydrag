@@ -1,10 +1,10 @@
 {
-    "name": "Hells Bells",
-    "url": "https://www.last.fm/music/AC%2FDC/_/Hells+Bells",
     "artist": {
         "mbid": "CENSORED3ed1",
         "name": "AC/DC",
         "url": "https://www.last.fm/music/AC%2FDC"
     },
-    "mbid": "CENSOREDb286"
+    "mbid": "CENSOREDb286",
+    "name": "Hells Bells",
+    "url": "https://www.last.fm/music/AC%2FDC/_/Hells+Bells"
 }

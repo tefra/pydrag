@@ -1,10 +1,34 @@
 {
     "data": [
         {
+            "image": [
+                {
+                    "size": "small",
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                },
+                {
+                    "size": "medium",
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                },
+                {
+                    "size": "large",
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                },
+                {
+                    "size": "extralarge",
+                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                },
+                {
+                    "size": "mega",
+                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                }
+            ],
+            "listeners": 4685407,
             "mbid": "CENSORED2711",
             "name": "Radiohead",
-            "url": "https://www.last.fm/music/Radiohead",
-            "listeners": 4685407,
+            "url": "https://www.last.fm/music/Radiohead"
+        },
+        {
             "image": [
                 {
                     "size": "small",
@@ -26,13 +50,13 @@
                     "size": "mega",
                     "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
-            ]
-        },
-        {
+            ],
+            "listeners": 3308310,
             "mbid": "CENSORED8e50",
             "name": "David Bowie",
-            "url": "https://www.last.fm/music/David+Bowie",
-            "listeners": 3308310,
+            "url": "https://www.last.fm/music/David+Bowie"
+        },
+        {
             "image": [
                 {
                     "size": "small",
@@ -54,13 +78,13 @@
                     "size": "mega",
                     "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
-            ]
-        },
-        {
+            ],
+            "listeners": 3035790,
             "mbid": "CENSORED5c47",
             "name": "Pink Floyd",
-            "url": "https://www.last.fm/music/Pink+Floyd",
-            "listeners": 3035790,
+            "url": "https://www.last.fm/music/Pink+Floyd"
+        },
+        {
             "image": [
                 {
                     "size": "small",
@@ -82,13 +106,13 @@
                     "size": "mega",
                     "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
-            ]
-        },
-        {
+            ],
+            "listeners": 2553919,
             "mbid": "CENSORED6ca8",
             "name": "Massive Attack",
-            "url": "https://www.last.fm/music/Massive+Attack",
-            "listeners": 2553919,
+            "url": "https://www.last.fm/music/Massive+Attack"
+        },
+        {
             "image": [
                 {
                     "size": "small",
@@ -110,13 +134,13 @@
                     "size": "mega",
                     "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
-            ]
-        },
-        {
+            ],
+            "listeners": 2891985,
             "mbid": "CENSORED2bcf",
             "name": "The Cure",
-            "url": "https://www.last.fm/music/The+Cure",
-            "listeners": 2891985,
+            "url": "https://www.last.fm/music/The+Cure"
+        },
+        {
             "image": [
                 {
                     "size": "small",
@@ -138,13 +162,13 @@
                     "size": "mega",
                     "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
-            ]
-        },
-        {
+            ],
+            "listeners": 3756916,
             "mbid": "CENSOREDf598",
             "name": "The Rolling Stones",
-            "url": "https://www.last.fm/music/The+Rolling+Stones",
-            "listeners": 3756916,
+            "url": "https://www.last.fm/music/The+Rolling+Stones"
+        },
+        {
             "image": [
                 {
                     "size": "small",
@@ -166,13 +190,13 @@
                     "size": "mega",
                     "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
-            ]
-        },
-        {
+            ],
+            "listeners": 3617984,
             "mbid": "CENSORED600d",
             "name": "The Beatles",
-            "url": "https://www.last.fm/music/The+Beatles",
-            "listeners": 3617984,
+            "url": "https://www.last.fm/music/The+Beatles"
+        },
+        {
             "image": [
                 {
                     "size": "small",
@@ -194,13 +218,13 @@
                     "size": "mega",
                     "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
-            ]
-        },
-        {
+            ],
+            "listeners": 2652930,
             "mbid": "CENSOREDd4c0",
             "name": "Depeche Mode",
-            "url": "https://www.last.fm/music/Depeche+Mode",
-            "listeners": 2652930,
+            "url": "https://www.last.fm/music/Depeche+Mode"
+        },
+        {
             "image": [
                 {
                     "size": "small",
@@ -222,41 +246,13 @@
                     "size": "mega",
                     "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
-            ]
-        },
-        {
+            ],
+            "listeners": 3932441,
             "mbid": "CENSOREDf1a7",
             "name": "Queen",
-            "url": "https://www.last.fm/music/Queen",
-            "listeners": 3932441,
-            "image": [
-                {
-                    "size": "small",
-                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
-                },
-                {
-                    "size": "medium",
-                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
-                },
-                {
-                    "size": "large",
-                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
-                },
-                {
-                    "size": "extralarge",
-                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
-                },
-                {
-                    "size": "mega",
-                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
-                }
-            ]
+            "url": "https://www.last.fm/music/Queen"
         },
         {
-            "mbid": "CENSORED4234",
-            "name": "Coldplay",
-            "url": "https://www.last.fm/music/Coldplay",
-            "listeners": 5328820,
             "image": [
                 {
                     "size": "small",
@@ -278,7 +274,11 @@
                     "size": "mega",
                     "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
-            ]
+            ],
+            "listeners": 5328820,
+            "mbid": "CENSORED4234",
+            "name": "Coldplay",
+            "url": "https://www.last.fm/music/Coldplay"
         }
     ]
 }

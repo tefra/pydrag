@@ -1,20 +1,14 @@
 {
-    "version": 1,
     "interactions": [
         {
             "request": {
-                "method": "POST",
-                "uri": "https://ws.audioscrobbler.com/2.0/",
                 "body": "method=auth.getMobileSession&format=json&api_key=LAST_FM_API_KEY&username=Zaratoustre&authToken=USER_AUTH_TOKEN&api_sig=API_SIG",
                 "headers": {
-                    "User-Agent": [
-                        "python-requests/2.20.1"
+                    "Accept": [
+                        "*/*"
                     ],
                     "Accept-Encoding": [
                         "gzip, deflate"
-                    ],
-                    "Accept": [
-                        "*/*"
                     ],
                     "Connection": [
                         "keep-alive"
@@ -24,59 +18,59 @@
                     ],
                     "Content-Type": [
                         "application/x-www-form-urlencoded"
+                    ],
+                    "User-Agent": [
+                        "python-requests/2.20.1"
                     ]
-                }
+                },
+                "method": "POST",
+                "uri": "https://ws.audioscrobbler.com/2.0/"
             },
             "response": {
-                "status": {
-                    "code": 200,
-                    "message": "OK"
+                "body": {
+                    "string": "{\"session\":{\"subscriber\":0,\"name\":\"Zaratoustre\",\"key\":\"CENSORED\"}}"
                 },
                 "headers": {
-                    "Date": [
-                        "Sat, 08 Dec 2018 21:25:25 GMT"
-                    ],
                     "Access-Control-Allow-Methods": [
                         "POST, GET, OPTIONS"
-                    ],
-                    "Content-Type": [
-                        "application/json"
-                    ],
-                    "content-length": [
-                        "90"
-                    ],
-                    "Connection": [
-                        "keep-alive"
                     ],
                     "Access-Control-Allow-Origin": [
                         "*"
                     ],
+                    "Access-Control-Max-Age": [
+                        "86400"
+                    ],
+                    "Connection": [
+                        "keep-alive"
+                    ],
+                    "Content-Type": [
+                        "application/json"
+                    ],
+                    "Date": [
+                        "Sat, 08 Dec 2018 21:25:25 GMT"
+                    ],
                     "Server": [
                         "openresty/1.9.7.5"
                     ],
-                    "Access-Control-Max-Age": [
-                        "86400"
+                    "content-length": [
+                        "90"
                     ]
                 },
-                "body": {
-                    "string": "{\"session\":{\"subscriber\":0,\"name\":\"Zaratoustre\",\"key\":\"CENSORED\"}}"
+                "status": {
+                    "code": 200,
+                    "message": "OK"
                 }
             }
         },
         {
             "request": {
-                "method": "POST",
-                "uri": "https://ws.audioscrobbler.com/2.0/",
                 "body": "method=track.scrobble&artist%5B0%5D=Green+Day&track%5B0%5D=Bang+Bang&timestamp%5B0%5D=1541878500&artist%5B1%5D=Awolnation&track%5B1%5D=Sail&timestamp%5B1%5D=1541878500&format=json&api_key=LAST_FM_API_KEY&sk=USER_SESSION&api_sig=API_SIG",
                 "headers": {
-                    "User-Agent": [
-                        "python-requests/2.20.1"
+                    "Accept": [
+                        "*/*"
                     ],
                     "Accept-Encoding": [
                         "gzip, deflate"
-                    ],
-                    "Accept": [
-                        "*/*"
                     ],
                     "Connection": [
                         "keep-alive"
@@ -86,59 +80,59 @@
                     ],
                     "Content-Type": [
                         "application/x-www-form-urlencoded"
+                    ],
+                    "User-Agent": [
+                        "python-requests/2.20.1"
                     ]
-                }
+                },
+                "method": "POST",
+                "uri": "https://ws.audioscrobbler.com/2.0/"
             },
             "response": {
-                "status": {
-                    "code": 200,
-                    "message": "OK"
+                "body": {
+                    "string": "{\"scrobbles\":{\"@attr\":{\"accepted\":0,\"ignored\":2},\"scrobble\":[{\"artist\":{\"corrected\":\"0\",\"#text\":\"Green Day\"},\"ignoredMessage\":{\"code\":\"1\",\"#text\":\"\"},\"albumArtist\":{\"corrected\":\"0\",\"#text\":\"\"},\"timestamp\":\"1541878500\",\"album\":{\"corrected\":\"0\"},\"track\":{\"corrected\":\"0\",\"#text\":\"Bang Bang\"}},{\"artist\":{\"corrected\":\"0\",\"#text\":\"Awolnation\"},\"ignoredMessage\":{\"code\":\"1\",\"#text\":\"\"},\"albumArtist\":{\"corrected\":\"0\",\"#text\":\"\"},\"timestamp\":\"1541878500\",\"album\":{\"corrected\":\"0\"},\"track\":{\"corrected\":\"0\",\"#text\":\"Sail\"}}]}}"
                 },
                 "headers": {
-                    "Date": [
-                        "Sat, 08 Dec 2018 21:26:00 GMT"
-                    ],
                     "Access-Control-Allow-Methods": [
                         "POST, GET, OPTIONS"
-                    ],
-                    "Content-Type": [
-                        "application/json"
-                    ],
-                    "content-length": [
-                        "519"
-                    ],
-                    "Connection": [
-                        "keep-alive"
                     ],
                     "Access-Control-Allow-Origin": [
                         "*"
                     ],
+                    "Access-Control-Max-Age": [
+                        "86400"
+                    ],
+                    "Connection": [
+                        "keep-alive"
+                    ],
+                    "Content-Type": [
+                        "application/json"
+                    ],
+                    "Date": [
+                        "Sat, 08 Dec 2018 21:26:00 GMT"
+                    ],
                     "Server": [
                         "openresty/1.9.7.5"
                     ],
-                    "Access-Control-Max-Age": [
-                        "86400"
+                    "content-length": [
+                        "519"
                     ]
                 },
-                "body": {
-                    "string": "{\"scrobbles\":{\"@attr\":{\"accepted\":0,\"ignored\":2},\"scrobble\":[{\"artist\":{\"corrected\":\"0\",\"#text\":\"Green Day\"},\"ignoredMessage\":{\"code\":\"1\",\"#text\":\"\"},\"albumArtist\":{\"corrected\":\"0\",\"#text\":\"\"},\"timestamp\":\"1541878500\",\"album\":{\"corrected\":\"0\"},\"track\":{\"corrected\":\"0\",\"#text\":\"Bang Bang\"}},{\"artist\":{\"corrected\":\"0\",\"#text\":\"Awolnation\"},\"ignoredMessage\":{\"code\":\"1\",\"#text\":\"\"},\"albumArtist\":{\"corrected\":\"0\",\"#text\":\"\"},\"timestamp\":\"1541878500\",\"album\":{\"corrected\":\"0\"},\"track\":{\"corrected\":\"0\",\"#text\":\"Sail\"}}]}}"
+                "status": {
+                    "code": 200,
+                    "message": "OK"
                 }
             }
         },
         {
             "request": {
-                "method": "POST",
-                "uri": "https://ws.audioscrobbler.com/2.0/",
                 "body": "method=track.scrobble&artist%5B0%5D=The+Head+and+the+Heart&track%5B0%5D=All+We+Ever+Knew&timestamp%5B0%5D=1541878500&artist%5B1%5D=Kaleo&track%5B1%5D=Way+Down+We+Go&timestamp%5B1%5D=1541878500&format=json&api_key=LAST_FM_API_KEY&sk=USER_SESSION&api_sig=API_SIG",
                 "headers": {
-                    "User-Agent": [
-                        "python-requests/2.20.1"
+                    "Accept": [
+                        "*/*"
                     ],
                     "Accept-Encoding": [
                         "gzip, deflate"
-                    ],
-                    "Accept": [
-                        "*/*"
                     ],
                     "Connection": [
                         "keep-alive"
@@ -148,59 +142,59 @@
                     ],
                     "Content-Type": [
                         "application/x-www-form-urlencoded"
+                    ],
+                    "User-Agent": [
+                        "python-requests/2.20.1"
                     ]
-                }
+                },
+                "method": "POST",
+                "uri": "https://ws.audioscrobbler.com/2.0/"
             },
             "response": {
-                "status": {
-                    "code": 200,
-                    "message": "OK"
+                "body": {
+                    "string": "{\"scrobbles\":{\"@attr\":{\"accepted\":0,\"ignored\":2},\"scrobble\":[{\"artist\":{\"corrected\":\"0\",\"#text\":\"The Head and the Heart\"},\"ignoredMessage\":{\"code\":\"1\",\"#text\":\"\"},\"albumArtist\":{\"corrected\":\"0\",\"#text\":\"\"},\"timestamp\":\"1541878500\",\"album\":{\"corrected\":\"0\"},\"track\":{\"corrected\":\"0\",\"#text\":\"All We Ever Knew\"}},{\"artist\":{\"corrected\":\"0\",\"#text\":\"Kaleo\"},\"ignoredMessage\":{\"code\":\"1\",\"#text\":\"\"},\"albumArtist\":{\"corrected\":\"0\",\"#text\":\"\"},\"timestamp\":\"1541878500\",\"album\":{\"corrected\":\"0\"},\"track\":{\"corrected\":\"0\",\"#text\":\"Way Down We Go\"}}]}}"
                 },
                 "headers": {
-                    "Date": [
-                        "Sat, 08 Dec 2018 21:26:13 GMT"
-                    ],
                     "Access-Control-Allow-Methods": [
                         "POST, GET, OPTIONS"
-                    ],
-                    "Content-Type": [
-                        "application/json"
-                    ],
-                    "content-length": [
-                        "544"
-                    ],
-                    "Connection": [
-                        "keep-alive"
                     ],
                     "Access-Control-Allow-Origin": [
                         "*"
                     ],
+                    "Access-Control-Max-Age": [
+                        "86400"
+                    ],
+                    "Connection": [
+                        "keep-alive"
+                    ],
+                    "Content-Type": [
+                        "application/json"
+                    ],
+                    "Date": [
+                        "Sat, 08 Dec 2018 21:26:13 GMT"
+                    ],
                     "Server": [
                         "openresty/1.9.7.5"
                     ],
-                    "Access-Control-Max-Age": [
-                        "86400"
+                    "content-length": [
+                        "544"
                     ]
                 },
-                "body": {
-                    "string": "{\"scrobbles\":{\"@attr\":{\"accepted\":0,\"ignored\":2},\"scrobble\":[{\"artist\":{\"corrected\":\"0\",\"#text\":\"The Head and the Heart\"},\"ignoredMessage\":{\"code\":\"1\",\"#text\":\"\"},\"albumArtist\":{\"corrected\":\"0\",\"#text\":\"\"},\"timestamp\":\"1541878500\",\"album\":{\"corrected\":\"0\"},\"track\":{\"corrected\":\"0\",\"#text\":\"All We Ever Knew\"}},{\"artist\":{\"corrected\":\"0\",\"#text\":\"Kaleo\"},\"ignoredMessage\":{\"code\":\"1\",\"#text\":\"\"},\"albumArtist\":{\"corrected\":\"0\",\"#text\":\"\"},\"timestamp\":\"1541878500\",\"album\":{\"corrected\":\"0\"},\"track\":{\"corrected\":\"0\",\"#text\":\"Way Down We Go\"}}]}}"
+                "status": {
+                    "code": 200,
+                    "message": "OK"
                 }
             }
         },
         {
             "request": {
-                "method": "POST",
-                "uri": "https://ws.audioscrobbler.com/2.0/",
                 "body": "method=track.scrobble&artist%5B0%5D=Disturbed&track%5B0%5D=The+Sound+of+Silence&timestamp%5B0%5D=1541878500&format=json&api_key=LAST_FM_API_KEY&sk=USER_SESSION&api_sig=API_SIG",
                 "headers": {
-                    "User-Agent": [
-                        "python-requests/2.20.1"
+                    "Accept": [
+                        "*/*"
                     ],
                     "Accept-Encoding": [
                         "gzip, deflate"
-                    ],
-                    "Accept": [
-                        "*/*"
                     ],
                     "Connection": [
                         "keep-alive"
@@ -210,44 +204,50 @@
                     ],
                     "Content-Type": [
                         "application/x-www-form-urlencoded"
+                    ],
+                    "User-Agent": [
+                        "python-requests/2.20.1"
                     ]
-                }
+                },
+                "method": "POST",
+                "uri": "https://ws.audioscrobbler.com/2.0/"
             },
             "response": {
-                "status": {
-                    "code": 200,
-                    "message": "OK"
+                "body": {
+                    "string": "{\"scrobbles\":{\"@attr\":{\"accepted\":0,\"ignored\":1},\"scrobble\":{\"artist\":{\"corrected\":\"0\",\"#text\":\"Disturbed\"},\"ignoredMessage\":{\"code\":\"1\",\"#text\":\"\"},\"albumArtist\":{\"corrected\":\"0\",\"#text\":\"\"},\"timestamp\":\"1541878500\",\"album\":{\"corrected\":\"0\"},\"track\":{\"corrected\":\"0\",\"#text\":\"The Sound of Silence\"}}}}"
                 },
                 "headers": {
-                    "Date": [
-                        "Sat, 08 Dec 2018 21:26:46 GMT"
-                    ],
                     "Access-Control-Allow-Methods": [
                         "POST, GET, OPTIONS"
-                    ],
-                    "Content-Type": [
-                        "application/json"
-                    ],
-                    "content-length": [
-                        "302"
-                    ],
-                    "Connection": [
-                        "keep-alive"
                     ],
                     "Access-Control-Allow-Origin": [
                         "*"
                     ],
+                    "Access-Control-Max-Age": [
+                        "86400"
+                    ],
+                    "Connection": [
+                        "keep-alive"
+                    ],
+                    "Content-Type": [
+                        "application/json"
+                    ],
+                    "Date": [
+                        "Sat, 08 Dec 2018 21:26:46 GMT"
+                    ],
                     "Server": [
                         "openresty/1.9.7.5"
                     ],
-                    "Access-Control-Max-Age": [
-                        "86400"
+                    "content-length": [
+                        "302"
                     ]
                 },
-                "body": {
-                    "string": "{\"scrobbles\":{\"@attr\":{\"accepted\":0,\"ignored\":1},\"scrobble\":{\"artist\":{\"corrected\":\"0\",\"#text\":\"Disturbed\"},\"ignoredMessage\":{\"code\":\"1\",\"#text\":\"\"},\"albumArtist\":{\"corrected\":\"0\",\"#text\":\"\"},\"timestamp\":\"1541878500\",\"album\":{\"corrected\":\"0\"},\"track\":{\"corrected\":\"0\",\"#text\":\"The Sound of Silence\"}}}}"
+                "status": {
+                    "code": 200,
+                    "message": "OK"
                 }
             }
         }
-    ]
+    ],
+    "version": 1
 }

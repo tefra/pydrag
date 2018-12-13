@@ -1,9 +1,33 @@
 {
     "data": [
         {
+            "image": [
+                {
+                    "size": "small",
+                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
+                },
+                {
+                    "size": "medium",
+                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
+                },
+                {
+                    "size": "large",
+                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
+                },
+                {
+                    "size": "extralarge",
+                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                },
+                {
+                    "size": "mega",
+                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
+                }
+            ],
             "mbid": "CENSORED194e",
             "name": "Jack Bruce",
-            "url": "https://www.last.fm/music/Jack+Bruce",
+            "url": "https://www.last.fm/music/Jack+Bruce"
+        },
+        {
             "image": [
                 {
                     "size": "small",
@@ -25,12 +49,12 @@
                     "size": "mega",
                     "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
-            ]
-        },
-        {
+            ],
             "mbid": "CENSOREDb294",
             "name": "Afghan Whigs",
-            "url": "https://www.last.fm/music/Afghan+Whigs",
+            "url": "https://www.last.fm/music/Afghan+Whigs"
+        },
+        {
             "image": [
                 {
                     "size": "small",
@@ -52,12 +76,12 @@
                     "size": "mega",
                     "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
-            ]
-        },
-        {
+            ],
             "mbid": "CENSORED76a6",
             "name": "JEFF the Brotherhood",
-            "url": "https://www.last.fm/music/JEFF+the+Brotherhood",
+            "url": "https://www.last.fm/music/JEFF+the+Brotherhood"
+        },
+        {
             "image": [
                 {
                     "size": "small",
@@ -79,12 +103,12 @@
                     "size": "mega",
                     "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
-            ]
-        },
-        {
+            ],
             "mbid": "CENSORED23ed",
             "name": "Morphine",
-            "url": "https://www.last.fm/music/Morphine",
+            "url": "https://www.last.fm/music/Morphine"
+        },
+        {
             "image": [
                 {
                     "size": "small",
@@ -106,12 +130,12 @@
                     "size": "mega",
                     "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
-            ]
-        },
-        {
+            ],
             "mbid": "CENSOREDb1b5",
             "name": "John Hammond",
-            "url": "https://www.last.fm/music/John+Hammond",
+            "url": "https://www.last.fm/music/John+Hammond"
+        },
+        {
             "image": [
                 {
                     "size": "small",
@@ -133,12 +157,12 @@
                     "size": "mega",
                     "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
-            ]
-        },
-        {
+            ],
             "mbid": "CENSOREDe919",
             "name": "G3",
-            "url": "https://www.last.fm/music/G3",
+            "url": "https://www.last.fm/music/G3"
+        },
+        {
             "image": [
                 {
                     "size": "small",
@@ -160,12 +184,12 @@
                     "size": "mega",
                     "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
-            ]
-        },
-        {
+            ],
             "mbid": "CENSOREDc68e",
             "name": "Steve Winwood",
-            "url": "https://www.last.fm/music/Steve+Winwood",
+            "url": "https://www.last.fm/music/Steve+Winwood"
+        },
+        {
             "image": [
                 {
                     "size": "small",
@@ -187,12 +211,12 @@
                     "size": "mega",
                     "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
-            ]
-        },
-        {
+            ],
             "mbid": "CENSOREDda4b",
             "name": "Sebastian Bach",
-            "url": "https://www.last.fm/music/Sebastian+Bach",
+            "url": "https://www.last.fm/music/Sebastian+Bach"
+        },
+        {
             "image": [
                 {
                     "size": "small",
@@ -214,12 +238,12 @@
                     "size": "mega",
                     "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
-            ]
-        },
-        {
+            ],
             "mbid": "CENSORED6d14",
             "name": "The 69 Eyes",
-            "url": "https://www.last.fm/music/The+69+Eyes",
+            "url": "https://www.last.fm/music/The+69+Eyes"
+        },
+        {
             "image": [
                 {
                     "size": "small",
@@ -241,12 +265,12 @@
                     "size": "mega",
                     "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
-            ]
-        },
-        {
+            ],
             "mbid": "",
             "name": "Big Wolf Pappa",
-            "url": "https://www.last.fm/music/Big+Wolf+Pappa",
+            "url": "https://www.last.fm/music/Big+Wolf+Pappa"
+        },
+        {
             "image": [
                 {
                     "size": "small",
@@ -268,12 +292,12 @@
                     "size": "mega",
                     "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
-            ]
-        },
-        {
+            ],
             "mbid": "CENSORED7c15",
             "name": "Van Halen",
-            "url": "https://www.last.fm/music/Van+Halen",
+            "url": "https://www.last.fm/music/Van+Halen"
+        },
+        {
             "image": [
                 {
                     "size": "small",
@@ -295,12 +319,12 @@
                     "size": "mega",
                     "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
-            ]
-        },
-        {
+            ],
             "mbid": "CENSORED44bf",
             "name": "White Lion",
-            "url": "https://www.last.fm/music/White+Lion",
+            "url": "https://www.last.fm/music/White+Lion"
+        },
+        {
             "image": [
                 {
                     "size": "small",
@@ -322,12 +346,12 @@
                     "size": "mega",
                     "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
-            ]
-        },
-        {
+            ],
             "mbid": "CENSORED674a",
             "name": "Led Zeppelin",
-            "url": "https://www.last.fm/music/Led+Zeppelin",
+            "url": "https://www.last.fm/music/Led+Zeppelin"
+        },
+        {
             "image": [
                 {
                     "size": "small",
@@ -349,12 +373,12 @@
                     "size": "mega",
                     "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
-            ]
-        },
-        {
+            ],
             "mbid": "CENSORED3ed1",
             "name": "AC/DC",
-            "url": "https://www.last.fm/music/AC%2FDC",
+            "url": "https://www.last.fm/music/AC%2FDC"
+        },
+        {
             "image": [
                 {
                     "size": "small",
@@ -376,12 +400,12 @@
                     "size": "mega",
                     "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
-            ]
-        },
-        {
+            ],
             "mbid": "CENSORED0ecd",
             "name": "Nelson",
-            "url": "https://www.last.fm/music/Nelson",
+            "url": "https://www.last.fm/music/Nelson"
+        },
+        {
             "image": [
                 {
                     "size": "small",
@@ -403,12 +427,12 @@
                     "size": "mega",
                     "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
-            ]
-        },
-        {
+            ],
             "mbid": "CENSORED81d4",
             "name": "Jimi Hendrix",
-            "url": "https://www.last.fm/music/Jimi+Hendrix",
+            "url": "https://www.last.fm/music/Jimi+Hendrix"
+        },
+        {
             "image": [
                 {
                     "size": "small",
@@ -430,12 +454,12 @@
                     "size": "mega",
                     "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
-            ]
-        },
-        {
+            ],
             "mbid": "CENSORED487a",
             "name": "Buckcherry",
-            "url": "https://www.last.fm/music/Buckcherry",
+            "url": "https://www.last.fm/music/Buckcherry"
+        },
+        {
             "image": [
                 {
                     "size": "small",
@@ -457,12 +481,12 @@
                     "size": "mega",
                     "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
-            ]
-        },
-        {
+            ],
             "mbid": "CENSORED8e43",
             "name": "Guns N' Roses",
-            "url": "https://www.last.fm/music/Guns+N%27+Roses",
+            "url": "https://www.last.fm/music/Guns+N%27+Roses"
+        },
+        {
             "image": [
                 {
                     "size": "small",
@@ -484,39 +508,12 @@
                     "size": "mega",
                     "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
-            ]
-        },
-        {
+            ],
             "mbid": "CENSORED9b80",
             "name": "Rage Against the Machine",
-            "url": "https://www.last.fm/music/Rage+Against+the+Machine",
-            "image": [
-                {
-                    "size": "small",
-                    "text": "https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png"
-                },
-                {
-                    "size": "medium",
-                    "text": "https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png"
-                },
-                {
-                    "size": "large",
-                    "text": "https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png"
-                },
-                {
-                    "size": "extralarge",
-                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
-                },
-                {
-                    "size": "mega",
-                    "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
-                }
-            ]
+            "url": "https://www.last.fm/music/Rage+Against+the+Machine"
         },
         {
-            "mbid": "CENSORED5c30",
-            "name": "Red Hot Chili Peppers",
-            "url": "https://www.last.fm/music/Red+Hot+Chili+Peppers",
             "image": [
                 {
                     "size": "small",
@@ -538,7 +535,10 @@
                     "size": "mega",
                     "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
-            ]
+            ],
+            "mbid": "CENSORED5c30",
+            "name": "Red Hot Chili Peppers",
+            "url": "https://www.last.fm/music/Red+Hot+Chili+Peppers"
         }
     ]
 }

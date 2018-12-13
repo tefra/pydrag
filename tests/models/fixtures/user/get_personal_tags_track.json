@@ -1,64 +1,64 @@
 {
-    "version": 1,
     "interactions": [
         {
             "request": {
-                "method": "GET",
-                "uri": "https://ws.audioscrobbler.com/2.0/?api_key=LAST_FM_API_KEY&format=json&limit=50&method=user.getPersonalTags&page=1&tag=rock&taggingtype=track&user=rj",
                 "body": null,
                 "headers": {
-                    "User-Agent": [
-                        "python-requests/2.20.0"
+                    "Accept": [
+                        "*/*"
                     ],
                     "Accept-Encoding": [
                         "gzip, deflate"
                     ],
-                    "Accept": [
-                        "*/*"
-                    ],
                     "Connection": [
                         "keep-alive"
+                    ],
+                    "User-Agent": [
+                        "python-requests/2.20.0"
                     ]
-                }
+                },
+                "method": "GET",
+                "uri": "https://ws.audioscrobbler.com/2.0/?api_key=LAST_FM_API_KEY&format=json&limit=50&method=user.getPersonalTags&page=1&tag=rock&taggingtype=track&user=rj"
             },
             "response": {
-                "status": {
-                    "code": 200,
-                    "message": "OK"
+                "body": {
+                    "string": "{\"taggings\":{\"tracks\":{\"track\":[{\"name\":\"Arc Of A Diver\",\"duration\":\"FIXME\",\"mbid\":\"CENSOREDccc4\",\"url\":\"https://www.last.fm/music/Steve+Winwood/_/Arc+Of+A+Diver\",\"streamable\":{\"#text\":\"0\",\"fulltrack\":\"0\"},\"artist\":{\"name\":\"Steve Winwood\",\"mbid\":\"CENSOREDc68e\",\"url\":\"https://www.last.fm/music/Steve+Winwood\"},\"image\":[{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png\",\"size\":\"small\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png\",\"size\":\"medium\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png\",\"size\":\"large\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png\",\"size\":\"extralarge\"}]},{\"name\":\"Finish What Ya Started\",\"duration\":\"FIXME\",\"mbid\":\"CENSORED11c8\",\"url\":\"https://www.last.fm/music/Van+Halen/_/Finish+What+Ya+Started\",\"streamable\":{\"#text\":\"0\",\"fulltrack\":\"0\"},\"artist\":{\"name\":\"Van Halen\",\"mbid\":\"CENSORED7c15\",\"url\":\"https://www.last.fm/music/Van+Halen\"},\"image\":[{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png\",\"size\":\"small\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png\",\"size\":\"medium\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png\",\"size\":\"large\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png\",\"size\":\"extralarge\"}]},{\"name\":\"Cry For Freedom\",\"duration\":\"FIXME\",\"mbid\":\"CENSOREDcc78\",\"url\":\"https://www.last.fm/music/White+Lion/_/Cry+For+Freedom\",\"streamable\":{\"#text\":\"0\",\"fulltrack\":\"0\"},\"artist\":{\"name\":\"White Lion\",\"mbid\":\"CENSORED44bf\",\"url\":\"https://www.last.fm/music/White+Lion\"},\"image\":[{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png\",\"size\":\"small\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png\",\"size\":\"medium\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png\",\"size\":\"large\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png\",\"size\":\"extralarge\"}]},{\"name\":\"Good Times Bad Times\",\"duration\":\"FIXME\",\"mbid\":\"CENSORED189f\",\"url\":\"https://www.last.fm/music/Led+Zeppelin/_/Good+Times+Bad+Times\",\"streamable\":{\"#text\":\"0\",\"fulltrack\":\"0\"},\"artist\":{\"name\":\"Led Zeppelin\",\"mbid\":\"CENSORED674a\",\"url\":\"https://www.last.fm/music/Led+Zeppelin\"},\"image\":[{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png\",\"size\":\"small\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png\",\"size\":\"medium\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png\",\"size\":\"large\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png\",\"size\":\"extralarge\"}]},{\"name\":\"Hells Bells\",\"duration\":\"FIXME\",\"mbid\":\"CENSOREDb286\",\"url\":\"https://www.last.fm/music/AC%2FDC/_/Hells+Bells\",\"streamable\":{\"#text\":\"0\",\"fulltrack\":\"0\"},\"artist\":{\"name\":\"AC/DC\",\"mbid\":\"CENSORED3ed1\",\"url\":\"https://www.last.fm/music/AC%2FDC\"},\"image\":[{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png\",\"size\":\"small\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png\",\"size\":\"medium\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png\",\"size\":\"large\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png\",\"size\":\"extralarge\"}]}]},\"@attr\":{\"user\":\"RJ\",\"tag\":\"rock\",\"page\":\"1\",\"perPage\":\"50\",\"totalPages\":\"1\",\"total\":\"5\"}}}"
                 },
                 "headers": {
-                    "Server": [
-                        "openresty/1.9.7.5"
-                    ],
-                    "Access-Control-Max-Age": [
-                        "86400"
-                    ],
-                    "Connection": [
-                        "keep-alive"
-                    ],
-                    "Date": [
-                        "Sat, 10 Nov 2018 11:28:08 GMT"
+                    "Access-Control-Allow-Methods": [
+                        "POST, GET, OPTIONS"
                     ],
                     "Access-Control-Allow-Origin": [
                         "*"
                     ],
+                    "Access-Control-Max-Age": [
+                        "86400"
+                    ],
                     "Access-Control-Request-Headers": [
                         "Origin, X-Atmosphere-tracking-id, X-Atmosphere-Framework, X-Cache-Date, Content-Type, X-Atmosphere-Transport, *"
+                    ],
+                    "Connection": [
+                        "keep-alive"
+                    ],
+                    "Content-Length": [
+                        "3965"
                     ],
                     "Content-Type": [
                         "application/json; charset=UTF-8"
                     ],
-                    "Access-Control-Allow-Methods": [
-                        "POST, GET, OPTIONS"
+                    "Date": [
+                        "Sat, 10 Nov 2018 11:28:08 GMT"
                     ],
-                    "Content-Length": [
-                        "3965"
+                    "Server": [
+                        "openresty/1.9.7.5"
                     ]
                 },
-                "body": {
-                    "string": "{\"taggings\":{\"tracks\":{\"track\":[{\"name\":\"Arc Of A Diver\",\"duration\":\"FIXME\",\"mbid\":\"CENSOREDccc4\",\"url\":\"https://www.last.fm/music/Steve+Winwood/_/Arc+Of+A+Diver\",\"streamable\":{\"#text\":\"0\",\"fulltrack\":\"0\"},\"artist\":{\"name\":\"Steve Winwood\",\"mbid\":\"CENSOREDc68e\",\"url\":\"https://www.last.fm/music/Steve+Winwood\"},\"image\":[{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png\",\"size\":\"small\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png\",\"size\":\"medium\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png\",\"size\":\"large\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png\",\"size\":\"extralarge\"}]},{\"name\":\"Finish What Ya Started\",\"duration\":\"FIXME\",\"mbid\":\"CENSORED11c8\",\"url\":\"https://www.last.fm/music/Van+Halen/_/Finish+What+Ya+Started\",\"streamable\":{\"#text\":\"0\",\"fulltrack\":\"0\"},\"artist\":{\"name\":\"Van Halen\",\"mbid\":\"CENSORED7c15\",\"url\":\"https://www.last.fm/music/Van+Halen\"},\"image\":[{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png\",\"size\":\"small\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png\",\"size\":\"medium\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png\",\"size\":\"large\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png\",\"size\":\"extralarge\"}]},{\"name\":\"Cry For Freedom\",\"duration\":\"FIXME\",\"mbid\":\"CENSOREDcc78\",\"url\":\"https://www.last.fm/music/White+Lion/_/Cry+For+Freedom\",\"streamable\":{\"#text\":\"0\",\"fulltrack\":\"0\"},\"artist\":{\"name\":\"White Lion\",\"mbid\":\"CENSORED44bf\",\"url\":\"https://www.last.fm/music/White+Lion\"},\"image\":[{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png\",\"size\":\"small\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png\",\"size\":\"medium\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png\",\"size\":\"large\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png\",\"size\":\"extralarge\"}]},{\"name\":\"Good Times Bad Times\",\"duration\":\"FIXME\",\"mbid\":\"CENSORED189f\",\"url\":\"https://www.last.fm/music/Led+Zeppelin/_/Good+Times+Bad+Times\",\"streamable\":{\"#text\":\"0\",\"fulltrack\":\"0\"},\"artist\":{\"name\":\"Led Zeppelin\",\"mbid\":\"CENSORED674a\",\"url\":\"https://www.last.fm/music/Led+Zeppelin\"},\"image\":[{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png\",\"size\":\"small\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png\",\"size\":\"medium\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png\",\"size\":\"large\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png\",\"size\":\"extralarge\"}]},{\"name\":\"Hells Bells\",\"duration\":\"FIXME\",\"mbid\":\"CENSOREDb286\",\"url\":\"https://www.last.fm/music/AC%2FDC/_/Hells+Bells\",\"streamable\":{\"#text\":\"0\",\"fulltrack\":\"0\"},\"artist\":{\"name\":\"AC/DC\",\"mbid\":\"CENSORED3ed1\",\"url\":\"https://www.last.fm/music/AC%2FDC\"},\"image\":[{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png\",\"size\":\"small\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png\",\"size\":\"medium\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png\",\"size\":\"large\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png\",\"size\":\"extralarge\"}]}]},\"@attr\":{\"user\":\"RJ\",\"tag\":\"rock\",\"page\":\"1\",\"perPage\":\"50\",\"totalPages\":\"1\",\"total\":\"5\"}}}"
+                "status": {
+                    "code": 200,
+                    "message": "OK"
                 }
             }
         }
-    ]
+    ],
+    "version": 1
 }

@@ -1,64 +1,64 @@
 {
-    "version": 1,
     "interactions": [
         {
             "request": {
-                "method": "GET",
-                "uri": "https://ws.audioscrobbler.com/2.0/?api_key=LAST_FM_API_KEY&artist=AC+%2F+DC&autocorrect=1&format=json&method=track.getTags&track=Hells+Bell&user=RJ",
                 "body": null,
                 "headers": {
-                    "User-Agent": [
-                        "python-requests/2.20.0"
+                    "Accept": [
+                        "*/*"
                     ],
                     "Accept-Encoding": [
                         "gzip, deflate"
                     ],
-                    "Accept": [
-                        "*/*"
-                    ],
                     "Connection": [
                         "keep-alive"
+                    ],
+                    "User-Agent": [
+                        "python-requests/2.20.0"
                     ]
-                }
+                },
+                "method": "GET",
+                "uri": "https://ws.audioscrobbler.com/2.0/?api_key=LAST_FM_API_KEY&artist=AC+%2F+DC&autocorrect=1&format=json&method=track.getTags&track=Hells+Bell&user=RJ"
             },
             "response": {
-                "status": {
-                    "code": 200,
-                    "message": "OK"
+                "body": {
+                    "string": "{\"tags\":{\"tag\":[{\"name\":\"guitar\",\"url\":\"https://www.last.fm/tag/guitar\"},{\"name\":\"metal\",\"url\":\"https://www.last.fm/tag/metal\"},{\"name\":\"rock\",\"url\":\"https://www.last.fm/tag/rock\"}],\"@attr\":{\"artist\":\"AC/DC\",\"track\":\"Hells Bells\"}}}"
                 },
                 "headers": {
+                    "Access-Control-Allow-Methods": [
+                        "POST, GET, OPTIONS"
+                    ],
                     "Access-Control-Allow-Origin": [
                         "*"
                     ],
-                    "Date": [
-                        "Sun, 11 Nov 2018 00:12:23 GMT"
+                    "Access-Control-Max-Age": [
+                        "86400"
                     ],
                     "Access-Control-Request-Headers": [
                         "Origin, X-Atmosphere-tracking-id, X-Atmosphere-Framework, X-Cache-Date, Content-Type, X-Atmosphere-Transport, *"
                     ],
-                    "Server": [
-                        "openresty/1.9.7.5"
-                    ],
-                    "Access-Control-Allow-Methods": [
-                        "POST, GET, OPTIONS"
-                    ],
-                    "Content-Type": [
-                        "application/json; charset=UTF-8"
+                    "Connection": [
+                        "keep-alive"
                     ],
                     "Content-Length": [
                         "232"
                     ],
-                    "Connection": [
-                        "keep-alive"
+                    "Content-Type": [
+                        "application/json; charset=UTF-8"
                     ],
-                    "Access-Control-Max-Age": [
-                        "86400"
+                    "Date": [
+                        "Sun, 11 Nov 2018 00:12:23 GMT"
+                    ],
+                    "Server": [
+                        "openresty/1.9.7.5"
                     ]
                 },
-                "body": {
-                    "string": "{\"tags\":{\"tag\":[{\"name\":\"guitar\",\"url\":\"https://www.last.fm/tag/guitar\"},{\"name\":\"metal\",\"url\":\"https://www.last.fm/tag/metal\"},{\"name\":\"rock\",\"url\":\"https://www.last.fm/tag/rock\"}],\"@attr\":{\"artist\":\"AC/DC\",\"track\":\"Hells Bells\"}}}"
+                "status": {
+                    "code": 200,
+                    "message": "OK"
                 }
             }
         }
-    ]
+    ],
+    "version": 1
 }

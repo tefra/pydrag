@@ -1,20 +1,14 @@
 {
-    "version": 1,
     "interactions": [
         {
             "request": {
-                "method": "POST",
-                "uri": "https://ws.audioscrobbler.com/2.0/",
                 "body": "method=auth.getMobileSession&format=json&api_key=LAST_FM_API_KEY&username=Zaratoustre&authToken=USER_AUTH_TOKEN&api_sig=API_SIG",
                 "headers": {
-                    "User-Agent": [
-                        "python-requests/2.20.0"
+                    "Accept": [
+                        "*/*"
                     ],
                     "Accept-Encoding": [
                         "gzip, deflate"
-                    ],
-                    "Accept": [
-                        "*/*"
                     ],
                     "Connection": [
                         "keep-alive"
@@ -24,17 +18,24 @@
                     ],
                     "Content-Type": [
                         "application/x-www-form-urlencoded"
+                    ],
+                    "User-Agent": [
+                        "python-requests/2.20.0"
                     ]
-                }
+                },
+                "method": "POST",
+                "uri": "https://ws.audioscrobbler.com/2.0/"
             },
             "response": {
-                "status": {
-                    "code": 200,
-                    "message": "OK"
+                "body": {
+                    "string": "{\"session\":{\"subscriber\":0,\"name\":\"Zaratoustre\",\"key\":\"CENSORED\"}}"
                 },
                 "headers": {
-                    "Server": [
-                        "openresty/1.9.7.5"
+                    "Access-Control-Allow-Methods": [
+                        "POST, GET, OPTIONS"
+                    ],
+                    "Access-Control-Allow-Origin": [
+                        "*"
                     ],
                     "Access-Control-Max-Age": [
                         "86400"
@@ -42,41 +43,34 @@
                     "Connection": [
                         "keep-alive"
                     ],
-                    "content-length": [
-                        "90"
+                    "Content-Type": [
+                        "application/json"
                     ],
                     "Date": [
                         "Sat, 10 Nov 2018 11:27:42 GMT"
                     ],
-                    "Access-Control-Allow-Origin": [
-                        "*"
+                    "Server": [
+                        "openresty/1.9.7.5"
                     ],
-                    "Content-Type": [
-                        "application/json"
-                    ],
-                    "Access-Control-Allow-Methods": [
-                        "POST, GET, OPTIONS"
+                    "content-length": [
+                        "90"
                     ]
                 },
-                "body": {
-                    "string": "{\"session\":{\"subscriber\":0,\"name\":\"Zaratoustre\",\"key\":\"CENSORED\"}}"
+                "status": {
+                    "code": 200,
+                    "message": "OK"
                 }
             }
         },
         {
             "request": {
-                "method": "POST",
-                "uri": "https://ws.audioscrobbler.com/2.0/",
                 "body": "album=A+Night+at+the+Opera&artist=Queen&tag=bar&sk=USER_SESSION&method=album.removeTag&format=json&api_key=LAST_FM_API_KEY",
                 "headers": {
-                    "User-Agent": [
-                        "python-requests/2.20.0"
+                    "Accept": [
+                        "*/*"
                     ],
                     "Accept-Encoding": [
                         "gzip, deflate"
-                    ],
-                    "Accept": [
-                        "*/*"
                     ],
                     "Connection": [
                         "keep-alive"
@@ -86,47 +80,53 @@
                     ],
                     "Content-Type": [
                         "application/x-www-form-urlencoded"
+                    ],
+                    "User-Agent": [
+                        "python-requests/2.20.0"
                     ]
-                }
+                },
+                "method": "POST",
+                "uri": "https://ws.audioscrobbler.com/2.0/"
             },
             "response": {
-                "status": {
-                    "code": 200,
-                    "message": "OK"
+                "body": {
+                    "string": "{}"
                 },
                 "headers": {
-                    "Server": [
-                        "openresty/1.9.7.5"
-                    ],
-                    "Access-Control-Max-Age": [
-                        "86400"
-                    ],
-                    "Connection": [
-                        "keep-alive"
-                    ],
-                    "Date": [
-                        "Sat, 10 Nov 2018 11:27:43 GMT"
+                    "Access-Control-Allow-Methods": [
+                        "POST, GET, OPTIONS"
                     ],
                     "Access-Control-Allow-Origin": [
                         "*"
                     ],
+                    "Access-Control-Max-Age": [
+                        "86400"
+                    ],
                     "Access-Control-Request-Headers": [
                         "Origin, X-Atmosphere-tracking-id, X-Atmosphere-Framework, X-Cache-Date, Content-Type, X-Atmosphere-Transport, *"
+                    ],
+                    "Connection": [
+                        "keep-alive"
+                    ],
+                    "Content-Length": [
+                        "2"
                     ],
                     "Content-Type": [
                         "application/json; charset=UTF-8"
                     ],
-                    "Access-Control-Allow-Methods": [
-                        "POST, GET, OPTIONS"
+                    "Date": [
+                        "Sat, 10 Nov 2018 11:27:43 GMT"
                     ],
-                    "Content-Length": [
-                        "2"
+                    "Server": [
+                        "openresty/1.9.7.5"
                     ]
                 },
-                "body": {
-                    "string": "{}"
+                "status": {
+                    "code": 200,
+                    "message": "OK"
                 }
             }
         }
-    ]
+    ],
+    "version": 1
 }

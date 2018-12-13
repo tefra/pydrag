@@ -1,34 +1,35 @@
 {
-    "version": 1,
     "interactions": [
         {
             "request": {
-                "method": "GET",
-                "uri": "https://ws.audioscrobbler.com/2.0/?api_key=LAST_FM_API_KEY&format=json&method=user.getInfo&user=rj",
                 "body": null,
                 "headers": {
-                    "User-Agent": [
-                        "python-requests/2.20.0"
+                    "Accept": [
+                        "*/*"
                     ],
                     "Accept-Encoding": [
                         "gzip, deflate"
                     ],
-                    "Accept": [
-                        "*/*"
-                    ],
                     "Connection": [
                         "keep-alive"
+                    ],
+                    "User-Agent": [
+                        "python-requests/2.20.0"
                     ]
-                }
+                },
+                "method": "GET",
+                "uri": "https://ws.audioscrobbler.com/2.0/?api_key=LAST_FM_API_KEY&format=json&method=user.getInfo&user=rj"
             },
             "response": {
-                "status": {
-                    "code": 200,
-                    "message": "OK"
+                "body": {
+                    "string": "{\"user\":{\"playlists\":\"0\",\"playcount\":128549,\"gender\":\"n\",\"name\":\"RJ\",\"subscriber\":\"1\",\"url\":\"https:\\/\\/www.last.fm\\/user\\/RJ\",\"country\":\"United Kingdom\",\"image\":[{\"size\":\"small\",\"#text\":\"https:\\/\\/lastfm-img2.akamaized.net\\/i\\/u\\/34s\\/CENSORED.png\"},{\"size\":\"medium\",\"#text\":\"https:\\/\\/lastfm-img2.akamaized.net\\/i\\/u\\/64s\\/CENSORED.png\"},{\"size\":\"large\",\"#text\":\"https:\\/\\/lastfm-img2.akamaized.net\\/i\\/u\\/174s\\/CENSORED.png\"},{\"size\":\"extralarge\",\"#text\":\"https:\\/\\/lastfm-img2.akamaized.net\\/i\\/u\\/300x300\\/CENSORED.png\"}],\"registered\":{\"unixtime\":1037793040,\"#text\":1037793040},\"type\":\"alum\",\"age\":\"0\",\"bootstrap\":\"0\",\"realname\":\"Richard Jones \"}}"
                 },
                 "headers": {
-                    "Server": [
-                        "openresty/1.9.7.5"
+                    "Access-Control-Allow-Methods": [
+                        "POST, GET, OPTIONS"
+                    ],
+                    "Access-Control-Allow-Origin": [
+                        "*"
                     ],
                     "Access-Control-Max-Age": [
                         "86400"
@@ -36,26 +37,25 @@
                     "Connection": [
                         "keep-alive"
                     ],
-                    "content-length": [
-                        "747"
+                    "Content-Type": [
+                        "application/json"
                     ],
                     "Date": [
                         "Sat, 10 Nov 2018 11:28:04 GMT"
                     ],
-                    "Access-Control-Allow-Origin": [
-                        "*"
+                    "Server": [
+                        "openresty/1.9.7.5"
                     ],
-                    "Content-Type": [
-                        "application/json"
-                    ],
-                    "Access-Control-Allow-Methods": [
-                        "POST, GET, OPTIONS"
+                    "content-length": [
+                        "747"
                     ]
                 },
-                "body": {
-                    "string": "{\"user\":{\"playlists\":\"0\",\"playcount\":128549,\"gender\":\"n\",\"name\":\"RJ\",\"subscriber\":\"1\",\"url\":\"https:\\/\\/www.last.fm\\/user\\/RJ\",\"country\":\"United Kingdom\",\"image\":[{\"size\":\"small\",\"#text\":\"https:\\/\\/lastfm-img2.akamaized.net\\/i\\/u\\/34s\\/CENSORED.png\"},{\"size\":\"medium\",\"#text\":\"https:\\/\\/lastfm-img2.akamaized.net\\/i\\/u\\/64s\\/CENSORED.png\"},{\"size\":\"large\",\"#text\":\"https:\\/\\/lastfm-img2.akamaized.net\\/i\\/u\\/174s\\/CENSORED.png\"},{\"size\":\"extralarge\",\"#text\":\"https:\\/\\/lastfm-img2.akamaized.net\\/i\\/u\\/300x300\\/CENSORED.png\"}],\"registered\":{\"unixtime\":1037793040,\"#text\":1037793040},\"type\":\"alum\",\"age\":\"0\",\"bootstrap\":\"0\",\"realname\":\"Richard Jones \"}}"
+                "status": {
+                    "code": 200,
+                    "message": "OK"
                 }
             }
         }
-    ]
+    ],
+    "version": 1
 }

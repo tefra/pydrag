@@ -1,64 +1,64 @@
 {
-    "version": 1,
     "interactions": [
         {
             "request": {
-                "method": "GET",
-                "uri": "https://ws.audioscrobbler.com/2.0/?api_key=LAST_FM_API_KEY&country=greece&format=json&limit=10&method=geo.getTopArtists&page=1",
                 "body": null,
                 "headers": {
-                    "User-Agent": [
-                        "python-requests/2.20.0"
+                    "Accept": [
+                        "*/*"
                     ],
                     "Accept-Encoding": [
                         "gzip, deflate"
                     ],
-                    "Accept": [
-                        "*/*"
-                    ],
                     "Connection": [
                         "keep-alive"
+                    ],
+                    "User-Agent": [
+                        "python-requests/2.20.0"
                     ]
-                }
+                },
+                "method": "GET",
+                "uri": "https://ws.audioscrobbler.com/2.0/?api_key=LAST_FM_API_KEY&country=greece&format=json&limit=10&method=geo.getTopArtists&page=1"
             },
             "response": {
-                "status": {
-                    "code": 200,
-                    "message": "OK"
+                "body": {
+                    "string": "{\"topartists\":{\"artist\":[{\"name\":\"Radiohead\",\"listeners\":\"4685407\",\"mbid\":\"CENSORED2711\",\"url\":\"https://www.last.fm/music/Radiohead\",\"streamable\":\"0\",\"image\":[{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png\",\"size\":\"small\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png\",\"size\":\"medium\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png\",\"size\":\"large\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png\",\"size\":\"extralarge\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png\",\"size\":\"mega\"}]},{\"name\":\"David Bowie\",\"listeners\":\"3308310\",\"mbid\":\"CENSORED8e50\",\"url\":\"https://www.last.fm/music/David+Bowie\",\"streamable\":\"0\",\"image\":[{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png\",\"size\":\"small\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png\",\"size\":\"medium\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png\",\"size\":\"large\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png\",\"size\":\"extralarge\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png\",\"size\":\"mega\"}]},{\"name\":\"Pink Floyd\",\"listeners\":\"3035790\",\"mbid\":\"CENSORED5c47\",\"url\":\"https://www.last.fm/music/Pink+Floyd\",\"streamable\":\"0\",\"image\":[{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png\",\"size\":\"small\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png\",\"size\":\"medium\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png\",\"size\":\"large\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png\",\"size\":\"extralarge\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png\",\"size\":\"mega\"}]},{\"name\":\"Massive Attack\",\"listeners\":\"2553919\",\"mbid\":\"CENSORED6ca8\",\"url\":\"https://www.last.fm/music/Massive+Attack\",\"streamable\":\"0\",\"image\":[{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png\",\"size\":\"small\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png\",\"size\":\"medium\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png\",\"size\":\"large\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png\",\"size\":\"extralarge\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png\",\"size\":\"mega\"}]},{\"name\":\"The Cure\",\"listeners\":\"2891985\",\"mbid\":\"CENSORED2bcf\",\"url\":\"https://www.last.fm/music/The+Cure\",\"streamable\":\"0\",\"image\":[{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png\",\"size\":\"small\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png\",\"size\":\"medium\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png\",\"size\":\"large\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png\",\"size\":\"extralarge\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png\",\"size\":\"mega\"}]},{\"name\":\"The Rolling Stones\",\"listeners\":\"3756916\",\"mbid\":\"CENSOREDf598\",\"url\":\"https://www.last.fm/music/The+Rolling+Stones\",\"streamable\":\"0\",\"image\":[{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png\",\"size\":\"small\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png\",\"size\":\"medium\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png\",\"size\":\"large\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png\",\"size\":\"extralarge\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png\",\"size\":\"mega\"}]},{\"name\":\"The Beatles\",\"listeners\":\"3617984\",\"mbid\":\"CENSORED600d\",\"url\":\"https://www.last.fm/music/The+Beatles\",\"streamable\":\"0\",\"image\":[{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png\",\"size\":\"small\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png\",\"size\":\"medium\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png\",\"size\":\"large\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png\",\"size\":\"extralarge\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png\",\"size\":\"mega\"}]},{\"name\":\"Depeche Mode\",\"listeners\":\"2652930\",\"mbid\":\"CENSOREDd4c0\",\"url\":\"https://www.last.fm/music/Depeche+Mode\",\"streamable\":\"0\",\"image\":[{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png\",\"size\":\"small\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png\",\"size\":\"medium\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png\",\"size\":\"large\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png\",\"size\":\"extralarge\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png\",\"size\":\"mega\"}]},{\"name\":\"Queen\",\"listeners\":\"3932441\",\"mbid\":\"CENSOREDf1a7\",\"url\":\"https://www.last.fm/music/Queen\",\"streamable\":\"0\",\"image\":[{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png\",\"size\":\"small\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png\",\"size\":\"medium\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png\",\"size\":\"large\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png\",\"size\":\"extralarge\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png\",\"size\":\"mega\"}]},{\"name\":\"Coldplay\",\"listeners\":\"5328820\",\"mbid\":\"CENSORED4234\",\"url\":\"https://www.last.fm/music/Coldplay\",\"streamable\":\"0\",\"image\":[{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png\",\"size\":\"small\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png\",\"size\":\"medium\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png\",\"size\":\"large\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png\",\"size\":\"extralarge\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png\",\"size\":\"mega\"}]}],\"@attr\":{\"country\":\"Greece\",\"page\":\"1\",\"perPage\":\"10\",\"totalPages\":\"32691\",\"total\":\"326901\"}}}"
                 },
                 "headers": {
-                    "Server": [
-                        "openresty/1.9.7.5"
-                    ],
-                    "Access-Control-Max-Age": [
-                        "86400"
-                    ],
-                    "Connection": [
-                        "keep-alive"
-                    ],
-                    "Date": [
-                        "Sat, 10 Nov 2018 11:27:49 GMT"
+                    "Access-Control-Allow-Methods": [
+                        "POST, GET, OPTIONS"
                     ],
                     "Access-Control-Allow-Origin": [
                         "*"
                     ],
+                    "Access-Control-Max-Age": [
+                        "86400"
+                    ],
                     "Access-Control-Request-Headers": [
                         "Origin, X-Atmosphere-tracking-id, X-Atmosphere-Framework, X-Cache-Date, Content-Type, X-Atmosphere-Transport, *"
+                    ],
+                    "Connection": [
+                        "keep-alive"
+                    ],
+                    "Content-Length": [
+                        "7192"
                     ],
                     "Content-Type": [
                         "application/json; charset=UTF-8"
                     ],
-                    "Access-Control-Allow-Methods": [
-                        "POST, GET, OPTIONS"
+                    "Date": [
+                        "Sat, 10 Nov 2018 11:27:49 GMT"
                     ],
-                    "Content-Length": [
-                        "7192"
+                    "Server": [
+                        "openresty/1.9.7.5"
                     ]
                 },
-                "body": {
-                    "string": "{\"topartists\":{\"artist\":[{\"name\":\"Radiohead\",\"listeners\":\"4685407\",\"mbid\":\"CENSORED2711\",\"url\":\"https://www.last.fm/music/Radiohead\",\"streamable\":\"0\",\"image\":[{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png\",\"size\":\"small\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png\",\"size\":\"medium\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png\",\"size\":\"large\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png\",\"size\":\"extralarge\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png\",\"size\":\"mega\"}]},{\"name\":\"David Bowie\",\"listeners\":\"3308310\",\"mbid\":\"CENSORED8e50\",\"url\":\"https://www.last.fm/music/David+Bowie\",\"streamable\":\"0\",\"image\":[{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png\",\"size\":\"small\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png\",\"size\":\"medium\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png\",\"size\":\"large\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png\",\"size\":\"extralarge\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png\",\"size\":\"mega\"}]},{\"name\":\"Pink Floyd\",\"listeners\":\"3035790\",\"mbid\":\"CENSORED5c47\",\"url\":\"https://www.last.fm/music/Pink+Floyd\",\"streamable\":\"0\",\"image\":[{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png\",\"size\":\"small\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png\",\"size\":\"medium\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png\",\"size\":\"large\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png\",\"size\":\"extralarge\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png\",\"size\":\"mega\"}]},{\"name\":\"Massive Attack\",\"listeners\":\"2553919\",\"mbid\":\"CENSORED6ca8\",\"url\":\"https://www.last.fm/music/Massive+Attack\",\"streamable\":\"0\",\"image\":[{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png\",\"size\":\"small\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png\",\"size\":\"medium\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png\",\"size\":\"large\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png\",\"size\":\"extralarge\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png\",\"size\":\"mega\"}]},{\"name\":\"The Cure\",\"listeners\":\"2891985\",\"mbid\":\"CENSORED2bcf\",\"url\":\"https://www.last.fm/music/The+Cure\",\"streamable\":\"0\",\"image\":[{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png\",\"size\":\"small\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png\",\"size\":\"medium\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png\",\"size\":\"large\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png\",\"size\":\"extralarge\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png\",\"size\":\"mega\"}]},{\"name\":\"The Rolling Stones\",\"listeners\":\"3756916\",\"mbid\":\"CENSOREDf598\",\"url\":\"https://www.last.fm/music/The+Rolling+Stones\",\"streamable\":\"0\",\"image\":[{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png\",\"size\":\"small\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png\",\"size\":\"medium\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png\",\"size\":\"large\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png\",\"size\":\"extralarge\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png\",\"size\":\"mega\"}]},{\"name\":\"The Beatles\",\"listeners\":\"3617984\",\"mbid\":\"CENSORED600d\",\"url\":\"https://www.last.fm/music/The+Beatles\",\"streamable\":\"0\",\"image\":[{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png\",\"size\":\"small\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png\",\"size\":\"medium\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png\",\"size\":\"large\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png\",\"size\":\"extralarge\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png\",\"size\":\"mega\"}]},{\"name\":\"Depeche Mode\",\"listeners\":\"2652930\",\"mbid\":\"CENSOREDd4c0\",\"url\":\"https://www.last.fm/music/Depeche+Mode\",\"streamable\":\"0\",\"image\":[{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png\",\"size\":\"small\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png\",\"size\":\"medium\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png\",\"size\":\"large\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png\",\"size\":\"extralarge\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png\",\"size\":\"mega\"}]},{\"name\":\"Queen\",\"listeners\":\"3932441\",\"mbid\":\"CENSOREDf1a7\",\"url\":\"https://www.last.fm/music/Queen\",\"streamable\":\"0\",\"image\":[{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png\",\"size\":\"small\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png\",\"size\":\"medium\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png\",\"size\":\"large\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png\",\"size\":\"extralarge\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png\",\"size\":\"mega\"}]},{\"name\":\"Coldplay\",\"listeners\":\"5328820\",\"mbid\":\"CENSORED4234\",\"url\":\"https://www.last.fm/music/Coldplay\",\"streamable\":\"0\",\"image\":[{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png\",\"size\":\"small\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png\",\"size\":\"medium\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png\",\"size\":\"large\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png\",\"size\":\"extralarge\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png\",\"size\":\"mega\"}]}],\"@attr\":{\"country\":\"Greece\",\"page\":\"1\",\"perPage\":\"10\",\"totalPages\":\"32691\",\"total\":\"326901\"}}}"
+                "status": {
+                    "code": 200,
+                    "message": "OK"
                 }
             }
         }
-    ]
+    ],
+    "version": 1
 }

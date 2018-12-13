@@ -1,10 +1,7 @@
 {
-    "playlists": 0,
-    "playcount": 128549,
-    "gender": "n",
-    "name": "RJ",
-    "url": "https://www.last.fm/user/RJ",
+    "age": 0,
     "country": "United Kingdom",
+    "gender": "n",
     "image": [
         {
             "size": "small",
@@ -23,10 +20,13 @@
             "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
         }
     ],
-    "age": 0,
+    "name": "RJ",
+    "playcount": 128549,
+    "playlists": 0,
+    "real_name": "Richard Jones ",
     "registered": {
-        "timestamp": 1037793040,
-        "text": "1037793040"
+        "text": "1037793040",
+        "timestamp": 1037793040
     },
-    "real_name": "Richard Jones "
+    "url": "https://www.last.fm/user/RJ"
 }

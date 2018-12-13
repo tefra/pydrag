@@ -1,6 +1,7 @@
 {
-    "name": "Delta",
-    "url": "https://www.last.fm/music/Mumford+&+Sons/Delta",
+    "artist": {
+        "name": "Mumford & Sons"
+    },
     "image": [
         {
             "size": "small",
@@ -27,11 +28,9 @@
             "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
         }
     ],
-    "playcount": 471255,
-    "artist": {
-        "name": "Mumford & Sons"
-    },
     "listeners": 30447,
+    "name": "Delta",
+    "playcount": 471255,
     "tags": [
         {
             "name": "2018",
@@ -48,186 +47,187 @@
     ],
     "tracks": [
         {
-            "name": "42",
             "artist": {
-                "name": "Mumford & Sons",
                 "mbid": "CENSORED46d6",
+                "name": "Mumford & Sons",
                 "url": "https://www.last.fm/music/Mumford+&+Sons"
             },
-            "url": "https://www.last.fm/music/Mumford+&+Sons/_/42",
-            "duration": 240,
             "attr": {
                 "rank": 1
-            }
+            },
+            "duration": 240,
+            "name": "42",
+            "url": "https://www.last.fm/music/Mumford+&+Sons/_/42"
         },
         {
-            "name": "Guiding Light",
             "artist": {
-                "name": "Mumford & Sons",
                 "mbid": "CENSORED46d6",
+                "name": "Mumford & Sons",
                 "url": "https://www.last.fm/music/Mumford+&+Sons"
             },
-            "url": "https://www.last.fm/music/Mumford+&+Sons/_/Guiding+Light",
-            "duration": 162,
             "attr": {
                 "rank": 2
-            }
+            },
+            "duration": 162,
+            "name": "Guiding Light",
+            "url": "https://www.last.fm/music/Mumford+&+Sons/_/Guiding+Light"
         },
         {
-            "name": "Woman",
             "artist": {
-                "name": "Mumford & Sons",
                 "mbid": "CENSORED46d6",
+                "name": "Mumford & Sons",
                 "url": "https://www.last.fm/music/Mumford+&+Sons"
             },
-            "url": "https://www.last.fm/music/Mumford+&+Sons/_/Woman",
-            "duration": 274,
             "attr": {
                 "rank": 3
-            }
+            },
+            "duration": 274,
+            "name": "Woman",
+            "url": "https://www.last.fm/music/Mumford+&+Sons/_/Woman"
         },
         {
-            "name": "Beloved",
             "artist": {
-                "name": "Mumford & Sons",
                 "mbid": "CENSORED46d6",
+                "name": "Mumford & Sons",
                 "url": "https://www.last.fm/music/Mumford+&+Sons"
             },
-            "url": "https://www.last.fm/music/Mumford+&+Sons/_/Beloved",
-            "duration": 265,
             "attr": {
                 "rank": 4
-            }
+            },
+            "duration": 265,
+            "name": "Beloved",
+            "url": "https://www.last.fm/music/Mumford+&+Sons/_/Beloved"
         },
         {
-            "name": "The Wild",
             "artist": {
-                "name": "Mumford & Sons",
                 "mbid": "CENSORED46d6",
+                "name": "Mumford & Sons",
                 "url": "https://www.last.fm/music/Mumford+&+Sons"
             },
-            "url": "https://www.last.fm/music/Mumford+&+Sons/_/The+Wild",
-            "duration": 331,
             "attr": {
                 "rank": 5
-            }
+            },
+            "duration": 331,
+            "name": "The Wild",
+            "url": "https://www.last.fm/music/Mumford+&+Sons/_/The+Wild"
         },
         {
-            "name": "October Skies",
             "artist": {
-                "name": "Mumford & Sons",
                 "mbid": "CENSORED46d6",
+                "name": "Mumford & Sons",
                 "url": "https://www.last.fm/music/Mumford+&+Sons"
             },
-            "url": "https://www.last.fm/music/Mumford+&+Sons/_/October+Skies",
-            "duration": 223,
             "attr": {
                 "rank": 6
-            }
+            },
+            "duration": 223,
+            "name": "October Skies",
+            "url": "https://www.last.fm/music/Mumford+&+Sons/_/October+Skies"
         },
         {
-            "name": "Slip Away",
             "artist": {
-                "name": "Mumford & Sons",
                 "mbid": "CENSORED46d6",
+                "name": "Mumford & Sons",
                 "url": "https://www.last.fm/music/Mumford+&+Sons"
             },
-            "url": "https://www.last.fm/music/Mumford+&+Sons/_/Slip+Away",
-            "duration": 295,
             "attr": {
                 "rank": 7
-            }
+            },
+            "duration": 295,
+            "name": "Slip Away",
+            "url": "https://www.last.fm/music/Mumford+&+Sons/_/Slip+Away"
         },
         {
-            "name": "Rose of Sharon",
             "artist": {
-                "name": "Mumford & Sons",
                 "mbid": "CENSORED46d6",
+                "name": "Mumford & Sons",
                 "url": "https://www.last.fm/music/Mumford+&+Sons"
             },
-            "url": "https://www.last.fm/music/Mumford+&+Sons/_/Rose+of+Sharon",
-            "duration": 203,
             "attr": {
                 "rank": 8
-            }
+            },
+            "duration": 203,
+            "name": "Rose of Sharon",
+            "url": "https://www.last.fm/music/Mumford+&+Sons/_/Rose+of+Sharon"
         },
         {
-            "name": "Picture You",
             "artist": {
-                "name": "Mumford & Sons",
                 "mbid": "CENSORED46d6",
+                "name": "Mumford & Sons",
                 "url": "https://www.last.fm/music/Mumford+&+Sons"
             },
-            "url": "https://www.last.fm/music/Mumford+&+Sons/_/Picture+You",
-            "duration": 243,
             "attr": {
                 "rank": 9
-            }
+            },
+            "duration": 243,
+            "name": "Picture You",
+            "url": "https://www.last.fm/music/Mumford+&+Sons/_/Picture+You"
         },
         {
-            "name": "Darkness Visible",
             "artist": {
-                "name": "Mumford & Sons",
                 "mbid": "CENSORED46d6",
+                "name": "Mumford & Sons",
                 "url": "https://www.last.fm/music/Mumford+&+Sons"
             },
-            "url": "https://www.last.fm/music/Mumford+&+Sons/_/Darkness+Visible",
-            "duration": 191,
             "attr": {
                 "rank": 10
-            }
+            },
+            "duration": 191,
+            "name": "Darkness Visible",
+            "url": "https://www.last.fm/music/Mumford+&+Sons/_/Darkness+Visible"
         },
         {
-            "name": "If I Say",
             "artist": {
-                "name": "Mumford & Sons",
                 "mbid": "CENSORED46d6",
+                "name": "Mumford & Sons",
                 "url": "https://www.last.fm/music/Mumford+&+Sons"
             },
-            "url": "https://www.last.fm/music/Mumford+&+Sons/_/If+I+Say",
-            "duration": 269,
             "attr": {
                 "rank": 11
-            }
+            },
+            "duration": 269,
+            "name": "If I Say",
+            "url": "https://www.last.fm/music/Mumford+&+Sons/_/If+I+Say"
         },
         {
-            "name": "Wild Heart",
             "artist": {
-                "name": "Mumford & Sons",
                 "mbid": "CENSORED46d6",
+                "name": "Mumford & Sons",
                 "url": "https://www.last.fm/music/Mumford+&+Sons"
             },
-            "url": "https://www.last.fm/music/Mumford+&+Sons/_/Wild+Heart",
-            "duration": 305,
             "attr": {
                 "rank": 12
-            }
+            },
+            "duration": 305,
+            "name": "Wild Heart",
+            "url": "https://www.last.fm/music/Mumford+&+Sons/_/Wild+Heart"
         },
         {
-            "name": "Forever",
             "artist": {
-                "name": "Mumford & Sons",
                 "mbid": "CENSORED46d6",
+                "name": "Mumford & Sons",
                 "url": "https://www.last.fm/music/Mumford+&+Sons"
             },
-            "url": "https://www.last.fm/music/Mumford+&+Sons/_/Forever",
-            "duration": 276,
             "attr": {
                 "rank": 13
-            }
+            },
+            "duration": 276,
+            "name": "Forever",
+            "url": "https://www.last.fm/music/Mumford+&+Sons/_/Forever"
         },
         {
-            "name": "Delta",
             "artist": {
-                "name": "Mumford & Sons",
                 "mbid": "CENSORED46d6",
+                "name": "Mumford & Sons",
                 "url": "https://www.last.fm/music/Mumford+&+Sons"
             },
-            "url": "https://www.last.fm/music/Mumford+&+Sons/_/Delta",
-            "duration": 376,
             "attr": {
                 "rank": 14
-            }
+            },
+            "duration": 376,
+            "name": "Delta",
+            "url": "https://www.last.fm/music/Mumford+&+Sons/_/Delta"
         }
-    ]
+    ],
+    "url": "https://www.last.fm/music/Mumford+&+Sons/Delta"
 }

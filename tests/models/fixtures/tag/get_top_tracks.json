@@ -1,64 +1,64 @@
 {
-    "version": 1,
     "interactions": [
         {
             "request": {
-                "method": "GET",
-                "uri": "https://ws.audioscrobbler.com/2.0/?api_key=LAST_FM_API_KEY&format=json&limit=2&method=tag.getTopTracks&page=1&tag=rap",
                 "body": null,
                 "headers": {
-                    "User-Agent": [
-                        "python-requests/2.20.0"
+                    "Accept": [
+                        "*/*"
                     ],
                     "Accept-Encoding": [
                         "gzip, deflate"
                     ],
-                    "Accept": [
-                        "*/*"
-                    ],
                     "Connection": [
                         "keep-alive"
+                    ],
+                    "User-Agent": [
+                        "python-requests/2.20.0"
                     ]
-                }
+                },
+                "method": "GET",
+                "uri": "https://ws.audioscrobbler.com/2.0/?api_key=LAST_FM_API_KEY&format=json&limit=2&method=tag.getTopTracks&page=1&tag=rap"
             },
             "response": {
-                "status": {
-                    "code": 200,
-                    "message": "OK"
+                "body": {
+                    "string": "{\"tracks\":{\"track\":[{\"name\":\"Stronger\",\"duration\":\"314\",\"mbid\":\"CENSOREDaf2d\",\"url\":\"https://www.last.fm/music/Kanye+West/_/Stronger\",\"streamable\":{\"#text\":\"0\",\"fulltrack\":\"0\"},\"artist\":{\"name\":\"Kanye West\",\"mbid\":\"CENSORED1051\",\"url\":\"https://www.last.fm/music/Kanye+West\"},\"image\":[{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png\",\"size\":\"small\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png\",\"size\":\"medium\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png\",\"size\":\"large\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png\",\"size\":\"extralarge\"}],\"@attr\":{\"rank\":\"1\"}},{\"name\":\"Clint Eastwood\",\"duration\":\"339\",\"mbid\":\"CENSORED47e3\",\"url\":\"https://www.last.fm/music/Gorillaz/_/Clint+Eastwood\",\"streamable\":{\"#text\":\"0\",\"fulltrack\":\"0\"},\"artist\":{\"name\":\"Gorillaz\",\"mbid\":\"CENSORED2596\",\"url\":\"https://www.last.fm/music/Gorillaz\"},\"image\":[{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png\",\"size\":\"small\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png\",\"size\":\"medium\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png\",\"size\":\"large\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png\",\"size\":\"extralarge\"}],\"@attr\":{\"rank\":\"2\"}}],\"@attr\":{\"tag\":\"rap\",\"page\":\"1\",\"perPage\":\"2\",\"totalPages\":\"52200\",\"total\":\"104399\"}}}"
                 },
                 "headers": {
-                    "Server": [
-                        "openresty/1.9.7.5"
-                    ],
-                    "Access-Control-Max-Age": [
-                        "86400"
-                    ],
-                    "Connection": [
-                        "keep-alive"
-                    ],
-                    "Date": [
-                        "Sat, 10 Nov 2018 11:27:57 GMT"
+                    "Access-Control-Allow-Methods": [
+                        "POST, GET, OPTIONS"
                     ],
                     "Access-Control-Allow-Origin": [
                         "*"
                     ],
+                    "Access-Control-Max-Age": [
+                        "86400"
+                    ],
                     "Access-Control-Request-Headers": [
                         "Origin, X-Atmosphere-tracking-id, X-Atmosphere-Framework, X-Cache-Date, Content-Type, X-Atmosphere-Transport, *"
+                    ],
+                    "Connection": [
+                        "keep-alive"
+                    ],
+                    "Content-Length": [
+                        "1653"
                     ],
                     "Content-Type": [
                         "application/json; charset=UTF-8"
                     ],
-                    "Access-Control-Allow-Methods": [
-                        "POST, GET, OPTIONS"
+                    "Date": [
+                        "Sat, 10 Nov 2018 11:27:57 GMT"
                     ],
-                    "Content-Length": [
-                        "1653"
+                    "Server": [
+                        "openresty/1.9.7.5"
                     ]
                 },
-                "body": {
-                    "string": "{\"tracks\":{\"track\":[{\"name\":\"Stronger\",\"duration\":\"314\",\"mbid\":\"CENSOREDaf2d\",\"url\":\"https://www.last.fm/music/Kanye+West/_/Stronger\",\"streamable\":{\"#text\":\"0\",\"fulltrack\":\"0\"},\"artist\":{\"name\":\"Kanye West\",\"mbid\":\"CENSORED1051\",\"url\":\"https://www.last.fm/music/Kanye+West\"},\"image\":[{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png\",\"size\":\"small\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png\",\"size\":\"medium\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png\",\"size\":\"large\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png\",\"size\":\"extralarge\"}],\"@attr\":{\"rank\":\"1\"}},{\"name\":\"Clint Eastwood\",\"duration\":\"339\",\"mbid\":\"CENSORED47e3\",\"url\":\"https://www.last.fm/music/Gorillaz/_/Clint+Eastwood\",\"streamable\":{\"#text\":\"0\",\"fulltrack\":\"0\"},\"artist\":{\"name\":\"Gorillaz\",\"mbid\":\"CENSORED2596\",\"url\":\"https://www.last.fm/music/Gorillaz\"},\"image\":[{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png\",\"size\":\"small\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png\",\"size\":\"medium\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png\",\"size\":\"large\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png\",\"size\":\"extralarge\"}],\"@attr\":{\"rank\":\"2\"}}],\"@attr\":{\"tag\":\"rap\",\"page\":\"1\",\"perPage\":\"2\",\"totalPages\":\"52200\",\"total\":\"104399\"}}}"
+                "status": {
+                    "code": 200,
+                    "message": "OK"
                 }
             }
         }
-    ]
+    ],
+    "version": 1
 }

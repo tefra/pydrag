@@ -1,41 +1,30 @@
 {
-    "version": 1,
     "interactions": [
         {
             "request": {
-                "method": "GET",
-                "uri": "https://ws.audioscrobbler.com/2.0/?api_key=LAST_FM_API_KEY&format=json&method=auth.getToken",
                 "body": null,
                 "headers": {
-                    "User-Agent": [
-                        "python-requests/2.20.0"
+                    "Accept": [
+                        "*/*"
                     ],
                     "Accept-Encoding": [
                         "gzip, deflate"
                     ],
-                    "Accept": [
-                        "*/*"
-                    ],
                     "Connection": [
                         "keep-alive"
+                    ],
+                    "User-Agent": [
+                        "python-requests/2.20.0"
                     ]
-                }
+                },
+                "method": "GET",
+                "uri": "https://ws.audioscrobbler.com/2.0/?api_key=LAST_FM_API_KEY&format=json&method=auth.getToken"
             },
             "response": {
-                "status": {
-                    "code": 200,
-                    "message": "OK"
+                "body": {
+                    "string": "{\"token\":\"CENSORED\"}"
                 },
                 "headers": {
-                    "Date": [
-                        "Sat, 10 Nov 2018 11:36:18 GMT"
-                    ],
-                    "Connection": [
-                        "keep-alive"
-                    ],
-                    "Content-Type": [
-                        "application/json"
-                    ],
                     "Access-Control-Allow-Methods": [
                         "POST, GET, OPTIONS"
                     ],
@@ -45,32 +34,37 @@
                     "Access-Control-Max-Age": [
                         "86400"
                     ],
-                    "content-length": [
-                        "44"
+                    "Connection": [
+                        "keep-alive"
+                    ],
+                    "Content-Type": [
+                        "application/json"
+                    ],
+                    "Date": [
+                        "Sat, 10 Nov 2018 11:36:18 GMT"
                     ],
                     "Server": [
                         "openresty/1.9.7.5"
+                    ],
+                    "content-length": [
+                        "44"
                     ]
                 },
-                "body": {
-                    "string": "{\"token\":\"CENSORED\"}"
+                "status": {
+                    "code": 200,
+                    "message": "OK"
                 }
             }
         },
         {
             "request": {
-                "method": "POST",
-                "uri": "https://ws.audioscrobbler.com/2.0/",
                 "body": "token=USER_TOKEN&method=auth.getSession&format=json&api_key=LAST_FM_API_KEY&api_sig=API_SIG",
                 "headers": {
-                    "User-Agent": [
-                        "python-requests/2.20.0"
+                    "Accept": [
+                        "*/*"
                     ],
                     "Accept-Encoding": [
                         "gzip, deflate"
-                    ],
-                    "Accept": [
-                        "*/*"
                     ],
                     "Connection": [
                         "keep-alive"
@@ -80,24 +74,19 @@
                     ],
                     "Content-Type": [
                         "application/x-www-form-urlencoded"
+                    ],
+                    "User-Agent": [
+                        "python-requests/2.20.0"
                     ]
-                }
+                },
+                "method": "POST",
+                "uri": "https://ws.audioscrobbler.com/2.0/"
             },
             "response": {
-                "status": {
-                    "code": 200,
-                    "message": "OK"
+                "body": {
+                    "string": "{\"session\":{\"subscriber\":0,\"name\":\"Zaratoustre\",\"key\":\"CENSORED\"}}"
                 },
                 "headers": {
-                    "Date": [
-                        "Sat, 10 Nov 2018 11:36:36 GMT"
-                    ],
-                    "Connection": [
-                        "keep-alive"
-                    ],
-                    "Content-Type": [
-                        "application/json"
-                    ],
                     "Access-Control-Allow-Methods": [
                         "POST, GET, OPTIONS"
                     ],
@@ -107,17 +96,28 @@
                     "Access-Control-Max-Age": [
                         "86400"
                     ],
-                    "content-length": [
-                        "90"
+                    "Connection": [
+                        "keep-alive"
+                    ],
+                    "Content-Type": [
+                        "application/json"
+                    ],
+                    "Date": [
+                        "Sat, 10 Nov 2018 11:36:36 GMT"
                     ],
                     "Server": [
                         "openresty/1.9.7.5"
+                    ],
+                    "content-length": [
+                        "90"
                     ]
                 },
-                "body": {
-                    "string": "{\"session\":{\"subscriber\":0,\"name\":\"Zaratoustre\",\"key\":\"CENSORED\"}}"
+                "status": {
+                    "code": 200,
+                    "message": "OK"
                 }
             }
         }
-    ]
+    ],
+    "version": 1
 }

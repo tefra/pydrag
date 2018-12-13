@@ -1,46 +1,44 @@
 {
-    "version": 1,
     "interactions": [
         {
             "request": {
-                "method": "GET",
-                "uri": "https://ws.audioscrobbler.com/2.0/?api_key=LAST_FM_API_KEY&format=json&method=tag.getSimilar&tag=Disco",
                 "body": null,
                 "headers": {
-                    "User-Agent": [
-                        "python-requests/2.20.0"
+                    "Accept": [
+                        "*/*"
                     ],
                     "Accept-Encoding": [
                         "gzip, deflate"
                     ],
-                    "Accept": [
-                        "*/*"
-                    ],
                     "Connection": [
                         "keep-alive"
+                    ],
+                    "User-Agent": [
+                        "python-requests/2.20.0"
                     ]
-                }
+                },
+                "method": "GET",
+                "uri": "https://ws.audioscrobbler.com/2.0/?api_key=LAST_FM_API_KEY&format=json&method=tag.getSimilar&tag=Disco"
             },
             "response": {
-                "status": {
-                    "code": 200,
-                    "message": "OK"
+                "body": {
+                    "string": "{\"similartags\":{\"tag\":[],\"@attr\":{\"tag\":\"n/a\"}}}"
                 },
                 "headers": {
-                    "Connection": [
-                        "keep-alive"
-                    ],
-                    "Date": [
-                        "Sun, 11 Nov 2018 00:06:40 GMT"
-                    ],
-                    "Access-Control-Request-Headers": [
-                        "Origin, X-Atmosphere-tracking-id, X-Atmosphere-Framework, X-Cache-Date, Content-Type, X-Atmosphere-Transport, *"
+                    "Access-Control-Allow-Methods": [
+                        "POST, GET, OPTIONS"
                     ],
                     "Access-Control-Allow-Origin": [
                         "*"
                     ],
-                    "Server": [
-                        "openresty/1.9.7.5"
+                    "Access-Control-Max-Age": [
+                        "86400"
+                    ],
+                    "Access-Control-Request-Headers": [
+                        "Origin, X-Atmosphere-tracking-id, X-Atmosphere-Framework, X-Cache-Date, Content-Type, X-Atmosphere-Transport, *"
+                    ],
+                    "Connection": [
+                        "keep-alive"
                     ],
                     "Content-Length": [
                         "48"
@@ -48,17 +46,19 @@
                     "Content-Type": [
                         "application/json; charset=UTF-8"
                     ],
-                    "Access-Control-Max-Age": [
-                        "86400"
+                    "Date": [
+                        "Sun, 11 Nov 2018 00:06:40 GMT"
                     ],
-                    "Access-Control-Allow-Methods": [
-                        "POST, GET, OPTIONS"
+                    "Server": [
+                        "openresty/1.9.7.5"
                     ]
                 },
-                "body": {
-                    "string": "{\"similartags\":{\"tag\":[],\"@attr\":{\"tag\":\"n/a\"}}}"
+                "status": {
+                    "code": 200,
+                    "message": "OK"
                 }
             }
         }
-    ]
+    ],
+    "version": 1
 }

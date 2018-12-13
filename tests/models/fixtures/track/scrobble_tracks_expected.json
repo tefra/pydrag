@@ -2,28 +2,28 @@
     "data": [
         {
             "artist": "Green Day",
-            "track": "Bang Bang",
-            "timestamp": 1541878500
+            "timestamp": 1541878500,
+            "track": "Bang Bang"
         },
         {
             "artist": "Awolnation",
-            "track": "Sail",
-            "timestamp": 1541878500
+            "timestamp": 1541878500,
+            "track": "Sail"
         },
         {
             "artist": "The Head and the Heart",
-            "track": "All We Ever Knew",
-            "timestamp": 1541878500
+            "timestamp": 1541878500,
+            "track": "All We Ever Knew"
         },
         {
             "artist": "Kaleo",
-            "track": "Way Down We Go",
-            "timestamp": 1541878500
+            "timestamp": 1541878500,
+            "track": "Way Down We Go"
         },
         {
             "artist": "Disturbed",
-            "track": "The Sound of Silence",
-            "timestamp": 1541878500
+            "timestamp": 1541878500,
+            "track": "The Sound of Silence"
         }
     ]
 }

@@ -1,40 +1,32 @@
 {
-    "version": 1,
     "interactions": [
         {
             "request": {
-                "method": "GET",
-                "uri": "https://ws.audioscrobbler.com/2.0/?method=album.getInfo&album=Delta&artist=Mumford+%26+Sons&autocorrect=1&lang=en&format=json&api_key=e4940c100ffeeff03328f6b2762bf35b",
                 "body": null,
                 "headers": {
-                    "User-Agent": [
-                        "python-requests/2.20.1"
+                    "Accept": [
+                        "*/*"
                     ],
                     "Accept-Encoding": [
                         "gzip, deflate"
                     ],
-                    "Accept": [
-                        "*/*"
-                    ],
                     "Connection": [
                         "keep-alive"
+                    ],
+                    "User-Agent": [
+                        "python-requests/2.20.1"
                     ]
-                }
+                },
+                "method": "GET",
+                "uri": "https://ws.audioscrobbler.com/2.0/?method=album.getInfo&album=Delta&artist=Mumford+%26+Sons&autocorrect=1&lang=en&format=json&api_key=e4940c100ffeeff03328f6b2762bf35b"
             },
             "response": {
-                "status": {
-                    "code": 200,
-                    "message": "OK"
+                "body": {
+                    "string": "{\"album\":{\"name\":\"Delta\",\"artist\":\"Mumford & Sons\",\"url\":\"https://www.last.fm/music/Mumford+&+Sons/Delta\",\"image\":[{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png\",\"size\":\"small\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png\",\"size\":\"medium\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png\",\"size\":\"large\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png\",\"size\":\"extralarge\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png\",\"size\":\"mega\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png\",\"size\":\"\"}],\"listeners\":\"30447\",\"playcount\":\"471255\",\"tracks\":{\"track\":[{\"name\":\"42\",\"url\":\"https://www.last.fm/music/Mumford+&+Sons/_/42\",\"duration\":\"240\",\"@attr\":{\"rank\":\"1\"},\"streamable\":{\"#text\":\"0\",\"fulltrack\":\"0\"},\"artist\":{\"name\":\"Mumford & Sons\",\"mbid\":\"CENSORED46d6\",\"url\":\"https://www.last.fm/music/Mumford+&+Sons\"}},{\"name\":\"Guiding Light\",\"url\":\"https://www.last.fm/music/Mumford+&+Sons/_/Guiding+Light\",\"duration\":\"162\",\"@attr\":{\"rank\":\"2\"},\"streamable\":{\"#text\":\"0\",\"fulltrack\":\"0\"},\"artist\":{\"name\":\"Mumford & Sons\",\"mbid\":\"CENSORED46d6\",\"url\":\"https://www.last.fm/music/Mumford+&+Sons\"}},{\"name\":\"Woman\",\"url\":\"https://www.last.fm/music/Mumford+&+Sons/_/Woman\",\"duration\":\"274\",\"@attr\":{\"rank\":\"3\"},\"streamable\":{\"#text\":\"0\",\"fulltrack\":\"0\"},\"artist\":{\"name\":\"Mumford & Sons\",\"mbid\":\"CENSORED46d6\",\"url\":\"https://www.last.fm/music/Mumford+&+Sons\"}},{\"name\":\"Beloved\",\"url\":\"https://www.last.fm/music/Mumford+&+Sons/_/Beloved\",\"duration\":\"265\",\"@attr\":{\"rank\":\"4\"},\"streamable\":{\"#text\":\"0\",\"fulltrack\":\"0\"},\"artist\":{\"name\":\"Mumford & Sons\",\"mbid\":\"CENSORED46d6\",\"url\":\"https://www.last.fm/music/Mumford+&+Sons\"}},{\"name\":\"The Wild\",\"url\":\"https://www.last.fm/music/Mumford+&+Sons/_/The+Wild\",\"duration\":\"331\",\"@attr\":{\"rank\":\"5\"},\"streamable\":{\"#text\":\"0\",\"fulltrack\":\"0\"},\"artist\":{\"name\":\"Mumford & Sons\",\"mbid\":\"CENSORED46d6\",\"url\":\"https://www.last.fm/music/Mumford+&+Sons\"}},{\"name\":\"October Skies\",\"url\":\"https://www.last.fm/music/Mumford+&+Sons/_/October+Skies\",\"duration\":\"223\",\"@attr\":{\"rank\":\"6\"},\"streamable\":{\"#text\":\"0\",\"fulltrack\":\"0\"},\"artist\":{\"name\":\"Mumford & Sons\",\"mbid\":\"CENSORED46d6\",\"url\":\"https://www.last.fm/music/Mumford+&+Sons\"}},{\"name\":\"Slip Away\",\"url\":\"https://www.last.fm/music/Mumford+&+Sons/_/Slip+Away\",\"duration\":\"295\",\"@attr\":{\"rank\":\"7\"},\"streamable\":{\"#text\":\"0\",\"fulltrack\":\"0\"},\"artist\":{\"name\":\"Mumford & Sons\",\"mbid\":\"CENSORED46d6\",\"url\":\"https://www.last.fm/music/Mumford+&+Sons\"}},{\"name\":\"Rose of Sharon\",\"url\":\"https://www.last.fm/music/Mumford+&+Sons/_/Rose+of+Sharon\",\"duration\":\"203\",\"@attr\":{\"rank\":\"8\"},\"streamable\":{\"#text\":\"0\",\"fulltrack\":\"0\"},\"artist\":{\"name\":\"Mumford & Sons\",\"mbid\":\"CENSORED46d6\",\"url\":\"https://www.last.fm/music/Mumford+&+Sons\"}},{\"name\":\"Picture You\",\"url\":\"https://www.last.fm/music/Mumford+&+Sons/_/Picture+You\",\"duration\":\"243\",\"@attr\":{\"rank\":\"9\"},\"streamable\":{\"#text\":\"0\",\"fulltrack\":\"0\"},\"artist\":{\"name\":\"Mumford & Sons\",\"mbid\":\"CENSORED46d6\",\"url\":\"https://www.last.fm/music/Mumford+&+Sons\"}},{\"name\":\"Darkness Visible\",\"url\":\"https://www.last.fm/music/Mumford+&+Sons/_/Darkness+Visible\",\"duration\":\"191\",\"@attr\":{\"rank\":\"10\"},\"streamable\":{\"#text\":\"0\",\"fulltrack\":\"0\"},\"artist\":{\"name\":\"Mumford & Sons\",\"mbid\":\"CENSORED46d6\",\"url\":\"https://www.last.fm/music/Mumford+&+Sons\"}},{\"name\":\"If I Say\",\"url\":\"https://www.last.fm/music/Mumford+&+Sons/_/If+I+Say\",\"duration\":\"269\",\"@attr\":{\"rank\":\"11\"},\"streamable\":{\"#text\":\"0\",\"fulltrack\":\"0\"},\"artist\":{\"name\":\"Mumford & Sons\",\"mbid\":\"CENSORED46d6\",\"url\":\"https://www.last.fm/music/Mumford+&+Sons\"}},{\"name\":\"Wild Heart\",\"url\":\"https://www.last.fm/music/Mumford+&+Sons/_/Wild+Heart\",\"duration\":\"305\",\"@attr\":{\"rank\":\"12\"},\"streamable\":{\"#text\":\"0\",\"fulltrack\":\"0\"},\"artist\":{\"name\":\"Mumford & Sons\",\"mbid\":\"CENSORED46d6\",\"url\":\"https://www.last.fm/music/Mumford+&+Sons\"}},{\"name\":\"Forever\",\"url\":\"https://www.last.fm/music/Mumford+&+Sons/_/Forever\",\"duration\":\"276\",\"@attr\":{\"rank\":\"13\"},\"streamable\":{\"#text\":\"0\",\"fulltrack\":\"0\"},\"artist\":{\"name\":\"Mumford & Sons\",\"mbid\":\"CENSORED46d6\",\"url\":\"https://www.last.fm/music/Mumford+&+Sons\"}},{\"name\":\"Delta\",\"url\":\"https://www.last.fm/music/Mumford+&+Sons/_/Delta\",\"duration\":\"376\",\"@attr\":{\"rank\":\"14\"},\"streamable\":{\"#text\":\"0\",\"fulltrack\":\"0\"},\"artist\":{\"name\":\"Mumford & Sons\",\"mbid\":\"CENSORED46d6\",\"url\":\"https://www.last.fm/music/Mumford+&+Sons\"}}]},\"tags\":{\"tag\":[{\"name\":\"2018\",\"url\":\"https://www.last.fm/tag/2018\"},{\"name\":\"experimental\",\"url\":\"https://www.last.fm/tag/experimental\"},{\"name\":\"atmospheric\",\"url\":\"https://www.last.fm/tag/atmospheric\"}]}}}"
                 },
                 "headers": {
-                    "Server": [
-                        "openresty/1.9.7.5"
-                    ],
-                    "Date": [
-                        "Sun, 02 Dec 2018 21:58:10 GMT"
-                    ],
-                    "Connection": [
-                        "keep-alive"
+                    "Access-Control-Allow-Methods": [
+                        "POST, GET, OPTIONS"
                     ],
                     "Access-Control-Allow-Origin": [
                         "*"
@@ -45,20 +37,28 @@
                     "Access-Control-Request-Headers": [
                         "Origin, X-Atmosphere-tracking-id, X-Atmosphere-Framework, X-Cache-Date, Content-Type, X-Atmosphere-Transport, *"
                     ],
+                    "Connection": [
+                        "keep-alive"
+                    ],
                     "Content-Length": [
                         "5145"
                     ],
                     "Content-Type": [
                         "application/json; charset=UTF-8"
                     ],
-                    "Access-Control-Allow-Methods": [
-                        "POST, GET, OPTIONS"
+                    "Date": [
+                        "Sun, 02 Dec 2018 21:58:10 GMT"
+                    ],
+                    "Server": [
+                        "openresty/1.9.7.5"
                     ]
                 },
-                "body": {
-                    "string": "{\"album\":{\"name\":\"Delta\",\"artist\":\"Mumford & Sons\",\"url\":\"https://www.last.fm/music/Mumford+&+Sons/Delta\",\"image\":[{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/34s/CENSORED.png\",\"size\":\"small\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/64s/CENSORED.png\",\"size\":\"medium\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/174s/CENSORED.png\",\"size\":\"large\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png\",\"size\":\"extralarge\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png\",\"size\":\"mega\"},{\"#text\":\"https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png\",\"size\":\"\"}],\"listeners\":\"30447\",\"playcount\":\"471255\",\"tracks\":{\"track\":[{\"name\":\"42\",\"url\":\"https://www.last.fm/music/Mumford+&+Sons/_/42\",\"duration\":\"240\",\"@attr\":{\"rank\":\"1\"},\"streamable\":{\"#text\":\"0\",\"fulltrack\":\"0\"},\"artist\":{\"name\":\"Mumford & Sons\",\"mbid\":\"CENSORED46d6\",\"url\":\"https://www.last.fm/music/Mumford+&+Sons\"}},{\"name\":\"Guiding Light\",\"url\":\"https://www.last.fm/music/Mumford+&+Sons/_/Guiding+Light\",\"duration\":\"162\",\"@attr\":{\"rank\":\"2\"},\"streamable\":{\"#text\":\"0\",\"fulltrack\":\"0\"},\"artist\":{\"name\":\"Mumford & Sons\",\"mbid\":\"CENSORED46d6\",\"url\":\"https://www.last.fm/music/Mumford+&+Sons\"}},{\"name\":\"Woman\",\"url\":\"https://www.last.fm/music/Mumford+&+Sons/_/Woman\",\"duration\":\"274\",\"@attr\":{\"rank\":\"3\"},\"streamable\":{\"#text\":\"0\",\"fulltrack\":\"0\"},\"artist\":{\"name\":\"Mumford & Sons\",\"mbid\":\"CENSORED46d6\",\"url\":\"https://www.last.fm/music/Mumford+&+Sons\"}},{\"name\":\"Beloved\",\"url\":\"https://www.last.fm/music/Mumford+&+Sons/_/Beloved\",\"duration\":\"265\",\"@attr\":{\"rank\":\"4\"},\"streamable\":{\"#text\":\"0\",\"fulltrack\":\"0\"},\"artist\":{\"name\":\"Mumford & Sons\",\"mbid\":\"CENSORED46d6\",\"url\":\"https://www.last.fm/music/Mumford+&+Sons\"}},{\"name\":\"The Wild\",\"url\":\"https://www.last.fm/music/Mumford+&+Sons/_/The+Wild\",\"duration\":\"331\",\"@attr\":{\"rank\":\"5\"},\"streamable\":{\"#text\":\"0\",\"fulltrack\":\"0\"},\"artist\":{\"name\":\"Mumford & Sons\",\"mbid\":\"CENSORED46d6\",\"url\":\"https://www.last.fm/music/Mumford+&+Sons\"}},{\"name\":\"October Skies\",\"url\":\"https://www.last.fm/music/Mumford+&+Sons/_/October+Skies\",\"duration\":\"223\",\"@attr\":{\"rank\":\"6\"},\"streamable\":{\"#text\":\"0\",\"fulltrack\":\"0\"},\"artist\":{\"name\":\"Mumford & Sons\",\"mbid\":\"CENSORED46d6\",\"url\":\"https://www.last.fm/music/Mumford+&+Sons\"}},{\"name\":\"Slip Away\",\"url\":\"https://www.last.fm/music/Mumford+&+Sons/_/Slip+Away\",\"duration\":\"295\",\"@attr\":{\"rank\":\"7\"},\"streamable\":{\"#text\":\"0\",\"fulltrack\":\"0\"},\"artist\":{\"name\":\"Mumford & Sons\",\"mbid\":\"CENSORED46d6\",\"url\":\"https://www.last.fm/music/Mumford+&+Sons\"}},{\"name\":\"Rose of Sharon\",\"url\":\"https://www.last.fm/music/Mumford+&+Sons/_/Rose+of+Sharon\",\"duration\":\"203\",\"@attr\":{\"rank\":\"8\"},\"streamable\":{\"#text\":\"0\",\"fulltrack\":\"0\"},\"artist\":{\"name\":\"Mumford & Sons\",\"mbid\":\"CENSORED46d6\",\"url\":\"https://www.last.fm/music/Mumford+&+Sons\"}},{\"name\":\"Picture You\",\"url\":\"https://www.last.fm/music/Mumford+&+Sons/_/Picture+You\",\"duration\":\"243\",\"@attr\":{\"rank\":\"9\"},\"streamable\":{\"#text\":\"0\",\"fulltrack\":\"0\"},\"artist\":{\"name\":\"Mumford & Sons\",\"mbid\":\"CENSORED46d6\",\"url\":\"https://www.last.fm/music/Mumford+&+Sons\"}},{\"name\":\"Darkness Visible\",\"url\":\"https://www.last.fm/music/Mumford+&+Sons/_/Darkness+Visible\",\"duration\":\"191\",\"@attr\":{\"rank\":\"10\"},\"streamable\":{\"#text\":\"0\",\"fulltrack\":\"0\"},\"artist\":{\"name\":\"Mumford & Sons\",\"mbid\":\"CENSORED46d6\",\"url\":\"https://www.last.fm/music/Mumford+&+Sons\"}},{\"name\":\"If I Say\",\"url\":\"https://www.last.fm/music/Mumford+&+Sons/_/If+I+Say\",\"duration\":\"269\",\"@attr\":{\"rank\":\"11\"},\"streamable\":{\"#text\":\"0\",\"fulltrack\":\"0\"},\"artist\":{\"name\":\"Mumford & Sons\",\"mbid\":\"CENSORED46d6\",\"url\":\"https://www.last.fm/music/Mumford+&+Sons\"}},{\"name\":\"Wild Heart\",\"url\":\"https://www.last.fm/music/Mumford+&+Sons/_/Wild+Heart\",\"duration\":\"305\",\"@attr\":{\"rank\":\"12\"},\"streamable\":{\"#text\":\"0\",\"fulltrack\":\"0\"},\"artist\":{\"name\":\"Mumford & Sons\",\"mbid\":\"CENSORED46d6\",\"url\":\"https://www.last.fm/music/Mumford+&+Sons\"}},{\"name\":\"Forever\",\"url\":\"https://www.last.fm/music/Mumford+&+Sons/_/Forever\",\"duration\":\"276\",\"@attr\":{\"rank\":\"13\"},\"streamable\":{\"#text\":\"0\",\"fulltrack\":\"0\"},\"artist\":{\"name\":\"Mumford & Sons\",\"mbid\":\"CENSORED46d6\",\"url\":\"https://www.last.fm/music/Mumford+&+Sons\"}},{\"name\":\"Delta\",\"url\":\"https://www.last.fm/music/Mumford+&+Sons/_/Delta\",\"duration\":\"376\",\"@attr\":{\"rank\":\"14\"},\"streamable\":{\"#text\":\"0\",\"fulltrack\":\"0\"},\"artist\":{\"name\":\"Mumford & Sons\",\"mbid\":\"CENSORED46d6\",\"url\":\"https://www.last.fm/music/Mumford+&+Sons\"}}]},\"tags\":{\"tag\":[{\"name\":\"2018\",\"url\":\"https://www.last.fm/tag/2018\"},{\"name\":\"experimental\",\"url\":\"https://www.last.fm/tag/experimental\"},{\"name\":\"atmospheric\",\"url\":\"https://www.last.fm/tag/atmospheric\"}]}}}"
+                "status": {
+                    "code": 200,
+                    "message": "OK"
                 }
             }
         }
-    ]
+    ],
+    "version": 1
 }

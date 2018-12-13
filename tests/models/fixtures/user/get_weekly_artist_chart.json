@@ -1,64 +1,64 @@
 {
-    "version": 1,
     "interactions": [
         {
             "request": {
-                "method": "GET",
-                "uri": "https://ws.audioscrobbler.com/2.0/?api_key=LAST_FM_API_KEY&format=json&method=user.getWeeklyArtistChart&user=rj",
                 "body": null,
                 "headers": {
-                    "User-Agent": [
-                        "python-requests/2.20.0"
+                    "Accept": [
+                        "*/*"
                     ],
                     "Accept-Encoding": [
                         "gzip, deflate"
                     ],
-                    "Accept": [
-                        "*/*"
-                    ],
                     "Connection": [
                         "keep-alive"
+                    ],
+                    "User-Agent": [
+                        "python-requests/2.20.0"
                     ]
-                }
+                },
+                "method": "GET",
+                "uri": "https://ws.audioscrobbler.com/2.0/?api_key=LAST_FM_API_KEY&format=json&method=user.getWeeklyArtistChart&user=rj"
             },
             "response": {
-                "status": {
-                    "code": 200,
-                    "message": "OK"
+                "body": {
+                    "string": "{\"weeklyartistchart\":{\"artist\":[{\"name\":\"Womb Sounds Heartbeat\",\"mbid\":\"\",\"playcount\":\"35\",\"url\":\"https://www.last.fm/music/Womb+Sounds+Heartbeat\",\"@attr\":{\"rank\":\"1\"}},{\"name\":\"The Gaslight Anthem\",\"mbid\":\"CENSORED17e3\",\"playcount\":\"10\",\"url\":\"https://www.last.fm/music/The+Gaslight+Anthem\",\"@attr\":{\"rank\":\"2\"}},{\"name\":\"Kacey Musgraves\",\"mbid\":\"CENSORED40cb\",\"playcount\":\"3\",\"url\":\"https://www.last.fm/music/Kacey+Musgraves\",\"@attr\":{\"rank\":\"3\"}},{\"name\":\"Ferris & Sylvester\",\"mbid\":\"\",\"playcount\":\"2\",\"url\":\"https://www.last.fm/music/Ferris+&+Sylvester\",\"@attr\":{\"rank\":\"4\"}},{\"name\":\"Mario\",\"mbid\":\"CENSORED2cc7\",\"playcount\":\"2\",\"url\":\"https://www.last.fm/music/Mario\",\"@attr\":{\"rank\":\"5\"}},{\"name\":\"Nao\",\"mbid\":\"CENSORED1fed\",\"playcount\":\"2\",\"url\":\"https://www.last.fm/music/Nao\",\"@attr\":{\"rank\":\"6\"}},{\"name\":\"Amber Mark\",\"mbid\":\"\",\"playcount\":\"1\",\"url\":\"https://www.last.fm/music/Amber+Mark\",\"@attr\":{\"rank\":\"7\"}},{\"name\":\"Ar'mon & Trey\",\"mbid\":\"\",\"playcount\":\"1\",\"url\":\"https://www.last.fm/music/Ar%27mon+&+Trey\",\"@attr\":{\"rank\":\"8\"}},{\"name\":\"Aretha Franklin\",\"mbid\":\"CENSORED299e\",\"playcount\":\"1\",\"url\":\"https://www.last.fm/music/Aretha+Franklin\",\"@attr\":{\"rank\":\"9\"}},{\"name\":\"Brian Deady\",\"mbid\":\"CENSORED1726\",\"playcount\":\"1\",\"url\":\"https://www.last.fm/music/Brian+Deady\",\"@attr\":{\"rank\":\"10\"}},{\"name\":\"Catherine McGrath\",\"mbid\":\"\",\"playcount\":\"1\",\"url\":\"https://www.last.fm/music/Catherine+McGrath\",\"@attr\":{\"rank\":\"11\"}},{\"name\":\"Childish Gambino\",\"mbid\":\"CENSORED607e\",\"playcount\":\"1\",\"url\":\"https://www.last.fm/music/Childish+Gambino\",\"@attr\":{\"rank\":\"12\"}},{\"name\":\"Dram\",\"mbid\":\"\",\"playcount\":\"1\",\"url\":\"https://www.last.fm/music/Dram\",\"@attr\":{\"rank\":\"13\"}},{\"name\":\"Enno Aare\",\"mbid\":\"\",\"playcount\":\"1\",\"url\":\"https://www.last.fm/music/Enno+Aare\",\"@attr\":{\"rank\":\"14\"}},{\"name\":\"Filmore\",\"mbid\":\"CENSORED0c76\",\"playcount\":\"1\",\"url\":\"https://www.last.fm/music/Filmore\",\"@attr\":{\"rank\":\"15\"}},{\"name\":\"Fleetwood Mac\",\"mbid\":\"CENSORED5b1a\",\"playcount\":\"1\",\"url\":\"https://www.last.fm/music/Fleetwood+Mac\",\"@attr\":{\"rank\":\"16\"}},{\"name\":\"Franz Schubert\",\"mbid\":\"CENSORED65ed\",\"playcount\":\"1\",\"url\":\"https://www.last.fm/music/Franz+Schubert\",\"@attr\":{\"rank\":\"17\"}},{\"name\":\"Ilham\",\"mbid\":\"\",\"playcount\":\"1\",\"url\":\"https://www.last.fm/music/Ilham\",\"@attr\":{\"rank\":\"18\"}},{\"name\":\"India.Arie\",\"mbid\":\"CENSOREDefdd\",\"playcount\":\"1\",\"url\":\"https://www.last.fm/music/India.Arie\",\"@attr\":{\"rank\":\"19\"}},{\"name\":\"Into The Ark\",\"mbid\":\"\",\"playcount\":\"1\",\"url\":\"https://www.last.fm/music/Into+The+Ark\",\"@attr\":{\"rank\":\"20\"}},{\"name\":\"Jackie Wilson\",\"mbid\":\"CENSORED05dd\",\"playcount\":\"1\",\"url\":\"https://www.last.fm/music/Jackie+Wilson\",\"@attr\":{\"rank\":\"21\"}},{\"name\":\"JamesDavis\",\"mbid\":\"\",\"playcount\":\"1\",\"url\":\"https://www.last.fm/music/JamesDavis\",\"@attr\":{\"rank\":\"22\"}},{\"name\":\"Kiana Led\u00e9\",\"mbid\":\"\",\"playcount\":\"1\",\"url\":\"https://www.last.fm/music/Kiana+Led%C3%A9\",\"@attr\":{\"rank\":\"23\"}},{\"name\":\"Kylie Minogue\",\"mbid\":\"CENSORED684c\",\"playcount\":\"1\",\"url\":\"https://www.last.fm/music/Kylie+Minogue\",\"@attr\":{\"rank\":\"24\"}},{\"name\":\"Liza\",\"mbid\":\"CENSORED8446\",\"playcount\":\"1\",\"url\":\"https://www.last.fm/music/Liza\",\"@attr\":{\"rank\":\"25\"}},{\"name\":\"Maddie & Tae\",\"mbid\":\"CENSOREDb79f\",\"playcount\":\"1\",\"url\":\"https://www.last.fm/music/Maddie+&+Tae\",\"@attr\":{\"rank\":\"26\"}},{\"name\":\"Major.\",\"mbid\":\"\",\"playcount\":\"1\",\"url\":\"https://www.last.fm/music/Major.\",\"@attr\":{\"rank\":\"27\"}},{\"name\":\"Marsha Ambrosius\",\"mbid\":\"CENSOREDd8aa\",\"playcount\":\"1\",\"url\":\"https://www.last.fm/music/Marsha+Ambrosius\",\"@attr\":{\"rank\":\"28\"}},{\"name\":\"masego\",\"mbid\":\"\",\"playcount\":\"1\",\"url\":\"https://www.last.fm/music/masego\",\"@attr\":{\"rank\":\"29\"}},{\"name\":\"Melat\",\"mbid\":\"\",\"playcount\":\"1\",\"url\":\"https://www.last.fm/music/Melat\",\"@attr\":{\"rank\":\"30\"}},{\"name\":\"Nikki Blonsky\",\"mbid\":\"CENSOREDfd5d\",\"playcount\":\"1\",\"url\":\"https://www.last.fm/music/Nikki+Blonsky\",\"@attr\":{\"rank\":\"31\"}},{\"name\":\"Njomza\",\"mbid\":\"\",\"playcount\":\"1\",\"url\":\"https://www.last.fm/music/Njomza\",\"@attr\":{\"rank\":\"32\"}},{\"name\":\"Paul Simon\",\"mbid\":\"CENSOREDebb9\",\"playcount\":\"1\",\"url\":\"https://www.last.fm/music/Paul+Simon\",\"@attr\":{\"rank\":\"33\"}},{\"name\":\"Queen Naija\",\"mbid\":\"\",\"playcount\":\"1\",\"url\":\"https://www.last.fm/music/Queen+Naija\",\"@attr\":{\"rank\":\"34\"}},{\"name\":\"R.Lum.R\",\"mbid\":\"\",\"playcount\":\"1\",\"url\":\"https://www.last.fm/music/R.Lum.R\",\"@attr\":{\"rank\":\"35\"}},{\"name\":\"Ro James\",\"mbid\":\"\",\"playcount\":\"1\",\"url\":\"https://www.last.fm/music/Ro+James\",\"@attr\":{\"rank\":\"36\"}},{\"name\":\"Ryan Trey\",\"mbid\":\"\",\"playcount\":\"1\",\"url\":\"https://www.last.fm/music/Ryan+Trey\",\"@attr\":{\"rank\":\"37\"}},{\"name\":\"Sat-B\",\"mbid\":\"\",\"playcount\":\"1\",\"url\":\"https://www.last.fm/music/Sat-B\",\"@attr\":{\"rank\":\"38\"}},{\"name\":\"Sauti Sol\",\"mbid\":\"CENSORED80b9\",\"playcount\":\"1\",\"url\":\"https://www.last.fm/music/Sauti+Sol\",\"@attr\":{\"rank\":\"39\"}},{\"name\":\"Shawn Stockman\",\"mbid\":\"CENSORED87d4\",\"playcount\":\"1\",\"url\":\"https://www.last.fm/music/Shawn+Stockman\",\"@attr\":{\"rank\":\"40\"}},{\"name\":\"Stevie Wonder\",\"mbid\":\"CENSOREDe986\",\"playcount\":\"1\",\"url\":\"https://www.last.fm/music/Stevie+Wonder\",\"@attr\":{\"rank\":\"41\"}},{\"name\":\"Summer Walker\",\"mbid\":\"\",\"playcount\":\"1\",\"url\":\"https://www.last.fm/music/Summer+Walker\",\"@attr\":{\"rank\":\"42\"}},{\"name\":\"Tamia\",\"mbid\":\"CENSORED7396\",\"playcount\":\"1\",\"url\":\"https://www.last.fm/music/Tamia\",\"@attr\":{\"rank\":\"43\"}},{\"name\":\"The Wandering Hearts\",\"mbid\":\"\",\"playcount\":\"1\",\"url\":\"https://www.last.fm/music/The+Wandering+Hearts\",\"@attr\":{\"rank\":\"44\"}},{\"name\":\"The Wild Things\",\"mbid\":\"CENSOREDae52\",\"playcount\":\"1\",\"url\":\"https://www.last.fm/music/The+Wild+Things\",\"@attr\":{\"rank\":\"45\"}},{\"name\":\"Van Morrison\",\"mbid\":\"CENSORED3559\",\"playcount\":\"1\",\"url\":\"https://www.last.fm/music/Van+Morrison\",\"@attr\":{\"rank\":\"46\"}},{\"name\":\"Free Nationals\",\"mbid\":\"\",\"playcount\":\"1\",\"url\":\"https://www.last.fm/music/Free+Nationals\",\"@attr\":{\"rank\":\"47\"}}],\"@attr\":{\"user\":\"RJ\",\"from\":\"1541160000\",\"to\":\"1541764800\"}}}"
                 },
                 "headers": {
-                    "Server": [
-                        "openresty/1.9.7.5"
-                    ],
-                    "Access-Control-Max-Age": [
-                        "86400"
-                    ],
-                    "Connection": [
-                        "keep-alive"
-                    ],
-                    "Date": [
-                        "Sat, 10 Nov 2018 11:28:22 GMT"
+                    "Access-Control-Allow-Methods": [
+                        "POST, GET, OPTIONS"
                     ],
                     "Access-Control-Allow-Origin": [
                         "*"
                     ],
+                    "Access-Control-Max-Age": [
+                        "86400"
+                    ],
                     "Access-Control-Request-Headers": [
                         "Origin, X-Atmosphere-tracking-id, X-Atmosphere-Framework, X-Cache-Date, Content-Type, X-Atmosphere-Transport, *"
+                    ],
+                    "Connection": [
+                        "keep-alive"
+                    ],
+                    "Content-Length": [
+                        "6456"
                     ],
                     "Content-Type": [
                         "application/json; charset=UTF-8"
                     ],
-                    "Access-Control-Allow-Methods": [
-                        "POST, GET, OPTIONS"
+                    "Date": [
+                        "Sat, 10 Nov 2018 11:28:22 GMT"
                     ],
-                    "Content-Length": [
-                        "6456"
+                    "Server": [
+                        "openresty/1.9.7.5"
                     ]
                 },
-                "body": {
-                    "string": "{\"weeklyartistchart\":{\"artist\":[{\"name\":\"Womb Sounds Heartbeat\",\"mbid\":\"\",\"playcount\":\"35\",\"url\":\"https://www.last.fm/music/Womb+Sounds+Heartbeat\",\"@attr\":{\"rank\":\"1\"}},{\"name\":\"The Gaslight Anthem\",\"mbid\":\"CENSORED17e3\",\"playcount\":\"10\",\"url\":\"https://www.last.fm/music/The+Gaslight+Anthem\",\"@attr\":{\"rank\":\"2\"}},{\"name\":\"Kacey Musgraves\",\"mbid\":\"CENSORED40cb\",\"playcount\":\"3\",\"url\":\"https://www.last.fm/music/Kacey+Musgraves\",\"@attr\":{\"rank\":\"3\"}},{\"name\":\"Ferris & Sylvester\",\"mbid\":\"\",\"playcount\":\"2\",\"url\":\"https://www.last.fm/music/Ferris+&+Sylvester\",\"@attr\":{\"rank\":\"4\"}},{\"name\":\"Mario\",\"mbid\":\"CENSORED2cc7\",\"playcount\":\"2\",\"url\":\"https://www.last.fm/music/Mario\",\"@attr\":{\"rank\":\"5\"}},{\"name\":\"Nao\",\"mbid\":\"CENSORED1fed\",\"playcount\":\"2\",\"url\":\"https://www.last.fm/music/Nao\",\"@attr\":{\"rank\":\"6\"}},{\"name\":\"Amber Mark\",\"mbid\":\"\",\"playcount\":\"1\",\"url\":\"https://www.last.fm/music/Amber+Mark\",\"@attr\":{\"rank\":\"7\"}},{\"name\":\"Ar'mon & Trey\",\"mbid\":\"\",\"playcount\":\"1\",\"url\":\"https://www.last.fm/music/Ar%27mon+&+Trey\",\"@attr\":{\"rank\":\"8\"}},{\"name\":\"Aretha Franklin\",\"mbid\":\"CENSORED299e\",\"playcount\":\"1\",\"url\":\"https://www.last.fm/music/Aretha+Franklin\",\"@attr\":{\"rank\":\"9\"}},{\"name\":\"Brian Deady\",\"mbid\":\"CENSORED1726\",\"playcount\":\"1\",\"url\":\"https://www.last.fm/music/Brian+Deady\",\"@attr\":{\"rank\":\"10\"}},{\"name\":\"Catherine McGrath\",\"mbid\":\"\",\"playcount\":\"1\",\"url\":\"https://www.last.fm/music/Catherine+McGrath\",\"@attr\":{\"rank\":\"11\"}},{\"name\":\"Childish Gambino\",\"mbid\":\"CENSORED607e\",\"playcount\":\"1\",\"url\":\"https://www.last.fm/music/Childish+Gambino\",\"@attr\":{\"rank\":\"12\"}},{\"name\":\"Dram\",\"mbid\":\"\",\"playcount\":\"1\",\"url\":\"https://www.last.fm/music/Dram\",\"@attr\":{\"rank\":\"13\"}},{\"name\":\"Enno Aare\",\"mbid\":\"\",\"playcount\":\"1\",\"url\":\"https://www.last.fm/music/Enno+Aare\",\"@attr\":{\"rank\":\"14\"}},{\"name\":\"Filmore\",\"mbid\":\"CENSORED0c76\",\"playcount\":\"1\",\"url\":\"https://www.last.fm/music/Filmore\",\"@attr\":{\"rank\":\"15\"}},{\"name\":\"Fleetwood Mac\",\"mbid\":\"CENSORED5b1a\",\"playcount\":\"1\",\"url\":\"https://www.last.fm/music/Fleetwood+Mac\",\"@attr\":{\"rank\":\"16\"}},{\"name\":\"Franz Schubert\",\"mbid\":\"CENSORED65ed\",\"playcount\":\"1\",\"url\":\"https://www.last.fm/music/Franz+Schubert\",\"@attr\":{\"rank\":\"17\"}},{\"name\":\"Ilham\",\"mbid\":\"\",\"playcount\":\"1\",\"url\":\"https://www.last.fm/music/Ilham\",\"@attr\":{\"rank\":\"18\"}},{\"name\":\"India.Arie\",\"mbid\":\"CENSOREDefdd\",\"playcount\":\"1\",\"url\":\"https://www.last.fm/music/India.Arie\",\"@attr\":{\"rank\":\"19\"}},{\"name\":\"Into The Ark\",\"mbid\":\"\",\"playcount\":\"1\",\"url\":\"https://www.last.fm/music/Into+The+Ark\",\"@attr\":{\"rank\":\"20\"}},{\"name\":\"Jackie Wilson\",\"mbid\":\"CENSORED05dd\",\"playcount\":\"1\",\"url\":\"https://www.last.fm/music/Jackie+Wilson\",\"@attr\":{\"rank\":\"21\"}},{\"name\":\"JamesDavis\",\"mbid\":\"\",\"playcount\":\"1\",\"url\":\"https://www.last.fm/music/JamesDavis\",\"@attr\":{\"rank\":\"22\"}},{\"name\":\"Kiana Led\u00e9\",\"mbid\":\"\",\"playcount\":\"1\",\"url\":\"https://www.last.fm/music/Kiana+Led%C3%A9\",\"@attr\":{\"rank\":\"23\"}},{\"name\":\"Kylie Minogue\",\"mbid\":\"CENSORED684c\",\"playcount\":\"1\",\"url\":\"https://www.last.fm/music/Kylie+Minogue\",\"@attr\":{\"rank\":\"24\"}},{\"name\":\"Liza\",\"mbid\":\"CENSORED8446\",\"playcount\":\"1\",\"url\":\"https://www.last.fm/music/Liza\",\"@attr\":{\"rank\":\"25\"}},{\"name\":\"Maddie & Tae\",\"mbid\":\"CENSOREDb79f\",\"playcount\":\"1\",\"url\":\"https://www.last.fm/music/Maddie+&+Tae\",\"@attr\":{\"rank\":\"26\"}},{\"name\":\"Major.\",\"mbid\":\"\",\"playcount\":\"1\",\"url\":\"https://www.last.fm/music/Major.\",\"@attr\":{\"rank\":\"27\"}},{\"name\":\"Marsha Ambrosius\",\"mbid\":\"CENSOREDd8aa\",\"playcount\":\"1\",\"url\":\"https://www.last.fm/music/Marsha+Ambrosius\",\"@attr\":{\"rank\":\"28\"}},{\"name\":\"masego\",\"mbid\":\"\",\"playcount\":\"1\",\"url\":\"https://www.last.fm/music/masego\",\"@attr\":{\"rank\":\"29\"}},{\"name\":\"Melat\",\"mbid\":\"\",\"playcount\":\"1\",\"url\":\"https://www.last.fm/music/Melat\",\"@attr\":{\"rank\":\"30\"}},{\"name\":\"Nikki Blonsky\",\"mbid\":\"CENSOREDfd5d\",\"playcount\":\"1\",\"url\":\"https://www.last.fm/music/Nikki+Blonsky\",\"@attr\":{\"rank\":\"31\"}},{\"name\":\"Njomza\",\"mbid\":\"\",\"playcount\":\"1\",\"url\":\"https://www.last.fm/music/Njomza\",\"@attr\":{\"rank\":\"32\"}},{\"name\":\"Paul Simon\",\"mbid\":\"CENSOREDebb9\",\"playcount\":\"1\",\"url\":\"https://www.last.fm/music/Paul+Simon\",\"@attr\":{\"rank\":\"33\"}},{\"name\":\"Queen Naija\",\"mbid\":\"\",\"playcount\":\"1\",\"url\":\"https://www.last.fm/music/Queen+Naija\",\"@attr\":{\"rank\":\"34\"}},{\"name\":\"R.Lum.R\",\"mbid\":\"\",\"playcount\":\"1\",\"url\":\"https://www.last.fm/music/R.Lum.R\",\"@attr\":{\"rank\":\"35\"}},{\"name\":\"Ro James\",\"mbid\":\"\",\"playcount\":\"1\",\"url\":\"https://www.last.fm/music/Ro+James\",\"@attr\":{\"rank\":\"36\"}},{\"name\":\"Ryan Trey\",\"mbid\":\"\",\"playcount\":\"1\",\"url\":\"https://www.last.fm/music/Ryan+Trey\",\"@attr\":{\"rank\":\"37\"}},{\"name\":\"Sat-B\",\"mbid\":\"\",\"playcount\":\"1\",\"url\":\"https://www.last.fm/music/Sat-B\",\"@attr\":{\"rank\":\"38\"}},{\"name\":\"Sauti Sol\",\"mbid\":\"CENSORED80b9\",\"playcount\":\"1\",\"url\":\"https://www.last.fm/music/Sauti+Sol\",\"@attr\":{\"rank\":\"39\"}},{\"name\":\"Shawn Stockman\",\"mbid\":\"CENSORED87d4\",\"playcount\":\"1\",\"url\":\"https://www.last.fm/music/Shawn+Stockman\",\"@attr\":{\"rank\":\"40\"}},{\"name\":\"Stevie Wonder\",\"mbid\":\"CENSOREDe986\",\"playcount\":\"1\",\"url\":\"https://www.last.fm/music/Stevie+Wonder\",\"@attr\":{\"rank\":\"41\"}},{\"name\":\"Summer Walker\",\"mbid\":\"\",\"playcount\":\"1\",\"url\":\"https://www.last.fm/music/Summer+Walker\",\"@attr\":{\"rank\":\"42\"}},{\"name\":\"Tamia\",\"mbid\":\"CENSORED7396\",\"playcount\":\"1\",\"url\":\"https://www.last.fm/music/Tamia\",\"@attr\":{\"rank\":\"43\"}},{\"name\":\"The Wandering Hearts\",\"mbid\":\"\",\"playcount\":\"1\",\"url\":\"https://www.last.fm/music/The+Wandering+Hearts\",\"@attr\":{\"rank\":\"44\"}},{\"name\":\"The Wild Things\",\"mbid\":\"CENSOREDae52\",\"playcount\":\"1\",\"url\":\"https://www.last.fm/music/The+Wild+Things\",\"@attr\":{\"rank\":\"45\"}},{\"name\":\"Van Morrison\",\"mbid\":\"CENSORED3559\",\"playcount\":\"1\",\"url\":\"https://www.last.fm/music/Van+Morrison\",\"@attr\":{\"rank\":\"46\"}},{\"name\":\"Free Nationals\",\"mbid\":\"\",\"playcount\":\"1\",\"url\":\"https://www.last.fm/music/Free+Nationals\",\"@attr\":{\"rank\":\"47\"}}],\"@attr\":{\"user\":\"RJ\",\"from\":\"1541160000\",\"to\":\"1541764800\"}}}"
+                "status": {
+                    "code": 200,
+                    "message": "OK"
                 }
             }
         }
-    ]
+    ],
+    "version": 1
 }

@@ -1,9 +1,9 @@
 {
     "data": [
         {
-            "name": "Welcome to the Jungle",
-            "url": "https://www.last.fm/music/Guns+N%27+Roses/_/Welcome+to+the+Jungle",
-            "mbid": "",
+            "artist": {
+                "name": "Guns N' Roses"
+            },
             "image": [
                 {
                     "size": "small",
@@ -23,14 +23,14 @@
                 }
             ],
             "listeners": 1231068,
-            "artist": {
-                "name": "Guns N' Roses"
-            }
+            "mbid": "",
+            "name": "Welcome to the Jungle",
+            "url": "https://www.last.fm/music/Guns+N%27+Roses/_/Welcome+to+the+Jungle"
         },
         {
-            "name": "Guns and Roses",
-            "url": "https://www.last.fm/music/Lana+Del+Rey/_/Guns+and+Roses",
-            "mbid": "CENSORED545d",
+            "artist": {
+                "name": "Lana Del Rey"
+            },
             "image": [
                 {
                     "size": "small",
@@ -50,14 +50,14 @@
                 }
             ],
             "listeners": 129126,
-            "artist": {
-                "name": "Lana Del Rey"
-            }
+            "mbid": "CENSORED545d",
+            "name": "Guns and Roses",
+            "url": "https://www.last.fm/music/Lana+Del+Rey/_/Guns+and+Roses"
         },
         {
-            "name": "Under the Gun",
-            "url": "https://www.last.fm/music/The+Killers/_/Under+the+Gun",
-            "mbid": "CENSOREDe4f1",
+            "artist": {
+                "name": "The Killers"
+            },
             "image": [
                 {
                     "size": "small",
@@ -77,14 +77,14 @@
                 }
             ],
             "listeners": 340744,
-            "artist": {
-                "name": "The Killers"
-            }
+            "mbid": "CENSOREDe4f1",
+            "name": "Under the Gun",
+            "url": "https://www.last.fm/music/The+Killers/_/Under+the+Gun"
         },
         {
-            "name": "Paradise City",
-            "url": "https://www.last.fm/music/Guns+N%27+Roses/_/Paradise+City",
-            "mbid": "CENSORED18d6",
+            "artist": {
+                "name": "Guns N' Roses"
+            },
             "image": [
                 {
                     "size": "small",
@@ -104,14 +104,14 @@
                 }
             ],
             "listeners": 1092670,
-            "artist": {
-                "name": "Guns N' Roses"
-            }
+            "mbid": "CENSORED18d6",
+            "name": "Paradise City",
+            "url": "https://www.last.fm/music/Guns+N%27+Roses/_/Paradise+City"
         },
         {
-            "name": "Gun-Shy",
-            "url": "https://www.last.fm/music/Grizzly+Bear/_/Gun-Shy",
-            "mbid": "CENSORED8564",
+            "artist": {
+                "name": "Grizzly Bear"
+            },
             "image": [
                 {
                     "size": "small",
@@ -131,9 +131,9 @@
                 }
             ],
             "listeners": 164751,
-            "artist": {
-                "name": "Grizzly Bear"
-            }
+            "mbid": "CENSORED8564",
+            "name": "Gun-Shy",
+            "url": "https://www.last.fm/music/Grizzly+Bear/_/Gun-Shy"
         }
     ]
 }

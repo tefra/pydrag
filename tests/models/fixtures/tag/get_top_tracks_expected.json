@@ -1,14 +1,15 @@
 {
     "data": [
         {
-            "name": "Stronger",
-            "url": "https://www.last.fm/music/Kanye+West/_/Stronger",
             "artist": {
                 "mbid": "CENSORED1051",
                 "name": "Kanye West",
                 "url": "https://www.last.fm/music/Kanye+West"
             },
-            "mbid": "CENSOREDaf2d",
+            "attr": {
+                "rank": 1
+            },
+            "duration": 314,
             "image": [
                 {
                     "size": "small",
@@ -27,20 +28,20 @@
                     "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
-            "duration": 314,
-            "attr": {
-                "rank": 1
-            }
+            "mbid": "CENSOREDaf2d",
+            "name": "Stronger",
+            "url": "https://www.last.fm/music/Kanye+West/_/Stronger"
         },
         {
-            "name": "Clint Eastwood",
-            "url": "https://www.last.fm/music/Gorillaz/_/Clint+Eastwood",
             "artist": {
                 "mbid": "CENSORED2596",
                 "name": "Gorillaz",
                 "url": "https://www.last.fm/music/Gorillaz"
             },
-            "mbid": "CENSORED47e3",
+            "attr": {
+                "rank": 2
+            },
+            "duration": 339,
             "image": [
                 {
                     "size": "small",
@@ -59,10 +60,9 @@
                     "text": "https://lastfm-img2.akamaized.net/i/u/300x300/CENSORED.png"
                 }
             ],
-            "duration": 339,
-            "attr": {
-                "rank": 2
-            }
+            "mbid": "CENSORED47e3",
+            "name": "Clint Eastwood",
+            "url": "https://www.last.fm/music/Gorillaz/_/Clint+Eastwood"
         }
     ]
 }

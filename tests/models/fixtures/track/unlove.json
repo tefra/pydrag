@@ -1,20 +1,14 @@
 {
-    "version": 1,
     "interactions": [
         {
             "request": {
-                "method": "POST",
-                "uri": "https://ws.audioscrobbler.com/2.0/",
                 "body": "method=auth.getMobileSession&format=json&api_key=LAST_FM_API_KEY&username=Zaratoustre&authToken=USER_AUTH_TOKEN&api_sig=API_SIG",
                 "headers": {
-                    "User-Agent": [
-                        "python-requests/2.20.0"
+                    "Accept": [
+                        "*/*"
                     ],
                     "Accept-Encoding": [
                         "gzip, deflate"
-                    ],
-                    "Accept": [
-                        "*/*"
                     ],
                     "Connection": [
                         "keep-alive"
@@ -24,59 +18,59 @@
                     ],
                     "Content-Type": [
                         "application/x-www-form-urlencoded"
+                    ],
+                    "User-Agent": [
+                        "python-requests/2.20.0"
                     ]
-                }
+                },
+                "method": "POST",
+                "uri": "https://ws.audioscrobbler.com/2.0/"
             },
             "response": {
-                "status": {
-                    "code": 200,
-                    "message": "OK"
+                "body": {
+                    "string": "{\"session\":{\"subscriber\":0,\"name\":\"Zaratoustre\",\"key\":\"CENSORED\"}}"
                 },
                 "headers": {
-                    "content-length": [
-                        "90"
-                    ],
                     "Access-Control-Allow-Methods": [
                         "POST, GET, OPTIONS"
-                    ],
-                    "Date": [
-                        "Sat, 10 Nov 2018 18:35:16 GMT"
                     ],
                     "Access-Control-Allow-Origin": [
                         "*"
                     ],
-                    "Server": [
-                        "openresty/1.9.7.5"
+                    "Access-Control-Max-Age": [
+                        "86400"
                     ],
                     "Connection": [
                         "keep-alive"
                     ],
-                    "Access-Control-Max-Age": [
-                        "86400"
-                    ],
                     "Content-Type": [
                         "application/json"
+                    ],
+                    "Date": [
+                        "Sat, 10 Nov 2018 18:35:16 GMT"
+                    ],
+                    "Server": [
+                        "openresty/1.9.7.5"
+                    ],
+                    "content-length": [
+                        "90"
                     ]
                 },
-                "body": {
-                    "string": "{\"session\":{\"subscriber\":0,\"name\":\"Zaratoustre\",\"key\":\"CENSORED\"}}"
+                "status": {
+                    "code": 200,
+                    "message": "OK"
                 }
             }
         },
         {
             "request": {
-                "method": "POST",
-                "uri": "https://ws.audioscrobbler.com/2.0/",
                 "body": "artist=AC+%2F+DC&track=Hells+Bells&sk=USER_SESSION&method=track.unlove&format=json&api_key=LAST_FM_API_KEY&api_sig=API_SIG",
                 "headers": {
-                    "User-Agent": [
-                        "python-requests/2.20.0"
+                    "Accept": [
+                        "*/*"
                     ],
                     "Accept-Encoding": [
                         "gzip, deflate"
-                    ],
-                    "Accept": [
-                        "*/*"
                     ],
                     "Connection": [
                         "keep-alive"
@@ -86,44 +80,50 @@
                     ],
                     "Content-Type": [
                         "application/x-www-form-urlencoded"
+                    ],
+                    "User-Agent": [
+                        "python-requests/2.20.0"
                     ]
-                }
+                },
+                "method": "POST",
+                "uri": "https://ws.audioscrobbler.com/2.0/"
             },
             "response": {
-                "status": {
-                    "code": 200,
-                    "message": "OK"
+                "body": {
+                    "string": "{}"
                 },
                 "headers": {
-                    "content-length": [
-                        "2"
-                    ],
                     "Access-Control-Allow-Methods": [
                         "POST, GET, OPTIONS"
-                    ],
-                    "Date": [
-                        "Sat, 10 Nov 2018 18:35:18 GMT"
                     ],
                     "Access-Control-Allow-Origin": [
                         "*"
                     ],
-                    "Server": [
-                        "openresty/1.9.7.5"
+                    "Access-Control-Max-Age": [
+                        "86400"
                     ],
                     "Connection": [
                         "keep-alive"
                     ],
-                    "Access-Control-Max-Age": [
-                        "86400"
-                    ],
                     "Content-Type": [
                         "application/json"
+                    ],
+                    "Date": [
+                        "Sat, 10 Nov 2018 18:35:18 GMT"
+                    ],
+                    "Server": [
+                        "openresty/1.9.7.5"
+                    ],
+                    "content-length": [
+                        "2"
                     ]
                 },
-                "body": {
-                    "string": "{}"
+                "status": {
+                    "code": 200,
+                    "message": "OK"
                 }
             }
         }
-    ]
+    ],
+    "version": 1
 }

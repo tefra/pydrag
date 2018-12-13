@@ -1,61 +1,61 @@
 {
-    "version": 1,
     "interactions": [
         {
             "request": {
-                "method": "GET",
-                "uri": "https://ws.audioscrobbler.com/2.0/?api_key=LAST_FM_API_KEY&artist=AC+%2F+DC&autocorrect=1&format=json&method=track.getTopTracks&track=Hells+Bell",
                 "body": null,
                 "headers": {
-                    "User-Agent": [
-                        "python-requests/2.20.0"
+                    "Accept": [
+                        "*/*"
                     ],
                     "Accept-Encoding": [
                         "gzip, deflate"
                     ],
-                    "Accept": [
-                        "*/*"
-                    ],
                     "Connection": [
                         "keep-alive"
+                    ],
+                    "User-Agent": [
+                        "python-requests/2.20.0"
                     ]
-                }
+                },
+                "method": "GET",
+                "uri": "https://ws.audioscrobbler.com/2.0/?api_key=LAST_FM_API_KEY&artist=AC+%2F+DC&autocorrect=1&format=json&method=track.getTopTracks&track=Hells+Bell"
             },
             "response": {
-                "status": {
-                    "code": 400,
-                    "message": "Bad Request"
+                "body": {
+                    "string": "{\"error\":3,\"message\":\"Invalid Method - No method with that name in this package\"}"
                 },
                 "headers": {
-                    "Date": [
-                        "Sat, 10 Nov 2018 16:20:26 GMT"
-                    ],
-                    "content-length": [
-                        "81"
-                    ],
-                    "Server": [
-                        "openresty/1.9.7.5"
+                    "Access-Control-Allow-Methods": [
+                        "POST, GET, OPTIONS"
                     ],
                     "Access-Control-Allow-Origin": [
                         "*"
                     ],
-                    "Access-Control-Allow-Methods": [
-                        "POST, GET, OPTIONS"
-                    ],
                     "Access-Control-Max-Age": [
                         "86400"
+                    ],
+                    "Connection": [
+                        "keep-alive"
                     ],
                     "Content-Type": [
                         "application/json"
                     ],
-                    "Connection": [
-                        "keep-alive"
+                    "Date": [
+                        "Sat, 10 Nov 2018 16:20:26 GMT"
+                    ],
+                    "Server": [
+                        "openresty/1.9.7.5"
+                    ],
+                    "content-length": [
+                        "81"
                     ]
                 },
-                "body": {
-                    "string": "{\"error\":3,\"message\":\"Invalid Method - No method with that name in this package\"}"
+                "status": {
+                    "code": 400,
+                    "message": "Bad Request"
                 }
             }
         }
-    ]
+    ],
+    "version": 1
 }
