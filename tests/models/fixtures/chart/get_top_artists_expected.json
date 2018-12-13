@@ -290,5 +290,8 @@
             "playcount": 128225732,
             "url": "https://www.last.fm/music/Michael+Jackson"
         }
-    ]
+    ],
+    "limit": 10,
+    "page": 2,
+    "total": 2872961
 }

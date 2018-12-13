@@ -1600,5 +1600,9 @@
             "playcount": 1,
             "url": "https://www.last.fm/music/Ferris+&+Sylvester/Burning+River"
         }
-    ]
+    ],
+    "limit": 50,
+    "page": 1,
+    "total": 52,
+    "user": "RJ"
 }

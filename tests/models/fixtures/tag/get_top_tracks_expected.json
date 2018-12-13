@@ -64,5 +64,9 @@
             "name": "Clint Eastwood",
             "url": "https://www.last.fm/music/Gorillaz/_/Clint+Eastwood"
         }
-    ]
+    ],
+    "limit": 2,
+    "page": 1,
+    "tag": "rap",
+    "total": 104399
 }

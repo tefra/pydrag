@@ -1600,5 +1600,9 @@
             "name": "I Got The... - 2006 Digital Remaster",
             "url": "https://www.last.fm/music/Labi+Siffre/_/I+Got+The...+-+2006+Digital+Remaster"
         }
-    ]
+    ],
+    "limit": 50,
+    "page": 1,
+    "total": 700,
+    "user": "RJ"
 }

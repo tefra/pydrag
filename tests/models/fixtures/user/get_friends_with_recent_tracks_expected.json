@@ -2465,5 +2465,9 @@
             },
             "url": "https://www.last.fm/user/mischa"
         }
-    ]
+    ],
+    "limit": 50,
+    "page": 1,
+    "total": 89,
+    "user": "RJ"
 }

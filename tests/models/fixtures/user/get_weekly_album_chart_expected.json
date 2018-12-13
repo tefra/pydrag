@@ -663,5 +663,8 @@
             "playcount": 1,
             "url": "https://www.last.fm/music/The+Wild+Things/Better+off+Alone"
         }
-    ]
+    ],
+    "from_date": 1541160000,
+    "to_date": 1541764800,
+    "user": "RJ"
 }

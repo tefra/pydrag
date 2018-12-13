@@ -1300,5 +1300,10 @@
             "name": "Fucked Up Friends",
             "url": "https://www.last.fm/music/Tobacco/Fucked+Up+Friends"
         }
-    ]
+    ],
+    "limit": 50,
+    "page": 1,
+    "search_terms": "fire",
+    "total": 661041,
+    "user": "fire"
 }

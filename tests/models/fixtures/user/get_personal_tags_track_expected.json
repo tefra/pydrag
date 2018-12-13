@@ -145,5 +145,10 @@
             "name": "Hells Bells",
             "url": "https://www.last.fm/music/AC%2FDC/_/Hells+Bells"
         }
-    ]
+    ],
+    "limit": 50,
+    "page": 1,
+    "tag": "rock",
+    "total": 5,
+    "user": "RJ"
 }

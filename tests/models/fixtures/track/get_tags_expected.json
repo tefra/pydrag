@@ -1,4 +1,5 @@
 {
+    "artist": "AC/DC",
     "data": [
         {
             "name": "guitar",
@@ -12,5 +13,6 @@
             "name": "rock",
             "url": "https://www.last.fm/tag/rock"
         }
-    ]
+    ],
+    "track": "Hells Bells"
 }

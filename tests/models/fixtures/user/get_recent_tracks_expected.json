@@ -2750,5 +2750,9 @@
             "name": "\u03a0\u03ac\u03c1\u03b5 \u039b\u03af\u03b3\u03bf \u03a6\u03c9\u03c2 (Remix)",
             "url": "https://www.last.fm/music/FF.C/_/%CE%A0%CE%AC%CF%81%CE%B5+%CE%9B%CE%AF%CE%B3%CE%BF+%CE%A6%CF%89%CF%82+(Remix)"
         }
-    ]
+    ],
+    "limit": 50,
+    "page": 1,
+    "total": 34497,
+    "user": "Zaratoustre"
 }

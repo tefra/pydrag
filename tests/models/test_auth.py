@@ -25,6 +25,7 @@ class AuthSessionTests(MethodTestCase):
 
         self.assertDictEqual(expected_params, result.params)
         self.assertIsInstance(result, AuthSession)
+        self.assertFixtureEqual("auth/get_session", result.to_dict())
 
 
 class AuthTokenTests(MethodTestCase):

@@ -11,6 +11,12 @@ T = TypeVar("T", bound="BaseModel")
 
 
 class BaseModel:
+    """
+    Pydrag Base Model.
+
+    :param params: The params used to fetch the api response data
+    """
+
     params: Union[List, Dict, None] = attrib(init=False, default=None)
 
     def to_dict(self) -> Dict:
@@ -56,18 +62,64 @@ class BaseModel:
 
 @dataclass(cmp=False)
 class ListModel(UserList, Sequence[T], BaseModel):
-    data: List[T] = []
+    """
+    Wrapper for list entities.
 
-    def to_dict(self) -> Dict:
-        return dict(data=[item.to_dict() for item in self])
+    :param data: Our list of objects
+    :param page: Current page number
+    :param limit: Per page limit
+    :param total: Total number of items
+    :param tag: Tag name
+    :param user: User name
+    :param artist: Artist name
+    :param track: Track name
+    :param album: Album name
+    :param country: Country name
+    :param from_date: From date timestamp
+    :param to_date: To date timestamp
+    :param search_terms: Search query string
+    """
+
+    data: List[T] = []
+    page: Optional[int] = None
+    limit: Optional[int] = None
+    total: Optional[int] = None
+    tag: Optional[str] = None
+    user: Optional[str] = None
+    artist: Optional[str] = None
+    track: Optional[str] = None
+    album: Optional[str] = None
+    country: Optional[str] = None
+    from_date: Optional[int] = None
+    to_date: Optional[int] = None
+    search_terms: Optional[str] = None
 
     @classmethod
     def from_dict(cls: Type, data: Dict):
-        raise NotImplementedError()
+        if "attr" in data:
+            data.update(data.pop("attr"))
+
+        if "query" in data:
+            data["query"].pop("text", None)
+            data["query"].pop("role", None)
+            data.update(data.pop("query"))
+
+        if "offset" in data and "page" not in data and "limit" in data:
+            data["page"] = int(data["offset"]) / int(data["limit"])
+
+        data.pop("offset", None)
+        return super(ListModel, cls).from_dict(data)
 
 
 @dataclass
 class RawResponse(BaseModel):
+    """
+    Most of the write operations don't return any response body but still for
+    consistency we need to return a BaseModel with all the metadata params.
+
+    :param data: The raw response dictionary
+    """
+
     data: Optional[dict] = None
 
     def to_dict(self):

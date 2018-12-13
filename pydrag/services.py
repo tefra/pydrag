@@ -5,6 +5,7 @@ from requests import request
 from pydrag import utils
 from pydrag.exceptions import ApiError
 from pydrag.models.common import BaseModel, Config, ListModel
+from pydrag.utils import get_nested
 
 
 class ApiMixin:
@@ -187,13 +188,11 @@ class ApiMixin:
         if flatten is None:
             return bind.from_dict(data)
 
-        for m in flatten.split("."):
-            data = data.pop(m)
-
-        if isinstance(data, dict):
-            data = [data]
-
-        return ListModel(data=[bind.from_dict(d) for d in data])
+        keys = flatten.split(".")
+        items = get_nested(data, keys, ensure_list=True)
+        data.pop(next(iter(keys)))
+        data.update(dict(data=[bind.from_dict(i) for i in items]))
+        return ListModel.from_dict(data)
 
     @staticmethod
     def raise_for_error(body: Dict):
@@ -228,7 +227,6 @@ def pythonic_variables(data):
         "albummatches": "albums",
         "artistmatches": "artists",
         "trackmatches": "tracks",
-        "totalPages": "total_pages",
         "startPage": "page",
         "trackcorrected": "track_corrected",
         "artistcorrected": "artist_corrected",
@@ -242,7 +240,6 @@ def pythonic_variables(data):
         "uts": "timestamp",
         "searchTerms": "search_terms",
         "opensearch:itemsPerPage": "limit",
-        "opensearch:startIndex": "offset",
         "opensearch:totalResults": "total",
         "toptags": "top_tags",
         "albumArtist": "album_artist",
@@ -254,6 +251,8 @@ def pythonic_variables(data):
         "num_res": "limit",
         "title": "name",
         "userloved": "loved",
+        "opensearch:Query": "query",
+        "perPage": "limit",
     }
 
     """
@@ -267,6 +266,11 @@ def pythonic_variables(data):
         "bootstrap",
         "streamable",
         "ignoredMessage",
+        "totalPages",  # I can do the math
+        "opensearch:startIndex",  # I can do the math,
+        "ignored",
+        "accepted",
+        "role",
     ]
 
     return {map.get(k, k): v for k, v in data if k not in fixme}

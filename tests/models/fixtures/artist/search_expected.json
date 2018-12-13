@@ -1400,5 +1400,10 @@
             "name": "Burcu G\u00fcne\u015f",
             "url": "https://www.last.fm/music/Burcu+G%C3%BCne%C5%9F"
         }
-    ]
+    ],
+    "limit": 50,
+    "page": 1,
+    "search_terms": "gun",
+    "total": 101477,
+    "user": "gun"
 }

@@ -1450,5 +1450,9 @@
             "tag_count": 0,
             "url": "https://www.last.fm/music/Eric+Clapton"
         }
-    ]
+    ],
+    "limit": 50,
+    "page": 1,
+    "total": 10806,
+    "user": "RJ"
 }

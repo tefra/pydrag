@@ -135,5 +135,8 @@
             "name": "Gun-Shy",
             "url": "https://www.last.fm/music/Grizzly+Bear/_/Gun-Shy"
         }
-    ]
+    ],
+    "limit": 5,
+    "page": 4,
+    "total": 1443087
 }

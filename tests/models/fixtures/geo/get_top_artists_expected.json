@@ -1,4 +1,5 @@
 {
+    "country": "Greece",
     "data": [
         {
             "image": [
@@ -280,5 +281,8 @@
             "name": "Coldplay",
             "url": "https://www.last.fm/music/Coldplay"
         }
-    ]
+    ],
+    "limit": 10,
+    "page": 1,
+    "total": 326901
 }

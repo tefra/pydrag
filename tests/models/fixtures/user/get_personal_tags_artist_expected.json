@@ -540,5 +540,10 @@
             "name": "Red Hot Chili Peppers",
             "url": "https://www.last.fm/music/Red+Hot+Chili+Peppers"
         }
-    ]
+    ],
+    "limit": 50,
+    "page": 1,
+    "tag": "rock",
+    "total": 20,
+    "user": "RJ"
 }

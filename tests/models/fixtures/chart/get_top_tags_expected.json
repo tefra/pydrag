@@ -70,5 +70,8 @@
             "url": "https://www.last.fm/tag/classic+rock",
             "wiki": {}
         }
-    ]
+    ],
+    "limit": 10,
+    "page": 2,
+    "total": 2693674
 }

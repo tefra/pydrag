@@ -1488,5 +1488,9 @@
             "playcount": 1,
             "url": "https://www.last.fm/music/Free+Nationals"
         }
-    ]
+    ],
+    "limit": 50,
+    "page": 1,
+    "total": 48,
+    "user": "RJ"
 }

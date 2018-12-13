@@ -27,3 +27,12 @@ def to_camel_case(text):
 
     components = text.split("_")
     return components[0].lower() + "".join(x.title() for x in components[1:])
+
+
+def get_nested(obj, keys, ensure_list=False):
+    for key in keys:
+        obj = obj[key]
+
+    if ensure_list and isinstance(obj, dict):
+        obj = [obj]
+    return obj

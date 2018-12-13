@@ -1,4 +1,5 @@
 {
+    "artist": "Guns N' Roses",
     "data": [
         {
             "artist": {
@@ -1630,5 +1631,8 @@
             "playcount": 626628,
             "url": "https://www.last.fm/music/Guns+N%27+Roses/_/Coma"
         }
-    ]
+    ],
+    "limit": 50,
+    "page": 1,
+    "total": 144845
 }

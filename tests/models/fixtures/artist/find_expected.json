@@ -40,7 +40,7 @@
     "listeners": 3209290,
     "mbid": "CENSORED8e43",
     "name": "Guns N' Roses",
-    "on_tour": 1,
+    "on_tour": true,
     "playcount": 114772084,
     "similar": [
         {
