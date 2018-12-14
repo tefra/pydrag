@@ -5,6 +5,8 @@ from pydrag.models.track import Tag
 from pydrag.models.track import Track
 from pydrag.models.user import User
 from pydrag.models.auth import AuthToken, AuthSession
+from pydrag.version import version
+
 
 try:
     from dotenv import load_dotenv
@@ -25,4 +27,5 @@ __all__ = [
     "AuthToken",
     "AuthSession",
     "configure",
+    "version",
 ]

@@ -14,9 +14,10 @@
 import os
 import sys
 
+from pydrag import version
+
 sys.path.insert(0, os.path.abspath(".."))
 
-import pydrag  # NOQA isort:skip
 
 # -- Project information -----------------------------------------------------
 
@@ -24,10 +25,7 @@ project = "pydrag"
 copyright = "2018, Christodoulos Tsoulloftas"
 author = "Christodoulos Tsoulloftas"
 
-# The short X.Y version
-version = ""
-# The full version, including alpha/beta/rc tags
-release = ""
+release = version
 
 
 # -- General configuration ---------------------------------------------------
