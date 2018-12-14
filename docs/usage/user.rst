@@ -7,12 +7,15 @@ Retrieve user
 
 .. code-block :: python
 
-    >>> from pydrag import Track
+    >>> from pydrag import User
     >>> me = User.find("Zaratoustre")
     >>> me
-    User(playlists=0, playcount=34637, gender='n', name='Zaratoustre', url='https://www.last.fm/user/Zaratoustre', country='Greece', image=[Image(size='small', text='https://lastfm-img2.akamaized.net/i/u/34s/a4503fbd410046dcc63317f0fa19613a.png'), Image(size='medium', text='https://lastfm-img2.akamaized.net/i/u/64s/a4503fbd410046dcc63317f0fa19613a.png'), Image(size='large', text='https://lastfm-img2.akamaized.net/i/u/174s/a4503fbd410046dcc63317f0fa19613a.png'), Image(size='extralarge', text='https://lastfm-img2.akamaized.net/i/u/300x300/a4503fbd410046dcc63317f0fa19613a.png')], age=0, registered=Date(timestamp=1263647609, text='1263647609'), real_name='Chris T', recent_track=None)
+    User(playlists=0, playcount=34816, gender='n', name='Zaratoustre', url='https://www.last.fm/user/Zaratoustre', country='Greece', image=[Image(size='small', text='https://lastfm-img2.akamaized.net/i/u/34s/a4503fbd410046dcc63317f0fa19613a.png'), Image(size='medium', text='https://lastfm-img2.akamaized.net/i/u/64s/a4503fbd410046dcc63317f0fa19613a.png'), Image(size='large', text='https://lastfm-img2.akamaized.net/i/u/174s/a4503fbd410046dcc63317f0fa19613a.png'), Image(size='extralarge', text='https://lastfm-img2.akamaized.net/i/u/300x300/a4503fbd410046dcc63317f0fa19613a.png')], age=0, registered=1263647609, real_name='Chris T', recent_track=None)
+    >>>
     >>> me.name
     'Zaratoustre'
+    >>> me.date_registered
+    datetime.datetime(2010, 1, 16, 13, 13, 29)
     >>>
 
 

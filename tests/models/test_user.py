@@ -1,3 +1,5 @@
+from datetime import datetime
+
 from pydrag.constants import Period
 from pydrag.models.common import ListModel
 from pydrag.models.user import User
@@ -15,10 +17,14 @@ class UserTests(MethodTestCase):
             country=None,
             image=None,
             age=None,
-            registered=None,
+            registered=1037793040,
         )
         self.maxDiff = None
         super(UserTests, self).setUp()
+
+    def test_registered_date(self):
+        expected = datetime(2002, 11, 20, 11, 50, 40)
+        self.assertEqual(expected, self.user.date_registered)
 
     @fixture.use_cassette(path="user/get_artist_tracks")
     def test_get_artist_tracks(self):

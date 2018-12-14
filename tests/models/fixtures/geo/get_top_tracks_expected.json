@@ -7,9 +7,6 @@
                 "name": "Arctic Monkeys",
                 "url": "https://www.last.fm/music/Arctic+Monkeys"
             },
-            "attr": {
-                "rank": 0
-            },
             "duration": 272,
             "image": [
                 {
@@ -32,6 +29,7 @@
             "listeners": 867724,
             "mbid": "CENSORED1a11",
             "name": "Do I Wanna Know?",
+            "rank": 0,
             "url": "https://www.last.fm/music/Arctic+Monkeys/_/Do+I+Wanna+Know%3F"
         },
         {
@@ -39,9 +37,6 @@
                 "mbid": "CENSORED2711",
                 "name": "Radiohead",
                 "url": "https://www.last.fm/music/Radiohead"
-            },
-            "attr": {
-                "rank": 1
             },
             "duration": 0,
             "image": [
@@ -65,6 +60,7 @@
             "listeners": 261777,
             "mbid": "",
             "name": "Burn the Witch",
+            "rank": 1,
             "url": "https://www.last.fm/music/Radiohead/_/Burn+the+Witch"
         },
         {
@@ -72,9 +68,6 @@
                 "mbid": "CENSORED6ca8",
                 "name": "Massive Attack",
                 "url": "https://www.last.fm/music/Massive+Attack"
-            },
-            "attr": {
-                "rank": 2
             },
             "duration": 279,
             "image": [
@@ -98,6 +91,7 @@
             "listeners": 1288368,
             "mbid": "CENSORED13ea",
             "name": "Teardrop",
+            "rank": 2,
             "url": "https://www.last.fm/music/Massive+Attack/_/Teardrop"
         },
         {
@@ -105,9 +99,6 @@
                 "mbid": "CENSORED2711",
                 "name": "Radiohead",
                 "url": "https://www.last.fm/music/Radiohead"
-            },
-            "attr": {
-                "rank": 3
             },
             "duration": 0,
             "image": [
@@ -131,6 +122,7 @@
             "listeners": 1605374,
             "mbid": "CENSORED927f",
             "name": "Karma Police",
+            "rank": 3,
             "url": "https://www.last.fm/music/Radiohead/_/Karma+Police"
         },
         {
@@ -138,9 +130,6 @@
                 "mbid": "CENSORED2711",
                 "name": "Radiohead",
                 "url": "https://www.last.fm/music/Radiohead"
-            },
-            "attr": {
-                "rank": 4
             },
             "duration": 239,
             "image": [
@@ -164,6 +153,7 @@
             "listeners": 1607794,
             "mbid": "CENSOREDeaa6",
             "name": "Creep",
+            "rank": 4,
             "url": "https://www.last.fm/music/Radiohead/_/Creep"
         },
         {
@@ -171,9 +161,6 @@
                 "mbid": "CENSORED2711",
                 "name": "Radiohead",
                 "url": "https://www.last.fm/music/Radiohead"
-            },
-            "attr": {
-                "rank": 5
             },
             "duration": 0,
             "image": [
@@ -197,6 +184,7 @@
             "listeners": 215983,
             "mbid": "",
             "name": "Daydreaming",
+            "rank": 5,
             "url": "https://www.last.fm/music/Radiohead/_/Daydreaming"
         },
         {
@@ -204,9 +192,6 @@
                 "mbid": "CENSOREDef4d",
                 "name": "Tame Impala",
                 "url": "https://www.last.fm/music/Tame+Impala"
-            },
-            "attr": {
-                "rank": 6
             },
             "duration": 0,
             "image": [
@@ -230,6 +215,7 @@
             "listeners": 382761,
             "mbid": "",
             "name": "The Less I Know the Better",
+            "rank": 6,
             "url": "https://www.last.fm/music/Tame+Impala/_/The+Less+I+Know+the+Better"
         },
         {
@@ -237,9 +223,6 @@
                 "mbid": "CENSOREDb3b5",
                 "name": "The White Stripes",
                 "url": "https://www.last.fm/music/The+White+Stripes"
-            },
-            "attr": {
-                "rank": 7
             },
             "duration": 449,
             "image": [
@@ -263,6 +246,7 @@
             "listeners": 1481075,
             "mbid": "CENSOREDabc5",
             "name": "Seven Nation Army",
+            "rank": 7,
             "url": "https://www.last.fm/music/The+White+Stripes/_/Seven+Nation+Army"
         },
         {
@@ -270,9 +254,6 @@
                 "mbid": "CENSOREDc4d6",
                 "name": "Nirvana",
                 "url": "https://www.last.fm/music/Nirvana"
-            },
-            "attr": {
-                "rank": 8
             },
             "duration": 208,
             "image": [
@@ -296,6 +277,7 @@
             "listeners": 1789826,
             "mbid": "CENSORED004e",
             "name": "Come as You Are",
+            "rank": 8,
             "url": "https://www.last.fm/music/Nirvana/_/Come+as+You+Are"
         },
         {
@@ -303,9 +285,6 @@
                 "mbid": "CENSOREDc4d6",
                 "name": "Nirvana",
                 "url": "https://www.last.fm/music/Nirvana"
-            },
-            "attr": {
-                "rank": 9
             },
             "duration": 301,
             "image": [
@@ -329,6 +308,7 @@
             "listeners": 2031860,
             "mbid": "CENSORED4ed7",
             "name": "Smells Like Teen Spirit",
+            "rank": 9,
             "url": "https://www.last.fm/music/Nirvana/_/Smells+Like+Teen+Spirit"
         }
     ],

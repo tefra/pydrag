@@ -63,7 +63,8 @@ class BaseModel:
 @dataclass(cmp=False)
 class ListModel(UserList, Sequence[T], BaseModel):
     """
-    Wrapper for list entities.
+    Wrap a list of :class:`~pydrag.models.common.BaseModel` objects with
+    metadata.
 
     :param data: Our list of objects
     :param page: Current page number
@@ -120,7 +121,7 @@ class RawResponse(BaseModel):
     :param data: The raw response dictionary
     """
 
-    data: Optional[dict] = None
+    data: Optional[Dict] = None
 
     def to_dict(self):
         return self.data
@@ -132,6 +133,16 @@ class RawResponse(BaseModel):
 
 @dataclass(auto_attribs=False)
 class Config:
+    """
+    Pydrag config object for your last.fm api.
+
+    :param api_key: Your application api key
+    :param api_secret: Your application api secret
+    :param username: The user' name you want to authenticate
+    :param password: The user's password you want to authenticate
+    :param session: The already authenticated user's session key
+    """
+
     api_key: str = attrib()
     api_secret: Optional[str] = attrib()
     username: Optional[str] = attrib()
@@ -157,6 +168,8 @@ class Config:
         password: Optional[str] = None,
         session: Optional[str] = None,
     ):
+        """Get/Create a config instance, if no api key is specified it attempt
+        to read the settings from environmental variables."""
 
         keys = [f.name for f in fields(Config)]
         if Config._instance is None or api_key:
@@ -182,22 +195,8 @@ class Config:
 
 
 @dataclass
-class Attributes(BaseModel):
-    timestamp: Optional[int] = None
-    rank: Optional[int] = None
-    date: Optional[str] = None
-    position: Optional[int] = None
-
-
-@dataclass
 class Image(BaseModel):
     size: str
-    text: str
-
-
-@dataclass
-class Date(BaseModel):
-    timestamp: int
     text: str
 
 

@@ -1,3 +1,4 @@
+from datetime import datetime
 from typing import Dict, List, Optional
 
 from attr import dataclass
@@ -5,9 +6,7 @@ from attr import dataclass
 from pydrag.models.album import Album
 from pydrag.models.artist import Artist
 from pydrag.models.common import (
-    Attributes,
     BaseModel,
-    Date,
     Image,
     ListModel,
     RawResponse,
@@ -36,9 +35,9 @@ class Track(ApiMixin, BaseModel):
     :param wiki: Track wiki information
     :param album: Track album information
     :param top_tags: Top user tags
-    :param date: Date the user listened or loved this track
+    :param rank: Rank of the track based on the requested resource
+    :param timestamp: Unix timestamp the user listened or loved this track
     :param loved: True/False if the track is one of the user's loved ones
-    :param attr: Metadata details
     """
 
     name: str
@@ -54,9 +53,22 @@ class Track(ApiMixin, BaseModel):
     wiki: Optional[Wiki] = None
     album: Optional[Album] = None
     top_tags: Optional[List[Tag]] = None
-    date: Optional[Date] = None
     loved: Optional[bool] = None
-    attr: Optional[Attributes] = None
+    timestamp: Optional[int] = None
+    rank: Optional[int] = None
+
+    @property
+    def date(self) -> Optional[datetime]:
+        """
+        If the timestamp property is available return a datetime instance.
+
+        :rtype: :class:`datetime.datetime`
+        """
+        return (
+            None
+            if self.timestamp is None
+            else datetime.utcfromtimestamp(float(self.timestamp))
+        )
 
     @classmethod
     def from_dict(cls, data: Dict):
@@ -86,9 +98,12 @@ class Track(ApiMixin, BaseModel):
         if "album" in data:
             data["album"] = Album.from_dict(data["album"])
         if "attr" in data:
-            data["attr"] = Attributes.from_dict(data["attr"])
+            data.update(data.pop("attr"))
         if "date" in data:
-            data["date"] = Date.from_dict(data["date"])
+            date = data.pop("date")
+            if isinstance(date, dict) and "timestamp" not in data:
+                date.pop("text")
+                data.update(date)
 
         return super(Track, cls).from_dict(data)
 

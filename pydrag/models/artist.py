@@ -2,14 +2,7 @@ from typing import Dict, List, Optional
 
 from attr import dataclass
 
-from pydrag.models.common import (
-    Attributes,
-    BaseModel,
-    Image,
-    ListModel,
-    RawResponse,
-    Wiki,
-)
+from pydrag.models.common import BaseModel, Image, ListModel, RawResponse, Wiki
 from pydrag.models.tag import Tag
 from pydrag.services import ApiMixin
 
@@ -32,7 +25,7 @@ class Artist(BaseModel, ApiMixin):
     :param bio: Artist bio information
     :param on_tour: Artist currently on tour flag
     :param similar: List of similar artists
-    :param attr: Metadata details
+    :param rank: Rank of the artist based on the requested resource
     """
 
     name: str
@@ -48,7 +41,7 @@ class Artist(BaseModel, ApiMixin):
     bio: Optional[Wiki] = None
     on_tour: Optional[bool] = None
     similar: Optional[List["Artist"]] = None
-    attr: Optional[Attributes] = None
+    rank: Optional[int] = None
 
     @classmethod
     def from_dict(cls, data: Dict):
@@ -76,7 +69,7 @@ class Artist(BaseModel, ApiMixin):
                 map(cls.from_dict, data["similar"]["artist"])
             )
         if "attr" in data:
-            data["attr"] = Attributes.from_dict(data["attr"])
+            data.update(data.pop("attr"))
 
         return super(Artist, cls).from_dict(data)
 

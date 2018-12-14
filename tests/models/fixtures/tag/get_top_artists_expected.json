@@ -1,9 +1,6 @@
 {
     "data": [
         {
-            "attr": {
-                "rank": 1
-            },
             "image": [
                 {
                     "size": "small",
@@ -28,12 +25,10 @@
             ],
             "mbid": "CENSORED13d4",
             "name": "Eminem",
+            "rank": 1,
             "url": "https://www.last.fm/music/Eminem"
         },
         {
-            "attr": {
-                "rank": 2
-            },
             "image": [
                 {
                     "size": "small",
@@ -57,6 +52,7 @@
                 }
             ],
             "name": "Lil' Wayne",
+            "rank": 2,
             "url": "https://www.last.fm/music/Lil%27+Wayne"
         }
     ],

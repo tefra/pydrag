@@ -6,9 +6,6 @@
                 "name": "Eminem",
                 "url": "https://www.last.fm/music/Eminem"
             },
-            "attr": {
-                "rank": 1
-            },
             "image": [
                 {
                     "size": "small",
@@ -29,6 +26,7 @@
             ],
             "mbid": "CENSORED3bd6",
             "name": "The Eminem Show",
+            "rank": 1,
             "url": "https://www.last.fm/music/Eminem"
         },
         {
@@ -36,9 +34,6 @@
                 "mbid": "CENSORED69a6",
                 "name": "Drake",
                 "url": "https://www.last.fm/music/Drake"
-            },
-            "attr": {
-                "rank": 2
             },
             "image": [
                 {
@@ -60,6 +55,7 @@
             ],
             "mbid": "",
             "name": "Views",
+            "rank": 2,
             "url": "https://www.last.fm/music/Drake"
         }
     ],

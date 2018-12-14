@@ -3,14 +3,7 @@ from typing import Dict, List, Optional
 from attr import dataclass
 
 from pydrag.models.artist import Artist
-from pydrag.models.common import (
-    Attributes,
-    BaseModel,
-    Image,
-    ListModel,
-    RawResponse,
-    Wiki,
-)
+from pydrag.models.common import BaseModel, Image, ListModel, RawResponse, Wiki
 from pydrag.models.tag import Tag
 from pydrag.services import ApiMixin
 
@@ -30,7 +23,7 @@ class Album(BaseModel, ApiMixin):
     :param tags: List of top tags
     :param tracks: List of album tracks
     :param wiki: Album wiki information
-    :param attr: Album metadata
+    :param rank: Rank of the album based on the requested resource
     """
 
     name: str
@@ -43,7 +36,7 @@ class Album(BaseModel, ApiMixin):
     tags: Optional[List[Tag]] = None
     tracks: Optional[List["Track"]] = None  # type: ignore
     wiki: Optional[Wiki] = None
-    attr: Optional[Attributes] = None
+    rank: Optional[int] = None
 
     @classmethod
     def from_dict(cls, data: Dict):
@@ -67,7 +60,8 @@ class Album(BaseModel, ApiMixin):
         if "wiki" in data:
             data["wiki"] = Wiki.from_dict(data["wiki"])
         if "attr" in data:
-            data["attr"] = Attributes.from_dict(data["attr"])
+            data.update(data.pop("attr"))
+
         return super(Album, cls).from_dict(data)
 
     @classmethod

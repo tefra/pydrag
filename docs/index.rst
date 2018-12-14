@@ -37,6 +37,7 @@ Table of Contents
 
 .. toctree::
     :maxdepth: 2
+    :numbered:
 
     usage
     api

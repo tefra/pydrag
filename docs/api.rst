@@ -65,22 +65,7 @@ Common Classes
     :members:
     :show-inheritance:
 
-.. autoclass:: pydrag.models.common.Attributes
-    :members:
-    :show-inheritance:
-
-
 .. autoclass:: pydrag.models.common.Image
-    :members:
-    :show-inheritance:
-
-
-.. autoclass:: pydrag.models.common.Image
-    :members:
-    :show-inheritance:
-
-
-.. autoclass:: pydrag.models.common.Date
     :members:
     :show-inheritance:
 
@@ -98,6 +83,7 @@ Common Classes
 .. autoclass:: pydrag.models.common.Wiki
     :members:
     :show-inheritance:
+
 
 Api Mixin
 ---------

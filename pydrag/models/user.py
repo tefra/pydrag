@@ -1,3 +1,4 @@
+from datetime import datetime
 from typing import Dict, List, Optional, Union
 
 from attr import dataclass
@@ -5,7 +6,7 @@ from attr import dataclass
 from pydrag.constants import Period
 from pydrag.models.album import Album
 from pydrag.models.artist import Artist
-from pydrag.models.common import BaseModel, Chart, Date, Image, ListModel
+from pydrag.models.common import BaseModel, Chart, Image, ListModel
 from pydrag.models.tag import Tag
 from pydrag.models.track import Track
 from pydrag.services import ApiMixin
@@ -23,7 +24,7 @@ class User(BaseModel, ApiMixin):
     :param country: Country name
     :param image: User's avatar in multiple sizes
     :param age: Self explanatory
-    :param registered: Registraton date
+    :param registered: Unix timestamp of the registration date
     :param real_name: The full name
     :param recent_track: User's most recent scrobble track
     """
@@ -36,15 +37,24 @@ class User(BaseModel, ApiMixin):
     country: str
     image: List[Image]
     age: int
-    registered: Date
+    registered: int
     real_name: Optional[str] = None
     recent_track: Optional[Track] = None
+
+    @property
+    def date_registered(self) -> datetime:
+        """
+        Return a datetime instance of the user's registration date.
+
+        :rtype: :class:`datetime.datetime`
+        """
+        return datetime.utcfromtimestamp(self.registered)
 
     @classmethod
     def from_dict(cls, data: Dict):
         data.update(
             dict(
-                registered=Date.from_dict(data["registered"]),
+                registered=data["registered"]["timestamp"],
                 image=list(map(Image.from_dict, data["image"])),
             )
         )

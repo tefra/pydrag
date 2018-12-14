@@ -6,10 +6,6 @@
                 "name": "The Black Seeds",
                 "url": "https://www.last.fm/music/The+Black+Seeds"
             },
-            "date": {
-                "text": "04 Apr 2016, 10:53",
-                "timestamp": 1459767227
-            },
             "image": [
                 {
                     "size": "small",
@@ -30,6 +26,7 @@
             ],
             "mbid": "CENSORED7ecf",
             "name": "Fire",
+            "timestamp": 1459767227,
             "url": "https://www.last.fm/music/The+Black+Seeds/_/Fire"
         },
         {
@@ -37,10 +34,6 @@
                 "mbid": "CENSOREDed6d",
                 "name": "Gramatik",
                 "url": "https://www.last.fm/music/Gramatik"
-            },
-            "date": {
-                "text": "07 Mar 2016, 13:25",
-                "timestamp": 1457357120
             },
             "image": [
                 {
@@ -62,6 +55,7 @@
             ],
             "mbid": "CENSORED5a53",
             "name": "Just Jammin'",
+            "timestamp": 1457357120,
             "url": "https://www.last.fm/music/Gramatik/_/Just+Jammin%27"
         },
         {
@@ -69,10 +63,6 @@
                 "mbid": "CENSORED67ee",
                 "name": "Tahuna Breaks",
                 "url": "https://www.last.fm/music/Tahuna+Breaks"
-            },
-            "date": {
-                "text": "01 Oct 2015, 16:57",
-                "timestamp": 1443718648
             },
             "image": [
                 {
@@ -94,6 +84,7 @@
             ],
             "mbid": "CENSORED8f30",
             "name": "Giddy Up",
+            "timestamp": 1443718648,
             "url": "https://www.last.fm/music/Tahuna+Breaks/_/Giddy+Up"
         },
         {
@@ -101,10 +92,6 @@
                 "mbid": "CENSOREDf4cb",
                 "name": "Fat Freddy's Drop",
                 "url": "https://www.last.fm/music/Fat+Freddy%27s+Drop"
-            },
-            "date": {
-                "text": "07 Sep 2015, 14:23",
-                "timestamp": 1441635789
             },
             "image": [
                 {
@@ -126,6 +113,7 @@
             ],
             "mbid": "CENSORED3c41",
             "name": "The Nod",
+            "timestamp": 1441635789,
             "url": "https://www.last.fm/music/Fat+Freddy%27s+Drop/_/The+Nod"
         },
         {
@@ -133,10 +121,6 @@
                 "mbid": "CENSORED84a5",
                 "name": "Gil Scott-Heron",
                 "url": "https://www.last.fm/music/Gil+Scott-Heron"
-            },
-            "date": {
-                "text": "07 Sep 2015, 14:08",
-                "timestamp": 1441634911
             },
             "image": [
                 {
@@ -158,6 +142,7 @@
             ],
             "mbid": "CENSOREDd357",
             "name": "Lady Day and John Coltrane",
+            "timestamp": 1441634911,
             "url": "https://www.last.fm/music/Gil+Scott-Heron/_/Lady+Day+and+John+Coltrane"
         },
         {
@@ -165,10 +150,6 @@
                 "mbid": "CENSORED31bc",
                 "name": "Aim",
                 "url": "https://www.last.fm/music/Aim"
-            },
-            "date": {
-                "text": "07 Sep 2015, 13:35",
-                "timestamp": 1441632958
             },
             "image": [
                 {
@@ -190,6 +171,7 @@
             ],
             "mbid": "",
             "name": "Ain't Got Time To Waste",
+            "timestamp": 1441632958,
             "url": "https://www.last.fm/music/Aim/_/Ain%27t+Got+Time+To+Waste"
         },
         {
@@ -197,10 +179,6 @@
                 "mbid": "",
                 "name": "Roman Scott",
                 "url": "https://www.last.fm/music/Roman+Scott"
-            },
-            "date": {
-                "text": "01 Aug 2015, 11:30",
-                "timestamp": 1438428646
             },
             "image": [
                 {
@@ -222,6 +200,7 @@
             ],
             "mbid": "",
             "name": "Hold This Down (feat. Dean Curtis)",
+            "timestamp": 1438428646,
             "url": "https://www.last.fm/music/Roman+Scott/_/Hold+This+Down+(feat.+Dean+Curtis)"
         },
         {
@@ -229,10 +208,6 @@
                 "mbid": "CENSORED9c94",
                 "name": "Robyn",
                 "url": "https://www.last.fm/music/Robyn"
-            },
-            "date": {
-                "text": "31 Jul 2015, 10:34",
-                "timestamp": 1438338847
             },
             "image": [
                 {
@@ -254,6 +229,7 @@
             ],
             "mbid": "CENSORED18d3",
             "name": "Dancing on My Own",
+            "timestamp": 1438338847,
             "url": "https://www.last.fm/music/Robyn/_/Dancing+on+My+Own"
         },
         {
@@ -261,10 +237,6 @@
                 "mbid": "CENSOREDfdd7",
                 "name": "Steely Dan",
                 "url": "https://www.last.fm/music/Steely+Dan"
-            },
-            "date": {
-                "text": "11 May 2015, 22:53",
-                "timestamp": 1431384798
             },
             "image": [
                 {
@@ -286,6 +258,7 @@
             ],
             "mbid": "CENSOREDea8b",
             "name": "The Boston Rag",
+            "timestamp": 1431384798,
             "url": "https://www.last.fm/music/Steely+Dan/_/The+Boston+Rag"
         },
         {
@@ -293,10 +266,6 @@
                 "mbid": "CENSOREDa4fc",
                 "name": "Candye Kane",
                 "url": "https://www.last.fm/music/Candye+Kane"
-            },
-            "date": {
-                "text": "11 May 2015, 22:41",
-                "timestamp": 1431384115
             },
             "image": [
                 {
@@ -318,6 +287,7 @@
             ],
             "mbid": "CENSORED4ca1",
             "name": "You Need Love",
+            "timestamp": 1431384115,
             "url": "https://www.last.fm/music/Candye+Kane/_/You+Need+Love"
         },
         {
@@ -325,10 +295,6 @@
                 "mbid": "CENSOREDed6d",
                 "name": "Gramatik",
                 "url": "https://www.last.fm/music/Gramatik"
-            },
-            "date": {
-                "text": "24 Apr 2015, 14:29",
-                "timestamp": 1429885760
             },
             "image": [
                 {
@@ -350,6 +316,7 @@
             ],
             "mbid": "CENSOREDd884",
             "name": "Don't You Know",
+            "timestamp": 1429885760,
             "url": "https://www.last.fm/music/Gramatik/_/Don%27t+You+Know"
         },
         {
@@ -357,10 +324,6 @@
                 "mbid": "CENSOREDd746",
                 "name": "Gregory Porter",
                 "url": "https://www.last.fm/music/Gregory+Porter"
-            },
-            "date": {
-                "text": "15 Apr 2015, 16:00",
-                "timestamp": 1429113655
             },
             "image": [
                 {
@@ -382,6 +345,7 @@
             ],
             "mbid": "CENSORED7cf4",
             "name": "Hey Laura",
+            "timestamp": 1429113655,
             "url": "https://www.last.fm/music/Gregory+Porter/_/Hey+Laura"
         },
         {
@@ -389,10 +353,6 @@
                 "mbid": "CENSORED6e21",
                 "name": "Cruzados",
                 "url": "https://www.last.fm/music/Cruzados"
-            },
-            "date": {
-                "text": "07 Mar 2015, 15:54",
-                "timestamp": 1425743665
             },
             "image": [
                 {
@@ -414,6 +374,7 @@
             ],
             "mbid": "",
             "name": "Mexico",
+            "timestamp": 1425743665,
             "url": "https://www.last.fm/music/Cruzados/_/Mexico"
         },
         {
@@ -421,10 +382,6 @@
                 "mbid": "CENSORED66c4",
                 "name": "Tito & Tarantula",
                 "url": "https://www.last.fm/music/Tito+&+Tarantula"
-            },
-            "date": {
-                "text": "07 Mar 2015, 14:22",
-                "timestamp": 1425738160
             },
             "image": [
                 {
@@ -446,6 +403,7 @@
             ],
             "mbid": "CENSOREDffd6",
             "name": "Pretty Wasted",
+            "timestamp": 1425738160,
             "url": "https://www.last.fm/music/Tito+&+Tarantula/_/Pretty+Wasted"
         },
         {
@@ -453,10 +411,6 @@
                 "mbid": "CENSOREDcdae",
                 "name": "Harold Faltermeyer",
                 "url": "https://www.last.fm/music/Harold+Faltermeyer"
-            },
-            "date": {
-                "text": "15 Jan 2015, 18:16",
-                "timestamp": 1421345797
             },
             "image": [
                 {
@@ -478,6 +432,7 @@
             ],
             "mbid": "CENSORED7331",
             "name": "Axel F",
+            "timestamp": 1421345797,
             "url": "https://www.last.fm/music/Harold+Faltermeyer/_/Axel+F"
         },
         {
@@ -485,10 +440,6 @@
                 "mbid": "CENSORED8ad1",
                 "name": "Jonathan Coulton",
                 "url": "https://www.last.fm/music/Jonathan+Coulton"
-            },
-            "date": {
-                "text": "11 Oct 2014, 22:00",
-                "timestamp": 1413064820
             },
             "image": [
                 {
@@ -510,6 +461,7 @@
             ],
             "mbid": "CENSORED0269",
             "name": "The Future Soon",
+            "timestamp": 1413064820,
             "url": "https://www.last.fm/music/Jonathan+Coulton/_/The+Future+Soon"
         },
         {
@@ -517,10 +469,6 @@
                 "mbid": "CENSORED1005",
                 "name": "The Lonely Island",
                 "url": "https://www.last.fm/music/The+Lonely+Island"
-            },
-            "date": {
-                "text": "11 Oct 2014, 21:58",
-                "timestamp": 1413064693
             },
             "image": [
                 {
@@ -542,6 +490,7 @@
             ],
             "mbid": "",
             "name": "Jack Sparrow",
+            "timestamp": 1413064693,
             "url": "https://www.last.fm/music/The+Lonely+Island/_/Jack+Sparrow"
         },
         {
@@ -549,10 +498,6 @@
                 "mbid": "CENSORED1005",
                 "name": "The Lonely Island",
                 "url": "https://www.last.fm/music/The+Lonely+Island"
-            },
-            "date": {
-                "text": "11 Oct 2014, 21:58",
-                "timestamp": 1413064690
             },
             "image": [
                 {
@@ -574,6 +519,7 @@
             ],
             "mbid": "",
             "name": "I'm on a Boat",
+            "timestamp": 1413064690,
             "url": "https://www.last.fm/music/The+Lonely+Island/_/I%27m+on+a+Boat"
         },
         {
@@ -581,10 +527,6 @@
                 "mbid": "CENSORED1005",
                 "name": "The Lonely Island",
                 "url": "https://www.last.fm/music/The+Lonely+Island"
-            },
-            "date": {
-                "text": "11 Oct 2014, 21:58",
-                "timestamp": 1413064686
             },
             "image": [
                 {
@@ -606,6 +548,7 @@
             ],
             "mbid": "",
             "name": "Dick In A Box",
+            "timestamp": 1413064686,
             "url": "https://www.last.fm/music/The+Lonely+Island/_/Dick+In+A+Box"
         },
         {
@@ -613,10 +556,6 @@
                 "mbid": "CENSOREDe3e9",
                 "name": "Professor Green",
                 "url": "https://www.last.fm/music/Professor+Green"
-            },
-            "date": {
-                "text": "11 Oct 2014, 21:58",
-                "timestamp": 1413064683
             },
             "image": [
                 {
@@ -638,6 +577,7 @@
             ],
             "mbid": "",
             "name": "Jungle - Feat. Maverick Sabre",
+            "timestamp": 1413064683,
             "url": "https://www.last.fm/music/Professor+Green/_/Jungle+-+Feat.+Maverick+Sabre"
         },
         {
@@ -645,10 +585,6 @@
                 "mbid": "CENSORED8ad1",
                 "name": "Jonathan Coulton",
                 "url": "https://www.last.fm/music/Jonathan+Coulton"
-            },
-            "date": {
-                "text": "11 Oct 2014, 21:57",
-                "timestamp": 1413064675
             },
             "image": [
                 {
@@ -670,6 +606,7 @@
             ],
             "mbid": "CENSOREDacd6",
             "name": "Baby Got Back",
+            "timestamp": 1413064675,
             "url": "https://www.last.fm/music/Jonathan+Coulton/_/Baby+Got+Back"
         },
         {
@@ -677,10 +614,6 @@
                 "mbid": "CENSORED0570",
                 "name": "Lovage",
                 "url": "https://www.last.fm/music/Lovage"
-            },
-            "date": {
-                "text": "06 Oct 2014, 14:11",
-                "timestamp": 1412604686
             },
             "image": [
                 {
@@ -702,6 +635,7 @@
             ],
             "mbid": "CENSORED85c5",
             "name": "Stroker Ace",
+            "timestamp": 1412604686,
             "url": "https://www.last.fm/music/Lovage/_/Stroker+Ace"
         },
         {
@@ -709,10 +643,6 @@
                 "mbid": "CENSORED521a",
                 "name": "Seagram",
                 "url": "https://www.last.fm/music/Seagram"
-            },
-            "date": {
-                "text": "03 Oct 2014, 00:52",
-                "timestamp": 1412297575
             },
             "image": [
                 {
@@ -734,6 +664,7 @@
             ],
             "mbid": "",
             "name": "East Side Soldier (feat. Yukmouth, Dru Down & Pooh Man)",
+            "timestamp": 1412297575,
             "url": "https://www.last.fm/music/Seagram/_/East+Side+Soldier+(feat.+Yukmouth,+Dru+Down+&+Pooh+Man)"
         },
         {
@@ -741,10 +672,6 @@
                 "mbid": "",
                 "name": "Pooh-Man",
                 "url": "https://www.last.fm/music/Pooh-Man"
-            },
-            "date": {
-                "text": "03 Oct 2014, 00:36",
-                "timestamp": 1412296612
             },
             "image": [
                 {
@@ -766,6 +693,7 @@
             ],
             "mbid": "",
             "name": "Ain't No Love",
+            "timestamp": 1412296612,
             "url": "https://www.last.fm/music/Pooh-Man/_/Ain%27t+No+Love"
         },
         {
@@ -773,10 +701,6 @@
                 "mbid": "CENSOREDc8c3",
                 "name": "The Notorious B.I.G.",
                 "url": "https://www.last.fm/music/The+Notorious+B.I.G."
-            },
-            "date": {
-                "text": "03 Oct 2014, 00:24",
-                "timestamp": 1412295881
             },
             "image": [
                 {
@@ -798,6 +722,7 @@
             ],
             "mbid": "CENSORED3662",
             "name": "Hypnotize",
+            "timestamp": 1412295881,
             "url": "https://www.last.fm/music/The+Notorious+B.I.G./_/Hypnotize"
         },
         {
@@ -805,10 +730,6 @@
                 "mbid": "",
                 "name": "The B Foundation",
                 "url": "https://www.last.fm/music/The+B+Foundation"
-            },
-            "date": {
-                "text": "05 Sep 2014, 21:42",
-                "timestamp": 1409953370
             },
             "image": [
                 {
@@ -830,6 +751,7 @@
             ],
             "mbid": "",
             "name": "Aint Coming Home Tonight",
+            "timestamp": 1409953370,
             "url": "https://www.last.fm/music/The+B+Foundation/_/Aint+Coming+Home+Tonight"
         },
         {
@@ -837,10 +759,6 @@
                 "mbid": "CENSOREDd0a4",
                 "name": "Joe Nichols",
                 "url": "https://www.last.fm/music/Joe+Nichols"
-            },
-            "date": {
-                "text": "01 Sep 2014, 22:00",
-                "timestamp": 1409608816
             },
             "image": [
                 {
@@ -862,6 +780,7 @@
             ],
             "mbid": "CENSORED0861",
             "name": "Tequila Makes Her Clothes Fall Off",
+            "timestamp": 1409608816,
             "url": "https://www.last.fm/music/Joe+Nichols/_/Tequila+Makes+Her+Clothes+Fall+Off"
         },
         {
@@ -869,10 +788,6 @@
                 "mbid": "CENSORED5fe3",
                 "name": "Joe Diffie",
                 "url": "https://www.last.fm/music/Joe+Diffie"
-            },
-            "date": {
-                "text": "01 Sep 2014, 21:55",
-                "timestamp": 1409608514
             },
             "image": [
                 {
@@ -894,6 +809,7 @@
             ],
             "mbid": "CENSORED6f69",
             "name": "Pickup Man",
+            "timestamp": 1409608514,
             "url": "https://www.last.fm/music/Joe+Diffie/_/Pickup+Man"
         },
         {
@@ -901,10 +817,6 @@
                 "mbid": "CENSOREDcf20",
                 "name": "Chris Young",
                 "url": "https://www.last.fm/music/Chris+Young"
-            },
-            "date": {
-                "text": "01 Sep 2014, 21:55",
-                "timestamp": 1409608506
             },
             "image": [
                 {
@@ -926,6 +838,7 @@
             ],
             "mbid": "CENSOREDe1ff",
             "name": "Beer Or Gasoline",
+            "timestamp": 1409608506,
             "url": "https://www.last.fm/music/Chris+Young/_/Beer+Or+Gasoline"
         },
         {
@@ -933,10 +846,6 @@
                 "mbid": "CENSOREDcf3f",
                 "name": "Luke Bryan",
                 "url": "https://www.last.fm/music/Luke+Bryan"
-            },
-            "date": {
-                "text": "01 Sep 2014, 21:55",
-                "timestamp": 1409608504
             },
             "image": [
                 {
@@ -958,6 +867,7 @@
             ],
             "mbid": "CENSORED29e9",
             "name": "Rain Is a Good Thing",
+            "timestamp": 1409608504,
             "url": "https://www.last.fm/music/Luke+Bryan/_/Rain+Is+a+Good+Thing"
         },
         {
@@ -965,10 +875,6 @@
                 "mbid": "CENSORED7c0c",
                 "name": "Kip Moore",
                 "url": "https://www.last.fm/music/Kip+Moore"
-            },
-            "date": {
-                "text": "01 Sep 2014, 21:55",
-                "timestamp": 1409608502
             },
             "image": [
                 {
@@ -990,6 +896,7 @@
             ],
             "mbid": "CENSOREDdc8e",
             "name": "Somethin' 'Bout a Truck",
+            "timestamp": 1409608502,
             "url": "https://www.last.fm/music/Kip+Moore/_/Somethin%27+%27Bout+a+Truck"
         },
         {
@@ -997,10 +904,6 @@
                 "mbid": "CENSORED5882",
                 "name": "Easton Corbin",
                 "url": "https://www.last.fm/music/Easton+Corbin"
-            },
-            "date": {
-                "text": "01 Sep 2014, 20:31",
-                "timestamp": 1409603460
             },
             "image": [
                 {
@@ -1022,6 +925,7 @@
             ],
             "mbid": "CENSOREDb4b5",
             "name": "All Over The Road",
+            "timestamp": 1409603460,
             "url": "https://www.last.fm/music/Easton+Corbin/_/All+Over+The+Road"
         },
         {
@@ -1029,10 +933,6 @@
                 "mbid": "CENSORED4c15",
                 "name": "Leonard Cohen",
                 "url": "https://www.last.fm/music/Leonard+Cohen"
-            },
-            "date": {
-                "text": "24 Aug 2014, 01:01",
-                "timestamp": 1408842114
             },
             "image": [
                 {
@@ -1054,6 +954,7 @@
             ],
             "mbid": "CENSORED1b9f",
             "name": "Almost Like the Blues",
+            "timestamp": 1408842114,
             "url": "https://www.last.fm/music/Leonard+Cohen/_/Almost+Like+the+Blues"
         },
         {
@@ -1061,10 +962,6 @@
                 "mbid": "CENSOREDf705",
                 "name": "Renaissance",
                 "url": "https://www.last.fm/music/Renaissance"
-            },
-            "date": {
-                "text": "04 Aug 2014, 15:57",
-                "timestamp": 1407167830
             },
             "image": [
                 {
@@ -1086,6 +983,7 @@
             ],
             "mbid": "CENSORED86d1",
             "name": "Northern Lights",
+            "timestamp": 1407167830,
             "url": "https://www.last.fm/music/Renaissance/_/Northern+Lights"
         },
         {
@@ -1093,10 +991,6 @@
                 "mbid": "CENSORED569b",
                 "name": "Peter White",
                 "url": "https://www.last.fm/music/Peter+White"
-            },
-            "date": {
-                "text": "03 Aug 2014, 11:59",
-                "timestamp": 1407067144
             },
             "image": [
                 {
@@ -1118,6 +1012,7 @@
             ],
             "mbid": "CENSORED535c",
             "name": "Hit The Road Jack",
+            "timestamp": 1407067144,
             "url": "https://www.last.fm/music/Peter+White/_/Hit+The+Road+Jack"
         },
         {
@@ -1125,10 +1020,6 @@
                 "mbid": "CENSORED5f81",
                 "name": "The Isley Brothers",
                 "url": "https://www.last.fm/music/The+Isley+Brothers"
-            },
-            "date": {
-                "text": "24 Jun 2014, 15:59",
-                "timestamp": 1403625541
             },
             "image": [
                 {
@@ -1150,6 +1041,7 @@
             ],
             "mbid": "",
             "name": "That Lady - Pts. 1 & 2",
+            "timestamp": 1403625541,
             "url": "https://www.last.fm/music/The+Isley+Brothers/_/That+Lady+-+Pts.+1+&+2"
         },
         {
@@ -1157,10 +1049,6 @@
                 "mbid": "CENSOREDf4cb",
                 "name": "Fat Freddy's Drop",
                 "url": "https://www.last.fm/music/Fat+Freddy%27s+Drop"
-            },
-            "date": {
-                "text": "12 Jun 2014, 12:18",
-                "timestamp": 1402575515
             },
             "image": [
                 {
@@ -1182,6 +1070,7 @@
             ],
             "mbid": "",
             "name": "Wandering Eye - Radio Edit",
+            "timestamp": 1402575515,
             "url": "https://www.last.fm/music/Fat+Freddy%27s+Drop/_/Wandering+Eye+-+Radio+Edit"
         },
         {
@@ -1189,10 +1078,6 @@
                 "mbid": "",
                 "name": "Marcus Miller, Joe Kibble",
                 "url": "https://www.last.fm/music/Marcus+Miller,+Joe+Kibble"
-            },
-            "date": {
-                "text": "28 May 2014, 00:29",
-                "timestamp": 1401236954
             },
             "image": [
                 {
@@ -1214,6 +1099,7 @@
             ],
             "mbid": "",
             "name": "Silver Rain (feat. Joe Kibble)",
+            "timestamp": 1401236954,
             "url": "https://www.last.fm/music/Marcus+Miller,+Joe+Kibble/_/Silver+Rain+(feat.+Joe+Kibble)"
         },
         {
@@ -1221,10 +1107,6 @@
                 "mbid": "CENSOREDc44a",
                 "name": "Marcus Miller",
                 "url": "https://www.last.fm/music/Marcus+Miller"
-            },
-            "date": {
-                "text": "28 May 2014, 00:29",
-                "timestamp": 1401236941
             },
             "image": [
                 {
@@ -1246,6 +1128,7 @@
             ],
             "mbid": "CENSOREDe965",
             "name": "Silver Rain",
+            "timestamp": 1401236941,
             "url": "https://www.last.fm/music/Marcus+Miller/_/Silver+Rain"
         },
         {
@@ -1253,10 +1136,6 @@
                 "mbid": "CENSOREDd8f0",
                 "name": "Roy Ayers",
                 "url": "https://www.last.fm/music/Roy+Ayers"
-            },
-            "date": {
-                "text": "19 May 2014, 09:55",
-                "timestamp": 1400493300
             },
             "image": [
                 {
@@ -1278,6 +1157,7 @@
             ],
             "mbid": "CENSORED3cbf",
             "name": "The Boogie Back",
+            "timestamp": 1400493300,
             "url": "https://www.last.fm/music/Roy+Ayers/_/The+Boogie+Back"
         },
         {
@@ -1285,10 +1165,6 @@
                 "mbid": "CENSORED0ad2",
                 "name": "John Scofield",
                 "url": "https://www.last.fm/music/John+Scofield"
-            },
-            "date": {
-                "text": "18 May 2014, 01:13",
-                "timestamp": 1400375584
             },
             "image": [
                 {
@@ -1310,6 +1186,7 @@
             ],
             "mbid": "CENSORED025d",
             "name": "Boogie Stupid",
+            "timestamp": 1400375584,
             "url": "https://www.last.fm/music/John+Scofield/_/Boogie+Stupid"
         },
         {
@@ -1317,10 +1194,6 @@
                 "mbid": "CENSORED0ad2",
                 "name": "John Scofield",
                 "url": "https://www.last.fm/music/John+Scofield"
-            },
-            "date": {
-                "text": "18 May 2014, 01:06",
-                "timestamp": 1400375170
             },
             "image": [
                 {
@@ -1342,6 +1215,7 @@
             ],
             "mbid": "CENSORED29cc",
             "name": "Just Don't Want To Be Lonely",
+            "timestamp": 1400375170,
             "url": "https://www.last.fm/music/John+Scofield/_/Just+Don%27t+Want+To+Be+Lonely"
         },
         {
@@ -1349,10 +1223,6 @@
                 "mbid": "CENSOREDd8f0",
                 "name": "Roy Ayers",
                 "url": "https://www.last.fm/music/Roy+Ayers"
-            },
-            "date": {
-                "text": "18 May 2014, 01:05",
-                "timestamp": 1400375139
             },
             "image": [
                 {
@@ -1374,6 +1244,7 @@
             ],
             "mbid": "CENSORED9f6c",
             "name": "Funk in the Hole",
+            "timestamp": 1400375139,
             "url": "https://www.last.fm/music/Roy+Ayers/_/Funk+in+the+Hole"
         },
         {
@@ -1381,10 +1252,6 @@
                 "mbid": "CENSORED7138",
                 "name": "Devin the Dude",
                 "url": "https://www.last.fm/music/Devin+the+Dude"
-            },
-            "date": {
-                "text": "18 May 2014, 01:05",
-                "timestamp": 1400375132
             },
             "image": [
                 {
@@ -1406,6 +1273,7 @@
             ],
             "mbid": "",
             "name": "What A Job",
+            "timestamp": 1400375132,
             "url": "https://www.last.fm/music/Devin+the+Dude/_/What+A+Job"
         },
         {
@@ -1413,10 +1281,6 @@
                 "mbid": "CENSORED10a4",
                 "name": "The Meters",
                 "url": "https://www.last.fm/music/The+Meters"
-            },
-            "date": {
-                "text": "18 May 2014, 01:05",
-                "timestamp": 1400375129
             },
             "image": [
                 {
@@ -1438,6 +1302,7 @@
             ],
             "mbid": "CENSORED6253",
             "name": "Cissy Strut",
+            "timestamp": 1400375129,
             "url": "https://www.last.fm/music/The+Meters/_/Cissy+Strut"
         },
         {
@@ -1445,10 +1310,6 @@
                 "mbid": "CENSOREDcd31",
                 "name": "Soulive",
                 "url": "https://www.last.fm/music/Soulive"
-            },
-            "date": {
-                "text": "18 May 2014, 01:05",
-                "timestamp": 1400375126
             },
             "image": [
                 {
@@ -1470,6 +1331,7 @@
             ],
             "mbid": "CENSORED96ce",
             "name": "Romantic",
+            "timestamp": 1400375126,
             "url": "https://www.last.fm/music/Soulive/_/Romantic"
         },
         {
@@ -1477,10 +1339,6 @@
                 "mbid": "CENSORED0ad2",
                 "name": "John Scofield",
                 "url": "https://www.last.fm/music/John+Scofield"
-            },
-            "date": {
-                "text": "18 May 2014, 01:05",
-                "timestamp": 1400375120
             },
             "image": [
                 {
@@ -1502,6 +1360,7 @@
             ],
             "mbid": "",
             "name": "The red one",
+            "timestamp": 1400375120,
             "url": "https://www.last.fm/music/John+Scofield/_/The+red+one"
         },
         {
@@ -1509,10 +1368,6 @@
                 "mbid": "CENSORED2f1f",
                 "name": "Labi Siffre",
                 "url": "https://www.last.fm/music/Labi+Siffre"
-            },
-            "date": {
-                "text": "18 May 2014, 00:13",
-                "timestamp": 1400372038
             },
             "image": [
                 {
@@ -1534,6 +1389,7 @@
             ],
             "mbid": "CENSORED9462",
             "name": "Doctor Doctor",
+            "timestamp": 1400372038,
             "url": "https://www.last.fm/music/Labi+Siffre/_/Doctor+Doctor"
         },
         {
@@ -1541,10 +1397,6 @@
                 "mbid": "CENSORED2f1f",
                 "name": "Labi Siffre",
                 "url": "https://www.last.fm/music/Labi+Siffre"
-            },
-            "date": {
-                "text": "16 May 2014, 14:04",
-                "timestamp": 1400249073
             },
             "image": [
                 {
@@ -1566,6 +1418,7 @@
             ],
             "mbid": "CENSORED1c66",
             "name": "I Got The...",
+            "timestamp": 1400249073,
             "url": "https://www.last.fm/music/Labi+Siffre/_/I+Got+The..."
         },
         {
@@ -1573,10 +1426,6 @@
                 "mbid": "CENSORED2f1f",
                 "name": "Labi Siffre",
                 "url": "https://www.last.fm/music/Labi+Siffre"
-            },
-            "date": {
-                "text": "16 May 2014, 14:04",
-                "timestamp": 1400249068
             },
             "image": [
                 {
@@ -1598,6 +1447,7 @@
             ],
             "mbid": "",
             "name": "I Got The... - 2006 Digital Remaster",
+            "timestamp": 1400249068,
             "url": "https://www.last.fm/music/Labi+Siffre/_/I+Got+The...+-+2006+Digital+Remaster"
         }
     ],

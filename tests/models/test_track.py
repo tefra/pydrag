@@ -18,6 +18,12 @@ class TrackTests(MethodTestCase):
         self.track = Track(artist=Artist(name="AC / DC"), name="Hells Bell")
         super(TrackTests, self).setUp()
 
+    def test_date_property(self):
+        self.assertIsNone(self.track.date)
+        self.track.timestamp = 1541818919
+        expected = datetime(2018, 11, 10, 3, 1, 59)
+        self.assertEqual(expected, self.track.date)
+
     @fixture.use_cassette(path="track/add_tags")
     def test_add_tags(self):
         result = self.track.add_tags(["foo", "bar"])

@@ -28,10 +28,6 @@
                 "name": "Jefferson Airplane",
                 "url": "https://www.last.fm/music/Jefferson+Airplane"
             },
-            "date": {
-                "text": "22 Nov 2018, 08:13",
-                "timestamp": 1542874436
-            },
             "image": [
                 {
                     "size": "small",
@@ -53,6 +49,7 @@
             "loved": true,
             "mbid": "CENSORED2d79",
             "name": "Somebody to Love",
+            "timestamp": 1542874436,
             "url": "https://www.last.fm/music/Jefferson+Airplane/_/Somebody+to+Love"
         },
         {
@@ -83,10 +80,6 @@
                 "name": "Nirvana",
                 "url": "https://www.last.fm/music/Nirvana"
             },
-            "date": {
-                "text": "22 Nov 2018, 08:08",
-                "timestamp": 1542874137
-            },
             "image": [
                 {
                     "size": "small",
@@ -108,6 +101,7 @@
             "loved": false,
             "mbid": "",
             "name": "Smells Like Teen Spirit (Butch Vig Mix) (Recorded May, 1991)",
+            "timestamp": 1542874137,
             "url": "https://www.last.fm/music/Nirvana/_/Smells+Like+Teen+Spirit+(Butch+Vig+Mix)+(Recorded+May,+1991)"
         },
         {
@@ -138,10 +132,6 @@
                 "name": "Serj Tankian",
                 "url": "https://www.last.fm/music/Serj+Tankian"
             },
-            "date": {
-                "text": "22 Nov 2018, 08:05",
-                "timestamp": 1542873958
-            },
             "image": [
                 {
                     "size": "small",
@@ -163,6 +153,7 @@
             "loved": true,
             "mbid": "CENSORED36c2",
             "name": "Sky is Over",
+            "timestamp": 1542873958,
             "url": "https://www.last.fm/music/Serj+Tankian/_/Sky+is+Over"
         },
         {
@@ -193,10 +184,6 @@
                 "name": "DJ Shadow",
                 "url": "https://www.last.fm/music/DJ+Shadow"
             },
-            "date": {
-                "text": "22 Nov 2018, 08:02",
-                "timestamp": 1542873725
-            },
             "image": [
                 {
                     "size": "small",
@@ -218,6 +205,7 @@
             "loved": false,
             "mbid": "",
             "name": "Six Days (Remix) (feat. Mos Def)",
+            "timestamp": 1542873725,
             "url": "https://www.last.fm/music/DJ+Shadow/_/Six+Days+(Remix)+(feat.+Mos+Def)"
         },
         {
@@ -248,10 +236,6 @@
                 "name": "Nina Simone",
                 "url": "https://www.last.fm/music/Nina+Simone"
             },
-            "date": {
-                "text": "22 Nov 2018, 07:57",
-                "timestamp": 1542873457
-            },
             "image": [
                 {
                     "size": "small",
@@ -273,6 +257,7 @@
             "loved": true,
             "mbid": "CENSOREDc56e",
             "name": "Sinnerman",
+            "timestamp": 1542873457,
             "url": "https://www.last.fm/music/Nina+Simone/_/Sinnerman"
         },
         {
@@ -303,10 +288,6 @@
                 "name": "DMX",
                 "url": "https://www.last.fm/music/DMX"
             },
-            "date": {
-                "text": "22 Nov 2018, 07:54",
-                "timestamp": 1542873243
-            },
             "image": [
                 {
                     "size": "small",
@@ -328,6 +309,7 @@
             "loved": true,
             "mbid": "",
             "name": "Ruff Ryder's Anthem",
+            "timestamp": 1542873243,
             "url": "https://www.last.fm/music/DMX/_/Ruff+Ryder%27s+Anthem"
         },
         {
@@ -358,10 +340,6 @@
                 "name": "Eminem",
                 "url": "https://www.last.fm/music/Eminem"
             },
-            "date": {
-                "text": "22 Nov 2018, 07:47",
-                "timestamp": 1542872878
-            },
             "image": [
                 {
                     "size": "small",
@@ -383,6 +361,7 @@
             "loved": true,
             "mbid": "CENSORED2749",
             "name": "Rap God",
+            "timestamp": 1542872878,
             "url": "https://www.last.fm/music/Eminem/_/Rap+God"
         },
         {
@@ -413,10 +392,6 @@
                 "name": "System of a Down",
                 "url": "https://www.last.fm/music/System+of+a+Down"
             },
-            "date": {
-                "text": "22 Nov 2018, 07:40",
-                "timestamp": 1542872416
-            },
             "image": [
                 {
                     "size": "small",
@@ -438,6 +413,7 @@
             "loved": true,
             "mbid": "CENSOREDd2e9",
             "name": "Radio/Video",
+            "timestamp": 1542872416,
             "url": "https://www.last.fm/music/System+of+a+Down/_/Radio%2FVideo"
         },
         {
@@ -468,10 +444,6 @@
                 "name": "Black Eyed Peas",
                 "url": "https://www.last.fm/music/Black+Eyed+Peas"
             },
-            "date": {
-                "text": "22 Nov 2018, 07:36",
-                "timestamp": 1542872204
-            },
             "image": [
                 {
                     "size": "small",
@@ -493,6 +465,7 @@
             "loved": true,
             "mbid": "",
             "name": "Pump It",
+            "timestamp": 1542872204,
             "url": "https://www.last.fm/music/Black+Eyed+Peas/_/Pump+It"
         },
         {
@@ -523,10 +496,6 @@
                 "name": "Wu-Tang Clan",
                 "url": "https://www.last.fm/music/Wu-Tang+Clan"
             },
-            "date": {
-                "text": "22 Nov 2018, 07:32",
-                "timestamp": 1542871965
-            },
             "image": [
                 {
                     "size": "small",
@@ -548,6 +517,7 @@
             "loved": true,
             "mbid": "",
             "name": "Protect Ya Neck (The Jump Off)",
+            "timestamp": 1542871965,
             "url": "https://www.last.fm/music/Wu-Tang+Clan/_/Protect+Ya+Neck+(The+Jump+Off)"
         },
         {
@@ -578,10 +548,6 @@
                 "name": "The Doors",
                 "url": "https://www.last.fm/music/The+Doors"
             },
-            "date": {
-                "text": "22 Nov 2018, 07:30",
-                "timestamp": 1542871834
-            },
             "image": [
                 {
                     "size": "small",
@@ -603,6 +569,7 @@
             "loved": true,
             "mbid": "CENSOREDe262",
             "name": "People Are Strange",
+            "timestamp": 1542871834,
             "url": "https://www.last.fm/music/The+Doors/_/People+Are+Strange"
         },
         {
@@ -633,10 +600,6 @@
                 "name": "My Chemical Romance",
                 "url": "https://www.last.fm/music/My+Chemical+Romance"
             },
-            "date": {
-                "text": "22 Nov 2018, 07:25",
-                "timestamp": 1542871541
-            },
             "image": [
                 {
                     "size": "small",
@@ -658,6 +621,7 @@
             "loved": true,
             "mbid": "CENSORED62dc",
             "name": "Na Na Na (Na Na Na Na Na Na Na Na Na)",
+            "timestamp": 1542871541,
             "url": "https://www.last.fm/music/My+Chemical+Romance/_/Na+Na+Na+(Na+Na+Na+Na+Na+Na+Na+Na+Na)"
         },
         {
@@ -688,10 +652,6 @@
                 "name": "Michael Andrews",
                 "url": "https://www.last.fm/music/Michael+Andrews"
             },
-            "date": {
-                "text": "22 Nov 2018, 07:21",
-                "timestamp": 1542871288
-            },
             "image": [
                 {
                     "size": "small",
@@ -713,6 +673,7 @@
             "loved": false,
             "mbid": "",
             "name": "Mad World (feat. Gary Jules) (Alternate Mix)",
+            "timestamp": 1542871288,
             "url": "https://www.last.fm/music/Michael+Andrews/_/Mad+World+(feat.+Gary+Jules)+(Alternate+Mix)"
         },
         {
@@ -743,10 +704,6 @@
                 "name": "7!!",
                 "url": "https://www.last.fm/music/7%21%21"
             },
-            "date": {
-                "text": "22 Nov 2018, 07:19",
-                "timestamp": 1542871172
-            },
             "image": [
                 {
                     "size": "small",
@@ -768,6 +725,7 @@
             "loved": true,
             "mbid": "CENSORED2746",
             "name": "Lovers",
+            "timestamp": 1542871172,
             "url": "https://www.last.fm/music/7%21%21/_/Lovers"
         },
         {
@@ -798,10 +756,6 @@
                 "name": "Eminem",
                 "url": "https://www.last.fm/music/Eminem"
             },
-            "date": {
-                "text": "21 Nov 2018, 16:10",
-                "timestamp": 1542816642
-            },
             "image": [
                 {
                     "size": "small",
@@ -823,6 +777,7 @@
             "loved": true,
             "mbid": "CENSOREDe3ed",
             "name": "Lose Yourself",
+            "timestamp": 1542816642,
             "url": "https://www.last.fm/music/Eminem/_/Lose+Yourself"
         },
         {
@@ -853,10 +808,6 @@
                 "name": "Scorpions",
                 "url": "https://www.last.fm/music/Scorpions"
             },
-            "date": {
-                "text": "21 Nov 2018, 16:06",
-                "timestamp": 1542816369
-            },
             "image": [
                 {
                     "size": "small",
@@ -878,6 +829,7 @@
             "loved": true,
             "mbid": "CENSOREDdfd6",
             "name": "Lorelei",
+            "timestamp": 1542816369,
             "url": "https://www.last.fm/music/Scorpions/_/Lorelei"
         },
         {
@@ -908,10 +860,6 @@
                 "name": "System of a Down",
                 "url": "https://www.last.fm/music/System+of+a+Down"
             },
-            "date": {
-                "text": "21 Nov 2018, 16:03",
-                "timestamp": 1542816201
-            },
             "image": [
                 {
                     "size": "small",
@@ -933,6 +881,7 @@
             "loved": true,
             "mbid": "CENSOREDf2fb",
             "name": "Lonely Day",
+            "timestamp": 1542816201,
             "url": "https://www.last.fm/music/System+of+a+Down/_/Lonely+Day"
         },
         {
@@ -963,10 +912,6 @@
                 "name": "Mumford & Sons",
                 "url": "https://www.last.fm/music/Mumford+&+Sons"
             },
-            "date": {
-                "text": "21 Nov 2018, 16:00",
-                "timestamp": 1542816025
-            },
             "image": [
                 {
                     "size": "small",
@@ -988,6 +933,7 @@
             "loved": true,
             "mbid": "",
             "name": "Little Lion Man",
+            "timestamp": 1542816025,
             "url": "https://www.last.fm/music/Mumford+&+Sons/_/Little+Lion+Man"
         },
         {
@@ -1018,10 +964,6 @@
                 "name": "The Beatles",
                 "url": "https://www.last.fm/music/The+Beatles"
             },
-            "date": {
-                "text": "21 Nov 2018, 08:16",
-                "timestamp": 1542788207
-            },
             "image": [
                 {
                     "size": "small",
@@ -1043,6 +985,7 @@
             "loved": true,
             "mbid": "CENSORED83db",
             "name": "Let It Be",
+            "timestamp": 1542788207,
             "url": "https://www.last.fm/music/The+Beatles/_/Let+It+Be"
         },
         {
@@ -1073,10 +1016,6 @@
                 "name": "3 Doors Down",
                 "url": "https://www.last.fm/music/3+Doors+Down"
             },
-            "date": {
-                "text": "21 Nov 2018, 08:12",
-                "timestamp": 1542787973
-            },
             "image": [
                 {
                     "size": "small",
@@ -1098,6 +1037,7 @@
             "loved": true,
             "mbid": "CENSOREDd687",
             "name": "Kryptonite",
+            "timestamp": 1542787973,
             "url": "https://www.last.fm/music/3+Doors+Down/_/Kryptonite"
         },
         {
@@ -1128,10 +1068,6 @@
                 "name": "Rage Against the Machine",
                 "url": "https://www.last.fm/music/Rage+Against+the+Machine"
             },
-            "date": {
-                "text": "21 Nov 2018, 08:07",
-                "timestamp": 1542787658
-            },
             "image": [
                 {
                     "size": "small",
@@ -1153,6 +1089,7 @@
             "loved": true,
             "mbid": "CENSORED8ba5",
             "name": "Killing in the Name",
+            "timestamp": 1542787658,
             "url": "https://www.last.fm/music/Rage+Against+the+Machine/_/Killing+in+the+Name"
         },
         {
@@ -1183,10 +1120,6 @@
                 "name": "Linkin Park",
                 "url": "https://www.last.fm/music/Linkin+Park"
             },
-            "date": {
-                "text": "21 Nov 2018, 08:04",
-                "timestamp": 1542787447
-            },
             "image": [
                 {
                     "size": "small",
@@ -1208,6 +1141,7 @@
             "loved": true,
             "mbid": "CENSORED310f",
             "name": "In the End",
+            "timestamp": 1542787447,
             "url": "https://www.last.fm/music/Linkin+Park/_/In+the+End"
         },
         {
@@ -1238,10 +1172,6 @@
                 "name": "Beck",
                 "url": "https://www.last.fm/music/Beck"
             },
-            "date": {
-                "text": "21 Nov 2018, 07:57",
-                "timestamp": 1542787071
-            },
             "image": [
                 {
                     "size": "small",
@@ -1263,6 +1193,7 @@
             "loved": true,
             "mbid": "",
             "name": "I've Got A Feeling",
+            "timestamp": 1542787071,
             "url": "https://www.last.fm/music/Beck/_/I%27ve+Got+A+Feeling"
         },
         {
@@ -1293,10 +1224,6 @@
                 "name": "The Beatles",
                 "url": "https://www.last.fm/music/The+Beatles"
             },
-            "date": {
-                "text": "21 Nov 2018, 07:54",
-                "timestamp": 1542786854
-            },
             "image": [
                 {
                     "size": "small",
@@ -1318,6 +1245,7 @@
             "loved": true,
             "mbid": "CENSORED7b51",
             "name": "I've Got a Feeling",
+            "timestamp": 1542786854,
             "url": "https://www.last.fm/music/The+Beatles/_/I%27ve+Got+a+Feeling"
         },
         {
@@ -1348,10 +1276,6 @@
                 "name": "The Proclaimers",
                 "url": "https://www.last.fm/music/The+Proclaimers"
             },
-            "date": {
-                "text": "21 Nov 2018, 07:50",
-                "timestamp": 1542786635
-            },
             "image": [
                 {
                     "size": "small",
@@ -1373,6 +1297,7 @@
             "loved": true,
             "mbid": "CENSOREDe3d0",
             "name": "I'm Gonna Be (500 Miles)",
+            "timestamp": 1542786635,
             "url": "https://www.last.fm/music/The+Proclaimers/_/I%27m+Gonna+Be+(500+Miles)"
         },
         {
@@ -1403,10 +1328,6 @@
                 "name": "Nathaniel Rateliff",
                 "url": "https://www.last.fm/music/Nathaniel+Rateliff"
             },
-            "date": {
-                "text": "21 Nov 2018, 07:46",
-                "timestamp": 1542786382
-            },
             "image": [
                 {
                     "size": "small",
@@ -1428,6 +1349,7 @@
             "loved": true,
             "mbid": "",
             "name": "I Need Never Get Old",
+            "timestamp": 1542786382,
             "url": "https://www.last.fm/music/Nathaniel+Rateliff/_/I+Need+Never+Get+Old"
         },
         {
@@ -1458,10 +1380,6 @@
                 "name": "50 Cent",
                 "url": "https://www.last.fm/music/50+Cent"
             },
-            "date": {
-                "text": "21 Nov 2018, 07:43",
-                "timestamp": 1542786188
-            },
             "image": [
                 {
                     "size": "small",
@@ -1483,6 +1401,7 @@
             "loved": true,
             "mbid": "CENSORED80c1",
             "name": "Hold Me Down",
+            "timestamp": 1542786188,
             "url": "https://www.last.fm/music/50+Cent/_/Hold+Me+Down"
         },
         {
@@ -1513,10 +1432,6 @@
                 "name": "Serj Tankian",
                 "url": "https://www.last.fm/music/Serj+Tankian"
             },
-            "date": {
-                "text": "21 Nov 2018, 07:38",
-                "timestamp": 1542785928
-            },
             "image": [
                 {
                     "size": "small",
@@ -1538,6 +1453,7 @@
             "loved": true,
             "mbid": "CENSOREDaa9d",
             "name": "Harakiri",
+            "timestamp": 1542785928,
             "url": "https://www.last.fm/music/Serj+Tankian/_/Harakiri"
         },
         {
@@ -1568,10 +1484,6 @@
                 "name": "James Blunt",
                 "url": "https://www.last.fm/music/James+Blunt"
             },
-            "date": {
-                "text": "21 Nov 2018, 07:35",
-                "timestamp": 1542785723
-            },
             "image": [
                 {
                     "size": "small",
@@ -1593,6 +1505,7 @@
             "loved": true,
             "mbid": "CENSOREDa2fa",
             "name": "Goodbye My Lover",
+            "timestamp": 1542785723,
             "url": "https://www.last.fm/music/James+Blunt/_/Goodbye+My+Lover"
         },
         {
@@ -1623,10 +1536,6 @@
                 "name": "DMX",
                 "url": "https://www.last.fm/music/DMX"
             },
-            "date": {
-                "text": "21 Nov 2018, 07:30",
-                "timestamp": 1542785433
-            },
             "image": [
                 {
                     "size": "small",
@@ -1648,6 +1557,7 @@
             "loved": true,
             "mbid": "",
             "name": "Goodbye",
+            "timestamp": 1542785433,
             "url": "https://www.last.fm/music/DMX/_/Goodbye"
         },
         {
@@ -1678,10 +1588,6 @@
                 "name": "Red Hot Chili Peppers",
                 "url": "https://www.last.fm/music/Red+Hot+Chili+Peppers"
             },
-            "date": {
-                "text": "21 Nov 2018, 07:26",
-                "timestamp": 1542785169
-            },
             "image": [
                 {
                     "size": "small",
@@ -1703,6 +1609,7 @@
             "loved": true,
             "mbid": "",
             "name": "Go Robot",
+            "timestamp": 1542785169,
             "url": "https://www.last.fm/music/Red+Hot+Chili+Peppers/_/Go+Robot"
         },
         {
@@ -1733,10 +1640,6 @@
                 "name": "Cyndi Lauper",
                 "url": "https://www.last.fm/music/Cyndi+Lauper"
             },
-            "date": {
-                "text": "21 Nov 2018, 07:22",
-                "timestamp": 1542784932
-            },
             "image": [
                 {
                     "size": "small",
@@ -1758,6 +1661,7 @@
             "loved": true,
             "mbid": "CENSOREDafd9",
             "name": "Girls Just Want to Have Fun",
+            "timestamp": 1542784932,
             "url": "https://www.last.fm/music/Cyndi+Lauper/_/Girls+Just+Want+to+Have+Fun"
         },
         {
@@ -1788,10 +1692,6 @@
                 "name": "Avril Lavigne",
                 "url": "https://www.last.fm/music/Avril+Lavigne"
             },
-            "date": {
-                "text": "21 Nov 2018, 07:18",
-                "timestamp": 1542784726
-            },
             "image": [
                 {
                     "size": "small",
@@ -1813,6 +1713,7 @@
             "loved": true,
             "mbid": "CENSOREDaed4",
             "name": "Girlfriend",
+            "timestamp": 1542784726,
             "url": "https://www.last.fm/music/Avril+Lavigne/_/Girlfriend"
         },
         {
@@ -1843,10 +1744,6 @@
                 "name": "The Motels",
                 "url": "https://www.last.fm/music/The+Motels"
             },
-            "date": {
-                "text": "20 Nov 2018, 17:28",
-                "timestamp": 1542734883
-            },
             "image": [
                 {
                     "size": "small",
@@ -1868,6 +1765,7 @@
             "loved": true,
             "mbid": "CENSOREDdb3e",
             "name": "Footsteps",
+            "timestamp": 1542734883,
             "url": "https://www.last.fm/music/The+Motels/_/Footsteps"
         },
         {
@@ -1898,10 +1796,6 @@
                 "name": "Iron Maiden",
                 "url": "https://www.last.fm/music/Iron+Maiden"
             },
-            "date": {
-                "text": "20 Nov 2018, 17:20",
-                "timestamp": 1542734445
-            },
             "image": [
                 {
                     "size": "small",
@@ -1923,6 +1817,7 @@
             "loved": true,
             "mbid": "CENSORED424a",
             "name": "Fear of the Dark",
+            "timestamp": 1542734445,
             "url": "https://www.last.fm/music/Iron+Maiden/_/Fear+of+the+Dark"
         },
         {
@@ -1953,10 +1848,6 @@
                 "name": "Serj Tankian",
                 "url": "https://www.last.fm/music/Serj+Tankian"
             },
-            "date": {
-                "text": "20 Nov 2018, 17:16",
-                "timestamp": 1542734215
-            },
             "image": [
                 {
                     "size": "small",
@@ -1978,6 +1869,7 @@
             "loved": true,
             "mbid": "CENSOREDf007",
             "name": "Empty Walls",
+            "timestamp": 1542734215,
             "url": "https://www.last.fm/music/Serj+Tankian/_/Empty+Walls"
         },
         {
@@ -2008,10 +1900,6 @@
                 "name": "Rob Zombie",
                 "url": "https://www.last.fm/music/Rob+Zombie"
             },
-            "date": {
-                "text": "20 Nov 2018, 10:54",
-                "timestamp": 1542711253
-            },
             "image": [
                 {
                     "size": "small",
@@ -2033,6 +1921,7 @@
             "loved": true,
             "mbid": "CENSORED9493",
             "name": "Dragula (Hot Rod Herman remix)",
+            "timestamp": 1542711253,
             "url": "https://www.last.fm/music/Rob+Zombie/_/Dragula+(Hot+Rod+Herman+remix)"
         },
         {
@@ -2063,10 +1952,6 @@
                 "name": "Black Eyed Peas",
                 "url": "https://www.last.fm/music/Black+Eyed+Peas"
             },
-            "date": {
-                "text": "20 Nov 2018, 10:50",
-                "timestamp": 1542711014
-            },
             "image": [
                 {
                     "size": "small",
@@ -2088,6 +1973,7 @@
             "loved": true,
             "mbid": "",
             "name": "Don't Phunk with My Heart",
+            "timestamp": 1542711014,
             "url": "https://www.last.fm/music/Black+Eyed+Peas/_/Don%27t+Phunk+with+My+Heart"
         },
         {
@@ -2118,10 +2004,6 @@
                 "name": "Serj Tankian",
                 "url": "https://www.last.fm/music/Serj+Tankian"
             },
-            "date": {
-                "text": "20 Nov 2018, 10:46",
-                "timestamp": 1542710767
-            },
             "image": [
                 {
                     "size": "small",
@@ -2143,6 +2025,7 @@
             "loved": true,
             "mbid": "CENSORED3af7",
             "name": "Disowned Inc.",
+            "timestamp": 1542710767,
             "url": "https://www.last.fm/music/Serj+Tankian/_/Disowned+Inc."
         },
         {
@@ -2173,10 +2056,6 @@
                 "name": "Gorillaz",
                 "url": "https://www.last.fm/music/Gorillaz"
             },
-            "date": {
-                "text": "20 Nov 2018, 10:42",
-                "timestamp": 1542710543
-            },
             "image": [
                 {
                     "size": "small",
@@ -2198,6 +2077,7 @@
             "loved": true,
             "mbid": "CENSOREDb689",
             "name": "Dirty Harry",
+            "timestamp": 1542710543,
             "url": "https://www.last.fm/music/Gorillaz/_/Dirty+Harry"
         },
         {
@@ -2228,10 +2108,6 @@
                 "name": "New Order",
                 "url": "https://www.last.fm/music/New+Order"
             },
-            "date": {
-                "text": "20 Nov 2018, 10:38",
-                "timestamp": 1542710298
-            },
             "image": [
                 {
                     "size": "small",
@@ -2253,6 +2129,7 @@
             "loved": true,
             "mbid": "CENSORED9d99",
             "name": "Blue Monday",
+            "timestamp": 1542710298,
             "url": "https://www.last.fm/music/New+Order/_/Blue+Monday"
         },
         {
@@ -2283,10 +2160,6 @@
                 "name": "Placebo",
                 "url": "https://www.last.fm/music/Placebo"
             },
-            "date": {
-                "text": "20 Nov 2018, 10:35",
-                "timestamp": 1542710107
-            },
             "image": [
                 {
                     "size": "small",
@@ -2308,6 +2181,7 @@
             "loved": true,
             "mbid": "CENSOREDa9e8",
             "name": "The Bitter End",
+            "timestamp": 1542710107,
             "url": "https://www.last.fm/music/Placebo/_/The+Bitter+End"
         },
         {
@@ -2338,10 +2212,6 @@
                 "name": "Michael Jackson",
                 "url": "https://www.last.fm/music/Michael+Jackson"
             },
-            "date": {
-                "text": "20 Nov 2018, 10:30",
-                "timestamp": 1542709813
-            },
             "image": [
                 {
                     "size": "small",
@@ -2363,6 +2233,7 @@
             "loved": true,
             "mbid": "CENSORED6340",
             "name": "Billie Jean",
+            "timestamp": 1542709813,
             "url": "https://www.last.fm/music/Michael+Jackson/_/Billie+Jean"
         },
         {
@@ -2393,10 +2264,6 @@
                 "name": "The Who",
                 "url": "https://www.last.fm/music/The+Who"
             },
-            "date": {
-                "text": "20 Nov 2018, 10:26",
-                "timestamp": 1542709591
-            },
             "image": [
                 {
                     "size": "small",
@@ -2418,6 +2285,7 @@
             "loved": false,
             "mbid": "",
             "name": "Behind Blue Eyes (live)",
+            "timestamp": 1542709591,
             "url": "https://www.last.fm/music/The+Who/_/Behind+Blue+Eyes+(live)"
         },
         {
@@ -2448,10 +2316,6 @@
                 "name": "Nightwish",
                 "url": "https://www.last.fm/music/Nightwish"
             },
-            "date": {
-                "text": "20 Nov 2018, 08:19",
-                "timestamp": 1542701972
-            },
             "image": [
                 {
                     "size": "small",
@@ -2473,6 +2337,7 @@
             "loved": true,
             "mbid": "CENSORED7603",
             "name": "Beauty and the Beast",
+            "timestamp": 1542701972,
             "url": "https://www.last.fm/music/Nightwish/_/Beauty+and+the+Beast"
         },
         {
@@ -2503,10 +2368,6 @@
                 "name": "Green Day",
                 "url": "https://www.last.fm/music/Green+Day"
             },
-            "date": {
-                "text": "20 Nov 2018, 08:16",
-                "timestamp": 1542701768
-            },
             "image": [
                 {
                     "size": "small",
@@ -2528,6 +2389,7 @@
             "loved": true,
             "mbid": "",
             "name": "Bang Bang",
+            "timestamp": 1542701768,
             "url": "https://www.last.fm/music/Green+Day/_/Bang+Bang"
         },
         {
@@ -2558,10 +2420,6 @@
                 "name": "Jace Everett",
                 "url": "https://www.last.fm/music/Jace+Everett"
             },
-            "date": {
-                "text": "20 Nov 2018, 08:13",
-                "timestamp": 1542701605
-            },
             "image": [
                 {
                     "size": "small",
@@ -2583,6 +2441,7 @@
             "loved": true,
             "mbid": "CENSOREDb3ea",
             "name": "Bad Things",
+            "timestamp": 1542701605,
             "url": "https://www.last.fm/music/Jace+Everett/_/Bad+Things"
         },
         {
@@ -2613,10 +2472,6 @@
                 "name": "FF.C",
                 "url": "https://www.last.fm/music/FF.C"
             },
-            "date": {
-                "text": "20 Nov 2018, 08:10",
-                "timestamp": 1542701434
-            },
             "image": [
                 {
                     "size": "small",
@@ -2638,6 +2493,7 @@
             "loved": true,
             "mbid": "CENSORED3ac0",
             "name": "\u03a4\u03bf \u03a4\u03b5\u03bb\u03b5\u03c5\u03c4\u03b1\u03af\u03bf \u0393\u03c1\u03ac\u03bc\u03bc\u03b1 \u0395\u03bd\u03cc\u03c2 \u0391\u03c5\u03c4\u03cc\u03c7\u03b5\u03b9\u03c1\u03b1",
+            "timestamp": 1542701434,
             "url": "https://www.last.fm/music/FF.C/_/%CE%A4%CE%BF+%CE%A4%CE%B5%CE%BB%CE%B5%CF%85%CF%84%CE%B1%CE%AF%CE%BF+%CE%93%CF%81%CE%AC%CE%BC%CE%BC%CE%B1+%CE%95%CE%BD%CF%8C%CF%82+%CE%91%CF%85%CF%84%CF%8C%CF%87%CE%B5%CE%B9%CF%81%CE%B1"
         },
         {
@@ -2668,10 +2524,6 @@
                 "name": "\u0392\u03b1\u03c3\u03af\u03bb\u03b7\u03c2 \u03a0\u03b1\u03c0\u03b1\u03ba\u03c9\u03bd\u03c3\u03c4\u03b1\u03bd\u03c4\u03af\u03bd\u03bf\u03c5",
                 "url": "https://www.last.fm/music/%CE%92%CE%B1%CF%83%CE%AF%CE%BB%CE%B7%CF%82+%CE%A0%CE%B1%CF%80%CE%B1%CE%BA%CF%89%CE%BD%CF%83%CF%84%CE%B1%CE%BD%CF%84%CE%AF%CE%BD%CE%BF%CF%85"
             },
-            "date": {
-                "text": "20 Nov 2018, 08:05",
-                "timestamp": 1542701159
-            },
             "image": [
                 {
                     "size": "small",
@@ -2693,6 +2545,7 @@
             "loved": true,
             "mbid": "CENSORED45c7",
             "name": "\u03a3\u03c6\u03b5\u03bd\u03c4\u03cc\u03bd\u03b1",
+            "timestamp": 1542701159,
             "url": "https://www.last.fm/music/%CE%92%CE%B1%CF%83%CE%AF%CE%BB%CE%B7%CF%82+%CE%A0%CE%B1%CF%80%CE%B1%CE%BA%CF%89%CE%BD%CF%83%CF%84%CE%B1%CE%BD%CF%84%CE%AF%CE%BD%CE%BF%CF%85/_/%CE%A3%CF%86%CE%B5%CE%BD%CF%84%CF%8C%CE%BD%CE%B1"
         },
         {
@@ -2723,10 +2576,6 @@
                 "name": "FF.C",
                 "url": "https://www.last.fm/music/FF.C"
             },
-            "date": {
-                "text": "20 Nov 2018, 08:01",
-                "timestamp": 1542700871
-            },
             "image": [
                 {
                     "size": "small",
@@ -2748,6 +2597,7 @@
             "loved": true,
             "mbid": "",
             "name": "\u03a0\u03ac\u03c1\u03b5 \u039b\u03af\u03b3\u03bf \u03a6\u03c9\u03c2 (Remix)",
+            "timestamp": 1542700871,
             "url": "https://www.last.fm/music/FF.C/_/%CE%A0%CE%AC%CF%81%CE%B5+%CE%9B%CE%AF%CE%B3%CE%BF+%CE%A6%CF%89%CF%82+(Remix)"
         }
     ],

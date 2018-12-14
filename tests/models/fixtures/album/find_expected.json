@@ -52,11 +52,9 @@
                 "name": "Mumford & Sons",
                 "url": "https://www.last.fm/music/Mumford+&+Sons"
             },
-            "attr": {
-                "rank": 1
-            },
             "duration": 240,
             "name": "42",
+            "rank": 1,
             "url": "https://www.last.fm/music/Mumford+&+Sons/_/42"
         },
         {
@@ -65,11 +63,9 @@
                 "name": "Mumford & Sons",
                 "url": "https://www.last.fm/music/Mumford+&+Sons"
             },
-            "attr": {
-                "rank": 2
-            },
             "duration": 162,
             "name": "Guiding Light",
+            "rank": 2,
             "url": "https://www.last.fm/music/Mumford+&+Sons/_/Guiding+Light"
         },
         {
@@ -78,11 +74,9 @@
                 "name": "Mumford & Sons",
                 "url": "https://www.last.fm/music/Mumford+&+Sons"
             },
-            "attr": {
-                "rank": 3
-            },
             "duration": 274,
             "name": "Woman",
+            "rank": 3,
             "url": "https://www.last.fm/music/Mumford+&+Sons/_/Woman"
         },
         {
@@ -91,11 +85,9 @@
                 "name": "Mumford & Sons",
                 "url": "https://www.last.fm/music/Mumford+&+Sons"
             },
-            "attr": {
-                "rank": 4
-            },
             "duration": 265,
             "name": "Beloved",
+            "rank": 4,
             "url": "https://www.last.fm/music/Mumford+&+Sons/_/Beloved"
         },
         {
@@ -104,11 +96,9 @@
                 "name": "Mumford & Sons",
                 "url": "https://www.last.fm/music/Mumford+&+Sons"
             },
-            "attr": {
-                "rank": 5
-            },
             "duration": 331,
             "name": "The Wild",
+            "rank": 5,
             "url": "https://www.last.fm/music/Mumford+&+Sons/_/The+Wild"
         },
         {
@@ -117,11 +107,9 @@
                 "name": "Mumford & Sons",
                 "url": "https://www.last.fm/music/Mumford+&+Sons"
             },
-            "attr": {
-                "rank": 6
-            },
             "duration": 223,
             "name": "October Skies",
+            "rank": 6,
             "url": "https://www.last.fm/music/Mumford+&+Sons/_/October+Skies"
         },
         {
@@ -130,11 +118,9 @@
                 "name": "Mumford & Sons",
                 "url": "https://www.last.fm/music/Mumford+&+Sons"
             },
-            "attr": {
-                "rank": 7
-            },
             "duration": 295,
             "name": "Slip Away",
+            "rank": 7,
             "url": "https://www.last.fm/music/Mumford+&+Sons/_/Slip+Away"
         },
         {
@@ -143,11 +129,9 @@
                 "name": "Mumford & Sons",
                 "url": "https://www.last.fm/music/Mumford+&+Sons"
             },
-            "attr": {
-                "rank": 8
-            },
             "duration": 203,
             "name": "Rose of Sharon",
+            "rank": 8,
             "url": "https://www.last.fm/music/Mumford+&+Sons/_/Rose+of+Sharon"
         },
         {
@@ -156,11 +140,9 @@
                 "name": "Mumford & Sons",
                 "url": "https://www.last.fm/music/Mumford+&+Sons"
             },
-            "attr": {
-                "rank": 9
-            },
             "duration": 243,
             "name": "Picture You",
+            "rank": 9,
             "url": "https://www.last.fm/music/Mumford+&+Sons/_/Picture+You"
         },
         {
@@ -169,11 +151,9 @@
                 "name": "Mumford & Sons",
                 "url": "https://www.last.fm/music/Mumford+&+Sons"
             },
-            "attr": {
-                "rank": 10
-            },
             "duration": 191,
             "name": "Darkness Visible",
+            "rank": 10,
             "url": "https://www.last.fm/music/Mumford+&+Sons/_/Darkness+Visible"
         },
         {
@@ -182,11 +162,9 @@
                 "name": "Mumford & Sons",
                 "url": "https://www.last.fm/music/Mumford+&+Sons"
             },
-            "attr": {
-                "rank": 11
-            },
             "duration": 269,
             "name": "If I Say",
+            "rank": 11,
             "url": "https://www.last.fm/music/Mumford+&+Sons/_/If+I+Say"
         },
         {
@@ -195,11 +173,9 @@
                 "name": "Mumford & Sons",
                 "url": "https://www.last.fm/music/Mumford+&+Sons"
             },
-            "attr": {
-                "rank": 12
-            },
             "duration": 305,
             "name": "Wild Heart",
+            "rank": 12,
             "url": "https://www.last.fm/music/Mumford+&+Sons/_/Wild+Heart"
         },
         {
@@ -208,11 +184,9 @@
                 "name": "Mumford & Sons",
                 "url": "https://www.last.fm/music/Mumford+&+Sons"
             },
-            "attr": {
-                "rank": 13
-            },
             "duration": 276,
             "name": "Forever",
+            "rank": 13,
             "url": "https://www.last.fm/music/Mumford+&+Sons/_/Forever"
         },
         {
@@ -221,11 +195,9 @@
                 "name": "Mumford & Sons",
                 "url": "https://www.last.fm/music/Mumford+&+Sons"
             },
-            "attr": {
-                "rank": 14
-            },
             "duration": 376,
             "name": "Delta",
+            "rank": 14,
             "url": "https://www.last.fm/music/Mumford+&+Sons/_/Delta"
         }
     ],

@@ -253,6 +253,7 @@ def pythonic_variables(data):
         "userloved": "loved",
         "opensearch:Query": "query",
         "perPage": "limit",
+        "position": "rank",
     }
 
     """

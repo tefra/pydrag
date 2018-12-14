@@ -62,6 +62,7 @@ class MethodTestCase(TestCase):
             path = "{}/{}_expected.json".format(fixtures_dir, file_name)
             with open(path, "w") as f:
                 json.dump(actual, f, indent=4, sort_keys=True)
+                f.write("\n")
             return self.assertFixtureEqual(file_name, actual)
 
         self.assertDictEqual(expected, actual)

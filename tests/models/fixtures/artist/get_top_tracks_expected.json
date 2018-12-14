@@ -7,9 +7,6 @@
                 "name": "Guns N' Roses",
                 "url": "https://www.last.fm/music/Guns+N%27+Roses"
             },
-            "attr": {
-                "rank": 1
-            },
             "image": [
                 {
                     "size": "small",
@@ -31,6 +28,7 @@
             "listeners": 1359980,
             "name": "Sweet Child o' Mine",
             "playcount": 9314129,
+            "rank": 1,
             "url": "https://www.last.fm/music/Guns+N%27+Roses/_/Sweet+Child+o%27+Mine"
         },
         {
@@ -38,9 +36,6 @@
                 "mbid": "CENSORED8e43",
                 "name": "Guns N' Roses",
                 "url": "https://www.last.fm/music/Guns+N%27+Roses"
-            },
-            "attr": {
-                "rank": 2
             },
             "image": [
                 {
@@ -63,6 +58,7 @@
             "listeners": 1230922,
             "name": "Welcome to the Jungle",
             "playcount": 7840169,
+            "rank": 2,
             "url": "https://www.last.fm/music/Guns+N%27+Roses/_/Welcome+to+the+Jungle"
         },
         {
@@ -70,9 +66,6 @@
                 "mbid": "CENSORED8e43",
                 "name": "Guns N' Roses",
                 "url": "https://www.last.fm/music/Guns+N%27+Roses"
-            },
-            "attr": {
-                "rank": 3
             },
             "image": [
                 {
@@ -96,6 +89,7 @@
             "mbid": "CENSORED18d6",
             "name": "Paradise City",
             "playcount": 6951933,
+            "rank": 3,
             "url": "https://www.last.fm/music/Guns+N%27+Roses/_/Paradise+City"
         },
         {
@@ -103,9 +97,6 @@
                 "mbid": "CENSORED8e43",
                 "name": "Guns N' Roses",
                 "url": "https://www.last.fm/music/Guns+N%27+Roses"
-            },
-            "attr": {
-                "rank": 4
             },
             "image": [
                 {
@@ -129,6 +120,7 @@
             "mbid": "CENSORED95bb",
             "name": "November Rain",
             "playcount": 6391027,
+            "rank": 4,
             "url": "https://www.last.fm/music/Guns+N%27+Roses/_/November+Rain"
         },
         {
@@ -136,9 +128,6 @@
                 "mbid": "CENSORED8e43",
                 "name": "Guns N' Roses",
                 "url": "https://www.last.fm/music/Guns+N%27+Roses"
-            },
-            "attr": {
-                "rank": 5
             },
             "image": [
                 {
@@ -162,6 +151,7 @@
             "mbid": "CENSORED33b3",
             "name": "Knockin' on Heaven's Door",
             "playcount": 4457223,
+            "rank": 5,
             "url": "https://www.last.fm/music/Guns+N%27+Roses/_/Knockin%27+on+Heaven%27s+Door"
         },
         {
@@ -169,9 +159,6 @@
                 "mbid": "CENSORED8e43",
                 "name": "Guns N' Roses",
                 "url": "https://www.last.fm/music/Guns+N%27+Roses"
-            },
-            "attr": {
-                "rank": 6
             },
             "image": [
                 {
@@ -194,6 +181,7 @@
             "listeners": 598089,
             "name": "Patience",
             "playcount": 3495677,
+            "rank": 6,
             "url": "https://www.last.fm/music/Guns+N%27+Roses/_/Patience"
         },
         {
@@ -201,9 +189,6 @@
                 "mbid": "CENSORED8e43",
                 "name": "Guns N' Roses",
                 "url": "https://www.last.fm/music/Guns+N%27+Roses"
-            },
-            "attr": {
-                "rank": 7
             },
             "image": [
                 {
@@ -227,6 +212,7 @@
             "mbid": "CENSORED5b84",
             "name": "Live and Let Die",
             "playcount": 2593925,
+            "rank": 7,
             "url": "https://www.last.fm/music/Guns+N%27+Roses/_/Live+and+Let+Die"
         },
         {
@@ -234,9 +220,6 @@
                 "mbid": "CENSORED8e43",
                 "name": "Guns N' Roses",
                 "url": "https://www.last.fm/music/Guns+N%27+Roses"
-            },
-            "attr": {
-                "rank": 8
             },
             "image": [
                 {
@@ -260,6 +243,7 @@
             "mbid": "CENSORED117b",
             "name": "Don't Cry",
             "playcount": 3744264,
+            "rank": 8,
             "url": "https://www.last.fm/music/Guns+N%27+Roses/_/Don%27t+Cry"
         },
         {
@@ -267,9 +251,6 @@
                 "mbid": "CENSORED8e43",
                 "name": "Guns N' Roses",
                 "url": "https://www.last.fm/music/Guns+N%27+Roses"
-            },
-            "attr": {
-                "rank": 9
             },
             "image": [
                 {
@@ -292,6 +273,7 @@
             "listeners": 499393,
             "name": "Civil War",
             "playcount": 2935472,
+            "rank": 9,
             "url": "https://www.last.fm/music/Guns+N%27+Roses/_/Civil+War"
         },
         {
@@ -299,9 +281,6 @@
                 "mbid": "CENSORED8e43",
                 "name": "Guns N' Roses",
                 "url": "https://www.last.fm/music/Guns+N%27+Roses"
-            },
-            "attr": {
-                "rank": 10
             },
             "image": [
                 {
@@ -325,6 +304,7 @@
             "mbid": "CENSOREDa412",
             "name": "You Could Be Mine",
             "playcount": 2731773,
+            "rank": 10,
             "url": "https://www.last.fm/music/Guns+N%27+Roses/_/You+Could+Be+Mine"
         },
         {
@@ -332,9 +312,6 @@
                 "mbid": "CENSORED8e43",
                 "name": "Guns N' Roses",
                 "url": "https://www.last.fm/music/Guns+N%27+Roses"
-            },
-            "attr": {
-                "rank": 11
             },
             "image": [
                 {
@@ -357,6 +334,7 @@
             "listeners": 406589,
             "name": "Yesterdays",
             "playcount": 2016181,
+            "rank": 11,
             "url": "https://www.last.fm/music/Guns+N%27+Roses/_/Yesterdays"
         },
         {
@@ -364,9 +342,6 @@
                 "mbid": "CENSORED8e43",
                 "name": "Guns N' Roses",
                 "url": "https://www.last.fm/music/Guns+N%27+Roses"
-            },
-            "attr": {
-                "rank": 12
             },
             "image": [
                 {
@@ -389,6 +364,7 @@
             "listeners": 387497,
             "name": "Nightrain",
             "playcount": 2460454,
+            "rank": 12,
             "url": "https://www.last.fm/music/Guns+N%27+Roses/_/Nightrain"
         },
         {
@@ -396,9 +372,6 @@
                 "mbid": "CENSORED8e43",
                 "name": "Guns N' Roses",
                 "url": "https://www.last.fm/music/Guns+N%27+Roses"
-            },
-            "attr": {
-                "rank": 13
             },
             "image": [
                 {
@@ -421,6 +394,7 @@
             "listeners": 378626,
             "name": "It's So Easy",
             "playcount": 2100336,
+            "rank": 13,
             "url": "https://www.last.fm/music/Guns+N%27+Roses/_/It%27s+So+Easy"
         },
         {
@@ -428,9 +402,6 @@
                 "mbid": "CENSORED8e43",
                 "name": "Guns N' Roses",
                 "url": "https://www.last.fm/music/Guns+N%27+Roses"
-            },
-            "attr": {
-                "rank": 14
             },
             "image": [
                 {
@@ -453,6 +424,7 @@
             "listeners": 367556,
             "name": "Mr. Brownstone",
             "playcount": 2136561,
+            "rank": 14,
             "url": "https://www.last.fm/music/Guns+N%27+Roses/_/Mr.+Brownstone"
         },
         {
@@ -460,9 +432,6 @@
                 "mbid": "CENSORED8e43",
                 "name": "Guns N' Roses",
                 "url": "https://www.last.fm/music/Guns+N%27+Roses"
-            },
-            "attr": {
-                "rank": 15
             },
             "image": [
                 {
@@ -486,6 +455,7 @@
             "mbid": "CENSORED0d52",
             "name": "My Michelle",
             "playcount": 1923696,
+            "rank": 15,
             "url": "https://www.last.fm/music/Guns+N%27+Roses/_/My+Michelle"
         },
         {
@@ -493,9 +463,6 @@
                 "mbid": "CENSORED8e43",
                 "name": "Guns N' Roses",
                 "url": "https://www.last.fm/music/Guns+N%27+Roses"
-            },
-            "attr": {
-                "rank": 16
             },
             "image": [
                 {
@@ -519,6 +486,7 @@
             "mbid": "CENSOREDb078",
             "name": "Don't Cry (original)",
             "playcount": 1932437,
+            "rank": 16,
             "url": "https://www.last.fm/music/Guns+N%27+Roses/_/Don%27t+Cry+(original)"
         },
         {
@@ -526,9 +494,6 @@
                 "mbid": "CENSORED8e43",
                 "name": "Guns N' Roses",
                 "url": "https://www.last.fm/music/Guns+N%27+Roses"
-            },
-            "attr": {
-                "rank": 17
             },
             "image": [
                 {
@@ -551,6 +516,7 @@
             "listeners": 313333,
             "name": "You're Crazy",
             "playcount": 1839992,
+            "rank": 17,
             "url": "https://www.last.fm/music/Guns+N%27+Roses/_/You%27re+Crazy"
         },
         {
@@ -558,9 +524,6 @@
                 "mbid": "CENSORED8e43",
                 "name": "Guns N' Roses",
                 "url": "https://www.last.fm/music/Guns+N%27+Roses"
-            },
-            "attr": {
-                "rank": 18
             },
             "image": [
                 {
@@ -584,6 +547,7 @@
             "mbid": "CENSORED7802",
             "name": "Rocket Queen",
             "playcount": 1770029,
+            "rank": 18,
             "url": "https://www.last.fm/music/Guns+N%27+Roses/_/Rocket+Queen"
         },
         {
@@ -591,9 +555,6 @@
                 "mbid": "CENSORED8e43",
                 "name": "Guns N' Roses",
                 "url": "https://www.last.fm/music/Guns+N%27+Roses"
-            },
-            "attr": {
-                "rank": 19
             },
             "image": [
                 {
@@ -617,6 +578,7 @@
             "mbid": "CENSOREDdc4b",
             "name": "Out ta Get Me",
             "playcount": 1528651,
+            "rank": 19,
             "url": "https://www.last.fm/music/Guns+N%27+Roses/_/Out+ta+Get+Me"
         },
         {
@@ -624,9 +586,6 @@
                 "mbid": "CENSORED8e43",
                 "name": "Guns N' Roses",
                 "url": "https://www.last.fm/music/Guns+N%27+Roses"
-            },
-            "attr": {
-                "rank": 20
             },
             "image": [
                 {
@@ -650,6 +609,7 @@
             "mbid": "CENSORED989b",
             "name": "Since I Don't Have You",
             "playcount": 1352966,
+            "rank": 20,
             "url": "https://www.last.fm/music/Guns+N%27+Roses/_/Since+I+Don%27t+Have+You"
         },
         {
@@ -657,9 +617,6 @@
                 "mbid": "CENSORED8e43",
                 "name": "Guns N' Roses",
                 "url": "https://www.last.fm/music/Guns+N%27+Roses"
-            },
-            "attr": {
-                "rank": 21
             },
             "image": [
                 {
@@ -683,6 +640,7 @@
             "mbid": "CENSORED3b74",
             "name": "Think About You",
             "playcount": 1377833,
+            "rank": 21,
             "url": "https://www.last.fm/music/Guns+N%27+Roses/_/Think+About+You"
         },
         {
@@ -690,9 +648,6 @@
                 "mbid": "CENSORED8e43",
                 "name": "Guns N' Roses",
                 "url": "https://www.last.fm/music/Guns+N%27+Roses"
-            },
-            "attr": {
-                "rank": 22
             },
             "image": [
                 {
@@ -716,6 +671,7 @@
             "mbid": "CENSOREDca9f",
             "name": "Estranged",
             "playcount": 1759519,
+            "rank": 22,
             "url": "https://www.last.fm/music/Guns+N%27+Roses/_/Estranged"
         },
         {
@@ -723,9 +679,6 @@
                 "mbid": "CENSORED8e43",
                 "name": "Guns N' Roses",
                 "url": "https://www.last.fm/music/Guns+N%27+Roses"
-            },
-            "attr": {
-                "rank": 23
             },
             "image": [
                 {
@@ -748,6 +701,7 @@
             "listeners": 242756,
             "name": "Chinese Democracy",
             "playcount": 1193015,
+            "rank": 23,
             "url": "https://www.last.fm/music/Guns+N%27+Roses/_/Chinese+Democracy"
         },
         {
@@ -755,9 +709,6 @@
                 "mbid": "CENSORED8e43",
                 "name": "Guns N' Roses",
                 "url": "https://www.last.fm/music/Guns+N%27+Roses"
-            },
-            "attr": {
-                "rank": 24
             },
             "image": [
                 {
@@ -780,6 +731,7 @@
             "listeners": 241540,
             "name": "Anything Goes",
             "playcount": 1135931,
+            "rank": 24,
             "url": "https://www.last.fm/music/Guns+N%27+Roses/_/Anything+Goes"
         },
         {
@@ -787,9 +739,6 @@
                 "mbid": "CENSORED8e43",
                 "name": "Guns N' Roses",
                 "url": "https://www.last.fm/music/Guns+N%27+Roses"
-            },
-            "attr": {
-                "rank": 25
             },
             "image": [
                 {
@@ -813,6 +762,7 @@
             "mbid": "CENSOREDb6b3",
             "name": "Ain't It Fun",
             "playcount": 1118034,
+            "rank": 25,
             "url": "https://www.last.fm/music/Guns+N%27+Roses/_/Ain%27t+It+Fun"
         },
         {
@@ -820,9 +770,6 @@
                 "mbid": "CENSORED8e43",
                 "name": "Guns N' Roses",
                 "url": "https://www.last.fm/music/Guns+N%27+Roses"
-            },
-            "attr": {
-                "rank": 26
             },
             "image": [
                 {
@@ -846,6 +793,7 @@
             "mbid": "CENSORED8de0",
             "name": "Used To Love Her",
             "playcount": 1121322,
+            "rank": 26,
             "url": "https://www.last.fm/music/Guns+N%27+Roses/_/Used+To+Love+Her"
         },
         {
@@ -853,9 +801,6 @@
                 "mbid": "CENSORED8e43",
                 "name": "Guns N' Roses",
                 "url": "https://www.last.fm/music/Guns+N%27+Roses"
-            },
-            "attr": {
-                "rank": 27
             },
             "image": [
                 {
@@ -879,6 +824,7 @@
             "mbid": "CENSORED75d9",
             "name": "14 Years",
             "playcount": 935944,
+            "rank": 27,
             "url": "https://www.last.fm/music/Guns+N%27+Roses/_/14+Years"
         },
         {
@@ -886,9 +832,6 @@
                 "mbid": "CENSORED8e43",
                 "name": "Guns N' Roses",
                 "url": "https://www.last.fm/music/Guns+N%27+Roses"
-            },
-            "attr": {
-                "rank": 28
             },
             "image": [
                 {
@@ -912,6 +855,7 @@
             "mbid": "CENSORED9181",
             "name": "Better",
             "playcount": 1264920,
+            "rank": 28,
             "url": "https://www.last.fm/music/Guns+N%27+Roses/_/Better"
         },
         {
@@ -919,9 +863,6 @@
                 "mbid": "CENSORED8e43",
                 "name": "Guns N' Roses",
                 "url": "https://www.last.fm/music/Guns+N%27+Roses"
-            },
-            "attr": {
-                "rank": 29
             },
             "image": [
                 {
@@ -945,6 +886,7 @@
             "mbid": "CENSOREDfaaf",
             "name": "Sympathy for the Devil",
             "playcount": 794114,
+            "rank": 29,
             "url": "https://www.last.fm/music/Guns+N%27+Roses/_/Sympathy+for+the+Devil"
         },
         {
@@ -952,9 +894,6 @@
                 "mbid": "CENSORED8e43",
                 "name": "Guns N' Roses",
                 "url": "https://www.last.fm/music/Guns+N%27+Roses"
-            },
-            "attr": {
-                "rank": 30
             },
             "image": [
                 {
@@ -978,6 +917,7 @@
             "mbid": "CENSOREDdbd4",
             "name": "You Ain't the First",
             "playcount": 722932,
+            "rank": 30,
             "url": "https://www.last.fm/music/Guns+N%27+Roses/_/You+Ain%27t+the+First"
         },
         {
@@ -985,9 +925,6 @@
                 "mbid": "CENSORED8e43",
                 "name": "Guns N' Roses",
                 "url": "https://www.last.fm/music/Guns+N%27+Roses"
-            },
-            "attr": {
-                "rank": 31
             },
             "image": [
                 {
@@ -1011,6 +948,7 @@
             "mbid": "CENSORED907f",
             "name": "So Fine",
             "playcount": 838564,
+            "rank": 31,
             "url": "https://www.last.fm/music/Guns+N%27+Roses/_/So+Fine"
         },
         {
@@ -1018,9 +956,6 @@
                 "mbid": "CENSORED8e43",
                 "name": "Guns N' Roses",
                 "url": "https://www.last.fm/music/Guns+N%27+Roses"
-            },
-            "attr": {
-                "rank": 32
             },
             "image": [
                 {
@@ -1043,6 +978,7 @@
             "listeners": 175187,
             "name": "Dust n' Bones",
             "playcount": 855675,
+            "rank": 32,
             "url": "https://www.last.fm/music/Guns+N%27+Roses/_/Dust+n%27+Bones"
         },
         {
@@ -1050,9 +986,6 @@
                 "mbid": "CENSORED8e43",
                 "name": "Guns N' Roses",
                 "url": "https://www.last.fm/music/Guns+N%27+Roses"
-            },
-            "attr": {
-                "rank": 33
             },
             "image": [
                 {
@@ -1076,6 +1009,7 @@
             "mbid": "CENSORED4328",
             "name": "The Garden",
             "playcount": 675282,
+            "rank": 33,
             "url": "https://www.last.fm/music/Guns+N%27+Roses/_/The+Garden"
         },
         {
@@ -1083,9 +1017,6 @@
                 "mbid": "CENSORED8e43",
                 "name": "Guns N' Roses",
                 "url": "https://www.last.fm/music/Guns+N%27+Roses"
-            },
-            "attr": {
-                "rank": 34
             },
             "image": [
                 {
@@ -1109,6 +1040,7 @@
             "mbid": "CENSORED2df5",
             "name": "Right Next Door to Hell",
             "playcount": 719983,
+            "rank": 34,
             "url": "https://www.last.fm/music/Guns+N%27+Roses/_/Right+Next+Door+to+Hell"
         },
         {
@@ -1116,9 +1048,6 @@
                 "mbid": "CENSORED8e43",
                 "name": "Guns N' Roses",
                 "url": "https://www.last.fm/music/Guns+N%27+Roses"
-            },
-            "attr": {
-                "rank": 35
             },
             "image": [
                 {
@@ -1142,6 +1071,7 @@
             "mbid": "CENSORED325e",
             "name": "Dead Horse",
             "playcount": 717853,
+            "rank": 35,
             "url": "https://www.last.fm/music/Guns+N%27+Roses/_/Dead+Horse"
         },
         {
@@ -1149,9 +1079,6 @@
                 "mbid": "CENSORED8e43",
                 "name": "Guns N' Roses",
                 "url": "https://www.last.fm/music/Guns+N%27+Roses"
-            },
-            "attr": {
-                "rank": 36
             },
             "image": [
                 {
@@ -1174,6 +1101,7 @@
             "listeners": 162821,
             "name": "Don't Damn Me",
             "playcount": 710531,
+            "rank": 36,
             "url": "https://www.last.fm/music/Guns+N%27+Roses/_/Don%27t+Damn+Me"
         },
         {
@@ -1181,9 +1109,6 @@
                 "mbid": "CENSORED8e43",
                 "name": "Guns N' Roses",
                 "url": "https://www.last.fm/music/Guns+N%27+Roses"
-            },
-            "attr": {
-                "rank": 37
             },
             "image": [
                 {
@@ -1207,6 +1132,7 @@
             "mbid": "CENSORED7c21",
             "name": "Perfect Crime",
             "playcount": 701799,
+            "rank": 37,
             "url": "https://www.last.fm/music/Guns+N%27+Roses/_/Perfect+Crime"
         },
         {
@@ -1214,9 +1140,6 @@
                 "mbid": "CENSORED8e43",
                 "name": "Guns N' Roses",
                 "url": "https://www.last.fm/music/Guns+N%27+Roses"
-            },
-            "attr": {
-                "rank": 38
             },
             "image": [
                 {
@@ -1240,6 +1163,7 @@
             "mbid": "CENSOREDbfd4",
             "name": "Bad Obsession",
             "playcount": 685094,
+            "rank": 38,
             "url": "https://www.last.fm/music/Guns+N%27+Roses/_/Bad+Obsession"
         },
         {
@@ -1247,9 +1171,6 @@
                 "mbid": "CENSORED8e43",
                 "name": "Guns N' Roses",
                 "url": "https://www.last.fm/music/Guns+N%27+Roses"
-            },
-            "attr": {
-                "rank": 39
             },
             "image": [
                 {
@@ -1273,6 +1194,7 @@
             "mbid": "CENSORED466b",
             "name": "One in a Million",
             "playcount": 739790,
+            "rank": 39,
             "url": "https://www.last.fm/music/Guns+N%27+Roses/_/One+in+a+Million"
         },
         {
@@ -1280,9 +1202,6 @@
                 "mbid": "CENSORED8e43",
                 "name": "Guns N' Roses",
                 "url": "https://www.last.fm/music/Guns+N%27+Roses"
-            },
-            "attr": {
-                "rank": 40
             },
             "image": [
                 {
@@ -1305,6 +1224,7 @@
             "listeners": 153811,
             "name": "Back off bitch",
             "playcount": 679595,
+            "rank": 40,
             "url": "https://www.last.fm/music/Guns+N%27+Roses/_/Back+off+bitch"
         },
         {
@@ -1312,9 +1232,6 @@
                 "mbid": "CENSORED8e43",
                 "name": "Guns N' Roses",
                 "url": "https://www.last.fm/music/Guns+N%27+Roses"
-            },
-            "attr": {
-                "rank": 41
             },
             "image": [
                 {
@@ -1338,6 +1255,7 @@
             "mbid": "CENSORED1cbe",
             "name": "Get in the Ring",
             "playcount": 645979,
+            "rank": 41,
             "url": "https://www.last.fm/music/Guns+N%27+Roses/_/Get+in+the+Ring"
         },
         {
@@ -1345,9 +1263,6 @@
                 "mbid": "CENSORED8e43",
                 "name": "Guns N' Roses",
                 "url": "https://www.last.fm/music/Guns+N%27+Roses"
-            },
-            "attr": {
-                "rank": 42
             },
             "image": [
                 {
@@ -1370,6 +1285,7 @@
             "listeners": 153395,
             "name": "Double Talkin' Jive",
             "playcount": 703526,
+            "rank": 42,
             "url": "https://www.last.fm/music/Guns+N%27+Roses/_/Double+Talkin%27+Jive"
         },
         {
@@ -1377,9 +1293,6 @@
                 "mbid": "CENSORED8e43",
                 "name": "Guns N' Roses",
                 "url": "https://www.last.fm/music/Guns+N%27+Roses"
-            },
-            "attr": {
-                "rank": 43
             },
             "image": [
                 {
@@ -1402,6 +1315,7 @@
             "listeners": 152753,
             "name": "Breakdown",
             "playcount": 706883,
+            "rank": 43,
             "url": "https://www.last.fm/music/Guns+N%27+Roses/_/Breakdown"
         },
         {
@@ -1409,9 +1323,6 @@
                 "mbid": "CENSORED8e43",
                 "name": "Guns N' Roses",
                 "url": "https://www.last.fm/music/Guns+N%27+Roses"
-            },
-            "attr": {
-                "rank": 44
             },
             "image": [
                 {
@@ -1434,6 +1345,7 @@
             "listeners": 152390,
             "name": "Garden of Eden",
             "playcount": 686645,
+            "rank": 44,
             "url": "https://www.last.fm/music/Guns+N%27+Roses/_/Garden+of+Eden"
         },
         {
@@ -1441,9 +1353,6 @@
                 "mbid": "CENSORED8e43",
                 "name": "Guns N' Roses",
                 "url": "https://www.last.fm/music/Guns+N%27+Roses"
-            },
-            "attr": {
-                "rank": 45
             },
             "image": [
                 {
@@ -1467,6 +1376,7 @@
             "mbid": "CENSOREDad7f",
             "name": "Shackler's Revenge",
             "playcount": 742996,
+            "rank": 45,
             "url": "https://www.last.fm/music/Guns+N%27+Roses/_/Shackler%27s+Revenge"
         },
         {
@@ -1474,9 +1384,6 @@
                 "mbid": "CENSORED8e43",
                 "name": "Guns N' Roses",
                 "url": "https://www.last.fm/music/Guns+N%27+Roses"
-            },
-            "attr": {
-                "rank": 46
             },
             "image": [
                 {
@@ -1499,6 +1406,7 @@
             "listeners": 147475,
             "name": "This I Love",
             "playcount": 1041229,
+            "rank": 46,
             "url": "https://www.last.fm/music/Guns+N%27+Roses/_/This+I+Love"
         },
         {
@@ -1506,9 +1414,6 @@
                 "mbid": "CENSORED8e43",
                 "name": "Guns N' Roses",
                 "url": "https://www.last.fm/music/Guns+N%27+Roses"
-            },
-            "attr": {
-                "rank": 47
             },
             "image": [
                 {
@@ -1531,6 +1436,7 @@
             "listeners": 144241,
             "name": "Shotgun Blues",
             "playcount": 575344,
+            "rank": 47,
             "url": "https://www.last.fm/music/Guns+N%27+Roses/_/Shotgun+Blues"
         },
         {
@@ -1538,9 +1444,6 @@
                 "mbid": "CENSORED8e43",
                 "name": "Guns N' Roses",
                 "url": "https://www.last.fm/music/Guns+N%27+Roses"
-            },
-            "attr": {
-                "rank": 48
             },
             "image": [
                 {
@@ -1564,6 +1467,7 @@
             "mbid": "CENSORED2ee2",
             "name": "Street of Dreams",
             "playcount": 727765,
+            "rank": 48,
             "url": "https://www.last.fm/music/Guns+N%27+Roses/_/Street+of+Dreams"
         },
         {
@@ -1571,9 +1475,6 @@
                 "mbid": "CENSORED8e43",
                 "name": "Guns N' Roses",
                 "url": "https://www.last.fm/music/Guns+N%27+Roses"
-            },
-            "attr": {
-                "rank": 49
             },
             "image": [
                 {
@@ -1597,6 +1498,7 @@
             "mbid": "CENSORED7f60",
             "name": "Pretty Tied Up",
             "playcount": 642560,
+            "rank": 49,
             "url": "https://www.last.fm/music/Guns+N%27+Roses/_/Pretty+Tied+Up"
         },
         {
@@ -1604,9 +1506,6 @@
                 "mbid": "CENSORED8e43",
                 "name": "Guns N' Roses",
                 "url": "https://www.last.fm/music/Guns+N%27+Roses"
-            },
-            "attr": {
-                "rank": 50
             },
             "image": [
                 {
@@ -1629,6 +1528,7 @@
             "listeners": 135819,
             "name": "Coma",
             "playcount": 626628,
+            "rank": 50,
             "url": "https://www.last.fm/music/Guns+N%27+Roses/_/Coma"
         }
     ],

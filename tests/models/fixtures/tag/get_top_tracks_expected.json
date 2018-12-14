@@ -6,9 +6,6 @@
                 "name": "Kanye West",
                 "url": "https://www.last.fm/music/Kanye+West"
             },
-            "attr": {
-                "rank": 1
-            },
             "duration": 314,
             "image": [
                 {
@@ -30,6 +27,7 @@
             ],
             "mbid": "CENSOREDaf2d",
             "name": "Stronger",
+            "rank": 1,
             "url": "https://www.last.fm/music/Kanye+West/_/Stronger"
         },
         {
@@ -37,9 +35,6 @@
                 "mbid": "CENSORED2596",
                 "name": "Gorillaz",
                 "url": "https://www.last.fm/music/Gorillaz"
-            },
-            "attr": {
-                "rank": 2
             },
             "duration": 339,
             "image": [
@@ -62,6 +57,7 @@
             ],
             "mbid": "CENSORED47e3",
             "name": "Clint Eastwood",
+            "rank": 2,
             "url": "https://www.last.fm/music/Gorillaz/_/Clint+Eastwood"
         }
     ],

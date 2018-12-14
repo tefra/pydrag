@@ -6,9 +6,6 @@
                 "name": "Womb Sounds Heartbeat",
                 "url": "https://www.last.fm/music/Womb+Sounds+Heartbeat"
             },
-            "attr": {
-                "rank": 1
-            },
             "duration": 0,
             "image": [
                 {
@@ -31,6 +28,7 @@
             "mbid": "",
             "name": "Einschlafhilfe Baby Sleepy - 60 Minuten",
             "playcount": 35,
+            "rank": 1,
             "url": "https://www.last.fm/music/Womb+Sounds+Heartbeat/_/Einschlafhilfe+Baby+Sleepy+-+60+Minuten"
         }
     ],

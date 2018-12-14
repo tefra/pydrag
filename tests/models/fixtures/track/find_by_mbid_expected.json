@@ -3,9 +3,6 @@
         "artist": {
             "name": "AC/DC"
         },
-        "attr": {
-            "position": 1
-        },
         "image": [
             {
                 "size": "small",
@@ -26,6 +23,7 @@
         ],
         "mbid": "CENSORED8675",
         "name": "Back in Black",
+        "rank": 1,
         "url": "https://www.last.fm/music/AC%2FDC/Back+in+Black"
     },
     "artist": {

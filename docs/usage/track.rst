@@ -8,13 +8,13 @@ Retrieve track
 .. code-block :: python
 
     >>> from pydrag import Track
-    >>>
     >>> track = Track.find(artist="AC / DC", track="Hells Bell")
-    >>>
     >>> track.name
     'Hells Bells'
     >>> track.album
-    Album(attr=RootAttributes(tag=None, page=None, user=None, country=None, total=None, album=None, artist=None, limit=None, track=None, total_pages=None, to_date=None, from_date=None, offset=None, timestamp=None, rank=None, date=None, ignored=None, position=1, accepted=None), name='Back in Black', mbid='38914b29-7788-4cff-80b7-1ced523f8675', url='https://www.last.fm/music/AC%2FDC/Back+in+Black', image=[Image(size='small', text='https://lastfm-img2.akamaized.net/i/u/34s/3d359b955132742bc2fc3eacdff90b8c.png'), Image(size='medium', text='https://lastfm-img2.akamaized.net/i/u/64s/3d359b955132742bc2fc3eacdff90b8c.png'), Image(size='large', text='https://lastfm-img2.akamaized.net/i/u/174s/3d359b955132742bc2fc3eacdff90b8c.png'), Image(size='extralarge', text='https://lastfm-img2.akamaized.net/i/u/300x300/3d359b955132742bc2fc3eacdff90b8c.png')], text=None, playcount=None, artist=Artist(name='AC/DC', mbid=None, url=None, tag_count=None, listeners=None, playcount=None, image=None, match=None, attr=None, tags=None, bio=None, on_tour=None, similar=None, text=None), listeners=None, tags=None, tracks=None, wiki=None)
+    Album(name='Back in Black', mbid='38914b29-7788-4cff-80b7-1ced523f8675', url='https://www.last.fm/music/AC%2FDC/Back+in+Black', image=[Image(size='small', text='https://lastfm-img2.akamaized.net/i/u/34s/3d359b955132742bc2fc3eacdff90b8c.png'), Image(size='medium', text='https://lastfm-img2.akamaized.net/i/u/64s/3d359b955132742bc2fc3eacdff90b8c.png'), Image(size='large', text='https://lastfm-img2.akamaized.net/i/u/174s/3d359b955132742bc2fc3eacdff90b8c.png'), Image(size='extralarge', text='https://lastfm-img2.akamaized.net/i/u/300x300/3d359b955132742bc2fc3eacdff90b8c.png')], playcount=None, artist=Artist(name='AC/DC', mbid=None, url=None, tag_count=None, listeners=None, playcount=None, userplaycount=None, image=None, match=None, tags=None, bio=None, on_tour=None, similar=None, rank=None), listeners=None, tags=None, tracks=None, wiki=None, rank=1)
+    >>>
+    >>>
     >>> track.album.name
     'Back in Black'
     >>>
