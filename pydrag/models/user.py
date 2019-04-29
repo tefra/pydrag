@@ -170,30 +170,31 @@ class User(BaseModel, ApiMixin):
         )
 
     def get_personal_tags(
-        self, tag: str, type: str, limit: int = 50, page: int = 1
+        self, tag: str, category: str, limit: int = 50, page: int = 1
     ) -> ListModel[Union[Artist, Track, Album]]:
         """
         Get the user's personal tags.
 
         :param tag: The tag you're interested in.
-        :param type: The type of items which have been tagged
+        :param category: The type of items which have been tagged
         :param page: The page number to fetch.
         :param limit: The number of results to fetch per page.
         :rtype: :class:`~models.common.ListModel` of :class:`~pydrag.models.track.Track`  or :class:`~pydrag.models.artist.Artist` or :class:`~pydrag.models.album.Album`
         """
 
-        map = dict(artist=Artist, album=Album, track=Track)
-        bind = map.get(type)
-        assert bind is not None
+        valid_categories = dict(artist=Artist, album=Album, track=Track)
+        bind = valid_categories.get(category)
+        if bind is None:
+            raise ValueError("Provide a tag type: artist, album or track!")
 
         return self.retrieve(
             bind=bind,
-            flatten="{0}s.{0}".format(type),
+            flatten="{0}s.{0}".format(category),
             params=dict(
                 method="user.getPersonalTags",
                 user=self.name,
                 tag=tag,
-                taggingtype=type,
+                taggingtype=category,
                 limit=limit,
                 page=page,
             ),
@@ -244,7 +245,8 @@ class User(BaseModel, ApiMixin):
         :rtype: :class:`~pydrag.models.common.ListModel` of :class:`~pydrag.models.album.Album`
         :rtype: List[Album]
         """
-        assert isinstance(period, Period)
+        if not isinstance(period, Period):
+            raise ValueError("Invalid period")
 
         return self.retrieve(
             bind=Album,
@@ -270,7 +272,9 @@ class User(BaseModel, ApiMixin):
         :param page: The page number to fetch.
         :rtype: :class:`~models.common.ListModel` of :class:`~pydrag.models.artist.Artist`
         """
-        assert isinstance(period, Period)
+        if not isinstance(period, Period):
+            raise ValueError("Invalid period")
+
         return self.retrieve(
             bind=Artist,
             flatten="artist",
@@ -310,7 +314,9 @@ class User(BaseModel, ApiMixin):
         :rtype: :class:`~models.common.ListModel` of :class:`~pydrag.models.track.Track`
         """
 
-        assert isinstance(period, Period)
+        if not isinstance(period, Period):
+            raise ValueError("Invalid period")
+
         return self.retrieve(
             bind=Track,
             flatten="track",

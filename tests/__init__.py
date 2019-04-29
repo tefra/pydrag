@@ -9,7 +9,7 @@ from pydrag.models.common import Config
 
 try:
     config = Config.instance()
-except AssertionError:
+except ValueError:
     Config.instance(api_key="key")
 
 where_am_i = os.path.dirname(os.path.realpath(__file__))

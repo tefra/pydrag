@@ -81,7 +81,7 @@ class UserTests(MethodTestCase):
 
     @fixture.use_cassette(path="user/get_personal_tags_track")
     def test_get_personal_tags_track(self):
-        result = self.user.get_personal_tags(tag="rock", type="track")
+        result = self.user.get_personal_tags(tag="rock", category="track")
         expected_params = {
             "limit": 50,
             "method": "user.getPersonalTags",
@@ -100,7 +100,7 @@ class UserTests(MethodTestCase):
     @fixture.use_cassette(path="user/get_personal_tags_album")
     def test_get_personal_tags_album(self):
         self.user.name = "Zaratoustre"
-        result = self.user.get_personal_tags(tag="hell", type="album")
+        result = self.user.get_personal_tags(tag="hell", category="album")
         expected_params = {
             "limit": 50,
             "method": "user.getPersonalTags",
@@ -118,7 +118,7 @@ class UserTests(MethodTestCase):
 
     @fixture.use_cassette(path="user/get_personal_tags_artist")
     def test_get_personal_tags_artist(self):
-        result = self.user.get_personal_tags(tag="rock", type="artist")
+        result = self.user.get_personal_tags(tag="rock", category="artist")
         expected_params = {
             "limit": 50,
             "method": "user.getPersonalTags",
@@ -135,8 +135,11 @@ class UserTests(MethodTestCase):
         )
 
     def test_get_personal_tags_invalid(self):
-        with self.assertRaises(AssertionError):
-            self.user.get_personal_tags(tag="rock", type="foo")
+        with self.assertRaises(ValueError) as cm:
+            self.user.get_personal_tags(tag="rock", category="foo")
+        self.assertEqual(
+            "Provide a tag type: artist, album or track!", str(cm.exception)
+        )
 
     @fixture.use_cassette(path="user/get_recent_tracks")
     def test_get_recent_tracks(self):

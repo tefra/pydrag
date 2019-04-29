@@ -29,7 +29,7 @@ class ApiMixin:
         cls,
         bind: Type[BaseModel],
         flatten: Optional[str] = None,
-        params: Dict = dict(),
+        params: Optional[Dict] = None,
     ):
         """
         Perform an api retrieve/get resource action.
@@ -44,7 +44,7 @@ class ApiMixin:
             method="GET",
             bind=bind,
             flatten=flatten,
-            params=params,
+            params=params or {},
             sign=False,
             stateful=False,
             authenticate=False,
@@ -55,7 +55,7 @@ class ApiMixin:
         cls,
         bind: Type[BaseModel],
         flatten: Optional[str] = None,
-        params: Dict = dict(),
+        params: Optional[Dict] = None,
         sign: bool = False,
         stateful: bool = False,
         authenticate: bool = False,
@@ -76,7 +76,7 @@ class ApiMixin:
             method="POST",
             bind=bind,
             flatten=flatten,
-            params=params,
+            params=params or {},
             sign=sign,
             stateful=stateful,
             authenticate=authenticate,
@@ -143,7 +143,7 @@ class ApiMixin:
         """
         cfg = Config.instance()
         params = dict(
-            (k, str(int(v is True) if type(v) == bool else v))
+            (k, str(int(v is True) if isinstance(v, bool) else v))
             for k, v in params.items()
             if v is not None
         )
@@ -242,7 +242,6 @@ def pythonic_variables(data):
         "opensearch:itemsPerPage": "limit",
         "opensearch:totalResults": "total",
         "toptags": "top_tags",
-        "albumArtist": "album_artist",
         "streamId": "stream_id",
         "albumArtist": "album_artist",
         "realname": "real_name",
@@ -256,10 +255,8 @@ def pythonic_variables(data):
         "position": "rank",
     }
 
-    """
-    A list of fields that dont make make sense in the api responses
-    Either they don't always have the same value type or have a dev message
-    """
+    # A list of fields that dont make make sense in the api responses
+    # Either they don't always have the same value type or have a dev message
     fixme = [
         "subscriber",
         "type",

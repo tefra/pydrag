@@ -140,7 +140,7 @@ class ConfigTests(TestCase):
         self.assertDictEqual(expected, Config.instance().to_dict())
 
     def test_instance_raises_exception(self):
-        with self.assertRaises(AssertionError) as cm:
+        with self.assertRaises(ValueError) as cm:
             Config.instance()
 
         self.assertEqual("Provide a valid last.fm api key.", str(cm.exception))

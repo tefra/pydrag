@@ -131,7 +131,9 @@ class Album(BaseModel, ApiMixin):
         if self.mbid:
             return self.find_by_mbid(self.mbid, user, lang)
         else:
-            assert self.artist is not None
+            if self.artist is None:
+                raise ValueError("Missing artist name!")
+
             return self.find(self.artist.name, self.name, user, lang)
 
     @classmethod
@@ -162,7 +164,9 @@ class Album(BaseModel, ApiMixin):
         :param tags: A list of user supplied tags to apply to this album. Accepts a maximum of 10 tags.
         :rtype: :class:`~models.common.RawResponse`
         """
-        assert self.artist is not None
+        if self.artist is None:
+            raise ValueError("Missing artist name!")
+
         return self.submit(
             bind=RawResponse,
             stateful=True,
@@ -181,7 +185,9 @@ class Album(BaseModel, ApiMixin):
         :param tag: A single user tag to remove from this album.
         :rtype: :class:`~models.common.RawResponse`
         """
-        assert self.artist is not None
+        if self.artist is None:
+            raise ValueError("Missing artist name!")
+
         return self.submit(
             bind=RawResponse,
             stateful=True,
@@ -200,7 +206,9 @@ class Album(BaseModel, ApiMixin):
         :param user: The username for the context of the request.
         :rtype: :class:`pydrag.models.common.ListModel` of :class:`~pydrag.models.tag.Tag`
         """
-        assert self.artist is not None
+        if self.artist is None:
+            raise ValueError("Missing artist name!")
+
         return self.retrieve(
             bind=Tag,
             flatten="tag",
@@ -220,7 +228,9 @@ class Album(BaseModel, ApiMixin):
 
         :rtype: :class:`pydrag.models.common.ListModel` of :class:`~pydrag.models.tag.Tag`
         """
-        assert self.artist is not None
+        if self.artist is None:
+            raise ValueError("Missing artist name!")
+
         return self.retrieve(
             bind=Tag,
             flatten="tag",
