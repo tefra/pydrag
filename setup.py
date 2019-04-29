@@ -13,9 +13,9 @@ if __name__ == "__main__":
         packages=find_packages(),
         version=meta["version"],
         install_requires=[
-            "attrs == 18.2.0",
+            "attrs == 19.1.0",
             "requests == 2.21.0",
-            "python-dotenv == 0.10.0",
+            "python-dotenv == 0.10.1",
         ],
         extras_require={
             "dev": [
