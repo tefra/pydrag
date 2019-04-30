@@ -121,13 +121,13 @@ Retrieve Tag Lists
     >>>
     >>> me = User.find("Zaratoustre")
     >>>
-    >>> tags = me.get_personal_tags(tag="metal", type="artist")
+    >>> tags = me.get_personal_tags(tag="metal", category="artist")
     >>> [t.name for t in tags]
     >>>
-    >>> tags = me.get_personal_tags(tag="metal", type="album")
+    >>> tags = me.get_personal_tags(tag="metal", category="album")
     >>> [t.name for t in tags]
     >>>
-    >>> tags = me.get_personal_tags(tag="metal", type="track")
+    >>> tags = me.get_personal_tags(tag="metal", category="track")
     >>> [t.name for t in tags]
     >>>
     >>> tags = me.get_top_tags(limit=5)

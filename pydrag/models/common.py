@@ -28,7 +28,7 @@ class BaseModel:
         :rtype: Dict
         """
         return asdict(
-            self, filter=lambda f, v: v is not None and type(v) != dict
+            self, filter=lambda f, v: v is not None and not isinstance(v, dict)
         )
 
     @classmethod
@@ -184,9 +184,10 @@ class Config:
                     )
                     for k in keys
                 }
-            assert (
-                len(params["api_key"]) > 0
-            ), "Provide a valid last.fm api key."
+
+            if len(params["api_key"]) == 0:
+                raise ValueError("Provide a valid last.fm api key.")
+
             Config(**params)
         return Config._instance
 

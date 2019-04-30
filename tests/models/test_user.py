@@ -81,7 +81,7 @@ class UserTests(MethodTestCase):
 
     @fixture.use_cassette(path="user/get_personal_tags_track")
     def test_get_personal_tags_track(self):
-        result = self.user.get_personal_tags(tag="rock", type="track")
+        result = self.user.get_personal_tags(tag="rock", category="track")
         expected_params = {
             "limit": 50,
             "method": "user.getPersonalTags",
@@ -100,7 +100,7 @@ class UserTests(MethodTestCase):
     @fixture.use_cassette(path="user/get_personal_tags_album")
     def test_get_personal_tags_album(self):
         self.user.name = "Zaratoustre"
-        result = self.user.get_personal_tags(tag="hell", type="album")
+        result = self.user.get_personal_tags(tag="hell", category="album")
         expected_params = {
             "limit": 50,
             "method": "user.getPersonalTags",
@@ -118,7 +118,7 @@ class UserTests(MethodTestCase):
 
     @fixture.use_cassette(path="user/get_personal_tags_artist")
     def test_get_personal_tags_artist(self):
-        result = self.user.get_personal_tags(tag="rock", type="artist")
+        result = self.user.get_personal_tags(tag="rock", category="artist")
         expected_params = {
             "limit": 50,
             "method": "user.getPersonalTags",
@@ -135,8 +135,11 @@ class UserTests(MethodTestCase):
         )
 
     def test_get_personal_tags_invalid(self):
-        with self.assertRaises(AssertionError):
-            self.user.get_personal_tags(tag="rock", type="foo")
+        with self.assertRaises(ValueError) as cm:
+            self.user.get_personal_tags(tag="rock", category="foo")
+        self.assertEqual(
+            "Provide a tag type: artist, album or track!", str(cm.exception)
+        )
 
     @fixture.use_cassette(path="user/get_recent_tracks")
     def test_get_recent_tracks(self):
@@ -171,6 +174,12 @@ class UserTests(MethodTestCase):
         self.assertIsInstance(result, ListModel)
         self.assertFixtureEqual("user/get_top_albums", result.to_dict())
 
+    def test_get_top_albums_with_invalid_period(self):
+        with self.assertRaises(ValueError) as cm:
+            self.user.get_top_albums(period="blah")
+
+        self.assertEqual("Invalid period", str(cm.exception))
+
     @fixture.use_cassette(path="user/get_top_artists")
     def test_get_top_artists(self):
         result = self.user.get_top_artists(period=Period.week)
@@ -185,6 +194,12 @@ class UserTests(MethodTestCase):
 
         self.assertIsInstance(result, ListModel)
         self.assertFixtureEqual("user/get_top_artists", result.to_dict())
+
+    def test_get_top_artists_with_invalid_period(self):
+        with self.assertRaises(ValueError) as cm:
+            self.user.get_top_artists(period="blah")
+
+        self.assertEqual("Invalid period", str(cm.exception))
 
     @fixture.use_cassette(path="user/get_top_tags")
     def test_get_top_tags(self):
@@ -213,6 +228,12 @@ class UserTests(MethodTestCase):
 
         self.assertIsInstance(result, ListModel)
         self.assertFixtureEqual("user/get_top_tracks", result.to_dict())
+
+    def test_get_top_tracks_with_invalid_period(self):
+        with self.assertRaises(ValueError) as cm:
+            self.user.get_top_tracks(period="blah")
+
+        self.assertEqual("Invalid period", str(cm.exception))
 
     @fixture.use_cassette(path="user/get_weekly_album_chart")
     def test_get_weekly_album_chart(self):
