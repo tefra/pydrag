@@ -29,6 +29,13 @@ class AlbumTests(MethodTestCase):
         self.assertIsInstance(result, RawResponse)
         self.assertIsNone(result.data)
 
+    def test_add_tags_with_no_artist(self):
+        self.album.artist = None
+        with self.assertRaises(ValueError) as cm:
+            self.album.add_tags(["foo", "bar"])
+
+        self.assertEqual("Missing artist name!", str(cm.exception))
+
     @fixture.use_cassette(path="album/remove_tag")
     def test_remove_tag(self):
         result = self.album.remove_tag("bar")
@@ -41,6 +48,13 @@ class AlbumTests(MethodTestCase):
         self.assertEqual(expected_params, result.params)
         self.assertIsInstance(result, RawResponse)
         self.assertIsNone(result.data)
+
+    def test_remove_tags_with_no_artist(self):
+        self.album.artist = None
+        with self.assertRaises(ValueError) as cm:
+            self.album.remove_tag("bar")
+
+        self.assertEqual("Missing artist name!", str(cm.exception))
 
     @fixture.use_cassette(path="album/get_tags")
     def test_get_tags(self):
@@ -57,6 +71,13 @@ class AlbumTests(MethodTestCase):
 
         self.assertIsInstance(result, ListModel)
         self.assertFixtureEqual("album/get_tags", result.to_dict())
+
+    def test_get_tags_with_no_artist(self):
+        self.album.artist = None
+        with self.assertRaises(ValueError) as cm:
+            self.album.get_tags("bar")
+
+        self.assertEqual("Missing artist name!", str(cm.exception))
 
     @fixture.use_cassette(path="album/find")
     def test_find(self):
@@ -100,7 +121,7 @@ class AlbumTests(MethodTestCase):
 
     @mock.patch.object(Album, "find", return_value="Me")
     @mock.patch.object(Album, "find_by_mbid")
-    def test_get_info_when_mbid_is_not_available(self, find_by_mbid, find):
+    def test_get_info_when_artist_is_available(self, find_by_mbid, find):
         self.album.mbid = None
         self.assertEqual("Me", self.album.get_info("rj", "it"))
 
@@ -108,6 +129,14 @@ class AlbumTests(MethodTestCase):
             self.album.artist.name, self.album.name, "rj", "it"
         )
         find_by_mbid.assert_not_called()
+
+    def test_get_info_with_no_identifier(self):
+        self.album.mbid = None
+        self.album.artist = None
+        with self.assertRaises(ValueError) as cm:
+            self.album.get_info("rj", "it")
+
+        self.assertEqual("Missing artist name!", str(cm.exception))
 
     @fixture.use_cassette(path="album/get_top_tags")
     def test_get_top_tags(self):
@@ -123,6 +152,13 @@ class AlbumTests(MethodTestCase):
 
         self.assertIsInstance(result, ListModel)
         self.assertFixtureEqual("album/get_top_tags", result.to_dict())
+
+    def test_get_top_tags_with_no_artist(self):
+        self.album.artist = None
+        with self.assertRaises(ValueError) as cm:
+            self.album.get_top_tags()
+
+        self.assertEqual("Missing artist name!", str(cm.exception))
 
     @fixture.use_cassette(path="album/search")
     def test_search(self):

@@ -223,7 +223,7 @@ class ApiMixin:
 
 
 def pythonic_variables(data):
-    map = {
+    convert = {
         "albummatches": "albums",
         "artistmatches": "artists",
         "trackmatches": "tracks",
@@ -271,4 +271,4 @@ def pythonic_variables(data):
         "role",
     ]
 
-    return {map.get(k, k): v for k, v in data if k not in fixme}
+    return {convert.get(k, k): v for k, v in data if k not in fixme}

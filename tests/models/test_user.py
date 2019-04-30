@@ -174,6 +174,12 @@ class UserTests(MethodTestCase):
         self.assertIsInstance(result, ListModel)
         self.assertFixtureEqual("user/get_top_albums", result.to_dict())
 
+    def test_get_top_albums_with_invalid_period(self):
+        with self.assertRaises(ValueError) as cm:
+            self.user.get_top_albums(period="blah")
+
+        self.assertEqual("Invalid period", str(cm.exception))
+
     @fixture.use_cassette(path="user/get_top_artists")
     def test_get_top_artists(self):
         result = self.user.get_top_artists(period=Period.week)
@@ -188,6 +194,12 @@ class UserTests(MethodTestCase):
 
         self.assertIsInstance(result, ListModel)
         self.assertFixtureEqual("user/get_top_artists", result.to_dict())
+
+    def test_get_top_artists_with_invalid_period(self):
+        with self.assertRaises(ValueError) as cm:
+            self.user.get_top_artists(period="blah")
+
+        self.assertEqual("Invalid period", str(cm.exception))
 
     @fixture.use_cassette(path="user/get_top_tags")
     def test_get_top_tags(self):
@@ -216,6 +228,12 @@ class UserTests(MethodTestCase):
 
         self.assertIsInstance(result, ListModel)
         self.assertFixtureEqual("user/get_top_tracks", result.to_dict())
+
+    def test_get_top_tracks_with_invalid_period(self):
+        with self.assertRaises(ValueError) as cm:
+            self.user.get_top_tracks(period="blah")
+
+        self.assertEqual("Invalid period", str(cm.exception))
 
     @fixture.use_cassette(path="user/get_weekly_album_chart")
     def test_get_weekly_album_chart(self):
