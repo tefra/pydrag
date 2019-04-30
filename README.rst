@@ -17,6 +17,8 @@ pydrag
 .. image:: https://img.shields.io/github/languages/top/tefra/pydrag.svg
         :target: https://pydrag.readthedocs.io/
 
+.. image:: https://api.codacy.com/project/badge/Grade/502de74e87c64d6480749846b161fd62
+   :target: https://www.codacy.com/app/tefra/pydrag?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=tefra/pydrag&amp;utm_campaign=Badge_Grade
 
 .. image:: https://img.shields.io/pypi/pyversions/pydrag.svg
         :target: https://pypi.org/pypi/pydrag/
