@@ -1,19 +1,18 @@
 from unittest import mock
 
 from pydrag.models.artist import Artist
-from pydrag.models.common import ListModel, RawResponse
-from tests import MethodTestCase, fixture
+from pydrag.models.common import ListModel
+from pydrag.models.common import RawResponse
+from tests import fixture
+from tests import MethodTestCase
 
 
 class ArtistTests(MethodTestCase):
     def setUp(self):
         self.artist = Artist.from_dict(
-            dict(
-                name="Guns N' Roses",
-                mbid="eeb1195b-f213-4ce1-b28c-8565211f8e43",
-            )
+            dict(name="Guns N' Roses", mbid="eeb1195b-f213-4ce1-b28c-8565211f8e43",)
         )
-        super(ArtistTests, self).setUp()
+        super().setUp()
 
     @fixture.use_cassette(path="artist/add_tags")
     def test_add_tags(self):
@@ -70,9 +69,7 @@ class ArtistTests(MethodTestCase):
     @fixture.use_cassette(path="artist/find_by_mbid")
     def test_find_by_mbid(self):
         result = Artist.find_by_mbid(
-            "eeb1195b-f213-4ce1-b28c-8565211f8e43",
-            user="Zaratoustre",
-            lang="it",
+            "eeb1195b-f213-4ce1-b28c-8565211f8e43", user="Zaratoustre", lang="it",
         )
         expected_params = {
             "autocorrect": True,
@@ -176,9 +173,7 @@ class ArtistTests(MethodTestCase):
 
     @fixture.use_cassette(path="geo/get_top_artists")
     def test_get_top_tracks_by_country(self):
-        result = Artist.get_top_artists_by_country(
-            country="greece", page=1, limit=10
-        )
+        result = Artist.get_top_artists_by_country(country="greece", page=1, limit=10)
 
         expected_params = {
             "country": "greece",

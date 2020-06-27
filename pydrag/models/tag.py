@@ -1,8 +1,13 @@
-from typing import Dict, List, Optional
+from typing import Dict
+from typing import List
+from typing import Optional
 
 from attr import dataclass
 
-from pydrag.models.common import BaseModel, Chart, ListModel, Wiki
+from pydrag.models.common import BaseModel
+from pydrag.models.common import Chart
+from pydrag.models.common import ListModel
+from pydrag.models.common import Wiki
 from pydrag.services import ApiMixin
 
 
@@ -32,7 +37,7 @@ class Tag(BaseModel, ApiMixin):
     def from_dict(cls, data: Dict):
         if "wiki" in data:
             data["wiki"] = Wiki.from_dict(data["wiki"])
-        return super(Tag, cls).from_dict(data)
+        return super().from_dict(data)
 
     @classmethod
     def find(cls, name: str, lang: str = None) -> "Tag":
@@ -61,16 +66,12 @@ class Tag(BaseModel, ApiMixin):
             bind=Tag,
             flatten="tag",
             params=dict(
-                method="tag.getTopTags",
-                num_res=limit,
-                offset=((page - 1) * limit),
+                method="tag.getTopTags", num_res=limit, offset=((page - 1) * limit),
             ),
         )
 
     @classmethod
-    def get_top_tags_chart(
-        cls, limit: int = 50, page: int = 1
-    ) -> ListModel["Tag"]:
+    def get_top_tags_chart(cls, limit: int = 50, page: int = 1) -> ListModel["Tag"]:
         """
         Get the top tags chart.
 
@@ -111,10 +112,7 @@ class Tag(BaseModel, ApiMixin):
             bind=Album,
             flatten="album",
             params=dict(
-                method="tag.getTopAlbums",
-                tag=self.name,
-                limit=limit,
-                page=page,
+                method="tag.getTopAlbums", tag=self.name, limit=limit, page=page,
             ),
         )
 
@@ -132,10 +130,7 @@ class Tag(BaseModel, ApiMixin):
             bind=Artist,
             flatten="artist",
             params=dict(
-                method="tag.getTopArtists",
-                tag=self.name,
-                limit=limit,
-                page=page,
+                method="tag.getTopArtists", tag=self.name, limit=limit, page=page,
             ),
         )
 
@@ -153,10 +148,7 @@ class Tag(BaseModel, ApiMixin):
             bind=Track,
             flatten="track",
             params=dict(
-                method="tag.getTopTracks",
-                tag=self.name,
-                limit=limit,
-                page=page,
+                method="tag.getTopTracks", tag=self.name, limit=limit, page=page,
             ),
         )
 

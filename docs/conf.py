@@ -4,9 +4,7 @@
 # This file does only contain a selection of the most common options. For a
 # full list see the documentation:
 # http://www.sphinx-doc.org/en/master/config
-
 # -- Path setup --------------------------------------------------------------
-
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
@@ -14,7 +12,7 @@
 import os
 import sys
 
-from pydrag import version
+from pkg_resources import get_distribution
 
 sys.path.insert(0, os.path.abspath(".."))
 
@@ -22,10 +20,10 @@ sys.path.insert(0, os.path.abspath(".."))
 # -- Project information -----------------------------------------------------
 
 project = "pydrag"
-copyright = "2018, Christodoulos Tsoulloftas"
+copyright = "2020, Christodoulos Tsoulloftas"
 author = "Christodoulos Tsoulloftas"
 
-release = version
+version = release = get_distribution("pydrag").version
 
 
 # -- General configuration ---------------------------------------------------

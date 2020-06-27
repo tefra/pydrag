@@ -1,7 +1,10 @@
 import os
-from unittest import TestCase, mock
+from unittest import mock
+from unittest import TestCase
 
-from pydrag.models.common import Config, RawResponse, ScrobbleTrack
+from pydrag.models.common import Config
+from pydrag.models.common import RawResponse
+from pydrag.models.common import ScrobbleTrack
 from pydrag.utils import md5
 
 
@@ -66,18 +69,18 @@ class ConfigTests(TestCase):
     keys = ["api_key", "api_secret", "username", "password", "session"]
 
     def setUp(self):
-        super(ConfigTests, self).setUp()
+        super().setUp()
         self.config = Config.instance()
         Config._instance = None
         for k in self.keys:
             try:
-                del os.environ["LASTFM_{}".format(k.upper())]
+                del os.environ[f"LASTFM_{k.upper()}"]
             except KeyError:
                 pass
 
     def tearDown(self):
         Config._instance = self.config
-        super(ConfigTests, self).tearDown()
+        super().tearDown()
 
     def test_instance_from_arguments(self):
         config = Config.instance("key")

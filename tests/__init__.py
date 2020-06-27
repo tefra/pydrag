@@ -45,13 +45,13 @@ class MethodTestCase(TestCase):
     def setUp(self):
         self.maxDiff = None
         Config.instance().session = None
-        super(MethodTestCase, self).setUp()
+        super().setUp()
 
     @staticmethod
     def load_fixture(file_name):
-        path = "{}/{}_expected.json".format(fixtures_dir, file_name)
+        path = f"{fixtures_dir}/{file_name}_expected.json"
         try:
-            with open(path, "r") as f:
+            with open(path) as f:
                 return json.load(f)
         except FileNotFoundError:
             return None
@@ -59,7 +59,7 @@ class MethodTestCase(TestCase):
     def assertFixtureEqual(self, file_name, actual):
         expected = self.load_fixture(file_name)
         if expected is None:
-            path = "{}/{}_expected.json".format(fixtures_dir, file_name)
+            path = f"{fixtures_dir}/{file_name}_expected.json"
             with open(path, "w") as f:
                 json.dump(actual, f, indent=4, sort_keys=True)
                 f.write("\n")

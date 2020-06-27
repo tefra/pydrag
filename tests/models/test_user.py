@@ -3,7 +3,8 @@ from datetime import datetime
 from pydrag.constants import Period
 from pydrag.models.common import ListModel
 from pydrag.models.user import User
-from tests import MethodTestCase, fixture
+from tests import fixture
+from tests import MethodTestCase
 
 
 class UserTests(MethodTestCase):
@@ -20,7 +21,7 @@ class UserTests(MethodTestCase):
             registered=1037793040,
         )
         self.maxDiff = None
-        super(UserTests, self).setUp()
+        super().setUp()
 
     def test_registered_date(self):
         expected = datetime(2002, 11, 20, 11, 50, 40)
@@ -53,9 +54,7 @@ class UserTests(MethodTestCase):
         }
         self.assertEqual(expected_params, result.params)
         self.assertIsInstance(result, ListModel)
-        self.assertFixtureEqual(
-            "user/get_friends_with_recent_tracks", result.to_dict()
-        )
+        self.assertFixtureEqual("user/get_friends_with_recent_tracks", result.to_dict())
 
     @fixture.use_cassette(path="user/get_info")
     def test_get_info(self):
@@ -93,9 +92,7 @@ class UserTests(MethodTestCase):
         self.assertEqual(expected_params, result.params)
 
         self.assertIsInstance(result, ListModel)
-        self.assertFixtureEqual(
-            "user/get_personal_tags_track", result.to_dict()
-        )
+        self.assertFixtureEqual("user/get_personal_tags_track", result.to_dict())
 
     @fixture.use_cassette(path="user/get_personal_tags_album")
     def test_get_personal_tags_album(self):
@@ -112,9 +109,7 @@ class UserTests(MethodTestCase):
         self.assertEqual(expected_params, result.params)
         #
         self.assertIsInstance(result, ListModel)
-        self.assertFixtureEqual(
-            "user/get_personal_tags_album", result.to_dict()
-        )
+        self.assertFixtureEqual("user/get_personal_tags_album", result.to_dict())
 
     @fixture.use_cassette(path="user/get_personal_tags_artist")
     def test_get_personal_tags_artist(self):
@@ -130,9 +125,7 @@ class UserTests(MethodTestCase):
         self.assertEqual(expected_params, result.params)
 
         self.assertIsInstance(result, ListModel)
-        self.assertFixtureEqual(
-            "user/get_personal_tags_artist", result.to_dict()
-        )
+        self.assertFixtureEqual("user/get_personal_tags_artist", result.to_dict())
 
     def test_get_personal_tags_invalid(self):
         with self.assertRaises(ValueError) as cm:
@@ -247,9 +240,7 @@ class UserTests(MethodTestCase):
         self.assertEqual(expected_params, result.params)
 
         self.assertIsInstance(result, ListModel)
-        self.assertFixtureEqual(
-            "user/get_weekly_album_chart", result.to_dict()
-        )
+        self.assertFixtureEqual("user/get_weekly_album_chart", result.to_dict())
 
     @fixture.use_cassette(path="user/get_weekly_artist_chart")
     def test_get_weekly_artist_chart(self):
@@ -263,9 +254,7 @@ class UserTests(MethodTestCase):
         self.assertEqual(expected_params, result.params)
 
         self.assertIsInstance(result, ListModel)
-        self.assertFixtureEqual(
-            "user/get_weekly_artist_chart", result.to_dict()
-        )
+        self.assertFixtureEqual("user/get_weekly_artist_chart", result.to_dict())
 
     @fixture.use_cassette(path="user/get_weekly_chart_list")
     def test_get_weekly_chart_list(self):
@@ -288,9 +277,7 @@ class UserTests(MethodTestCase):
         self.assertEqual(expected_params, result.params)
 
         self.assertIsInstance(result, ListModel)
-        self.assertFixtureEqual(
-            "user/get_weekly_track_chart", result.to_dict()
-        )
+        self.assertFixtureEqual("user/get_weekly_track_chart", result.to_dict())
 
     @fixture.use_cassette(path="library/get_artists")
     def test_get_artists(self):

@@ -1,18 +1,18 @@
 from datetime import datetime
-from typing import Dict, List, Optional
+from typing import Dict
+from typing import List
+from typing import Optional
 
 from attr import dataclass
 
 from pydrag.models.album import Album
 from pydrag.models.artist import Artist
-from pydrag.models.common import (
-    BaseModel,
-    Image,
-    ListModel,
-    RawResponse,
-    ScrobbleTrack,
-    Wiki,
-)
+from pydrag.models.common import BaseModel
+from pydrag.models.common import Image
+from pydrag.models.common import ListModel
+from pydrag.models.common import RawResponse
+from pydrag.models.common import ScrobbleTrack
+from pydrag.models.common import Wiki
 from pydrag.models.tag import Tag
 from pydrag.services import ApiMixin
 
@@ -82,17 +82,13 @@ class Track(ApiMixin, BaseModel):
             data["artist"] = dict(name=data["artist"])
 
         data.update(
-            dict(
-                name=str(data["name"]), artist=Artist.from_dict(data["artist"])
-            )
+            dict(name=str(data["name"]), artist=Artist.from_dict(data["artist"]))
         )
 
         if "image" in data:
             data["image"] = list(map(Image.from_dict, data["image"]))
         if "top_tags" in data:
-            data["top_tags"] = list(
-                map(Tag.from_dict, data["top_tags"]["tag"])
-            )
+            data["top_tags"] = list(map(Tag.from_dict, data["top_tags"]["tag"]))
         if "wiki" in data:
             data["wiki"] = Wiki.from_dict(data["wiki"])
         if "album" in data:
@@ -105,7 +101,7 @@ class Track(ApiMixin, BaseModel):
                 date.pop("text")
                 data.update(date)
 
-        return super(Track, cls).from_dict(data)
+        return super().from_dict(data)
 
     @classmethod
     def find(
@@ -117,7 +113,8 @@ class Track(ApiMixin, BaseModel):
 
         :param artist: The artist name
         :param track: The track name
-        :param user: The username for the context of the request. If supplied, response will include the user's playcount for this track
+        :param user: The username for the context of the request. If supplied, response
+            will include the user's playcount for this track
         :param lang: The language to return the biography in, ISO 639
         :rtype: :class:`~pydrag.models.track.Track`
         """
@@ -134,14 +131,13 @@ class Track(ApiMixin, BaseModel):
         )
 
     @classmethod
-    def find_by_mbid(
-        cls, mbid: str, user: str = None, lang: str = "en"
-    ) -> "Track":
+    def find_by_mbid(cls, mbid: str, user: str = None, lang: str = "en") -> "Track":
         """
         Get the metadata for a track.
 
         :param mbid: The musicbrainz id for the track
-        :param user: The username for the context of the request. If supplied, response will include the user's playcount for this track
+        :param user: The username for the context of the request. If supplied, response
+            will include the user's playcount for this track
         :param lang: The language to return the biography in, ISO 639
         :rtype: :class:`~pydrag.models.track.Track`
         """
@@ -162,7 +158,8 @@ class Track(ApiMixin, BaseModel):
         instance likes charts, tags etc, This is a quick method to refresh our
         object with complete data from the find methods.
 
-        :param user: The username for the context of the request. If supplied, response will include the user's playcount and loved status
+        :param user: The username for the context of the request. If supplied, response
+            will include the user's playcount and loved status
         :param lang: The language to return the biography in, ISO-639
         :rtype: :class:`~pydrag.models.artist.Track`
         """
@@ -181,29 +178,24 @@ class Track(ApiMixin, BaseModel):
         """
         return cls.retrieve(
             bind=Track,
-            params=dict(
-                method="track.getCorrection", artist=artist, track=track
-            ),
+            params=dict(method="track.getCorrection", artist=artist, track=track),
         )
 
     @classmethod
-    def search(
-        cls, track: str, limit: int = 50, page: int = 1
-    ) -> ListModel["Track"]:
+    def search(cls, track: str, limit: int = 50, page: int = 1) -> ListModel["Track"]:
         """
         Search for an track by name. Returns track matches sorted by relevance.
 
         :param track: The track name.
         :param page: The page number to fetch.
         :param limit: The number of results to fetch per page.
-        :rtype: :class:`pydrag.models.common.ListModel` of :class:`~pydrag.models.track.Track`
+        :rtype: :class:`pydrag.models.common.ListModel` of
+            :class:`~pydrag.models.track.Track`
         """
         return cls.retrieve(
             bind=Track,
             flatten="tracks.track",
-            params=dict(
-                method="track.search", limit=limit, page=page, track=track
-            ),
+            params=dict(method="track.search", limit=limit, page=page, track=track),
         )
 
     @classmethod
@@ -214,29 +206,26 @@ class Track(ApiMixin, BaseModel):
         :param country: The country to fetch the top tracks.
         :param limit: The number of results to fetch per page.
         :param page: The page number to fetch.
-        :rtype: :class:`pydrag.models.common.ListModel` of :class:`~pydrag.models.track.Track`
+        :rtype: :class:`pydrag.models.common.ListModel` of
+            :class:`~pydrag.models.track.Track`
         """
         return cls.retrieve(
             bind=Track,
             flatten="track",
             params=dict(
-                method="geo.getTopTracks",
-                country=country,
-                limit=limit,
-                page=page,
+                method="geo.getTopTracks", country=country, limit=limit, page=page,
             ),
         )
 
     @classmethod
-    def get_top_tracks_chart(
-        cls, limit: int = 50, page: int = 1
-    ) -> ListModel["Track"]:
+    def get_top_tracks_chart(cls, limit: int = 50, page: int = 1) -> ListModel["Track"]:
         """
         Get the top tracks chart.
 
         :param limit: The number of results to fetch per page.
         :param page: The page number to fetch.
-        :rtype: :class:`pydrag.models.common.ListModel` of :class:`~pydrag.models.track.Track`
+        :rtype: :class:`pydrag.models.common.ListModel` of
+            :class:`~pydrag.models.track.Track`
         """
         return cls.retrieve(
             bind=Track,
@@ -248,16 +237,15 @@ class Track(ApiMixin, BaseModel):
         """
         Tag an track with one or more user supplied tags.
 
-        :param tags: A list of user supplied tags to apply to this track. Accepts a maximum of 10 tags.
+        :param tags: A list of user supplied tags to apply to this track. Accepts a
+            maximum of 10 tags.
         :type tags: :class:`list` of :class:`str`
         :rtype: :class:`~models.common.RawResponse`
         """
         return self.submit(
             bind=RawResponse,
             stateful=True,
-            params=dict(
-                method="track.addTags", track=self.name, tags=",".join(tags)
-            ),
+            params=dict(method="track.addTags", track=self.name, tags=",".join(tags)),
         )
 
     def remove_tag(self, tag: str) -> RawResponse:
@@ -278,7 +266,8 @@ class Track(ApiMixin, BaseModel):
         Get all the tracks similar to this track.
 
         :param limit: Limit the number of similar tracks returned
-        :rtype: :class:`pydrag.models.common.ListModel` of :class:`~pydrag.models.track.Track`
+        :rtype: :class:`pydrag.models.common.ListModel` of
+            :class:`~pydrag.models.track.Track`
         """
         return self.retrieve(
             bind=Track,
@@ -298,7 +287,8 @@ class Track(ApiMixin, BaseModel):
         Get the tags applied by an individual user to an track on Last.fm.
 
         :param user: The username for the context of the request.
-        :rtype: :class:`pydrag.models.common.ListModel` of :class:`~pydrag.models.tag.Tag`
+        :rtype: :class:`pydrag.models.common.ListModel` of
+            :class:`~pydrag.models.tag.Tag`
         """
         return self.retrieve(
             bind=Tag,
@@ -317,7 +307,8 @@ class Track(ApiMixin, BaseModel):
         """
         Get the top tags for an track on Last.fm, ordered by popularity.
 
-        :rtype: :class:`pydrag.models.common.ListModel` of :class:`~pydrag.models.tag.Tag`
+        :rtype: :class:`pydrag.models.common.ListModel` of
+            :class:`~pydrag.models.tag.Tag`
         """
         return self.retrieve(
             bind=Tag,
@@ -340,9 +331,7 @@ class Track(ApiMixin, BaseModel):
         return self.submit(
             bind=RawResponse,
             stateful=True,
-            params=dict(
-                method="track.love", artist=self.artist.name, track=self.name
-            ),
+            params=dict(method="track.love", artist=self.artist.name, track=self.name),
         )
 
     def unlove(self) -> RawResponse:
@@ -370,12 +359,13 @@ class Track(ApiMixin, BaseModel):
 
         :param tracks: The tracks to scrobble
         :param batch_size: The number of tracks to submit per cycle
-        :rtype: :class:`pydrag.models.common.ListModel` of :class:`~pydrag.models.common.ScrobbleTrack`
+        :rtype: :class:`pydrag.models.common.ListModel` of
+            :class:`~pydrag.models.common.ScrobbleTrack`
         """
 
-        def divide_chunks(l, n):
-            for i in range(0, len(l), n):
-                yield l[i : i + n]
+        def divide_chunks(items, n):
+            for i in range(0, len(items), n):
+                yield items[i : i + n]
 
         data: List[ScrobbleTrack] = []
         params = []
@@ -389,27 +379,23 @@ class Track(ApiMixin, BaseModel):
         return result
 
     @classmethod
-    def _scrobble(
-        cls, tracks: List[ScrobbleTrack]
-    ) -> ListModel[ScrobbleTrack]:
+    def _scrobble(cls, tracks: List[ScrobbleTrack]) -> ListModel[ScrobbleTrack]:
         """
         :param tracks: A list fo tracks to scrobble
         :type tracks: :class:`list` of :class:`~pydrag.models.common.ScrobbleTrack`
-        :rtype: :class:`pydrag.models.common.ListModel` of :class:`~pydrag.models.common.ScrobbleTrack`
+        :rtype: :class:`pydrag.models.common.ListModel` of
+            :class:`~pydrag.models.common.ScrobbleTrack`
         """
         params = dict(method="track.scrobble")
         params.update(
             {
-                "{}[{}]".format(field, idx): value
+                f"{field}[{idx}]": value
                 for idx, track in enumerate(tracks)
                 for field, value in track.to_api_dict().items()
             }
         )
         return cls.submit(
-            bind=ScrobbleTrack,
-            flatten="scrobble",
-            stateful=True,
-            params=params,
+            bind=ScrobbleTrack, flatten="scrobble", stateful=True, params=params,
         )
 
     @classmethod

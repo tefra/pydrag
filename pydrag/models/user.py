@@ -1,12 +1,18 @@
 from datetime import datetime
-from typing import Dict, List, Optional, Union
+from typing import Dict
+from typing import List
+from typing import Optional
+from typing import Union
 
 from attr import dataclass
 
 from pydrag.constants import Period
 from pydrag.models.album import Album
 from pydrag.models.artist import Artist
-from pydrag.models.common import BaseModel, Chart, Image, ListModel
+from pydrag.models.common import BaseModel
+from pydrag.models.common import Chart
+from pydrag.models.common import Image
+from pydrag.models.common import ListModel
 from pydrag.models.tag import Tag
 from pydrag.models.track import Track
 from pydrag.services import ApiMixin
@@ -60,7 +66,7 @@ class User(BaseModel, ApiMixin):
         )
         if "recent_track" in data:
             data["recent_track"] = Track.from_dict(data["recent_track"])
-        return super(User, cls).from_dict(data)
+        return super().from_dict(data)
 
     @classmethod
     def find(cls, username: str) -> "User":
@@ -80,25 +86,19 @@ class User(BaseModel, ApiMixin):
 
         :param page: The page number to fetch.
         :param limit: The number of results to fetch per page.
-        :rtype: :class:`~models.common.ListModel` of :class:`~pydrag.models.artist.Artist`
+        :rtype: :class:`~models.common.ListModel` of
+            :class:`~pydrag.models.artist.Artist`
         """
         return self.retrieve(
             bind=Artist,
             flatten="artist",
             params=dict(
-                method="library.getArtists",
-                user=self.name,
-                page=page,
-                limit=limit,
+                method="library.getArtists", user=self.name, page=page, limit=limit,
             ),
         )
 
     def get_artist_tracks(
-        self,
-        artist: str,
-        from_date: str = None,
-        to_date: str = None,
-        page: int = 1,
+        self, artist: str, from_date: str = None, to_date: str = None, page: int = 1,
     ) -> ListModel[Track]:
         """
         Get a list of tracks by a given artist scrobbled by this user,
@@ -148,9 +148,7 @@ class User(BaseModel, ApiMixin):
             ),
         )
 
-    def get_loved_tracks(
-        self, limit: int = 50, page: int = 1
-    ) -> ListModel[Track]:
+    def get_loved_tracks(self, limit: int = 50, page: int = 1) -> ListModel[Track]:
         """
         Get the user's loved tracks list.
 
@@ -162,10 +160,7 @@ class User(BaseModel, ApiMixin):
             bind=Track,
             flatten="track",
             params=dict(
-                method="user.getLovedTracks",
-                user=self.name,
-                limit=limit,
-                page=page,
+                method="user.getLovedTracks", user=self.name, limit=limit, page=page,
             ),
         )
 
@@ -179,7 +174,9 @@ class User(BaseModel, ApiMixin):
         :param category: The type of items which have been tagged
         :param page: The page number to fetch.
         :param limit: The number of results to fetch per page.
-        :rtype: :class:`~models.common.ListModel` of :class:`~pydrag.models.track.Track`  or :class:`~pydrag.models.artist.Artist` or :class:`~pydrag.models.album.Album`
+        :rtype: :class:`~models.common.ListModel` of :class:`~pydrag.models.track.Track`
+            or :class:`~pydrag.models.artist.Artist` or
+            :class:`~pydrag.models.album.Album`
         """
 
         valid_categories = dict(artist=Artist, album=Album, track=Track)
@@ -212,8 +209,12 @@ class User(BaseModel, ApiMixin):
         the currently playing track with the nowplaying="true" attribute if the
         user is currently listening.
 
-        :param from_date: Beginning timestamp of a range - only display scrobbles after this time, in UNIX timestamp format (integer number of seconds since 00:00:00, January 1st 1970 UTC). This must be in the UTC time zone.
-        :param to_date: End timestamp of a range - only display scrobbles before this time, in UNIX timestamp format (integer number of seconds since 00:00:00, January 1st 1970 UTC). This must be in the UTC time zone.
+        :param from_date: Beginning timestamp of a range - only display scrobbles after
+            this time, in UNIX timestamp format (integer number of seconds since
+            00:00:00, January 1st 1970 UTC). This must be in the UTC time zone.
+        :param to_date: End timestamp of a range - only display scrobbles before this
+            time, in UNIX timestamp format (integer number of seconds since 00:00:00,
+            January 1st 1970 UTC). This must be in the UTC time zone.
         :param limit: The number of results to fetch per page.
         :param page: The page number to fetch.
         :rtype: :class:`~models.common.ListModel` of :class:`~pydrag.models.track.Track`
@@ -242,7 +243,8 @@ class User(BaseModel, ApiMixin):
         :param Period period:
         :param limit: The number of results to fetch per page.
         :param page: The page number to fetch.
-        :rtype: :class:`~pydrag.models.common.ListModel` of :class:`~pydrag.models.album.Album`
+        :rtype: :class:`~pydrag.models.common.ListModel` of
+            :class:`~pydrag.models.album.Album`
         :rtype: List[Album]
         """
         if not isinstance(period, Period):
@@ -270,7 +272,8 @@ class User(BaseModel, ApiMixin):
         :param Period period:
         :param limit: The number of results to fetch per page.
         :param page: The page number to fetch.
-        :rtype: :class:`~models.common.ListModel` of :class:`~pydrag.models.artist.Artist`
+        :rtype: :class:`~models.common.ListModel` of
+            :class:`~pydrag.models.artist.Artist`
         """
         if not isinstance(period, Period):
             raise ValueError("Invalid period")
@@ -292,7 +295,8 @@ class User(BaseModel, ApiMixin):
         Get the top tags used by this user.
 
         :param limit: Limit the number of tags returned
-        :rtype: :class:`~pydrag.models.common.ListModel` of :class:`~pydrag.models.tag.Tag`
+        :rtype: :class:`~pydrag.models.common.ListModel` of
+            :class:`~pydrag.models.tag.Tag`
         :rtype: List[Tag]
         """
         return self.retrieve(
@@ -358,7 +362,8 @@ class User(BaseModel, ApiMixin):
 
         :param from_date:  The date at which the chart should start from.
         :param to_date: The date at which the chart should end on.
-        :rtype: :class:`~models.common.ListModel` of :class:`~pydrag.models.artist.Artist`
+        :rtype: :class:`~models.common.ListModel` of
+            :class:`~pydrag.models.artist.Artist`
         """
         return self.retrieve(
             bind=Artist,
@@ -377,7 +382,8 @@ class User(BaseModel, ApiMixin):
         date range is supplied, it will return the most recent artist chart for
         this user.
 
-        :rtype: :class:`~models.common.ListModel` of :class:`~pydrag.models.common.Chart`
+        :rtype: :class:`~models.common.ListModel` of
+            :class:`~pydrag.models.common.Chart`
         """
         return self.retrieve(
             bind=Chart,

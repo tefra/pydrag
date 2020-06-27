@@ -1,22 +1,23 @@
-from datetime import datetime, timedelta, timezone
+from datetime import datetime
+from datetime import timedelta
+from datetime import timezone
 from unittest import mock
 
 from pydrag.exceptions import ApiError
 from pydrag.models.artist import Artist
-from pydrag.models.common import (
-    BaseModel,
-    ListModel,
-    RawResponse,
-    ScrobbleTrack,
-)
+from pydrag.models.common import BaseModel
+from pydrag.models.common import ListModel
+from pydrag.models.common import RawResponse
+from pydrag.models.common import ScrobbleTrack
 from pydrag.models.track import Track
-from tests import MethodTestCase, fixture
+from tests import fixture
+from tests import MethodTestCase
 
 
 class TrackTests(MethodTestCase):
     def setUp(self):
         self.track = Track(artist=Artist(name="AC / DC"), name="Hells Bell")
-        super(TrackTests, self).setUp()
+        super().setUp()
 
     def test_date_property(self):
         self.assertIsNone(self.track.date)
@@ -236,12 +237,7 @@ class TrackTests(MethodTestCase):
 
         tracks = []
         date = datetime(
-            year=2018,
-            month=11,
-            day=10,
-            hour=21,
-            minute=30,
-            tzinfo=timezone.utc,
+            year=2018, month=11, day=10, hour=21, minute=30, tzinfo=timezone.utc,
         )
 
         for artist, track in entries:
@@ -286,9 +282,7 @@ class TrackTests(MethodTestCase):
 
     @fixture.use_cassette(path="geo/get_top_tracks")
     def test_get_top_tracks_by_country(self):
-        result = Track.get_top_tracks_by_country(
-            country="greece", page=1, limit=10
-        )
+        result = Track.get_top_tracks_by_country(country="greece", page=1, limit=10)
         expected_params = {
             "country": "greece",
             "limit": 10,

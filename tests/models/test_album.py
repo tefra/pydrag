@@ -1,8 +1,10 @@
 from unittest import mock
 
 from pydrag.models.album import Album
-from pydrag.models.common import ListModel, RawResponse
-from tests import MethodTestCase, fixture
+from pydrag.models.common import ListModel
+from pydrag.models.common import RawResponse
+from tests import fixture
+from tests import MethodTestCase
 
 
 class AlbumTests(MethodTestCase):
@@ -14,7 +16,7 @@ class AlbumTests(MethodTestCase):
                 mbid="6defd963-fe91-4550-b18e-82c685603c2b",
             )
         )
-        super(AlbumTests, self).setUp()
+        super().setUp()
 
     @fixture.use_cassette(path="album/add_tags")
     def test_add_tags(self):
