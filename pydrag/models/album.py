@@ -1,9 +1,15 @@
-from typing import Dict, List, Optional
+from typing import Dict
+from typing import List
+from typing import Optional
 
 from attr import dataclass
 
 from pydrag.models.artist import Artist
-from pydrag.models.common import BaseModel, Image, ListModel, RawResponse, Wiki
+from pydrag.models.common import BaseModel
+from pydrag.models.common import Image
+from pydrag.models.common import ListModel
+from pydrag.models.common import RawResponse
+from pydrag.models.common import Wiki
 from pydrag.models.tag import Tag
 from pydrag.services import ApiMixin
 
@@ -54,30 +60,25 @@ class Album(BaseModel, ApiMixin):
         if "tracks" in data:
             from pydrag.models.track import Track
 
-            data["tracks"] = list(
-                map(Track.from_dict, data["tracks"]["track"])
-            )
+            data["tracks"] = list(map(Track.from_dict, data["tracks"]["track"]))
         if "wiki" in data:
             data["wiki"] = Wiki.from_dict(data["wiki"])
         if "attr" in data:
             data.update(data.pop("attr"))
 
-        return super(Album, cls).from_dict(data)
+        return super().from_dict(data)
 
     @classmethod
     def find(
-        cls,
-        artist: str,
-        album: str,
-        user: Optional[str] = None,
-        lang: str = "en",
+        cls, artist: str, album: str, user: Optional[str] = None, lang: str = "en",
     ) -> "Album":
         """
         Get the metadata and tracklist for an album on Last.fm.
 
         :param album: The album name to find.
         :param artist: The album artist to find.
-        :param user: The username for the context of the request. If supplied, response will include the user's playcount for this album
+        :param user: The username for the context of the request. If supplied, response
+            will include the user's playcount for this album
         :param lang: The language to return the biography in, ISO-639
         :rtype: :class:`~pydrag.models.album.Album`
         """
@@ -95,14 +96,13 @@ class Album(BaseModel, ApiMixin):
         )
 
     @classmethod
-    def find_by_mbid(
-        cls, mbid: str, user: str = None, lang: str = "en"
-    ) -> "Album":
+    def find_by_mbid(cls, mbid: str, user: str = None, lang: str = "en") -> "Album":
         """
         Get the metadata and tracklist for an album on Last.fm.
 
         :param mbid: The musicbrainz id for the album.
-        :param user: The username for the context of the request. If supplied, response will include the user's playcount for this album
+        :param user: The username for the context of the request. If supplied, response
+            will include the user's playcount for this album
         :param lang: The language to return the biography in, ISO-639
         :rtype: :class:`~pydrag.models.album.Album`
         """
@@ -124,7 +124,8 @@ class Album(BaseModel, ApiMixin):
         instance likes charts, tags etc, This is a quick method to refresh our
         object with complete data from the find methods.
 
-        :param user: The username for the context of the request. If supplied, response will include the user's playcount
+        :param user: The username for the context of the request. If supplied, response
+            will include the user's playcount
         :param lang: The language to return the biography in, ISO-639
         :rtype: :class:`~pydrag.models.artist.Album`
         """
@@ -137,31 +138,29 @@ class Album(BaseModel, ApiMixin):
             return self.find(self.artist.name, self.name, user, lang)
 
     @classmethod
-    def search(
-        cls, album: str, limit: int = 50, page: int = 1
-    ) -> ListModel["Album"]:
+    def search(cls, album: str, limit: int = 50, page: int = 1) -> ListModel["Album"]:
         """
         Search for an album by name.Returns album matches sorted by relevance.
 
         :param album: The album name to search.
         :param page: The page number to fetch.
         :param limit: The number of results to fetch per page.
-        :rtype: :class:`pydrag.models.common.ListModel` of :class:`~pydrag.models.album.Album`
+        :rtype: :class:`pydrag.models.common.ListModel` of
+            :class:`~pydrag.models.album.Album`
         """
 
         return cls.retrieve(
             bind=Album,
             flatten="albums.album",
-            params=dict(
-                method="album.search", limit=limit, page=page, album=album
-            ),
+            params=dict(method="album.search", limit=limit, page=page, album=album),
         )
 
     def add_tags(self, tags: List[str]) -> RawResponse:
         """
         Tag an album using a list of user supplied tags.
 
-        :param tags: A list of user supplied tags to apply to this album. Accepts a maximum of 10 tags.
+        :param tags: A list of user supplied tags to apply to this album. Accepts a
+            maximum of 10 tags.
         :rtype: :class:`~models.common.RawResponse`
         """
         if self.artist is None:
@@ -204,7 +203,8 @@ class Album(BaseModel, ApiMixin):
         Get the tags applied by an individual user to an album on Last.fm.
 
         :param user: The username for the context of the request.
-        :rtype: :class:`pydrag.models.common.ListModel` of :class:`~pydrag.models.tag.Tag`
+        :rtype: :class:`pydrag.models.common.ListModel` of
+            :class:`~pydrag.models.tag.Tag`
         """
         if self.artist is None:
             raise ValueError("Missing artist name!")
@@ -226,7 +226,8 @@ class Album(BaseModel, ApiMixin):
         """
         Get the top tags for an album on Last.fm, ordered by popularity.
 
-        :rtype: :class:`pydrag.models.common.ListModel` of :class:`~pydrag.models.tag.Tag`
+        :rtype: :class:`pydrag.models.common.ListModel` of
+            :class:`~pydrag.models.tag.Tag`
         """
         if self.artist is None:
             raise ValueError("Missing artist name!")

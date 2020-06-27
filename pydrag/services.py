@@ -1,10 +1,14 @@
-from typing import Dict, Optional, Type
+from typing import Dict
+from typing import Optional
+from typing import Type
 
 from requests import request
 
 from pydrag import utils
 from pydrag.exceptions import ApiError
-from pydrag.models.common import BaseModel, Config, ListModel
+from pydrag.models.common import BaseModel
+from pydrag.models.common import Config
+from pydrag.models.common import ListModel
 from pydrag.utils import get_nested
 
 
@@ -106,17 +110,15 @@ class ApiMixin:
         :param bool authenticate: Perform an authentication request
         :rtype: :class:`~pydrag.models.common.BaseModel`
         """
-        data: Dict = dict()
-        query: Dict = dict()
+        data: Dict = {}
+        query: Dict = {}
         if method == "GET":
             query = cls.prepare_params(params, sign, stateful, authenticate)
         else:
             data = cls.prepare_params(params, sign, stateful, authenticate)
 
         cfg = Config.instance()
-        response = request(
-            method=method, url=cfg.api_url, data=data, params=query
-        )
+        response = request(method=method, url=cfg.api_url, data=data, params=query)
         response.raise_for_status()
         body = response.json(object_pairs_hook=pythonic_variables)
         cls.raise_for_error(body)
@@ -142,17 +144,15 @@ class ApiMixin:
         :rtype: Dict
         """
         cfg = Config.instance()
-        params = dict(
-            (k, str(int(v is True) if isinstance(v, bool) else v))
+        params = {
+            k: str(int(v is True) if isinstance(v, bool) else v)
             for k, v in params.items()
             if v is not None
-        )
+        }
         params.update(dict(format="json", api_key=cfg.api_key))
 
         if authenticate:
-            params.update(
-                dict(username=cfg.username, authToken=cfg.auth_token)
-            )
+            params.update(dict(username=cfg.username, authToken=cfg.auth_token))
 
         if stateful:
             params.update(dict(sk=cls.get_session().key))
@@ -164,10 +164,7 @@ class ApiMixin:
 
     @classmethod
     def bind_data(
-        cls,
-        bind: Type[BaseModel],
-        body: Optional[Dict],
-        flatten: Optional[str] = None,
+        cls, bind: Type[BaseModel], body: Optional[Dict], flatten: Optional[str] = None,
     ):
         """
         Construct a BaseModel from the response body and the flatten directive.

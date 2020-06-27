@@ -1,11 +1,22 @@
 import os
 import time
 from collections import UserList
-from typing import Dict, List, Optional, Sequence, Type, TypeVar, Union
+from typing import Dict
+from typing import List
+from typing import Optional
+from typing import Sequence
+from typing import Type
+from typing import TypeVar
+from typing import Union
 
-from attr import Factory, asdict, attrib, dataclass, fields
+from attr import asdict
+from attr import attrib
+from attr import dataclass
+from attr import Factory
+from attr import fields
 
-from pydrag.utils import md5, to_camel_case
+from pydrag.utils import md5
+from pydrag.utils import to_camel_case
 
 T = TypeVar("T", bound="BaseModel")
 
@@ -109,7 +120,7 @@ class ListModel(UserList, Sequence[T], BaseModel):
             data["page"] = int(data["offset"]) / int(data["limit"])
 
         data.pop("offset", None)
-        return super(ListModel, cls).from_dict(data)
+        return super().from_dict(data)
 
 
 @dataclass
@@ -178,10 +189,7 @@ class Config:
                 params = {k: values[k] for k in keys}
             else:
                 params = {
-                    k: os.getenv(
-                        "LASTFM_{}".format(k.upper()),
-                        "" if k == "api_key" else None,
-                    )
+                    k: os.getenv(f"LASTFM_{k.upper()}", "" if k == "api_key" else None,)
                     for k in keys
                 }
 
@@ -253,9 +261,7 @@ class ScrobbleTrack(BaseModel):
     def from_dict(cls, data: Dict):
         data.update(
             {
-                k: data[k]["text"]
-                if data.get(k, {}).get("text", "") != ""
-                else None
+                k: data[k]["text"] if data.get(k, {}).get("text", "") != "" else None
                 for k in ["album", "artist", "track", "album_artist"]
             }
         )

@@ -1,8 +1,10 @@
 from pydrag.models.album import Album
 from pydrag.models.artist import Artist
-from pydrag.models.auth import AuthSession, AuthToken
+from pydrag.models.auth import AuthSession
+from pydrag.models.auth import AuthToken
 from pydrag.models.common import Config
-from pydrag.models.track import Tag, Track
+from pydrag.models.track import Tag
+from pydrag.models.track import Track
 from pydrag.models.user import User
 from pydrag.version import version
 

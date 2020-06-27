@@ -1,15 +1,19 @@
 Authentication
 ==============
 
-Apart from your last.fm api key and secret you also need to be authenticated if you wish to perform write operations like scrobbling, adding/removing tags.
+Apart from your last.fm api key and secret you also need to
+be authenticated if you wish to perform write operations like
+scrobbling, adding/removing tags.
 
 
 Mobile Applications
 -------------------
 
-This is what Last.fm calls simple authentication with credentials, it's indented to be used with non-browser application.
+This is what Last.fm calls simple authentication with credentials,
+it's indented to be used with non-browser application.
 
-Last.fm states that ``Session keys have an infinite lifetime by default``, so generate one and keep using it.
+Last.fm states that ``Session keys have an infinite lifetime by default``,
+so generate one and keep using it.
 
 
 .. code-block :: python
@@ -61,10 +65,12 @@ Step 3:  Retrieve a session with the authorized token
 Web Application
 ---------------
 
-This method is very similar to the above but a lot simpler and makes more sense to me!
+This method is very similar to the above but a lot simpler and makes more
+sense to me!
 
 
-Step 1: Send the user to the last.fm site to authorize your application and provide a callback url which will include the authorized token for you!
+Step 1: Send the user to the last.fm site to authorize your application
+and provide a callback url which will include the authorized token for you!
 
 .. literalinclude:: /examples/web/app.py
     :linenos:

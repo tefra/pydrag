@@ -94,7 +94,8 @@ Tracks Tagging
 Update Now Playing
 ------------------
 
-The response contains various validation messages which don't make much sense...
+The response contains various validation messages which don't
+make much sense...
 
 .. code-block :: python
 
@@ -108,7 +109,9 @@ The response contains various validation messages which don't make much sense...
 Scrobble Tracks
 ----------------
 
-Last.fm has a limit on how many tracks you can scrobble at once, pydrag allows you to take control of the batch size but internally it will max out to 50 tracks per batch.
+Last.fm has a limit on how many tracks you can scrobble at once,
+pydrag allows you to take control of the batch size but internally
+it will max out to 50 tracks per batch.
 
 
 .. code-block :: python

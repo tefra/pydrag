@@ -1,12 +1,13 @@
 from pydrag.models.common import ListModel
 from pydrag.models.tag import Tag
-from tests import MethodTestCase, fixture
+from tests import fixture
+from tests import MethodTestCase
 
 
 class TagTests(MethodTestCase):
     def setUp(self):
         self.tag = Tag("rap")
-        super(TagTests, self).setUp()
+        super().setUp()
 
     @fixture.use_cassette(path="tag/get_info")
     def test_find(self):

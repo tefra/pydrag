@@ -2,29 +2,29 @@ pydrag
 ======
 
 
-.. image:: https://travis-ci.org/tefra/pydrag.svg?branch=master
-        :target: https://travis-ci.org/tefra/pydrag
+.. image:: https://travis-ci.com/tefra/pydrag.svg?branch=master
+    :target: https://travis-ci.com/tefra/pydrag
 
 .. image:: https://readthedocs.org/projects/pydrag/badge
     :target: https://pydrag.readthedocs.io/en/latest
 
 .. image:: https://codecov.io/gh/tefra/pydrag/branch/master/graph/badge.svg
-        :target: https://codecov.io/gh/tefra/pydrag
+    :target: https://codecov.io/gh/tefra/pydrag
 
 .. image:: https://img.shields.io/badge/code%20style-black-000000.svg
-        :target: https://github.com/ambv/black
+    :target: https://github.com/ambv/black
 
 .. image:: https://img.shields.io/github/languages/top/tefra/pydrag.svg
-        :target: https://pydrag.readthedocs.io/
+    :target: https://pydrag.readthedocs.io/
 
-.. image:: https://api.codacy.com/project/badge/Grade/502de74e87c64d6480749846b161fd62
-   :target: https://www.codacy.com/app/tefra/pydrag?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=tefra/pydrag&amp;utm_campaign=Badge_Grade
+.. image:: https://www.codefactor.io/repository/github/tefra/pydrag/badge
+   :target: https://www.codefactor.io/repository/github/tefra/pydrag
 
 .. image:: https://img.shields.io/pypi/pyversions/pydrag.svg
-        :target: https://pypi.org/pypi/pydrag/
+    :target: https://pypi.org/pypi/pydrag/
 
 .. image:: https://img.shields.io/pypi/v/pydrag.svg
-        :target: https://pypi.org/pypi/pydrag/
+    :target: https://pypi.org/pypi/pydrag/
 
 ----
 
@@ -92,11 +92,14 @@ Use you favorite tool to create a python >= 3.6 virtual environment
    $ pytest
    $ tox
 
-pydrag uses `vcrpy <https://vcrpy.readthedocs.io/>`_ library to record and replay last.fm responses for its unit tests and `python-dotenv <https://pypi.org/project/python-dotenv/>`_ to auto-configure itself.
+pydrag uses `vcrpy <https://vcrpy.readthedocs.io/>`_ library to record and replay
+last.fm responses for its unit tests and
+`python-dotenv <https://pypi.org/project/python-dotenv/>`_ to auto-configure itself.
 
 All sensitive information like keys and credentials are automatically censored.
 
-So when it's necessary to record a new response it's super useful to have a .env file with your configuration!
+So when it's necessary to record a new response it's super useful to have a
+.env file with your configuration!
 
 .. code-block:: ini
 

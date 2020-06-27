@@ -1,6 +1,7 @@
 from unittest import TestCase
 
-from pydrag.utils import md5, to_camel_case
+from pydrag.utils import md5
+from pydrag.utils import to_camel_case
 
 
 class UtilTests(TestCase):

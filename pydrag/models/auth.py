@@ -1,6 +1,7 @@
 from attr import dataclass
 
-from pydrag.models.common import BaseModel, Config
+from pydrag.models.common import BaseModel
+from pydrag.models.common import Config
 from pydrag.services import ApiMixin
 
 
@@ -75,6 +76,4 @@ class AuthToken(BaseModel, ApiMixin):
         :rtype: :class:`~pydrag.models.auth.AuthToken`
         """
 
-        return cls.retrieve(
-            bind=AuthToken, params=dict(method="auth.getToken")
-        )
+        return cls.retrieve(bind=AuthToken, params=dict(method="auth.getToken"))

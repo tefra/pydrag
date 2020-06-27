@@ -1,8 +1,14 @@
-from typing import Dict, List, Optional
+from typing import Dict
+from typing import List
+from typing import Optional
 
 from attr import dataclass
 
-from pydrag.models.common import BaseModel, Image, ListModel, RawResponse, Wiki
+from pydrag.models.common import BaseModel
+from pydrag.models.common import Image
+from pydrag.models.common import ListModel
+from pydrag.models.common import RawResponse
+from pydrag.models.common import Wiki
 from pydrag.models.tag import Tag
 from pydrag.services import ApiMixin
 
@@ -65,13 +71,11 @@ class Artist(BaseModel, ApiMixin):
         if "bio" in data:
             data["bio"] = Wiki.from_dict(data["bio"])
         if "similar" in data and data["similar"]:
-            data["similar"] = list(
-                map(cls.from_dict, data["similar"]["artist"])
-            )
+            data["similar"] = list(map(cls.from_dict, data["similar"]["artist"]))
         if "attr" in data:
             data.update(data.pop("attr"))
 
-        return super(Artist, cls).from_dict(data)
+        return super().from_dict(data)
 
     @classmethod
     def find(cls, artist: str, user: str = None, lang: str = "en") -> "Artist":
@@ -80,7 +84,8 @@ class Artist(BaseModel, ApiMixin):
         characters.
 
         :param artist:  The artist name to retrieve.
-        :param user: The username for the context of the request. If supplied, response will include the user's playcount
+        :param user: The username for the context of the request. If supplied, response
+            will include the user's playcount
         :param lang: The language to return the biography in, ISO-639
         :rtype: :class:`~pydrag.models.artist.Artist`
         """
@@ -97,15 +102,14 @@ class Artist(BaseModel, ApiMixin):
         )
 
     @classmethod
-    def find_by_mbid(
-        cls, mbid: str, user: str = None, lang: str = "en"
-    ) -> "Artist":
+    def find_by_mbid(cls, mbid: str, user: str = None, lang: str = "en") -> "Artist":
         """
         Get the metadata for an artist. Includes biography, truncated at 300
         characters.
 
         :param mbid:  The musicbrainz id for the artist
-        :param user: The username for the context of the request. If supplied, response will include the user's playcount
+        :param user: The username for the context of the request. If supplied, response
+            will include the user's playcount
         :param lang: The language to return the biography in, ISO-639
         :rtype: :class:`~pydrag.models.artist.Artist`
         """
@@ -127,7 +131,8 @@ class Artist(BaseModel, ApiMixin):
         instance likes charts, tags etc, This is a quick method to refresh our
         object with complete data from the find methods.
 
-        :param user: The username for the context of the request. If supplied, response will include the user's playcount
+        :param user: The username for the context of the request. If supplied, response
+            will include the user's playcount
         :param lang: The language to return the biography in, ISO-639
         :rtype: :class:`~pydrag.models.artist.Artist`
         """
@@ -137,9 +142,7 @@ class Artist(BaseModel, ApiMixin):
             return self.find(self.name, user, lang)
 
     @classmethod
-    def search(
-        cls, artist: str, limit: int = 50, page: int = 1
-    ) -> ListModel["Artist"]:
+    def search(cls, artist: str, limit: int = 50, page: int = 1) -> ListModel["Artist"]:
         """
         Search for an artist by name. Returns artist matches sorted by
         relevance.
@@ -147,14 +150,13 @@ class Artist(BaseModel, ApiMixin):
         :param artist: The artist name to search.
         :param page: The page number to fetch.
         :param limit: The number of results to fetch per page.
-        :rtype: :class:`pydrag.models.common.ListModel` of :class:`~pydrag.models.artist.Artist`
+        :rtype: :class:`pydrag.models.common.ListModel` of
+            :class:`~pydrag.models.artist.Artist`
         """
         return cls.retrieve(
             bind=Artist,
             flatten="artists.artist",
-            params=dict(
-                method="artist.search", limit=limit, page=page, artist=artist
-            ),
+            params=dict(method="artist.search", limit=limit, page=page, artist=artist),
         )
 
     @classmethod
@@ -165,16 +167,14 @@ class Artist(BaseModel, ApiMixin):
         :param country: The country name to fetch results.
         :param limit: The number of results to fetch per page.
         :param page: The page number to fetch.
-        :rtype: :class:`pydrag.models.common.ListModel` of :class:`~pydrag.models.artist.Artist`
+        :rtype: :class:`pydrag.models.common.ListModel` of
+            :class:`~pydrag.models.artist.Artist`
         """
         return cls.retrieve(
             bind=Artist,
             flatten="artist",
             params=dict(
-                method="geo.getTopArtists",
-                country=country,
-                limit=limit,
-                page=page,
+                method="geo.getTopArtists", country=country, limit=limit, page=page,
             ),
         )
 
@@ -187,7 +187,8 @@ class Artist(BaseModel, ApiMixin):
 
         :param limit: The number of results to fetch per page.
         :param page: The page number to fetch.
-        :rtype: :class:`pydrag.models.common.ListModel` of :class:`~pydrag.models.artist.Artist`
+        :rtype: :class:`pydrag.models.common.ListModel` of
+            :class:`~pydrag.models.artist.Artist`
         """
         return cls.retrieve(
             bind=Artist,
@@ -199,15 +200,14 @@ class Artist(BaseModel, ApiMixin):
         """
         Tag an artist with one or more user supplied tags.
 
-        :param tags: A list of user supplied tags to apply to this artist. Accepts a maximum of 10 tags.
+        :param tags: A list of user supplied tags to apply to this artist.
+            Accepts a maximum of 10 tags.
         :rtype: :class:`~models.common.RawResponse`
         """
         return self.submit(
             bind=RawResponse,
             stateful=True,
-            params=dict(
-                method="artist.addTags", arist=self.name, tags=",".join(tags)
-            ),
+            params=dict(method="artist.addTags", arist=self.name, tags=",".join(tags)),
         )
 
     def remove_tag(self, tag: str) -> RawResponse:
@@ -231,8 +231,7 @@ class Artist(BaseModel, ApiMixin):
         :rtype: :class:`~pydrag.models.artist.Artist`
         """
         return self.retrieve(
-            bind=Artist,
-            params=dict(method="artist.getCorrection", artist=self.name),
+            bind=Artist, params=dict(method="artist.getCorrection", artist=self.name),
         )
 
     def get_similar(self, limit: int = 50) -> ListModel["Artist"]:
@@ -240,7 +239,8 @@ class Artist(BaseModel, ApiMixin):
         Get all the artists similar to this artist.
 
         :param limit: Limit the number of similar artists returned
-        :rtype: :class:`pydrag.models.common.ListModel` of :class:`~pydrag.models.artist.Artist`
+        :rtype: :class:`pydrag.models.common.ListModel` of
+            :class:`~pydrag.models.artist.Artist`
         """
         return self.retrieve(
             bind=Artist,
@@ -259,7 +259,8 @@ class Artist(BaseModel, ApiMixin):
         Get the tags applied by an individual user to an artist on Last.fm.
 
         :param user: The username for the context of the request.
-        :rtype: :class:`pydrag.models.common.ListModel` of :class:`~pydrag.models.tag.Tag`
+        :rtype: :class:`pydrag.models.common.ListModel` of
+            :class:`~pydrag.models.tag.Tag`
         """
         return self.retrieve(
             bind=Tag,
@@ -277,7 +278,8 @@ class Artist(BaseModel, ApiMixin):
         """
         Get the top tags for an artist on Last.fm, ordered by popularity.
 
-        :rtype: :class:`pydrag.models.common.ListModel` of :class:`~pydrag.models.tag.Tag`
+        :rtype: :class:`pydrag.models.common.ListModel` of
+            :class:`~pydrag.models.tag.Tag`
         """
         return self.retrieve(
             bind=Tag,
@@ -296,7 +298,8 @@ class Artist(BaseModel, ApiMixin):
 
         :param page: The page number to fetch.
         :param limit: The number of results to fetch per page.
-        :rtype: :class:`pydrag.models.common.ListModel` of :class:`~pydrag.models.track.Track`
+        :rtype: :class:`pydrag.models.common.ListModel` of
+            :class:`~pydrag.models.track.Track`
         """
         from pydrag.models.track import Track
 

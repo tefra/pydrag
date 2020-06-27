@@ -4,9 +4,11 @@
 Advanced example
 ----------------
 
-For write operations you need to be authenticated. Last.fm has multiple ways to authenticate users the most simple is to provide your full credentials.
+For write operations you need to be authenticated. Last.fm has multiple
+ways to authenticate users the most simple is to provide your full credentials.
 
-Find a track by artist and name, retrieve the album, add some user tags and love the ``Back in Black``
+Find a track by artist and name, retrieve the album, add some user tags and
+love the ``Back in Black``
 
 .. code-block :: python
 
