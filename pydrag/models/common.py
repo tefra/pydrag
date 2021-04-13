@@ -1,7 +1,11 @@
 import os
 import time
 from collections import UserList
-from typing import Dict
+from dataclasses import asdict
+from dataclasses import dataclass
+from dataclasses import field
+from dataclasses import fields
+from typing import Dict, ClassVar, Tuple
 from typing import List
 from typing import Optional
 from typing import Sequence
@@ -9,18 +13,15 @@ from typing import Type
 from typing import TypeVar
 from typing import Union
 
-from attr import asdict
-from attr import attrib
-from attr import dataclass
-from attr import Factory
-from attr import fields
-
 from pydrag.utils import md5
 from pydrag.utils import to_camel_case
 
 T = TypeVar("T", bound="BaseModel")
 
+def filter_none_and_dicts(x: Tuple) -> Dict:
+    return {k: v for k, v in x if v is not None}
 
+@dataclass
 class BaseModel:
     """
     Pydrag Base Model.
@@ -28,7 +29,7 @@ class BaseModel:
     :param params: The params used to fetch the api response data
     """
 
-    params: Union[List, Dict, None] = attrib(init=False, default=None)
+    params: Union[List, Dict, None] = field(init=False, default=None)
 
     def to_dict(self) -> Dict:
         """
@@ -38,9 +39,7 @@ class BaseModel:
 
         :rtype: Dict
         """
-        return asdict(
-            self, filter=lambda f, v: v is not None and not isinstance(v, dict)
-        )
+        return asdict(self, dict_factory=filter_none_and_dicts)
 
     @classmethod
     def from_dict(cls: Type, data: Dict) -> "BaseModel":
@@ -71,7 +70,7 @@ class BaseModel:
         return cls(**data)
 
 
-@dataclass(cmp=False)
+@dataclass(eq=False)
 class ListModel(UserList, Sequence[T], BaseModel):
     """
     Wrap a list of :class:`~pydrag.models.common.BaseModel` objects with
@@ -92,19 +91,19 @@ class ListModel(UserList, Sequence[T], BaseModel):
     :param search_terms: Search query string
     """
 
-    data: List[T] = []
-    page: Optional[int] = None
-    limit: Optional[int] = None
-    total: Optional[int] = None
-    tag: Optional[str] = None
-    user: Optional[str] = None
-    artist: Optional[str] = None
-    track: Optional[str] = None
-    album: Optional[str] = None
-    country: Optional[str] = None
-    from_date: Optional[int] = None
-    to_date: Optional[int] = None
-    search_terms: Optional[str] = None
+    data: List[T] = field(default_factory=list)
+    page: Optional[int] = field(default=None)
+    limit: Optional[int] = field(default=None)
+    total: Optional[int] = field(default=None)
+    tag: Optional[str] = field(default=None)
+    user: Optional[str] = field(default=None)
+    artist: Optional[str] = field(default=None)
+    track: Optional[str] = field(default=None)
+    album: Optional[str] = field(default=None)
+    country: Optional[str] = field(default=None)
+    from_date: Optional[int] = field(default=None)
+    to_date: Optional[int] = field(default=None)
+    search_terms: Optional[str] = field(default=None)
 
     @classmethod
     def from_dict(cls: Type, data: Dict):
@@ -132,9 +131,9 @@ class RawResponse(BaseModel):
     :param data: The raw response dictionary
     """
 
-    data: Optional[Dict] = None
+    data: Optional[Dict] = field(default=None)
 
-    def to_dict(self):
+    def to_dict(self) -> Dict:
         return self.data
 
     @classmethod
@@ -142,7 +141,7 @@ class RawResponse(BaseModel):
         return cls(data)
 
 
-@dataclass(auto_attribs=False)
+@dataclass
 class Config:
     """
     Pydrag config object for your last.fm api.
@@ -154,18 +153,19 @@ class Config:
     :param session: The already authenticated user's session key
     """
 
-    api_key: str = attrib()
-    api_secret: Optional[str] = attrib()
-    username: Optional[str] = attrib()
-    password: Optional[str] = attrib(converter=md5)
-    session: Optional["AuthSession"] = attrib(default=None)  # type: ignore
+    api_key: str = field()
+    api_secret: Optional[str] = field(default=None)
+    username: Optional[str] = field(default=None)
+    password: Optional[str] = field(default=None)
+    session: Optional["AuthSession"] = field(default=None)
 
-    api_url: str = "https://ws.audioscrobbler.com/2.0/"
-    auth_url: str = "https://www.last.fm/api/auth?token={}&api_key={}"
-    _instance: Optional["Config"] = None
+    api_url: ClassVar[str] = "https://ws.audioscrobbler.com/2.0/"
+    auth_url: ClassVar[str] = "https://www.last.fm/api/auth?token={}&api_key={}"
+    _instance: ClassVar[Optional["Config"]] = field(default=None)
 
-    def __attrs_post_init__(self):
+    def __post_init__(self):
         Config._instance = self
+        self.password = md5(self.password)
 
     @property
     def auth_token(self):
@@ -228,10 +228,10 @@ class Link(BaseModel):
 
 @dataclass
 class Wiki(BaseModel):
-    content: Optional[str] = None
-    summary: Optional[str] = None
-    published: Optional[str] = None
-    links: Optional[List[Link]] = None
+    content: Optional[str] = field(default=None)
+    summary: Optional[str] = field(default=None)
+    published: Optional[str] = field(default=None)
+    links: Optional[List[Link]] = field(default=None)
 
     @classmethod
     def from_dict(cls, data: Dict):
@@ -247,15 +247,15 @@ class Wiki(BaseModel):
 class ScrobbleTrack(BaseModel):
     artist: str
     track: str
-    timestamp: int = attrib(default=Factory(lambda: int(time.time())))
-    track_number: Optional[str] = None
-    album: Optional[str] = None
-    album_artist: Optional[str] = None
-    duration: Optional[int] = None
-    mbid: Optional[str] = None
-    context: Optional[str] = None
-    stream_id: Optional[str] = None
-    chosen_by_user: Optional[bool] = None
+    timestamp: int = field(default_factory=lambda: int(time.time()))
+    track_number: Optional[str] = field(default=None)
+    album: Optional[str] = field(default=None)
+    album_artist: Optional[str] = field(default=None)
+    duration: Optional[int] = field(default=None)
+    mbid: Optional[str] = field(default=None)
+    context: Optional[str] = field(default=None)
+    stream_id: Optional[str] = field(default=None)
+    chosen_by_user: Optional[bool] = field(default=None)
 
     def to_api_dict(self):
         return {to_camel_case(k): v for k, v in self.to_dict().items()}

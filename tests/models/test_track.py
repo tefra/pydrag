@@ -17,6 +17,7 @@ from tests import MethodTestCase
 class TrackTests(MethodTestCase):
     def setUp(self):
         self.track = Track(artist=Artist(name="AC / DC"), name="Hells Bell")
+        self.maxDiff = None
         super().setUp()
 
     def test_date_property(self):

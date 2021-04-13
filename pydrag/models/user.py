@@ -1,10 +1,9 @@
+from dataclasses import dataclass
 from datetime import datetime
 from typing import Dict
 from typing import List
 from typing import Optional
 from typing import Union
-
-from attr import dataclass
 
 from pydrag.constants import Period
 from pydrag.models.album import Album

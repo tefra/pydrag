@@ -68,6 +68,7 @@ class ArtistTests(MethodTestCase):
 
     @fixture.use_cassette(path="artist/find_by_mbid")
     def test_find_by_mbid(self):
+        self.maxDiff = None
         result = Artist.find_by_mbid(
             "eeb1195b-f213-4ce1-b28c-8565211f8e43",
             user="Zaratoustre",

@@ -1,8 +1,7 @@
+from dataclasses import dataclass
 from typing import Dict
 from typing import List
 from typing import Optional
-
-from attr import dataclass
 
 from pydrag.models.common import BaseModel
 from pydrag.models.common import Image
