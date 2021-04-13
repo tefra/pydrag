@@ -10,7 +10,7 @@ from tests import MethodTestCase
 class ArtistTests(MethodTestCase):
     def setUp(self):
         self.artist = Artist.from_dict(
-            dict(name="Guns N' Roses", mbid="eeb1195b-f213-4ce1-b28c-8565211f8e43",)
+            {"name": "Guns N' Roses", "mbid": "eeb1195b-f213-4ce1-b28c-8565211f8e43"}
         )
         super().setUp()
 
@@ -69,7 +69,9 @@ class ArtistTests(MethodTestCase):
     @fixture.use_cassette(path="artist/find_by_mbid")
     def test_find_by_mbid(self):
         result = Artist.find_by_mbid(
-            "eeb1195b-f213-4ce1-b28c-8565211f8e43", user="Zaratoustre", lang="it",
+            "eeb1195b-f213-4ce1-b28c-8565211f8e43",
+            user="Zaratoustre",
+            lang="it",
         )
         expected_params = {
             "autocorrect": True,

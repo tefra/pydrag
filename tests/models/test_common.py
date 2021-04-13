@@ -120,13 +120,13 @@ class ConfigTests(TestCase):
         self.assertDictEqual(expected, config.to_dict())
 
         os.environ.update(
-            dict(
-                LASTFM_API_KEY="a",
-                LASTFM_API_SECRET="b",
-                LASTFM_USERNAME="c",
-                LASTFM_PASSWORD="d",
-                LASTFM_SESSION="e",
-            )
+            {
+                "LASTFM_API_KEY": "a",
+                "LASTFM_API_SECRET": "b",
+                "LASTFM_USERNAME": "c",
+                "LASTFM_PASSWORD": "d",
+                "LASTFM_SESSION": "e",
+            }
         )
 
         new_config = Config.instance()

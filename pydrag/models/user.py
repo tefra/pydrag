@@ -59,10 +59,10 @@ class User(BaseModel, ApiMixin):
     @classmethod
     def from_dict(cls, data: Dict):
         data.update(
-            dict(
-                registered=data["registered"]["timestamp"],
-                image=list(map(Image.from_dict, data["image"])),
-            )
+            {
+                "registered": data["registered"]["timestamp"],
+                "image": list(map(Image.from_dict, data["image"])),
+            }
         )
         if "recent_track" in data:
             data["recent_track"] = Track.from_dict(data["recent_track"])
@@ -76,7 +76,7 @@ class User(BaseModel, ApiMixin):
         :rtype: :class:`~pydrag.models.user.User`
         """
         return cls.retrieve(
-            bind=User, params=dict(method="user.getInfo", user=username)
+            bind=User, params={"method": "user.getInfo", "user": username}
         )
 
     def get_artists(self, limit: int = 50, page: int = 1) -> ListModel[Artist]:
@@ -92,13 +92,20 @@ class User(BaseModel, ApiMixin):
         return self.retrieve(
             bind=Artist,
             flatten="artist",
-            params=dict(
-                method="library.getArtists", user=self.name, page=page, limit=limit,
-            ),
+            params={
+                "method": "library.getArtists",
+                "user": self.name,
+                "page": page,
+                "limit": limit,
+            },
         )
 
     def get_artist_tracks(
-        self, artist: str, from_date: str = None, to_date: str = None, page: int = 1,
+        self,
+        artist: str,
+        from_date: str = None,
+        to_date: str = None,
+        page: int = 1,
     ) -> ListModel[Track]:
         """
         Get a list of tracks by a given artist scrobbled by this user,
@@ -114,14 +121,14 @@ class User(BaseModel, ApiMixin):
         return self.retrieve(
             bind=Track,
             flatten="track",
-            params=dict(
-                method="user.getArtistTracks",
-                user=self.name,
-                artist=artist,
-                startTimestamp=from_date,
-                endTimestamp=to_date,
-                page=page,
-            ),
+            params={
+                "method": "user.getArtistTracks",
+                "user": self.name,
+                "artist": artist,
+                "startTimestamp": from_date,
+                "endTimestamp": to_date,
+                "page": page,
+            },
         )
 
     def get_friends(
@@ -139,13 +146,13 @@ class User(BaseModel, ApiMixin):
         return self.retrieve(
             bind=User,
             flatten="user",
-            params=dict(
-                method="user.getFriends",
-                user=self.name,
-                recenttracks=recent_tracks,
-                page=page,
-                limit=limit,
-            ),
+            params={
+                "method": "user.getFriends",
+                "user": self.name,
+                "recenttracks": recent_tracks,
+                "page": page,
+                "limit": limit,
+            },
         )
 
     def get_loved_tracks(self, limit: int = 50, page: int = 1) -> ListModel[Track]:
@@ -159,9 +166,12 @@ class User(BaseModel, ApiMixin):
         return self.retrieve(
             bind=Track,
             flatten="track",
-            params=dict(
-                method="user.getLovedTracks", user=self.name, limit=limit, page=page,
-            ),
+            params={
+                "method": "user.getLovedTracks",
+                "user": self.name,
+                "limit": limit,
+                "page": page,
+            },
         )
 
     def get_personal_tags(
@@ -179,7 +189,7 @@ class User(BaseModel, ApiMixin):
             :class:`~pydrag.models.album.Album`
         """
 
-        valid_categories = dict(artist=Artist, album=Album, track=Track)
+        valid_categories = {"artist": Artist, "album": Album, "track": Track}
         bind = valid_categories.get(category)
         if bind is None:
             raise ValueError("Provide a tag type: artist, album or track!")
@@ -187,14 +197,14 @@ class User(BaseModel, ApiMixin):
         return self.retrieve(
             bind=bind,
             flatten="{0}s.{0}".format(category),
-            params=dict(
-                method="user.getPersonalTags",
-                user=self.name,
-                tag=tag,
-                taggingtype=category,
-                limit=limit,
-                page=page,
-            ),
+            params={
+                "method": "user.getPersonalTags",
+                "user": self.name,
+                "tag": tag,
+                "taggingtype": category,
+                "limit": limit,
+                "page": page,
+            },
         )
 
     def get_recent_tracks(
@@ -253,13 +263,13 @@ class User(BaseModel, ApiMixin):
         return self.retrieve(
             bind=Album,
             flatten="album",
-            params=dict(
-                method="user.getTopAlbums",
-                user=self.name,
-                limit=limit,
-                page=page,
-                period=period.value,
-            ),
+            params={
+                "method": "user.getTopAlbums",
+                "user": self.name,
+                "limit": limit,
+                "page": page,
+                "period": period.value,
+            },
         )
 
     def get_top_artists(
@@ -281,13 +291,13 @@ class User(BaseModel, ApiMixin):
         return self.retrieve(
             bind=Artist,
             flatten="artist",
-            params=dict(
-                method="user.getTopArtists",
-                user=self.name,
-                limit=limit,
-                page=page,
-                period=period.value,
-            ),
+            params={
+                "method": "user.getTopArtists",
+                "user": self.name,
+                "limit": limit,
+                "page": page,
+                "period": period.value,
+            },
         )
 
     def get_top_tags(self, limit: int = 50) -> ListModel[Tag]:
@@ -302,7 +312,7 @@ class User(BaseModel, ApiMixin):
         return self.retrieve(
             bind=Tag,
             flatten="tag",
-            params=dict(method="user.getTopTags", user=self.name, limit=limit),
+            params={"method": "user.getTopTags", "user": self.name, "limit": limit},
         )
 
     def get_top_tracks(
@@ -324,13 +334,13 @@ class User(BaseModel, ApiMixin):
         return self.retrieve(
             bind=Track,
             flatten="track",
-            params=dict(
-                method="user.getTopTracks",
-                user=self.name,
-                limit=limit,
-                page=page,
-                period=period.value,
-            ),
+            params={
+                "method": "user.getTopTracks",
+                "user": self.name,
+                "limit": limit,
+                "page": page,
+                "period": period.value,
+            },
         )
 
     def get_weekly_album_chart(
@@ -388,7 +398,7 @@ class User(BaseModel, ApiMixin):
         return self.retrieve(
             bind=Chart,
             flatten="chart",
-            params=dict(method="user.getWeeklyChartList", user=self.name),
+            params={"method": "user.getWeeklyChartList", "user": self.name},
         )
 
     def get_weekly_track_chart(

@@ -47,7 +47,7 @@ class Album(BaseModel, ApiMixin):
     @classmethod
     def from_dict(cls, data: Dict):
         if isinstance(data.get("artist"), str):
-            data["artist"] = dict(name=data["artist"])
+            data["artist"] = {"name": data["artist"]}
 
         if "name" not in data and "text" in data:
             data["name"] = data.pop("text")
@@ -70,7 +70,11 @@ class Album(BaseModel, ApiMixin):
 
     @classmethod
     def find(
-        cls, artist: str, album: str, user: Optional[str] = None, lang: str = "en",
+        cls,
+        artist: str,
+        album: str,
+        user: Optional[str] = None,
+        lang: str = "en",
     ) -> "Album":
         """
         Get the metadata and tracklist for an album on Last.fm.
@@ -85,14 +89,14 @@ class Album(BaseModel, ApiMixin):
 
         return cls.retrieve(
             bind=Album,
-            params=dict(
-                method="album.getInfo",
-                album=album,
-                artist=artist,
-                autocorrect=True,
-                username=user,
-                lang=lang,
-            ),
+            params={
+                "method": "album.getInfo",
+                "album": album,
+                "artist": artist,
+                "autocorrect": True,
+                "username": user,
+                "lang": lang,
+            },
         )
 
     @classmethod
@@ -109,13 +113,13 @@ class Album(BaseModel, ApiMixin):
 
         return cls.retrieve(
             bind=Album,
-            params=dict(
-                method="album.getInfo",
-                mbid=mbid,
-                autocorrect=True,
-                username=user,
-                lang=lang,
-            ),
+            params={
+                "method": "album.getInfo",
+                "mbid": mbid,
+                "autocorrect": True,
+                "username": user,
+                "lang": lang,
+            },
         )
 
     def get_info(self, user: str = None, lang: str = "en") -> "Album":
@@ -152,7 +156,12 @@ class Album(BaseModel, ApiMixin):
         return cls.retrieve(
             bind=Album,
             flatten="albums.album",
-            params=dict(method="album.search", limit=limit, page=page, album=album),
+            params={
+                "method": "album.search",
+                "limit": limit,
+                "page": page,
+                "album": album,
+            },
         )
 
     def add_tags(self, tags: List[str]) -> RawResponse:
@@ -169,12 +178,12 @@ class Album(BaseModel, ApiMixin):
         return self.submit(
             bind=RawResponse,
             stateful=True,
-            params=dict(
-                method="album.addTags",
-                arist=self.artist.name,
-                album=self.name,
-                tags=",".join(tags),
-            ),
+            params={
+                "method": "album.addTags",
+                "arist": self.artist.name,
+                "album": self.name,
+                "tags": ",".join(tags),
+            },
         )
 
     def remove_tag(self, tag: str) -> RawResponse:
@@ -190,12 +199,12 @@ class Album(BaseModel, ApiMixin):
         return self.submit(
             bind=RawResponse,
             stateful=True,
-            params=dict(
-                method="album.removeTag",
-                album=self.name,
-                artist=self.artist.name,
-                tag=tag,
-            ),
+            params={
+                "method": "album.removeTag",
+                "album": self.name,
+                "artist": self.artist.name,
+                "tag": tag,
+            },
         )
 
     def get_tags(self, user: str) -> ListModel[Tag]:
@@ -212,14 +221,14 @@ class Album(BaseModel, ApiMixin):
         return self.retrieve(
             bind=Tag,
             flatten="tag",
-            params=dict(
-                method="album.getTags",
-                mbid=self.mbid,
-                album=self.name,
-                artist=self.artist.name,
-                autocorrect=True,
-                user=user,
-            ),
+            params={
+                "method": "album.getTags",
+                "mbid": self.mbid,
+                "album": self.name,
+                "artist": self.artist.name,
+                "autocorrect": True,
+                "user": user,
+            },
         )
 
     def get_top_tags(self) -> ListModel[Tag]:
@@ -235,11 +244,11 @@ class Album(BaseModel, ApiMixin):
         return self.retrieve(
             bind=Tag,
             flatten="tag",
-            params=dict(
-                method="album.getTopTags",
-                mbid=self.mbid,
-                album=self.name,
-                artist=self.artist.name,
-                autocorrect=True,
-            ),
+            params={
+                "method": "album.getTopTags",
+                "mbid": self.mbid,
+                "album": self.name,
+                "artist": self.artist.name,
+                "autocorrect": True,
+            },
         )

@@ -49,7 +49,7 @@ class Tag(BaseModel, ApiMixin):
         :rtype: :class:`~pydrag.models.tag.Tag`
         """
         return cls.retrieve(
-            bind=Tag, params=dict(method="tag.getInfo", tag=name, lang=lang)
+            bind=Tag, params={"method": "tag.getInfo", "tag": name, "lang": lang}
         )
 
     @classmethod
@@ -65,9 +65,11 @@ class Tag(BaseModel, ApiMixin):
         return cls.retrieve(
             bind=Tag,
             flatten="tag",
-            params=dict(
-                method="tag.getTopTags", num_res=limit, offset=((page - 1) * limit),
-            ),
+            params={
+                "method": "tag.getTopTags",
+                "num_res": limit,
+                "offset": ((page - 1) * limit),
+            },
         )
 
     @classmethod
@@ -82,7 +84,7 @@ class Tag(BaseModel, ApiMixin):
         return cls.retrieve(
             bind=Tag,
             flatten="tag",
-            params=dict(method="chart.getTopTags", limit=limit, page=page),
+            params={"method": "chart.getTopTags", "limit": limit, "page": page},
         )
 
     def get_similar(self) -> ListModel["Tag"]:
@@ -95,7 +97,7 @@ class Tag(BaseModel, ApiMixin):
         return self.retrieve(
             bind=Tag,
             flatten="tag",
-            params=dict(method="tag.getSimilar", tag=self.name),
+            params={"method": "tag.getSimilar", "tag": self.name},
         )
 
     def get_top_albums(self, limit: int = 50, page: int = 1) -> List:
@@ -111,9 +113,12 @@ class Tag(BaseModel, ApiMixin):
         return self.retrieve(
             bind=Album,
             flatten="album",
-            params=dict(
-                method="tag.getTopAlbums", tag=self.name, limit=limit, page=page,
-            ),
+            params={
+                "method": "tag.getTopAlbums",
+                "tag": self.name,
+                "limit": limit,
+                "page": page,
+            },
         )
 
     def get_top_artists(self, limit: int = 50, page: int = 1) -> List:
@@ -129,9 +134,12 @@ class Tag(BaseModel, ApiMixin):
         return self.retrieve(
             bind=Artist,
             flatten="artist",
-            params=dict(
-                method="tag.getTopArtists", tag=self.name, limit=limit, page=page,
-            ),
+            params={
+                "method": "tag.getTopArtists",
+                "tag": self.name,
+                "limit": limit,
+                "page": page,
+            },
         )
 
     def get_top_tracks(self, limit: int = 50, page: int = 1) -> List:
@@ -147,9 +155,12 @@ class Tag(BaseModel, ApiMixin):
         return self.retrieve(
             bind=Track,
             flatten="track",
-            params=dict(
-                method="tag.getTopTracks", tag=self.name, limit=limit, page=page,
-            ),
+            params={
+                "method": "tag.getTopTracks",
+                "tag": self.name,
+                "limit": limit,
+                "page": page,
+            },
         )
 
     def get_weekly_chart_list(self) -> ListModel[Chart]:
@@ -162,5 +173,5 @@ class Tag(BaseModel, ApiMixin):
         return self.retrieve(
             bind=Chart,
             flatten="chart",
-            params=dict(method="tag.getWeeklyChartList", tag=self.name),
+            params={"method": "tag.getWeeklyChartList", "tag": self.name},
         )
