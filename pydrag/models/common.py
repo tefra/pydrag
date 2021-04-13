@@ -189,7 +189,10 @@ class Config:
                 params = {k: values[k] for k in keys}
             else:
                 params = {
-                    k: os.getenv(f"LASTFM_{k.upper()}", "" if k == "api_key" else None,)
+                    k: os.getenv(
+                        f"LASTFM_{k.upper()}",
+                        "" if k == "api_key" else None,
+                    )
                     for k in keys
                 }
 

@@ -30,7 +30,7 @@ class AuthSession(BaseModel, ApiMixin):
         return cls.submit(
             bind=AuthSession,
             authenticate=True,
-            params=dict(method="auth.getMobileSession"),
+            params={"method": "auth.getMobileSession"},
         )
 
     @classmethod
@@ -47,7 +47,7 @@ class AuthSession(BaseModel, ApiMixin):
         return cls.submit(
             bind=AuthSession,
             sign=True,
-            params=dict(token=token, method="auth.getSession"),
+            params={"token": token, "method": "auth.getSession"},
         )
 
 
@@ -76,4 +76,4 @@ class AuthToken(BaseModel, ApiMixin):
         :rtype: :class:`~pydrag.models.auth.AuthToken`
         """
 
-        return cls.retrieve(bind=AuthToken, params=dict(method="auth.getToken"))
+        return cls.retrieve(bind=AuthToken, params={"method": "auth.getToken"})

@@ -237,7 +237,12 @@ class TrackTests(MethodTestCase):
 
         tracks = []
         date = datetime(
-            year=2018, month=11, day=10, hour=21, minute=30, tzinfo=timezone.utc,
+            year=2018,
+            month=11,
+            day=10,
+            hour=21,
+            minute=30,
+            tzinfo=timezone.utc,
         )
 
         for artist, track in entries:

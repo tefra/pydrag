@@ -149,22 +149,25 @@ class ApiMixin:
             for k, v in params.items()
             if v is not None
         }
-        params.update(dict(format="json", api_key=cfg.api_key))
+        params.update({"format": "json", "api_key": cfg.api_key})
 
         if authenticate:
-            params.update(dict(username=cfg.username, authToken=cfg.auth_token))
+            params.update({"username": cfg.username, "authToken": cfg.auth_token})
 
         if stateful:
-            params.update(dict(sk=cls.get_session().key))
+            params.update({"sk": cls.get_session().key})
 
         if authenticate or stateful or sign:
-            params.update(dict(api_sig=cls.sign(params)))
+            params.update({"api_sig": cls.sign(params)})
 
         return params
 
     @classmethod
     def bind_data(
-        cls, bind: Type[BaseModel], body: Optional[Dict], flatten: Optional[str] = None,
+        cls,
+        bind: Type[BaseModel],
+        body: Optional[Dict],
+        flatten: Optional[str] = None,
     ):
         """
         Construct a BaseModel from the response body and the flatten directive.
@@ -188,7 +191,7 @@ class ApiMixin:
         keys = flatten.split(".")
         items = get_nested(data, keys, ensure_list=True)
         data.pop(next(iter(keys)))
-        data.update(dict(data=[bind.from_dict(i) for i in items]))
+        data.update({"data": [bind.from_dict(i) for i in items]})
         return ListModel.from_dict(data)
 
     @staticmethod

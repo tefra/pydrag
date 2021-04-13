@@ -92,13 +92,13 @@ class Artist(BaseModel, ApiMixin):
 
         return cls.retrieve(
             bind=Artist,
-            params=dict(
-                method="artist.getInfo",
-                artist=artist,
-                autocorrect=True,
-                username=user,
-                lang=lang,
-            ),
+            params={
+                "method": "artist.getInfo",
+                "artist": artist,
+                "autocorrect": True,
+                "username": user,
+                "lang": lang,
+            },
         )
 
     @classmethod
@@ -116,13 +116,13 @@ class Artist(BaseModel, ApiMixin):
 
         return cls.retrieve(
             bind=Artist,
-            params=dict(
-                method="artist.getInfo",
-                mbid=mbid,
-                autocorrect=True,
-                username=user,
-                lang=lang,
-            ),
+            params={
+                "method": "artist.getInfo",
+                "mbid": mbid,
+                "autocorrect": True,
+                "username": user,
+                "lang": lang,
+            },
         )
 
     def get_info(self, user: str = None, lang: str = "en") -> "Artist":
@@ -156,7 +156,12 @@ class Artist(BaseModel, ApiMixin):
         return cls.retrieve(
             bind=Artist,
             flatten="artists.artist",
-            params=dict(method="artist.search", limit=limit, page=page, artist=artist),
+            params={
+                "method": "artist.search",
+                "limit": limit,
+                "page": page,
+                "artist": artist,
+            },
         )
 
     @classmethod
@@ -173,9 +178,12 @@ class Artist(BaseModel, ApiMixin):
         return cls.retrieve(
             bind=Artist,
             flatten="artist",
-            params=dict(
-                method="geo.getTopArtists", country=country, limit=limit, page=page,
-            ),
+            params={
+                "method": "geo.getTopArtists",
+                "country": country,
+                "limit": limit,
+                "page": page,
+            },
         )
 
     @classmethod
@@ -193,7 +201,7 @@ class Artist(BaseModel, ApiMixin):
         return cls.retrieve(
             bind=Artist,
             flatten="artist",
-            params=dict(method="chart.getTopArtists", limit=limit, page=page),
+            params={"method": "chart.getTopArtists", "limit": limit, "page": page},
         )
 
     def add_tags(self, tags: List[str]) -> RawResponse:
@@ -207,7 +215,11 @@ class Artist(BaseModel, ApiMixin):
         return self.submit(
             bind=RawResponse,
             stateful=True,
-            params=dict(method="artist.addTags", arist=self.name, tags=",".join(tags)),
+            params={
+                "method": "artist.addTags",
+                "arist": self.name,
+                "tags": ",".join(tags),
+            },
         )
 
     def remove_tag(self, tag: str) -> RawResponse:
@@ -220,7 +232,7 @@ class Artist(BaseModel, ApiMixin):
         return self.submit(
             bind=RawResponse,
             stateful=True,
-            params=dict(method="artist.removeTag", arist=self.name, tag=tag),
+            params={"method": "artist.removeTag", "arist": self.name, "tag": tag},
         )
 
     def get_correction(self) -> "Artist":
@@ -231,7 +243,8 @@ class Artist(BaseModel, ApiMixin):
         :rtype: :class:`~pydrag.models.artist.Artist`
         """
         return self.retrieve(
-            bind=Artist, params=dict(method="artist.getCorrection", artist=self.name),
+            bind=Artist,
+            params={"method": "artist.getCorrection", "artist": self.name},
         )
 
     def get_similar(self, limit: int = 50) -> ListModel["Artist"]:
@@ -245,13 +258,13 @@ class Artist(BaseModel, ApiMixin):
         return self.retrieve(
             bind=Artist,
             flatten="artist",
-            params=dict(
-                method="artist.getSimilar",
-                mbid=self.mbid,
-                artist=self.name,
-                autocorrect=True,
-                limit=limit,
-            ),
+            params={
+                "method": "artist.getSimilar",
+                "mbid": self.mbid,
+                "artist": self.name,
+                "autocorrect": True,
+                "limit": limit,
+            },
         )
 
     def get_tags(self, user: str) -> ListModel[Tag]:
@@ -265,13 +278,13 @@ class Artist(BaseModel, ApiMixin):
         return self.retrieve(
             bind=Tag,
             flatten="tag",
-            params=dict(
-                method="artist.getTags",
-                mbid=self.mbid,
-                artist=self.name,
-                autocorrect=True,
-                user=user,
-            ),
+            params={
+                "method": "artist.getTags",
+                "mbid": self.mbid,
+                "artist": self.name,
+                "autocorrect": True,
+                "user": user,
+            },
         )
 
     def get_top_tags(self) -> ListModel[Tag]:
@@ -284,12 +297,12 @@ class Artist(BaseModel, ApiMixin):
         return self.retrieve(
             bind=Tag,
             flatten="tag",
-            params=dict(
-                method="artist.getTopTags",
-                mbid=self.mbid,
-                artist=self.name,
-                autocorrect=True,
-            ),
+            params={
+                "method": "artist.getTopTags",
+                "mbid": self.mbid,
+                "artist": self.name,
+                "autocorrect": True,
+            },
         )
 
     def get_top_tracks(self, limit: int = 50, page: int = 1) -> List:
@@ -306,12 +319,12 @@ class Artist(BaseModel, ApiMixin):
         return self.retrieve(
             bind=Track,
             flatten="track",
-            params=dict(
-                method="artist.getTopTracks",
-                mbid=self.mbid,
-                artist=self.name,
-                autocorrect=True,
-                limit=limit,
-                page=page,
-            ),
+            params={
+                "method": "artist.getTopTracks",
+                "mbid": self.mbid,
+                "artist": self.name,
+                "autocorrect": True,
+                "limit": limit,
+                "page": page,
+            },
         )

@@ -79,10 +79,10 @@ class Track(ApiMixin, BaseModel):
             pass
 
         if isinstance(data["artist"], str):
-            data["artist"] = dict(name=data["artist"])
+            data["artist"] = {"name": data["artist"]}
 
         data.update(
-            dict(name=str(data["name"]), artist=Artist.from_dict(data["artist"]))
+            {"name": str(data["name"]), "artist": Artist.from_dict(data["artist"])}
         )
 
         if "image" in data:
@@ -120,14 +120,14 @@ class Track(ApiMixin, BaseModel):
         """
         return cls.retrieve(
             bind=Track,
-            params=dict(
-                method="track.getInfo",
-                artist=artist,
-                track=track,
-                autocorrect=True,
-                username=user,
-                lang=lang,
-            ),
+            params={
+                "method": "track.getInfo",
+                "artist": artist,
+                "track": track,
+                "autocorrect": True,
+                "username": user,
+                "lang": lang,
+            },
         )
 
     @classmethod
@@ -143,13 +143,13 @@ class Track(ApiMixin, BaseModel):
         """
         return cls.retrieve(
             bind=Track,
-            params=dict(
-                method="track.getInfo",
-                mbid=mbid,
-                autocorrect=True,
-                username=user,
-                lang=lang,
-            ),
+            params={
+                "method": "track.getInfo",
+                "mbid": mbid,
+                "autocorrect": True,
+                "username": user,
+                "lang": lang,
+            },
         )
 
     def get_info(self, user: str = None, lang: str = "en") -> "Track":
@@ -178,7 +178,7 @@ class Track(ApiMixin, BaseModel):
         """
         return cls.retrieve(
             bind=Track,
-            params=dict(method="track.getCorrection", artist=artist, track=track),
+            params={"method": "track.getCorrection", "artist": artist, "track": track},
         )
 
     @classmethod
@@ -195,7 +195,12 @@ class Track(ApiMixin, BaseModel):
         return cls.retrieve(
             bind=Track,
             flatten="tracks.track",
-            params=dict(method="track.search", limit=limit, page=page, track=track),
+            params={
+                "method": "track.search",
+                "limit": limit,
+                "page": page,
+                "track": track,
+            },
         )
 
     @classmethod
@@ -212,9 +217,12 @@ class Track(ApiMixin, BaseModel):
         return cls.retrieve(
             bind=Track,
             flatten="track",
-            params=dict(
-                method="geo.getTopTracks", country=country, limit=limit, page=page,
-            ),
+            params={
+                "method": "geo.getTopTracks",
+                "country": country,
+                "limit": limit,
+                "page": page,
+            },
         )
 
     @classmethod
@@ -230,7 +238,7 @@ class Track(ApiMixin, BaseModel):
         return cls.retrieve(
             bind=Track,
             flatten="track",
-            params=dict(method="chart.getTopTracks", limit=limit, page=page),
+            params={"method": "chart.getTopTracks", "limit": limit, "page": page},
         )
 
     def add_tags(self, tags: List[str]) -> RawResponse:
@@ -245,7 +253,11 @@ class Track(ApiMixin, BaseModel):
         return self.submit(
             bind=RawResponse,
             stateful=True,
-            params=dict(method="track.addTags", track=self.name, tags=",".join(tags)),
+            params={
+                "method": "track.addTags",
+                "track": self.name,
+                "tags": ",".join(tags),
+            },
         )
 
     def remove_tag(self, tag: str) -> RawResponse:
@@ -258,7 +270,7 @@ class Track(ApiMixin, BaseModel):
         return self.submit(
             bind=RawResponse,
             stateful=True,
-            params=dict(method="track.removeTag", track=self.name, tag=tag),
+            params={"method": "track.removeTag", "track": self.name, "tag": tag},
         )
 
     def get_similar(self, limit: int = 50) -> ListModel["Track"]:
@@ -272,14 +284,14 @@ class Track(ApiMixin, BaseModel):
         return self.retrieve(
             bind=Track,
             flatten="track",
-            params=dict(
-                method="track.getSimilar",
-                mbid=self.mbid,
-                artist=self.artist.name,
-                track=self.name,
-                autocorrect=True,
-                limit=limit,
-            ),
+            params={
+                "method": "track.getSimilar",
+                "mbid": self.mbid,
+                "artist": self.artist.name,
+                "track": self.name,
+                "autocorrect": True,
+                "limit": limit,
+            },
         )
 
     def get_tags(self, user: str) -> ListModel[Tag]:
@@ -293,14 +305,14 @@ class Track(ApiMixin, BaseModel):
         return self.retrieve(
             bind=Tag,
             flatten="tag",
-            params=dict(
-                method="track.getTags",
-                mbid=self.mbid,
-                artist=self.artist.name,
-                track=self.name,
-                autocorrect=True,
-                user=user,
-            ),
+            params={
+                "method": "track.getTags",
+                "mbid": self.mbid,
+                "artist": self.artist.name,
+                "track": self.name,
+                "autocorrect": True,
+                "user": user,
+            },
         )
 
     def get_top_tags(self) -> ListModel[Tag]:
@@ -313,13 +325,13 @@ class Track(ApiMixin, BaseModel):
         return self.retrieve(
             bind=Tag,
             flatten="tag",
-            params=dict(
-                method="track.getTopTags",
-                mbid=self.mbid,
-                artist=self.artist.name,
-                track=self.name,
-                autocorrect=True,
-            ),
+            params={
+                "method": "track.getTopTags",
+                "mbid": self.mbid,
+                "artist": self.artist.name,
+                "track": self.name,
+                "autocorrect": True,
+            },
         )
 
     def love(self) -> RawResponse:
@@ -331,7 +343,11 @@ class Track(ApiMixin, BaseModel):
         return self.submit(
             bind=RawResponse,
             stateful=True,
-            params=dict(method="track.love", artist=self.artist.name, track=self.name),
+            params={
+                "method": "track.love",
+                "artist": self.artist.name,
+                "track": self.name,
+            },
         )
 
     def unlove(self) -> RawResponse:
@@ -343,9 +359,11 @@ class Track(ApiMixin, BaseModel):
         return self.submit(
             bind=RawResponse,
             stateful=True,
-            params=dict(
-                method="track.unlove", artist=self.artist.name, track=self.name
-            ),
+            params={
+                "method": "track.unlove",
+                "artist": self.artist.name,
+                "track": self.name,
+            },
         )
 
     @classmethod
@@ -386,7 +404,7 @@ class Track(ApiMixin, BaseModel):
         :rtype: :class:`pydrag.models.common.ListModel` of
             :class:`~pydrag.models.common.ScrobbleTrack`
         """
-        params = dict(method="track.scrobble")
+        params = {"method": "track.scrobble"}
         params.update(
             {
                 f"{field}[{idx}]": value
@@ -395,7 +413,10 @@ class Track(ApiMixin, BaseModel):
             }
         )
         return cls.submit(
-            bind=ScrobbleTrack, flatten="scrobble", stateful=True, params=params,
+            bind=ScrobbleTrack,
+            flatten="scrobble",
+            stateful=True,
+            params=params,
         )
 
     @classmethod
@@ -423,14 +444,14 @@ class Track(ApiMixin, BaseModel):
         return cls.submit(
             bind=ScrobbleTrack,
             stateful=True,
-            params=dict(
-                method="track.updateNowPlaying",
-                artist=artist,
-                track=track,
-                album=album,
-                trackNumber=track_number,
-                context=context,
-                duration=duration,
-                albumArtist=album_artist,
-            ),
+            params={
+                "method": "track.updateNowPlaying",
+                "artist": artist,
+                "track": track,
+                "album": album,
+                "trackNumber": track_number,
+                "context": context,
+                "duration": duration,
+                "albumArtist": album_artist,
+            },
         )

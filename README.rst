@@ -2,17 +2,14 @@ pydrag
 ======
 
 
-.. image:: https://travis-ci.com/tefra/pydrag.svg?branch=master
-    :target: https://travis-ci.com/tefra/pydrag
+.. image:: https://github.com/tefra/pydrag/workflows/tests/badge.svg
+    :target: https://github.com/tefra/pydrag/actions
 
 .. image:: https://readthedocs.org/projects/pydrag/badge
-    :target: https://pydrag.readthedocs.io/en/latest
+    :target: https://pydrag.readthedocs.io/
 
 .. image:: https://codecov.io/gh/tefra/pydrag/branch/master/graph/badge.svg
     :target: https://codecov.io/gh/tefra/pydrag
-
-.. image:: https://img.shields.io/badge/code%20style-black-000000.svg
-    :target: https://github.com/ambv/black
 
 .. image:: https://img.shields.io/github/languages/top/tefra/pydrag.svg
     :target: https://pydrag.readthedocs.io/

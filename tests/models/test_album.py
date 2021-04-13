@@ -10,11 +10,11 @@ from tests import MethodTestCase
 class AlbumTests(MethodTestCase):
     def setUp(self):
         self.album = Album.from_dict(
-            dict(
-                name="A Night at the Opera",
-                artist="Queen",
-                mbid="6defd963-fe91-4550-b18e-82c685603c2b",
-            )
+            {
+                "name": "A Night at the Opera",
+                "artist": "Queen",
+                "mbid": "6defd963-fe91-4550-b18e-82c685603c2b",
+            }
         )
         super().setUp()
 
