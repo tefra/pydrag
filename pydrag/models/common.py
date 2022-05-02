@@ -1,7 +1,7 @@
 import os
 import time
 from collections import UserList
-from typing import Dict
+from typing import Dict, ClassVar, Tuple
 from typing import List
 from typing import Optional
 from typing import Sequence
@@ -9,11 +9,7 @@ from typing import Type
 from typing import TypeVar
 from typing import Union
 
-from attr import asdict
-from attr import attrib
-from attr import dataclass
-from attr import Factory
-from attr import fields
+from dataclasses import dataclass, field, asdict, fields
 
 from pydrag.utils import md5
 from pydrag.utils import to_camel_case
@@ -28,7 +24,7 @@ class BaseModel:
     :param params: The params used to fetch the api response data
     """
 
-    params: Union[List, Dict, None] = attrib(init=False, default=None)
+    params: Union[List, Dict, None] = field(init=False, default=None)
 
     def to_dict(self) -> Dict:
         """
@@ -38,9 +34,11 @@ class BaseModel:
 
         :rtype: Dict
         """
-        return asdict(
-            self, filter=lambda f, v: v is not None and not isinstance(v, dict)
-        )
+
+        def _dict_factory(x: Tuple) -> Dict:
+            return {k: v for k, v in x if v is not None}
+
+        return asdict(self, dict_factory=_dict_factory)
 
     @classmethod
     def from_dict(cls: Type, data: Dict) -> "BaseModel":
@@ -71,7 +69,7 @@ class BaseModel:
         return cls(**data)
 
 
-@dataclass(cmp=False)
+@dataclass(eq=False)
 class ListModel(UserList, Sequence[T], BaseModel):
     """
     Wrap a list of :class:`~pydrag.models.common.BaseModel` objects with
@@ -92,7 +90,7 @@ class ListModel(UserList, Sequence[T], BaseModel):
     :param search_terms: Search query string
     """
 
-    data: List[T] = []
+    data: List[T] = field(default_factory=list)
     page: Optional[int] = None
     limit: Optional[int] = None
     total: Optional[int] = None
@@ -142,7 +140,7 @@ class RawResponse(BaseModel):
         return cls(data)
 
 
-@dataclass(auto_attribs=False)
+@dataclass
 class Config:
     """
     Pydrag config object for your last.fm api.
@@ -154,17 +152,18 @@ class Config:
     :param session: The already authenticated user's session key
     """
 
-    api_key: str = attrib()
-    api_secret: Optional[str] = attrib()
-    username: Optional[str] = attrib()
-    password: Optional[str] = attrib(converter=md5)
-    session: Optional["AuthSession"] = attrib(default=None)  # type: ignore
+    api_key: str
+    api_secret: Optional[str]
+    username: Optional[str]
+    password: Optional[str]
+    session: Optional["AuthSession"] = None
 
-    api_url: str = "https://ws.audioscrobbler.com/2.0/"
-    auth_url: str = "https://www.last.fm/api/auth?token={}&api_key={}"
-    _instance: Optional["Config"] = None
+    api_url: ClassVar[str] = "https://ws.audioscrobbler.com/2.0/"
+    auth_url: ClassVar[str] = "https://www.last.fm/api/auth?token={}&api_key={}"
+    _instance: ClassVar[Optional["Config"]] = None
 
-    def __attrs_post_init__(self):
+    def __post_init__(self):
+        self.password = md5(self.password)
         Config._instance = self
 
     @property
@@ -247,7 +246,7 @@ class Wiki(BaseModel):
 class ScrobbleTrack(BaseModel):
     artist: str
     track: str
-    timestamp: int = attrib(default=Factory(lambda: int(time.time())))
+    timestamp: int = field(default_factory=lambda: int(time.time()))
     track_number: Optional[str] = None
     album: Optional[str] = None
     album_artist: Optional[str] = None
