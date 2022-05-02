@@ -1,15 +1,20 @@
 import os
 import time
 from collections import UserList
-from typing import Dict, ClassVar, Tuple
+from dataclasses import asdict
+from dataclasses import dataclass
+from dataclasses import field
+from dataclasses import fields
+from typing import Any
+from typing import ClassVar
+from typing import Dict
 from typing import List
 from typing import Optional
 from typing import Sequence
+from typing import Tuple
 from typing import Type
 from typing import TypeVar
 from typing import Union
-
-from dataclasses import dataclass, field, asdict, fields
 
 from pydrag.utils import md5
 from pydrag.utils import to_camel_case
@@ -35,7 +40,7 @@ class BaseModel:
         :rtype: Dict
         """
 
-        def _dict_factory(x: Tuple) -> Dict:
+        def _dict_factory(x: List[Tuple[str, Any]]) -> Dict:
             return {k: v for k, v in x if v is not None}
 
         return asdict(self, dict_factory=_dict_factory)
@@ -156,7 +161,7 @@ class Config:
     api_secret: Optional[str]
     username: Optional[str]
     password: Optional[str]
-    session: Optional["AuthSession"] = None
+    session: Optional["AuthSession"] = None  # type: ignore
 
     api_url: ClassVar[str] = "https://ws.audioscrobbler.com/2.0/"
     auth_url: ClassVar[str] = "https://www.last.fm/api/auth?token={}&api_key={}"

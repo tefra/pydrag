@@ -1,8 +1,7 @@
+from dataclasses import dataclass
 from typing import Dict
 from typing import List
 from typing import Optional
-
-from dataclasses import dataclass
 
 from pydrag.models.common import BaseModel
 from pydrag.models.common import Image
@@ -138,8 +137,8 @@ class Artist(BaseModel, ApiMixin):
         """
         if self.mbid:
             return self.find_by_mbid(self.mbid, user, lang)
-        else:
-            return self.find(self.name, user, lang)
+
+        return self.find(self.name, user, lang)
 
     @classmethod
     def search(cls, artist: str, limit: int = 50, page: int = 1) -> ListModel["Artist"]:

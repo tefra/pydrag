@@ -1,9 +1,8 @@
+from dataclasses import dataclass
 from datetime import datetime
 from typing import Dict
 from typing import List
 from typing import Optional
-
-from dataclasses import dataclass
 
 from pydrag.models.album import Album
 from pydrag.models.artist import Artist
@@ -165,8 +164,8 @@ class Track(ApiMixin, BaseModel):
         """
         if self.mbid:
             return self.find_by_mbid(self.mbid, user, lang)
-        else:
-            return self.find(self.artist.name, self.name, user, lang)
+
+        return self.find(self.artist.name, self.name, user, lang)
 
     @classmethod
     def get_correction(cls, track: str, artist: str) -> "Track":
