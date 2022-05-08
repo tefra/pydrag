@@ -104,3 +104,9 @@ So when it's necessary to record a new response it's super useful to have a
    LASTFM_API_SECRET=your_api_secret
    LASTFM_USERNAME=You
    LASTFM_PASSWORD=YouPass
+
+
+Changelog: 22.5 (2022-05-08)
+----------------------------
+- Replaced attrs with dataclasses
+- Added support for python 3.10

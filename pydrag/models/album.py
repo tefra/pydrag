@@ -1,8 +1,7 @@
+from dataclasses import dataclass
 from typing import Dict
 from typing import List
 from typing import Optional
-
-from attr import dataclass
 
 from pydrag.models.artist import Artist
 from pydrag.models.common import BaseModel
@@ -135,11 +134,11 @@ class Album(BaseModel, ApiMixin):
         """
         if self.mbid:
             return self.find_by_mbid(self.mbid, user, lang)
-        else:
-            if self.artist is None:
-                raise ValueError("Missing artist name!")
 
-            return self.find(self.artist.name, self.name, user, lang)
+        if self.artist is None:
+            raise ValueError("Missing artist name!")
+
+        return self.find(self.artist.name, self.name, user, lang)
 
     @classmethod
     def search(cls, album: str, limit: int = 50, page: int = 1) -> ListModel["Album"]:
